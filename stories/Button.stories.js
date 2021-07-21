@@ -1,7 +1,9 @@
 import React from 'react';
 import button from './button.html.twig';
 import './button.scss';
-import './button.js';
+import buttonJs from './Button.js';
+
+buttonJs();
 
 export default {
   title: 'Example/Button',
@@ -22,7 +24,6 @@ export default {
 };
 
 const Template = ({ label, ...args }) => { 
-  console.log(args);
   return button(args);
 }
 
