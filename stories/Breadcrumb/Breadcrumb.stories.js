@@ -5,7 +5,7 @@ export default {
   title: 'Example/Breadcrumb',
   parameters: {
     controls: {
-      disabled: false,
+      disabled: true,
     }
   }
 };
