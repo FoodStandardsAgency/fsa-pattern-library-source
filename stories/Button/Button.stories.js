@@ -1,7 +1,6 @@
-import React from 'react';
 import button from './button.html.twig';
-import './button.scss';
 import buttonJs from './Button.js';
+import './button.scss';
 
 buttonJs();
 
@@ -27,6 +26,9 @@ const Template = ({ label, ...args }) => {
   return button(args);
 }
 
+/** 
+ * Write something about the button.
+ */
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
@@ -38,23 +40,3 @@ Secondary.args = {
   primary: false,
   label: 'Buttonnn',
 };
-
-
-/*
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
-*/

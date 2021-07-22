@@ -1,0 +1,30 @@
+.breadcrumb {
+  font-family: open sans,sans-serif;
+  a {
+    color: #007c75;
+  }
+  
+  &__item {
+    -ms-flex-align: center;
+    align-items: center;
+    color: #000;
+    display: inline-block;
+    font-size: .9em;
+    font-weight: 400;
+    padding-right: 1.5em;
+    position: relative;
+    text-align: left;
+    &:not(:last-child)::after {
+     content: '';
+     position: absolute;
+     top: .3em;
+     right: .55em;
+     bottom: .25em;
+     width: 1px;
+     text-align: center;
+     background-color: #000;
+     -ms-transform: skew(-25deg);
+     transform: skew(-25deg);
+    }
+  }
+}
