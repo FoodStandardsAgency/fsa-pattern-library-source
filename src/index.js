@@ -1,3 +1,3 @@
-import buttonJs from '../stories/Button.js'
+import buttonJs from '../stories/Button/Button.js'
 
 buttonJs();

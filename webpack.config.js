@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const DrupalTemplatePlugin = require('deeson-webpack-config-starter/drupal-templates-webpack-plugin');
 module.exports = {
   module: {
     rules: [
@@ -13,10 +14,16 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.html\.twig$/,
+        loader: 'file-loader',
+        options: { regExp: '.*/stories/(.*)', name: '[1]' },
+      },
     ],
   },
   mode: 'development',
   plugins: [
+    new DrupalTemplatePlugin({ ignore: /.*pages.*/, srcPath: 'stories' }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional

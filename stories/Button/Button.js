@@ -1,3 +1,5 @@
+import './button.scss';
+import './button.html.twig';
 export default function () {
 
   window.addEventListener("DOMContentLoaded",function() {
@@ -6,5 +8,7 @@ export default function () {
     button.addEventListener('click', event => {
       button.textContent = `Button ${event.detail}`;
     });
+    const img = document.querySelector('img');
+    img.setAttribute('alt', 'some alt');
   });
 }
