@@ -34,10 +34,13 @@ jobs:
       - name: Build the assets
         run: yarn build 
 
+      - name: Build static storybook
+        run: yarn build-storybook
+
       - name: Set env.BRANCH
         run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
 
-      - name: Pushes test file
+      - name: Push static assets
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
@@ -45,5 +48,16 @@ jobs:
           source_file: 'dist'
           destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
           destination_branch: ${{ env.BRANCH }}
+          user_email: 'peterb@deeson.co.uk'
+          user_name: 'Peter Berryman'
+
+      - name: Push static storybook
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'storybook-static/*'
+          destination_repo: 'FoodStandardsAgency/fsa-pattern-library'
+          destination_folder: ${{ env.BRANCH }}
           user_email: 'peterb@deeson.co.uk'
           user_name: 'Peter Berryman'
