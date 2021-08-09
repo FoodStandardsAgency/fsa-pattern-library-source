@@ -41,6 +41,5 @@ jobs:
         with:
           source_file: 'dist'
           destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
-          destination_branch: ${{ github.ref }}
           user_email: 'peterb@deeson.co.uk'
           user_name: 'Peter Berryman'
