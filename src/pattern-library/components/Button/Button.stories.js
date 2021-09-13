@@ -1,11 +1,9 @@
 import button from './button.html.twig';
-import buttonJs from './Button.js';
+import Button from './Button.js';
 import './button.scss';
 
-buttonJs();
-
 export default {
-  title: 'Example/Button',
+  title: 'Pattern Library/Components/Button',
   argTypes: {
     primary: { control: 'boolean' },
   },
