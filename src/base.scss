@@ -2,9 +2,9 @@
 
 html {
   font-family: sans-serif;
-  font-size: 100%; /* 16px */
+  font-size: 16px;
   @media screen and (min-width: $fsa-md) {
-    font-size: 112.5%; /* 18px */
+    font-size: 18px;
   }
 }
 
