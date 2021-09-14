@@ -3,12 +3,10 @@ import './button.html.twig';
 export default function () {
 
   window.addEventListener("DOMContentLoaded",function() {
-    const button = document.querySelector('.button');
+    const button = document.querySelector('.button--event');
     if (!button) return;
     button.addEventListener('click', event => {
-      button.textContent = `Button ${event.detail}`;
+      button.textContent = "I was clicked";
     });
-    const img = document.querySelector('img');
-    img.setAttribute('alt', 'some alt');
   });
 }
