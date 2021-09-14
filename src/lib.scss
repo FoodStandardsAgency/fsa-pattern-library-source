@@ -47,6 +47,7 @@
   /* Grid */
   --container: 1rem;
   --gutter: 1rem;
+  --max-width: 75rem;
 }
 
 $fsa-xs: 500px;
@@ -165,6 +166,7 @@ $fsa-xl: 1920px;
 
 @mixin container {
   width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding-left: var(--container);
   padding-right: var(--container);
