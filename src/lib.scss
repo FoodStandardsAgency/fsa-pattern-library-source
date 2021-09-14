@@ -176,6 +176,7 @@ $fsa-xl: 1920px;
   gap: 1rem;
   @media screen and (min-width: $fsa-md) {
     grid-template-columns: repeat(12, [col-start] 1fr);
+    gap: 2rem;
   }
 }
 

@@ -6,7 +6,8 @@ export default {
   parameters: {
     controls: {
       disabled: true,
-    }
+    },
+    layout: 'fullscreen',
   }
 };
 
