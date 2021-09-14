@@ -17,6 +17,12 @@ const Template = (args) => {
   return button(args);
 };
 
+const darkBackground = {
+  backgrounds: {
+    default: "dark",
+  },
+};
+
 export const PrimaryAnchor = Template.bind({});
 PrimaryAnchor.args = {
   primary: true,
@@ -30,6 +36,7 @@ SecondaryAnchor.args = {
   ...PrimaryAnchor.args,
   primary: false,
 };
+SecondaryAnchor.parameters = darkBackground;
 
 export const PrimaryButton = Template.bind({});
 PrimaryButton.args = {
@@ -43,3 +50,4 @@ SecondaryButton.args = {
   ...PrimaryButton.args,
   primary: false,
 };
+SecondaryButton.parameters = darkBackground;
