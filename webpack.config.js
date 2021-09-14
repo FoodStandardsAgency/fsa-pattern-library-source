@@ -23,7 +23,7 @@ module.exports = {
   },
   mode: 'development',
   plugins: [
-    new DrupalTemplatePlugin({ ignore: /.*pages.*/, srcPath: 'stories' }),
+    new DrupalTemplatePlugin({ ignore: /.*pages.*/, srcPath: 'src' }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
