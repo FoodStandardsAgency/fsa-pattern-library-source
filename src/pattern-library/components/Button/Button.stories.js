@@ -5,7 +5,7 @@ import "./button.scss";
 buttonJs();
 
 export default {
-  title: "Button",
+  title: "Pattern Library/Components/Button",
   argTypes: {
     is_anchor: {
       table: { disable: true },
