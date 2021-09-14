@@ -1,4 +1,4 @@
-import '../src/app.js';
+import '../src/index.js';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
