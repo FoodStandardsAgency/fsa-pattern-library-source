@@ -1,0 +1,73 @@
+@import '../../../lib.scss';
+
+.listing-item {
+  @include container;
+  @include grid();
+  grid-template-areas: 'content content content content';
+
+  @media screen and (min-width: $fsa-xs) {
+    grid-template-areas: '. . . . content content content content content content content content';
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__content {
+    grid-area: content;
+    border-bottom: 4px solid var(--fsa_border);
+    padding: 0 1rem 1rem 1rem;
+
+    @media screen and (min-width: $fsa-md) {
+      padding: 0 2rem 1.5rem 2rem;
+
+    }
+
+  }
+
+  &__type {
+    text-transform: none;
+    margin: 0;
+    @include body;
+    font-weight: bold;
+
+    @media screen and (min-width: $fsa-md) {
+      text-transform: uppercase;
+
+    }
+  }
+
+  &__title {
+    margin-top: 0.5rem;
+
+    a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      line-height: 1.4;
+      font-family: var(--heading-font);
+
+      color: var(--fsa-primary_dark-green);
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--fsa__link-green);
+      }
+
+      &:focus {
+        background-color: var(--fsa-tertiary_light-yellow);
+        color: var(--fsa-primary_black);
+      }
+
+    }
+  }
+
+  &__description {
+    margin: 0.5rem 0;
+
+  }
+
+  &__date {
+    @include body;
+    color: var(--fsa-primary_dark-grey);
+  }
+}
