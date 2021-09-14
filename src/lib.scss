@@ -187,13 +187,11 @@ $fsa-xl: 1920px;
 @mixin button($button-type: primary) {
   display: inline-block;
   font-family: open sans, sans-serif;
-  letter-spacing: .02em;
+  letter-spacing: normal;
   border: 0;
-  border-radius: 2em;
-  padding: .6em 2.5em;
-  box-shadow: 0 0 2em 0 rgba(0, 0, 0, .1);
+  border-radius: 1.5rem;
+  padding: 0.5rem 2.5rem;
   cursor: pointer;
-  text-decoration: none !important;
   transition: background-color .2s cubic-bezier(.19, 1, .22, 1);
   @if $button-type == primary {
     @include button-primary;
