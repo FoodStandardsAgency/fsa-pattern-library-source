@@ -1,36 +1,45 @@
-import button from './button.html.twig';
-import buttonJs from './Button.js';
-import './button.scss';
+import button from "./button.html.twig";
+import buttonJs from "./Button.js";
+import "./button.scss";
 
 buttonJs();
 
 export default {
-  title: 'Example/Button',
+  title: "Button",
   argTypes: {
-    primary: { control: 'boolean' },
+    is_anchor: {
+      table: { disable: true },
+    },
   },
-  parameters: {
-    controls: {
-      disabled: true,
-    }
-  }
 };
 
-const Template = ({ label, ...args }) => { 
+const Template = (args) => {
   return button(args);
-}
-
-/** 
- * Write something about the button.
- */
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const PrimaryAnchor = Template.bind({});
+PrimaryAnchor.args = {
+  primary: true,
+  label: "All News and Alerts",
+  url: "https://www.food.gov.uk/news-alerts",
+  is_anchor: true,
+};
+
+export const SecondaryAnchor = Template.bind({});
+SecondaryAnchor.args = {
+  ...PrimaryAnchor.args,
   primary: false,
-  label: 'Buttonnn',
+};
+
+export const PrimaryButton = Template.bind({});
+PrimaryButton.args = {
+  primary: true,
+  label: "Click me",
+  is_anchor: false,
+};
+
+export const SecondaryButton = Template.bind({});
+SecondaryButton.args = {
+  ...PrimaryButton.args,
+  primary: false,
 };
