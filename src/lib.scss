@@ -187,6 +187,7 @@ $fsa-xl: 1920px;
 @mixin button($button-type: primary) {
   display: inline-block;
   font-family: open sans, sans-serif;
+  font-size: 1rem;
   letter-spacing: normal;
   border: 0;
   border-radius: 1.5rem;
