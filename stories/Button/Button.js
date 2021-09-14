@@ -5,7 +5,7 @@ export default function () {
   window.addEventListener("DOMContentLoaded",function() {
     const button = document.querySelector('.button--event');
     if (!button) return;
-    button.addEventListener('click', event => {
+    button.addEventListener('click', () => {
       button.textContent = "I was clicked";
     });
   });
