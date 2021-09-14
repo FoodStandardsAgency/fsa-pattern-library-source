@@ -1,5 +1,4 @@
 import button from './button.html.twig';
-import Button from './Button.js';
 import './button.scss';
 
 export default {
