@@ -2,7 +2,7 @@ import breadcrumb from './breadcrumb.html.twig';
 import './breadcrumb.scss';
 
 export default {
-  title: 'Example/Breadcrumb',
+  title: 'Pattern Library/Components/Breadcrumb',
   parameters: {
     controls: {
       disabled: true,

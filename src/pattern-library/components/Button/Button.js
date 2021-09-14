@@ -1,7 +1,7 @@
 import './button.scss';
 import './button.html.twig';
-export default function () {
 
+export default function () {
   window.addEventListener("DOMContentLoaded",function() {
     const button = document.querySelector('.button');
     if (!button) return;
