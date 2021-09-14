@@ -29,6 +29,7 @@
     height: 5.875rem;
     border-radius: 10rem;
     border: 1px solid #d9d9d9;
+    flex-shrink: 0;
   }
   &__text-wrapper {
     display: flex;
