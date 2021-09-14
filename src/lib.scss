@@ -197,18 +197,18 @@ $fsa-xl: 1920px;
   transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
     border-radius 0.1s ease-out, border-bottom 0.1s ease-out;
 
+  @if $button-type == primary {
+    @include button-primary;
+  } @else if $button-type == secondary {
+    @include button-secondary;
+  }
+  
   &:focus {
     background-color: var(--fsa-tertiary_light-yellow);
     color: var(--fsa-primary_black);
     border-radius: 0;
     border-bottom: 4px var(--fsa-primary_black) solid;
     outline: none;
-  }
-
-  @if $button-type == primary {
-    @include button-primary;
-  } @else if $button-type == secondary {
-    @include button-secondary;
   }
 }
 
