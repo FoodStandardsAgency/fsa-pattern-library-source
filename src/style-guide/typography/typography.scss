@@ -1,0 +1,7 @@
+@import 'src/lib.scss';
+
+.typography {
+  &__container {
+    @include container;
+  }
+}

@@ -1,0 +1,99 @@
+{% set swatches = {
+  primary: {
+    'fsa-primary_dark-green': '#006F51',
+    'fsa-primary_mid-green': '#6cb33f',
+    'fsa-primary_light-green': '#a9c47f',
+  },
+  secondary: {
+    'fsa-primary_dark-green': '#006F51',
+    'fsa-primary_mid-green': '#6cb33f',
+    'fsa-primary_light-green': '#a9c47f',
+  },
+  tertiary: {
+    'fsa-primary_dark-green': '#006F51',
+    'fsa-primary_mid-green': '#6cb33f',
+    'fsa-primary_light-green': '#a9c47f',
+  },
+  hover: {
+    'fsa-primary_dark-green': '#006F51',
+    'fsa-primary_mid-green': '#6cb33f',
+    'fsa-primary_light-green': '#a9c47f',
+  }
+} %}
+
+<div class="swatches">
+  <div class="swatches__container">
+    <div class="swatches__section">
+      <h1 class="swatches__title">Primary colours</h1>
+      <div class="swatches__wrapper">
+        {% for name, hex in swatches.primary %}
+          <div class="swatches__card">
+            <div class="swatches__example" style="background-color:{{ hex }}"></div>
+            <div class="swatches__text-wrapper">
+              <h2 class="swatches__colour-name">
+                {{ name }}
+              </h2>
+              <div class="swatches__colour-hex">
+                {{ hex }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="swatches__section">
+      <h1 class="swatches__title">Secondary colours</h1>
+      <div class="swatches__wrapper">
+        {% for name, hex in swatches.secondary %}
+          <div class="swatches__card">
+            <div class="swatches__example" style="background-color:{{ hex }}"></div>
+            <div class="swatches__text-wrapper">
+              <h2 class="swatches__colour-name">
+                {{ name }}
+              </h2>
+              <div class="swatches__colour-hex">
+                {{ hex }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="swatches__section">
+      <h1 class="swatches__title">Tertiary colours</h1>
+      <div class="swatches__wrapper">
+        {% for name, hex in swatches.tertiary %}
+          <div class="swatches__card">
+            <div class="swatches__example" style="background-color:{{ hex }}"></div>
+            <div class="swatches__text-wrapper">
+              <h2 class="swatches__colour-name">
+                {{ name }}
+              </h2>
+              <div class="swatches__colour-hex">
+                {{ hex }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="swatches__section">
+      <h1 class="swatches__title">Hover colours</h1>
+      <div class="swatches__wrapper">
+        {% for name, hex in swatches.hover %}
+          <div class="swatches__card">
+            <div class="swatches__example" style="background-color:{{ hex }}"></div>
+            <div class="swatches__text-wrapper">
+              <h2 class="swatches__colour-name">
+                {{ name }}
+              </h2>
+              <div class="swatches__colour-hex">
+                {{ hex }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
