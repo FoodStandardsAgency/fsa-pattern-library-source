@@ -66,7 +66,8 @@ $fsa-xl: 1920px;
   }
 }
 
-@mixin h1--article {
+@mixin h1-article {
+  @include h1;
   @media screen and (min-width: $fsa-md) {
     font-family: var(--heading-font);
     font-size: 3rem;
