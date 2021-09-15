@@ -1,26 +1,24 @@
 @import '../../../lib.scss';
 
 .listing-item {
-  @include container;
   @include grid();
-  grid-template-areas: 'content content content content';
-
-  @media screen and (min-width: $fsa-xs) {
-    grid-template-areas: '. . . . content content content content content content content content';
-  }
+  margin-bottom: 1.5rem;
 
   &:hover {
     cursor: pointer;
   }
 
   &__content {
-    grid-area: content;
     border-bottom: 4px solid var(--fsa_border);
     padding: 0 1rem 1rem 1rem;
+    grid-column: 1 / span 4;
 
     @media screen and (min-width: $fsa-md) {
       padding: 0 2rem 1.5rem 2rem;
+    }
 
+    @media screen and (min-width: $fsa-xs) {
+      grid-column: 4 / span 8;
     }
 
   }
