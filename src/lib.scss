@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
 :root {
   /* Primary Colours */
@@ -37,17 +37,17 @@
   --fsa__purple-hover: #2a0247;
 
   /* Typography */
-  --body-font: "open-sans", sans-serif;
+  --body-font: 'Open Sans', sans-serif;
   --body-normal: 400;
   --body-bold: 600;
 
-  --heading-font: "fira-sans", sans-serif;
+  --heading-font: 'Fira Sans', sans-serif;
   --heading-bold: 700;
 
   /* Grid */
   --container: 1rem;
   --gutter: 1rem;
-  --max-width: 75rem;
+  --max-width: 83.5rem;
 }
 
 $fsa-xs: 500px;
@@ -203,7 +203,7 @@ $fsa-xl: 1920px;
   } @else if $button-type == secondary {
     @include button-secondary;
   }
-  
+
   &:focus {
     background-color: var(--fsa-tertiary_light-yellow);
     color: var(--fsa-primary_black);
