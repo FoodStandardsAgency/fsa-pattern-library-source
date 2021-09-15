@@ -3,19 +3,18 @@
 .search-no-results {
   @include grid();
   padding-bottom: 2rem;
-  grid-template-areas: 'content content content content';
-
-  @media screen and (min-width: $fsa-md) {
-    grid-template-areas: '. . . . content content content content . . . .';
-  }
-
-  @media screen and (min-width: $fsa-xs) {
-    grid-template-areas: '. . . . content content content content content content . .';
-
-  }
 
   &__content {
-    grid-area: content;
+    grid-column: 1 / span 4;
+
+    @media screen and (min-width: $fsa-md) {
+      grid-column: 5 / span 4;
+    }
+
+    @media screen and (min-width: $fsa-xs) {
+      grid-column: 5 / span 6;
+
+    }
   }
 
   &__title {
@@ -35,9 +34,10 @@
       }
 
       &:focus {
+        text-decoration: none;
         background-color: var(--fsa-tertiary_light-yellow);
-        color: var(--fsa-primary_black);
-        text-decoration-thickness: 4px;
+        border-bottom: 4px solid var(--fsa-primary_black);
+
       }
     }
   }
