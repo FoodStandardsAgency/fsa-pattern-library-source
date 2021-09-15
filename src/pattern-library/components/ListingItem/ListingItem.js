@@ -3,13 +3,18 @@ import './listingItem.html.twig';
 
 export default function () {
 
-  window.addEventListener("DOMContentLoaded",function() {
-   const card = document.querySelector(".listing-item");
+  window.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.listing-item');
 
-   card.addEventListener('click', ()=>{
-     const link = document.querySelector(".listing-item__title a");
-     link.click();
-   })
+    cards.forEach(card => {
+      card.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const link = card.querySelector('.listing-item__title a');
+        link.click();
+      })
+    })
+
+
 
   });
 }
