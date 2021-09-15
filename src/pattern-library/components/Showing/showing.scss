@@ -1,5 +1,11 @@
+@import 'src/lib.scss';
+
 .showing {
   color: var(--fsa-primary_black);
+
+  @media screen and (min-width: $fsa-md) {
+    display: inline-block;
+  }
 }
 
 .showing--bold {
