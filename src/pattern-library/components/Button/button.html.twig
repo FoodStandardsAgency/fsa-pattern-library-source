@@ -1,10 +1,9 @@
 {% if is_anchor %}
-<a href={{ url }} class="button {{ primary ? 'button--primary' : '' }}">
-  {{ label }}
-</a>
+  <a href={{ url }} class="button {{ primary ? 'button--primary' : '' }}">
+    {{ label }}
+  </a>
 {% else %}
-<button class="button button--event {{ primary ? 'button--primary' : '' }} ">
-  {{ label }}
-</button>
+  <button class="button button--event {{ primary ? 'button--primary' : '' }} ">
+    {{ label }}
+  </button>
 {% endif %}
-

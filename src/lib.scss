@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
 :root {
   /* Primary Colours */
@@ -203,7 +203,7 @@ $fsa-xl: 1920px;
   } @else if $button-type == secondary {
     @include button-secondary;
   }
-  
+
   &:focus {
     background-color: var(--fsa-tertiary_light-yellow);
     color: var(--fsa-primary_black);
