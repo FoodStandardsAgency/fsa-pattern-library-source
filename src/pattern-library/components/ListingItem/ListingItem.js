@@ -5,6 +5,7 @@ export default function () {
 
   window.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.listing-item');
+    if (!cards) return;
 
     cards.forEach(card => {
       card.addEventListener('click', (event) => {
@@ -13,8 +14,5 @@ export default function () {
         link.click();
       })
     })
-
-
-
   });
 }
