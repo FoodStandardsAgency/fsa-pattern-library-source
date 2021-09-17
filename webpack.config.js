@@ -17,7 +17,7 @@ module.exports = {
       {
         test: /\.html\.twig$/,
         loader: 'file-loader',
-        options: { regExp: '.*/stories/(.*)', name: '[1]' },
+        options: { regExp: '.*/src/pattern-library/components/(.*)', name: '[1]' },
       },
     ],
   },
