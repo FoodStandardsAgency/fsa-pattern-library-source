@@ -6,17 +6,22 @@ export default {
   parameters: {
     controls: {
       disabled: false,
-    }
+    } 
   }
 };
-
 
 const Template = (args) => {
   return searchNoResults(args);
 }
 
+
 export const Content = Template.bind({});
 Content.args = {
+  title: 'There are no matching results',
+  keywordText: 'Try a new key word or',
+  keywordLinkText: 'remove all filters',
+  secondText: 'Were you looking for',
+  secondLinkText: 'Food Hygiene Ratings',
   removeFiltersLink: 'http://google.com',
   foodHygieneRating: 'http://youtube.com'
 
