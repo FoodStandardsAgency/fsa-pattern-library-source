@@ -4,21 +4,21 @@
   @include grid();
   margin-bottom: 1.5rem;
 
-  &:hover {
-    cursor: pointer;
-  }
-
   &__content {
     border-bottom: 4px solid var(--fsa_border);
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 1.5rem 1rem;
     grid-column: 1 / span 4;
 
-    @media screen and (min-width: $fsa-md) {
-      padding: 0 2rem 1.5rem 2rem;
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      padding: 0 3rem 1.5rem 3rem;
     }
 
     @media screen and (min-width: $fsa-xs) {
-      grid-column: 4 / span 8;
+      grid-column: 5 / span 9;
     }
 
   }
@@ -37,13 +37,13 @@
 
   &__title {
     margin-top: 0.5rem;
-
+    margin-bottom: 0;
+   @include h5;
     a {
       font-size: 1.2rem;
       font-weight: bold;
       line-height: 1.4;
       font-family: var(--heading-font);
-
       color: var(--fsa-primary_dark-green);
 
       &:hover {
@@ -52,9 +52,11 @@
       }
 
       &:focus {
+        text-decoration: none;
         background-color: var(--fsa-tertiary_light-yellow);
         color: var(--fsa-primary_black);
-        text-decoration-thickness: 2px;
+        outline: none;
+        border-bottom: 2px solid var(--fsa-primary_black);
       }
 
     }
