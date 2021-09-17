@@ -1,0 +1,11 @@
+@import '../../../lib.scss';
+
+.landing-links {
+ 
+  &__item {
+    svg {
+      background-color: green;
+      border-radius: 50%;
+    }
+  }
+}
