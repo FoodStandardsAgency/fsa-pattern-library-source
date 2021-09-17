@@ -18,11 +18,11 @@ const Template = (args) => {
 export const Content = Template.bind({});
 Content.args = {
   title: 'There are no matching results',
-  keywordText: 'Try a new key word or',
-  keywordLinkText: 'remove all filters',
-  secondText: 'Were you looking for',
-  secondLinkText: 'Food Hygiene Ratings',
+  removeFiltersText: 'Try a new key word or',
+  removeFiltersLinkText: 'remove all filters',
+  foodHygieneRatingText: 'Were you looking for',
+  foodHygieneRatingLinkText: 'Food Hygiene Ratings',
   removeFiltersLink: 'http://google.com',
-  foodHygieneRating: 'http://youtube.com'
+  foodHygieneRatingLink: 'http://youtube.com'
 
 };
