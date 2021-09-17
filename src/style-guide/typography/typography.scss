@@ -4,4 +4,14 @@
   &__container {
     @include container;
   }
+  &__heading {
+    font-size: 1rem;
+    color: var(--fsa-dark-purple)
+  }
+  &__article {
+    @include h1-article;
+  }
+  &__intro {
+    @include intro;
+  }
 }

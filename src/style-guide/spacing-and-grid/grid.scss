@@ -1,0 +1,19 @@
+@import 'src/lib.scss';
+
+.grid {
+  text-align: center;
+  &__container {
+    @include container;
+    height: fit-content;
+    background-color: #d9d9d6;
+  }
+  &__grid {
+    @include grid();
+    background-color: #d9d9d6;
+    margin-bottom: 4.5rem;
+    grid-template-rows: 1.375rem;
+    > * {
+      background-color: #006f51;
+    }
+  }
+}
