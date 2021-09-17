@@ -1,21 +1,9 @@
 @import 'src/lib.scss';
 
 .button {
-    display: inline-block;
-    font-family: open sans,sans-serif;
-    letter-spacing: .02em;
-    background-color: #2a0247;
-    color: #fff;
-    border: 0;
-    border-radius: 2em;
-    padding: .6em 2.5em;
-    box-shadow: 0 0 2em 0 rgba(0,0,0,.1);
-    cursor: pointer;
-    text-decoration: none !important;
-    transition: background-color .2s cubic-bezier(.19,1,.22,1);
+  @include button(secondary);
 
-    &--primary {
-      background-color: #007c75;
-    }
-  
+  &--primary {
+    @include button(primary);
+  }
 }

@@ -1,6 +1,9 @@
-<span class="button {{ primary ? 'button--primary' : '' }} ">
-  Button {{ primary ? 'p' : 'n' }}
-</span>
-
-<img src="http://lorempixel.com/507/507/" />
-
+{% if is_anchor %}
+  <a href={{ url }} class="button {{ primary ? 'button--primary' : '' }}">
+    {{ label }}
+  </a>
+{% else %}
+  <button class="button button--event {{ primary ? 'button--primary' : '' }} ">
+    {{ label }}
+  </button>
+{% endif %}
