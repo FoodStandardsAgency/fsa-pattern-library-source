@@ -3,37 +3,37 @@
 
 :root {
   /* Primary Colours */
-  --fsa-primary_dark-green: #007C75;
-  --fsa-primary_mid-green: #6CB33F;
-  --fsa-primary_light-green: #A9C47F;
-  --fsa-primary_dark-grey: #53565A;
-  --fsa_online-grey: #F0F3F5;
-  --fsa_border: #DEE2E5;
+  --fsa-primary_dark-green: #007c75;
+  --fsa-primary_mid-green: #6cb33f;
+  --fsa-primary_light-green: #a9c47f;
+  --fsa-primary_dark-grey: #53565a;
+  --fsa_online-grey: #f0f3f5;
+  --fsa_border: #dee2e5;
   --fsa-primary_black: #000000;
-  --fsa-primary_white: #FFFFFF;
-  --fsa_tint: #FAFCFD;
+  --fsa-primary_white: #ffffff;
+  --fsa_tint: #fafcfd;
 
   /* Secondary Colours */
-  --fsa-secondary_mid-red: #E31837;
-  --fsa-secondary_orange: #F15D22;
-  --fsa-secondary_mid-yellow: #FDB913;
-  --fsa-secondary_mid-purple: #49176D;
-  --fsa-secondary_light-purple: #9F218B;
-  --fsa-tertiary_dark-blue: #9F218B;
+  --fsa-secondary_mid-red: #e31837;
+  --fsa-secondary_orange: #f15d22;
+  --fsa-secondary_mid-yellow: #fdb913;
+  --fsa-secondary_mid-purple: #49176d;
+  --fsa-secondary_light-purple: #9f218b;
+  --fsa-tertiary_dark-blue: #9f218b;
 
   /* Tertiary Colours */
-  --fsa-tertiary_dark-red: #B04A5A;
-  --fsa-tertiary_light-red: #EF3340;
-  --fsa-tertiary_light-yellow: #F1C400;
-  --fsa-tertiary_teal: #00B2A9;
-  --fsa-tertiary_light-blue: #8DC8E8;
-  --fsa-tertiary_dark-purple: #51284F;
-  --fsa-secondary_mid-blue: #007FB2;
-  --fsa-tertiary_lime: #CEDC00;
-  --fsa-tertiary_mauve: #8B84D7;
+  --fsa-tertiary_dark-red: #b04a5a;
+  --fsa-tertiary_light-red: #ef3340;
+  --fsa-tertiary_light-yellow: #f1c400;
+  --fsa-tertiary_teal: #00b2a9;
+  --fsa-tertiary_light-blue: #8dc8e8;
+  --fsa-tertiary_dark-purple: #51284f;
+  --fsa-secondary_mid-blue: #007fb2;
+  --fsa-tertiary_lime: #cedc00;
+  --fsa-tertiary_mauve: #8b84d7;
 
   /* Hover Colours */
-  --fsa__link-green: #014B4C;
+  --fsa__link-green: #014b4c;
   --fsa__purple-hover: #2a0247;
 
   /* Typography */
@@ -187,26 +187,36 @@ $fsa-xl: 1920px;
 @mixin button($button-type: primary) {
   display: inline-block;
   font-family: open sans, sans-serif;
-  letter-spacing: .02em;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6rem;
+  letter-spacing: normal;
   border: 0;
-  border-radius: 2em;
-  padding: .6em 2.5em;
-  box-shadow: 0 0 2em 0 rgba(0, 0, 0, .1);
+  border-radius: 1.5rem;
+  padding: 0.5rem 2.5rem;
   cursor: pointer;
-  text-decoration: none !important;
-  transition: background-color .2s cubic-bezier(.19, 1, .22, 1);
+  transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+    border-radius 0.1s ease-out, border-bottom 0.1s ease-out;
+
   @if $button-type == primary {
     @include button-primary;
   } @else if $button-type == secondary {
     @include button-secondary;
+  }
+
+  &:focus {
+    background-color: var(--fsa-tertiary_light-yellow);
+    color: var(--fsa-primary_black);
+    border-radius: 0;
+    border-bottom: 4px var(--fsa-primary_black) solid;
+    outline: none;
   }
 }
 
 @mixin button-primary {
   background-color: var(--fsa-primary_dark-green);
   color: var(--fsa-primary_white);
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: #005e59;
   }
 }
@@ -214,8 +224,7 @@ $fsa-xl: 1920px;
 @mixin button-secondary {
   background-color: var(--fsa-primary_white);
   color: var(--fsa__link-green);
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: #006f51;
     color: var(--fsa-primary_white);
   }
