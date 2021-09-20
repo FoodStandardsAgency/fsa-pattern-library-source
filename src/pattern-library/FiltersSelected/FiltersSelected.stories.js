@@ -1,4 +1,5 @@
 import filtersSelected from './filtersSelected.html.twig';
+import "./filtersSelected.scss";
 
 export default {
   title: 'Pattern Library/Components/Filters Selected',
@@ -11,7 +12,7 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   filter_names: [
-    'Alergy Alert',
+    'Alergy Alert', 
     'News',
     'Ecoli',
     'England',
