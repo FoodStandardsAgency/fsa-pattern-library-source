@@ -1,0 +1,32 @@
+@import '../../../lib.scss';
+
+.search-no-results {
+  @include grid();
+  padding-bottom: 2rem;
+
+  &__content {
+    grid-column: 1 / span 4;
+
+    @media screen and (min-width: $fsa-md) {
+      grid-column: 5 / span 4;
+    }
+
+    @media screen and (min-width: $fsa-xs) {
+      grid-column: 5 / span 6;
+
+    }
+  }
+
+  &__title {
+    @include h5;
+    margin: 0;
+  }
+
+  &__text {
+    @include body;
+
+    a {
+      @include link;
+    }
+  }
+}
