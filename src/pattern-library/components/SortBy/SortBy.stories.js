@@ -12,6 +12,6 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   sort_by: 'Sort by',
-  most_recent: 'Most recent',
-  relevance: 'Relevance',
+  options: ['Relevance', 'Most recent'],
+  default: 'Relevance',
 };
