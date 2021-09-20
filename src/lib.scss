@@ -143,6 +143,22 @@ $fsa-xl: 1920px;
   }
 }
 
+@mixin link {
+  color: var(--fsa-primary_dark-green);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--fsa__link-green);
+  }
+
+  &:focus {
+    text-decoration: none;
+    background-color: var(--fsa-tertiary_light-yellow);
+    border-bottom: 4px solid var(--fsa-primary_black);
+
+  }
+}
+
 @mixin intro {
   font-family: var(--body-font);
   font-weight: var(--body-normal);
