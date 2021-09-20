@@ -2,6 +2,7 @@
 
 .listing-item {
   @include grid();
+  @include container;
   margin-bottom: 1.5rem;
 
   &__content {
