@@ -1,5 +1,8 @@
 import filtersSelected from './filtersSelected.html.twig';
+import filtersSelectedJs from './FiltersSelected.js';
 import "./filtersSelected.scss";
+
+filtersSelectedJs();
 
 export default {
   title: 'Pattern Library/Components/Filters Selected',
