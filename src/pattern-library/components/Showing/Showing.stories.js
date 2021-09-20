@@ -11,6 +11,9 @@ const Template = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
+  showing: 'Showing',
+  of: 'of',
+  results: 'results',
   displayed_results: '1-10',
   total_results: '103',
 };
