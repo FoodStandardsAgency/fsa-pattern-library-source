@@ -1,0 +1,24 @@
+@import 'src/lib.scss';
+
+.search-header {
+  &__container {
+    @include container;
+  }
+  &__grid {
+    @include grid;
+  }
+  &__wrapper {
+    grid-column: 1 / -1;
+    @media screen and (min-width: $fsa-lg) {
+      grid-column: 1 / span 8;
+    }
+  }
+  &__title {
+    @include h1;
+    margin-bottom: 1rem;
+    color: var(--fsa-primary_dark-green);
+    @media screen and (min-width: $fsa-lg) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
