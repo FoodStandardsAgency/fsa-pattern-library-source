@@ -155,7 +155,6 @@ $fsa-xl: 1920px;
     text-decoration: none;
     background-color: var(--fsa-tertiary_light-yellow);
     border-bottom: 4px solid var(--fsa-primary_black);
-
   }
 }
 
@@ -197,6 +196,51 @@ $fsa-xl: 1920px;
     grid-template-columns: repeat(12, [col-start] 1fr);
     gap: 2rem;
   }
+}
+
+// Grid
+$container: 2rem;
+$mobileContainer: 1rem;
+$gutter: 2rem;
+$mobileGutter: 1rem;
+
+@mixin grid-container {
+  width: calc(100% - (2 * #{$mobileContainer}));
+  margin: 0 auto;
+  padding-left: $mobileContainer;
+  padding-right: $mobileContainer;
+  @media screen and (min-width: $fsa-md) {
+    padding-left: $container;
+    padding-right: $container;
+    width: calc(100% - (2 * #{$container}));
+    max-width: 1300px;
+  }
+}
+
+@mixin grid-row {
+  flex: 1;
+  margin-left: -$mobileGutter / 2;
+  margin-right: -$mobileGutter / 2;
+  @media screen and (min-width: $fsa-md) {
+    margin-left: -$gutter / 2;
+    margin-right: -$gutter / 2;
+  }
+}
+
+@mixin grid-cols($count, $basis: 12) {
+  width: (100% / $basis) * $count;
+  flex-basis: (100% / $basis) * $count;
+  max-width: (100% / $basis) * $count;
+  padding-left: $mobileGutter / 2;
+  padding-right: $mobileGutter / 2;
+  @media screen and (min-width: $fsa-md) {
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+  }
+}
+
+@mixin cols-push($count, $basis: 12) {
+  margin-left: (100% / $basis) * $count;
 }
 
 /* Custom Mixins */
@@ -253,5 +297,12 @@ $fsa-xl: 1920px;
   color: var(--fsa-primary_white);
   &:hover {
     background-color: #b0132b;
+  }
+}
+
+html {
+  font-size: 16px;
+  @media screen and (min-width: $fsa-md) {
+    font-size: 18px;
   }
 }
