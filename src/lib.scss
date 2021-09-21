@@ -152,6 +152,7 @@ $fsa-xl: 1920px;
   }
 
   &:focus {
+    color: var(--fsa-primary_black);
     outline: none;
     text-decoration: none;
     background-color: var(--fsa-tertiary_light-yellow);
