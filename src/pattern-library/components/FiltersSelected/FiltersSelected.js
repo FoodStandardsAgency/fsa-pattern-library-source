@@ -1,4 +1,3 @@
-import './filtersSelected.scss';
 import './filtersSelected.html.twig';
 
 export default function () {
@@ -9,17 +8,19 @@ export default function () {
 
     buttons.forEach((button) =>
       button.addEventListener('click', (e) => {
-        e.target.remove();
+        e.stopPropagation();
+        e.target.parentNode.removeChild(e.target);
 
         const currentButtons = document.querySelectorAll('.filters__button');
-        if (!currentButtons.length) removeButton.remove();
+        if (!currentButtons.length) removeButton.parentNode.removeChild(removeButton);
       })
     );
 
     removeButton.addEventListener('click', (e) => {
+      e.stopPropagation();
       const buttonDiv = document.querySelector('.filters__buttons');
       buttonDiv.innerHTML = '';
-      removeButton.remove();
+      removeButton.parentNode.removeChild(removeButton);
     });
   });
 }
