@@ -8,7 +8,7 @@ export default function () {
       button.addEventListener('click', (e) => {
         e.stopPropagation();
 
-        if (button.classList.contains('button-cancel')) {
+        if (button.classList.contains('button--cancel')) {
           button.textContent = 'I was cancelled';
         } else {
           button.textContent = 'I was clicked';
