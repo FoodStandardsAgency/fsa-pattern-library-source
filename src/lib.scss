@@ -206,15 +206,15 @@ $gutter: 2rem;
 $mobileGutter: 1rem;
 
 @mixin grid-container {
-  width: calc(100% - (2 * #{$mobileContainer}));
+  width: 100%;
   margin: 0 auto;
   padding-left: $mobileContainer;
   padding-right: $mobileContainer;
   @media screen and (min-width: $fsa-md) {
     padding-left: $container;
     padding-right: $container;
-    width: calc(100% - (2 * #{$container}));
-    max-width: 1300px;
+    width: 100%;
+    max-width: calc(1300px + (2 * #{$container}));
   }
 }
 

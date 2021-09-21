@@ -5,12 +5,12 @@
   max-width: 100%;
   &__container {
     @include grid-container;
+    background-color: #a9c47f;
   }
 
   &__row {
     @include grid-row;
     display: flex;
-    background-color: #a9c47f;
 
     @media screen and (min-width: $fsa-md) {
       flex-direction: row;
