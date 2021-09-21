@@ -34,11 +34,13 @@
   &__text-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-left: 1rem;
   }
   &__colour-name {
     @include body;
     font-weight: 700;
+    margin: 0;
   }
   &__colour-hex {
     @include body;
