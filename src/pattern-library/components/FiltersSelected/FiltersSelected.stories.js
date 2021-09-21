@@ -1,6 +1,6 @@
 import filtersSelected from './filtersSelected.html.twig';
 import filtersSelectedJs from './FiltersSelected.js';
-import "./filtersSelected.scss";
+import './filtersSelected.scss';
 
 filtersSelectedJs();
 
@@ -15,7 +15,7 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   filter_names: [
-    'Alergy Alert', 
+    'Alergy Alert',
     'News',
     'Ecoli',
     'England',
