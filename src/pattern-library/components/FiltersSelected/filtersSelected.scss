@@ -36,7 +36,9 @@
     padding: 0.625rem 2.9rem 0.625rem 1rem;
     margin: 0.25rem;
     cursor: pointer;
-    transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+      color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+      border-radius 0.2s cubic-bezier(0.19, 1, 0.22, 1);
     display: flex;
     align-items: center;
     position: relative;
@@ -81,6 +83,10 @@
     cursor: pointer;
     transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 
+    &:hover {
+      color: var(--fsa__link-green);
+    }
+
     &:focus {
       background: var(--fsa-tertiary_light-yellow);
       color: var(--fsa-primary_black);
@@ -92,6 +98,5 @@
     @media screen and (min-width: $fsa-md) {
       margin-top: 0.3rem;
     }
-
   }
 }
