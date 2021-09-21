@@ -14,10 +14,12 @@
     "@storybook/addon-a11y": "^6.4.0-alpha.16",
     "@storybook/addon-actions": "^6.4.0-alpha.16",
     "@storybook/addon-essentials": "^6.4.0-alpha.16",
+    "@storybook/addon-ie11": "^0.0.6",
     "@storybook/addon-links": "^6.4.0-alpha.16",
     "@storybook/builder-webpack5": "^6.4.0-alpha.16",
-    "@storybook/html": "^6.3.4",
+    "@storybook/html": "^6.3.8",
     "@storybook/manager-webpack5": "^6.4.0-alpha.16",
+    "@storybook/preset-ie11": "^0.0.1",
     "@whitespace/storybook-addon-html": "^5.0.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.7",
@@ -38,5 +40,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "webpack"
-  }
+  },
+  "browserslist": "IE 11, not dead"
 }
