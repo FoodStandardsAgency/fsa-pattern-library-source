@@ -8,10 +8,10 @@ module.exports = {
         use: [
           // Creates `style` nodes from JS strings
           MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
-          "css-loader",
           // Compiles Sass to CSS
           "sass-loader",
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
         ],
       },
       {
