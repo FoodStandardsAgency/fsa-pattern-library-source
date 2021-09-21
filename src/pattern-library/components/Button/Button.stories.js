@@ -19,7 +19,12 @@ const Template = (args) => {
 
 const darkBackground = {
   backgrounds: {
-    default: 'dark',
+    default: 'purple',
+    values: [
+      {name: 'dark', value:'#292828'},
+      {name: 'light', value: '#fff'},
+      {name: 'purple', value: '#49176d'},
+    ],
   },
 };
 
