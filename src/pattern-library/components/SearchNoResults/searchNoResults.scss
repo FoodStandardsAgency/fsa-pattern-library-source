@@ -6,6 +6,7 @@
 
   &__content {
     grid-column: 1 / span 4;
+    padding-left: 1rem;
 
     @media screen and (min-width: $fsa-md) {
       grid-column: 5 / span 4;
@@ -13,6 +14,7 @@
 
     @media screen and (min-width: $fsa-xs) {
       grid-column: 5 / span 6;
+      padding-left: 3rem;
 
     }
   }
