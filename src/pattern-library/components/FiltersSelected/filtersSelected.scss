@@ -1,22 +1,11 @@
 @import 'src/lib.scss';
 
 .filters {
-  @include container;
-
-  &__grid {
-    @include grid;
-  }
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    grid-column: 1 / 4;
-
-    @media screen and (min-width: $fsa-md) {
-      grid-column: 5 / -1;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $fsa-md) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   &__buttons {
@@ -84,6 +73,7 @@
 
     @media screen and (min-width: $fsa-md) {
       margin-top: 0.3rem;
+      margin-left: 2rem;
     }
   }
 }
