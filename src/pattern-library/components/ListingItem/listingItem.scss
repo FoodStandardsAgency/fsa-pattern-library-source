@@ -2,7 +2,6 @@
 
 .listing-item {
   @include grid();
-  @include container;
   margin-bottom: 1.5rem;
 
   &__content {
@@ -58,6 +57,11 @@
         color: var(--fsa-primary_black);
         outline: none;
         border-bottom: 2px solid var(--fsa-primary_black);
+        padding: 0.5px 0;
+        @media screen and (min-width: $fsa-xs) {
+          padding: 3px 0;
+        }
+        
       }
 
     }
