@@ -7,7 +7,12 @@ export default function () {
     buttons.forEach((button) => {
       button.addEventListener('click', (e) => {
         e.stopPropagation();
-        button.textContent = 'I was clicked';
+
+        if (button.classList.contains('button-cancel')) {
+          button.textContent = 'I was cancelled';
+        } else {
+          button.textContent = 'I was clicked';
+        }
       });
     });
   });
