@@ -6,6 +6,18 @@
   &__container {
     @include grid-container;
     background-color: #a9c47f;
+    &--desktop {
+      display: none;
+      @media screen and (min-width: $fsa-md) {
+        display: flex;
+      }
+    }
+    &--mobile {
+      display: flex;
+      @media screen and (min-width: $fsa-md) {
+        display: none;
+      }
+    }
   }
 
   &__row {
