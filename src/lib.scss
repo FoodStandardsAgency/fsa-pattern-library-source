@@ -45,9 +45,10 @@
   --heading-bold: 700;
 
   /* Grid */
-  --container: 1rem;
+  --container-mobile: 1rem;
+  --container: 2rem;
   --gutter: 1rem;
-  --max-width: 83.5rem;
+  --max-width: 1336px;
 }
 
 $fsa-xs: 500px;
@@ -57,20 +58,20 @@ $fsa-xl: 1920px;
 
 @mixin h1 {
   font-family: var(--heading-font);
-  font-size: 2.5rem;
+  font-size: 2.288rem;
   font-weight: var(--heading-bold);
   line-height: 1.1;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 3.75rem;
+  @media screen and (min-width: $fsa-lg) {
+    font-size: 2.986rem;
   }
 }
 
 @mixin h1-article {
   @include h1;
-  @media screen and (min-width: $fsa-md) {
+  @media screen and (min-width: $fsa-lg) {
     font-family: var(--heading-font);
-    font-size: 3rem;
+    font-size: 2.488rem;
     font-weight: var(--heading-bold);
     line-height: 1.1;
     letter-spacing: normal;
@@ -79,45 +80,45 @@ $fsa-xl: 1920px;
 
 @mixin h2 {
   font-family: var(--heading-font);
-  font-size: 2rem;
+  font-size: 1.939rem;
   font-weight: var(--heading-bold);
   line-height: 1.2;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 2.5rem;
+  @media screen and (min-width: $fsa-lg) {
+    font-size: 2.074rem;
   }
 }
 
 @mixin h3 {
   font-family: var(--heading-font);
-  font-size: 1.625rem;
+  font-size: 1.643rem;
   font-weight: var(--heading-bold);
   line-height: 1.2;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 2rem;
+  @media screen and (min-width: $fsa-lg) {
+    font-size: 1.728rem;
   }
 }
 
 @mixin h4 {
   font-family: var(--heading-font);
-  font-size: 1.375rem;
+  font-size: 1.392rem;
   font-weight: var(--heading-bold);
   line-height: 1.2;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 1.625rem;
+  @media screen and (min-width: $fsa-lg) {
+    font-size: 1.44rem;
   }
 }
 
 @mixin h5 {
   font-family: var(--heading-font);
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: var(--heading-bold);
   line-height: 1.4;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 1.35rem;
+  @media screen and (min-width: $fsa-lg) {
+    font-size: 1.2rem;
   }
 }
 
@@ -127,9 +128,6 @@ $fsa-xl: 1920px;
   font-weight: var(--body-bold);
   line-height: 1.6;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 1.125rem;
-  }
 }
 
 @mixin body {
@@ -138,9 +136,6 @@ $fsa-xl: 1920px;
   font-size: 1rem;
   line-height: 1.6;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 1rem;
-  }
 }
 
 @mixin link {
@@ -162,11 +157,11 @@ $fsa-xl: 1920px;
 @mixin intro {
   font-family: var(--body-font);
   font-weight: var(--body-normal);
-  font-size: 1.125rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   letter-spacing: normal;
   @media screen and (min-width: $fsa-md) {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -177,7 +172,7 @@ $fsa-xl: 1920px;
   line-height: 1.6;
   letter-spacing: normal;
   @media screen and (min-width: $fsa-md) {
-    font-size: 1rem;
+    font-size: 0.833rem;
   }
 }
 
@@ -185,11 +180,16 @@ $fsa-xl: 1920px;
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-left: var(--container);
-  padding-right: var(--container);
+  padding-left: var(--container-mobile);
+  padding-right: var(--container-mobile);
+  @media screen and (min-width: $fsa-md) {
+    padding-left: var(--container);
+    padding-right: var(--container);
+  }
 }
 
 @mixin grid() {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, [col-start] 1fr);
   gap: 1rem;
@@ -197,6 +197,51 @@ $fsa-xl: 1920px;
     grid-template-columns: repeat(12, [col-start] 1fr);
     gap: 2rem;
   }
+}
+
+// Grid
+$container: 2rem;
+$mobileContainer: 1rem;
+$gutter: 2rem;
+$mobileGutter: 1rem;
+
+@mixin grid-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $mobileContainer;
+  padding-right: $mobileContainer;
+  @media screen and (min-width: $fsa-md) {
+    padding-left: $container;
+    padding-right: $container;
+    width: 100%;
+    max-width: calc(1300px + (2 * #{$container}));
+  }
+}
+
+@mixin grid-row {
+  flex: 1;
+  margin-left: -$mobileGutter / 2;
+  margin-right: -$mobileGutter / 2;
+  @media screen and (min-width: $fsa-md) {
+    margin-left: -$gutter / 2;
+    margin-right: -$gutter / 2;
+  }
+}
+
+@mixin grid-cols($count, $basis: 12) {
+  width: (100% / $basis) * $count;
+  flex-basis: (100% / $basis) * $count;
+  max-width: (100% / $basis) * $count;
+  padding-left: $mobileGutter / 2;
+  padding-right: $mobileGutter / 2;
+  @media screen and (min-width: $fsa-md) {
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+  }
+}
+
+@mixin cols-push($count, $basis: 12) {
+  margin-left: (100% / $basis) * $count;
 }
 
 /* Custom Mixins */
@@ -243,5 +288,12 @@ $fsa-xl: 1920px;
   &:hover {
     background-color: #006f51;
     color: var(--fsa-primary_white);
+  }
+}
+
+html {
+  font-size: 16px;
+  @media screen and (min-width: $fsa-md) {
+    font-size: 18px;
   }
 }
