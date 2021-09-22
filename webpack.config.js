@@ -12,7 +12,6 @@ module.exports = {
           "sass-loader",
           // Translates CSS into CommonJS
           "css-loader",
-          "postcss-loader",
         ],
       },
       {
