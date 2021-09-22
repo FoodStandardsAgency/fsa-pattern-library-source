@@ -157,11 +157,11 @@ $fsa-xl: 1920px;
 @mixin intro {
   font-family: var(--body-font);
   font-weight: var(--body-normal);
-  font-size: 1.4rem;
+  font-size: 1.18rem;
   line-height: 1.6;
   letter-spacing: normal;
   @media screen and (min-width: $fsa-md) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
