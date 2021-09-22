@@ -1,0 +1,38 @@
+@import 'src/lib.scss';
+
+.layout {
+  max-width: 100%;
+  &__container {
+    @include grid-container;
+  }
+
+  &__row {
+    @include grid-row;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+    }
+  }
+
+  &__top {
+    @include grid-cols(4, 4);
+    padding-bottom: 5rem;
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(12);
+    }
+  }
+  &__left {
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(4);
+    }
+  }
+  &__right {
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(8);
+    }
+  }
+}
