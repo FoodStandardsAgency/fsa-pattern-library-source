@@ -160,6 +160,7 @@ $fsa-xl: 1920px;
   font-size: 1.18rem;
   line-height: 1.6;
   letter-spacing: normal;
+
   @media screen and (min-width: $fsa-md) {
     font-size: 1.25rem;
   }
@@ -171,6 +172,7 @@ $fsa-xl: 1920px;
   font-size: 0.8rem;
   line-height: 1.6;
   letter-spacing: normal;
+
   @media screen and (min-width: $fsa-md) {
     font-size: 0.833rem;
   }
@@ -193,6 +195,7 @@ $fsa-xl: 1920px;
   display: grid;
   grid-template-columns: repeat(4, [col-start] 1fr);
   gap: 1rem;
+
   @media screen and (min-width: $fsa-md) {
     grid-template-columns: repeat(12, [col-start] 1fr);
     gap: 2rem;
@@ -210,6 +213,7 @@ $mobileGutter: 1rem;
   margin: 0 auto;
   padding-left: $mobileContainer;
   padding-right: $mobileContainer;
+
   @media screen and (min-width: $fsa-md) {
     padding-left: $container;
     padding-right: $container;
@@ -222,6 +226,7 @@ $mobileGutter: 1rem;
   flex: 1;
   margin-left: -$mobileGutter / 2;
   margin-right: -$mobileGutter / 2;
+
   @media screen and (min-width: $fsa-md) {
     margin-left: -$gutter / 2;
     margin-right: -$gutter / 2;
@@ -234,6 +239,7 @@ $mobileGutter: 1rem;
   max-width: (100% / $basis) * $count;
   padding-left: $mobileGutter / 2;
   padding-right: $mobileGutter / 2;
+
   @media screen and (min-width: $fsa-md) {
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
@@ -259,9 +265,11 @@ $mobileGutter: 1rem;
   transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
     border-radius 0.1s ease-out, border-bottom 0.1s ease-out;
 
-  @if $button-type == primary {
+  @if $button-type==primary {
     @include button-primary;
-  } @else if $button-type == secondary {
+  }
+
+  @else if $button-type==secondary {
     @include button-secondary;
   }
 
@@ -277,6 +285,7 @@ $mobileGutter: 1rem;
 @mixin button-primary {
   background-color: var(--fsa-primary_dark-green);
   color: var(--fsa-primary_white);
+
   &:hover {
     background-color: #005e59;
   }
@@ -285,6 +294,7 @@ $mobileGutter: 1rem;
 @mixin button-secondary {
   background-color: var(--fsa-primary_white);
   color: var(--fsa__link-green);
+
   &:hover {
     background-color: #006f51;
     color: var(--fsa-primary_white);
@@ -293,6 +303,7 @@ $mobileGutter: 1rem;
 
 html {
   font-size: 16px;
+
   @media screen and (min-width: $fsa-md) {
     font-size: 18px;
   }
