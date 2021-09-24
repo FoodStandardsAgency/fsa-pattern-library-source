@@ -1,8 +1,6 @@
 import button from './button.html.twig';
-import buttonJs from './Button.js';
-import './button.scss';
+import './Button.js';
 
-buttonJs();
 
 export default {
   title: 'Pattern Library/Components/Button',
