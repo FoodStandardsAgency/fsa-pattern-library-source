@@ -11,11 +11,14 @@
   }
   &__example {
     margin-top: 0;
+    margin-bottom: 2rem;
   }
   &__article {
     @include h1-article;
+    margin-bottom: 2rem;
   }
   &__intro {
     @include intro;
+    margin-bottom: 2rem;
   }
 }
