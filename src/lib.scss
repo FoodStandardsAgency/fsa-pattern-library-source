@@ -150,7 +150,6 @@ $fsa-xl: 1920px;
     text-decoration: none;
     background-color: var(--fsa-tertiary_light-yellow);
     border-bottom: 4px solid var(--fsa-primary_black);
-
   }
 }
 
@@ -271,6 +270,8 @@ $mobileGutter: 1rem;
 
   @else if $button-type==secondary {
     @include button-secondary;
+  } @else if $button-type == cancel {
+    @include button-cancel;
   }
 
   &:focus {
@@ -298,6 +299,14 @@ $mobileGutter: 1rem;
   &:hover {
     background-color: #006f51;
     color: var(--fsa-primary_white);
+  }
+}
+
+@mixin button-cancel {
+  background-color: var(--fsa-secondary_mid-red);
+  color: var(--fsa-primary_white);
+  &:hover {
+    background-color: #b0132b;
   }
 }
 

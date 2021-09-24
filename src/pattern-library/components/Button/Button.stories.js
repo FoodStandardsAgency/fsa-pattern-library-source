@@ -19,13 +19,18 @@ const Template = (args) => {
 
 const darkBackground = {
   backgrounds: {
-    default: 'dark',
+    default: 'purple',
+    values: [
+      {name: 'dark', value:'#292828'},
+      {name: 'light', value: '#fff'},
+      {name: 'purple', value: '#49176d'},
+    ],
   },
 };
 
 export const PrimaryAnchor = Template.bind({});
 PrimaryAnchor.args = {
-  primary: true,
+  type: 'primary',
   label: 'All News and Alerts',
   url: 'https://www.food.gov.uk/news-alerts',
   is_anchor: true,
@@ -34,13 +39,13 @@ PrimaryAnchor.args = {
 export const SecondaryAnchor = Template.bind({});
 SecondaryAnchor.args = {
   ...PrimaryAnchor.args,
-  primary: false,
+  type: 'secondary',
 };
 SecondaryAnchor.parameters = darkBackground;
 
 export const PrimaryButton = Template.bind({});
 PrimaryButton.args = {
-  primary: true,
+  type: 'primary',
   label: 'Click me',
   is_anchor: false,
 };
@@ -48,6 +53,13 @@ PrimaryButton.args = {
 export const SecondaryButton = Template.bind({});
 SecondaryButton.args = {
   ...PrimaryButton.args,
-  primary: false,
+  type: 'secondary',
 };
 SecondaryButton.parameters = darkBackground;
+
+export const CancelButton = Template.bind({});
+CancelButton.args = {
+  ...PrimaryButton.args,
+  type: 'cancel',
+  label: 'Cancel',
+}
