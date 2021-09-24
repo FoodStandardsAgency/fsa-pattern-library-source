@@ -22,7 +22,6 @@ Content.args = {
   removeFiltersLinkText: 'remove all filters',
   foodHygieneRatingText: 'Were you looking for',
   foodHygieneRatingLinkText: 'Food Hygiene Ratings',
-  removeFiltersLink: 'http://google.com',
-  foodHygieneRatingLink: 'http://youtube.com'
-
+  removeFiltersLink: 'http://example.com/removeFilters',
+  foodHygieneRatingLink: 'http://example.com/foodHygiene'
 };
