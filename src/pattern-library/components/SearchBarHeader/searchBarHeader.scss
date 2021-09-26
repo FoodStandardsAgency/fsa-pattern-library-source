@@ -1,17 +1,10 @@
 @import 'src/lib.scss';
 
 .search-header {
-  &__container {
-    @include container;
-  }
-  &__grid {
-    @include grid;
-  }
-  &__wrapper {
-    grid-column: 1 / -1;
-    @media screen and (min-width: $fsa-lg) {
-      grid-column: 1 / span 8;
-    }
+  @media screen and (min-width: $fsa-lg) {
+    @include grid-cols(8);
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   &__title {
     @include h1;
