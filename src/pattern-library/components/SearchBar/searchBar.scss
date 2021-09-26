@@ -5,11 +5,12 @@
   display: flex;
   &__label {
     @include body;
-    display: block;
+    display: flex;
     position: absolute;
-    align-self: center;
+    align-items: center;
     z-index: 1;
     left: 2rem;
+    height: 100%;
   }
   &__box {
     @include body;

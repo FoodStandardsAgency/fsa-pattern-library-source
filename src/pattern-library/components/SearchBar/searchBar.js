@@ -15,6 +15,6 @@ export default function () {
       } else {
         input.classList.remove('search-bar__box--has-content');
       }
-    })
+    });
   });
 }

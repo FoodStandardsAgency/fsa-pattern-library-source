@@ -24,6 +24,7 @@
     "autoprefixer": "^9.6.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.7",
+    "css-vars-ponyfill": "2.4.7",
     "deeson-webpack-config-starter": "https://github.com/teamdeeson/deeson-webpack-config#feature/drupal9-webpack5",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",

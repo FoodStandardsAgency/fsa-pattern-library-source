@@ -19,5 +19,6 @@ export const SearchBarHeader = Template.bind({});
 SearchBarHeader.args = {
   headerText: 'Search',
   searchLink: '/search',
-  searchText: 'Search Food Standards Agency'
+  searchText: 'Search Food Standards Agency',
+  searchValue: '',
 }
