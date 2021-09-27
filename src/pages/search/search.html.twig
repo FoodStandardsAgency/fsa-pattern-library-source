@@ -1,7 +1,7 @@
 {% extends "../../pattern-library/components/Layout/layout.html.twig" %}
 {% block top %}
   <h1>The H1 for the page.</h1>
-  <input class='search' value='Food posioning' style='  width: 856px; height: 65px; padding: 5px 6px 5px 35px; border-radius: 32.5px; border: solid 1px #53565a; background-color: #f0f3f5;'/>
+  <input class="search" value="Food posioning" style="width: 856px; height: 65px; padding: 5px 6px 5px 35px; border-radius: 32.5px; border: solid 1px #53565a; background-color: #f0f3f5;"/>
 {% endblock %}
 
 {% block left %}
@@ -16,6 +16,13 @@
 
 
 {% block right %}
+  {% set content = {
+  type: 'Allergy alert',
+  title: 'Update from the Food Standards Agency, Food Standards Scotland and Defra following the rise in cases of feline pancytopenia',
+  description: 'SFC Wholesale Ltd is recalling The Original SFC Bargain Box as it contains milk, which is not mentioned on the label. This means the product is a possible health risk to anyone with an allergy or intolerance to milk or milk constituents.',
+  date: '8 September 2021',
+  url: 'http://google.com'
+  } %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
@@ -39,12 +46,5 @@
   sort_by: 'Sort by',
   options: ['Relevance', 'Most recent'],
   default: 'Relevance',
-  } %}
-  {% set content = {
-  type: 'Allergy alert',
-  title: 'Update from the Food Standards Agency, Food Standards Scotland and Defra following the rise in cases of feline pancytopenia',
-  description: 'SFC Wholesale Ltd is recalling The Original SFC Bargain Box as it contains milk, which is not mentioned on the label. This means the product is a possible health risk to anyone with an allergy or intolerance to milk or milk constituents.',
-  date: '8 September 2021',
-  url: 'http://google.com'
   } %}
 {% endblock %}
