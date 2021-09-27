@@ -309,11 +309,3 @@ $mobileGutter: 1rem;
     background-color: #b0132b;
   }
 }
-
-html {
-  font-size: 16px;
-
-  @media screen and (min-width: $fsa-md) {
-    font-size: 18px;
-  }
-}
