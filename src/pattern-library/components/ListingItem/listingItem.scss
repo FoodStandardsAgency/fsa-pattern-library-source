@@ -32,7 +32,8 @@
   &__title {
     margin-top: 0.5rem;
     margin-bottom: 0;
-   @include h5;
+    @include h5;
+
     a {
       font-size: 1.2rem;
       font-weight: bold;
@@ -51,6 +52,12 @@
         color: var(--fsa-primary_black);
         outline: none;
         border-bottom: 2px solid var(--fsa-primary_black);
+        padding: 0.5px 0;
+
+        @media screen and (min-width: $fsa-xs) {
+          padding: 3px 0;
+        }
+
       }
 
     }
