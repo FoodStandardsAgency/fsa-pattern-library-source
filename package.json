@@ -14,17 +14,22 @@
     "@storybook/addon-a11y": "^6.4.0-alpha.16",
     "@storybook/addon-actions": "^6.4.0-alpha.16",
     "@storybook/addon-essentials": "^6.4.0-alpha.16",
+    "@storybook/addon-ie11": "^0.0.6",
     "@storybook/addon-links": "^6.4.0-alpha.16",
     "@storybook/builder-webpack5": "^6.4.0-alpha.16",
-    "@storybook/html": "^6.3.4",
+    "@storybook/html": "^6.3.8",
     "@storybook/manager-webpack5": "^6.4.0-alpha.16",
+    "@storybook/preset-ie11": "^0.0.1",
     "@whitespace/storybook-addon-html": "^5.0.0",
+    "autoprefixer": "^9.6.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.7",
+    "css-vars-ponyfill": "2.4.7",
     "deeson-webpack-config-starter": "https://github.com/teamdeeson/deeson-webpack-config#feature/drupal9-webpack5",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.1.0",
+    "postcss-loader": "^3.0.0",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
     "storybook-addon-preview": "^2.1.2",
@@ -38,5 +43,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "webpack"
-  }
+  },
+  "browserslist": "IE 11, not dead"
 }

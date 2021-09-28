@@ -1,0 +1,59 @@
+{% extends "../../pattern-library/components/Layout/layout.html.twig" %}
+{% block top %}
+  {% include '../../pattern-library/components/SearchBarHeader/searchBarHeader.html.twig' with {
+    headerText: 'Search',
+    searchLink: '/search',
+    searchText: 'Search Food Standards Agency',
+    searchValue: '',
+  } %}
+{% endblock %}
+
+{% block left %}
+  The filters will go here
+  <hr/>
+  A filter
+  <hr/>
+  Another filter
+  <hr/>
+  Etc
+{% endblock %}
+
+
+{% block right %}
+  {% set content = {
+  type: 'Allergy alert',
+  title: 'Update from the Food Standards Agency, Food Standards Scotland and Defra following the rise in cases of feline pancytopenia',
+  description: 'SFC Wholesale Ltd is recalling The Original SFC Bargain Box as it contains milk, which is not mentioned on the label. This means the product is a possible health risk to anyone with an allergy or intolerance to milk or milk constituents.',
+  date: '8 September 2021',
+  url: 'http://google.com'
+  } %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/Pagination/pagination.html.twig' with {
+    totalPages: 12,
+    currentPage: 1,
+    maxPages: 4,
+  } %}
+{% endblock %}
+
+{% block right_top %}
+  {% include '../../pattern-library/components/Showing/showing.html.twig' with {
+  showing: 'Showing',
+  of: 'of',
+  results: 'results',
+  displayed_results: '1-10',
+  total_results: '103',
+  } %}
+  {% include '../../pattern-library/components/SortBy/sortBy.html.twig' with {
+  sort_by: 'Sort by',
+  options: ['Relevance', 'Most recent'],
+  default: 'Relevance',
+  } %}
+{% endblock %}

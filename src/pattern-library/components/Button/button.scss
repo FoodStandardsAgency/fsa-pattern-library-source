@@ -1,9 +1,15 @@
 @import 'src/lib.scss';
 
 .button {
-  @include button(secondary);
-
   &--primary {
     @include button(primary);
+  }
+
+  &--secondary {
+    @include button(secondary);
+  }
+  
+  &--cancel {
+    @include button(cancel);
   }
 }
