@@ -1,0 +1,17 @@
+@import 'src/lib.scss';
+
+.search-header {
+  @media screen and (min-width: $fsa-lg) {
+    @include grid-cols(8);
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  &__title {
+    @include h1;
+    margin-bottom: 1rem;
+    color: var(--fsa-primary_dark-green);
+    @media screen and (min-width: $fsa-lg) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}

@@ -1,15 +1,11 @@
 @import 'src/lib.scss';
 
 .sort {
-  @media screen and (min-width: $fsa-md) {
-    display: inline-block;
-  }
-
   &__label {
-    margin-right: 0.9rem;
+    margin-right: 0.8rem;
 
     @media screen and (min-width: $fsa-md) {
-      margin-right: 0.8rem;
+      margin-right: 0.6rem;
     }
   }
 

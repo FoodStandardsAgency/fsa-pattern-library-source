@@ -1,16 +1,20 @@
 {% extends "../../pattern-library/components/Layout/layout.html.twig" %}
 {% block top %}
-  <h1>The H1 for the page.</h1>
-  <input class="search" value="Food posioning" style="  width: 856px; height: 65px; padding: 5px 6px 5px 35px; border-radius: 32.5px; border: solid 1px #53565a; background-color: #f0f3f5;" />
+  {% include '../../pattern-library/components/SearchBarHeader/searchBarHeader.html.twig' with {
+    headerText: 'Search',
+    searchLink: '/search',
+    searchText: 'Search Food Standards Agency',
+    searchValue: '',
+  } %}
 {% endblock %}
 
 {% block left %}
   The filters will go here
-  <hr />
+  <hr/>
   A filter
-  <hr />
+  <hr/>
   Another filter
-  <hr />
+  <hr/>
   Etc
 {% endblock %}
 
@@ -32,4 +36,24 @@
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/Pagination/pagination.html.twig' with {
+    totalPages: 12,
+    currentPage: 1,
+    maxPages: 4,
+  } %}
+{% endblock %}
+
+{% block right_top %}
+  {% include '../../pattern-library/components/Showing/showing.html.twig' with {
+  showing: 'Showing',
+  of: 'of',
+  results: 'results',
+  displayed_results: '1-10',
+  total_results: '103',
+  } %}
+  {% include '../../pattern-library/components/SortBy/sortBy.html.twig' with {
+  sort_by: 'Sort by',
+  options: ['Relevance', 'Most recent'],
+  default: 'Relevance',
+  } %}
 {% endblock %}
