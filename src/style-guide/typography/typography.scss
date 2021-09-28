@@ -21,4 +21,8 @@
     @include intro;
     margin-bottom: 2rem;
   }
+  &__small {
+    @include small;
+    margin-bottom: 2rem;
+  }
 }
