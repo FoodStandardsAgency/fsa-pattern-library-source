@@ -57,18 +57,3 @@
   default: 'Relevance',
   } %}
 {% endblock %}
-
-{% block right_top %}
-  {% include '../../pattern-library/components/Showing/showing.html.twig' with {
-  showing: 'Showing',
-  of: 'of',
-  results: 'results',
-  displayed_results: '1-10',
-  total_results: '103',
-  } %}
-  {% include '../../pattern-library/components/SortBy/sortBy.html.twig' with {
-  sort_by: 'Sort by',
-  options: ['Relevance', 'Most recent'],
-  default: 'Relevance',
-  } %}
-{% endblock %}
