@@ -147,6 +147,8 @@ $fsa-xl: 1920px;
   }
 
   &:focus {
+    color: var(--fsa-primary_black);
+    outline: none;
     text-decoration: none;
     background-color: var(--fsa-tertiary_light-yellow);
     border-bottom: 4px solid var(--fsa-primary_black);
@@ -307,13 +309,5 @@ $mobileGutter: 1rem;
   color: var(--fsa-primary_white);
   &:hover {
     background-color: #b0132b;
-  }
-}
-
-html {
-  font-size: 16px;
-
-  @media screen and (min-width: $fsa-md) {
-    font-size: 18px;
   }
 }
