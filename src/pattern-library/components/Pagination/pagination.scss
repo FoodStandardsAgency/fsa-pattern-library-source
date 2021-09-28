@@ -1,0 +1,133 @@
+@import "../../../lib.scss";
+
+.pagination {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  &__item-group {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+  &__item {
+    align-items: center;
+    display: inline-block;
+    &:focus-within {
+      text-decoration: none;
+      background-color: var(--fsa-tertiary_light-yellow);
+      outline: none;
+      border-bottom: 2px solid var(--fsa-primary_black);
+      a {
+        color: var(--fsa-primary_black);
+      }
+    }
+    &--first {
+      margin-right: 0.688rem;
+      &:before {
+        width: 0.938rem;
+        background-repeat: repeat-x;
+        margin-right: 0.25rem;
+      }
+    }
+    &--previous {
+      &:before {
+        width: 0.5rem;
+        background-repeat: no-repeat;
+        margin-right: 0.25rem;
+      }
+    }
+    &--next {
+      &:after {
+        width: 0.5rem;
+        background-repeat: no-repeat;
+        transform: scaleX(-1);
+        margin-left: 0.25rem;
+      }
+    }
+    &--last {
+      margin-left: 0.688rem;
+      &:after {
+        width: 0.938rem;
+        background-repeat: repeat-x;
+        transform: scaleX(-1);
+        margin-left: 0.25rem;
+      }
+    }
+    a {
+      display: inline-block;
+      @include body();
+      color: var(--fsa-primary_dark-green);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__back,
+  &__forward {
+    li {
+      display: flex;
+      height: fit-content;
+      &:before,
+      &:after {
+        content: "";
+        height: 0.813rem;
+        background-image: url("./arrow.svg");
+        background-size: contain;
+      }
+      &:hover,
+      a:hover {
+        color: var(--fsa__link-green);
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+          content: "";
+          height: 0.813rem;
+          background-image: url("./arrow-hover.svg");
+          background-size: contain;
+        }
+      }
+      &:focus-within,
+      a:focus {
+        &:before,
+        &:after {
+          color: var(--fsa-primary_black);
+          background-image: url("./arrow-focus.svg");
+        }
+      }
+    }
+  }
+  &__numbered {
+    display: none;
+    @media screen and (min-width: $fsa-lg) {
+      display: flex;
+    }
+    li {
+      a {
+        width: 2.75rem;
+        text-align: center;
+        border-radius: 100%;
+        line-height: 2.75rem;
+        &:hover {
+          color: var(--fsa-primary_white);
+          background-color: var(--fsa__link-green);
+          font-weight: bold;
+          text-decoration: none;
+        }
+        &[aria-current="page"] {
+          &:not(:focus) {
+            color: var(--fsa-primary_white);
+            background-color: var(--fsa-primary_dark-green);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

@@ -36,6 +36,11 @@
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../pattern-library/components/Pagination/pagination.html.twig' with {
+    totalPages: 12,
+    currentPage: 1,
+    maxPages: 4,
+  } %}
 {% endblock %}
 
 {% block right_top %}
