@@ -116,6 +116,6 @@ export const Content = Template.bind({});
 Content.args = {
   title: 'Regulated Are you looking for specific business guidance?',
   linkText: 'Regulated products',
-  url: 'http://google.com',
+  url: '#',
   svg : svg
 };
