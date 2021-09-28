@@ -299,7 +299,7 @@ $mobileGutter: 1rem;
   color: var(--fsa__link-green);
 
   &:hover {
-    background-color: #006f51;
+    background-color: var(--fsa-primary_dark-green);
     color: var(--fsa-primary_white);
   }
 }
