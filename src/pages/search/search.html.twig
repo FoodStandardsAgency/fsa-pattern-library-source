@@ -10,11 +10,11 @@
 
 {% block left %}
   The filters will go here
-  <hr />
+  <hr/>
   A filter
-  <hr />
+  <hr/>
   Another filter
-  <hr />
+  <hr/>
   Etc
 {% endblock %}
 
@@ -36,4 +36,19 @@
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
   {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
+{% endblock %}
+
+{% block right_top %}
+  {% include '../../pattern-library/components/Showing/showing.html.twig' with {
+  showing: 'Showing',
+  of: 'of',
+  results: 'results',
+  displayed_results: '1-10',
+  total_results: '103',
+  } %}
+  {% include '../../pattern-library/components/SortBy/sortBy.html.twig' with {
+  sort_by: 'Sort by',
+  options: ['Relevance', 'Most recent'],
+  default: 'Relevance',
+  } %}
 {% endblock %}

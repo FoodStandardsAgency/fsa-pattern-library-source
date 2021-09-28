@@ -35,4 +35,16 @@
       @include grid-cols(8);
     }
   }
+  &__right-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
