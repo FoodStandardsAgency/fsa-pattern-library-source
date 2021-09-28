@@ -32,9 +32,6 @@
         border-radius: 2rem;
       }
     }
-    @media screen and (min-width: $fsa-lg) {
-      height: 4rem;
-    }
   }
   &__submit {
     position: absolute;
@@ -59,9 +56,9 @@
       border-radius: 2rem;
     }
     @media screen and (min-width: $fsa-lg) {
-      right: 0.4rem;
-      top: 0.4rem;
-      bottom: 0.4rem;
+      right: 0.3rem;
+      top: 0.3rem;
+      bottom: 0.3rem;
     }
   }
 }
