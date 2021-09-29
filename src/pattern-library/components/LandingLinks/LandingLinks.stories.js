@@ -115,7 +115,13 @@ const svg = {
 export const Content = Template.bind({});
 Content.args = {
   title: 'Regulated Are you looking for specific business guidance?',
-  linkText: 'Regulated products',
-  url: '#',
-  svg : svg
+  items: [
+    {linkText: 'Import', url: '#', svg: svg.import},
+    {linkText: 'Farming', url: '#', svg: svg.farming},
+    {linkText: 'Regulated', url: '#', svg: svg.regulated},
+    {linkText: 'Fish', url: '#', svg: svg.fish},
+    {linkText: 'Meat', url: '#', svg: svg.meat},
+    {linkText: 'Wine', url: '#', svg: svg.wine}
+  
+  ]
 };
