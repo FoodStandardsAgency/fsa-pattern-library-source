@@ -18,7 +18,7 @@
 
   &__top {
     @include grid-cols(4, 4);
-    padding-bottom: 5rem;
+    margin-bottom: 3rem;
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(12);
     }
@@ -33,6 +33,18 @@
     @include grid-cols(4, 4);
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(8);
+    }
+  }
+  &__right-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }
