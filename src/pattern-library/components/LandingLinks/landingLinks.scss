@@ -1,12 +1,15 @@
 @import '../../../lib.scss';
 
 .landing-links {
+  margin-top: 3rem;
+
+  @media screen and (min-width: $fsa-lg) {
+    margin-top: 4rem;
+  }
+
   &__container {
-    @include grid-container;
-    margin-top: 3rem;
-    @media screen and (min-width: $fsa-lg){
-      margin-top: 4rem;
-    }
+    @include grid-container();
+    display: flex;
   }
 
   &__title {
@@ -16,9 +19,9 @@
     h2 {
       @include h2;
       margin: 0;
-      padding-bottom: 0.5rem; 
+      padding-bottom: 0.5rem;
     }
-    
+
     &:after {
       content: "";
       position: absolute;
@@ -36,17 +39,15 @@
     }
   }
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  
-    @media screen and (min-width: $fsa-xs){
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+  &__row {
+    @include grid-row();
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
     }
-  
-    @media screen and (min-width: $fsa-lg) {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-    }
+
 
   }
 
@@ -55,17 +56,29 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+    @include grid-cols(2, 4);
+
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(4, 12);
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      @include grid-cols(2, 12);
+    }
+
     &:hover {
       cursor: pointer;
 
       .landing-links__svg {
         background-color: var(--fsa__link-green);
       }
-     a {
-       text-decoration: underline;
-     }
-     
+
+      a {
+        text-decoration: underline;
+      }
+
     }
+
     a {
       @include link;
       color: var(--fsa-primary_black);
@@ -107,15 +120,15 @@
 
 
   //IE11
-  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-    &__item:not(:last-child) {
-      margin-right: 2rem;
-    }
+  // @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  //   &__item:not(:last-child) {
+  //     margin-right: 2rem;
+  //   }
 
-    &__list {
-      display: flex;
-      justify-content: center;
-    }
-  }
+  //   &__list {
+  //     display: flex;
+  //     justify-content: center;
+  //   }
+  // }
 
 }
