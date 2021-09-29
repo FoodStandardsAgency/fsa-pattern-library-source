@@ -61,6 +61,11 @@ h6,
   @include h6;
 }
 
+small,
+.small {
+  @include small;
+}
+
 ul {
   list-style: none;
 }

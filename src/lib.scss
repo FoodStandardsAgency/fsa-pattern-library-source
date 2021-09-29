@@ -62,6 +62,7 @@ $fsa-xl: 1920px;
   font-weight: var(--heading-bold);
   line-height: 1.1;
   letter-spacing: normal;
+  color: var(--fsa-primary_dark-green);
   @media screen and (min-width: $fsa-lg) {
     font-size: 2.986rem;
   }
@@ -162,8 +163,8 @@ $fsa-xl: 1920px;
   line-height: 1.6;
   letter-spacing: normal;
 
-  @media screen and (min-width: $fsa-md) {
-    font-size: 1.25rem;
+  @media screen and (min-width: $fsa-lg) {
+    font-size: 1.2rem;
   }
 }
 
@@ -174,8 +175,8 @@ $fsa-xl: 1920px;
   line-height: 1.6;
   letter-spacing: normal;
 
-  @media screen and (min-width: $fsa-md) {
-    font-size: 0.833rem;
+  @media screen and (min-width: $fsa-lg) {
+    font-size: 0.9rem;
   }
 }
 
