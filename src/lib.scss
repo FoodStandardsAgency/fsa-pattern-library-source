@@ -173,13 +173,9 @@ $fsa-xl: 1920px;
 @mixin small {
   font-family: var(--body-font);
   font-weight: var(--body-normal);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   letter-spacing: normal;
-
-  @media screen and (min-width: $fsa-lg) {
-    font-size: 0.9rem;
-  }
 }
 
 @mixin container {
@@ -281,7 +277,7 @@ $mobileGutter: 1rem;
   }
 
   &:focus {
-    box-shadow: 0 0 0px 3px var(--fsa-tertiary_light-yellow), inset 0 0 0px 3px var(--fsa-primary_black);
+    box-shadow: 0 0 0 0.2rem var(--fsa-primary_black), 0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 }

@@ -2,11 +2,7 @@
 
 .sort {
   &__label {
-    margin-right: 0.8rem;
-
-    @media screen and (min-width: $fsa-md) {
-      margin-right: 0.5rem;
-    }
+    margin-right: 0.5rem;
   }
 
   &__select {
