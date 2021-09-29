@@ -18,7 +18,7 @@
 
   &__top {
     @include grid-cols(4, 4);
-    padding-bottom: 5rem;
+    margin-bottom: 3rem;
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(12);
     }
