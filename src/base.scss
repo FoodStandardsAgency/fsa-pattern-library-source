@@ -3,7 +3,7 @@
 html {
   font-family: sans-serif;
   font-size: 16px;
-  @media screen and (min-width: $fsa-md) {
+  @media screen and (min-width: $fsa-lg) {
     font-size: 18px;
   }
 }
@@ -59,6 +59,11 @@ h5,
 h6,
 .h6 {
   @include h6;
+}
+
+small,
+.small {
+  @include small;
 }
 
 ul {

@@ -1,23 +1,17 @@
 @import 'src/lib.scss';
 
 .sort {
-  @media screen and (min-width: $fsa-md) {
-    display: inline-block;
-  }
-
   &__label {
-    margin-right: 0.9rem;
-
-    @media screen and (min-width: $fsa-md) {
-      margin-right: 0.8rem;
-    }
+    margin-right: 0.5rem;
   }
 
   &__select {
     margin-right: 0;
+    font-family: var(--body-font);
     font-size: 1rem;
     font-weight: bold;
-    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    padding: 0.65rem 2.5rem 0.65rem 1rem;
+    min-height: 44px;
     background: var(--fsa_tint);
     border: 1px solid var(--fsa-primary_black);
     border-radius: 0;
@@ -26,7 +20,7 @@
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    &::ms-expanded {
+    &::-ms-expand {
       display: none;
     }
     background-image: url('./arrow-down.svg');

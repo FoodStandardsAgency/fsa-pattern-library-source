@@ -1,0 +1,17 @@
+<div class="landing-links">
+  <div class="landing-links__container">
+    <div class="landing-links__title">
+      <h2>{{ title }}</h2>
+    </div>
+    <div class="landing-links__list">
+      {% for item in items %}
+      <div class="landing-links__item">
+        <div class="landing-links__svg">
+          {{ item.svg }}
+        </div>
+        <a class="landing-links__link" href={{ item.url }}>{{ item.linkText }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="filters">
+  <div class="filters__buttons">
+    {% for filter_name in filter_names %}
+      <button class="filters__button" aria-label="{{ remove_filter }} {{ filter_name }}">{{ filter_name }}</button>
+    {% endfor %}
+  </div>
+  <div class="filters__remove-wrapper">
+    <button class="filters__remove">{{ remove_all_filters }}</button>
+  </div>
+</div>

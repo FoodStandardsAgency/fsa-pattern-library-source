@@ -62,6 +62,7 @@ $fsa-xl: 1920px;
   font-weight: var(--heading-bold);
   line-height: 1.1;
   letter-spacing: normal;
+  color: var(--fsa-primary_dark-green);
   @media screen and (min-width: $fsa-lg) {
     font-size: 2.986rem;
   }
@@ -147,9 +148,12 @@ $fsa-xl: 1920px;
   }
 
   &:focus {
+    color: var(--fsa-primary_black);
+    outline: none;
     text-decoration: none;
     background-color: var(--fsa-tertiary_light-yellow);
     border-bottom: 4px solid var(--fsa-primary_black);
+    margin-bottom: -4px;
 
   }
 }
@@ -160,20 +164,18 @@ $fsa-xl: 1920px;
   font-size: 1.18rem;
   line-height: 1.6;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 1.25rem;
+
+  @media screen and (min-width: $fsa-lg) {
+    font-size: 1.2rem;
   }
 }
 
 @mixin small {
   font-family: var(--body-font);
   font-weight: var(--body-normal);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   letter-spacing: normal;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 0.833rem;
-  }
 }
 
 @mixin container {
@@ -193,6 +195,7 @@ $fsa-xl: 1920px;
   display: grid;
   grid-template-columns: repeat(4, [col-start] 1fr);
   gap: 1rem;
+
   @media screen and (min-width: $fsa-md) {
     grid-template-columns: repeat(12, [col-start] 1fr);
     gap: 2rem;
@@ -210,6 +213,7 @@ $mobileGutter: 1rem;
   margin: 0 auto;
   padding-left: $mobileContainer;
   padding-right: $mobileContainer;
+
   @media screen and (min-width: $fsa-md) {
     padding-left: $container;
     padding-right: $container;
@@ -222,6 +226,7 @@ $mobileGutter: 1rem;
   flex: 1;
   margin-left: -$mobileGutter / 2;
   margin-right: -$mobileGutter / 2;
+
   @media screen and (min-width: $fsa-md) {
     margin-left: -$gutter / 2;
     margin-right: -$gutter / 2;
@@ -234,6 +239,7 @@ $mobileGutter: 1rem;
   max-width: (100% / $basis) * $count;
   padding-left: $mobileGutter / 2;
   padding-right: $mobileGutter / 2;
+
   @media screen and (min-width: $fsa-md) {
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
@@ -251,25 +257,27 @@ $mobileGutter: 1rem;
   font-size: 1rem;
   text-align: center;
   line-height: 1.6rem;
+  min-height: 44px;
   letter-spacing: normal;
   border: 0;
   border-radius: 1.5rem;
-  padding: 0.5rem 2.5rem;
+  padding: 0.6rem 2.5rem;
   cursor: pointer;
   transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
     border-radius 0.1s ease-out, border-bottom 0.1s ease-out;
 
-  @if $button-type == primary {
+  @if $button-type==primary {
     @include button-primary;
-  } @else if $button-type == secondary {
+  }
+
+  @else if $button-type==secondary {
     @include button-secondary;
+  } @else if $button-type == cancel {
+    @include button-cancel;
   }
 
   &:focus {
-    background-color: var(--fsa-tertiary_light-yellow);
-    color: var(--fsa-primary_black);
-    border-radius: 0;
-    border-bottom: 4px var(--fsa-primary_black) solid;
+    box-shadow: 0 0 0 0.2rem var(--fsa-primary_black), 0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 }
@@ -277,6 +285,7 @@ $mobileGutter: 1rem;
 @mixin button-primary {
   background-color: var(--fsa-primary_dark-green);
   color: var(--fsa-primary_white);
+
   &:hover {
     background-color: #005e59;
   }
@@ -285,15 +294,17 @@ $mobileGutter: 1rem;
 @mixin button-secondary {
   background-color: var(--fsa-primary_white);
   color: var(--fsa__link-green);
+
   &:hover {
-    background-color: #006f51;
+    background-color: var(--fsa-primary_dark-green);
     color: var(--fsa-primary_white);
   }
 }
 
-html {
-  font-size: 16px;
-  @media screen and (min-width: $fsa-md) {
-    font-size: 18px;
+@mixin button-cancel {
+  background-color: var(--fsa-secondary_mid-red);
+  color: var(--fsa-primary_white);
+  &:hover {
+    background-color: #b0132b;
   }
 }

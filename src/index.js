@@ -1,6 +1,12 @@
 import './base.scss';
-import buttonJs from './pattern-library/components/Button/Button';
-import listingItemJs from './pattern-library/components/ListingItem/ListingItem';
+import './pattern-library/components/Button/Button';
+import cssVars from 'css-vars-ponyfill';
 
-buttonJs();
+import listingItemJs from './pattern-library/components/ListingItem/ListingItem';
+import landingLinksJs from './pattern-library/components/LandingLinks/LandingLinks';
+
+// Fixes css vars on legacy browsers (i.e. IE11)
+cssVars();
+
 listingItemJs();
+landingLinksJs();
