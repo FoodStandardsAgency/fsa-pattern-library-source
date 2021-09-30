@@ -7,10 +7,6 @@
     border-bottom: 4px solid var(--fsa_border);
     padding: 0 1rem 1.5rem 1rem;
 
-    &:hover {
-      cursor: pointer;
-    }
-
     @media screen and (min-width: $fsa-lg) {
       padding: 0 3rem 1.5rem 3rem;
     }
