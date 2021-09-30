@@ -21,7 +21,7 @@ const darkBackground = {
     values: [
       {name: 'dark', value:'#292828'},
       {name: 'light', value: '#fff'},
-      {name: 'purple', value: '#49176d'},
+      {name: 'purple', value: '#2a0247'},
     ],
   },
 };

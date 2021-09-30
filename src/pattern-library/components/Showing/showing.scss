@@ -2,9 +2,9 @@
 
 .showing {
   color: var(--fsa-primary_black);
-  margin: 0 0 1.05rem 0;
+  margin: 0 0 1rem 0;
   @media screen and (min-width: $fsa-md) {
-    margin: 0 ;
+    margin: 0;
   }
 }
 
