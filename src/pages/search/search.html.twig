@@ -20,6 +20,19 @@
 
 
 {% block right %}
+  {% set filter_params = {
+    filter_names: [
+      'Alergy Alert',
+      'News',
+      'Ecoli',
+      'England',
+      'Northern Ireland',
+      'Consumer',
+    ],
+    remove_filter: 'Remove filter',
+    remove_all_filters: 'Remove all filters',    
+  } %}
+  {% include '../../pattern-library/components/FiltersSelected/filtersSelected.html.twig' with filter_params %}
   {% set content = {
   type: 'Allergy alert',
   title: 'Update from the Food Standards Agency, Food Standards Scotland and Defra following the rise in cases of feline pancytopenia',
