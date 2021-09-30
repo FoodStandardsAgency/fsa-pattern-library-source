@@ -3,9 +3,11 @@
 .filters {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
   @media screen and (min-width: $fsa-md) {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 1.8rem;
   }
 
   &__buttons {
@@ -73,8 +75,8 @@
     }
 
     @media screen and (min-width: $fsa-md) {
-      margin-top: 0.3rem;
-      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
     }
   }
 }
