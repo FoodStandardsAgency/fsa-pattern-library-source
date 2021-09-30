@@ -22,7 +22,7 @@
     border-radius: 1.34rem;
     box-shadow: none;
     min-height: 44px;
-    padding: 0.5rem 3rem 0.5rem 1rem;
+    padding: 0.6rem 3rem 0.6rem 1rem;
     margin: 0 0.5rem 0.5rem 0;
     cursor: pointer;
     transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
@@ -37,12 +37,9 @@
     }
 
     &:focus {
-      background-color: var(--fsa-tertiary_light-yellow);
-      color: var(--fsa-primary_black);
-      border-radius: 0;
-      border-bottom: 4px solid var(--fsa-primary_black);
+      box-shadow: 0 0 0px 0.2rem var(--fsa-tertiary_light-yellow),
+        0 0 0px 0.4rem var(--fsa-primary_black);
       outline: none;
-      background-image: url(./cross-black.svg);
     }
 
     @media screen and (min-width: $fsa-md) {
