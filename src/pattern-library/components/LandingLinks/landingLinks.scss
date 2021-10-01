@@ -1,10 +1,10 @@
-@import '../../../lib.scss';
+@import "../../../lib.scss";
 
 .landing-links {
-  margin-top: 3rem;
+  margin-bottom: 1rem;
 
   @media screen and (min-width: $fsa-lg) {
-    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 
   &__container {
@@ -12,30 +12,37 @@
     display: flex;
   }
 
+  &__gap {
+    @media screen and (min-width: $fsa-lg) {
+      @include cols-push(2, 12);
+    }
+  }
+
   &__title {
     text-align: center;
-    position: relative;
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(12, 12);
+    }
+    @media screen and (min-width: $fsa-lg) {
+      @include grid-cols(8, 12);
+    }
 
     h2 {
       @include h2;
       margin: 0;
       padding-bottom: 0.5rem;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZlcnNpb249JzEuMSc+PGNpcmNsZSBjeD0nNCcgY3k9JzQnIHI9JzQnIGZpbGw9JyNERUUyRTUnIC8+PC9zdmc+);
-      background-repeat: repeat-x;
-      background-size: 25px 25px;
-      bottom: -1rem;
-      left: 50%;
-      width: 12rem;
-      height: 9px;
-      display: block;
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-      padding-bottom: 1rem;
+      &:after {
+        content: "";
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZlcnNpb249JzEuMSc+PGNpcmNsZSBjeD0nNCcgY3k9JzQnIHI9JzQnIGZpbGw9JyNERUUyRTUnIC8+PC9zdmc+);
+        background-repeat: repeat-x;
+        background-size: 25px 25px;
+        width: 12rem;
+        height: 9px;
+        display: block;
+        padding-bottom: 1rem;
+        margin: 1rem auto 2rem;
+      }
     }
   }
 
@@ -47,15 +54,13 @@
     @media screen and (min-width: $fsa-md) {
       flex-direction: row;
     }
-
-
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     @include grid-cols(2, 4);
 
     @media screen and (min-width: $fsa-md) {
@@ -76,16 +81,18 @@
       a {
         text-decoration: underline;
       }
-
     }
 
     a {
       @include link;
       color: var(--fsa-primary_black);
       text-decoration: none;
+      display: inline-block;
+      width: -moz-min-content;
+      width: -webkit-min-content;
+      display: -ms-grid;
+      -ms-grid-columns: min-content;
     }
-
-
   }
 
   &__svg {
@@ -108,7 +115,6 @@
       svg {
         width: 51px;
       }
-
     }
   }
 
@@ -117,5 +123,4 @@
     text-align: center;
     margin-top: 0.5rem;
   }
-
 }
