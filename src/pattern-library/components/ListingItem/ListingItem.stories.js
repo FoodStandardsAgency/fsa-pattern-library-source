@@ -1,8 +1,5 @@
 import listingItem from './listingItem.html.twig';
 import './listingItem.scss';
-import listingItemJs from './ListingItem.js';
-
-listingItemJs();
 
 export default {
   title: 'Pattern Library/Components/Listing Item',
