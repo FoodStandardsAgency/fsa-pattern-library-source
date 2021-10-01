@@ -1,7 +1,6 @@
 import button from './button.html.twig';
 import './Button.js';
 
-
 export default {
   title: 'Pattern Library/Components/Button',
   argTypes: {
