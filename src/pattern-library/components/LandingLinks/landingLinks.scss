@@ -9,15 +9,8 @@
 
   &__container {
     @include grid-container();
-    display: flex;
   }
-
-  &__gap {
-    @media screen and (min-width: $fsa-lg) {
-      @include cols-push(2, 12);
-    }
-  }
-
+  
   &__title {
     text-align: center;
     @include grid-cols(4, 4);
@@ -26,6 +19,7 @@
     }
     @media screen and (min-width: $fsa-lg) {
       @include grid-cols(8, 12);
+      @include cols-push(2, 12);
     }
 
     h2 {
