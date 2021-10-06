@@ -1,10 +1,10 @@
 @import "../../../lib.scss";
 
 .landing-links {
-  margin-bottom: 1rem;
+  margin-top: 3rem;
 
   @media screen and (min-width: $fsa-lg) {
-    margin-bottom: 2rem;
+    margin-top: 4rem;
   }
 
   &__container {
@@ -25,17 +25,15 @@
     h2 {
       @include h2;
       margin: 0;
-      padding-bottom: 0.5rem;
       &:after {
         content: "";
         background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZlcnNpb249JzEuMSc+PGNpcmNsZSBjeD0nNCcgY3k9JzQnIHI9JzQnIGZpbGw9JyNERUUyRTUnIC8+PC9zdmc+);
         background-repeat: repeat-x;
         background-size: 25px 25px;
         width: 12rem;
-        height: 9px;
         display: block;
-        padding-bottom: 1rem;
-        margin: 1rem auto 2rem;
+        padding-bottom: 0.5rem;
+        margin: 0.5rem auto 0rem;
       }
     }
   }
@@ -54,7 +52,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     @include grid-cols(2, 4);
 
     @media screen and (min-width: $fsa-md) {
