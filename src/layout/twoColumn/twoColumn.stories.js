@@ -1,8 +1,8 @@
-import layout from './layout.html.twig';
-import './layout.scss';
+import twoColumn from './twoColumn.html.twig';
+import './twoColumn.scss';
 
 export default {
-  title: 'Pattern Library/Components/Layout',
+  title: 'Layout/Two Columns',
   argTypes: {
     is_anchor: {
       table: { disable: true },
@@ -11,12 +11,12 @@ export default {
 };
 
 const Template = (args) => {
-  return layout(args);
+  return twoColumn(args);
 };
 
 
-export const TwoColumn = Template.bind({});
-TwoColumn.args = {
+export const Default = Template.bind({});
+Default.args = {
   primary: true,
   label: 'All News and Alerts',
   url: 'https://www.food.gov.uk/news-alerts',
