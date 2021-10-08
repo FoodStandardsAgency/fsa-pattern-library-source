@@ -1,18 +1,18 @@
 import './base.scss';
 import cssVars from 'css-vars-ponyfill';
 
-import './components/Breadcrumb/breadcrumb';
-import './components/Button/Button';
-import './components/FiltersSelected/filtersSelected';
-import './components/ListingItem/ListingItem';
-import './components/Pagination/pagination';
-import './components/SearchBarHeader/searchBarHeader';
-import './components/SearchNoResults/searchNoResults';
-import './components/Showing/showing';
-import './components/SortBy/sortBy';
+import './components/general/Breadcrumb/breadcrumb';
+import './components/general/Button/Button';
+import './components/search/FiltersSelected/filtersSelected';
+import './components/search/ListingItem/ListingItem';
+import './components/search/Pagination/pagination';
+import './components/search/SearchBarHeader/searchBarHeader';
+import './components/search/SearchNoResults/searchNoResults';
+import './components/search/Showing/showing';
+import './components/search/SortBy/sortBy';
 
-import landingLinksJs from './components/LandingLinks/LandingLinks';
-import searchBar from "./components/SearchBar/searchBar";
+import landingLinksJs from './components/landing/LandingLinks/LandingLinks';
+import searchBar from "./components/search/SearchBar/searchBar";
 
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars();
