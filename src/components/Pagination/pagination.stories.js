@@ -2,7 +2,7 @@ import pagination from './pagination.html.twig';
 import './pagination.scss';
 
 export default {
-  title: 'Pattern Library/Components/Pagination',
+  title: 'Components/Pagination',
   argTypes: {
     paginationType: {
       defaultValue: 'Search',

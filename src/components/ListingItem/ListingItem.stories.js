@@ -2,7 +2,7 @@ import listingItem from './listingItem.html.twig';
 import './listingItem.scss';
 
 export default {
-  title: 'Pattern Library/Components/Listing Item',
+  title: 'Components/Listing Item',
   parameters: {
     controls: {
       disabled: false,

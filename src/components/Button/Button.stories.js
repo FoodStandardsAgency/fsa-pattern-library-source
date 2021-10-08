@@ -2,7 +2,7 @@ import button from './button.html.twig';
 import './Button.js';
 
 export default {
-  title: 'Pattern Library/Components/Button',
+  title: 'Components/Button',
   argTypes: {
     is_anchor: {
       table: { disable: true },

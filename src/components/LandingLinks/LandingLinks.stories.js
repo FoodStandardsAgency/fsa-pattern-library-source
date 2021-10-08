@@ -6,7 +6,7 @@ landingLinksJs();
 
 
 export default {
-  title: 'Pattern Library/Components/Landing Links',
+  title: 'Components/Landing Links',
   parameters: {
     controls: {
       disabled: false,

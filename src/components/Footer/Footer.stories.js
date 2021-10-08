@@ -2,7 +2,7 @@ import footer from './footer.html.twig';
 import './footer.scss';
 
 export default {
-  title: 'Pattern Library/Components/Footer',
+  title: 'Components/Footer',
   parameters: {
     controls: {
       disabled: true,
