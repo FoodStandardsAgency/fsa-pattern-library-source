@@ -2,7 +2,7 @@ import searchBarHeader from './searchBarHeader.html.twig';
 import './searchBarHeader.scss';
 
 export default {
-  title: 'Components/Search Bar Header',
+  title: 'Components/Search/Search Bar Header',
   argTypes: {
     headerText: {
       defaultValue: 'Search',

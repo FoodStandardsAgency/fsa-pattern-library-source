@@ -2,7 +2,7 @@ import filtersSelected from './filtersSelected.html.twig';
 import './filtersSelected.scss';
 
 export default {
-  title: 'Components/Filters Selected',
+  title: 'Components/Search/Filters Selected',
 };
 
 const Template = (args) => {

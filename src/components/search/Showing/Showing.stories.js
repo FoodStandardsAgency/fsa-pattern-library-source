@@ -2,7 +2,7 @@ import showing from './showing.html.twig';
 import './showing.scss';
 
 export default {
-  title: 'Components/List/Showing',
+  title: 'Components/Search/Showing',
 };
 
 const Template = (args) => {

@@ -2,7 +2,7 @@ import sortBy from './sortBy.html.twig';
 import './sortBy.scss';
 
 export default {
-  title: 'Components/List/Sort By',
+  title: 'Components/Search/Sort By',
 };
 
 const Template = (args) => {

@@ -2,7 +2,7 @@ import searchNoResults from './searchNoResults.html.twig';
 import './searchNoResults.scss';
 
 export default {
-  title: 'Components/Search No Results',
+  title: 'Components/Search/Search No Results',
   parameters: {
     controls: {
       disabled: false,

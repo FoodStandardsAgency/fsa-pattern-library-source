@@ -5,7 +5,7 @@ import './searchBar.scss';
 searchBarJs();
 
 export default {
-  title: 'Components/Search Bar',
+  title: 'Components/Search/Search Bar',
   argTypes: {
     searchText: {
       defaultValue: 'Search the food standards agency',
