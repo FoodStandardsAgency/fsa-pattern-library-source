@@ -9,8 +9,8 @@ const Template = (args) => {
   return filtersSelected(args);
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const FiltersSelected = Template.bind({});
+FiltersSelected.args = {
   filter_names: [
     'Alergy Alert',
     'News',

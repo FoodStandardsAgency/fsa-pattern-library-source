@@ -112,8 +112,8 @@ const svg = {
 
 }
 
-export const Content = Template.bind({});
-Content.args = {
+export const LandingLinks = Template.bind({});
+LandingLinks.args = {
   title: 'Regulated Are you looking for specific business guidance?',
   items: [
     {linkText: 'Import', url: '#', svg: svg.import},

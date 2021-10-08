@@ -15,8 +15,8 @@ const Template = (args) => {
 };
 
 
-export const Default = Template.bind({});
-Default.args = {
+export const TwoColumns = Template.bind({});
+TwoColumns.args = {
   primary: true,
   label: 'All News and Alerts',
   url: 'https://www.food.gov.uk/news-alerts',

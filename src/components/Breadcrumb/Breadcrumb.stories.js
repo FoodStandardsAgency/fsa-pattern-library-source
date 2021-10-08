@@ -10,7 +10,7 @@ export default {
   }
 };
 
-export const Template = ({ label, ...args }) => { 
+export const Breadcrumb = ({ label, ...args }) => { 
   return breadcrumb(args);
 }
 

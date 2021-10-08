@@ -9,8 +9,8 @@ const Template = (args) => {
   return sortBy(args);
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const SortBy = Template.bind({});
+SortBy.args = {
   sort_by: 'Sort by',
   options: ['Relevance', 'Most recent'],
   default: 'Relevance',

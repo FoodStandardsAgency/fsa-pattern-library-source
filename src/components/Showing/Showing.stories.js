@@ -9,8 +9,8 @@ const Template = (args) => {
   return showing(args);
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const Showing = Template.bind({});
+Showing.args = {
   showing: 'Showing',
   of: 'of',
   results: 'results',

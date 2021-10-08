@@ -10,7 +10,7 @@ export default {
   }
 };
 
-export const Template = ({ label, ...args }) => { 
+export const Footer = ({ label, ...args }) => { 
   return footer(args);
 }
 

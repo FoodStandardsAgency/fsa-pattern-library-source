@@ -15,8 +15,8 @@ const Template = (args) => {
 }
 
 
-export const Content = Template.bind({});
-Content.args = {
+export const SearchNoResults = Template.bind({});
+SearchNoResults.args = {
   title: 'There are no matching results',
   removeFiltersText: 'Try a new key word or',
   removeFiltersLinkText: 'remove all filters',
