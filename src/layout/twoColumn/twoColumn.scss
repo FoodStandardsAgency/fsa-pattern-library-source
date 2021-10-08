@@ -1,6 +1,6 @@
 @import 'src/lib.scss';
 
-.layout {
+.two-col {
   max-width: 100%;
   &__container {
     @include grid-container;
