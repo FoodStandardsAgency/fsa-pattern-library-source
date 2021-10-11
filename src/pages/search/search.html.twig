@@ -1,6 +1,6 @@
-{% extends "../../pattern-library/components/Layout/layout.html.twig" %}
+{% extends '../../layout/twoColumn/twoColumn.html.twig' %}
 {% block top %}
-  {% include '../../pattern-library/components/SearchBarHeader/searchBarHeader.html.twig' with {
+  {% include '../../components/search/SearchBarHeader/searchBarHeader.html.twig' with {
     headerText: 'Search',
     searchLink: '/search',
     searchText: 'Search Food Standards Agency',
@@ -32,7 +32,7 @@
     remove_filter: 'Remove filter',
     remove_all_filters: 'Remove all filters',    
   } %}
-  {% include '../../pattern-library/components/FiltersSelected/filtersSelected.html.twig' with filter_params %}
+  {% include '../../components/search/FiltersSelected/filtersSelected.html.twig' with filter_params %}
   {% set content = {
   type: 'Allergy alert',
   title: 'Update from the Food Standards Agency, Food Standards Scotland and Defra following the rise in cases of feline pancytopenia',
@@ -40,16 +40,16 @@
   date: '8 September 2021',
   url: 'http://google.com'
   } %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/ListingItem/listingItem.html.twig' with content %}
-  {% include '../../pattern-library/components/Pagination/pagination.html.twig' with {
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/ListingItem/listingItem.html.twig' with content %}
+  {% include '../../components/search/Pagination/pagination.html.twig' with {
     totalPages: 12,
     currentPage: 1,
     maxPages: 4,
@@ -57,14 +57,14 @@
 {% endblock %}
 
 {% block right_top %}
-  {% include '../../pattern-library/components/Showing/showing.html.twig' with {
+  {% include '../../components/search/Showing/showing.html.twig' with {
   showing: 'Showing',
   of: 'of',
   results: 'results',
   displayed_results: '1-10',
   total_results: '103',
   } %}
-  {% include '../../pattern-library/components/SortBy/sortBy.html.twig' with {
+  {% include '../../components/search/SortBy/sortBy.html.twig' with {
   sort_by: 'Sort by',
   options: ['Relevance', 'Most recent'],
   default: 'Relevance',
