@@ -1,6 +1,11 @@
 {% extends "../../layout/formLayout/formLayout.html.twig" %}
 {% block content %}
-<form>
-{# Include templates for form components here #}
-</form>
+  <form>
+    {% include "../../components/form/TitleAndText/titleAndText.html.twig" with {
+      title: 'Form title',
+      description:
+        'Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".',
+      tag: 'h1',
+    } %}
+  </form>
 {% endblock %}
