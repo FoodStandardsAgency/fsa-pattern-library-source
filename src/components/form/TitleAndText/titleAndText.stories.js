@@ -2,7 +2,7 @@ import titleAndText from './titleAndText.html.twig';
 import './titleAndText.scss';
 
 export default {
-  title: 'Components/Form/Title And Text',
+  title: 'Components/Form/Title and Text',
   argTypes: {
     tag: {
       options: ['h1', 'h2'],
@@ -16,6 +16,7 @@ const Template = (args) => {
 };
 
 export const TitleAndText = Template.bind({});
+TitleAndText.storyName = 'Title and Text';
 TitleAndText.args = {
   title: 'Form title',
   description:
