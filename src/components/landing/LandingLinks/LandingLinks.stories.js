@@ -114,7 +114,7 @@ const svg = {
 
 export const LandingLinks = Template.bind({});
 LandingLinks.args = {
-  title: 'Regulated Are you looking for specific business guidance?',
+  title: 'Are you looking for specific business guidance?',
   items: [
     {linkText: 'Import', url: '#', svg: svg.import},
     {linkText: 'Farming', url: '#', svg: svg.farming},
