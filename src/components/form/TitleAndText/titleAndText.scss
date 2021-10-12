@@ -1,14 +1,7 @@
 @import 'src/lib.scss';
 
-.form-title {
-  @include h3;
-  color: var(--fsa-primary_black);
-  margin: 0;
-}
-
 .form-description {
   @include body;
   color: var(--fsa-primary_black);
-  margin: 0;
-  margin-top: 1rem;
+  margin: 1rem 0 0 0;
 }
