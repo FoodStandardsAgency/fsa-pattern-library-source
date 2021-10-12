@@ -2,8 +2,11 @@
 
 .form-title {
   @include h3;
+  color: var(--fsa-primary_black);
+  margin: 0;
 }
 
 .form-description {
   @include body;
+  color: var(--fsa-primary_black);
 }
