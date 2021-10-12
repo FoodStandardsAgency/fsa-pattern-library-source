@@ -1,0 +1,9 @@
+@import 'src/lib.scss';
+
+.form-title {
+  @include h3;
+}
+
+.form-description {
+  @include body;
+}
