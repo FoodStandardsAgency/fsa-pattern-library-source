@@ -7,5 +7,6 @@
 .form-description {
   @include body;
   color: var(--fsa-primary_black);
-  margin: 1rem 0 0 0;
+  //Negative margin-bottom removes the margin added by p tag.
+  margin: 1rem 0 -1rem 0;
 }
