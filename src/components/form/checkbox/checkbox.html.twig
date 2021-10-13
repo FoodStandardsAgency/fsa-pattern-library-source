@@ -1,0 +1,8 @@
+<fieldset class="form-checkbox">
+  <legend class="form-legend">{{ title }}</legend>
+  <p class="form-description">{{ description }}</p>
+  {% for field in fields %}
+    <input type="checkbox" value="{{ field.value }}" id="{{ field.value }}">
+    <label for="{{ field.value }}">{{  field.label }}</label>
+  {% endfor %}
+</fieldset>
