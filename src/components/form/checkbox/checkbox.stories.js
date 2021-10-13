@@ -19,4 +19,5 @@ Normal.args = {
   ],
   required: true,
   disabled: true,
+  error: true,
 };
