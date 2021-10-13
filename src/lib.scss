@@ -54,7 +54,8 @@
 $fsa-xs: 500px;
 $fsa-md: 768px;
 $fsa-lg: 1024px;
-$fsa-xl: 1920px;
+$fsa-xl: 1440px;
+$fsa-xxl: 1920px;
 
 @mixin h1 {
   font-family: var(--heading-font);
