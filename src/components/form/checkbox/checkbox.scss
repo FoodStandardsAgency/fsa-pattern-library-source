@@ -1,0 +1,52 @@
+@import 'src/lib.scss';
+
+.checkbox {
+  border: none;
+  padding: 0;
+  margin: 1.56rem 0 0 0;
+  color: var(--fsa-primary_black);
+
+  &__legend {
+    @include intro;
+    font-weight: bold;
+  }
+
+  &__required {
+    @include small;
+    margin-left: 1rem;
+  }
+
+  &__description {
+    @include body;
+    margin: 0.5rem 0 0 0;
+  }
+
+  &__field {
+    margin-top: 1rem;
+    @include body;
+    display: flex;
+    align-items: center;
+    align-items: center;
+  }
+
+  &__input {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--fsa-primary_black);
+    position: relative;
+    margin: 0 0.94rem 0 0;
+    background-color: var(--fsa_tint);
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:checked {
+      background-color: var(--fsa-primary_dark-green);
+      background-image: url('./tick.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

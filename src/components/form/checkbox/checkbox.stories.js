@@ -1,5 +1,5 @@
-import { NormalModule } from 'webpack';
 import checkbox from './checkbox.html.twig';
+import "./checkbox.scss";
 
 export default {
   title: 'Components/Form/Checkbox',
