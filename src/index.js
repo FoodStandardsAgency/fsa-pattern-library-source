@@ -12,6 +12,8 @@ import './components/search/Showing/showing';
 import './components/search/SortBy/sortBy';
 import './components/forms/ErrorBox/ErrorBox';
 import './components/form/TitleAndText/titleAndText';
+import './layout/twoColumn/twoColumn';
+import './layout/formLayout/formLayout';
 
 import landingLinksJs from './components/landing/LandingLinks/LandingLinks';
 import searchBar from "./components/search/SearchBar/searchBar";
