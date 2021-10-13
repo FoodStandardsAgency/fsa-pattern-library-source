@@ -18,7 +18,7 @@ const errorItems = {
     'label': 'Please complete the following with the correct format',
     'fields': [{
       'label': 'Password',
-      'id': 'email'
+      'id': 'password'
     }]
   },
   unrecognized: {

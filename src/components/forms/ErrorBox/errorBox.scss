@@ -27,6 +27,7 @@
     text-decoration: underline;
     margin-top: 0.5rem;
     font-weight: bold;
+    display: block;
 
     &:hover {
       color: var(--fsa-secondary-error-hover);
