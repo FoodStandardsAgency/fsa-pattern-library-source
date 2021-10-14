@@ -3,6 +3,10 @@ import './checkbox.scss';
 
 export default {
   title: 'Components/Form/Checkbox',
+  parameters: {
+    //Center the component so that the red error border-left is visible.
+    layout: "centered",
+  }
 };
 
 const Template = (args) => checkbox(args);
