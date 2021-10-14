@@ -1,0 +1,11 @@
+@import 'src/lib.scss';
+
+.form-title {
+  margin: 2rem 0 0 0;
+}
+
+.form-description {
+  @include body;
+  color: var(--fsa-primary_black);
+  margin: 1rem 0 0 0;
+}
