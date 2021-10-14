@@ -1,6 +1,8 @@
 @import "src/lib.scss";
 
 .error-box {
+  margin: 2.6rem 0 0 -2rem;
+  width: calc(100% + 4rem);
   &__container {
     @include grid-container();
     border: 4px solid var(--fsa-secondary-error-red);
