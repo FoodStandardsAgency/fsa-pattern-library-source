@@ -10,13 +10,16 @@ import './components/search/SearchBarHeader/searchBarHeader';
 import './components/search/SearchNoResults/searchNoResults';
 import './components/search/Showing/showing';
 import './components/search/SortBy/sortBy';
-import './components/form/Checkbox/checkout';
+import './components/forms/ErrorBox/ErrorBox';
+import './components/form/TitleAndText/titleAndText';
+import './components/form/Checkbox/checkbox';
+import './layout/twoColumn/twoColumn';
+import './layout/formLayout/formLayout';
 
 import landingLinksJs from './components/landing/LandingLinks/LandingLinks';
 import searchBar from "./components/search/SearchBar/searchBar";
 
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars();
-
 landingLinksJs();
 searchBar();

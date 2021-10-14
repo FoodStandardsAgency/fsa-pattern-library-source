@@ -20,6 +20,8 @@
   --fsa-secondary_mid-purple: #49176d;
   --fsa-secondary_light-purple: #9f218b;
   --fsa-tertiary_dark-blue: #9f218b;
+  --fsa-secondary-error-red: #e60f31;
+  --fsa-secondary-error-hover: #b0132b;
 
   /* Tertiary Colours */
   --fsa-tertiary_dark-red: #b04a5a;
@@ -54,7 +56,8 @@
 $fsa-xs: 500px;
 $fsa-md: 768px;
 $fsa-lg: 1024px;
-$fsa-xl: 1920px;
+$fsa-xl: 1440px;
+$fsa-xxl: 1920px;
 
 @mixin h1 {
   font-family: var(--heading-font);
@@ -305,6 +308,6 @@ $mobileGutter: 1rem;
   background-color: var(--fsa-secondary_mid-red);
   color: var(--fsa-primary_white);
   &:hover {
-    background-color: #b0132b;
+    background-color: var(--fsa-secondary-error-hover);
   }
 }
