@@ -1,5 +1,5 @@
 import checkbox from './checkbox.html.twig';
-import "./checkbox.scss";
+import './checkbox.scss';
 
 export default {
   title: 'Components/Form/Checkbox',
@@ -17,7 +17,7 @@ Normal.args = {
     { value: 'two', label: 'Alert two' },
     { value: 'three', label: 'Alert three' },
   ],
-  name: "alert",
+  name: 'alert',
   required: false,
   error: false,
 };
@@ -32,7 +32,7 @@ Error.args = {
     { value: 'two', label: 'Alert two' },
     { value: 'three', label: 'Alert three' },
   ],
-  name: "alert",
+  name: 'alert',
   required: true,
   error: true,
 };
