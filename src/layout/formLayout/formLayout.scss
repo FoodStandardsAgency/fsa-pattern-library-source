@@ -22,7 +22,7 @@
     }
     @media screen and (min-width: $fsa-xl) {
       @include grid-cols(6);
-      @include cols-push(3)
+      @include cols-push(3);
     }
   }
 }

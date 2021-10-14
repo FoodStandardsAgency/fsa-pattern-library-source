@@ -1,5 +1,47 @@
 {% extends "../../layout/formLayout/formLayout.html.twig" %}
 {% block content %}
+{# Include templates for form components here #}
+
+{% block top %}
+
+  {% include '../../components/forms/ErrorBox/errorBox.html.twig' with {
+    title: 'There is a problem with your submission',
+    errors: 'required',
+    errorList: {
+      required: {
+        'label': 'Please complete the following required fields',
+        'fields': [
+          {
+            'label': 'E-mail address',
+            'id': 'email'
+          },
+          {
+            'label': 'Password',
+            'id': 'password'
+          }
+        ]
+      },
+      format: {
+        'label': 'Please complete the following with the correct format',
+        'fields': [
+          {
+            'label': 'Password',
+            'id': 'password'
+          }
+        ]
+      },
+      unrecognized: {
+        'label': 'Unrecognized username or password.',
+        'fields': [
+          {
+            'label': 'Email address or username',
+            'id': 'email-username'
+          }
+        ]
+      },
+    }
+  }%}
+{% endblock %}
   <form>
     {% include "../../components/form/TitleAndText/titleAndText.html.twig" with {
       title: 'Form title',
