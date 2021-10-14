@@ -14,11 +14,14 @@ import './components/forms/ErrorBox/ErrorBox';
 import './components/form/TitleAndText/titleAndText';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
+import './layout/fullWidth/fullWidth';
 
 import landingLinksJs from './components/landing/LandingLinks/LandingLinks';
 import searchBar from "./components/search/SearchBar/searchBar";
+import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
 
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars();
 landingLinksJs();
 searchBar();
+breadcrumbJs();

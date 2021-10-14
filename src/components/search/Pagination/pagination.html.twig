@@ -2,57 +2,77 @@
 {% set pageIndexNext  = (maxPages / 2)|round %}
 
 <nav class="pagination" role="navigation" aria-label="{{ paginationType }} pagination">
-  <ul class="pagination__list">
+  <div class="pagination__list">
     <ul class="pagination__item-group pagination__back{{ currentPage == 1 ? ' pagination__item-group--hidden' : '' }}"{{ currentPage == 1 ? 'aria-hidden="true"' : '' }}>
-      <li class="pagination__item pagination__item--first"><a href="?page=1">First</a></li>
-      <li class="pagination__item pagination__item--previous"><a href="?page={{ currentPage - 1 }}">Previous</a></li>
+      <li class="pagination__item pagination__item--first">
+        <a href="?page=1">First</a>
+      </li>
+      <li class="pagination__item pagination__item--previous">
+        <a href="?page={{ currentPage - 1 }}">Previous</a>
+      </li>
     </ul>
     <ul class="pagination__item-group pagination__numbered">
       {% if currentPage == 1 %}
-        <li class="pagination__item pagination__item--numbered"><a href="?page=1"
-                                                                   aria-label="Current page, page 1"
-                                                                   aria-current="page"
-                                                                   aria-disabled="true">1</a></li>
+        <li class="pagination__item pagination__item--numbered">
+          <a href="?page=1"
+            aria-label="Current page, page 1"
+            aria-current="page"
+            aria-disabled="true">1</a>
+        </li>
       {% else %}
-        <li class="pagination__item pagination__item--numbered"><a href="?page=1" aria-label="Go to page 1">1</a></li>
+        <li class="pagination__item pagination__item--numbered">
+          <a href="?page=1" aria-label="Go to page 1">1</a>
+        </li>
       {% endif %}
       {% if currentPage > maxPages %}
-        <li class="pagination__item pagination__item--numbered"><a href="?page={{ currentPage - maxPages }}"
-                                                                   aria-label="Load previous {{ maxPages }} pages">...</a>
+        <li class="pagination__item pagination__item--numbered">
+          <a href="?page={{ currentPage - maxPages }}"
+            aria-label="Load previous {{ maxPages }} pages">...</a>
         </li>
       {% endif %}
       {% for page in range (currentPage - pageIndexPrev, currentPage + pageIndexNext) %}
         {% if page > 1 and page < totalPages %}
           {% if page == currentPage %}
-            <li class="pagination__item pagination__item--numbered"><a href="?page={{ page }}"
-                                                                       aria-label="Current page, page {{ page }}"
-                                                                       aria-current="page"
-                                                                       aria-disabled="true">{{ page }}</a></li>
+            <li class="pagination__item pagination__item--numbered">
+              <a href="?page={{ page }}"
+                aria-label="Current page, page {{ page }}"
+                aria-current="page"
+                aria-disabled="true">{{ page }}</a>
+            </li>
           {% else %}
-            <li class="pagination__item pagination__item--numbered"><a href="?page={{ page }}"
-                                                                       aria-label="Go to page {{ page }}">{{ page }}</a>
+            <li class="pagination__item pagination__item--numbered">
+              <a href="?page={{ page }}"
+                aria-label="Go to page {{ page }}">{{ page }}</a>
             </li>
           {% endif %}
         {% endif %}
       {% endfor %}
       {% if currentPage < (totalPages - maxPages) %}
-        <li class="pagination__item pagination__item--numbered"><a href="?page={{ currentPage + maxPages }}" aria-label="Load next {{ maxPages }} pages">...</a>
+        <li class="pagination__item pagination__item--numbered">
+          <a href="?page={{ currentPage + maxPages }}" aria-label="Load next {{ maxPages }} pages">...</a>
         </li>
       {% endif %}
       {% if currentPage == totalPages %}
-        <li class="pagination__item pagination__item--numbered"><a href="?page={{ totalPages }}"
-                                                                   aria-label="Current page, page {{ totalPages }}"
-                                                                   aria-current="page"
-                                                                   aria-disabled="true">{{ totalPages }}</a></li>
+        <li class="pagination__item pagination__item--numbered">
+          <a href="?page={{ totalPages }}"
+            aria-label="Current page, page {{ totalPages }}"
+            aria-current="page"
+            aria-disabled="true">{{ totalPages }}</a>
+        </li>
       {% else %}
-        <li class="pagination__item pagination__item--numbered"><a href="?page={{ totalPages }}"
-                                                                   aria-label="Go to page {{ totalPages }}">{{ totalPages }}</a>
+        <li class="pagination__item pagination__item--numbered">
+          <a href="?page={{ totalPages }}"
+            aria-label="Go to page {{ totalPages }}">{{ totalPages }}</a>
         </li>
       {% endif %}
     </ul>
     <ul class="pagination__item-group pagination__forward{{ currentPage == totalPages ? ' pagination__item-group--hidden' : '' }}"{{ currentPage == totalPage ? 'aria-hidden="true"' : '' }}>
-      <li class="pagination__item pagination__item--next"><a href="?page={{ currentPage + 1 }}">Next</a></li>
-      <li class="pagination__item pagination__item--last"><a href="?page={{ totalPages }}">Last</a></li>
+      <li class="pagination__item pagination__item--next">
+        <a href="?page={{ currentPage + 1 }}">Next</a>
+      </li>
+      <li class="pagination__item pagination__item--last">
+        <a href="?page={{ totalPages }}">Last</a>
+      </li>
     </ul>
-  </ul>
+  </div>
 </nav>

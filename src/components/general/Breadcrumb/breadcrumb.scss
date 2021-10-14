@@ -1,30 +1,95 @@
+@import "src/lib.scss";
+
 .breadcrumb {
-  font-family: open sans,sans-serif;
-  a {
-    color: #007c75;
+  @include small;
+  @include grid-cols(4, 4);
+  @media screen and (min-width: $fsa-md) {
+    @include grid-cols(8);
   }
-  
+  margin-top: 1rem;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  position: relative;
+  &__items {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 94%;
+    &.expanded {
+      flex-direction: column;
+    }
+    &.overflowed {
+      &::before {
+        position: absolute;
+        content: "...";
+        bottom: 0;
+        right: 1rem;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
+        width: 1rem;
+        height: 100%;
+        background: #fff;
+        z-index: 0;
+      }
+    }
+  }
   &__item {
-    -ms-flex-align: center;
-    align-items: center;
-    color: #000;
-    display: inline-block;
-    font-size: .9em;
-    font-weight: 400;
-    padding-right: 1.5em;
-    position: relative;
-    text-align: left;
-    &:not(:last-child)::after {
-     content: '';
-     position: absolute;
-     top: .3em;
-     right: .55em;
-     bottom: .25em;
-     width: 1px;
-     text-align: center;
-     background-color: #000;
-     -ms-transform: skew(-25deg);
-     transform: skew(-25deg);
+    padding-right: 0.5rem;
+    & + & {
+      &::before {
+        display: inline-block;
+        width: 0;
+        content: "/";
+      }
+      & > * {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  // :not property doesn't seem to work :'(
+  &__items.expanded &__item {
+    padding: 1rem 0 0 0;
+    &::before {
+      display: none;
+    }
+    & > * {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    @include link;
+  }
+  &__mobile-overlay {
+    @include link;
+    z-index: 1;
+    width: 0.75rem;
+    height: 1.4rem;
+    position: absolute;
+    right: 0;
+    top: 0.1rem;
+    &::after {
+      content: "";
+      display: block;
+      width: 0.75rem;
+      margin-top: 0.45rem;
+      height: 0.5rem;
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSI3cHgiIHZpZXdCb3g9IjAgMCAxMiA3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MiAoOTEzOTApIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPlN0cm9rZSAxPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkRlc2lnbi1kaXJlY3Rpb24tYW1lbmRzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJDT1QtbW9iaWxlLW1lZXRpbmciIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMjcuMDAwMDAwLCAtNTg4LjAwMDAwMCkiIHN0cm9rZT0iIzJCMkIyQiIgc3Ryb2tlLXdpZHRoPSIyIj4KICAgICAgICAgICAgPHBhdGggZD0iTTMzMSw1ODcgTDMzNC42MjkyMzMsNTkwLjYwOTcwMyBDMzM1LjEyMzU4OSw1OTEuMTAxMzk5IDMzNS4xMjM1ODksNTkxLjg5ODYwMSAzMzQuNjI5MjMzLDU5Mi4zOTAyOTcgTDMzMSw1OTYiIGlkPSJTdHJva2UtMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzMzLjAwMDAwMCwgNTkxLjUwMDAwMCkgcm90YXRlKDkwLjAwMDAwMCkgdHJhbnNsYXRlKC0zMzMuMDAwMDAwLCAtNTkxLjUwMDAwMCkgIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+      background-repeat: no-repeat;
+      transition: transform var(--transition-time) ease-out;
+    }
+    &[aria-expanded="true"] {
+      &::after {
+        margin-top: 0.35rem;
+        transform: rotate(180deg);
+      }
     }
   }
 }

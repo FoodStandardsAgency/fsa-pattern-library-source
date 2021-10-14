@@ -1,0 +1,24 @@
+{% extends "../../layout/fullWidth/fullWidth.html.twig" %}
+{% block content %}
+{# Include templates for form components here #}
+{% set breadcrumbItems = [
+    {
+      'label': 'Home',
+      'url': '/'
+    },
+    {
+      'label': 'Business guidance',
+      'url': null
+    },
+    {
+      'label': 'Running a business',
+      'url': '/running-a-business'
+    },
+    {
+      'label': 'Hazard Analysis and Critical Control Point',
+      'url': null
+    },
+  ]
+%}
+{% include '../../components/general/Breadcrumb/breadcrumb.html.twig' with { items: breadcrumbItems, expanded: false } %}
+{% endblock %}
