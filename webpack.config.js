@@ -34,14 +34,14 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: { regExp: '.*/src/components/(.*)', name: '[1]' }
+            options: { regExp: '.*/src/(.*)', name: '[1]' }
           },
         ],
       },
       {
         test: /\.html\.twig$/,
         loader: 'file-loader',
-        options: { regExp: '.*/src/components/(.*)', name: '[1]' },
+        options: { regExp: '.*/src/(.*)', name: '[1]' },
       },
     ],
   },
