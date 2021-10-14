@@ -2,13 +2,20 @@
 
 .checkbox {
   border: none;
-  padding: 0;
-  margin: 1.56rem 0 0 0;
+  padding: 0 0 0 0.5rem;
+  margin: 1.56rem 0 0 -0.5rem;
   color: var(--fsa-primary_black);
+
+  @media screen and (min-width: $fsa-md) {
+    margin-left: -1rem;
+    padding-left: 1rem;
+  }
 
   &__legend {
     @include intro;
     font-weight: bold;
+    // Using a float trick here to make the border of fieldset wrap around, not going through, the legend.
+    float: left;
   }
 
   &__required {
@@ -18,7 +25,9 @@
 
   &__description {
     @include body;
-    margin: 0.5rem 0 0 0;
+    margin: 0;
+    padding: 0.5rem 0 0 0;
+    clear: both;
   }
 
   &__field {
@@ -47,6 +56,20 @@
       background-image: url('./tick.svg');
       background-repeat: no-repeat;
       background-position: center;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+      outline: none;
+      border: none;
+    }
+  }
+
+  &--error {
+    border-left: 0.25rem solid var(--fsa-secondary_mid-red);
+    @media screen and (min-width: $fsa-lg) {
+      border-left: 0.22rem solid var(--fsa-secondary_mid-red);
     }
   }
 }
