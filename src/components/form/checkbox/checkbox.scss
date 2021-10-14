@@ -75,6 +75,11 @@
       border-left: 0.22rem solid var(--fsa-secondary_mid-red);
     }
 
+    margin: 1.56rem 0 0 -0.75rem;
+    @media screen and (min-width: $fsa-md) {
+      margin-left: -1.22rem;
+    }
+
     .checkbox__legend {
       color: var(--fsa-secondary_mid-red);
     }
