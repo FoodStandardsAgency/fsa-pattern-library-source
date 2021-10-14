@@ -21,6 +21,7 @@
   &__required {
     @include small;
     margin-left: 1rem;
+    color: var(--fsa-primary_black);
   }
 
   &__description {
@@ -70,6 +71,10 @@
     border-left: 0.25rem solid var(--fsa-secondary_mid-red);
     @media screen and (min-width: $fsa-lg) {
       border-left: 0.22rem solid var(--fsa-secondary_mid-red);
+    }
+
+    .checkbox__legend{
+      color: var(--fsa-secondary_mid-red);
     }
   }
 }
