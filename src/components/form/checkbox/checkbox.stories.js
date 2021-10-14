@@ -17,6 +17,22 @@ Normal.args = {
     { value: 'two', label: 'Alert two' },
     { value: 'three', label: 'Alert three' },
   ],
+  name: "alert",
+  required: false,
+  error: false,
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  title: 'Food alerts',
+  description:
+    'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
+  fields: [
+    { value: 'one', label: 'Alert one' },
+    { value: 'two', label: 'Alert two' },
+    { value: 'three', label: 'Alert three' },
+  ],
+  name: "alert",
   required: true,
   error: true,
 };
