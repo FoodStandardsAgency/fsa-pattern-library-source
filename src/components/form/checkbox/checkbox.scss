@@ -13,6 +13,8 @@
 
   &__legend {
     @include intro;
+    margin: 0;
+    padding: 0;
     font-weight: bold;
     // Using a float trick here to make the border of fieldset wrap around, not going through, the legend.
     float: left;
