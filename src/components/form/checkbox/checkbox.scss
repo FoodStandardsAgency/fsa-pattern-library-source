@@ -72,12 +72,12 @@
   &--error {
     border-left: 0.25rem solid var(--fsa-secondary_mid-red);
     @media screen and (min-width: $fsa-lg) {
-      border-left: 0.22rem solid var(--fsa-secondary_mid-red);
+      border-left: 0.23rem solid var(--fsa-secondary_mid-red);
     }
 
     margin: 1.56rem 0 0 -0.75rem;
     @media screen and (min-width: $fsa-md) {
-      margin-left: -1.22rem;
+      margin-left: -1.23rem;
     }
 
     .checkbox__legend {
