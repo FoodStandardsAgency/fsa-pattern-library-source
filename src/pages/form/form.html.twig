@@ -2,11 +2,11 @@
 {% block content %}
   <form>
     {% include '../../components/form/TitleAndText/titleAndText.html.twig' with {
-        title: 'Form title',
-        description:
-          'Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".',
-        tag: 'h2',
-      } %}
+      title: 'Form title',
+      description:
+        'Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".',
+      tag: 'h2',
+    } %}
     {% include '../../components/forms/ErrorBox/errorBox.html.twig' with {
       title: 'There is a problem with your submission',
       errors: 'required',
@@ -43,6 +43,32 @@
           ]
         },
       }
+    }%}
+    {% include '../../components/form/Checkbox/checkbox.html.twig' with {
+      title: 'Food alerts',
+      description:
+        'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
+      fields: [
+        { value: 'one', label: 'Alert one' },
+        { value: 'two', label: 'Alert two' },
+        { value: 'three', label: 'Alert three' },
+      ],
+      name: 'alert',
+      required: false,
+      error: false,
+    } %}
+    {% include '../../components/form/Checkbox/checkbox.html.twig' with {
+      title: 'Food alerts',
+      description:
+        'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
+      fields: [
+        { value: 'four', label: 'Alert four' },
+        { value: 'five', label: 'Alert five' },
+        { value: 'six', label: 'Alert six' },
+      ],
+      name: 'alert',
+      required: true,
+      error: true,
     } %}
   </form>
 {% endblock %}
