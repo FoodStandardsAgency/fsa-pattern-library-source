@@ -18,6 +18,5 @@ Normal.args = {
     { value: 'three', label: 'Alert three' },
   ],
   required: true,
-  disabled: true,
   error: true,
 };
