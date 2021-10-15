@@ -7,7 +7,7 @@
   color: var(--fsa-primary_black);
 
   &__legend {
-    @include intro;
+    @include h5;
     margin: 0;
     padding: 0;
     font-weight: bold;
@@ -70,7 +70,7 @@
     padding-left: 0.5rem;
     @media screen and (min-width: $fsa-md) {
       margin-left: -1.25rem;
-      padding-left: -1rem;
+      padding-left: 1rem;
     }
 
     .checkbox__legend {
