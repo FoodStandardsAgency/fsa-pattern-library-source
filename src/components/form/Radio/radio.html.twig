@@ -1,9 +1,7 @@
 <fieldset class="radio {{ error ? "radio--error" : "" }}">
-  {% if title is defined %}
     <legend class="radio__legend">
       {{ title }}<span class="radio__required">{{ required ? "REQUIRED" : "" }}</span>
     </legend>
-  {% endif %}
   {% if description is defined %}
     <p class="radio__description">{{ description }}</p>
   {% endif %}
