@@ -1,0 +1,18 @@
+<fieldset class="radio {{ error ? "radio--error" : "" }}">
+  {% if title is defined %}
+    <legend class="radio__legend">
+      {{ title }}<span class="radio__required">{{ required ? "REQUIRED" : "" }}</span>
+    </legend>
+  {% endif %}
+  {% if description is defined %}
+    <p class="radio__description">{{ description }}</p>
+  {% endif %}
+  <div class="radio__fields">
+    {% for field in fields %}
+      <div class="radio__field">
+        <input class="radio__input" type="radio" name="{{ name }}" value="{{ field.value }}" id="{{ field.value }}" {{ required ? "required" : "" }} {{ default == field.value ? "checked" : "" }}>
+        <label class="radio__label" for="{{ field.value }}">{{ field.label }}</label>
+      </div>
+    {% endfor %}
+  </div>
+</fieldset>
