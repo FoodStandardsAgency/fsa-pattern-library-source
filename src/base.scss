@@ -70,6 +70,13 @@ ul {
   list-style: none;
 }
 
+p {
+  margin: 0;
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
 .visually-hidden {
   position: absolute!important;
   height: 1px;

@@ -12,6 +12,7 @@ import './components/search/Showing/showing';
 import './components/search/SortBy/sortBy';
 import './components/form/ErrorBox/ErrorBox';
 import './components/form/TitleAndText/titleAndText';
+import './components/form/Checkbox/checkbox';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
 import './layout/fullWidth/fullWidth';
