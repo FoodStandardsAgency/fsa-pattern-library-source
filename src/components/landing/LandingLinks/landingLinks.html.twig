@@ -8,10 +8,12 @@
     <div class="landing-links__row">
       {% for item in items %}
       <div class="landing-links__item">
-        <div class="landing-links__svg">
-          {{ item.svg }}
-        </div>
-        <a class="landing-links__link" href={{ item.url }}>{{ item.linkText }}</a>
+        <a href={{ item.url }}>
+          <div class="landing-links__svg">
+            {{ item.svg }}
+          </div>
+          <span class="landing-links__link">{{ item.linkText }}</span>
+        </a>
       </div>
       {% endfor %}
     </div>
