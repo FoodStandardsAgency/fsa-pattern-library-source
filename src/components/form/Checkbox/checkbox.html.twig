@@ -1,0 +1,18 @@
+<fieldset class="checkbox {{ error ? "checkbox--error" : "" }}">
+  {% if title is defined %}
+    <legend class="checkbox__legend">
+      {{ title }}<span class="checkbox__required">{{ required ? "REQUIRED" : "" }}</span>
+    </legend>
+  {% endif %}
+  {% if description is defined %}
+    <p class="checkbox__description">{{ description }}</p>
+  {% endif %}
+  <div class="checkbox__fields">
+    {% for field in fields %}
+      <div class="checkbox__field">
+        <input class="checkbox__input" type="checkbox" name="{{ name }}" value="{{ field.value }}" id="{{ field.value }}" {{ required ? "required" : "" }}>
+        <label class="checkbox__label" for="{{ field.value }}">{{ field.label }}</label>
+      </div>
+    {% endfor %}
+  </div>
+</fieldset>
