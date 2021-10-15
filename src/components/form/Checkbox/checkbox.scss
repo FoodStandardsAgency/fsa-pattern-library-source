@@ -2,14 +2,9 @@
 
 .checkbox {
   border: none;
-  padding: 0 0 0 0.5rem;
-  margin: 1.56rem 0 0 -0.5rem;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
   color: var(--fsa-primary_black);
-
-  @media screen and (min-width: $fsa-md) {
-    margin-left: -1rem;
-    padding-left: 1rem;
-  }
 
   &__legend {
     @include intro;
@@ -47,7 +42,7 @@
     height: 1.5rem;
     border: 1px solid var(--fsa-primary_black);
     position: relative;
-    margin: 0 0.94rem 0 0;
+    margin: 0 1rem 0 0;
     background-color: var(--fsa_tint);
 
     &::-ms-expand {
@@ -71,13 +66,11 @@
 
   &--error {
     border-left: 0.25rem solid var(--fsa-secondary_mid-red);
-    @media screen and (min-width: $fsa-lg) {
-      border-left: 0.23rem solid var(--fsa-secondary_mid-red);
-    }
-
-    margin: 1.56rem 0 0 -0.75rem;
+    margin-left: -0.75rem;
+    padding-left: 0.5rem;
     @media screen and (min-width: $fsa-md) {
-      margin-left: -1.23rem;
+      margin-left: -1.25rem;
+      padding-left: -1rem;
     }
 
     .checkbox__legend {
