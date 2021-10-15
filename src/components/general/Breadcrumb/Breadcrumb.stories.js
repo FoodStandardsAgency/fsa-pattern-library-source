@@ -38,7 +38,9 @@ Breadcrumb.args = {
       'url': null
     },
   ],
-  expanded: false
+  expanded: false,
+  withLogin: false,
+  isLoggedIn: false
 };
 
 export const BreadcrumbExpanded = Template.bind({});
@@ -61,5 +63,57 @@ BreadcrumbExpanded.args = {
       'url': null
     },
   ],
-  expanded: true
+  expanded: true,
+  withLogin: false,
+  isLoggedIn: false
+};
+
+export const BreadcrumbLoggedOut = Template.bind({});
+BreadcrumbLoggedOut.args = {
+  items: [
+    {
+      'label': 'Home',
+      'url': '/'
+    },
+    {
+      'label': 'Business guidance',
+      'url': null
+    },
+    {
+      'label': 'Running a business',
+      'url': '/running-a-business'
+    },
+    {
+      'label': 'Hazard Analysis and Critical Control Point',
+      'url': null
+    },
+  ],
+  expanded: false,
+  withLogin: true,
+  isLoggedIn: false
+};
+
+export const BreadcrumbLoggedIn = Template.bind({});
+BreadcrumbLoggedIn.args = {
+  items: [
+    {
+      'label': 'Home',
+      'url': '/'
+    },
+    {
+      'label': 'Business guidance',
+      'url': null
+    },
+    {
+      'label': 'Running a business',
+      'url': '/running-a-business'
+    },
+    {
+      'label': 'Hazard Analysis and Critical Control Point',
+      'url': null
+    },
+  ],
+  expanded: false,
+  withLogin: true,
+  isLoggedIn: true
 };

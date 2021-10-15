@@ -1,0 +1,20 @@
+{% extends "../../layout/fullWidth/fullWidth.html.twig" %}
+{% block content %}
+{# Include templates for form components here #}
+{% set breadcrumbItems = [
+    {
+      'label': 'Home',
+      'url': '/'
+    },
+    {
+      'label': 'News & Alerts',
+      'url': '/news-alerts'
+    },
+    {
+      'label': 'Subscribe to news & alerts',
+      'url': null
+    },
+  ]
+%}
+{% include '../../components/general/Breadcrumb/breadcrumb.html.twig' with { items: breadcrumbItems, expanded: false, withLogin: true, isLoggedIn: false } %}
+{% endblock %}

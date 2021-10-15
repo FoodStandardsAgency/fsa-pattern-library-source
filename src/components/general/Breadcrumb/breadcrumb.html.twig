@@ -15,3 +15,12 @@
     <span class="visually-hidden">Expand breadcrumb navigation</span>
   </a>
 </nav>
+{% if withLogin %}
+  <div>
+    {% if isLoggedIn %}
+    {% else %}
+      <span>{{ 'Already have a subscription?' }}</span>
+      {% include '../Button/button.html.twig' with { is_anchor: true, label: 'Sign In', url: '#' } %}
+    {% endif %}
+  </div>
+{% endif %}
