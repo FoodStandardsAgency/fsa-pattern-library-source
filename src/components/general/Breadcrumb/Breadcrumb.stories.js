@@ -38,9 +38,7 @@ Breadcrumb.args = {
       'url': null
     },
   ],
-  expanded: false,
-  withLogin: false,
-  isLoggedIn: false
+  expanded: false
 };
 
 export const BreadcrumbExpanded = Template.bind({});
@@ -63,9 +61,7 @@ BreadcrumbExpanded.args = {
       'url': null
     },
   ],
-  expanded: true,
-  withLogin: false,
-  isLoggedIn: false
+  expanded: true
 };
 
 export const BreadcrumbLoggedOut = Template.bind({});
@@ -76,21 +72,21 @@ BreadcrumbLoggedOut.args = {
       'url': '/'
     },
     {
-      'label': 'Business guidance',
-      'url': null
+      'label': 'News & Alerts',
+      'url': '/news-alerts'
     },
     {
-      'label': 'Running a business',
-      'url': '/running-a-business'
-    },
-    {
-      'label': 'Hazard Analysis and Critical Control Point',
+      'label': 'Subscribe to news & alerts',
       'url': null
     },
   ],
   expanded: false,
-  withLogin: true,
-  isLoggedIn: false
+  subscription: {
+    isLoggedIn: false,
+    loggedOutLabel: 'Already have a subscription?',
+    loggedOutButtonLabel: 'Sign in',
+    loggedOutButtonLink: '#',
+  },
 };
 
 export const BreadcrumbLoggedIn = Template.bind({});
@@ -101,19 +97,72 @@ BreadcrumbLoggedIn.args = {
       'url': '/'
     },
     {
-      'label': 'Business guidance',
-      'url': null
+      'label': 'News & Alerts',
+      'url': '/news-alerts'
     },
     {
-      'label': 'Running a business',
-      'url': '/running-a-business'
-    },
-    {
-      'label': 'Hazard Analysis and Critical Control Point',
+      'label': 'Subscribe to news & alerts',
       'url': null
     },
   ],
   expanded: false,
-  withLogin: true,
-  isLoggedIn: true
+  subscription: {
+    isLoggedIn: true,
+    subscriptionLink: '#',
+    subscriptionLabel: 'My subscription',
+    logOutLink: '#',
+    logOutLabel: 'Log out',
+  },
+};
+
+
+export const BreadcrumbExpandedLoggedOut = Template.bind({});
+BreadcrumbExpandedLoggedOut.args = {
+  items: [
+    {
+      'label': 'Home',
+      'url': '/'
+    },
+    {
+      'label': 'News & Alerts',
+      'url': '/news-alerts'
+    },
+    {
+      'label': 'Subscribe to news & alerts',
+      'url': null
+    },
+  ],
+  expanded: true,
+  subscription: {
+    isLoggedIn: false,
+    loggedOutLabel: 'New user?',
+    loggedOutButtonLabel: 'Subscribe now',
+    loggedOutButtonLink: '#',
+  },
+};
+
+export const BreadcrumbExpandedLoggedIn = Template.bind({});
+BreadcrumbExpandedLoggedIn.args = {
+  items: [
+    {
+      'label': 'Home',
+      'url': '/'
+    },
+    {
+      'label': 'News & Alerts',
+      'url': '/news-alerts'
+    },
+    {
+      'label': 'Subscribe to news & alerts',
+      'url': null
+    },
+  ],
+  expanded: true,
+  subscription: {
+    isLoggedIn: true,
+    subscriptionLink: '#',
+    subscriptionLabel: 'My subscription',
+    logOutLink: '#',
+    logOutLabel: 'Log out',
+  },
 };

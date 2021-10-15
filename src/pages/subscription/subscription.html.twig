@@ -16,5 +16,14 @@
     },
   ]
 %}
-{% include '../../components/general/Breadcrumb/breadcrumb.html.twig' with { items: breadcrumbItems, expanded: false, withLogin: true, isLoggedIn: false } %}
+{% include '../../components/general/Breadcrumb/breadcrumb.html.twig' with { 
+    items: breadcrumbItems, 
+    expanded: false, 
+    subscription: {
+      isLoggedIn: false,
+      loggedOutLabel: 'Already have a subscription?',
+      loggedOutButtonLabel: 'Sign in',
+      loggedOutButtonLink: '#',
+    } 
+  } %}
 {% endblock %}

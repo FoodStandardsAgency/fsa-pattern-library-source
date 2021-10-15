@@ -2,21 +2,70 @@
 
 .breadcrumb {
   @include small;
-  @include grid-cols(4, 4);
-  @media screen and (min-width: $fsa-md) {
-    @include grid-cols(8);
-  }
   margin-top: 1rem;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @media screen and (min-width: $fsa-md) {
+    flex-direction: row;
+  }
+  &.logout.collapsed {
+    @media screen and (min-width: $fsa-xl) {
+      align-items: center;
+    }
+  }
+  
+  &__left {
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(8);
+    }
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: relative;
+    .logout.expanded & {
+      @media screen and (min-width: $fsa-xl) {
+        margin-top: 0.65rem;
+      }
+    }
+  }
+  &__right {
+    @include grid-cols(4, 4);
+    margin-top: 1rem;
+    .login & {
+      text-align: center;
+    }
+    .logout & {
+      text-align: left;
+    }
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(4);
+      .login &, .logout & {
+        text-align: right;
+      }
+      margin: 0;
+    }
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: relative;
+    & .breadcrumb__label {
+      font-size: 0.9rem;
+    }
+    & .button {
+      margin-left: 1.1rem;
+      margin-top: 0.5rem;
+      @media screen and (min-width: $fsa-xl) {
+        margin-top: 0;
+      }
+    }
+  }
   &__items {
     display: flex;
     flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
     max-width: 94%;
-    &.expanded {
+    .expanded & {
       flex-direction: column;
     }
     &.overflowed {
@@ -53,9 +102,13 @@
       }
     }
   }
-  // :not property doesn't seem to work :'(
-  &__items.expanded &__item {
+  /* :not property doesn't seem to work :'( */
+  .expanded &__items &__item {
     padding: 1rem 0 0 0;
+    /* lobotomized owl doesn't work here :'( */
+    &:first-child {
+      padding: 0;
+    }
     &::before {
       display: none;
     }

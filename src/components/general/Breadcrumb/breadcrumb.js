@@ -3,11 +3,11 @@ import './breadcrumb.html.twig';
 
 export default function () {
   // Toggles the expanded class to expand the breadcrumb or not
-  function toggleBreadcrumb(breadcrumbItems, mobileOverlay) {
-    if (breadcrumbItems.classList.contains('expanded')) {
-      breadcrumbItems.classList.remove('expanded');
+  function toggleBreadcrumb(breadcrumb, mobileOverlay) {
+    if (breadcrumb.classList.contains('expanded')) {
+      breadcrumb.classList.remove('expanded');
     } else {
-      breadcrumbItems.classList.add('expanded');
+      breadcrumb.classList.add('expanded');
     }
     if (mobileOverlay.ariaExpanded === 'true') {
       mobileOverlay.setAttribute('aria-expanded', 'false');
@@ -18,8 +18,8 @@ export default function () {
 
   // Toggles the overflowed class to handle the overflow on the breadcrumb 
   // depending on screensizes
-  function overflow(breadcrumbItems, breadcrumbLength) {
-    if (!breadcrumbItems.classList.contains('expanded')) {
+  function overflow(breadcrumb, breadcrumbItems, breadcrumbLength) {
+    if (!breadcrumb.classList.contains('expanded')) {
       if (breadcrumbLength > breadcrumbItems.clientWidth) {
         breadcrumbItems.classList.add('overflowed');
       } else {
@@ -30,6 +30,7 @@ export default function () {
 
   window.addEventListener('DOMContentLoaded', function () {
     const mobileOverlay = document.querySelector('.breadcrumb__mobile-overlay');
+    const breadcrumb = document.querySelector('.breadcrumb');
     const breadcrumbItems = document.querySelector('.breadcrumb__items');
     if(!mobileOverlay && !breadcrumbItems) return;
 
@@ -44,22 +45,22 @@ export default function () {
     mobileOverlay.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      toggleBreadcrumb(breadcrumbItems, mobileOverlay);
+      toggleBreadcrumb(breadcrumb, mobileOverlay);
     });
     mobileOverlay.addEventListener('keyUp', (e) => {
       const keyCode = (e.keyCode ? e.keyCode : e.which);
       if (keyCode === 13) {
-        toggleBreadcrumb(breadcrumbItems, mobileOverlay);
+        toggleBreadcrumb(breadcrumb, mobileOverlay);
       }
     });
 
     //-- Overflow state
     // Upon resize, check if the breadcrumb length is bigger than the visible part of the breadcrumb
     window.addEventListener('resize', () => {
-      overflow(breadcrumbItems, breadcrumbLength);
+      overflow(breadcrumb, breadcrumbItems, breadcrumbLength);
     });
     // Triggers it once upon first load
-    overflow(breadcrumbItems, breadcrumbLength);
+    overflow(breadcrumb, breadcrumbItems, breadcrumbLength);
   });
 
   
