@@ -1,4 +1,5 @@
 import radio from './radio.html.twig';
+import './radio.scss';
 
 export default {
   title: 'Components/Form/Radio Buttons',
