@@ -1,9 +1,5 @@
 import landingLinks from './landingLinks.html.twig';
 import './landingLinks.scss';
-import landingLinksJs from './LandingLinks.js';
-
-landingLinksJs();
-
 
 export default {
   title: 'Components/Landing/Landing Links',
