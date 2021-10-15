@@ -13,6 +13,7 @@ import './components/search/SortBy/sortBy';
 import './components/forms/ErrorBox/ErrorBox';
 import './components/form/TitleAndText/titleAndText';
 import './components/form/Checkbox/checkbox';
+import './components/form/Radio/radio';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
 import './components/landing/LandingLinks/LandingLinks';
