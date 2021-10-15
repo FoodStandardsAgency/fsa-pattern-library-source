@@ -14,11 +14,15 @@
       align-items: center;
     }
   }
-  
   &__left {
     @include grid-cols(4, 4);
-    @media screen and (min-width: $fsa-md) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-cols(8);
+    }
+    .full & {
+      @media screen and (max-width: $fsa-md) {
+        @include grid-cols(12);
+      }
     }
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -50,10 +54,12 @@
     position: relative;
     & .breadcrumb__label {
       font-size: 0.9rem;
+      white-space: nowrap;
     }
     & .button {
       margin-left: 1.1rem;
       margin-top: 0.5rem;
+      white-space: nowrap;
       @media screen and (min-width: $fsa-xl) {
         margin-top: 0;
       }

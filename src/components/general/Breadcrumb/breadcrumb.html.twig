@@ -1,4 +1,4 @@
-<div class="breadcrumb {{ expanded ? "expanded" : "collapsed" }} {{ isLoggedIn ? "login" : "logout" }}">
+<div class="breadcrumb {{ expanded ? "expanded" : "collapsed" }} {{ subscription is defined ? (subscription.isLoggedIn ? "login" : "logout") : "full" }}">
   <nav class="breadcrumb__left">
     <p class="breadcrumb__label visually-hidden">Breadcrumb</p>
     <div class="breadcrumb__items">

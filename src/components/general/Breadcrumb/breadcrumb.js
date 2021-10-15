@@ -20,6 +20,9 @@ export default function () {
   // depending on screensizes
   function overflow(breadcrumb, breadcrumbItems, breadcrumbLength) {
     if (!breadcrumb.classList.contains('expanded')) {
+      console.log(breadcrumbLength);
+      console.log(breadcrumbItems.clientWidth);
+      console.log(breadcrumbLength > breadcrumbItems.clientWidth);
       if (breadcrumbLength > breadcrumbItems.clientWidth) {
         breadcrumbItems.classList.add('overflowed');
       } else {
