@@ -7,7 +7,7 @@
         '<p>Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".</p>',
       tag: 'h2',
     } %}
-    {% include '../../components/forms/ErrorBox/errorBox.html.twig' with {
+    {% include '../../components/form/ErrorBox/errorBox.html.twig' with {
       title: 'There is a problem with your submission',
       errors: 'required',
       errorList: {
@@ -79,7 +79,7 @@
         { value: 'two', label: 'Alert two' },
         { value: 'three', label: 'Alert three' },
       ],
-      name: 'alert',
+      name: 'first alert',
       required: false,
       error: false,
     } %}
@@ -92,7 +92,7 @@
         { value: 'five', label: 'Alert five' },
         { value: 'six', label: 'Alert six' },
       ],
-      name: 'alert',
+      name: 'second alert',
       required: true,
       error: true,
     } %}
