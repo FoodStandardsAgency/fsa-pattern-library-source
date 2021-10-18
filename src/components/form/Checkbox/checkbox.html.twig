@@ -1,11 +1,11 @@
-<fieldset class="checkbox {{ error ? "checkbox--error" : "" }}">
+<fieldset class="checkbox {{ error ? "checkbox--error" : "" }}" aria-describedby="checkbox__description--{{ name }}">
   {% if title is defined %}
     <legend class="checkbox__legend">
       {{ title }}<span class="checkbox__required">{{ required ? "REQUIRED" : "" }}</span>
     </legend>
   {% endif %}
   {% if description is defined %}
-    <p class="checkbox__description">{{ description }}</p>
+    <p class="checkbox__description" id="checkbox__description--{{ name }}">{{ description }}</p>
   {% endif %}
   <div class="checkbox__fields">
     {% for field in fields %}
