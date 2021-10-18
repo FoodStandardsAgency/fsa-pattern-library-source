@@ -76,3 +76,10 @@ p {
     margin-top: 1rem;
   }
 }
+
+.visually-hidden {
+  position: absolute!important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}

@@ -1,12 +1,34 @@
-<div id="block-breadcrumbs" class="breadcrumb contextual-region">
-      <p class="visually-hidden">Breadcrumb</p>
-      <div class="breadcrumb__item">
-              <a href="/?navref=breadcrumb" class="breadcrumb__link">Food Standards Agency</a>          </div>
-      <div class="breadcrumb__item">
-              <a href="/food-safety?navref=breadcrumb" class="breadcrumb__link">Food safety and hygiene</a>          </div>
-      <div class="breadcrumb__item">
-              <a href="?navref=breadcrumb" class="breadcrumb__link">Buying and eating food</a>          </div>
-      <div class="breadcrumb__item">
-              <a href='?navref=breadcrumb' class="breadcrumb__link" aria-current="page">Allergy and intolerance</a>          </div>
-  
+<div class="breadcrumb {{ expanded ? "expanded" : "collapsed" }} {{ subscription is defined ? (subscription.isLoggedIn ? "login" : "logout") : "full" }}">
+  <nav class="breadcrumb__left">
+    <p class="breadcrumb__label visually-hidden">Breadcrumb</p>
+    <div class="breadcrumb__items">
+      {% for item in items %}
+        <div class="breadcrumb__item">
+          {% if item.url is not null %}
+            <a href={{ item.url }} class="breadcrumb__link">{{ item.label }}</a>
+          {% else %}
+            <span>{{ item.label }}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <a href="#" class="breadcrumb__mobile-overlay" aria-expanded="{{ expanded }}">
+      <span class="visually-hidden">Expand breadcrumb navigation</span>
+    </a>
+  </nav>
+  {% if subscription is defined %}
+    <div class="breadcrumb__right">
+      {% if subscription.isLoggedIn %}
+        <a href="{{ subscription.subscriptionLink }}" class="breadcrumb__link">{{ subscription.subscriptionLabel }}</a> |
+        <a href="{{ subscription.logOutLink }}" class="breadcrumb__link">{{ subscription.logOutLabel }}</a>
+      {% else %}
+        <span class="breadcrumb__label">{{ subscription.loggedOutLabel }}</span>
+        {% include '../Button/button.html.twig' with { 
+          type: 'primary',
+          label: subscription.loggedOutButtonLabel,
+          url: subscription.loggedOutButtonLink,
+          is_anchor: true } %}
+      {% endif %}
+    </div>
+  {% endif %}
 </div>
