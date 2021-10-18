@@ -16,5 +16,17 @@ export default function () {
         input.classList.remove('search-bar__box--has-content');
       }
     });
+
+    const submit = el.querySelector('.search-bar__submit');
+    submit.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currUrl = new URL(window.location.href);
+      let params = new URLSearchParams(currUrl.search.slice(1));
+      const value = input.value;
+      params.append('keywords', value);
+      const query = params.toString();
+      console.log(window.location + query);
+      window.location.href = window.location + query;
+    });
   });
 }
