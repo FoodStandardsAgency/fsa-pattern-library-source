@@ -14,6 +14,7 @@ const Template = (args) => radio(args);
 export const Normal = Template.bind({});
 Normal.args = {
   title: 'Email frequency',
+  description: 'How often the emails are',
   fields: [
     { value: 'immediately', label: 'Send updates immediately' },
     { value: 'daily', label: 'Send updates daily' },
@@ -28,6 +29,7 @@ Normal.args = {
 export const Error = Template.bind({});
 Error.args = {
   title: 'Email length',
+  description: 'How long the emails are',
   fields: [
     { value: 'long', label: 'Send long emails' },
     { value: 'medium', label: 'Send medium-length emails' },
