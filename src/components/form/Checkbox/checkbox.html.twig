@@ -12,8 +12,8 @@
   <div class="checkbox__fields">
     {% for field in fields %}
       <div class="checkbox__field">
-        <input class="checkbox__input" type="checkbox" name="{{ name }}" value="{{ field.value }}" id="{{ field.value }}" {{ required ? "required" : "" }}>
-        <label class="checkbox__label" for="{{ field.value }}">{{ field.label }}</label>
+        <input class="checkbox__input" type="checkbox" name="{{ name }}" value="{{ field.value }}" id="{{ field.id }}" {{ required ? "required" : "" }}>
+        <label class="checkbox__label" for="{{ field.id }}">{{ field.label }}</label>
       </div>
     {% endfor %}
   </div>
