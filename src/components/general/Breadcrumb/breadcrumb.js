@@ -20,9 +20,6 @@ export default function () {
   // depending on screensizes
   function overflow(breadcrumb, breadcrumbItems, breadcrumbLength) {
     if (!breadcrumb.classList.contains('expanded')) {
-      console.log(breadcrumbLength);
-      console.log(breadcrumbItems.clientWidth);
-      console.log(breadcrumbLength > breadcrumbItems.clientWidth);
       if (breadcrumbLength > breadcrumbItems.clientWidth) {
         breadcrumbItems.classList.add('overflowed');
       } else {
@@ -35,7 +32,7 @@ export default function () {
     const mobileOverlay = document.querySelector('.breadcrumb__mobile-overlay');
     const breadcrumb = document.querySelector('.breadcrumb');
     const breadcrumbItems = document.querySelector('.breadcrumb__items');
-    if(!mobileOverlay && !breadcrumbItems) return;
+    if (!mobileOverlay && !breadcrumbItems) return;
 
      // Calculates the length of the breadcrumb (+ some extra spacing for the separators)
      let breadcrumbLength = 0;
