@@ -10,8 +10,8 @@
   <div class="radio__fields">
     {% for field in fields %}
       <div class="radio__field">
-        <input class="radio__input" type="radio" name="{{ name }}" value="{{ field.value }}" id="{{ field.value }}" {{ required ? "required" : "" }} {{ default == field.value ? "checked" : "" }}>
-        <label class="radio__label" for="{{ field.value }}">{{ field.label }}</label>
+        <input class="radio__input" type="radio" name="{{ name }}" value="{{ field.value }}" id="{{ field.id }}" {{ required ? "required" : "" }} {{ default == field.value ? "checked" : "" }}>
+        <label class="radio__label" for="{{ field.id }}">{{ field.label }}</label>
       </div>
     {% endfor %}
   </div>
