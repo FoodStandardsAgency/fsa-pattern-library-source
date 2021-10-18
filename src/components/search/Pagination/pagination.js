@@ -9,7 +9,6 @@ export default function () {
     }
 
     const pages = el.querySelectorAll('.pagination__item a');
-    console.log(pages);
     pages.forEach((page) => {
       page.addEventListener('click', (e) => {
         e.preventDefault();
@@ -18,7 +17,6 @@ export default function () {
         const value = page.getAttribute('data-page');
         params.append('page', value);
         const query = params.toString();
-        console.log(window.location + query);
         window.location.href = window.location + query;
       });
     });
