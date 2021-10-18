@@ -3,7 +3,7 @@ import './radio.scss';
 
 export default {
   title: 'Components/Form/Radio Buttons',
-  arameters: {
+  parameters: {
     //Center the component so that the red error border-left is visible.
     layout: 'centered',
   },
