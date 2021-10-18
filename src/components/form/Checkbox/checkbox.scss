@@ -33,7 +33,6 @@
     @include body;
     display: flex;
     align-items: center;
-    align-items: center;
   }
 
   &__input {
@@ -42,8 +41,8 @@
     height: 1.5rem;
     border: 1px solid var(--fsa-primary_black);
     position: relative;
-    margin: 0 1rem 0 0;
     background-color: var(--fsa_tint);
+    margin: 0;
 
     &::-ms-expand {
       display: none;
@@ -62,6 +61,10 @@
       outline: none;
       border: none;
     }
+  }
+
+  &__label {
+    padding: 0 0 0 1rem;
   }
 
   &--error {
