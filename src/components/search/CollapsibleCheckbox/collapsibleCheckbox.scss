@@ -41,12 +41,12 @@
 
     &::after {
       content: url('./arrow.svg');
-      transform: rotate(180deg);
+      transform: none;
     }
 
     &--expanded{
       &::after {
-        content: url('./arrow.svg');
+        transform: rotate(180deg);
       }
     }
   }
@@ -58,7 +58,7 @@
   &__fields {
     clear: both;
     padding-top: 1rem;
-    // display: none;
+    display: none;
 
     &--active {
       display: block;
