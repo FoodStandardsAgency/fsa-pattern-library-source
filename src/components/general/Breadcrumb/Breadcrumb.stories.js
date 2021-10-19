@@ -1,4 +1,4 @@
-import breadcrumb from './breadcrumb.html.twig';
+import breadcrumb from './breadcrumbs.html.twig';
 import './breadcrumb.scss';
 import breadcrumbJs from './breadcrumb.js';
 
@@ -22,19 +22,19 @@ export const Breadcrumb = Template.bind({});
 Breadcrumb.args = {
   items: [
     {
-      'label': 'Home',
+      'text': 'Home',
       'url': '/'
     },
     {
-      'label': 'Business guidance',
+      'text': 'Business guidance',
       'url': null
     },
     {
-      'label': 'Running a business',
+      'text': 'Running a business',
       'url': '/running-a-business'
     },
     {
-      'label': 'Hazard Analysis and Critical Control Point',
+      'text': 'Hazard Analysis and Critical Control Point',
       'url': null
     },
   ],
@@ -45,19 +45,19 @@ export const BreadcrumbExpanded = Template.bind({});
 BreadcrumbExpanded.args = {
   items: [
     {
-      'label': 'Home',
+      'text': 'Home',
       'url': '/'
     },
     {
-      'label': 'Business guidance',
+      'text': 'Business guidance',
       'url': null
     },
     {
-      'label': 'Running a business',
+      'text': 'Running a business',
       'url': '/running-a-business'
     },
     {
-      'label': 'Hazard Analysis and Critical Control Point',
+      'text': 'Hazard Analysis and Critical Control Point',
       'url': null
     },
   ],
@@ -68,23 +68,23 @@ export const BreadcrumbLoggedOut = Template.bind({});
 BreadcrumbLoggedOut.args = {
   items: [
     {
-      'label': 'Home',
+      'text': 'Home',
       'url': '/'
     },
     {
-      'label': 'News & Alerts',
+      'text': 'News & Alerts',
       'url': '/news-alerts'
     },
     {
-      'label': 'Subscribe to news & alerts',
+      'text': 'Subscribe to news & alerts',
       'url': null
     },
   ],
   expanded: false,
   subscription: {
     isLoggedIn: false,
-    loggedOutLabel: 'Already have a subscription?',
-    loggedOutButtonLabel: 'Sign in',
+    loggedOuttext: 'Already have a subscription?',
+    loggedOutButtontext: 'Sign in',
     loggedOutButtonLink: '#',
   },
 };
@@ -93,15 +93,15 @@ export const BreadcrumbLoggedIn = Template.bind({});
 BreadcrumbLoggedIn.args = {
   items: [
     {
-      'label': 'Home',
+      'text': 'Home',
       'url': '/'
     },
     {
-      'label': 'News & Alerts',
+      'text': 'News & Alerts',
       'url': '/news-alerts'
     },
     {
-      'label': 'Subscribe to news & alerts',
+      'text': 'Subscribe to news & alerts',
       'url': null
     },
   ],
@@ -109,9 +109,9 @@ BreadcrumbLoggedIn.args = {
   subscription: {
     isLoggedIn: true,
     subscriptionLink: '#',
-    subscriptionLabel: 'My subscription',
+    subscriptiontext: 'My subscription',
     logOutLink: '#',
-    logOutLabel: 'Log out',
+    logOuttext: 'Log out',
   },
 };
 
@@ -120,23 +120,23 @@ export const BreadcrumbExpandedLoggedOut = Template.bind({});
 BreadcrumbExpandedLoggedOut.args = {
   items: [
     {
-      'label': 'Home',
+      'text': 'Home',
       'url': '/'
     },
     {
-      'label': 'News & Alerts',
+      'text': 'News & Alerts',
       'url': '/news-alerts'
     },
     {
-      'label': 'Subscribe to news & alerts',
+      'text': 'Subscribe to news & alerts',
       'url': null
     },
   ],
   expanded: true,
   subscription: {
     isLoggedIn: false,
-    loggedOutLabel: 'New user?',
-    loggedOutButtonLabel: 'Subscribe now',
+    loggedOuttext: 'New user?',
+    loggedOutButtontext: 'Subscribe now',
     loggedOutButtonLink: '#',
   },
 };
@@ -145,15 +145,15 @@ export const BreadcrumbExpandedLoggedIn = Template.bind({});
 BreadcrumbExpandedLoggedIn.args = {
   items: [
     {
-      'label': 'Home',
+      'text': 'Home',
       'url': '/'
     },
     {
-      'label': 'News & Alerts',
+      'text': 'News & Alerts',
       'url': '/news-alerts'
     },
     {
-      'label': 'Subscribe to news & alerts',
+      'text': 'Subscribe to news & alerts',
       'url': null
     },
   ],
@@ -161,8 +161,8 @@ BreadcrumbExpandedLoggedIn.args = {
   subscription: {
     isLoggedIn: true,
     subscriptionLink: '#',
-    subscriptionLabel: 'My subscription',
+    subscriptiontext: 'My subscription',
     logOutLink: '#',
-    logOutLabel: 'Log out',
+    logOuttext: 'Log out',
   },
 };
