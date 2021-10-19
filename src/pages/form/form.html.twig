@@ -96,5 +96,12 @@
       required: true,
       error: true,
     } %}
+    
+    {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
+      prevLink: '#',
+      label: 'Next',
+      nextLink: '#'
+    } %}
+
   </form>
 {% endblock %}
