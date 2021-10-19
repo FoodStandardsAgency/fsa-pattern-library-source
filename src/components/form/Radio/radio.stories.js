@@ -21,7 +21,7 @@ Normal.args = {
     { value: 'weekly', label: 'Send updates weekly', id: 'weekly' },
   ],
   name: 'frequency',
-  required: false,
+  required: "",
   error: false,
   default: 'immediately',
 };
@@ -36,7 +36,7 @@ Error.args = {
     { value: 'short', label: 'Send short emails', id: 'short' },
   ],
   name: 'length',
-  required: true,
+  required: "required",
   error: true,
   default: 'long',
 };
