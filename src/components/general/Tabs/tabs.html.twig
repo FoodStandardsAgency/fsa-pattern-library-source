@@ -1,0 +1,15 @@
+<div class="tabs" role="navigation" aria-label="{{ type }}">
+  <ul class="tabs__list">
+    {% for tab in tabs %}
+      {% if tab.isActive %}
+        <li class="tabs__element tabs__element--active">
+          {{ tab.name }}
+        </li>
+      {% else %}
+        <li class="tabs__element">
+          <a href="{{ tab.link }}">{{ tab.name }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

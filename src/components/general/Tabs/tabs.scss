@@ -1,0 +1,60 @@
+@import "src/lib.scss";
+
+.tabs {
+  &__list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--fsa-primary_black);
+    align-items: center;
+    margin-bottom: 1rem;
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+  }
+  &__element {
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    @media screen and (min-width: $fsa-md) {
+      margin-bottom: 0.8rem;
+      &:hover {
+        &:after {
+          content: "";
+          height: 0.313rem;
+          width: 100%;
+          display: block;
+          background-color: var(--fsa-primary_dark-green);
+          position: absolute;
+          bottom: -0.8rem;
+        }
+      }
+    }
+    a {
+      @include link;
+      text-decoration: none;
+    }
+    &--active {
+      color: var(--fsa-primary_black);
+      &:hover {
+        color: var(--fsa-primary_black);
+        cursor: auto;
+      }
+      &:after {
+        content: "";
+        height: 0.313rem;
+        width: 100%;
+        display: block;
+        background-color: var(--fsa-primary_black);
+        margin-top: 0.5rem;
+        @media screen and (min-width: $fsa-md) {
+          margin-top: 0;
+          position: absolute;
+          bottom: -0.8rem;
+        }
+      }
+    }
+  }
+}
