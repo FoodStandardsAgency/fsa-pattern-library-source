@@ -19,7 +19,7 @@ PaginationStart.args = {
   paginationType: 'Search',
   totalPages: 9,
   currentPage: 1,
-  maxPages: 4,
+  maxVisiblePages: 4,
 }
 
 export const PaginationMid = Template.bind({});
@@ -27,7 +27,7 @@ PaginationMid.args = {
   paginationType: 'Search',
   totalPages: 16,
   currentPage: 6,
-  maxPages: 4,
+  maxVisiblePages: 4,
 }
 
 export const PaginationEnd = Template.bind({});
@@ -35,5 +35,5 @@ PaginationEnd.args = {
   paginationType: 'Search',
   totalPages: 9,
   currentPage: 9,
-  maxPages: 4,
+  maxVisiblePages: 4,
 }
