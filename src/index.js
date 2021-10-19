@@ -18,6 +18,8 @@ import './components/landing/LandingLinks/LandingLinks';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
 import './layout/fullWidth/fullWidth';
+import './components/form/MultistepFunction/multistepFunction';
+
 
 import searchBar from "./components/search/SearchBar/searchBar";
 import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
