@@ -27,11 +27,6 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
     position: relative;
-    .logout.expanded & {
-      @media screen and (min-width: $fsa-xl) {
-        margin-top: 0.65rem;
-      }
-    }
   }
   &__right {
     @include grid-cols(4, 4);
@@ -55,14 +50,13 @@
     & .breadcrumb__label {
       font-size: 0.9rem;
       white-space: nowrap;
+      padding: 0.5rem 0;
+      display:inline-block;
     }
     & .button {
       margin-left: 1.1rem;
-      margin-top: 0.5rem;
       white-space: nowrap;
-      @media screen and (min-width: $fsa-xl) {
-        margin-top: 0;
-      }
+      
     }
   }
   &__items {
@@ -78,14 +72,14 @@
       &::before {
         position: absolute;
         content: "...";
-        bottom: 0;
+        bottom: 0.5rem;
         right: 1rem;
         z-index: 1;
       }
       &::after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: 0.5rem;
         right: 1rem;
         width: 1rem;
         height: 100%;
@@ -96,6 +90,10 @@
   }
   &__item {
     padding-right: 0.5rem;
+    & > * {
+      display: inline-block;
+      padding: 0.5rem 0;
+    }
     & + & {
       &::before {
         display: inline-block;
@@ -103,18 +101,13 @@
         content: "/";
       }
       & > * {
-        display: inline-block;
         margin-left: 0.5rem;
       }
     }
   }
   /* :not property doesn't seem to work :'( */
   .expanded &__items &__item {
-    padding: 1rem 0 0 0;
     /* lobotomized owl doesn't work here :'( */
-    &:first-child {
-      padding: 0;
-    }
     &::before {
       display: none;
     }
@@ -125,6 +118,8 @@
 
   &__link {
     @include link;
+    display: inline-block;
+    padding: 0.5rem 0;
   }
   &__mobile-overlay {
     @include link;
@@ -133,7 +128,7 @@
     height: 1.4rem;
     position: absolute;
     right: 0;
-    top: 0.1rem;
+    top: 0.6rem;
     &::after {
       content: "";
       display: block;
