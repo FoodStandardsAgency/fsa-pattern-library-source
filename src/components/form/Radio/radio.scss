@@ -1,6 +1,6 @@
 @import 'src/lib.scss';
 
-.checkbox {
+.radio {
   border: none;
   padding: 0;
   margin: 2rem 0 0 0;
@@ -39,10 +39,14 @@
     appearance: none;
     width: 1.5rem;
     height: 1.5rem;
+    border-radius: 50%;
     border: 1px solid var(--fsa-primary_black);
     position: relative;
-    background-color: var(--fsa_tint);
+    background-color: var(--fsa-primary_white);
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &::-ms-expand {
       display: none;
@@ -50,9 +54,16 @@
 
     &:checked {
       background-color: var(--fsa-primary_dark-green);
-      background-image: url('./tick.svg');
-      background-repeat: no-repeat;
-      background-position: center;
+      border: none;
+
+      &::before {
+        content: "";
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background: var(--fsa-primary_white);
+        
+      }
     }
 
     &:focus {
@@ -76,7 +87,7 @@
       padding-left: 1rem;
     }
 
-    .checkbox__legend {
+    .radio__legend {
       color: var(--fsa-secondary_mid-red);
     }
   }

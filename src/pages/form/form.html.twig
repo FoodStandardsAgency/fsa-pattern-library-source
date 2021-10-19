@@ -7,7 +7,7 @@
         '<p>Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".</p>',
       tag: 'h2',
     } %}
-    {% include '../../components/forms/ErrorBox/errorBox.html.twig' with {
+    {% include '../../components/form/ErrorBox/errorBox.html.twig' with {
       title: 'There is a problem with your submission',
       errors: 'required',
       errorList: {
@@ -44,16 +44,42 @@
         },
       }
     }%}
+    {% include '../../components/form/Radio/radio.html.twig' with {
+      title: 'Email frequency',
+      description: 'How often the emails are',
+      fields: [
+        { value: 'immediately', label: 'Send updates immediately', id: 'immediately' },
+        { value: 'daily', label: 'Send updates daily', id: 'daily' },
+        { value: 'weekly', label: 'Send updates weekly', id: 'weekly' },
+      ],
+      name: 'frequency',
+      required: false,
+      error: false,
+      default: 'immediately',
+    } %}
+    {% include '../../components/form/Radio/radio.html.twig' with {
+      title: 'Email length',
+      description: 'How long the emails are',
+      fields: [
+        { value: 'long', label: 'Send long emails', id: 'long' },
+        { value: 'medium', label: 'Send medium-length emails', id: 'medium' },
+        { value: 'short', label: 'Send short emails', id: 'short' },
+      ],
+      name: 'length',
+      required: true,
+      error: true,
+      default: 'long',
+    } %}
     {% include '../../components/form/Checkbox/checkbox.html.twig' with {
       title: 'Food alerts',
       description:
         'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
       fields: [
-        { value: 'one', label: 'Alert one' },
-        { value: 'two', label: 'Alert two' },
-        { value: 'three', label: 'Alert three' },
+        { value: 'one', label: 'Alert one', id: 'one' },
+        { value: 'two', label: 'Alert two', id: 'two' },
+        { value: 'three', label: 'Alert three', id: 'three' },
       ],
-      name: 'alert',
+      name: 'first alert',
       required: false,
       error: false,
     } %}
@@ -62,11 +88,11 @@
       description:
         'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
       fields: [
-        { value: 'four', label: 'Alert four' },
-        { value: 'five', label: 'Alert five' },
-        { value: 'six', label: 'Alert six' },
+        { value: 'four', label: 'Alert four', id: 'four' },
+        { value: 'five', label: 'Alert five', id: 'five' },
+        { value: 'six', label: 'Alert six', id: 'six' },
       ],
-      name: 'alert',
+      name: 'second alert',
       required: true,
       error: true,
     } %}

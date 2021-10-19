@@ -1,5 +1,17 @@
 {% extends '../../layout/twoColumn/twoColumn.html.twig' %}
 {% block top %}
+  {% set breadcrumbItems = [
+      {
+        'label': 'Home',
+        'url': '/'
+      },
+      {
+        'label': 'Search',
+        'url': null
+      }
+    ]
+  %}
+  {% include '../../components/general/Breadcrumb/breadcrumb.html.twig' with { items: breadcrumbItems, expanded: false, withLogin: false } %}
   {% include '../../components/search/SearchBarHeader/searchBarHeader.html.twig' with {
     headerText: 'Search',
     searchLink: '/search',
