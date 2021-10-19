@@ -19,3 +19,44 @@
     {% endfor %}
   </div>
 </fieldset>
+
+{# This is used to demonstrate keyboard controls when there are multiple collapsible checkboxes. #}
+{% if multiple %}
+  <fieldset class="accordion" aria-describedby="{{ description_id }}2">
+    <legend class="accordion__legend">
+      <button class="accordion__button" aria-expanded="false" aria-controls="{{ fields_id }}2">
+        <span class="accordion__title-text">{{ title|upper }}</span>
+      </button>
+    </legend>
+    <p class="accordion__description" id="{{ description_id }}2"></p>
+    <div class="accordion__fields accordion__fields--{{ spaceless_title }}" id="{{ fields_id }}2">
+      {% for field in fields %}
+        {% if field.results > 0 %}
+          <div class="accordion__field">
+            <input class="accordion__input" type="checkbox" id="{{ field.id }}1">
+            <label class="accordion__label" for="{{ field.id }}2">{{ field.label }} ({{ field.results }})</label>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </fieldset>
+
+  <fieldset class="accordion" aria-describedby="{{ description_id }}1">
+    <legend class="accordion__legend">
+      <button class="accordion__button accordion__button--expanded" aria-expanded="false" aria-controls="{{ fields_id }}1">
+        <span class="accordion__title-text">{{ title|upper }}</span>
+      </button>
+    </legend>
+    <p class="accordion__description" id="{{ description_id }}1"></p>
+    <div class="accordion__fields accordion__fields--{{ spaceless_title }} accordion__fields--active" id="{{ fields_id }}1">
+      {% for field in fields %}
+        {% if field.results > 0 %}
+          <div class="accordion__field">
+            <input class="accordion__input" type="checkbox" id="{{ field.id }}1">
+            <label class="accordion__label" for="{{ field.id }}1">{{ field.label }} ({{ field.results }})</label>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </fieldset>
+{% endif %}

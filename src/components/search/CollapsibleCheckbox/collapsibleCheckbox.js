@@ -41,9 +41,60 @@ export default function () {
 
         const fields = accordion.querySelector('.accordion__fields');
         fields.classList.toggle('accordion__fields--active');
-        console.log('I run');
       }
       button.addEventListener('click', toggleAccordion);
+
+      //Navigate between accordion blocks using up, down, home and end buttons
+      function moveFocus(e) {
+        const accordions = document.querySelectorAll('.accordion');
+        if (!e.target.classList.contains('accordion__button')) return;
+
+        //40 === down, move to the next accordion
+        if (e.keyCode === 40) {
+          e.preventDefault();
+          const nextElement = e.currentTarget.nextElementSibling;
+          if (nextElement && nextElement.classList.contains('accordion')) {
+            nextElement.querySelector('.accordion__button').focus();
+          } else {
+            accordions[0].querySelector('.accordion__button').focus();
+          }
+          return;
+        }
+
+        //38 === up, move to the previous accordion
+        if (e.keyCode === 38) {
+          e.preventDefault();
+          const previousElement = e.currentTarget.previousElementSibling;
+          if (
+            previousElement &&
+            previousElement.classList.contains('accordion')
+          ) {
+            previousElement.querySelector('.accordion__button').focus();
+          } else {
+            accordions[accordions.length - 1]
+              .querySelector('.accordion__button')
+              .focus();
+          }
+          return;
+        }
+
+        // 36 === home, move to the first accordion
+        if (e.keyCode === 36) {
+          e.preventDefault();
+          accordions[0].querySelector('.accordion__button').focus();
+          return;
+        }
+
+        // 35 === end, move to the last accordion
+        if (e.keyCode === 35) {
+          e.preventDefault();
+          accordions[accordions.length - 1]
+            .querySelector('.accordion__button')
+            .focus();
+          return;
+        }
+      }
+      accordion.addEventListener('keydown', moveFocus);
     });
   });
 }

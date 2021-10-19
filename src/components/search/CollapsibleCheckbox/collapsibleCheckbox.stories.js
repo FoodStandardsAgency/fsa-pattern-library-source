@@ -21,6 +21,7 @@ Open.args = {
     { label: 'Consumer Guidance', id: 'consumer-guidance', results: 3 },
   ],
   open: true,
+  multiple: false,
 };
 
 export const Closed = Template.bind({});
@@ -28,3 +29,9 @@ Closed.args = {
   ...Open.args,
   open: false,
 };
+
+export const Multiple = Template.bind({});
+Multiple.args = {
+  ...Open.args,
+  multiple: true,
+}
