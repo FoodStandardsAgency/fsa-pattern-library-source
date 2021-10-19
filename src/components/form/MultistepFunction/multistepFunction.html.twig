@@ -1,12 +1,12 @@
 <div class="multistep-function">
   <div class="multistep-function__container">
-  <a class="multistep-function__previous" href={{ link }}>Previous</a>
-  <div class="multistep-function__next">
-  {% include '../../general/Button/button.html.twig'  with { 
+    <a class="multistep-function__previous" href={{ link }}>Previous</a>
+    <div class="multistep-function__next">
+      {% include '../../general/Button/button.html.twig'  with { 
     type: 'primary',
     label: label,
-    url: '#',
+    url: buttonLink,
     is_anchor: true } %}
+    </div>
   </div>
-</div>
 </div>

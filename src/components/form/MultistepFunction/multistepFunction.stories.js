@@ -20,5 +20,5 @@ export const MultistepFunction = Template.bind({});
 MultistepFunction.args = {
   link: '#',
   label: 'Next',
-  
+  buttonLink: '#'
 };
