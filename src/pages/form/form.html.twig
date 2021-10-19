@@ -1,7 +1,7 @@
 {% extends '../../layout/formLayout/formLayout.html.twig' %}
 {% block content %}
-<form>
-  {% include '../../components/form/TitleAndText/titleAndText.html.twig' with {
+  <form>
+    {% include '../../components/form/TitleAndText/titleAndText.html.twig' with {
       title: 'Form title',
       description:
         '<p>Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".</p>',
@@ -83,7 +83,7 @@
       required: false,
       error: false,
     } %}
-  {% include '../../components/form/Checkbox/checkbox.html.twig' with {
+    {% include '../../components/form/Checkbox/checkbox.html.twig' with {
       title: 'Food alerts',
       description:
         'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
@@ -97,7 +97,7 @@
       error: true,
     } %}
 
-  {% include '../../components/form/InputField/inputField.html.twig' with {
+    {% include '../../components/form/InputField/inputField.html.twig' with {
       label: 'Email or username',
       caption: 'Enter your email address or username.',
       required: false,
@@ -112,6 +112,5 @@
       error: true,
       errorMessage: 'Unrecognized username or password'
     } %}
-
-</form>
+  </form>
 {% endblock %}

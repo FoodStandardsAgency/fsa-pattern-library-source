@@ -1,7 +1,8 @@
 <div class="input-field {{ error ? "input-field--error" : "" }}">
   <div class="input-field__container">
-    <label class="input-field__label" for="email-field">{{ label }} <span
-        class="input-field__required">{{ required ? "REQUIRED" : "" }}</span></label>
+    <label class="input-field__label" for="email-field">{{ label }}
+       <span class="input-field__required">{{ required}}</span>
+    </label>
     {% if error %}
     <div class="input-field__error-message">{{ errorMessage }}</div>
     {% endif %}

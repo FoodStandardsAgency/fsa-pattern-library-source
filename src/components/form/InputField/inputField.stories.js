@@ -22,7 +22,7 @@ export const Normal = Template.bind({});
 Normal.args = {
   label: 'Email or username',
   caption: 'Enter your email address or username.',
-  required: false,
+  required: "REQUIRED",
   error: false,
   errorMessage: 'Unrecognized username or password'
 };
@@ -31,7 +31,7 @@ export const Error = Template.bind({});
 Error.args = {
   label: 'Email or username',
   caption: 'Enter your email address or username.',
-  required: true,
+  required: "REQUIRED",
   error: true,
   errorMessage: 'This information is required'
 };
