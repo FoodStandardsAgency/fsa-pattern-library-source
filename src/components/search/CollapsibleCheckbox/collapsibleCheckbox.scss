@@ -4,18 +4,35 @@
   border: none;
   border-top: 4px solid var(--fsa_border);
   padding: 0.5rem 0 0;
-  margin: 0;
+  margin: 2rem 0 0;
 
   &__legend {
     @include h6;
     margin: 0;
     padding: 0;
     float: left;
+    width: 100%;
+  }
+
+  &__button {
+    border: none;
+    background: none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+
+    &:focus {
+      /* missing focus style */
+    }
   }
 
   &__fields {
     clear: both;
     padding-top: 1rem;
+    display: none;
   }
 
   &__field {
