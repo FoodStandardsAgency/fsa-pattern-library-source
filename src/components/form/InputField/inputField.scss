@@ -1,0 +1,83 @@
+@import 'src/lib.scss';
+
+.input-field {
+  margin-top: 2rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    margin-left: -1.23rem;
+    
+    
+  }
+
+  &__label {
+    @include intro;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__required {
+    @include small;
+    font-weight: normal;
+    margin-left: 1rem;
+  }
+
+  &__input {
+    height: 46px;
+    background-color: var(--fsa_online-grey);
+    border: solid 1px var(--fsa-primary_dark-grey);
+    margin-top: 0.5rem;
+
+    &:focus {
+      border: 2px solid var(--fsa-primary_black);
+      box-shadow: inset 0 0 0 2px;
+      outline: 0.25rem solid var(--fsa-tertiary_light-yellow);
+      outline-offset: 0;
+    }
+  }
+
+  &__caption {
+    @include small;
+    color: var(--fsa-primary_dark-grey);
+    margin-top: 0.5rem;
+
+  }
+
+  &--error {
+    .input-field__label {
+      color: var(--fsa-secondary_mid-red);
+      text-transform: none;
+    }
+
+    .input-field__required {
+      color: var(--fsa-primary_black);
+    }
+
+    .input-field__container {
+      border-left: 0.25rem solid var(--fsa-secondary_mid-red);
+      padding-left: 0.5rem;
+      @media screen and (min-width: $fsa-xs) {
+        padding-left: 1rem;
+      }  
+
+      @media screen and (min-width: $fsa-lg) {
+        border-left: 0.23rem solid var(--fsa-secondary_mid-red);
+      }
+
+      margin: 1.56rem 0 0 -0.75rem;
+
+      @media screen and (min-width: $fsa-md) {
+        margin-left: -1.23rem;
+      }
+
+    }
+  }
+
+  &__error-message {
+    margin-top: 0.5rem;
+  }
+}

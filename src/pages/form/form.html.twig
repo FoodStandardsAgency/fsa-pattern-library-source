@@ -1,13 +1,13 @@
 {% extends '../../layout/formLayout/formLayout.html.twig' %}
 {% block content %}
-  <form>
-    {% include '../../components/form/TitleAndText/titleAndText.html.twig' with {
+<form>
+  {% include '../../components/form/TitleAndText/titleAndText.html.twig' with {
       title: 'Form title',
       description:
         '<p>Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".</p>',
       tag: 'h2',
     } %}
-    {% include '../../components/forms/ErrorBox/errorBox.html.twig' with {
+  {% include '../../components/forms/ErrorBox/errorBox.html.twig' with {
       title: 'There is a problem with your submission',
       errors: 'required',
       errorList: {
@@ -44,7 +44,7 @@
         },
       }
     }%}
-    {% include '../../components/form/Checkbox/checkbox.html.twig' with {
+  {% include '../../components/form/Checkbox/checkbox.html.twig' with {
       title: 'Food alerts',
       description:
         'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
@@ -57,7 +57,7 @@
       required: false,
       error: false,
     } %}
-    {% include '../../components/form/Checkbox/checkbox.html.twig' with {
+  {% include '../../components/form/Checkbox/checkbox.html.twig' with {
       title: 'Food alerts',
       description:
         'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
@@ -70,5 +70,22 @@
       required: true,
       error: true,
     } %}
-  </form>
+
+  {% include '../../components/form/InputField/inputField.html.twig' with {
+      label: 'Email or username',
+      caption: 'Enter yout email address or username.',
+      required: false,
+      error: false,
+      errorMessage: 'Unrecognized username or password'
+    } %}
+
+  {% include '../../components/form/InputField/inputField.html.twig' with {
+      label: 'Email or username',
+      caption: 'Enter yout email address or username.',
+      required: true,
+      error: true,
+      errorMessage: 'Unrecognized username or password'
+    } %}
+
+</form>
 {% endblock %}

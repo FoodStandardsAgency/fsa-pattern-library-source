@@ -16,6 +16,7 @@ import './components/form/Checkbox/checkbox';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
 import './components/landing/LandingLinks/LandingLinks';
+import './components/form/InputField/inputField';
 
 import searchBar from "./components/search/SearchBar/searchBar";
 
