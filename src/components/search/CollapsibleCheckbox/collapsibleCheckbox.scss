@@ -44,7 +44,7 @@
       transform: rotate(180deg);
     }
 
-    &--open {
+    &--expanded{
       &::after {
         content: url('./arrow.svg');
       }
