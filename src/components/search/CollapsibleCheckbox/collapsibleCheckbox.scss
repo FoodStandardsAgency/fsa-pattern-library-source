@@ -27,6 +27,9 @@
     cursor: pointer;
     width: 100%;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &:focus {
       outline: none;
@@ -35,6 +38,21 @@
         border-bottom: 2px solid var(--fsa-primary_black);
       }
     }
+
+    &::after {
+      content: url('./arrow.svg');
+      transform: rotate(180deg);
+    }
+
+    &--open {
+      &::after {
+        content: url('./arrow.svg');
+      }
+    }
+  }
+
+  &__title-text {
+    border-bottom: 2px solid transparent;
   }
 
   &__fields {
