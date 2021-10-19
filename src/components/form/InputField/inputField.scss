@@ -13,7 +13,7 @@
   }
 
   &__label {
-    @include intro;
+    @include h6;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
@@ -27,10 +27,14 @@
   }
 
   &__input {
-    height: 46px;
     background-color: var(--fsa_online-grey);
     border: solid 1px var(--fsa-primary_dark-grey);
     margin-top: 0.5rem;
+    padding: 0.85rem 1rem;
+    @media screen and (min-width: $fsa-xs) {
+      padding: 0.75rem 1rem;
+    }  
+    
 
     &:focus {
       border: 2px solid var(--fsa-primary_black);
@@ -50,7 +54,6 @@
   &--error {
     .input-field__label {
       color: var(--fsa-secondary_mid-red);
-      text-transform: none;
     }
 
     .input-field__required {
