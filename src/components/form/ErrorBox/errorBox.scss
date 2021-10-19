@@ -1,9 +1,9 @@
 @import "src/lib.scss";
 
 .error-box {
-  margin: 2rem -0.5rem 0;
+  margin: 2rem -0.75rem 0;
 
-  @media screen and (min-width: $fsa-xs) {
+  @media screen and (min-width: $fsa-md) {
     margin: 2rem -1.25rem 0;
   }
 
@@ -13,9 +13,9 @@
     flex-direction: column;
     align-items: flex-start;
     border: 0.25rem solid var(--fsa-secondary-error-red);
-    padding: 0 0.5rem 1rem;
+    padding: 0 0.5rem 2rem;
 
-    @media screen and (min-width: $fsa-xs) {
+    @media screen and (min-width: $fsa-md) {
       padding: 0 1rem 2rem;
     }
   }

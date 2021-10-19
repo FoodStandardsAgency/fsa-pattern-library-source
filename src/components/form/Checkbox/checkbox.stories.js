@@ -17,11 +17,11 @@ Normal.args = {
   description:
     'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
   fields: [
-    { value: 'one', label: 'Alert one' },
-    { value: 'two', label: 'Alert two' },
-    { value: 'three', label: 'Alert three' },
+    { value: 'one', label: 'Alert one', id: 'one' },
+    { value: 'two', label: 'Alert two', id: 'two' },
+    { value: 'three', label: 'Alert three', id: 'three' },
   ],
-  name: 'alert',
+  name: 'first alert',
   required: false,
   error: false,
 };
@@ -32,11 +32,11 @@ Error.args = {
   description:
     'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
   fields: [
-    { value: 'one', label: 'Alert one' },
-    { value: 'two', label: 'Alert two' },
-    { value: 'three', label: 'Alert three' },
+    { value: 'one', label: 'Alert one', id: 'one' },
+    { value: 'two', label: 'Alert two', id: 'two' },
+    { value: 'three', label: 'Alert three', id: 'three' },
   ],
-  name: 'alert',
+  name: 'second alert',
   required: true,
   error: true,
 };
