@@ -31,7 +31,7 @@ export default function () {
       //Toggle accordion
       const button = accordion.querySelector('.accordion__button');
       function toggleAccordion(e) {
-        e.target.classList.toggle('.accordion__button--expanded');
+        e.target.classList.toggle('accordion__button--expanded');
         const isExpanded = e.target.getAttribute('aria-expanded');
         if (isExpanded === 'true') {
           e.target.setAttribute('aria-expanded', 'false');
@@ -40,7 +40,7 @@ export default function () {
         }
 
         const fields = accordion.querySelector('.accordion__fields');
-        fields.classList.toggle('.accordion__fields--active');
+        fields.classList.toggle('accordion__fields--active');
         console.log('I run');
       }
       button.addEventListener('click', toggleAccordion);
