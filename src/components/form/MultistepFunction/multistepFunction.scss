@@ -1,5 +1,30 @@
 @import "src/lib.scss";
 
 .multistep-function {
-   border: 2px solid red;
+
+   &__container {
+      @include grid-container();
+   }
+   
+   &__previous {
+      @include link;
+      position: relative;
+      margin-left: 0.5rem;
+      
+
+     &:before {
+        position: absolute;
+        content: "";
+        width: 26px;
+        height: 17px;
+        background-image: url('./previous-arrow.svg');
+        top: 0.2rem;
+        left: -2rem;
+        
+     }
+   }
+
+   &__next {
+      float: right;
+   }
 }

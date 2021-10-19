@@ -1,10 +1,12 @@
 <div class="multistep-function">
-  <a href={{ link }}>Previous</a>
-  <div>
+  <div class="multistep-function__container">
+  <a class="multistep-function__previous" href={{ link }}>Previous</a>
+  <div class="multistep-function__next">
   {% include '../../general/Button/button.html.twig'  with { 
     type: 'primary',
     label: label,
-    url: 'subscription.loggedOutButtonLink',
+    url: '#',
     is_anchor: true } %}
   </div>
+</div>
 </div>
