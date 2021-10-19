@@ -8,11 +8,13 @@
   <p class="accordion__description" id={{ description_id }}></p>
   <div class="accordion__fields accordion__fields--{{ spaceless_title }}" id={{ fields_id }}>
     {% for field in fields %}
-      <div class="accordion__field">
-        <input class="accordion__input" type="checkbox" id="{{ field.id }}">
-        <label class="accordion__label" for="{{ field.id }}">{{ field.label }}
-          ({{ field.results }})</label>
-      </div>
+      {% if field.results > 0 %}
+        <div class="accordion__field">
+          <input class="accordion__input" type="checkbox" id="{{ field.id }}">
+          <label class="accordion__label" for="{{ field.id }}">{{ field.label }}
+            ({{ field.results }})</label>
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
 </fieldset>
