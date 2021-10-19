@@ -100,7 +100,7 @@
     {% include '../../components/form/InputField/inputField.html.twig' with {
       label: 'Email or username',
       caption: 'Enter your email address or username.',
-      required: false,
+      required: "",
       error: false,
       errorMessage: 'Unrecognized username or password'
     } %}
@@ -108,7 +108,7 @@
   {% include '../../components/form/InputField/inputField.html.twig' with {
       label: 'Email or username',
       caption: 'Enter your email address or username.',
-      required: true,
+      required: "REQUIRED",
       error: true,
       errorMessage: 'Unrecognized username or password'
     } %}
