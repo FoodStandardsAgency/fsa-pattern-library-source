@@ -12,7 +12,9 @@ Default.args = {
   description: '1 selected',
   fields: [
     { label: 'Alergy alert', id: 'alergy-alert', results: 20 },
-    { label: 'News', id: 'news' },
-    { label: 'Consultation', id: 'consultation' },
+    { label: 'News', id: 'news', results: 10 },
+    { label: 'Consultation', id: 'consultation', results: 15 },
+    { label: 'Business Guidance', id: 'business-guidance', results: 23 },
+    { label: 'Consumer Guidance', id: 'consumer-guidance', results: 3 },
   ],
 };
