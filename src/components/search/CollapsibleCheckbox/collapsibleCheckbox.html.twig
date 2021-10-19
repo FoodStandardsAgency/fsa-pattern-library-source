@@ -20,8 +20,8 @@
   </div>
 </fieldset>
 
-{# This is used to demonstrate keyboard controls when there are multiple collapsible checkboxes. Please never set multiple to true in production. #}
-{% if multiple %}
+{# This is used to demonstrate keyboard controls when there are multiple collapsible checkboxes in storybook. Please never set multiple to true in production. #}
+{% if multiple == true %}
   <fieldset class="accordion" aria-describedby="{{ description_id }}2">
     <legend class="accordion__legend">
       <button class="accordion__button" aria-expanded="false" aria-controls="{{ fields_id }}2">

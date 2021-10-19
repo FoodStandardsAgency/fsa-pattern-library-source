@@ -6,6 +6,9 @@ collapsibleCheckboxJs();
 
 export default {
   title: 'Components/Search/Collapsible Checkbox',
+  argTypes: {
+    multiple: { table: { disable: true } },
+  },
 };
 
 const Template = (args) => collapsibleCheckbox(args);
@@ -21,7 +24,6 @@ Open.args = {
     { label: 'Consumer Guidance', id: 'consumer-guidance', results: 3 },
   ],
   open: true,
-  multiple: false,
 };
 
 export const Closed = Template.bind({});
@@ -34,4 +36,9 @@ export const Multiple = Template.bind({});
 Multiple.args = {
   ...Open.args,
   multiple: true,
-}
+};
+Multiple.parameters = {
+    controls: {
+      disable: true,
+    },
+};
