@@ -1,14 +1,17 @@
-{% set spaceless_title = {{ title|replace({" ": ""}) }} %}
+{% set spaceless_title = title|replace({" ": ""}) %}
 {% set description_id = "accordion__description--" ~ spaceless_title %}
 {% set fields_id = "accordion__fields--" ~ spaceless_title %}
 <fieldset class="accordion" aria-describedby={{ description_id }}>
-  <legend class="accordion__legend"><button class="accordion__button" aria-expanded="false" aria-controls={{ fields_id }}>{{ title|upper }}</button></legend>
+  <legend class="accordion__legend">
+    <button class="accordion__button" data-accordion={{ spaceless_title }} aria-expanded="false" aria-controls={{ fields_id }}>{{ title|upper }}</button>
+  </legend>
   <p class="accordion__description" id={{ description_id }}></p>
-  <div class="accordion__fields" id={{ fields_id }}>
+  <div class="accordion__fields accordion__fields--{{ spaceless_title }}" id={{ fields_id }}>
     {% for field in fields %}
       <div class="accordion__field">
         <input class="accordion__input" type="checkbox" id="{{ field.id }}">
-        <label class="accordion__label" for="{{ field.id }}">{{ field.label }} ({{ field.results }})</label>
+        <label class="accordion__label" for="{{ field.id }}">{{ field.label }}
+          ({{ field.results }})</label>
       </div>
     {% endfor %}
   </div>
