@@ -3,6 +3,7 @@ import cssVars from 'css-vars-ponyfill';
 
 import './components/general/Breadcrumb/breadcrumb';
 import './components/general/Button/Button';
+import './components/general/Tabs/Tabs';
 import './components/search/FiltersSelected/filtersSelected';
 import './components/search/ListingItem/ListingItem';
 import './components/search/Pagination/pagination';
@@ -16,6 +17,7 @@ import './components/form/TitleAndText/titleAndText';
 import './components/form/Checkbox/checkbox';
 import './components/form/Radio/radio';
 import './components/landing/LandingLinks/LandingLinks';
+import './components/form/InputField/inputField';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
 import './layout/fullWidth/fullWidth';

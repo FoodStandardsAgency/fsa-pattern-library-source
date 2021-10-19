@@ -1,7 +1,7 @@
-{% extends "../../layout/fullWidth/fullWidth.html.twig" %}
-{% block content %}
-{# Include templates for form components here #}
-{% set breadcrumbItems = [
+{% extends "../../layout/formLayout/formLayout.html.twig" %}
+{% block top %}
+  {# Include templates for form components here #}
+  {% set breadcrumbItems = [
     {
       'label': 'Home',
       'url': '/'
@@ -14,16 +14,45 @@
       'label': 'Subscribe to news & alerts',
       'url': null
     },
-  ]
-%}
-{% include '../../components/general/Breadcrumb/breadcrumb.html.twig' with { 
-    items: breadcrumbItems, 
-    expanded: false, 
+  ] %}
+  {% include '../../components/general/Breadcrumb/breadcrumb.html.twig' with {
+    items: breadcrumbItems,
+    expanded: false,
     subscription: {
       isLoggedIn: false,
       loggedOutLabel: 'Already have a subscription?',
       loggedOutButtonLabel: 'Sign in',
       loggedOutButtonLink: '#',
-    } 
+    }
   } %}
 {% endblock %}
+{% block tabs %}
+  {% set tabs = [
+    {
+      isActive: false,
+      name: 'Food and allergy',
+      link: '#',
+    },
+    {
+      isActive: false,
+      name: 'News and consultations',
+      link: '#',
+    },
+    {
+      isActive: true,
+      name: 'Delivery options',
+      link: '#',
+    },
+    {
+      isActive: false,
+      name: 'Account settings',
+      link: '#',
+    },
+  ] %}
+  {% include '../../components/general/Tabs/tabs.html.twig' with {
+    type: 'Subscription details',
+    tabs: tabs,
+  } %}
+{% endblock %}
+{#{% block content %}#}
+{#{% endblock %}#}

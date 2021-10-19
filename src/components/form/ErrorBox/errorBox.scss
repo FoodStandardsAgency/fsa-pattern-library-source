@@ -21,7 +21,6 @@
   }
 
   &__title {
-    @include h2;
     color: var(--fsa-primary_black);
     margin: 2rem 0 1rem;
   }
@@ -33,7 +32,6 @@
   }
 
   &__field {
-    @include link;
     @include h5;
     color: var(--fsa-secondary-error-red);
     text-decoration: underline;
