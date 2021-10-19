@@ -353,24 +353,6 @@ $mobileGutter: 1rem;
       } @else if $input-type == radio {
         @include radio-input;
       }
-
-      appearance: none;
-      width: 1.5rem;
-      height: 1.5rem;
-      border: 1px solid var(--fsa-primary_black);
-      position: relative;
-      margin: 0;
-
-      &::-ms-expand {
-        display: none;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
-          0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
-        outline: none;
-        border: none;
-      }
     }
 
     &__label {
@@ -395,6 +377,23 @@ $mobileGutter: 1rem;
 
 @mixin checkbox-input {
   background-color: var(--fsa_tint);
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--fsa-primary_black);
+  position: relative;
+  margin: 0;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+    outline: none;
+    border: none;
+  }
 
   &:checked {
     background-color: var(--fsa-primary_dark-green);
@@ -410,6 +409,23 @@ $mobileGutter: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--fsa-primary_black);
+  position: relative;
+  margin: 0;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+    outline: none;
+    border: none;
+  }
 
   &:checked {
     background-color: var(--fsa-primary_dark-green);

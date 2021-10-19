@@ -11,7 +11,7 @@ Default.args = {
   title: 'topics',
   description: '1 selected',
   fields: [
-    { label: 'Alergy alert', id: 'alergy-alert' },
+    { label: 'Alergy alert', id: 'alergy-alert', results: 20 },
     { label: 'News', id: 'news' },
     { label: 'Consultation', id: 'consultation' },
   ],
