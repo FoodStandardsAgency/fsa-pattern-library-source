@@ -96,12 +96,27 @@
       required: true,
       error: true,
     } %}
-    
+
+    {% include '../../components/form/InputField/inputField.html.twig' with {
+      label: 'Email or username',
+      caption: 'Enter your email address or username.',
+      required: "",
+      error: false,
+      errorMessage: 'Unrecognized username or password'
+    } %}
+
+  {% include '../../components/form/InputField/inputField.html.twig' with {
+      label: 'Email or username',
+      caption: 'Enter your email address or username.',
+      required: "REQUIRED",
+      error: true,
+      errorMessage: 'Unrecognized username or password'
+    } %}
+
     {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
       prevLink: '#',
       label: 'Next',
       nextLink: '#'
     } %}
-
   </form>
 {% endblock %}

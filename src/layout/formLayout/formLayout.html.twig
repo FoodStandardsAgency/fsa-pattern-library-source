@@ -1,6 +1,18 @@
 <div class="form-layout">
   <div class="form-layout__container">
     <div class="form-layout__row">
+      <div class="form-layout__top">
+        {% block top %}
+        {% endblock %}
+      </div>
+    </div>
+    <div class="form-layout__row">
+      <div class="form-layout__tabs">
+        {% block tabs %}
+        {% endblock %}
+      </div>
+    </div>
+    <div class="form-layout__row">
       <div class="form-layout__wrapper">
         {% block content %}
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum massa vel ex convallis aliquet. In a lacinia tortor. Etiam sed hendrerit nibh. In quis rutrum neque. Aenean sit amet posuere ipsum. Nulla cursus posuere magna. Phasellus ornare vulputate velit, sed aliquam diam sodales non. Praesent quis nunc tortor. Suspendisse lacinia ante eget aliquet laoreet. Proin sit amet est orci. Nunc vehicula tortor est, ut tempor nisl aliquam id.</p>
