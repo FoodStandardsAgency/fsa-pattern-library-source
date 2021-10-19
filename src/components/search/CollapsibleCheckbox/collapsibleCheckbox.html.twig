@@ -1,13 +1,13 @@
 {% set spaceless_title = {{ title|replace({" ": ""}) }} %}
 {% set description_id = "accordion__description--" ~ spaceless_title %}
 <fieldset class="accordion">
-  <legend class="accordion__title">{{ title }}</legend>
+  <legend class="accordion__legend">{{ title|upper }}<span class="accordion__arrow"></span></legend>
   <p class="accordion__description" id={{description_id}}></p>
   <div class="accordion__fields" aria-describedby={{description_id}}>
     {% for field in fields %}
       <div class="accordion__field">
         <input class="accordion__input" type="checkbox" id="{{ field.id }}">
-        <label class="accordion__label" for="{{ field.id }}">{{ field.label }}</label>
+        <label class="accordion__label" for="{{ field.id }}">{{ field.label }} ({{ field.results }})</label>
       </div>
     {% endfor %}
   </div>

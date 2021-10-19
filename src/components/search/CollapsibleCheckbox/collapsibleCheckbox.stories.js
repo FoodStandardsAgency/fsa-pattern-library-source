@@ -1,4 +1,5 @@
 import collapsibleCheckbox from './collapsibleCheckbox.html.twig';
+import './collapsibleCheckbox.scss';
 
 export default {
   title: 'Components/Search/Collapsible Checkbox',
