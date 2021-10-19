@@ -1,0 +1,18 @@
+{% set spaceless_name = name|replace({" ": ""}) %}
+{% set id = "radio__description--" ~ spaceless_name %}
+<fieldset class="radio {{ error ? " radio--error" : " " }}" aria-describedby={{ description is defined ? id : "" }}>
+  <legend class="radio__legend">
+    {{ title }}<span class="radio__required">{{ required ? "REQUIRED" : "" }}</span>
+  </legend>
+  {% if description is defined %}
+    <p class="radio__description" id={{ id }}>{{ description }}</p>
+  {% endif %}
+  <div class="radio__fields">
+    {% for field in fields %}
+      <div class="radio__field">
+        <input class="radio__input" type="radio" name="{{ name }}" value="{{ field.value }}" id="{{ field.id }}" {{ required ? "required" : "" }} {{ default == field.value ? "checked" : "" }}>
+        <label class="radio__label" for="{{ field.id }}">{{ field.label }}</label>
+      </div>
+    {% endfor %}
+  </div>
+</fieldset>
