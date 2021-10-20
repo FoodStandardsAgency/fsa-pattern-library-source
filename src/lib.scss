@@ -331,6 +331,7 @@ $mobileGutter: 1rem;
       @include small;
       margin-left: 1rem;
       color: var(--fsa-primary_black);
+      font-weight: inherit;
     }
 
     &__description {
