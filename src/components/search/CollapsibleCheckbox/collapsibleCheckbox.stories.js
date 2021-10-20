@@ -15,7 +15,7 @@ const Template = (args) => collapsibleCheckbox(args);
 
 export const Open = Template.bind({});
 Open.args = {
-  title: 'topics',
+  title: 'Topics',
   fields: [
     { label: 'Alergy alert', id: 'alergy-alert', results: 20 },
     { label: 'News', id: 'news', results: 10 },
