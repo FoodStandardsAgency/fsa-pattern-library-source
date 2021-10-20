@@ -18,20 +18,20 @@ const Template = (args) => {
 }
 
 
-export const MessageBoxGreen = Template.bind({});
-MessageBoxGreen.args = {
+export const MessageBoxStatus = Template.bind({});
+MessageBoxStatus.args = {
   text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
   type: 'status'
 };
 
-export const MessageBoxRed = Template.bind({});
-MessageBoxRed.args = {
+export const MessageBoxError = Template.bind({});
+MessageBoxError.args = {
   text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
   type: 'error'
 };
 
-export const MessageBoxYellow = Template.bind({});
-MessageBoxYellow.args = {
+export const MessageBoxWarning = Template.bind({});
+MessageBoxWarning.args = {
   text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
   type: 'warning'
 };
