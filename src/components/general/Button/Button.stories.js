@@ -67,5 +67,4 @@ export const InputButton = Template.bind({});
 InputButton.args = {
   ...PrimaryButton.args,
   is_input: true
-  
 };
