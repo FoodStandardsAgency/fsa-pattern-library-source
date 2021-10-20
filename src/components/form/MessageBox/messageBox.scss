@@ -1,0 +1,28 @@
+@import 'src/lib.scss';
+
+.message-box {
+  margin-top: 1rem;
+  &__container {
+    padding: 0 24px 0 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px 0 rgba(41, 41, 41, 0.15);
+    background-color: var(--fsa-primary_white);
+  
+    &--status {
+      border-left: 0.25rem solid var(--fsa-primary_mid-green);
+    }
+
+    &--error {
+      border-left: 0.25rem solid var( --fsa-secondary_mid-red);
+    }
+
+    &--warning {
+      border-left: 0.25rem solid var(--fsa-tertiary_light-yellow);
+    }
+  
+  }
+
+  &__text {
+    padding: 1rem;
+  }
+}
