@@ -4,25 +4,26 @@
    margin-top: 2rem;
 
    &__container {
-      @include grid-container();
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
    }
-   
+
    &__previous {
       @include link;
-      position: relative;
+      padding: 0.5rem 0;
+      background-image: url('./previous-arrow.svg');
+      background-position: left 0 top 50%;
+      background-size: 1.6rem 1rem;
+      background-repeat: no-repeat;
+      padding-left: 2rem;
 
-     &:before {
-        position: absolute;
-        content: "";
-        width: 1.6rem;
-        height: 0.95rem;
-        background-image: url('./previous-arrow.svg');
-        top: 0.2rem;
-        left: -2.3rem;
-     }
-   }
 
-   &__next {
-      float: right;
+      @media screen and (min-width: $fsa-xs) {
+         margin-left: 0;
+      }
    }
+}
+.button {
+   margin-left: auto;
 }

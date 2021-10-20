@@ -5,7 +5,6 @@ import './multistepFunction.scss';
 export default {
   title: 'Components/Form/Multistep Function',
   parameters: {
-    layout: "centered",
     controls: {
       disabled: false,
     }
@@ -20,6 +19,7 @@ export const MultistepFunction = Template.bind({});
 
 MultistepFunction.args = {
   prevLink: '#',
-  label: 'Next',
-  nextLink: '#'
+  prevLabel: 'Previous',
+  prevButton: true,
+  buttonLabel: 'Next'
 };
