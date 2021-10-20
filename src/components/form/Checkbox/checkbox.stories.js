@@ -22,7 +22,7 @@ Normal.args = {
     { value: 'three', label: 'Alert three', id: 'three' },
   ],
   name: 'first alert',
-  required: false,
+  required: "",
   error: false,
 };
 
@@ -37,6 +37,6 @@ Error.args = {
     { value: 'three', label: 'Alert three', id: 'three' },
   ],
   name: 'second alert',
-  required: true,
+  required: "required",
   error: true,
 };

@@ -53,7 +53,7 @@
         { value: 'weekly', label: 'Send updates weekly', id: 'weekly' },
       ],
       name: 'frequency',
-      required: false,
+      required: "",
       error: false,
       default: 'immediately',
     } %}
@@ -66,7 +66,7 @@
         { value: 'short', label: 'Send short emails', id: 'short' },
       ],
       name: 'length',
-      required: true,
+      required: "required",
       error: true,
       default: 'long',
     } %}
@@ -80,7 +80,7 @@
         { value: 'three', label: 'Alert three', id: 'three' },
       ],
       name: 'first alert',
-      required: false,
+      required: "",
       error: false,
     } %}
     {% include '../../components/form/Checkbox/checkbox.html.twig' with {
@@ -93,7 +93,7 @@
         { value: 'six', label: 'Alert six', id: 'six' },
       ],
       name: 'second alert',
-      required: true,
+      required: "required",
       error: true,
     } %}
 
