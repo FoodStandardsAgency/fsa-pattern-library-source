@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .form-layout {
   max-width: 100%;
@@ -9,6 +9,24 @@
   &__row {
     @include grid-row;
     display: flex;
+  }
+
+  &__top {
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(12);
+    }
+  }
+
+  &__tabs {
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(12);
+    }
+    @media screen and (min-width: $fsa-lg) {
+      @include grid-cols(8);
+      @include cols-push(2);
+    }
   }
 
   &__wrapper {
