@@ -31,12 +31,13 @@ export default function () {
       //Toggle accordion
       const button = accordion.querySelector('.accordion__button');
       function toggleAccordion(e) {
-        e.target.classList.toggle('accordion__button--expanded');
-        const isExpanded = e.target.getAttribute('aria-expanded');
+        const button = e.currentTarget;
+        button.classList.toggle('accordion__button--expanded');
+        const isExpanded = button.getAttribute('aria-expanded');
         if (isExpanded === 'true') {
-          e.target.setAttribute('aria-expanded', 'false');
+          button.setAttribute('aria-expanded', 'false');
         } else {
-          e.target.setAttribute('aria-expanded', 'true');
+          button.setAttribute('aria-expanded', 'true');
         }
 
         const fields = accordion.querySelector('.accordion__fields');

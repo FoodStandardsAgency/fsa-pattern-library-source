@@ -3,7 +3,7 @@
 {% set fields_id = "accordion__fields--" ~ spaceless_title %}
 <fieldset class="accordion" aria-describedby={{ description_id }}>
   <legend class="accordion__legend">
-    <button class="accordion__button {{ open ? "accordion__button--expanded" : ""}}" aria-expanded="false" aria-controls={{ fields_id }}>
+    <button class="accordion__button {{ open ? "accordion__button--expanded" : ""}}" aria-expanded={{ open ? "true" : "false"}} aria-controls={{ fields_id }}>
       <span class="accordion__title-text">{{ title }}</span>
     </button>
   </legend>
@@ -24,7 +24,7 @@
 {% if multiple == true %}
   <fieldset class="accordion" aria-describedby="{{ description_id }}2">
     <legend class="accordion__legend">
-      <button class="accordion__button" aria-expanded="false" aria-controls="{{ fields_id }}2">
+      <button class="accordion__button" aria-expanded={{ open ? "true" : "false"}} aria-controls="{{ fields_id }}2">
         <span class="accordion__title-text">{{ title }}</span>
       </button>
     </legend>
@@ -43,7 +43,7 @@
 
   <fieldset class="accordion" aria-describedby="{{ description_id }}1">
     <legend class="accordion__legend">
-      <button class="accordion__button accordion__button--expanded" aria-expanded="false" aria-controls="{{ fields_id }}1">
+      <button class="accordion__button accordion__button--expanded" aria-expanded={{ open ? "true" : "false"}} aria-controls="{{ fields_id }}1">
         <span class="accordion__title-text">{{ title }}</span>
       </button>
     </legend>
