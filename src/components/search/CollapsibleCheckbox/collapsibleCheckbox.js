@@ -29,34 +29,39 @@ export default function () {
       });
 
       //Toggle accordion
-      const button = accordion.querySelector('.accordion__button');
+      
       function toggleAccordion(e) {
-        const button = e.currentTarget;
-        button.classList.toggle('accordion__button--expanded');
-        const isExpanded = button.getAttribute('aria-expanded');
+        const currentButton = e.currentTarget;
+        currentButton.classList.toggle('accordion__button--expanded');
+        const isExpanded = currentButton.getAttribute('aria-expanded');
         if (isExpanded === 'true') {
-          button.setAttribute('aria-expanded', 'false');
+          currentButton.setAttribute('aria-expanded', 'false');
         } else {
-          button.setAttribute('aria-expanded', 'true');
+          currentButton.setAttribute('aria-expanded', 'true');
         }
 
         const fields = accordion.querySelector('.accordion__fields');
         fields.classList.toggle('accordion__fields--active');
       }
+      
+      const button = accordion.querySelector('.accordion__button');
       button.addEventListener('click', toggleAccordion);
 
       //Navigate between accordion blocks using up, down, home and end buttons
       function moveFocus(e) {
+        const triggerElement = e.target;
         const accordions = document.querySelectorAll('.accordion');
-        if (!e.target.classList.contains('accordion__button')) return;
+        if (!triggerElement.classList.contains('accordion__button')) return;
 
+        const currentAccordion = e.currentTarget;
         //40 === down, move to the next accordion
         if (e.keyCode === 40) {
           e.preventDefault();
-          const nextElement = e.currentTarget.nextElementSibling;
+          const nextElement = currentAccordion.nextElementSibling;
           if (nextElement && nextElement.classList.contains('accordion')) {
             nextElement.querySelector('.accordion__button').focus();
           } else {
+            //If this is the last accordion, move to the first accordion
             accordions[0].querySelector('.accordion__button').focus();
           }
           return;
@@ -65,13 +70,14 @@ export default function () {
         //38 === up, move to the previous accordion
         if (e.keyCode === 38) {
           e.preventDefault();
-          const previousElement = e.currentTarget.previousElementSibling;
+          const previousElement = currentAccordion.previousElementSibling;
           if (
             previousElement &&
             previousElement.classList.contains('accordion')
           ) {
             previousElement.querySelector('.accordion__button').focus();
           } else {
+            //If this is the first accordion, move to the last accordion
             accordions[accordions.length - 1]
               .querySelector('.accordion__button')
               .focus();
