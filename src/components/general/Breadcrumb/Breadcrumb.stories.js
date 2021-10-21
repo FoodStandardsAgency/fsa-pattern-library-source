@@ -83,8 +83,8 @@ BreadcrumbLoggedOut.args = {
   expanded: false,
   subscription: {
     isLoggedIn: false,
-    loggedOuttext: 'Already have a subscription?',
-    loggedOutButtontext: 'Sign in',
+    loggedOutLabel: 'Already have a subscription?',
+    loggedOutButtonLabel: 'Sign in',
     loggedOutButtonLink: '#',
   },
 };
@@ -109,9 +109,9 @@ BreadcrumbLoggedIn.args = {
   subscription: {
     isLoggedIn: true,
     subscriptionLink: '#',
-    subscriptiontext: 'My subscription',
+    subscriptionLabel: 'My subscription',
     logOutLink: '#',
-    logOuttext: 'Log out',
+    logOutLabel: 'Log out',
   },
 };
 
@@ -135,8 +135,8 @@ BreadcrumbExpandedLoggedOut.args = {
   expanded: true,
   subscription: {
     isLoggedIn: false,
-    loggedOuttext: 'New user?',
-    loggedOutButtontext: 'Subscribe now',
+    loggedOutLabel: 'New user?',
+    loggedOutButtonLabel: 'Subscribe now',
     loggedOutButtonLink: '#',
   },
 };
@@ -161,8 +161,8 @@ BreadcrumbExpandedLoggedIn.args = {
   subscription: {
     isLoggedIn: true,
     subscriptionLink: '#',
-    subscriptiontext: 'My subscription',
+    subscriptionLabel: 'My subscription',
     logOutLink: '#',
-    logOuttext: 'Log out',
+    logOutLabel: 'Log out',
   },
 };
