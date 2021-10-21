@@ -20,7 +20,8 @@ export default function () {
       const descriptionElement = accordion.querySelector(
         '.accordion__description'
       );
-      const description = numChecked + " " + descriptionElement.dataset.selected;
+      const description =
+        numChecked + ' ' + descriptionElement.dataset.selected;
       descriptionElement.textContent = numChecked ? description : '';
     }
 
@@ -106,9 +107,11 @@ export default function () {
 
       //Update description when checking checkboxes
       const checkboxes = accordion.querySelectorAll('.accordion__input');
-      checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener('change', updateDescOnClick);
-      });
+      if (checkboxes.length) {
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener('change', updateDescOnClick);
+        });
+      }
 
       //Toggle accordion on click
       const button = accordion.querySelector('.accordion__button');
