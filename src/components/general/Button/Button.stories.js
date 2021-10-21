@@ -31,7 +31,6 @@ PrimaryAnchor.args = {
   label: 'All News and Alerts',
   url: 'https://www.food.gov.uk/news-alerts',
   is_anchor: true,
-  is_input: false,
 };
 
 export const SecondaryAnchor = Template.bind({});
@@ -45,8 +44,7 @@ export const PrimaryButton = Template.bind({});
 PrimaryButton.args = {
   type: 'primary',
   label: 'Click me',
-  is_anchor: false,
-  is_input: false,
+  is_button: true
 };
 
 export const SecondaryButton = Template.bind({});
