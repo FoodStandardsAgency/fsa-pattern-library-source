@@ -53,9 +53,10 @@ export default function () {
         '.accordion:not(.accordion--hidden) .accordion__button'
       );
       const currentIndex = Array.from(buttons).indexOf(button);
+      const keyCode = e.keyCode ? e.keyCode : e.which;
 
       //40 === down, move to the next accordion
-      if (e.keyCode === 40) {
+      if (keyCode === 40) {
         e.preventDefault();
         if (buttons.length - 1 > currentIndex) {
           buttons[currentIndex + 1].focus();
@@ -67,7 +68,7 @@ export default function () {
       }
 
       //38 === up, move to the previous accordion
-      if (e.keyCode === 38) {
+      if (keyCode === 38) {
         e.preventDefault();
         if (currentIndex > 0) {
           buttons[currentIndex - 1].focus();
@@ -79,14 +80,14 @@ export default function () {
       }
 
       // 36 === home, move to the first accordion
-      if (e.keyCode === 36) {
+      if (keyCode === 36) {
         e.preventDefault();
         buttons[0].focus();
         return;
       }
 
       // 35 === end, move to the last accordion
-      if (e.keyCode === 35) {
+      if (keyCode === 35) {
         e.preventDefault();
         buttons[buttons.length - 1].focus();
         return;
