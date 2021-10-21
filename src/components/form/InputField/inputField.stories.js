@@ -31,7 +31,7 @@ export const Error = Template.bind({});
 Error.args = {
   label: 'Email or username',
   caption: 'Enter your email address or username.',
-  required: "REQUIRED",
+  required: "required",
   error: true,
   errorMessage: 'This information is required'
 };

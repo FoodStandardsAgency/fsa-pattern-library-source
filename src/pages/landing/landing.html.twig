@@ -3,22 +3,22 @@
 {# Include templates for form components here #}
 {% set breadcrumbItems = [
     {
-      'label': 'Home',
+      'text': 'Home',
       'url': '/'
     },
     {
-      'label': 'Business guidance',
+      'text': 'Business guidance',
       'url': null
     },
     {
-      'label': 'Running a business',
+      'text': 'Running a business',
       'url': '/running-a-business'
     },
     {
-      'label': 'Hazard Analysis and Critical Control Point',
+      'text': 'Hazard Analysis and Critical Control Point',
       'url': null
     },
   ]
 %}
-{% include '../../components/general/Breadcrumb/breadcrumb.html.twig' with { items: breadcrumbItems, expanded: false, withLogin: false } %}
+{% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumbItems, expanded: false, withLogin: false } %}
 {% endblock %}

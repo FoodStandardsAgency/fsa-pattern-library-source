@@ -124,9 +124,23 @@
   {% include '../../components/form/InputField/inputField.html.twig' with {
       label: 'Email or username',
       caption: 'Enter your email address or username.',
-      required: "REQUIRED",
+      required: "required",
       error: true,
       errorMessage: 'Unrecognized username or password'
+    } %}
+
+    {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
+      prevLink: '#',
+      prevLabel: 'Previous',
+      prevButton: true,
+      buttonLabel: 'Next'
+    } %}
+
+    {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
+      prevLink: '#',
+      prevLabel: 'Previous',
+      prevButton: false,
+      buttonLabel: 'Next'
     } %}
   </form>
 {% endblock %}
