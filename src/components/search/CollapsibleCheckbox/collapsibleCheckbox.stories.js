@@ -1,4 +1,5 @@
 import collapsibleCheckbox from './collapsibleCheckbox.html.twig';
+import multipleCollapsibleCheckbox from './multipleCollapsibleCheckbox.html.twig';
 import './collapsibleCheckbox.scss';
 import collapsibleCheckboxJs from './collapsibleCheckbox';
 
@@ -32,11 +33,8 @@ Closed.args = {
   open: false,
 };
 
-export const Multiple = Template.bind({});
-Multiple.args = {
-  ...Open.args,
-  multiple: true,
-};
+export const Multiple = args => multipleCollapsibleCheckbox(args);
+Multiple.args = Open.args;
 Multiple.parameters = {
     controls: {
       disable: true,
