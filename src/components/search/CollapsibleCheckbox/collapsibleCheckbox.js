@@ -4,6 +4,10 @@ import './collapsibleCheckbox.scss';
 export default function () {
   window.addEventListener('DOMContentLoaded', function () {
     const accordions = document.querySelectorAll('.accordion');
+    if (!accordions) {
+      return;
+    }
+    
     accordions.forEach((accordion) => {
       //Update description on first load
       function updateDesc() {
