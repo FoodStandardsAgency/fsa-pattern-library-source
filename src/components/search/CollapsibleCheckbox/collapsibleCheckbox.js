@@ -48,20 +48,20 @@ export default function () {
 
     //Additional keyboard control: Navigate between accordion blocks using up, down, home and end buttons
     function moveFocus(e) {
-      const triggerElement = e.target;
-      const accordions = document.querySelectorAll('.accordion');
-      if (!triggerElement.classList.contains('accordion__button')) return;
+      const button = e.target;
+      const buttons = document.querySelectorAll(
+        '.accordion:not(.accordion--hidden) .accordion__button'
+      );
+      const currentIndex = Array.from(buttons).indexOf(button);
 
-      const currentAccordion = e.currentTarget;
       //40 === down, move to the next accordion
       if (e.keyCode === 40) {
         e.preventDefault();
-        const nextElement = currentAccordion.nextElementSibling;
-        if (nextElement && nextElement.classList.contains('accordion')) {
-          nextElement.querySelector('.accordion__button').focus();
+        if (buttons.length - 1 > currentIndex) {
+          buttons[currentIndex + 1].focus();
         } else {
           //If this is the last accordion, move to the first accordion
-          accordions[0].querySelector('.accordion__button').focus();
+          buttons[0].focus();
         }
         return;
       }
@@ -69,17 +69,11 @@ export default function () {
       //38 === up, move to the previous accordion
       if (e.keyCode === 38) {
         e.preventDefault();
-        const previousElement = currentAccordion.previousElementSibling;
-        if (
-          previousElement &&
-          previousElement.classList.contains('accordion')
-        ) {
-          previousElement.querySelector('.accordion__button').focus();
+        if (currentIndex > 0) {
+          buttons[currentIndex - 1].focus();
         } else {
           //If this is the first accordion, move to the last accordion
-          accordions[accordions.length - 1]
-            .querySelector('.accordion__button')
-            .focus();
+          buttons[buttons.length - 1].focus();
         }
         return;
       }
@@ -87,16 +81,14 @@ export default function () {
       // 36 === home, move to the first accordion
       if (e.keyCode === 36) {
         e.preventDefault();
-        accordions[0].querySelector('.accordion__button').focus();
+        buttons[0].focus();
         return;
       }
 
       // 35 === end, move to the last accordion
       if (e.keyCode === 35) {
         e.preventDefault();
-        accordions[accordions.length - 1]
-          .querySelector('.accordion__button')
-          .focus();
+        buttons[buttons.length - 1].focus();
         return;
       }
     }
@@ -118,7 +110,7 @@ export default function () {
       button.addEventListener('click', toggleAccordion);
 
       //Add keyboard control
-      accordion.addEventListener('keydown', moveFocus);
+      button.addEventListener('keydown', moveFocus);
     });
   });
 }
