@@ -7,8 +7,6 @@
     {{ label }}
   </button>
 
-  {% elseif is_input %}
-
+{% elseif is_input %}
   <input type="submit" class="button button--event button--{{ type }}" value={{ label }}>
- 
-  {% endif %}
+{% endif %}
