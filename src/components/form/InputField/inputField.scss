@@ -58,6 +58,10 @@
     .input-field__required {
       color: var(--fsa-primary_black);
     }
+
+    .input-field__input {
+      border: 0.25rem solid var(--fsa-secondary_mid-red);
+    }
   }
 
   &__error-message {
