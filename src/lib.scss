@@ -157,7 +157,6 @@ $fsa-xxl: 1920px;
     background-color: var(--fsa-tertiary_light-yellow);
     border-bottom: 4px solid var(--fsa-primary_black);
     margin-bottom: -4px;
-
   }
 }
 
@@ -271,16 +270,15 @@ $mobileGutter: 1rem;
 
   @if $button-type==primary {
     @include button-primary;
-  }
-
-  @else if $button-type==secondary {
+  } @else if $button-type==secondary {
     @include button-secondary;
   } @else if $button-type == cancel {
     @include button-cancel;
   }
 
   &:focus {
-    box-shadow: 0 0 0 0.2rem var(--fsa-primary_black), 0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
+    box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
+      0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 }
@@ -309,5 +307,137 @@ $mobileGutter: 1rem;
   color: var(--fsa-primary_white);
   &:hover {
     background-color: var(--fsa-secondary-error-hover);
+  }
+}
+
+/* Mixin for checkbox and radio button style */
+@mixin form-select($input-type: checkbox) {
+  .#{$input-type} {
+    border: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    color: var(--fsa-primary_black);
+
+    &__legend {
+      @include h5;
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+      /* Using a float trick here to make the border of fieldset wrap around, not going through, the legend.*/
+      float: left;
+    }
+
+    &__required {
+      @include small;
+      margin-left: 1rem;
+      color: var(--fsa-primary_black);
+      font-weight: inherit;
+    }
+
+    &__description {
+      @include body;
+      margin: 0;
+      padding: 0.5rem 0 0 0;
+      clear: both;
+    }
+
+    &__field {
+      margin-top: 1rem;
+      @include body;
+      display: flex;
+      align-items: center;
+    }
+
+    &__input {
+      @if $input-type == checkbox {
+        @include checkbox-input;
+      } @else if $input-type == radio {
+        @include radio-input;
+      }
+    }
+
+    &__label {
+      padding: 0 0 0 1rem;
+    }
+
+    &--error {
+      border-left: 0.25rem solid var(--fsa-secondary_mid-red);
+      margin-left: -0.75rem;
+      padding-left: 0.5rem;
+      @media screen and (min-width: $fsa-md) {
+        margin-left: -1.25rem;
+        padding-left: 1rem;
+      }
+
+      .#{$input-type}__legend {
+        color: var(--fsa-secondary_mid-red);
+      }
+    }
+  }
+}
+
+@mixin checkbox-input {
+  background-color: var(--fsa_tint);
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--fsa-primary_black);
+  position: relative;
+  margin: 0;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+    outline: none;
+    border: none;
+  }
+
+  &:checked {
+    background-color: var(--fsa-primary_dark-green);
+    background-image: url('./tick.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@mixin radio-input {
+  border-radius: 50%;
+  background-color: var(--fsa-primary_white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--fsa-primary_black);
+  position: relative;
+  margin: 0;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+    outline: none;
+    border: none;
+  }
+
+  &:checked {
+    background-color: var(--fsa-primary_dark-green);
+    border: none;
+
+    &::before {
+      content: '';
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background: var(--fsa-primary_white);
+    }
   }
 }

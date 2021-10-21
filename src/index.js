@@ -11,6 +11,7 @@ import './components/search/SearchBarHeader/searchBarHeader';
 import './components/search/SearchNoResults/searchNoResults';
 import './components/search/Showing/showing';
 import './components/search/SortBy/sortBy';
+import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
 import './components/form/ErrorBox/ErrorBox';
 import './components/form/TitleAndText/titleAndText';
 import './components/form/Checkbox/checkbox';
@@ -21,6 +22,8 @@ import './components/form/MessageBox/messageBox';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
 import './layout/fullWidth/fullWidth';
+import './components/form/MultistepFunction/multistepFunction';
+
 
 import searchBar from "./components/search/SearchBar/searchBar";
 import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';

@@ -6,7 +6,7 @@ export default {
   argTypes: {
     is_anchor: {
       table: { disable: true },
-    },
+    }
   },
 };
 
@@ -30,7 +30,7 @@ PrimaryAnchor.args = {
   type: 'primary',
   label: 'All News and Alerts',
   url: 'https://www.food.gov.uk/news-alerts',
-  is_anchor: true,
+  element: 'link',
 };
 
 export const SecondaryAnchor = Template.bind({});
@@ -44,7 +44,7 @@ export const PrimaryButton = Template.bind({});
 PrimaryButton.args = {
   type: 'primary',
   label: 'Click me',
-  is_anchor: false,
+  element: 'button',
 };
 
 export const SecondaryButton = Template.bind({});
@@ -60,3 +60,9 @@ CancelButton.args = {
   type: 'cancel',
   label: 'Cancel',
 }
+
+export const InputButton = Template.bind({});
+InputButton.args = {
+  ...PrimaryButton.args,
+  element: 'input'
+};
