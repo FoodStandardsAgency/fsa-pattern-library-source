@@ -17,6 +17,7 @@ import './components/form/Checkbox/checkbox';
 import './components/form/Radio/radio';
 import './components/landing/LandingLinks/LandingLinks';
 import './components/form/InputField/inputField';
+import './components/form/MessageBox/messageBox';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
 import './layout/fullWidth/fullWidth';

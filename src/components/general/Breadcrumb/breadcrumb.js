@@ -1,5 +1,5 @@
 import './breadcrumb.scss';
-import './breadcrumb.html.twig';
+import './breadcrumbs.html.twig';
 
 export default function () {
   // Toggles the expanded class to expand the breadcrumb or not
