@@ -7,6 +7,22 @@
         '<p>Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".</p>',
       tag: 'h2',
     } %}
+
+    {% include '../../components/form/MessageBox/messageBox.html.twig' with {
+      text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
+      type: 'status'
+    } %}
+
+    {% include '../../components/form/MessageBox/messageBox.html.twig' with {
+      text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
+      type: 'error'
+    } %}
+
+    {% include '../../components/form/MessageBox/messageBox.html.twig' with {
+      text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
+      type: 'warning'
+    } %}
+    
     {% include '../../components/form/ErrorBox/errorBox.html.twig' with {
       title: 'There is a problem with your submission',
       errors: 'required',
@@ -53,7 +69,7 @@
         { value: 'weekly', label: 'Send updates weekly', id: 'weekly' },
       ],
       name: 'frequency',
-      required: false,
+      required: "",
       error: false,
       default: 'immediately',
     } %}
@@ -66,7 +82,7 @@
         { value: 'short', label: 'Send short emails', id: 'short' },
       ],
       name: 'length',
-      required: true,
+      required: "required",
       error: true,
       default: 'long',
     } %}
@@ -80,7 +96,7 @@
         { value: 'three', label: 'Alert three', id: 'three' },
       ],
       name: 'first alert',
-      required: false,
+      required: "",
       error: false,
     } %}
     {% include '../../components/form/Checkbox/checkbox.html.twig' with {
@@ -93,7 +109,7 @@
         { value: 'six', label: 'Alert six', id: 'six' },
       ],
       name: 'second alert',
-      required: true,
+      required: "required",
       error: true,
     } %}
 
@@ -108,9 +124,10 @@
   {% include '../../components/form/InputField/inputField.html.twig' with {
       label: 'Email or username',
       caption: 'Enter your email address or username.',
-      required: "REQUIRED",
+      required: "required",
       error: true,
       errorMessage: 'Unrecognized username or password'
     } %}
   </form>
 {% endblock %}
+

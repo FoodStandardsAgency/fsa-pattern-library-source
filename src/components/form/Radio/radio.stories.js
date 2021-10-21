@@ -21,22 +21,14 @@ Normal.args = {
     { value: 'weekly', label: 'Send updates weekly', id: 'weekly' },
   ],
   name: 'frequency',
-  required: false,
+  required: "",
   error: false,
   default: 'immediately',
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  title: 'Email length',
-  description: 'How long the emails are',
-  fields: [
-    { value: 'long', label: 'Send long emails', id: 'long' },
-    { value: 'medium', label: 'Send medium-length emails', id: 'medium' },
-    { value: 'short', label: 'Send short emails', id: 'short' },
-  ],
-  name: 'length',
-  required: true,
+  ...Normal.args,
+  required: "required",
   error: true,
-  default: 'long',
 };

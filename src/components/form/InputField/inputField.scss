@@ -2,19 +2,13 @@
 
 .input-field {
   margin-top: 2rem;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 1rem;
-    margin-left: -1.23rem;
-  }
+  display: flex;
+  flex-direction: column;
 
   &__label {
-    @include h6;
+    @include h5;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
     font-weight: bold;
   }
 
@@ -22,6 +16,7 @@
     @include small;
     font-weight: normal;
     margin-left: 1rem;
+    font-weight: inherit;
   }
 
   &__input {
@@ -48,30 +43,20 @@
   }
 
   &--error {
+    margin-left: -1.25rem;
+    border-left: 0.25rem solid var(--fsa-secondary_mid-red);
+    margin-left: -0.75rem;
+    padding-left: 0.5rem;
+    @media screen and (min-width: $fsa-md) {
+      margin-left: -1.25rem;
+      padding-left: 1rem;
+    }
     .input-field__label {
       color: var(--fsa-secondary_mid-red);
     }
 
     .input-field__required {
       color: var(--fsa-primary_black);
-    }
-
-    .input-field__container {
-      border-left: 0.25rem solid var(--fsa-secondary_mid-red);
-      padding-left: 0.5rem;
-      @media screen and (min-width: $fsa-xs) {
-        padding-left: 1rem;
-      }  
-
-      @media screen and (min-width: $fsa-lg) {
-        border-left: 0.23rem solid var(--fsa-secondary_mid-red);
-      }
-
-      margin: 1.56rem 0 0 -0.75rem;
-
-      @media screen and (min-width: $fsa-md) {
-        margin-left: -1.23rem;
-      }
     }
   }
 
