@@ -1,12 +1,12 @@
-{% if is_anchor %}
+{% if element == 'link' %}
   <a href={{ url }} class="button button--{{ type }}">
     {{ label }}
   </a>
-{% elseif is_button %}
+{% elseif element == 'button' %}
   <button class="button button--event button--{{ type }}">
     {{ label }}
   </button>
 
-{% elseif is_input %}
+{% elseif element == 'input' %}
   <input type="submit" class="button button--event button--{{ type }}" value={{ label }}>
 {% endif %}
