@@ -20,7 +20,7 @@ export default function () {
       const descriptionElement = accordion.querySelector(
         '.accordion__description'
       );
-      const description = `${numChecked} selected`;
+      const description = numChecked + " " + descriptionElement.dataset.selected;
       descriptionElement.textContent = numChecked ? description : '';
     }
 

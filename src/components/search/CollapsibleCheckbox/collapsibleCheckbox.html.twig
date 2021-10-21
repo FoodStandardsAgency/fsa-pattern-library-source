@@ -7,7 +7,7 @@
       <span class="accordion__title-text">{{ title }}</span>
     </button>
   </legend>
-  <p class="accordion__description" id={{ description_id }}></p>
+  <p class="accordion__description" id={{ description_id }} data-selected={{ selected }}></p>
   <div class="accordion__fields {{ open ? "accordion__fields--active" : ""}}" id={{ fields_id }}>
     {% for field in fields %}
       {% if field.results > 0 %}

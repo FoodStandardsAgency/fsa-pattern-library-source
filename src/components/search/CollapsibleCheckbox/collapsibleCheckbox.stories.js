@@ -25,6 +25,7 @@ Open.args = {
     { label: 'Consumer Guidance', id: 'consumer-guidance', results: 3 },
   ],
   open: true,
+  selected: 'selected',
 };
 
 export const Closed = Template.bind({});
