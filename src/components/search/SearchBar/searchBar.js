@@ -1,3 +1,5 @@
+import updateParams from '../../../helpers/updateParams';
+
 import './searchBar.html.twig';
 import './searchBar.scss';
 
@@ -15,6 +17,12 @@ export default function () {
       } else {
         input.classList.remove('search-bar__box--has-content');
       }
+    });
+
+    const submit = el.querySelector('.search-bar__submit');
+    submit.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateParams('keywords', input.value);
     });
   });
 }

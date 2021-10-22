@@ -128,6 +128,20 @@
       error: true,
       errorMessage: 'Unrecognized username or password'
     } %}
+
+    {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
+      prevLink: '#',
+      prevLabel: 'Previous',
+      prevButton: true,
+      buttonLabel: 'Next'
+    } %}
+
+    {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
+      prevLink: '#',
+      prevLabel: 'Previous',
+      prevButton: false,
+      buttonLabel: 'Next'
+    } %}
   </form>
 {% endblock %}
 

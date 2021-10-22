@@ -38,7 +38,7 @@ export default function () {
      let breadcrumbLength = 0;
      const breadcrumbItemList = document.querySelectorAll('.breadcrumb__item');
      breadcrumbItemList.forEach((item) => {
-       breadcrumbLength += item.clientWidth + 10;
+       breadcrumbLength += item.clientWidth;
      });
 
     // Handles the expanded toggle with both click & keyboard (enter)

@@ -1,5 +1,7 @@
 @import "src/lib.scss";
 
+$mobileOverlayWidth: 0.75rem;
+
 .breadcrumb {
   @include small;
   padding-top: 1rem;
@@ -50,7 +52,7 @@
     & .breadcrumb__label {
       font-size: 0.9rem;
       white-space: nowrap;
-      padding: 0.5rem 0;
+      margin: 0.5rem 0;
       display:inline-block;
     }
     & .button {
@@ -64,7 +66,7 @@
     flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 96%;
+    max-width: calc(100% - #{$mobileOverlayWidth});
     .expanded & {
       flex-direction: column;
     }
@@ -73,14 +75,14 @@
         position: absolute;
         content: "...";
         bottom: 0.5rem;
-        right: 0.9rem;
+        right: $mobileOverlayWidth;
         z-index: 1;
       }
       &::after {
         content: "";
         position: absolute;
         bottom: 0.5rem;
-        right: 0.9rem;
+        right: $mobileOverlayWidth;
         width: 1rem;
         height: 100%;
         background: #fff;
@@ -92,7 +94,7 @@
     padding-right: 0.5rem;
     & > * {
       display: inline-block;
-      padding: 0.5rem 0;
+      margin: 0.5rem 0;
     }
     & + & {
       &::before {
@@ -119,12 +121,12 @@
   &__link {
     @include link;
     display: inline-block;
-    padding: 0.5rem 0;
+    margin: 0.5rem 0;
   }
   &__mobile-overlay {
     @include link;
     z-index: 1;
-    width: 0.75rem;
+    width: $mobileOverlayWidth;
     height: 1.4rem;
     position: absolute;
     right: 0;

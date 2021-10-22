@@ -35,7 +35,8 @@ export default {
   parameters: {
     controls: {
       disabled: false,
-    }
+    },
+    layout: "centered"
   }
 };
 
