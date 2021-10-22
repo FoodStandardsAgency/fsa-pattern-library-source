@@ -23,7 +23,7 @@
         <a href="{{ subscription.logOutLink }}" class="breadcrumb__link">{{ subscription.logOutLabel }}</a>
       {% else %}
         <span class="breadcrumb__label">{{ subscription.loggedOutLabel }}</span>
-        {% include '../Button/button.html.twig' with { 
+        {% include '@components/components/general/Button/button.html.twig' with { 
           type: 'primary',
           label: subscription.loggedOutButtonLabel,
           url: subscription.loggedOutButtonLink,
