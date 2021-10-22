@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
 const DrupalTemplatePlugin = require('deeson-webpack-config-starter/drupal-templates-webpack-plugin');
 module.exports = {
   module: {
@@ -44,6 +45,11 @@ module.exports = {
         options: { regExp: '.*/src/(.*)', name: '[1]' },
       },
     ],
+  },
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, 'src/'),
+    }
   },
   mode: 'development',
   plugins: [

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+console.log(path.resolve(__dirname, '..', 'src'));
 
 module.exports = {
   output: {
@@ -10,6 +11,7 @@ module.exports = {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
     alias: {
       react: path.join(__dirname, 'node_modules', 'react'),
+      '@components': path.resolve(__dirname, '..', 'src'),
     },
   },
   module: {
@@ -46,10 +48,7 @@ module.exports = {
       {
         test: /\.twig$/,
         use: {
-          loader: 'twig-loader',
-          options: {
-              // See options section below
-          },
+          loader: 'twigjs-loader',
         }
       }
     ],

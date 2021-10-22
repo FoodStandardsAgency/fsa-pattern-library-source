@@ -39,8 +39,10 @@ module.exports = {
     });
     config.module.rules.push({
       test: /\.twig$/,
-      use: ['twig-loader'],
+      use: ['twigjs-loader'],
     });
+    config.resolve.alias['@components'] = path.resolve(__dirname, '..', 'src');
+    console.log(config.resolve);
 
     // Return the altered config
     return config;
