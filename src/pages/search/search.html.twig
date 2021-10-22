@@ -11,7 +11,7 @@
       }
     ]
   %}
-  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumbItems, expanded: false, withLogin: false } %}
+  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumbItems, expanded: false } %}
   {% include '../../components/search/SearchBarHeader/searchBarHeader.html.twig' with {
     headerText: 'Search',
     searchLink: '/search',
@@ -64,7 +64,7 @@
   {% include '../../components/search/Pagination/pagination.html.twig' with {
     totalPages: 12,
     currentPage: 1,
-    maxPages: 4,
+    maxVisiblePages: 4,
   } %}
 {% endblock %}
 
