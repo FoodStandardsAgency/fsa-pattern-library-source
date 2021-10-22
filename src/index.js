@@ -1,4 +1,5 @@
 import './base.scss';
+import 'url-polyfill';
 import cssVars from 'css-vars-ponyfill';
 
 import './components/general/Breadcrumb/breadcrumb';
@@ -27,8 +28,12 @@ import './components/form/MultistepFunction/multistepFunction';
 
 import searchBar from "./components/search/SearchBar/searchBar";
 import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
+import sortBy from "./components/search/SortBy/sortBy"
+import pagination from "./components/search/Pagination/pagination";
 
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars();
 searchBar();
+sortBy();
+pagination();
 breadcrumbJs();
