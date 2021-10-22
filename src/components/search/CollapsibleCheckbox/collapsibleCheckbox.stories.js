@@ -51,7 +51,6 @@ Multiple.args = {
     { label: 'Northern Ireland', id: 'northern-ireland', results: 89 },
     { label: 'Wales', id: 'wales', results: 78 },
   ]
-
 };
 Multiple.parameters = {
     controls: {
