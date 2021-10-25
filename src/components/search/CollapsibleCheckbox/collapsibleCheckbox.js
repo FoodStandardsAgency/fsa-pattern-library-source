@@ -8,9 +8,7 @@ export default function () {
       DOMContentFirstLoad = false;
       return;
     }
-
-    console.log('I ran');
-
+    
     const accordions = document.querySelectorAll('.accordion');
     if (!accordions) {
       return;
