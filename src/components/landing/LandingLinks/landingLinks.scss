@@ -78,6 +78,9 @@
       text-decoration: none;
 
       &:hover {
+        .landing-links__svg {
+          background-color: var(--fsa__link-green);
+        }
         .landing-links__link {
           color: var(--fsa-primary_dark-green);
           text-decoration: underline;
