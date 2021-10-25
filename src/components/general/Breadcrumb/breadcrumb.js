@@ -16,12 +16,11 @@ export default function () {
   // Toggles the overflowed class to handle the overflow on the breadcrumb 
   // depending on screensizes
   function overflow(breadcrumb, breadcrumbItems, breadcrumbLength) {
-    if (!breadcrumb.classList.contains('expanded')) {
-      if (breadcrumbLength > breadcrumbItems.clientWidth) {
-        breadcrumbItems.classList.add('overflowed');
-      } else {
-        breadcrumbItems.classList.remove('overflowed');
-      }
+    if (breadcrumbLength > breadcrumbItems.clientWidth) {
+      console.log("here");
+      breadcrumb.classList.add('overflowed');
+    } else {
+      breadcrumb.classList.remove('overflowed');
     }
   }
 

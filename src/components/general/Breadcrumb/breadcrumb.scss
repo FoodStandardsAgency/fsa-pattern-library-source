@@ -69,8 +69,11 @@ $mobileOverlayWidth: 0.75rem;
     max-width: calc(100% - #{$mobileOverlayWidth});
     .expanded & {
       flex-direction: column;
+      &::before, &::after {
+        display: none;
+      }
     }
-    &.overflowed {
+    .overflowed & {
       &::before {
         position: absolute;
         content: "...";
@@ -87,11 +90,6 @@ $mobileOverlayWidth: 0.75rem;
         height: 100%;
         background: #fff;
         z-index: 0;
-      }
-    }
-    &.expanded {
-      &::before, &::after {
-        display: none;
       }
     }
   }
@@ -132,7 +130,7 @@ $mobileOverlayWidth: 0.75rem;
       margin-bottom: 0.5rem;
     }
   }
-  &__mobile-overlay {
+  &.overflowed &__mobile-overlay {
     @include link;
     z-index: 1;
     width: $mobileOverlayWidth;
