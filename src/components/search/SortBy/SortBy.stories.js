@@ -12,6 +12,15 @@ const Template = (args) => {
 export const SortBy = Template.bind({});
 SortBy.args = {
   sort_by: 'Sort by',
-  options: ['Relevance', 'Most recent'],
+  options: [
+    {
+      'text': 'Relevance',
+      'value': 'relevance'
+    },
+    {
+      'text': 'Most recent',
+      'value': 'created'
+    }
+  ],
   default: 'Relevance',
 };

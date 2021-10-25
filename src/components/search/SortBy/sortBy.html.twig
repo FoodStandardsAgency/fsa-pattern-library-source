@@ -2,7 +2,7 @@
   <label for="sort" class="sort__label">{{ sort_by }}</label>
   <select name="sort" id="sort" class="sort__select">
     {% for option in options %}
-      <option value="{{ option }}" class="sort__option" {{ option|lower == default|lower ? "selected" : "" }}>{{ option }}</option>
+      <option value="{{ option.value|lower }}" class="sort__option" {{ option.value|lower == default|lower ? "selected" : "" }}>{{ option.text }}</option>
     {% endfor %}
   </select>
 </div>

@@ -89,15 +89,24 @@
 
 {% block right_top %}
   {% include '../../components/search/Showing/showing.html.twig' with {
-  showing: 'Showing',
-  of: 'of',
-  results: 'results',
-  displayed_results: '1-10',
-  total_results: '103',
+    showing: 'Showing',
+    of: 'of',
+    results: 'results',
+    displayed_results: '1-10',
+    total_results: '103',
   } %}
   {% include '../../components/search/SortBy/sortBy.html.twig' with {
-  sort_by: 'Sort by',
-  options: ['Relevance', 'Most recent'],
-  default: 'Relevance',
+    sort_by: 'Sort by',
+    options: [
+      {
+        'text': 'Relevance',
+        'value': 'relevance'
+      },
+      {
+        'text': 'Most recent',
+        'value': 'created'
+      }
+    ],
+    default: 'relevance',
   } %}
 {% endblock %}
