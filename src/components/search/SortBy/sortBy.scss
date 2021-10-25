@@ -23,7 +23,7 @@
     &::-ms-expand {
       display: none;
     }
-    background-image: url('./arrow-down.svg');
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='10' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m1.245 1.541 7 7 7-7' stroke='%23000' stroke-width='2' fill='none' fill-rule='evenodd'/%3e%3c/svg%3e ");
     background-repeat: no-repeat;
     background-position: 90% center;
 
