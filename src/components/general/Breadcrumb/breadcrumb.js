@@ -4,11 +4,8 @@ import './breadcrumbs.html.twig';
 export default function () {
   // Toggles the expanded class to expand the breadcrumb or not
   function toggleBreadcrumb(breadcrumb, mobileOverlay) {
-    if (breadcrumb.classList.contains('expanded')) {
-      breadcrumb.classList.remove('expanded');
-    } else {
-      breadcrumb.classList.add('expanded');
-    }
+    breadcrumb.classList.toggle('expanded');
+    breadcrumb.classList.toggle('collapsed');
     if (mobileOverlay.ariaExpanded === 'true') {
       mobileOverlay.setAttribute('aria-expanded', 'false');
     } else {

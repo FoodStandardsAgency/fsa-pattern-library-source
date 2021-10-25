@@ -56,7 +56,7 @@ $mobileOverlayWidth: 0.75rem;
       display:inline-block;
     }
     & .button {
-      margin-left: 1.1rem;
+      margin-left: 1rem;
       white-space: nowrap;
       
     }
@@ -74,19 +74,24 @@ $mobileOverlayWidth: 0.75rem;
       &::before {
         position: absolute;
         content: "...";
-        bottom: 0.5rem;
+        bottom: 0.7rem;
         right: $mobileOverlayWidth;
         z-index: 1;
       }
       &::after {
         content: "";
         position: absolute;
-        bottom: 0.5rem;
+        bottom: 0.7rem;
         right: $mobileOverlayWidth;
         width: 1rem;
         height: 100%;
         background: #fff;
         z-index: 0;
+      }
+    }
+    &.expanded {
+      &::before, &::after {
+        display: none;
       }
     }
   }
@@ -122,6 +127,10 @@ $mobileOverlayWidth: 0.75rem;
     @include link;
     display: inline-block;
     margin: 0.5rem 0;
+    border-bottom: 4px solid transparent;
+    &:focus {
+      margin-bottom: 0.5rem;
+    }
   }
   &__mobile-overlay {
     @include link;
