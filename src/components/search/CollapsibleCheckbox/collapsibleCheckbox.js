@@ -2,7 +2,13 @@ import './collapsibleCheckbox.html.twig';
 import './collapsibleCheckbox.scss';
 
 export default function () {
+  let DOMContentFirstLoad = true;
   window.addEventListener('DOMContentLoaded', function () {
+    if (DOMContentFirstLoad) {
+      DOMContentFirstLoad = false;
+      return;
+    }
+    
     const accordions = document.querySelectorAll('.accordion');
     if (!accordions) {
       return;
