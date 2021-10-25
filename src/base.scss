@@ -26,6 +26,7 @@ body {
 }
 
 a {
+  @include link;
   text-decoration: none;
   color: inherit;
 }
