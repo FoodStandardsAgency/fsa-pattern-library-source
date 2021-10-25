@@ -17,7 +17,6 @@ export default function () {
   // depending on screensizes
   function overflow(breadcrumb, breadcrumbItems, breadcrumbLength) {
     if (breadcrumbLength > breadcrumbItems.clientWidth) {
-      console.log("here");
       breadcrumb.classList.add('overflowed');
     } else {
       breadcrumb.classList.remove('overflowed');

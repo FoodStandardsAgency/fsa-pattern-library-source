@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-console.log(path.resolve(__dirname, '..', 'src'));
 
 module.exports = {
   output: {
