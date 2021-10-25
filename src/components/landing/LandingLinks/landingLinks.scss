@@ -66,16 +66,6 @@
       @include grid-cols(2, 12);
     }
 
-    &:hover {
-      .landing-links__svg {
-        background-color: var(--fsa__link-green);
-      }
-
-      .landing-links__link {
-        text-decoration: underline;
-      }
-    }
-
     a {
       display: inline-block;
       width: -moz-min-content;
@@ -84,6 +74,18 @@
       -ms-grid-columns: min-content;
       text-align: center;
       outline: none;
+      border: none;
+      text-decoration: none;
+
+      &:hover {
+        .landing-links__svg {
+          background-color: var(--fsa__link-green);
+        }
+        .landing-links__link {
+          color: var(--fsa-primary_dark-green);
+          text-decoration: underline;
+        }
+      }
 
       &:focus {
         background-color: var(--fsa-primary_white);
