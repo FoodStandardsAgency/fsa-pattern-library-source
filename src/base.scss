@@ -26,7 +26,8 @@ body {
 }
 
 a {
-  @include link;
+  text-decoration: none;
+  color: inherit;
 }
 
 // Base styling for typographic elements
