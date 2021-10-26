@@ -30,6 +30,7 @@
   }
 
   &__wrapper {
+    padding-bottom: 4.5rem; 
     @include grid-cols(4, 4);
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(12);
