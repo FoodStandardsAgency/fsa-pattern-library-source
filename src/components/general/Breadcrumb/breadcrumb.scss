@@ -7,14 +7,9 @@ $mobileOverlayWidth: 0.75rem;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: baseline;
   @media screen and (min-width: $fsa-md) {
     flex-direction: row;
-  }
-  &.logout.collapsed {
-    @media screen and (min-width: $fsa-xl) {
-      align-items: center;
-    }
   }
   &__left {
     @include grid-cols(4, 4);

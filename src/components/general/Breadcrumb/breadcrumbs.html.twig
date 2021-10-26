@@ -1,5 +1,5 @@
 <div class="breadcrumb {{ expanded ? "expanded" : "collapsed" }} {{ subscription is defined ? (subscription.isLoggedIn ? "login" : "logout") : "full" }}">
-  <nav class="breadcrumb__left">
+  <div class="breadcrumb__left">
     <p class="breadcrumb__label visually-hidden">Breadcrumb</p>
     <div class="breadcrumb__items">
       {% for item in items %}
@@ -12,10 +12,10 @@
         </div>
       {% endfor %}
     </div>
-    <a href="#" class="breadcrumb__mobile-overlay" aria-expanded="{{ expanded }}">
+    <a href="#" class="breadcrumb__mobile-overlay" aria-expanded="{{ expanded ? 'true' : 'false' }}">
       <span class="visually-hidden">Expand breadcrumb navigation</span>
     </a>
-  </nav>
+  </div>
   {% if subscription is defined %}
     <div class="breadcrumb__right">
       {% if subscription.isLoggedIn %}
