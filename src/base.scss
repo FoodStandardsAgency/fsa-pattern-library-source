@@ -12,8 +12,6 @@ body {
   @include body;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
   background-color: var(--fsa-primary_white);
   color: var(--fsa-primary_black);
   position: relative;
