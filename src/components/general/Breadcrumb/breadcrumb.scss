@@ -13,13 +13,8 @@ $mobileOverlayWidth: 0.75rem;
   }
   &__left {
     @include grid-cols(4, 4);
-    @media screen and (min-width: $fsa-lg) {
+    @media screen and (min-width: $fsa-md) {
       @include grid-cols(8);
-    }
-    .full & {
-      @media screen and (max-width: $fsa-md) {
-        @include grid-cols(12);
-      }
     }
     padding-left: 0 !important;
     padding-right: 0 !important;
