@@ -28,6 +28,10 @@ PaginationMid.args = {
   totalPages: 16,
   currentPage: 6,
   maxVisiblePages: 4,
+  firstLabel: "First",
+  previousLabel: "Previous",
+  nextLabel: "Next",
+  lastLabel: "Last",
 }
 
 export const PaginationEnd = Template.bind({});
@@ -36,4 +40,8 @@ PaginationEnd.args = {
   totalPages: 9,
   currentPage: 9,
   maxVisiblePages: 4,
+  firstLabel: "First",
+  previousLabel: "Previous",
+  nextLabel: "Next",
+  lastLabel: "Last",
 }

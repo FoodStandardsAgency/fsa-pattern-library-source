@@ -5,9 +5,9 @@
   <ul class="pagination__list">
     <li>
       <ul class="pagination__item-group pagination__back{{ currentPage == 1 ? ' pagination__item-group--hidden' : '' }}"{{ currentPage == 1 ? 'aria-hidden="true"' : '' }}>
-        <li class="pagination__item pagination__item--first"><a data-page="1" href="#">First</a></li>
+        <li class="pagination__item pagination__item--first"><a data-page="1" href="#">{{ firstLabel }}</a></li>
         <li class="pagination__item pagination__item--previous"><a data-page="{{ currentPage - 1 }}"
-                                                                   href="#">Previous</a>
+                                                                   href="#">{{ previousLabel }}</a>
         </li>
       </ul>
     </li>
@@ -66,8 +66,8 @@
     </li>
     <li>
       <ul class="pagination__item-group pagination__forward{{ currentPage == totalPages ? ' pagination__item-group--hidden' : '' }}"{{ currentPage == totalPage ? 'aria-hidden="true"' : '' }}>
-        <li class="pagination__item pagination__item--next"><a data-page="{{ currentPage + 1 }}" href="#">Next</a></li>
-        <li class="pagination__item pagination__item--last"><a data-page="{{ totalPages }}" href="#">Last</a></li>
+        <li class="pagination__item pagination__item--next"><a data-page="{{ currentPage + 1 }}" href="#">{{ nextLabel }}</a></li>
+        <li class="pagination__item pagination__item--last"><a data-page="{{ totalPages }}" href="#">{{ lastLabel }}</a></li>
       </ul>
     </li>
   </ul>
