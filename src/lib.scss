@@ -155,8 +155,17 @@ $fsa-xxl: 1920px;
     outline: none;
     text-decoration: none;
     background-color: var(--fsa-tertiary_light-yellow);
-    border-bottom: 4px solid var(--fsa-primary_black);
-    margin-bottom: -4px;
+    border-bottom: 0.25rem solid var(--fsa-primary_black);
+    margin-bottom: -0.25rem;
+  }
+}
+
+@mixin link-simple {
+  color: var(--fsa-primary_dark-green);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--fsa__link-green);
   }
 }
 
