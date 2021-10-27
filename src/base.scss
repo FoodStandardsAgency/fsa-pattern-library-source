@@ -81,3 +81,7 @@ p {
   width: 1px;
   overflow: hidden;
 }
+
+.link {
+  @include link;
+}
