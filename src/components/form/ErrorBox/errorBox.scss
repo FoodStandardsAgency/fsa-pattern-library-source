@@ -44,6 +44,11 @@
 
     &:focus {
       color: var(--fsa-primary_black);
+      outline: none;
+      text-decoration: none;
+      background-color: var(--fsa-tertiary_light-yellow);
+      border-bottom: 0.25rem solid var(--fsa-primary_black);
+      margin-bottom: -0.25rem;
     }
   }
 }
