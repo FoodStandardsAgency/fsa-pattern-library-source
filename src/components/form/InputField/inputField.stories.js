@@ -20,6 +20,7 @@ const Template = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
+  name: 'email',
   label: 'Email or username',
   caption: 'Enter your email address or username.',
   required: "",
@@ -29,6 +30,7 @@ Normal.args = {
 
 export const Error = Template.bind({});
 Error.args = {
+  name: 'email',
   label: 'Email or username',
   caption: 'Enter your email address or username.',
   required: "required",
