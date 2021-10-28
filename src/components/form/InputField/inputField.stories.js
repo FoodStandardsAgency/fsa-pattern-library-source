@@ -25,7 +25,8 @@ Normal.args = {
   caption: 'Enter your email address or username.',
   required: "",
   error: false,
-  errorMessage: 'Unrecognized username or password'
+  errorMessage: 'Unrecognized username or password',
+  value: ''
 };
 
 export const Error = Template.bind({});
@@ -35,5 +36,6 @@ Error.args = {
   caption: 'Enter your email address or username.',
   required: "required",
   error: true,
-  errorMessage: 'This information is required'
+  errorMessage: 'This information is required',
+  value: ''
 };

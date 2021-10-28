@@ -119,7 +119,8 @@
       caption: 'Enter your email address or username.',
       required: "",
       error: false,
-      errorMessage: 'Unrecognized username or password'
+      errorMessage: 'Unrecognized username or password',
+      value: ''
     } %}
 
   {% include '../../components/form/InputField/inputField.html.twig' with {
@@ -128,7 +129,8 @@
       caption: 'Enter your email address or username.',
       required: "required",
       error: true,
-      errorMessage: 'Unrecognized username or password'
+      errorMessage: 'Unrecognized username or password',
+      value: ''
     } %}
 
     {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {

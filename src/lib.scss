@@ -354,7 +354,7 @@ $mobileGutter: 1rem;
       margin-top: 1rem;
       @include body;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
     }
 
     &__input {
