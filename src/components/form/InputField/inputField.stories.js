@@ -39,3 +39,15 @@ Error.args = {
   errorMessage: 'This information is required',
   value: ''
 };
+
+export const Password = Template.bind({});
+Password.args = {
+  name: 'password',
+  label: 'Password',
+  caption: 'Enter your password.',
+  required: "required",
+  error: false,
+  errorMessage: 'Unrecognized password',
+  value: '',
+  type: 'password'
+};
