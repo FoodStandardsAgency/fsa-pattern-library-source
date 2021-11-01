@@ -1,0 +1,24 @@
+
+<div class="largePromoGroup">
+  {% for key, row in promoGroup %}
+    <div class="largePromoGroup__row largePromoGroup__row--{{ key is even ? "even" : "odd" }}">
+      <div style="background-image: url({{ row.image }})" class="largePromoGroup__background-image"></div>
+      <div class="largePromoGroup__content">
+        {% if row.title %}
+          <h2 class="largePromoGroup__title">{{ row.title }}</h2>
+        {% endif %}
+        {% if row.description %}
+          <div class="largePromoGroup__description">{{ row.description }}</div>
+        {% endif %}
+        <div class="largePromoGroup__cta">
+          {% include '../../general/Button/button.html.twig' with {
+            element: 'link',
+            type: key is even ? "secondary" : "primary",
+            url: row.ctaLink,
+            label:row.ctaLabel,
+          } %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
