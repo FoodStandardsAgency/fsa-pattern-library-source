@@ -12,7 +12,7 @@
     {% for field in fields %}
       {% if field.results > 0 %}
         <div class="accordion__field">
-          <input class="accordion__input" type="checkbox" id="{{ field.id }}">
+          <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ field.name }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
           <label class="accordion__label" for="{{ field.id }}">{{ field.label }} ({{ field.results }})</label>
         </div>
       {% endif %}
@@ -31,7 +31,7 @@
     {% for field in fields_one %}
       {% if field.results > 0 %}
         <div class="accordion__field">
-          <input class="accordion__input" type="checkbox" id="{{ field.id }}1">
+          <input class="accordion__input" type="checkbox" id="{{ field.id }}1" name="{{ field.name }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
           <label class="accordion__label" for="{{ field.id }}1">{{ field.label }} ({{ field.results }})</label>
         </div>
       {% endif %}
@@ -50,7 +50,7 @@
     {% for field in fields_two %}
       {% if field.results > 0 %}
         <div class="accordion__field">
-          <input class="accordion__input" type="checkbox" id="{{ field.id }}2">
+          <input class="accordion__input" type="checkbox" id="{{ field.id }}2" name="{{ field.name }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
           <label class="accordion__label" for="{{ field.id }}2">{{ field.label }} ({{ field.results }})</label>
         </div>
       {% endif %}
