@@ -1,0 +1,11 @@
+<section class="service-links">
+  <h1 class="service-links__title">{{ title }}</h1>
+  <p class="service-links__title">{{ description }}</p>
+  <div class="service-links__cards">
+    <div class="service-links__card">
+    {% for link in links %}
+      <a href="{{ link.href }}" class="serice-links__anchor">{{ link.label }}</a>
+    {% endfor %}
+    </div>
+  </div>
+</section>
