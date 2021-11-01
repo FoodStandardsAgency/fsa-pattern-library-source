@@ -1,4 +1,5 @@
 import serviceLinks from './serviceLinks.html.twig';
+import './serviceLinks.scss';
 
 export default {
   title: 'Components/Landing/Service Links',

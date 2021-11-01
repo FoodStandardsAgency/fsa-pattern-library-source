@@ -1,0 +1,12 @@
+@import 'src/lib.scss';
+
+.service-links {
+  &__title {
+    @include h2;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  
+}
