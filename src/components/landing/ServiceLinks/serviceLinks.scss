@@ -5,8 +5,60 @@
     @include h2;
     margin: 0;
     padding: 0;
+    color: var(--fsa-primary_black);
   }
 
+  &__description {
+    @include body;
+    margin: 1rem 0 0 0;
+  }
 
-  
+  &__cards {
+    margin: 2rem 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__card {
+    @include h5;
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-top: 2px solid var(--fsa-secondary_mid-purple);
+    cursor: pointer;
+    background-color: var(--fsa-primary_white);
+
+    & + & {
+      margin: 1rem 0 0 0;
+    }
+
+    &:focus-within {
+      background-color: var(--fsa-tertiary_light-yellow);
+    }
+
+    &:hover {
+      .service-links__anchor {
+        text-decoration: underline;
+        color: var(--fsa__link-green);
+      }
+    }
+  }
+
+  &__anchor {
+    padding: 0;
+    margin: 0;
+    color: var(--fsa-primary_black);
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--fsa__link-green);
+    }
+
+    &:active, &:visited {
+      color: var(--fsa-primary_black)''
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
