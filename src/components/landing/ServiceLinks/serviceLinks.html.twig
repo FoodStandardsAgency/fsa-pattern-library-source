@@ -1,11 +1,11 @@
 <section class="service-links">
   <h2 class="service-links__title">{{ title }}</h2>
   <p class="service-links__description">{{ description }}</p>
-  <div class="service-links__cards">
-    <div class="service-links__card">
+  <ul class="service-links__cards">
     {% for link in links %}
-      <a href="{{ link.href }}" class="serice-links__anchor">{{ link.label }}</a>
+      <li class="service-links__card">
+        <a href="{{ link.href }}" class="service-links__anchor">{{ link.label }}</a>
+      </li>
     {% endfor %}
-    </div>
-  </div>
+  </ul>
 </section>
