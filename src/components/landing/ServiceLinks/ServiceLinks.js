@@ -12,18 +12,12 @@ export default function () {
     if (!numOfLinks) return;
 
     serviceLinks.forEach((serviceLink) => {
-      if (numOfLinks === 1) {
-        //Only one link
-        serviceLinks.classList.add('service-links__card--single');
-      } else if (numOfLinks === 2) {
-        //2 links
-        serviceLinks.classList.add('service-links__card--two');
-      } else if (numOfLinks % 3 === 0 || numOfLinks === 5) {
-        //3, 5 or 6 links
-        serviceLinks.classList.add('service-links__card--three');
+      if (numOfLinks % 3 === 0 || numOfLinks === 5 || numOfLinks === 1) {
+        //1, 3, 5 or 6 links
+        serviceLink.classList.add('service-links__card--some');
       } else {
-        //4, 6, 7 and 8 links
-        serviceLinks.classList.add('service-links__card--many');
+        //4, 7 and 8 links
+        serviceLink.classList.add('service-links__card--many');
       }
     });
   });

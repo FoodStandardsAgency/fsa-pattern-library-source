@@ -25,7 +25,7 @@
     @include h5;
     @include grid-cols(4, 4);
     box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
-    padding: 1rem 2.75rem 1rem 1rem;
+    padding: 1rem 3.25rem 1rem 1rem !important;
     border-top: 2px solid var(--fsa-secondary_mid-purple);
     cursor: pointer;
     background-color: var(--fsa-primary_white);
@@ -60,13 +60,6 @@
       &:nth-child(odd) {
         margin-right: 2rem;
       }
-
-      &--single {
-        margin: 0 !important;
-        width: 100%;
-        max-width: 100%;
-        flex-grow: 1;
-      }
     }
 
     @media screen and (min-width: $fsa-xxl) {
@@ -99,13 +92,6 @@
         &:not(:nth-child(4n)) {
           margin-right: 2rem;
         }
-      }
-
-      &--single {
-        margin: 0;
-        width: 100%;
-        max-width: 100%;
-        flex-grow: 1;
       }
     }
   }
