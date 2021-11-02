@@ -4,21 +4,3 @@
 
 import './serviceLinks.html.twig';
 import './serviceLinks.scss';
-
-export default function () {
-  // window.addEventListener('DOMContentLoaded', function () {
-  //   const serviceLinks = document.querySelectorAll('.service-links__card');
-  //   const numOfLinks = serviceLinks.length;
-  //   if (!numOfLinks) return;
-
-  //   serviceLinks.forEach((serviceLink) => {
-  //     if (numOfLinks === 1 || numOfLinks % 3 === 0) {
-  //       //1, 3 or 6 links
-  //       serviceLink.classList.add('service-links__card--3');
-  //     } else {
-  //       //others
-  //       serviceLink.classList.add('service-links__card--4');
-  //     }
-  //   });
-  // });
-}
