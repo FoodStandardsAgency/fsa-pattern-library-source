@@ -37,13 +37,6 @@
       margin: 1rem 0 0 0;
     }
 
-    &:hover {
-      .service-links__anchor {
-        text-decoration: underline;
-        color: var(--fsa__link-green);
-      }
-    }
-
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(6);
       max-width: calc((100% / 12) * 6 - 1rem);
@@ -110,14 +103,14 @@
     color: var(--fsa-primary_black);
     display: block;
 
+    &:active,
+    &:visited {
+      color: var(--fsa-primary_black);
+    }
+
     &:hover {
       text-decoration: underline;
       color: var(--fsa__link-green);
-    }
-
-    &:active,
-    &:visited {
-      color: var(--fsa-primary_black) '';
     }
 
     &:focus {
