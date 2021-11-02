@@ -31,7 +31,7 @@
     background-color: var(--fsa-primary_white);
     background-image: url(./arrow-right.svg);
     background-repeat: no-repeat;
-    background-position: right 1rem center;
+    background-position: right 1rem top 1.25rem;
 
     & + & {
       margin: 1rem 0 0 0;
