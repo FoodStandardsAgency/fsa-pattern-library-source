@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const DrupalTemplatePlugin = require('deeson-webpack-config-starter/drupal-templates-webpack-plugin');
-const postcssFocusWithin = require('postcss-focus-within');
 
 module.exports = {
   module: {
@@ -13,15 +12,9 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           'css-loader',
+          'postcss-loader',
           // Compiles Sass to CSS
           'sass-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: () => [postcssFocusWithin()],
-            },
-          },
         ],
       },
       {
