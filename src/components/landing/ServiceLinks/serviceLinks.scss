@@ -25,7 +25,7 @@
     @include h5;
     @include grid-cols(4, 4);
     box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
-    padding: 1rem 3.25rem 1rem 1rem !important;
+    padding: 0 !important;
     border-top: 2px solid var(--fsa-secondary_mid-purple);
     cursor: pointer;
     background-color: var(--fsa-primary_white);
@@ -35,10 +35,6 @@
 
     & + & {
       margin: 1rem 0 0 0;
-    }
-
-    &:focus-within {
-      background-color: var(--fsa-tertiary_light-yellow);
     }
 
     &:hover {
@@ -109,9 +105,10 @@
   }
 
   &__anchor {
-    padding: 0;
+    padding: 1rem;
     margin: 0;
     color: var(--fsa-primary_black);
+    display: block;
 
     &:hover {
       text-decoration: underline;
@@ -125,6 +122,7 @@
 
     &:focus {
       outline: none;
+      background-color: var(--fsa-tertiary_light-yellow);
     }
   }
 }
