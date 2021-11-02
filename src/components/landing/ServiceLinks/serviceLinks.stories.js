@@ -1,6 +1,6 @@
 import serviceLinks from './serviceLinks.html.twig';
 import './serviceLinks.scss';
-import serviceLinksJS from './serviceLinks';
+import serviceLinksJS from './ServiceLinks';
 
 serviceLinksJS();
 
