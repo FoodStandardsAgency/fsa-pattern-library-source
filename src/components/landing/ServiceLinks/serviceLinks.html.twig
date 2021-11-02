@@ -1,6 +1,10 @@
 <section class="service-links">
-  <h2 class="service-links__title">{{ title }}</h2>
-  <p class="service-links__description">{{ description }}</p>
+  {% if title is defined %}
+    <h2 class="service-links__title">{{ title }}</h2>
+  {% endif %}
+  {% if description is defined %}
+    <p class="service-links__description">{{ description }}</p>
+  {% endif %}
   <ul class="service-links__cards">
     {% for link in links %}
       <li class="service-links__card">
