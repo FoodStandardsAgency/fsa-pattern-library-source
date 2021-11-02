@@ -1,7 +1,7 @@
 {% set spaceless_title = title|replace({" ": ""}) %}
 {% set description_id = "accordion__description--" ~ spaceless_title %}
 {% set fields_id = "accordion__fields--" ~ spaceless_title %}
-<fieldset class="accordion {{ fields is empty or fields is not defined ? "accordion--hidden" : "" }}" aria-describedby={{ description_id }}>
+<fieldset class="accordion {{ fields is empty or fields is not defined ? "accordion--hidden" : "" }}" aria-describedby="{{ description_id }}" data-name="{{ name }}">
   <legend class="accordion__legend">
     <button class="accordion__button {{ open ? "accordion__button--expanded" : ""}}" aria-expanded={{ open ? "true" : "false"}} aria-controls={{ fields_id }}>
       <span class="accordion__title-text">{{ title }}</span>
@@ -12,7 +12,7 @@
     {% for field in fields %}
       {% if field.results > 0 %}
         <div class="accordion__field">
-          <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ field.name }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
+          <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ name ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
           <label class="accordion__label" for="{{ field.id }}">{{ field.label }} ({{ field.results }})</label>
         </div>
       {% endif %}
@@ -20,7 +20,7 @@
   </div>
 </fieldset>
 
-<fieldset class="accordion {{ fields is empty or fields is not defined ? "accordion--hidden" : "" }}" aria-describedby="{{ description_id }}1">
+<fieldset class="accordion {{ fields is empty or fields is not defined ? "accordion--hidden" : "" }}" aria-describedby="{{ description_id }}1" data-name="{{ name_one }}">
   <legend class="accordion__legend">
     <button class="accordion__button {{ open ? "accordion__button--expanded" : ""}}" aria-expanded={{ open ? "true" : "false"}} aria-controls="{{ fields_id }}1">
       <span class="accordion__title-text">{{ title_one }}</span>
@@ -31,7 +31,7 @@
     {% for field in fields_one %}
       {% if field.results > 0 %}
         <div class="accordion__field">
-          <input class="accordion__input" type="checkbox" id="{{ field.id }}1" name="{{ field.name }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
+          <input class="accordion__input" type="checkbox" id="{{ field.id }}1" name="{{ name_one ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
           <label class="accordion__label" for="{{ field.id }}1">{{ field.label }} ({{ field.results }})</label>
         </div>
       {% endif %}
@@ -39,7 +39,7 @@
   </div>
 </fieldset>
 
-<fieldset class="accordion {{ fields is empty or fields is not defined ? "accordion--hidden" : "" }}" aria-describedby="{{ description_id }}2">
+<fieldset class="accordion {{ fields is empty or fields is not defined ? "accordion--hidden" : "" }}" aria-describedby="{{ description_id }}2" data-name="{{ name_two }}">
   <legend class="accordion__legend">
     <button class="accordion__button {{ open ? "accordion__button--expanded" : ""}}" aria-expanded={{ open ? "true" : "false"}} aria-controls="{{ fields_id }}2">
       <span class="accordion__title-text">{{ title_two }}</span>
@@ -50,7 +50,7 @@
     {% for field in fields_two %}
       {% if field.results > 0 %}
         <div class="accordion__field">
-          <input class="accordion__input" type="checkbox" id="{{ field.id }}2" name="{{ field.name }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
+          <input class="accordion__input" type="checkbox" id="{{ field.id }}2" name="{{ name_two ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
           <label class="accordion__label" for="{{ field.id }}2">{{ field.label }} ({{ field.results }})</label>
         </div>
       {% endif %}
