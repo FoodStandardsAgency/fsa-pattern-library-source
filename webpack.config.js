@@ -12,7 +12,17 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           'css-loader',
-          'postcss-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                postcssFocusWithin(),
+                autoprefixer({ grid: true }),
+                inlineSvg,
+              ],
+            },
+          },
           // Compiles Sass to CSS
           'sass-loader',
         ],
