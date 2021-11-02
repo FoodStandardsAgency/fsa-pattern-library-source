@@ -6,6 +6,12 @@ serviceLinksJS();
 
 export default {
   title: 'Components/Landing/Service Links',
+  argTypes: {
+    columns: {
+      options: [2, 3, 4],
+      control: { type: 'radio' },
+    },
+  },
 };
 
 const Template = (args) => serviceLinks(args);
@@ -21,6 +27,7 @@ FourLinks.args = {
     { label: 'Register a food business', href: '#' },
     { label: 'Allergen guidance for businesses', hash: '#' },
   ],
+  columns: 2,
 };
 
 export const SixLinks = Template.bind({});
@@ -36,6 +43,7 @@ SixLinks.args = {
     { label: 'Safer food, better business', href: '#' },
     { label: 'Apply for a regulated product authorisation', href: '#' },
   ],
+  columns: 3,
 };
 
 
@@ -54,4 +62,5 @@ EightLinks.args = {
     { label: 'Register a food business', href: '#' },
     { label: 'Allergen guidance for businesses', hash: '#' },
   ],
+  columns: 4,
 };

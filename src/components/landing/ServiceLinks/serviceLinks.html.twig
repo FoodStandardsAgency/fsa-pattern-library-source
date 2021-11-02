@@ -7,7 +7,7 @@
   {% endif %}
   <ul class="service-links__cards">
     {% for link in links %}
-      <li class="service-links__card">
+      <li class="service-links__card service-links__card--{{ columns }}">
         <a href="{{ link.href }}" class="service-links__anchor">{{ link.label }}</a>
       </li>
     {% endfor %}
