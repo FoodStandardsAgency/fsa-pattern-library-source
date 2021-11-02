@@ -17,7 +17,7 @@ module.exports = {
             options: {
               ident: 'postcss',
               plugins: () => [
-                postcssFocusWithin(),
+                postcssFocusWithin,
                 autoprefixer({ grid: true }),
                 inlineSvg,
               ],
