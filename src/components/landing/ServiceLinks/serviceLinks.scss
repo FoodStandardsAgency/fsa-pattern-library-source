@@ -14,18 +14,24 @@
   }
 
   &__cards {
-    margin: 2rem 0 0 0;
     padding: 0;
+    margin: 2rem 0 0 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__card {
     @include h5;
+    @include grid-cols(4, 4);
     box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 1rem 2.75rem 1rem 1rem;
     border-top: 2px solid var(--fsa-secondary_mid-purple);
     cursor: pointer;
     background-color: var(--fsa-primary_white);
+    background-image: url(./arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
 
     & + & {
       margin: 1rem 0 0 0;
@@ -41,6 +47,67 @@
         color: var(--fsa__link-green);
       }
     }
+
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(6);
+      max-width: calc((100% / 12) * 6 - 1rem);
+
+      /*Using css selectors as flex gap doesn't work in IE11.*/
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 2rem;
+      }
+
+      &--single {
+        margin: 0 !important;
+        width: 100%;
+        max-width: 100%;
+        flex-grow: 1;
+      }
+    }
+
+    @media screen and (min-width: $fsa-xxl) {
+      & + & {
+        margin-top: 2rem;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: 0;
+      }
+
+      &--some {
+        @include grid-cols(4);
+        max-width: calc((100% / 12) * 4 - 2rem);
+
+        &:not(:nth-child(3n)) {
+          margin-right: 2rem;
+        }
+      }
+
+      &--many {
+        @include grid-cols(3);
+        max-width: calc((100% / 12) * 3 - 1.5rem);
+
+        &:nth-child(4) {
+          margin-top: 0;
+        }
+
+        &:not(:nth-child(4n)) {
+          margin-right: 2rem;
+        }
+      }
+
+      &--single {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        flex-grow: 1;
+      }
+    }
   }
 
   &__anchor {
@@ -53,8 +120,9 @@
       color: var(--fsa__link-green);
     }
 
-    &:active, &:visited {
-      color: var(--fsa-primary_black)''
+    &:active,
+    &:visited {
+      color: var(--fsa-primary_black) '';
     }
 
     &:focus {
