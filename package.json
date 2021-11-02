@@ -6,7 +6,6 @@
   "dependencies": {
     "element-closest-polyfill": "^1.0.4",
     "postcss": "^8.3.11",
-    "postcss-focus-within": "^5.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "url-polyfill": "^1.1.12"
