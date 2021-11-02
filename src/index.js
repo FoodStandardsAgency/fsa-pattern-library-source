@@ -1,7 +1,6 @@
 import './base.scss';
 import 'url-polyfill';
-import cssVars from 'css-vars-ponyfill';
-import 'focus-within-polyfill';
+import cssVars from 'css-vars-ponyfill';  
 
 import './components/general/Breadcrumb/breadcrumb';
 import './components/general/Button/Button';
