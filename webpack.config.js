@@ -1,6 +1,8 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const DrupalTemplatePlugin = require('deeson-webpack-config-starter/drupal-templates-webpack-plugin');
+const postcssFocusWithin = require('postcss-focus-within');
+
 module.exports = {
   module: {
     rules: [
@@ -10,10 +12,16 @@ module.exports = {
           // Creates `style` nodes from JS strings
           MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
-          "sass-loader",
-          "postcss-loader",
+          'sass-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [postcssFocusWithin()],
+            },
+          },
         ],
       },
       {
@@ -35,7 +43,7 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: { regExp: '.*/src/(.*)', name: '[1]' }
+            options: { regExp: '.*/src/(.*)', name: '[1]' },
           },
         ],
       },
@@ -49,7 +57,7 @@ module.exports = {
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, 'src/'),
-    }
+    },
   },
   mode: 'development',
   plugins: [
@@ -57,9 +65,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
   ],
 };
-
