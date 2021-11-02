@@ -48,7 +48,7 @@
       }
     }
 
-    @media screen and (min-width: $fsa-xxl) {
+    @media screen and (min-width: $fsa-xl) {
       & + & {
         margin-top: 2rem;
       }
@@ -59,7 +59,7 @@
 
       &--3 {
         @include grid-cols(4);
-        max-width: calc((100% / 12) * 4 - 2rem);
+        max-width: calc((100% / 12) * 4 - 1.34rem);
 
         &:nth-child(3) {
           margin-top: 0;
@@ -95,7 +95,7 @@
   }
 
   &__anchor {
-    padding: 1rem;
+    padding: 1rem 3.5rem 1rem 1rem;
     margin: 0;
     color: var(--fsa-primary_black);
     display: block;
