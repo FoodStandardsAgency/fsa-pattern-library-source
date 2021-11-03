@@ -2,6 +2,7 @@
   <h2 class="promo-group__main-heading">{{ title }}</h2>
   {% for card in cards %}
     <div class="promo-group__card">
+      <div class="promo-group__background" style="background-image: url('{{ card.image }}');height: 500px; width: 500px"></div>
       <h3 class="promo-group__sub-heading">
         {% if card.promo_link is defined %}
           <a class="promo-group__title-link" href="{{ card.promo_link }}">{{ card.title }}</a>
