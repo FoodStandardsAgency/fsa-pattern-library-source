@@ -1,22 +1,26 @@
-{% set is_promo_block = promo_link is defined %}
 <div class="promo-group">
-  <h3 class="promo-group__heading">
-    {% if is_promo_block %}
-      <a class="promo-group__title-link" href="{{ promo_link }}">{{ title }}</a>
-    {% else %}
-      {{ title }}
-    {% endif %}
-  </h3>
-  {% if description is defined %}
-    <p class="promo-group__description">{{ description }}</p>
-  {% endif %}
-  {% if not is_promo_block %}
-    <ul class="promo-group__list">
-      {% for link in link_list %}
-        <li class="promo-group__list-item">
-          <a class="promo-group__list-link" href="{{ link.url }}">{{ link.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <h2 class="promo-group__main-heading">{{ title }}</h2>
+  {% for card in cards %}
+    <div class="promo-group__card">
+      <h3 class="promo-group__sub-heading">
+        {% if card.promo_link is defined %}
+          <a class="promo-group__title-link" href="{{ card.promo_link }}">{{ card.title }}</a>
+        {% else %}
+          {{ card.title }}
+        {% endif %}
+      </h3>
+      {% if card.description is defined %}
+        <p class="promo-group__description">{{ card.description }}</p>
+      {% endif %}
+      {% if card.link_list is defined %}
+        <ul class="promo-group__list">
+          {% for link in card.link_list %}
+            <li class="promo-group__list-item">
+              <a class="promo-group__list-link" href="{{ link.url }}">{{ link.label }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endfor %}
 </div>
