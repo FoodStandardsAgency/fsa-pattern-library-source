@@ -17,25 +17,11 @@ module.exports = {
         ],
       },
       {
-        issuer: /\.s[ac]ss$/i,
-        test: /.*\.(gif|png|jpe?g|svg)(\?v=\d+\.\d+\.\d+)?$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1000,
-              name: '[path][name].[ext]',
-              context: 'src',
-            },
-          },
-        ],
-      },
-      {
         test: /.*\.(gif|png|jpe?g|svg)(\?v=\d+\.\d+\.\d+)?$/i,
         use: [
           {
             loader: 'file-loader',
-            options: { regExp: '.*/src/(.*)', name: '[1]' }
+            options: { regExp: '.*/src/(.*)', name: './[1]' }
           },
         ],
       },
