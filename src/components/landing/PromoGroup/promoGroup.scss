@@ -34,7 +34,8 @@
     background-color: var(--fsa_tint);
     border: solid 4px var(--fsa_border);
     margin-top: 1.25rem;
-    padding: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     transition: border-color 0.1s ease-in;
     position: relative;
 
@@ -66,7 +67,6 @@
       &:hover {
         border-color: var(--fsa-primary_dark-green);
       }
-
     }
 
     &--multiple-links {
@@ -123,6 +123,13 @@
     &:active,
     &:visited {
       color: var(--fsa-primary_dark-green);
+    }
+
+    &:focus {
+      color: var(--fsa-primary_black);
+      outline: none;
+      background-color: var(--fsa-tertiary_light-yellow);
+      border-bottom: 0.25rem solid var(--fsa-primary_black);
     }
 
     &::before {
