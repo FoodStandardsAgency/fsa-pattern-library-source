@@ -19,10 +19,10 @@ FourLinks.args = {
   description:
     'This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.',
   links: [
-    { label: 'Safer food, better business', href: '#' },
-    { label: 'Apply for a regulated product authorisation', href: '#' },
-    { label: 'Register a food business', href: '#' },
-    { label: 'Allergen guidance for businesses', hash: '#' },
+    { label: 'Safer food, better business', url: '#' },
+    { label: 'Apply for a regulated product authorisation', url: '#' },
+    { label: 'Register a food business', url: '#' },
+    { label: 'Allergen guidance for businesses', url: '#' },
   ],
   columns: 2,
 };
@@ -33,12 +33,12 @@ SixLinks.args = {
   description:
     'This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.',
   links: [
-    { label: 'Safer food, better business', href: '#' },
-    { label: 'Apply for a regulated product authorisation', href: '#' },
-    { label: 'Register a food business', href: '#' },
+    { label: 'Safer food, better business', url: '#' },
+    { label: 'Apply for a regulated product authorisation', url: '#' },
+    { label: 'Register a food business', url: '#' },
     { label: 'Allergen guidance for businesses', hash: '#' },
-    { label: 'Safer food, better business', href: '#' },
-    { label: 'Apply for a regulated product authorisation', href: '#' },
+    { label: 'Safer food, better business', url: '#' },
+    { label: 'Apply for a regulated product authorisation', url: '#' },
   ],
   columns: 3,
 };
@@ -50,14 +50,14 @@ EightLinks.args = {
   description:
     'This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.',
   links: [
-    { label: 'Safer food, better business', href: '#' },
-    { label: 'Apply for a regulated product authorisation', href: '#' },
-    { label: 'Register a food business', href: '#' },
+    { label: 'Safer food, better business', url: '#' },
+    { label: 'Apply for a regulated product authorisation', url: '#' },
+    { label: 'Register a food business', url: '#' },
     { label: 'Allergen guidance for businesses', hash: '#' },
-    { label: 'Safer food, better business', href: '#' },
-    { label: 'Apply for a regulated product authorisation', href: '#' },
-    { label: 'Register a food business', href: '#' },
-    { label: 'Allergen guidance for businesses', hash: '#' },
+    { label: 'Safer food, better business', url: '#' },
+    { label: 'Apply for a regulated product authorisation', url: '#' },
+    { label: 'Register a food business', url: '#' },
+    { label: 'Allergen guidance for businesses', url: '#' },
   ],
   columns: 4,
 };
