@@ -1,0 +1,15 @@
+<section class="service-links">
+  {% if title is defined %}
+    <h2 class="service-links__title">{{ title }}</h2>
+  {% endif %}
+  {% if description is defined %}
+    <p class="service-links__description">{{ description }}</p>
+  {% endif %}
+  <ul class="service-links__cards">
+    {% for link in links %}
+      <li class="service-links__card service-links__card--{{ columns }}">
+        <a href="{{ link.url }}" class="service-links__anchor">{{ link.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

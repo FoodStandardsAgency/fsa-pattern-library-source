@@ -1,5 +1,6 @@
 import './collapsibleCheckbox.html.twig';
 import './collapsibleCheckbox.scss';
+import 'element-closest-polyfill';
 
 export default function () {
   let DOMContentFirstLoad = true;
