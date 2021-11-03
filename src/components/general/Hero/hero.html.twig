@@ -1,0 +1,41 @@
+{% if backgroundColour == 'green' %}
+  {% set theme = ' hero__theme--green' %}
+  {% set ctaType = 'secondary' %}
+{% elseif backgroundColour == 'blue' %}
+  {% set theme = ' hero__theme--blue' %}
+  {% set ctaType = 'secondary' %}
+{% elseif backgroundColour == 'grey' %}
+  {% set theme = ' hero__theme--grey' %}
+  {% set ctaType = 'primary' %}
+{% else %}
+  {% set theme = ' hero__theme--green' %}
+  {% set ctaType = 'secondary' %}
+{% endif %}
+
+<section class="hero{{ image ? ' hero--with-image' : '' }}{{ theme }}">
+  <div class="hero__container">
+    <div class="hero__row">
+      <div class="hero__content-wrapper">
+        <div class="hero__content{{ theme }}">
+          <div class="hero__text-content">
+            <h1 class="hero__title">{{ title }}</h1>
+            <p class="hero__description">{{ content }}</p>
+            {% for cta in ctas %}
+              <div class="hero__cta">
+                {% include '../Button/button.html.twig' with {
+                  type: ctaType,
+                  url: cta.link,
+                  label: cta.name,
+                  element: 'link',
+                } %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {# {% if image %} #}
+
+      {# {% endif %} #}
+    </div>
+  </div>
+</section>

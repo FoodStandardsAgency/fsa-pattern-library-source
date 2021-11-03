@@ -1,7 +1,22 @@
 {% extends "../../layout/fullWidth/fullWidth.html.twig" %}
+{% block hero %}
+  {% include '../../components/general/Hero/hero.html.twig' with {
+    type: 'hero',
+    backgroundColour: 'green',
+    title: 'Food we can trust',
+    content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+    ctas: [
+      {
+        external: false,
+        name: 'Food and allergy',
+        link: '#',
+      },
+    ],
+  } %}
+{% endblock %}
 {% block content %}
-{# Include templates for form components here #}
-{% set breadcrumbItems = [
+  {# Include templates for form components here #}
+  {% set breadcrumbItems = [
     {
       'text': 'Home',
       'url': '/'
@@ -18,7 +33,6 @@
       'text': 'Hazard Analysis and Critical Control Point',
       'url': null
     },
-  ]
-%}
-{% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumbItems, expanded: false } %}
+  ] %}
+  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumbItems, expanded: false } %}
 {% endblock %}
