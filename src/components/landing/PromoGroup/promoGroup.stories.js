@@ -2,7 +2,7 @@ import promoGroup from './promoGroup.html.twig';
 import './promoGroup.scss';
 
 export default {
-  title: 'Components/Landing/PromoGroup',
+  title: 'Components/Landing/Promo Group',
 };
 
 const Template = (args) => promoGroup(args);
