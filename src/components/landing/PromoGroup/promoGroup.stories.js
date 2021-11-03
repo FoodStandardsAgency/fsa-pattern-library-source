@@ -1,4 +1,5 @@
 import promoGroup from './promoGroup.html.twig';
+import './promoGroup.scss';
 
 export default {
   title: 'Components/Landing/PromoGroup',
