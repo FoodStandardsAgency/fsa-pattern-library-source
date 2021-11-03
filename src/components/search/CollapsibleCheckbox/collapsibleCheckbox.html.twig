@@ -11,7 +11,7 @@
   <div class="accordion__fields {{ open ? "accordion__fields--active" : ""}}" id={{ fields_id }}>
     {% for field in fields %}
       {% if field.results > 0 %}
-        <div class="accordion__field">
+        <div class="accordion__field" key={{ field.id }}>
           <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ name ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked ? "checked" : "" }}>
           <label class="accordion__label" for="{{ field.id }}">{{ field.label }} ({{ field.results }})</label>
         </div>
