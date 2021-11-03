@@ -1,8 +1,8 @@
-{% set is_promo_block = promo_link is defined and link_list is defined and link_list.length > 0 %}
+{% set is_promo_block = promo_link is defined %}
 <div class="promo-group">
   <h3 class="promo-group__heading">
     {% if is_promo_block %}
-      <a href="promo-group__title-link" href="{{ promo__link }}">{{ title }}</a>
+      <a class="promo-group__title-link" href="{{ promo_link }}">{{ title }}</a>
     {% else %}
       {{ title }}
     {% endif %}
