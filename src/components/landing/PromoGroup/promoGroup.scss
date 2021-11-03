@@ -1,16 +1,6 @@
 @import 'src/lib.scss';
 
 .promo-group {
-  @include grid-container;
-
-  &__grid-row {
-    @include grid-row;
-  }
-
-  &__wrapper {
-    @include grid-cols(4, 4);
-  }
-
   &__main-heading {
     @include h2;
     color: var(--fsa-primary_black);
@@ -29,11 +19,59 @@
     }
   }
 
+  &__cards {
+    @include grid-container;
+  }
+
+  &__wrapper {
+    @include grid-row;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__card {
+    @include grid-cols(4, 4);
     background-color: var(--fsa_tint);
-    border: solid 0.25rem var(--fsa_border);
+    border: solid 4px var(--fsa_border);
     margin-top: 1.25rem;
-    padding-bottom: 3rem;
+    padding: 0;
+    transition: border-color 0.1s ease-in;
+    position: relative;
+
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 2rem;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(4);
+      max-width: calc((100% / 12) * 4 - 1.34rem);
+
+      &:not(:nth-child(3n)) {
+        margin-right: 2rem;
+      }
+    }
+
+    &--one-link {
+      cursor: pointer;
+      padding-bottom: 3.25rem;
+
+      &::after {
+        content: url('./arrow-right.svg');
+        display: block;
+        position: absolute;
+        bottom: 0.5rem;
+        right: 1.25rem;
+      }
+
+      &:hover {
+        border-color: var(--fsa-primary_dark-green);
+      }
+
+    }
+
+    &--multiple-links {
+      padding-bottom: 2.25rem;
+    }
   }
 
   &__background {
@@ -50,7 +88,57 @@
     margin: 1rem 1.25rem 0;
   }
 
+  &__title-link {
+    &:focus {
+      outline: none;
+      background-color: var(--fsa-tertiary_light-yellow);
+      border-bottom: 0.25rem solid var(--fsa-primary_black);
+    }
+  }
+
   &__description {
     margin: 1rem 1.25rem 0;
+    @include body;
+    color: var(--fsa-primary_black);
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 1.25rem;
+  }
+
+  &__list-item {
+    margin-top: 1.25rem;
+
+    @media screen and (min-width: $fsa-xl) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__list-link {
+    @include body;
+
+    &,
+    &:active,
+    &:visited {
+      color: var(--fsa-primary_dark-green);
+    }
+
+    &::before {
+      content: url('./arrow-right.svg');
+      margin-right: 0.5rem;
+      position: relative;
+      top: 0.1rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--fsa__link-green);
+
+      &::before {
+        content: url('./arrow-right-dark.svg');
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 //TODO
 //Block description: what's it for?
-//URL relative path resolving relative to localhost.6006
+//Hover darker green arrow is a little bit bigger than the ligher arrow.
 
 import './promoGroup.html.twig';
 import './promoGroup.scss';
