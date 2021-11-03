@@ -67,10 +67,30 @@
       &:hover {
         border-color: var(--fsa-primary_dark-green);
       }
+
+      @media screen and (min-width: $fsa-md) {
+        padding-bottom: 4.25rem;
+
+        &::after {
+          bottom: 1.25rem;
+        }
+      }
+
+      @media screen and (min-width: $fsa-xl) {
+        padding-bottom: 3.75rem;
+
+        &::after {
+          bottom: 1rem;
+        }
+      }
     }
 
     &--multiple-links {
       padding-bottom: 2.25rem;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      padding-bottom: 2rem;
     }
   }
 
@@ -86,6 +106,14 @@
     @include h3;
     color: var(--fsa-primary_black);
     margin: 1rem 1.25rem 0;
+
+    @media screen and (min-width: $fsa-md) {
+      margin: 2rem 2.25rem 0;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin: 2rem 2rem 0;
+    }
   }
 
   &__title-link {
@@ -100,12 +128,28 @@
     margin: 1rem 1.25rem 0;
     @include body;
     color: var(--fsa-primary_black);
+
+    @media screen and (min-width: $fsa-md) {
+      margin: 1rem 2.25rem 0;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin: 1rem 2rem 0;
+    }
   }
 
   &__list {
     list-style: none;
     padding: 0;
     margin: 0 1.25rem;
+
+    @media screen and (min-width: $fsa-md) {
+      margin: 0 2.25rem;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin: 0rem 2rem;
+    }
   }
 
   &__list-item {
