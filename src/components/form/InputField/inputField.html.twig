@@ -5,6 +5,10 @@
     {% if error %}
     <div class="input-field__error-message">{{ errorMessage }}</div>
     {% endif %}
-    <input required class="input-field__input" type="{{ type ? type : "text" }}" id="{{ name }}-field" name="{{ name }}" aria-required="true" value="{{ value }}" />
+    {% if value %}
+        <input required class="input-field__input" type="text" id="{{ name }}-field" name="{{ name }}" value="{{ value }}" aria-required="true" />
+    {% else %}
+        <input required class="input-field__input" type="text" id="{{ name }}-field" name="{{ name }}" aria-required="true" />
+    {% endif %}
     <div class="input-field__caption">{{ caption }}</div>
 </div>

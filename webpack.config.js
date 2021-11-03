@@ -1,6 +1,7 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const DrupalTemplatePlugin = require('deeson-webpack-config-starter/drupal-templates-webpack-plugin');
+
 module.exports = {
   module: {
     rules: [
@@ -10,24 +11,10 @@ module.exports = {
           // Creates `style` nodes from JS strings
           MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
+          'postcss-loader',
           // Compiles Sass to CSS
-          "sass-loader",
-          "postcss-loader",
-        ],
-      },
-      {
-        issuer: /\.s[ac]ss$/i,
-        test: /.*\.(gif|png|jpe?g|svg)(\?v=\d+\.\d+\.\d+)?$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1000,
-              name: '[path][name].[ext]',
-              context: 'src',
-            },
-          },
+          'sass-loader',
         ],
       },
       {
@@ -35,7 +22,7 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: { regExp: '.*/src/(.*)', name: '[1]' }
+            options: { regExp: '.*/src/(.*)', name: './[1]' }
           },
         ],
       },
@@ -49,7 +36,7 @@ module.exports = {
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, 'src/'),
-    }
+    },
   },
   mode: 'development',
   plugins: [
@@ -57,9 +44,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
   ],
 };
-

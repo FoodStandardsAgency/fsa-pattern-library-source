@@ -2,7 +2,7 @@ import tabs from './tabs.html.twig';
 import './Tabs.js';
 
 export default {
-    title: 'Components/General/Tabs',
+    title: 'Components/Form/Tabs',
     argTypes: {
       type: {
         defaultValue: 'Account details',
