@@ -12,16 +12,6 @@
       text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
       type: 'status'
     } %}
-
-    {% include '../../components/form/MessageBox/messageBox.html.twig' with {
-      text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
-      type: 'error'
-    } %}
-
-    {% include '../../components/form/MessageBox/messageBox.html.twig' with {
-      text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
-      type: 'warning'
-    } %}
     
     {% include '../../components/form/ErrorBox/errorBox.html.twig' with {
       title: 'There is a problem with your submission',
@@ -31,8 +21,8 @@
           'label': 'Please complete the following required fields',
           'fields': [
             {
-              'label': 'E-mail address',
-              'id': 'email'
+              'label': 'First name',
+              'id': 'firstname'
             },
             {
               'label': 'Password',
@@ -44,25 +34,68 @@
           'label': 'Please complete the following with the correct format',
           'fields': [
             {
-              'label': 'Password',
-              'id': 'password'
-            }
-          ]
-        },
-        unrecognized: {
-          'label': 'Unrecognized username or password.',
-          'fields': [
-            {
-              'label': 'Email address or username',
-              'id': 'email-username'
-            }
+              'label': 'E-mail address',
+              'id': 'email'
+            },
           ]
         },
       }
     }%}
+
+    {% include '../../components/form/InputField/inputField.html.twig' with {
+      name: 'title',
+      label: 'Title',
+      caption: 'Enter your title.',
+      required: "",
+      error: false,
+      errorMessage: '',
+      value: 'Mr.'
+    } %}
+
+    {% include '../../components/form/InputField/inputField.html.twig' with {
+      name: 'firstname',
+      label: 'First name',
+      caption: 'Enter your first name.',
+      required: "required",
+      error: true,
+      errorMessage: 'First name is required.',
+      value: ''
+    } %}
+
+    {% include '../../components/form/InputField/inputField.html.twig' with {
+      name: 'lastname',
+      label: 'Last name',
+      caption: 'Enter your last name.',
+      required: "required",
+      error: false,
+      errorMessage: '',
+      value: 'Doe'
+    } %}
+
+    {% include '../../components/form/InputField/inputField.html.twig' with {
+      name: 'email',
+      label: 'E-mail address',
+      caption: 'Enter your email address.',
+      required: "required",
+      error: true,
+      errorMessage: 'Invalid email address',
+      value: 'john.doe@example;com'
+    } %}
+
+    {% include '../../components/form/InputField/inputField.html.twig' with {
+      name: 'password',
+      type:'password',
+      label: 'Password',
+      caption: 'Enter your password.',
+      required: "required",
+      error: true,
+      errorMessage: 'Password is required',
+      value: ''
+    } %}
+
     {% include '../../components/form/Radio/radio.html.twig' with {
       title: 'Email frequency',
-      description: 'How often the emails are',
+      description: 'How often the emails are sent',
       fields: [
         { value: 'immediately', label: 'Send updates immediately', id: 'immediately' },
         { value: 'daily', label: 'Send updates daily', id: 'daily' },
@@ -73,77 +106,27 @@
       error: false,
       default: 'immediately',
     } %}
-    {% include '../../components/form/Radio/radio.html.twig' with {
-      title: 'Email length',
-      description: 'How long the emails are',
-      fields: [
-        { value: 'long', label: 'Send long emails', id: 'long' },
-        { value: 'medium', label: 'Send medium-length emails', id: 'medium' },
-        { value: 'short', label: 'Send short emails', id: 'short' },
-      ],
-      name: 'length',
-      required: "required",
-      error: true,
-      default: 'long',
-    } %}
+    
     {% include '../../components/form/Checkbox/checkbox.html.twig' with {
-      title: 'Food alerts',
+      title: 'Consultations',
       description:
-        'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
+        'Stay up to date with the FSA\'s latest news and consultations by email.',
       fields: [
-        { value: 'one', label: 'Alert one', id: 'one' },
-        { value: 'two', label: 'Alert two', id: 'two' },
-        { value: 'three', label: 'Alert three', id: 'three' },
+        { value: 'all', label: 'All consultations', id: 'all' },
+        { value: 'england', label: 'England consultations', id: 'england' },
+        { value: 'northern-ireland', label: 'Northern Ireland consultations', id: 'northern-ireland' },
+        { value: 'uk-wide', label: 'UK-wide consultations', id: 'uk-wide' },
+        { value: 'wales', label: 'Wales consultations', id: 'wales' },
       ],
-      name: 'first alert',
+      name: 'food alert',
       required: "",
       error: false,
     } %}
-    {% include '../../components/form/Checkbox/checkbox.html.twig' with {
-      title: 'Food alerts',
-      description:
-        'Enter the name and address of the UK business where you bought the product and select from the dropdown list.',
-      fields: [
-        { value: 'four', label: 'Alert four', id: 'four' },
-        { value: 'five', label: 'Alert five', id: 'five' },
-        { value: 'six', label: 'Alert six', id: 'six' },
-      ],
-      name: 'second alert',
-      required: "required",
-      error: true,
-    } %}
-
-    {% include '../../components/form/InputField/inputField.html.twig' with {
-      name: 'email',
-      label: 'Email or username',
-      caption: 'Enter your email address or username.',
-      required: "",
-      error: false,
-      errorMessage: 'Unrecognized username or password',
-      value: ''
-    } %}
-
-  {% include '../../components/form/InputField/inputField.html.twig' with {
-      name: 'email',
-      label: 'Email or username',
-      caption: 'Enter your email address or username.',
-      required: "required",
-      error: true,
-      errorMessage: 'Unrecognized username or password',
-      value: ''
-    } %}
-
+   
     {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
       prevLink: '#',
       prevLabel: 'Previous',
       prevButton: true,
-      buttonLabel: 'Next'
-    } %}
-
-    {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
-      prevLink: '#',
-      prevLabel: 'Previous',
-      prevButton: false,
       buttonLabel: 'Next'
     } %}
   </form>

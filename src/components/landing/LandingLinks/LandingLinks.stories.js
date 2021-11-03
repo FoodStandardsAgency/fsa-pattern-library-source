@@ -118,6 +118,5 @@ LandingLinks.args = {
     {linkText: 'Fish', url: '#', svg: svg.fish},
     {linkText: 'Meat', url: '#', svg: svg.meat},
     {linkText: 'Wine', url: '#', svg: svg.wine}
-  
   ]
 };
