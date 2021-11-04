@@ -1,7 +1,3 @@
-//TODO
-//Hover darker green arrow is a little bit bigger than the ligher arrow.
-//Viewport breakpoint.
-
 import './promoGroup.html.twig';
 import './promoGroup.scss';
 
