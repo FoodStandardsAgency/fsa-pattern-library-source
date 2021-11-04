@@ -87,10 +87,10 @@
 
     &--multiple-links {
       padding-bottom: 2.25rem;
-    }
 
-    @media screen and (min-width: $fsa-xl) {
-      padding-bottom: 2rem;
+      @media screen and (min-width: $fsa-xl) {
+        padding-bottom: 2rem;
+      }
     }
   }
 

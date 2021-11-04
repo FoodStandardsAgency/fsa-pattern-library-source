@@ -3,7 +3,7 @@
   <div class="promo-group__cards">
     <div class="promo-group__wrapper">
       {% for card in cards %}
-        <div class="promo-group__card {{ card.promo_link is defined ? " promo-group__card--one-link" : " promo-group__card--multiple-links" }}">
+        <div class="promo-group__card {{ card.promo_link is defined ? "promo-group__card--one-link" : "promo-group__card--multiple-links" }}">
           <div class="promo-group__background" style="background-image: url('{{ card.image }}')"></div>
           <h3 class="promo-group__sub-heading">
             {% if card.promo_link is defined %}
