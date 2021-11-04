@@ -408,7 +408,7 @@ $mobileGutter: 1rem;
 
   &:checked {
     background-color: var(--fsa-primary_dark-green);
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='15' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m1.298 6.506 5.954 5.929 11.046-11' stroke='%23FFF' stroke-width='3' fill='none' fill-rule='evenodd'/%3e%3c/svg%3e");
+    background-image: url("./tick.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
