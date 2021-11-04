@@ -25,25 +25,20 @@
     }
   }
 
-  &__cards {
+  &__grid-container {
     @include grid-container;
   }
 
-  &__wrapper {
+  &__grid-row {
     @include grid-row;
     display: flex;
     flex-wrap: wrap;
   }
 
-  &__card {
+  &__card-wrapper {
+    padding: 0 1rem;
     @include grid-cols(4, 4);
-    background-color: var(--fsa_tint);
-    border: solid 4px var(--fsa_border);
-    margin-top: 1.25rem;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    transition: border-color 0.1s ease-in;
-    position: relative;
+    margin-top: 1.25rem;  
 
     @media screen and (min-width: $fsa-md) {
       margin-top: 2rem;
@@ -51,12 +46,18 @@
 
     @media screen and (min-width: $fsa-xl) {
       @include grid-cols(4);
-      max-width: calc((100% / 12) * 4 - 1.34rem);
-
-      &:not(:nth-child(3n)) {
-        margin-right: 2rem;
-      }
+      padding: 0 1rem;;
     }
+  }
+
+  &__card {
+    background-color: var(--fsa_tint);
+    border: solid 4px var(--fsa_border);
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    transition: border-color 0.1s ease-in;
+    position: relative;
+    height: 100%;
 
     &--one-link {
       cursor: pointer;
