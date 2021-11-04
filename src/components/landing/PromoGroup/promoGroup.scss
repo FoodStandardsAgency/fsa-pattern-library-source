@@ -162,6 +162,9 @@
 
   &__list-link {
     @include body;
+    display: block;
+    margin-left: calc(28px + 0.5rem);
+    text-indent: calc(-28px - 0.5rem);
 
     &,
     &:active,
