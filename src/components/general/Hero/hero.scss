@@ -32,7 +32,7 @@
       background-size: 100%;
       min-height: 26rem;
     }
-    // Remove background pattern in IE11
+    /* Remove background pattern in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
     }
