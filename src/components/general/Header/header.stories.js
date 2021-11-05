@@ -1,4 +1,5 @@
 import header from './header.html.twig';
+import './header.scss'
 
 export default {
   title: 'Components/General/Header',
