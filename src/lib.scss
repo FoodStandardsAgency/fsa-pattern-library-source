@@ -189,30 +189,6 @@ $fsa-xxl: 1920px;
   letter-spacing: normal;
 }
 
-@mixin container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding-left: var(--container-mobile);
-  padding-right: var(--container-mobile);
-  @media screen and (min-width: $fsa-md) {
-    padding-left: var(--container);
-    padding-right: var(--container);
-  }
-}
-
-@mixin grid() {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, [col-start] 1fr);
-  gap: 1rem;
-
-  @media screen and (min-width: $fsa-md) {
-    grid-template-columns: repeat(12, [col-start] 1fr);
-    gap: 2rem;
-  }
-}
-
 // Grid
 $container: 2rem;
 $mobileContainer: 1rem;
@@ -452,6 +428,14 @@ $mobileGutter: 1rem;
     }
   }
 }
+
+@mixin landing-margin-top {
+  margin: 3rem 0 0;
+  @media screen and (min-width: $fsa-lg) {
+    margin: 4rem 0 0;
+  }
+}
+
 
 /* Used for Style guide pages */
 @mixin container {
