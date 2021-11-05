@@ -1,12 +1,17 @@
 @import "src/lib.scss";
 
 .largePromoGroup {
-  margin: 3rem -1rem 0;
-  @media screen and (min-width: $fsa-md) {
-    margin: 3rem -2rem 0;
-  }
-  @media screen and (min-width: $fsa-xl) {
-    margin: 4rem 0 0;
+  @include landing-margin-top;
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (min-width: $fsa-md) {
+      max-width: calc(1300px + (2 * #{$container}));
+    }
+    @media screen and (min-width: $fsa-xl) {
+      padding-left: var(--container);
+      padding-right: var(--container);
+    }
   }
   &__row {
     display: flex;
@@ -14,13 +19,13 @@
     &--even {
       background-color: var(--fsa__purple-hover);
       color: var(--fsa-primary_white);
-      @media screen and (min-width: $fsa-xl) {
+      @media screen and (min-width: $fsa-lg) {
         flex-direction: row;
       }
     }
     &--odd {
       background-color: var(--fsa_online-grey);
-      @media screen and (min-width: $fsa-xl) {
+      @media screen and (min-width: $fsa-lg) {
         flex-direction: row-reverse;
       }
     }
@@ -28,12 +33,15 @@
   &__content,
   &__background-image {
     @include grid-cols(12, 12);
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-cols(6, 12);
     }
   }
   &__content {
-    padding: 2rem;
+    padding: 1rem;
+    @media screen and (min-width: $fsa-md) {
+      padding: 2rem;
+    }
     @media screen and (min-width: $fsa-xl) {
       padding: 3rem;
     }
