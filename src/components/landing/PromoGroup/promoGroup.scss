@@ -1,11 +1,7 @@
 @import 'src/lib.scss';
 
 .promo-group {
-  margin-top: 3rem;
-
-  @media screen and (min-width: $fsa-lg) {
-    margin-top: 4rem;
-  }
+  @include landing-margin-top;
 
   &__main-heading {
     @include h2;
