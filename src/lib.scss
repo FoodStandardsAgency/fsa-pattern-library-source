@@ -449,3 +449,15 @@ $mobileGutter: 1rem;
     padding-right: var(--container);
   }
 }
+
+@mixin grid() {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] 1fr);
+  gap: 1rem;
+
+  @media screen and (min-width: $fsa-md) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap: 2rem;
+  }
+}
