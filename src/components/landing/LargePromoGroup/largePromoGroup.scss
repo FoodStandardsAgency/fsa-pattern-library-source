@@ -1,14 +1,13 @@
 @import "src/lib.scss";
 
 .largePromoGroup {
-  margin: 3rem 0 0;
-  @media screen and (min-width: $fsa-lg) {
-    margin: 4rem 0 0;
-  }
+  @include landing-margin-top;
   &__container {
     width: 100%;
-    max-width: var(--max-width);
     margin: 0 auto;
+    @media screen and (min-width: $fsa-md) {
+      max-width: calc(1300px + (2 * #{$container}));
+    }
     @media screen and (min-width: $fsa-xl) {
       padding-left: var(--container);
       padding-right: var(--container);
