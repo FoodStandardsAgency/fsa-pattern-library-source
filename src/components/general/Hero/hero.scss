@@ -1,36 +1,41 @@
 @import "src/lib.scss";
 
 .hero {
-  position: relative;
   display: flex;
-  width: 100%;
-  height: fit-content;
+  position: relative;
   overflow: hidden;
-  mask: url("./hero.svg") no-repeat bottom;
-  mask-size: 200%, 100%;
-  mask-repeat: no-repeat;
-  -webkit-mask: url("./hero.svg") no-repeat bottom;
-  -webkit-mask-size: 200%, 100%;
-  -webkit-mask-repeat: no-repeat;
-  color: white;
-  padding-bottom: 2rem;
-  @media screen and (min-width: $fsa-md) {
-    background-image: url("./pattern.svg");
-    background-size: 190%;
-    padding-bottom: 2.2rem;
-  }
-  @media screen and (min-width: $fsa-lg) {
-    background-size: 150%;
-    padding-bottom: 2.6rem;
-  }
-  @media screen and (min-width: $fsa-xl) {
-    align-items: center;
-    background-size: 100%;
-    min-height: 26rem;
-  }
-  // Remove background pattern in IE11
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    background-image: none;
+  min-height: 29.5rem;
+  &__mask-wrapper {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    overflow: visible;
+    mask: url("./hero.svg") no-repeat bottom;
+    mask-size: 200%, 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask: url("./hero.svg") no-repeat bottom;
+    -webkit-mask-size: 200%, 100%;
+    -webkit-mask-repeat: no-repeat;
+    color: white;
+    padding-bottom: 2rem;
+    @media screen and (min-width: $fsa-md) {
+      background-image: url("./pattern.svg");
+      background-size: 190%;
+      padding-bottom: 2.2rem;
+    }
+    @media screen and (min-width: $fsa-lg) {
+      background-size: 150%;
+      padding-bottom: 2.6rem;
+    }
+    @media screen and (min-width: $fsa-xl) {
+      align-items: center;
+      background-size: 100%;
+      min-height: 26rem;
+    }
+    /* Remove background pattern in IE11 */
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-image: none;
+    }
   }
   &__container {
     position: relative;
@@ -68,11 +73,9 @@
     @include h1();
     color: inherit;
     margin: 2rem 0 0.625rem 0;
-    @media screen and (min-width: $fsa-md) {
-    }
     &:after {
       content: "";
-      background-image: url('./dot-white.svg');
+      background-image: url("./dot-white.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 100%;
@@ -87,6 +90,50 @@
   }
   &__cta {
     margin-top: 1rem;
+  }
+  &__image {
+    height: 13.5rem;
+    svg g {
+      display: contents;
+    }
+    @media screen and (min-width: $fsa-md) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      &__container {
+        @include grid-container;
+        position: relative;
+        height: 100%;
+      }
+      svg {
+        position: absolute;
+        top: -3.611rem;
+        right: 2rem;
+        width: 18.667rem;
+        height: 18.667rem;
+        g {
+          display: block;
+        }
+      }
+    }
+    @media screen and (min-width: $fsa-lg) {
+      svg {
+        top: -6.188rem;
+        right: 2rem;
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+    @media screen and (min-width: $fsa-xl) {
+      svg {
+        top: -8rem;
+        right: 3.125rem;
+        width: 33.333rem;
+        height: 33.333rem;
+      }
+    }
   }
   &__theme {
     &--green {
@@ -108,8 +155,21 @@
       h1 {
         color: var(--fsa-primary_dark-green);
         &:after {
-          background-image: url('./dot-grey.svg');        }
+          background-image: url("./dot-grey.svg");
+        }
       }
     }
   }
+  &--with-image {
+      flex-direction: column-reverse;
+      @media screen and (min-width: $fsa-md) {
+        flex-direction: row;
+      }
+      .hero__mask-wrapper {
+        background-image: none;
+      }
+      .hero__title {
+        margin-top: 1rem;
+      }
+    }
 }

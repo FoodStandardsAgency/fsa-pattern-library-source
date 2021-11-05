@@ -32,6 +32,7 @@ export default function () {
       descriptionElement.textContent = numChecked ? description : '';
     }
 
+    //Update description when checking checkboxes
     function updateDescOnClick(e) {
       const accordion = e.target.closest('.accordion');
       updateDesc(accordion);
