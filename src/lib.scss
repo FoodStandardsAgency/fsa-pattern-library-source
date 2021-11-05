@@ -435,3 +435,17 @@ $mobileGutter: 1rem;
     margin: 4rem 0 0;
   }
 }
+
+
+/* Used for Style guide pages */
+@mixin container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--container-mobile);
+  padding-right: var(--container-mobile);
+  @media screen and (min-width: $fsa-md) {
+    padding-left: var(--container);
+    padding-right: var(--container);
+  }
+}
