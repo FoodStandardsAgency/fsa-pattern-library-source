@@ -1,0 +1,139 @@
+@import 'src/lib.scss';
+
+.service-links {
+  @include landing-margin-top;
+
+  &__container {
+    @include grid-container();
+  }
+
+  &__text-row {
+    @media screen and (min-width: $fsa-md) {
+      @include grid-row();
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+
+  &__text-wrapper {
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(6);
+    }
+  }
+  
+  &__title {
+    @include h2;
+    margin: 0;
+    padding: 0;
+    color: var(--fsa-primary_black);
+  }
+
+  &__description {
+    @include body;
+    margin: 1rem 0 0 0;
+  }
+
+  &__cards {
+    padding: 0;
+    margin: 2rem 0 0 0;
+    list-style: none;
+    @include grid-row();
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    @include h5;
+    @include grid-cols(4, 4);
+
+    & + & {
+      margin: 1rem 0 0 0;
+    }
+
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(6);
+
+      /*Using css selectors as flex gap doesn't work in IE11.*/
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      & + & {
+        margin-top: 2rem;
+      }
+
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+
+      &--3 {
+        @include grid-cols(4);
+
+        &:nth-child(3) {
+          margin-top: 0;
+        }
+
+      }
+
+      &--4 {
+        @include grid-cols(3);
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-top: 0;
+        }
+
+        &:nth-child(4) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__anchor {
+    background-repeat: no-repeat;
+    background-position: right 1rem top 1.25rem;
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+    padding: 1rem 3.5rem 1rem 1rem;
+    color: var(--fsa-primary_black);
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-top: 2px solid var(--fsa-secondary_mid-purple);
+    cursor: pointer;
+    background-color: var(--fsa-primary_white);
+    position: relative;
+
+    &::before {
+      content: '';
+      background-image: url('./arrow-right.svg');
+      display: inline-block;
+      width: 1.75rem;
+      height: 1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 1rem;
+    }
+    &:hover {
+      text-decoration: underline;
+      color: var(--fsa__link-green);
+      &::before {
+        background-image: url('./arrow-hover.svg');
+      }
+    }
+  
+    &:active,
+    &:visited {
+      color: var(--fsa-primary_black);
+    }
+
+    &:focus {
+      outline: none;
+      background-color: var(--fsa-tertiary_light-yellow);
+    }
+  }
+}

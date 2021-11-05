@@ -23,6 +23,7 @@ import './components/form/MessageBox/messageBox';
 import './components/form/Tabs/Tabs';
 import './components/landing/LandingLinks/LandingLinks';
 import './components/landing/LargePromoGroup/LargePromoGroup';
+import './components/landing/LatestTeaser/LatestTeaser';
 import './layout/twoColumn/twoColumn';
 import './layout/formLayout/formLayout';
 import './layout/fullWidth/fullWidth';
