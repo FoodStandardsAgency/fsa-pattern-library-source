@@ -37,15 +37,6 @@
       background-image: none;
     }
   }
-  &--with-image {
-    flex-direction: column-reverse;
-    @media screen and (min-width: $fsa-md) {
-      flex-direction: row;
-    }
-    .hero__mask-wrapper {
-      background-image: none;
-    }
-  }
   &__container {
     position: relative;
     @include grid-container;
@@ -107,7 +98,10 @@
     }
     @media screen and (min-width: $fsa-md) {
       position: absolute;
-      width: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       &__container {
         @include grid-container;
         position: relative;
@@ -127,7 +121,7 @@
     @media screen and (min-width: $fsa-lg) {
       svg {
         top: -6.188rem;
-        right: 3.125rem;
+        right: 2rem;
         width: 25rem;
         height: 25rem;
       }
@@ -166,4 +160,16 @@
       }
     }
   }
+  &--with-image {
+      flex-direction: column-reverse;
+      @media screen and (min-width: $fsa-md) {
+        flex-direction: row;
+      }
+      .hero__mask-wrapper {
+        background-image: none;
+      }
+      .hero__title {
+        margin-top: 1rem;
+      }
+    }
 }
