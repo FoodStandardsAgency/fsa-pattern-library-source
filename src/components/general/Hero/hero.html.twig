@@ -22,7 +22,7 @@
             <p class="hero__description">{{ content }}</p>
             {% for cta in ctas %}
               <div class="hero__cta">
-                {% include '../Button/button.html.twig' with {
+                {% include '@components/components/general/Button/button.html.twig' with {
                   type: ctaType,
                   url: cta.link,
                   label: cta.name,
@@ -33,9 +33,6 @@
           </div>
         </div>
       </div>
-      {# {% if image %} #}
-
-      {# {% endif %} #}
     </div>
   </div>
 </section>
