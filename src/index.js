@@ -18,6 +18,7 @@ import './components/form/Checkbox/checkbox';
 import './components/form/Radio/radio';
 import './components/landing/LandingLinks/LandingLinks';
 import './components/landing/ServiceLinks/ServiceLinks';
+import './components/landing/PromoGroup/promoGroup';
 import './components/form/InputField/inputField';
 import './components/form/MessageBox/messageBox';
 import './components/form/Tabs/Tabs';
