@@ -167,8 +167,8 @@
 
   &__list-link {
     @include body;
-    margin-left: calc(2.25rem);
-    text-indent: calc(-2.25rem);
+    margin-left: 2.25rem;
+    text-indent: -2.25rem;
     display: block;
 
     &,
