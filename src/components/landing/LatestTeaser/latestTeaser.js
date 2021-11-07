@@ -1,2 +1,2 @@
-import './serviceLinks.html.twig';
-import './serviceLinks.scss';
+import './latestTeaser.html.twig';
+import './latestTeaser.scss';

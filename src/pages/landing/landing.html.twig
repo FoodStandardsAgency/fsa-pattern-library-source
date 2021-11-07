@@ -98,6 +98,7 @@
     {linkText: 'Wine', url: '#', svg: svg.wine}
   ]
 } %}
+
 {% include '../../components/landing/ServiceLinks/serviceLinks.html.twig' with {
   title: 'This is the services title',
   description:
@@ -115,6 +116,47 @@
   columns: 4,
 
 } %}
+
+{% include '../../components/landing/LatestTeaser/latestTeaser.html.twig' with {
+    title: 'This is the services title',
+    description:
+      '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p><p>This is a description for the services section.</p>',
+      teaserLinkUrl: '#',
+      teaserLink: 'More about consultations',
+      cards: [
+      { 
+        typeClass: 'news', 
+        type: 'News', 
+        url: '#', 
+        title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
+        date: '5 November 2021'
+      },
+      { 
+        typeClass: 'news', 
+        type: 'News', 
+        url: '#', 
+        title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
+        date: '5 November 2021'
+      },
+      { 
+        typeClass: 'alerts', 
+        type: 'News', 
+        url: '#', 
+        title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
+        date: '5 November 2021'
+      },
+      { 
+        typeClass: 'news', 
+        type: 'News', 
+        url: '#', 
+        title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
+        date: '5 November 2021'
+      },
+    ],
+    ButtonUrl: '#',
+    ButtonLabel: 'More News and Alerts',
+} %}
+
 {% include '../../components/landing/LargePromoGroup/largePromoGroup.html.twig' with {
   promoGroup: [
     {
