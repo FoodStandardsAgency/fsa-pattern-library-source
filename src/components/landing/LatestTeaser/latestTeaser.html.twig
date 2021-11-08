@@ -1,21 +1,22 @@
 <div class="latest-teaser">
   <div class="latest-teaser__container">
-    
+    {% if title or description or teaserLink %}
     <div class="latest-teaser__text-row">
       <div class="latest-teaser__text-wrapper">
-      {% if title is defined %}
-        <h2 class="latest-teaser__title">{{ title }}</h2>
-      {% endif %}
-      {% if description is defined %}
-        <div class="latest-teaser__description">{{ description|raw }}</div>
-      {% endif %}
-      {% if teaserLink is defined %}
-        <div class="latest-teaser__link-wrapper">
-          <a href="{{ teaserLinkUrl }}" class="latest-teaser__link">{{ teaserLink }}</a>
-        </div>
-      {% endif %}
+        {% if title %}
+          <h2 class="latest-teaser__title">{{ title }}</h2>
+        {% endif %}
+        {% if description %}
+          <div class="latest-teaser__description">{{ description|raw }}</div>
+        {% endif %}
+        {% if teaserLink %}
+          <div class="latest-teaser__link-wrapper">
+            <a href="{{ teaserLinkUrl }}" class="latest-teaser__link">{{ teaserLink }}</a>
+          </div>
+        {% endif %}
       </div>
     </div>
+    {% endif %}
 
     <div class="latest-teaser__cards-row">
       {% for card in cards %}
@@ -31,11 +32,13 @@
       {% endfor %}
     </div>
 
-    <div class="latest-teaser__button-wrapper">
-      <a href={{ ButtonUrl }} class="button button--primary">
-      {{ ButtonLabel }}
-      </a>
-    </div>
+    {% if ButtonLabel %}
+      <div class="latest-teaser__button-wrapper">
+        <a href={{ ButtonUrl }} class="button button--primary">
+        {{ ButtonLabel }}
+        </a>
+      </div>
+    {% endif %}
 
   </div>
 </div>
