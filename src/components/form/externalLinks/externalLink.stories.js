@@ -2,7 +2,7 @@ import externalLink from './externalLink.html.twig';
 import './externalLink.js';
 
 export default {
-    title: 'Components/Form/externalLink',
+    title: 'Components/Form/External Link',
     argTypes: {
       type: {
         defaultValue: 'External link',
