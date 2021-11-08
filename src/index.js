@@ -31,6 +31,7 @@ import './components/form/TitleAndText/titleAndText';
 import './components/landing/LandingLinks/landingLinks';
 import './components/landing/LargePromoGroup/largePromoGroup';
 import './components/landing/LatestTeaser/latestTeaser';
+import './components/landing/PromoGroup/promoGroup';
 import './components/landing/ServiceLinks/serviceLinks';
 
 /* Layout Components */

@@ -1,5 +1,3 @@
-
-
 {% set svg = {
   'import': '<svg class="icon icon--export" role="img" focusable="false" viewBox="0 0 50 50">
     <defs>
@@ -87,6 +85,19 @@
     </g></svg>'
   }
 %}
+{% include '../../components/general/Hero/hero.html.twig' with {
+ type: 'hero',
+ backgroundColour: 'green',
+ title: 'Food we can trust',
+ content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+ ctas: [
+   {
+     external: false,
+     name: 'Food and allergy',
+     link: '#',
+   },
+ ],
+} %}
 {% include '../../components/landing/LandingLinks/landingLinks.html.twig' with {
   title: 'Are you looking for specific business guidance?',
   items: [
@@ -98,7 +109,71 @@
     {linkText: 'Wine', url: '#', svg: svg.wine}
   ]
 } %}
-
+{% include "../../components/landing/PromoGroup/promoGroup.html.twig" with {
+  title: 'Popular content',
+  cards: [
+    {
+      title: 'Listeria',
+      description:
+        'What you can do to reduce the chances of your food being infected with listeria.',
+      promo_link: '#',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/NDawe_Bell_FSA_150320_324.jpg?itok=E9uzlVec',
+    },
+    {
+      title: 'For businesses',
+      description:
+        'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
+      promo_link: '#',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/industry-kitchen-cooking_0.jpg?itok=uyO6myYB',
+    },
+    {
+      title: 'Our risk analysis',
+      description:
+        'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
+      promo_link: '#',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/AS_FSA_011216_L1_276.jpg?itok=oVF8mrBO',
+    },
+    {
+      title: 'For consumers',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/NDawe_Bell_FSA_150320_324.jpg?itok=E9uzlVec',
+      link_list: [
+        { label: 'Food hygiene ratings scheme', href: '#' },
+        { label: 'Report a food problem', href: '#' },
+        { label: 'Allergy and intolerance', href: '#' },
+        { label: 'Subscribe to news and alerts', href: '#' },
+        { label: 'View all consumer advice', href: '#' },
+      ],
+    },
+    {
+      title: 'For businesses',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/industry-kitchen-cooking_0.jpg?itok=uyO6myYB',
+      link_list: [
+        { label: 'Food safety for food delivery', href: '#' },
+        { label: 'Placing a regulated product on the market', href: '#' },
+        { label: 'Starting a food business', href: '#' },
+        { label: 'Safer food, better business', href: '#' },
+        { label: 'Allergen guidance', href: '#' },
+      ],
+    },
+    {
+      title: 'About us',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/AS_FSA_011216_L1_276.jpg?itok=oVF8mrBO',
+      link_list: [
+        { label: 'Who are we', href: '#' },
+        { label: 'Our risk analysis', href: '#' },
+        { label: 'Our approach to science', href: '#' },
+        { label: 'Our board', href: '#' },
+        { label: 'Contact us', href: '#' },
+      ],
+    },
+  ],
+} %}
 {% include '../../components/landing/ServiceLinks/serviceLinks.html.twig' with {
   title: 'This is the services title',
   description:
@@ -189,4 +264,3 @@
     }
   ]
 } %}
-

@@ -1,7 +1,7 @@
 {% extends "../../layout/fullWidth/fullWidth.html.twig" %}
 {% block content %}
-{# Include templates for form components here #}
-{% set breadcrumbItems = [
+  {# Include templates for form components here #}
+  {% set breadcrumbItems = [
     {
       'text': 'Home',
       'url': '/'
@@ -18,7 +18,6 @@
       'text': 'Hazard Analysis and Critical Control Point',
       'url': null
     },
-  ]
-%}
-{% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumbItems, expanded: false } %}
+  ] %}
+  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumbItems, expanded: false } %}
 {% endblock %}
