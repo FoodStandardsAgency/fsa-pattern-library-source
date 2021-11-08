@@ -1,10 +1,12 @@
-<div class="filters">
-  <div class="filters__buttons">
-    {% for filterElement in filter_names %}
-      <button class="filters__button" aria-label="{{ remove_filter }} {{ filterElement.name }}" data-filter="{{ filterElement.value }}">{{ filterElement.name }}</button>
-    {% endfor %}
+{% if filter_names is not empty %}
+  <div class="filters">
+    <div class="filters__buttons">
+      {% for filterElement in filter_names %}
+        <button class="filters__button" aria-label="{{ remove_filter }} {{ filterElement.name }}" data-filter="{{ filterElement.value }}">{{ filterElement.name }}</button>
+      {% endfor %}
+    </div>
+    <div class="filters__remove-wrapper">
+      <button class="filters__remove">{{ remove_all_filters }}</button>
+    </div>
   </div>
-  <div class="filters__remove-wrapper">
-    <button class="filters__remove">{{ remove_all_filters }}</button>
-  </div>
-</div>
+{% endif %}

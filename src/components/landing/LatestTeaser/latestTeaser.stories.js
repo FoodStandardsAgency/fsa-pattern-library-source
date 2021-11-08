@@ -59,34 +59,34 @@ export default {
     teaserLinkUrl: '#',
     teaserLink: 'More about consultations',
     cards: [
-    { 
+      {
         typeClass: 'consultations', 
         type: 'Consultations', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk. Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
-    },
-    { 
+      },
+      {
         typeClass: 'consultations', 
         type: 'Consultations', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
-    },
-    { 
+      },
+      {
         typeClass: 'consultations', 
         type: 'Consultations', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
-    },
-    { 
+      },
+      {
         typeClass: 'consultations', 
         type: 'Consultations', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
-    },
+      },
     ],
     ButtonUrl: '#',
     ButtonLabel: 'More Consultations',
