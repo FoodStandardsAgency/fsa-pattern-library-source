@@ -16,7 +16,7 @@ export default {
     description:
       '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p><p>This is a description for the services section.</p>',
     teaserLinkUrl: '#',
-    teaserLink: 'More about consultations',
+    teaserLink: '',
     cards: [
       { 
         typeClass: 'news', 
@@ -34,7 +34,7 @@ export default {
       },
       { 
         typeClass: 'alerts', 
-        type: 'News', 
+        type: 'Allergy Alert', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
@@ -89,5 +89,5 @@ export default {
     },
     ],
     ButtonUrl: '#',
-    ButtonLabel: 'More News and Alerts',
+    ButtonLabel: 'More Consultations',
   };
