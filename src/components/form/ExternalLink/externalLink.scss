@@ -1,0 +1,19 @@
+@import "src/lib.scss";
+
+.external-link {
+  @include link;
+  padding-right: 1.25rem;
+  position: relative;
+  &::after {
+    content: '';
+    background-image: url('./external.svg');
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.85rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0.15rem;
+  }
+}

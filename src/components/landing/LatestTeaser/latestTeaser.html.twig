@@ -1,0 +1,41 @@
+<div class="latest-teaser">
+  <div class="latest-teaser__container">
+    
+    <div class="latest-teaser__text-row">
+      <div class="latest-teaser__text-wrapper">
+      {% if title is defined %}
+        <h2 class="latest-teaser__title">{{ title }}</h2>
+      {% endif %}
+      {% if description is defined %}
+        <div class="latest-teaser__description">{{ description|raw }}</div>
+      {% endif %}
+      {% if teaserLink is defined %}
+        <div class="latest-teaser__link-wrapper">
+          <a href="{{ teaserLinkUrl }}" class="latest-teaser__link">{{ teaserLink }}</a>
+        </div>
+      {% endif %}
+      </div>
+    </div>
+
+    <div class="latest-teaser__cards-row">
+      {% for card in cards %}
+        <div class="latest-teaser__card">
+          <div class="latest-teaser__card-wrapper latest-teaser__card-wrapper--{{ card.typeClass }}">
+            <h3 class="latest-teaser__type">{{ card.type }}</h3>
+            <div class="latest-teaser__anchor-wrapper">
+              <a href="{{ card.url }}" class="latest-teaser__anchor">{{ card.title }}</a>
+            </div>
+            <span class="latest-teaser__date">{{ card.date }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="latest-teaser__button-wrapper">
+      <a href={{ ButtonUrl }} class="button button--primary">
+      {{ ButtonLabel }}
+      </a>
+    </div>
+
+  </div>
+</div>
