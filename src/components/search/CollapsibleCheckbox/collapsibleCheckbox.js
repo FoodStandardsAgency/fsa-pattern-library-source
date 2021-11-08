@@ -40,7 +40,11 @@ export default function () {
 
     //Toggle accordion
     function toggleAccordion(e) {
-      const currentButton = e.target;
+      let currentButton = e.target;
+      // Click on the label instead of the button itself
+      if (currentButton.classList.contains('accordion__title-text')) {
+        currentButton = currentButton.closest('.accordion__button');
+      }
       currentButton.classList.toggle('accordion__button--expanded');
       const isExpanded = currentButton.getAttribute('aria-expanded');
       if (isExpanded === 'true') {

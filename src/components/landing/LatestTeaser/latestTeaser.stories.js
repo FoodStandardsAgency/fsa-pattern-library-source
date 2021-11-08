@@ -15,9 +15,9 @@ export default {
     title: 'This is the services title',
     description:
       '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p><p>This is a description for the services section.</p>',
-      teaserLinkUrl: '#',
-      teaserLink: 'More about consultations',
-      cards: [
+    teaserLinkUrl: '#',
+    teaserLink: 'More about consultations',
+    cards: [
       { 
         typeClass: 'news', 
         type: 'News', 
@@ -56,9 +56,9 @@ export default {
     title: 'This is the services title',
     description:
       'This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.',
-      teaserLinkUrl: '#',
-      teaserLink: 'More about consultations',
-      cards: [
+    teaserLinkUrl: '#',
+    teaserLink: 'More about consultations',
+    cards: [
     { 
         typeClass: 'consultations', 
         type: 'Consultations', 
