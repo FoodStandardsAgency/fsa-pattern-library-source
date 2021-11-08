@@ -17,16 +17,25 @@
   }
 
   &__text-wrapper {
-    @media screen and (min-width: $fsa-md) {
-      @include grid-cols(6);
-    }
+    @include landing-text-wrapper;
   }
   
   &__title {
-    @include h2;
     margin: 0;
     padding: 0;
-    color: var(--fsa-primary_black);
+    @include h2;
+    position: relative;
+
+    &:after {
+      content: "";
+      background-image: url("./dot.svg");
+      background-repeat: repeat-x;
+      background-size: 25px 25px;
+      width: 12rem;
+      display: block;
+      padding-bottom: 0.5rem;
+      margin: 0.5rem auto 0rem;
+    }
   }
 
   &__description {
@@ -60,7 +69,7 @@
       }
     }
 
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       & + & {
         margin-top: 2rem;
       }
