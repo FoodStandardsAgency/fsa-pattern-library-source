@@ -17,17 +17,7 @@
   }
 
   &__text-wrapper {
-    text-align: center;
-    @include grid-cols(4, 4);
-
-    @media screen and (min-width: $fsa-md) {
-      @include grid-cols(12, 12);
-    }
-
-    @media screen and (min-width: $fsa-lg) {
-      @include grid-cols(8, 12);
-      @include cols-push(2, 12);
-    }
+    @include landing-text-wrapper;
   }
   
   &__title {
@@ -46,7 +36,6 @@
       padding-bottom: 0.5rem;
       margin: 0.5rem auto 0rem;
     }
-
   }
 
   &__description {
