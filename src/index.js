@@ -5,7 +5,7 @@ import cssVars from 'css-vars-ponyfill';
 /* General Components */
 import './components/general/Breadcrumb/breadcrumb';
 import './components/general/Button/button';
-import './components/general/Hero/hero.html.twig';
+import './components/general/Hero/hero';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
