@@ -1,5 +1,5 @@
 import hero from './hero.html.twig';
-import './Hero.js';
+import './hero.scss';
 
 export default {
     title: 'Components/General/Hero',
