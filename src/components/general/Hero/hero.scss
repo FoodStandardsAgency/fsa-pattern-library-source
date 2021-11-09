@@ -20,17 +20,15 @@
     z-index: 1;
     @media screen and (min-width: $fsa-md) {
       background-image: url("./pattern.svg");
-      background-size: 190%;
+      background-size: 90%;
+      background-position: right top;
       padding-bottom: 2.2rem;
     }
     @media screen and (min-width: $fsa-lg) {
-      background-size: 150%;
       padding-bottom: 2.6rem;
     }
     @media screen and (min-width: $fsa-xl) {
       align-items: center;
-      background-size: 100%;
-      min-height: 26rem;
     }
     /* Remove background pattern in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -56,17 +54,24 @@
 
   &__content {
     display: flex;
+    position: relative;
     z-index: 1;
     &:after {
       content: "";
       position: absolute;
       background-color: inherit;
-      left: -48%;
-      bottom: -150%;
-      top: -150%;
-      width: 100%;
+      align-self: center;
+      height: 58.563rem;
+      width: 58.563rem;
       border-radius: 100%;
       z-index: -1;
+      left: -34rem;
+      @media screen and (min-width: $fsa-lg) {
+        left: -30rem;
+      }
+      @media screen and (min-width: $fsa-xl) {
+       left: -20rem;
+      }
     }
   }
   &__title {
@@ -171,6 +176,7 @@
       }
       .hero__mask-wrapper {
         background-image: none;
+        min-height: 26rem;
       }
       .hero__title {
         margin-top: 1rem;
