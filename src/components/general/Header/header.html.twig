@@ -4,10 +4,10 @@
       <div class="header__top">
         <ul class="header__languages">
           <li class="header__language">
-            <a href="{{ english_link }}" class="header__language-link">{{ english_label }}</a>
+            <a href="{{ english_link }}" class="header__language-link {{ english ? " header__language-link--selected" : " " }}">{{ english_label }}</a>
           </li>
           <li class="header__language">
-            <a href="{{ welsh_link }}" class="header__language-link">{{ welsh_label }}</a>
+            <a href="{{ welsh_link }}" class="header__language-link {{ not english ? " header__language-link--selected" : " " }}">{{ welsh_label }}</a>
           </li>
         </ul>
       </div>
@@ -16,19 +16,17 @@
           <span class="header__logo-label visually-hidden">{{ logo_label }}</span>
           <div class="header__logo-svg {{ english ? " header__logo-svg--english" : " header__logo-svg--welsh" }}" aria-hidden=" true"></div>
         </a>
-        <div class="header__links">
-          <div class="header__links-wrapper">
-            <li class="header__links-item">
-              <a href="{{ contact_link }}" class="header__contact">{{ contact_label }}</a>
-            </li>
-            <li class="header__links-item">
-              <a href="{{ report_link }}" class="header__report">{{ report_label }}</a>
-            </li>
-          </div>
+        <ul class="header__links">
           <li class="header__links-item">
-            <a href="{{ ratings_link }}" class="header__ratings" target="_blank">{{ ratings_label }}</a>
+            <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
           </li>
-        </div>
+          <li class="header__links-item">
+            <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
+          </li>
+          <li class="header__links-item header__links-item--right">
+            <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
+          </li>
+        </ul>
         <div class="header__search-bar-wrapper">
           <div class="header__search-bar--full">{% include "../../search/SearchBar/searchBar.html.twig" %}</div>
           <a class="header__search-bar--icon" href="{{ search_link }}">
