@@ -7,6 +7,10 @@ export default {
       type: {
         defaultValue: 'hero',
       },
+      backgroundColour: {
+        options: ['green', 'blue', 'grey'],
+        control: { type: 'radio' },
+      },
     },
   };
 
