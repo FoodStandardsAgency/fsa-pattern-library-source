@@ -4,7 +4,6 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  min-height: 29.5rem;
   &__mask-wrapper {
     display: flex;
     width: 100%;
@@ -18,6 +17,7 @@
     -webkit-mask-repeat: no-repeat;
     color: white;
     padding-bottom: 2rem;
+    z-index: 1;
     @media screen and (min-width: $fsa-md) {
       background-image: url("./pattern.svg");
       background-size: 190%;
@@ -93,11 +93,13 @@
   }
   &__image {
     height: 13.5rem;
+    overflow: hidden;
     svg g {
       display: contents;
     }
     @media screen and (min-width: $fsa-md) {
       position: absolute;
+      overflow: visible;
       top: 0;
       right: 0;
       bottom: 0;
@@ -108,6 +110,7 @@
         height: 100%;
       }
       svg {
+        z-index: 1;
         position: absolute;
         top: -3.611rem;
         right: 2rem;
@@ -162,6 +165,7 @@
   }
   &--with-image {
       flex-direction: column-reverse;
+      min-height: 29.5rem;
       @media screen and (min-width: $fsa-md) {
         flex-direction: row;
       }
