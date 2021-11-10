@@ -3,9 +3,10 @@
 .hero {
   display: flex;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   &__mask-wrapper {
     display: flex;
+    order: 2;
     width: 100%;
     height: fit-content;
     overflow: visible;
@@ -43,6 +44,7 @@
   &__row {
     @include grid-row;
     display: flex;
+    flex-direction: column;
   }
 
   &__content-wrapper {
@@ -70,7 +72,7 @@
         left: -30rem;
       }
       @media screen and (min-width: $fsa-xl) {
-       left: -20rem;
+        left: -20rem;
       }
     }
   }
@@ -96,9 +98,64 @@
   &__cta {
     margin-top: 1rem;
   }
+  &__services {
+    order: 3;
+    z-index: 10;
+    width: 100%;
+    @media screen and (min-width: $fsa-xl) {
+      position: absolute;
+      height: 100%;
+      bottom: -20rem;
+    }
+    // If it has an image and 4 columns, unset the height and reduce the bottom padding.
+    &--with-image#{&}--4-columns {
+      @media screen and (min-width: $fsa-xl) {
+        position: relative;
+        height: unset;
+        bottom: -2rem;
+      }
+    }
+    &__container {
+      @include grid-container;
+    }
+    &__row {
+      @include grid-row;
+    }
+    &__wrapper {
+      &--2-columns {
+        @media screen and (min-width: $fsa-xl) {
+          width: 50%;
+        }
+      }
+    }
+    // Adjustments to the existing service links component
+    .service-links {
+      margin-top: 0;
+      &__text-wrapper {
+        text-align: left;
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        flex-basis: unset;
+        max-width: none;
+      }
+      &__cards {
+        margin-top: 0;
+      }
+      &__card {
+        @media screen and (max-width: 767px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
   &__image {
+    order: 1;
     height: 13.5rem;
     overflow: hidden;
+    z-index: 10;
     svg g {
       display: contents;
     }
@@ -128,7 +185,7 @@
     }
     @media screen and (min-width: $fsa-lg) {
       svg {
-        top: -6.188rem;
+        top: -8rem;
         right: 2rem;
         width: 25rem;
         height: 25rem;
@@ -136,7 +193,6 @@
     }
     @media screen and (min-width: $fsa-xl) {
       svg {
-        top: -8rem;
         right: 3.125rem;
         width: 33.333rem;
         height: 33.333rem;
@@ -169,17 +225,46 @@
     }
   }
   &--with-image {
-      flex-direction: column-reverse;
-      min-height: 29.5rem;
-      @media screen and (min-width: $fsa-md) {
-        flex-direction: row;
-      }
-      .hero__mask-wrapper {
-        background-image: none;
+    flex-direction: column;
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+    }
+    .hero__mask-wrapper {
+      background-image: none;
+
+      @media screen and (min-width: $fsa-xl) {
         min-height: 26rem;
       }
-      .hero__title {
-        margin-top: 1rem;
+    }
+    .hero__title {
+      margin-top: 1rem;
+    }
+  }
+  &--with-services {
+    display: flex;
+    flex-direction: column;
+    .hero__mask-wrapper {
+      @media screen and (min-width: $fsa-xl) {
+        align-items: unset;
       }
     }
+    .hero__content-wrapper {
+      @media screen and (min-width: $fsa-xl) {
+        margin-top: 2rem;
+        padding-bottom: 10rem;
+      }
+    }
+  }
+  &--with-image#{&}--with-services#{&}--services-full {
+    .hero__content-wrapper {
+      @media screen and (min-width: $fsa-xl) {
+        padding-bottom: 0;
+      }
+    }
+    .hero__mask-wrapper {
+      @media screen and (min-width: $fsa-xl) {
+        align-items: center;
+      }
+    }
+  }
 }
