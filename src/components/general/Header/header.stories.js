@@ -24,4 +24,5 @@ Header.args = {
   ratings_label: 'Food hygiene ratings',
   search_label: 'Search Food Standards Agency',
   expanded: 'false',
+  search_bar_visible: true,
 }

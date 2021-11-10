@@ -273,6 +273,10 @@
       box-shadow: 0 0 0px 0.2rem var(--fsa-primary_black),
         0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
     }
+
+    @media screen and (min-width: $fsa-lg) {
+      display: none;
+    }
   }
 
   &__menu-symbol {
@@ -300,10 +304,6 @@
 
     &::after {
       transform: translateY(10px);
-    }
-
-    @media screen and (min-width: $fsa-lg) {
-      display: none;
     }
   }
 }
