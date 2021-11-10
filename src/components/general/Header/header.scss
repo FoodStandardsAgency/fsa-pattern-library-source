@@ -43,38 +43,84 @@
     display: flex;
     align-items: center;
     width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  &__logo-svg {
+    &--english {
+      content: url('./logo-en.svg');
+    }
   }
 
   &__links {
     display: none;
-    align-items: center;
+    align-items: flex-end;
     flex-grow: 1;
     padding: 0;
+    margin-left: 1.25rem;
 
     @media screen and (min-width: $fsa-lg) {
       display: flex;
     }
   }
 
+  &__links-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   &__links-item {
     &--right {
       flex-grow: 1;
       text-align: right;
+      margin-left: 2rem;
     }
-    margin-left: 2.75rem;
+
+    &:first-child {
+      margin-right: 2rem;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      &:first-child {
+        margin-right: 2.75rem;
+      }
+    }
   }
 
   &__links-anchor {
     color: var(--fsa-primary_dark-green);
     @include body;
+
+    &::before {
+      margin-right: 0.4rem;
+      position: relative;
+      top: 0.1rem;
+    }
+
+    &--contact::before {
+      content: url('./contact-green.svg');
+    }
+
+    &--report::before {
+      content: url('./report-green.svg');
+    }
+
+    &--ratings {
+      white-space:nowrap;
+
+      &::before {
+        content: url('./search-green.svg');
+      }
+    }
   }
 
   &__search-bar {
     &--full {
       display: none;
-      margin-left: 2.25rem;
+      margin-left: 1.25rem;
+      min-width: 19rem;
     }
-
 
     @media screen and (min-width: $fsa-lg) {
       &--full {
@@ -84,6 +130,39 @@
       &--icon {
         display: none;
       }
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      &--full {
+        margin-left: 2.25rem;
+      }
+    }
+
+    .search-bar {
+      overflow: hidden;
+
+      &__box {
+        max-height: 2.75rem;
+        min-height: 44px;
+        padding-left: 0;
+      }
+      
+      &__label {
+        white-space: nowrap;
+        left: 1rem;
+      }
+
+      &__submit {
+        height: 1.5rem;
+        width: 1.5rem;
+        top: calc(50% - 1rem);
+      }
+    }
+  }
+
+  &__menu {
+    @media screen and (min-width: $fsa-lg) {
+      display: none;
     }
   }
 }
