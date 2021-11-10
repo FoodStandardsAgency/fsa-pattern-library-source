@@ -21,15 +21,20 @@
     z-index: 1;
     @media screen and (min-width: $fsa-md) {
       background-image: url("./pattern.svg");
-      background-size: 90%;
+      background-size: 150%;
       background-position: right top;
       padding-bottom: 2.2rem;
     }
     @media screen and (min-width: $fsa-lg) {
       padding-bottom: 2.6rem;
+      background-size: 90%;
     }
     @media screen and (min-width: $fsa-xl) {
       align-items: center;
+    }
+    @media screen and (min-width: $fsa-xxl) {
+      background-size: 70%;
+      padding-bottom: 3.2rem;
     }
     /* Remove background pattern in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -85,7 +90,7 @@
       background-image: url("./dot-white.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
-      width: 100%;
+      width: 101%;
       display: block;
       padding-bottom: 0.5rem;
       margin-top: 0.5rem;
@@ -115,16 +120,12 @@
         bottom: -2rem;
       }
     }
-    &__container {
-      @include grid-container;
-    }
-    &__row {
-      @include grid-row;
-    }
     &__wrapper {
       &--2-columns {
         @media screen and (min-width: $fsa-xl) {
-          width: 50%;
+          .service-links__cards {
+            width: 50%;
+          }
         }
       }
     }
@@ -165,7 +166,7 @@
       top: 0;
       right: 0;
       bottom: 0;
-      left: 0;
+      left: 50%;
       &__container {
         @include grid-container;
         position: relative;
@@ -175,7 +176,7 @@
         z-index: 1;
         position: absolute;
         top: -3.611rem;
-        right: 2rem;
+        left: 2rem;
         width: 18.667rem;
         height: 18.667rem;
         g {
@@ -186,14 +187,12 @@
     @media screen and (min-width: $fsa-lg) {
       svg {
         top: -8rem;
-        right: 2rem;
         width: 25rem;
         height: 25rem;
       }
     }
     @media screen and (min-width: $fsa-xl) {
       svg {
-        right: 3.125rem;
         width: 33.333rem;
         height: 33.333rem;
       }
