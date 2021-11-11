@@ -4,6 +4,7 @@ import cssVars from 'css-vars-ponyfill';
 
 import './components/general/Breadcrumb/breadcrumb';
 import './components/general/Button/Button';
+import './components/general/Header/header';
 import './components/search/FiltersSelected/filtersSelected';
 import './components/search/ListingItem/ListingItem';
 import './components/search/Pagination/pagination';
