@@ -4,7 +4,7 @@ import cssVars from 'css-vars-ponyfill';
 
 /* General Components */
 import './components/general/Breadcrumb/breadcrumb';
-import './components/general/Button/Button';
+import './components/general/Button/button';
 import './components/general/Header/header';
 import './components/general/Hero/hero';
 
