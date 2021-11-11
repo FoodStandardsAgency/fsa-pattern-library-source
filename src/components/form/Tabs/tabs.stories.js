@@ -1,5 +1,5 @@
 import tabs from './tabs.html.twig';
-import './Tabs.js';
+import './tabs.js';
 
 export default {
     title: 'Components/Form/Tabs',

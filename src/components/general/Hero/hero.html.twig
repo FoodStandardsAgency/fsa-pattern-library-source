@@ -1,0 +1,59 @@
+{% if backgroundColour == 'green' %}
+  {% set theme = ' hero__theme--green' %}
+  {% set ctaType = 'secondary' %}
+{% elseif backgroundColour == 'blue' %}
+  {% set theme = ' hero__theme--blue' %}
+  {% set ctaType = 'secondary' %}
+{% elseif backgroundColour == 'grey' %}
+  {% set theme = ' hero__theme--grey' %}
+  {% set ctaType = 'primary' %}
+{% else %}
+  {% set theme = ' hero__theme--green' %}
+  {% set ctaType = 'secondary' %}
+{% endif %}
+
+<section class="hero {{ type }}">
+  <div class="hero__mask-wrapper{{ theme }}">
+    <div class="hero__container">
+      <div class="hero__row">
+        <div class="hero__content-wrapper">
+          <div class="hero__content{{ theme }}">
+            <div class="hero__text-content">
+              <h1 class="hero__title">{{ title }}</h1>
+              <p class="hero__description">{{ content }}</p>
+              {% for cta in ctas %}
+                <div class="hero__cta">
+                  {% include '@components/components/general/Button/button.html.twig' with {
+                    type: ctaType,
+                    url: cta.link,
+                    label: cta.name,
+                    element: 'link',
+                  } %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if image %}
+    <div class="hero__image">
+      <div class="hero__image__container">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+             y="0px" viewBox="0 0 200 200" xml:space="preserve">
+              <defs>
+                <circle id="circle" cx="100" cy="100" r="100"/>
+              </defs>
+          <clipPath id="clip">
+            <use xlink:href="#circle" overflow="visible"></use>
+          </clipPath>
+          <g clip-path="url(#clip)">
+            <image overflow="visible" href="{{ image.url }}" height="100%" width="100%"
+                   preserveAspectRatio="xMidYMid slice"></image>
+          </g>
+        </svg>
+      </div>
+    </div>
+  {% endif %}
+</section>

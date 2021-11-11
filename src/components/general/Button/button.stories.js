@@ -1,5 +1,5 @@
 import button from './button.html.twig';
-import './Button.js';
+import './button.js';
 
 export default {
   title: 'Components/General/Button',

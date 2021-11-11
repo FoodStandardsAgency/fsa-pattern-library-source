@@ -61,6 +61,12 @@
 
     .input-field__input {
       border: 0.25rem solid var(--fsa-secondary_mid-red);
+      &:focus {
+        border: 2px solid var(--fsa-primary_black);
+        box-shadow: inset 0 0 0 2px;
+        outline: 0.25rem solid var(--fsa-tertiary_light-yellow);
+        outline-offset: 0;
+      }  
     }
   }
 

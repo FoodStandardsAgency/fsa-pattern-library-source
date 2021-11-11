@@ -15,6 +15,7 @@
 
   /* Secondary Colours */
   --fsa-secondary_mid-red: #e31837;
+  --fsa-secondary_dark-blue: #165c7d;
   --fsa-secondary_orange: #f15d22;
   --fsa-secondary_mid-yellow: #fdb913;
   --fsa-secondary_mid-purple: #49176d;
@@ -189,31 +190,7 @@ $fsa-xxl: 1920px;
   letter-spacing: normal;
 }
 
-@mixin container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding-left: var(--container-mobile);
-  padding-right: var(--container-mobile);
-  @media screen and (min-width: $fsa-md) {
-    padding-left: var(--container);
-    padding-right: var(--container);
-  }
-}
-
-@mixin grid() {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, [col-start] 1fr);
-  gap: 1rem;
-
-  @media screen and (min-width: $fsa-md) {
-    grid-template-columns: repeat(12, [col-start] 1fr);
-    gap: 2rem;
-  }
-}
-
-// Grid
+/* Grid */
 $container: 2rem;
 $mobileContainer: 1rem;
 $gutter: 2rem;
@@ -451,4 +428,52 @@ $mobileGutter: 1rem;
       background: var(--fsa-primary_white);
     }
   }
+}
+
+@mixin landing-margin-top {
+  margin: 3rem 0 0;
+  @media screen and (min-width: $fsa-lg) {
+    margin: 4rem 0 0;
+  }
+}
+
+
+/* Used for Style guide pages */
+@mixin container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--container-mobile);
+  padding-right: var(--container-mobile);
+  @media screen and (min-width: $fsa-md) {
+    padding-left: var(--container);
+    padding-right: var(--container);
+  }
+}
+
+@mixin grid() {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] 1fr);
+  gap: 1rem;
+
+  @media screen and (min-width: $fsa-md) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap: 2rem;
+  }
+}
+
+@mixin landing-text-wrapper {
+  text-align: center;
+  @include grid-cols(4, 4);
+
+  @media screen and (min-width: $fsa-md) {
+    @include grid-cols(12, 12);
+  }
+
+  @media screen and (min-width: $fsa-lg) {
+    @include grid-cols(8, 12);
+    @include cols-push(2, 12);
+  }
+
 }
