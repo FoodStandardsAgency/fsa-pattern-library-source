@@ -280,6 +280,7 @@
       &__label {
         white-space: nowrap;
         left: 1rem;
+        @include small;
       }
 
       &__submit {

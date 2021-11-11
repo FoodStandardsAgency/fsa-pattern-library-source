@@ -30,11 +30,12 @@ English.args = {
   ratings_label: 'Food hygiene ratings',
   search_label: 'Search Food Standards Agency',
   search_bar_visible: true,
+  menu_label: 'menu',
 }
 
 export const Welsh = Template.bind({});
 Welsh.args = {
-  english: true,
+  english: false,
   english_link: '#',
   english_label: 'English',
   welsh_link: '#',
@@ -42,11 +43,12 @@ Welsh.args = {
   logo_link: '#',
   logo_label: 'Food Standards Agency - Frontpage',
   contact_link: '#',
-  contact_label: 'Contact',
+  contact_label: 'Cysylltu',
   report_link: '#',
-  report_label: 'Report',
+  report_label: 'adroddiad',
   ratings_link: '#',
-  ratings_label: 'Food hygiene ratings',
-  search_label: 'Search Food Standards Agency',
+  ratings_label: 'Sgoriau Hylendid Bwyd',
+  search_label: 'Chwilio Asiantaeth Safonau Bwyd...',
   search_bar_visible: true,
+  menu_label: 'menu',
 }

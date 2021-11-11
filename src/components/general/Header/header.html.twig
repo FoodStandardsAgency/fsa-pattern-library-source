@@ -46,7 +46,10 @@
               <div aria-hidden="true" class="header__search-svg"></div>
             </a>
           </div>
-          <button class="header__menu" aria-expanded='false' aria-controls="navigation"><div class="header__menu-symbol"></div></button>
+          <button class="header__menu" aria-expanded="false" aria-controls="navigation">
+            <span class="visually-hidden">{{ menu_label }}</span>
+            <div class="header__menu-symbol" aria-hidden="true"></div>
+          </button>
         </div>
       </div>
     </div>
