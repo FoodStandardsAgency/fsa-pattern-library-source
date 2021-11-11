@@ -1,5 +1,5 @@
 import header from './header.html.twig';
-import './header.scss'
+import './header.scss';
 import headerJs from './header';
 
 headerJs();
@@ -8,10 +8,10 @@ export default {
   title: 'Components/General/Header',
   parameters: {
     layout: 'fullscreen',
-  }
-}
+  },
+};
 
-const Template = args => header(args);
+const Template = (args) => header(args);
 
 export const English = Template.bind({});
 English.args = {
@@ -31,7 +31,7 @@ English.args = {
   search_label: 'Search Food Standards Agency',
   search_bar_visible: true,
   menu_label: 'menu',
-}
+};
 
 export const Welsh = Template.bind({});
 Welsh.args = {
@@ -51,4 +51,4 @@ Welsh.args = {
   search_label: 'Chwilio Asiantaeth Safonau Bwyd...',
   search_bar_visible: true,
   menu_label: 'menu',
-}
+};
