@@ -34,14 +34,17 @@
 
   &__languages {
     display: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     text-align: right;
 
     @media screen and (min-width: $fsa-lg) {
       display: block;
     }
+  }
+
+  &__languages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   &__language {
@@ -357,7 +360,7 @@
   }
 
   /*Expanded navigation style will only be applied to mobile viewports*/
-  @media screen and (max-width: calc(#{$fsa-lg} - 1px)) {
+  @media screen and (max-width: $fsa-lg-minus) {
     &--expanded {
       background-color: var(--fsa__purple-hover);
 
