@@ -40,6 +40,15 @@
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
     }
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 60%;
+    }
   }
   &__container {
     position: relative;
@@ -64,7 +73,7 @@
     position: relative;
     z-index: 1;
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       background-color: inherit;
       align-self: center;
