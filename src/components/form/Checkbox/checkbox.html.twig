@@ -12,7 +12,7 @@
   <div class="checkbox__fields">
     {% for field in fields %}
       <div class="checkbox__field">
-        <input class="checkbox__input form-checkbox" type="checkbox" name="{{ spaceless_name }}" value="{{ field.value }}" id="{{ field.id }}" {{ required ? "required" : "" }} {{ field.checked ? "checked" : "" }}>
+        <input class="checkbox__input form-checkbox" type="checkbox" name="{{ spaceless_name }}[]" value="{{ field.value }}" id="{{ field.id }}" {{ required ? "required" : "" }} {{ field.checked ? "checked" : "" }}>
         <label class="checkbox__label" for="{{ field.id }}">{{ field.label|raw }}</label>
       </div>
     {% endfor %}
