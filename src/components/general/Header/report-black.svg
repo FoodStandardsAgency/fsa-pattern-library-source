@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 6</title>
+    <defs>
+        <polygon id="path-1" points="0.0220447059 0.0487058824 5.95832118 0.0487058824 5.95832118 5.98502824 0.0220447059 5.98502824"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header/search" transform="translate(-667.000000, -75.000000)">
+            <g id="Group-2" transform="translate(667.000000, 68.120000)">
+                <g id="Group-6" transform="translate(0.000000, 6.880000)">
+                    <path d="M10.2586863,3 L1.7564256,11.5065831 L0.0189743412,16.5533003 C-0.0722433129,16.8181659 0.181000888,17.0719802 0.445949038,16.9812277 L5.49781241,15.2499042 L14,6.74332105 L10.2586863,3 Z" id="Fill-1" fill="#000000"></path>
+                    <g id="Group-5" transform="translate(11.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-4"></g>
+                        <path d="M5.66529176,2.53721647 L3.46978588,0.341710588 C3.07908,-0.0489952941 2.44569176,-0.0489952941 2.05498588,0.341710588 L0.0220447059,2.37465176 L3.63235059,5.98502824 L5.66529176,3.95208706 C6.05599765,3.56138118 6.05599765,2.92792235 5.66529176,2.53721647" id="Fill-3" fill="#000000" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

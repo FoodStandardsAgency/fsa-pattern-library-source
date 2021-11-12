@@ -1,0 +1,61 @@
+<header class="header">
+  <div class="header__grid-container">
+    <div class="header__grid-row">
+      <div class="header__wrapper">
+        <div class="header__top">
+          <nav class="header__languages">
+            <ul class="header__languages-list">
+              <li class="header__language">
+                <a href="{{ english_link }}" class="header__language-link {{ english ? " header__language-link--selected" : " " }}">{{ english_label }}</a>
+              </li>
+              <li class="header__language">
+                <a href="{{ welsh_link }}" class="header__language-link {{ not english ? " header__language-link--selected" : " " }}">{{ welsh_label }}</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__bottom">
+          <div class="header__logo-wrapper">
+            <a href="{{ logo_link }}" class="header__logo">
+              <span class="header__logo-label visually-hidden">{{ logo_label }}</span>
+              <div class="header__logo-svg {{ english ? " header__logo-svg--english" : " header__logo-svg--welsh" }}" aria-hidden="true"></div>
+            </a>
+          </div>
+          <nav class="header__links" aria-label="Secondary Menu">
+            <div class="header__links-wrapper">
+              <div class="header__links-item">
+                <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
+              </div>
+              <div class="header__links-item">
+                <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
+              </div>
+            </div>
+            <div class="header__links-item header__links-item--right">
+              <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
+            </div>
+          </nav>
+          {% if search_bar_visible %}
+            <div class="header__search-bar-wrapper">
+              <div class="header__search-bar header__search-bar--full">
+                {% include "../../search/SearchBar/searchBar.html.twig" with {
+                headerText: 'Search',
+                searchLink: '/search',
+                searchText: search_label,
+                searchValue: '',
+              } %}
+              </div>
+              <a class="header__search-bar header__search-bar--icon" href="{{ search_link }}">
+                <span class="visually-hidden header__search-bar-label">{{ search_label }}</span>
+                <div aria-hidden="true" class="header__search-svg"></div>
+              </a>
+            </div>
+          {% endif %}
+          <button class="header__menu" aria-expanded="false" aria-controls="navigation">
+            <span class="visually-hidden">{{ menu_label }}</span>
+            <div class="header__menu-symbol" aria-hidden="true"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
