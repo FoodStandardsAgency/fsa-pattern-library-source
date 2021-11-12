@@ -12,7 +12,20 @@
   {% set ctaType = 'secondary' %}
 {% endif %}
 
-<section class="hero {{ type }}">
+{% if services %}
+  {% if services.length <= 4 %}
+    {% set columns = 2 %}
+    {% set serviceType = 'half' %}
+  {% elseif services.length > 4 and services.length < 7 %}
+    {% set columns = 3 %}
+    {% set serviceType = 'full' %}
+  {% else %}
+    {% set columns = 4 %}
+    {% set serviceType = 'full' %}
+  {% endif %}
+{% endif %}
+
+<section class="hero {{ type }}{{ serviceType ? ' hero--services-' ~ serviceType : '' }}">
   <div class="hero__mask-wrapper{{ theme }}">
     <div class="hero__container">
       <div class="hero__row">
@@ -39,20 +52,29 @@
   </div>
   {% if image %}
     <div class="hero__image">
-      <div class="hero__image__container">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-             y="0px" viewBox="0 0 200 200" xml:space="preserve">
-              <defs>
-                <circle id="circle" cx="100" cy="100" r="100"/>
-              </defs>
-          <clipPath id="clip">
-            <use xlink:href="#circle" overflow="visible"></use>
-          </clipPath>
-          <g clip-path="url(#clip)">
-            <image overflow="visible" href="{{ image.url }}" height="100%" width="100%"
-                   preserveAspectRatio="xMidYMid slice"></image>
-          </g>
-        </svg>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 200 200" xml:space="preserve">
+            <defs>
+              <circle id="circle" cx="100" cy="100" r="100"/>
+            </defs>
+        <clipPath id="clip">
+          <use xlink:href="#circle" overflow="visible"></use>
+        </clipPath>
+        <g clip-path="url(#clip)">
+          <image overflow="visible" href="{{ image.url }}" height="100%" width="100%"
+                  preserveAspectRatio="xMidYMid slice"></image>
+        </g>
+      </svg>
+    </div>
+  {% endif %}
+  {% if services %}
+    <div class="hero__services hero__services--{{ columns }}-columns{{ image ? ' hero__services--with-image' : '' }}">
+      <div class="hero__services__wrapper hero__services__wrapper--{{ columns }}-columns">
+        {% include '@components/components/landing/ServiceLinks/serviceLinks.html.twig' with {
+          title: NULL,
+          links: services,
+          columns: columns,
+        } %}
       </div>
     </div>
   {% endif %}
