@@ -1,5 +1,8 @@
 import filtersHeader from './filtersHeader.html.twig';
 import './filtersHeader.scss';
+import filtersHeaderJS from './filtersHeader';
+
+filtersHeaderJS();
 
 export default {
   title: 'Components/Search/Filters Header',
