@@ -17,6 +17,7 @@ import './components/search/SearchBarHeader/searchBarHeader';
 import './components/search/SearchNoResults/searchNoResults';
 import './components/search/Showing/showing';
 import './components/search/SortBy/sortBy';
+import './components/search/FiltersHeader/filtersHeader';
 
 /* Form Components */
 import './components/form/Checkbox/checkbox';

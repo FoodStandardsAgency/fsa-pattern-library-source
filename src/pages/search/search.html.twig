@@ -41,6 +41,10 @@
 {% endblock %}
 
 {% block left %}
+  {% include '../../components/search/FiltersHeader/filtersHeader.html.twig' with {
+    title: 'Filter your search',
+    link_text: 'Return to results',
+  } %}
   {% include '../../components/search/CollapsibleCheckbox/multipleCollapsibleCheckbox.html.twig' with {
     title: 'Types of Content',
     name: 'content_type',
