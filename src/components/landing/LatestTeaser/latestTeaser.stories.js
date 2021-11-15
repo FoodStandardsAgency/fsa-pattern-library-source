@@ -55,7 +55,7 @@ export default {
   consultationsLatestTeaser.args = {
     title: 'This is the services title',
     description:
-      'This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.',
+      '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p>',
     teaserLinkUrl: '#',
     teaserLink: 'More about consultations',
     cards: [

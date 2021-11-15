@@ -30,9 +30,10 @@
   }
 
   &__text {
-     padding: 1rem 1rem 1rem 3rem;
-     background-repeat: no-repeat;
-     background-size: 1rem;
-     background-position: left 1rem top 1.25rem;
+    margin: 0;
+    padding: 1rem 1rem 1rem 3rem;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: left 1rem top 1.25rem;
   } 
 }
