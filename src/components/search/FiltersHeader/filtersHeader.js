@@ -19,7 +19,7 @@ export default function () {
         targetEl = noResults;
       } else return;
 
-      targetEl.scrollIntoView({behavior: "smooth"});
+      targetEl.scrollIntoView({ behavior: 'smooth' });
     }
 
     returnButton.addEventListener('click', scrollToResults);
