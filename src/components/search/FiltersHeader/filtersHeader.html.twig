@@ -1,6 +1,18 @@
-<div class="filters-header">
-  <div class="filters-header__wrapper">
-    <button class="filters-header__return">{{ link_text }}</button>
+<div class="search-filters">
+  <button class="search-filters__button">{{ title }}</button>
+  <div class="search-filters__content">
+    <div class="search-filters__return-wrapper">
+      <button class="search-filters__return">{{ link_text }}</button>
+    </div>
+    <h4 class="search-filters__title">{{ title }}</h4>
+    {% for filter in checkbox_filters %}
+      {% include "../CollapsibleCheckbox/collapsibleCheckbox.html.twig" with {
+        title: filter.title,
+        name: filter.name,
+        fields: filter.fields,
+        open: filter.open,
+        selected: filter.selected,
+      } %}
+    {% endfor %}
   </div>
-  <h4 class="filters-header__title">{{ title }}</h4>
 </div>

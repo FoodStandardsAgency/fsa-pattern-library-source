@@ -1,7 +1,32 @@
 @import 'src/lib.scss';
 
-.filters-header {
-  &__wrapper {
+.search-filters {
+
+  &__button {
+    @include button(primary);
+    width: 100%;
+    font-weight: bold;
+    
+    &--open {
+      display: none;
+    }
+
+    @media screen and (min-width: $fsa-md) {
+      display: none;
+    }
+  }
+
+  &__content {
+    &--open {
+      display: block;
+    }
+
+    @media screen and (min-width: $fsa-md) {
+      display: block;
+    }
+  }
+
+  &__return-wrapper {
     display: flex;
     justify-content: flex-end;
 
