@@ -1,0 +1,30 @@
+@import 'src/lib.scss';
+
+.filters-header {
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (min-width: $fsa-md) {
+      display: none;
+    }
+  }
+
+  &__return {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    @include body;
+    @include link;
+  }
+
+  &__title {
+    margin: 1rem 0 0;
+    padding: 0;
+
+    @media screen and (min-width: $fsa-md) {
+      margin: 0;
+    }
+  }
+}
