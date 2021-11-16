@@ -1,0 +1,81 @@
+@import 'src/lib.scss';
+
+body.overflow-hidden {
+  overflow-y: hidden;
+
+  @media screen and (min-width: $fsa-md) {
+    overflow: auto;
+  }
+}
+
+.search-filters {
+  &__button {
+    @include button(primary);
+    width: 100%;
+    font-weight: bold;
+
+    &--open {
+      display: none;
+    }
+
+    @media screen and (min-width: $fsa-md) {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &--open {
+      display: block;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      margin: 0;
+      overflow-y: auto;
+      background: var(--fsa-primary_white);
+    }
+
+    @media screen and (min-width: $fsa-md) {
+      display: block;
+      z-index: 0;
+      width: auto;
+      height: auto;
+      padding: 0;
+      position: static;
+    }
+  }
+
+  &__return-wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (min-width: $fsa-md) {
+      display: none;
+    }
+  }
+
+  &__return {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    @include body;
+    @include link;
+  }
+
+  &__title {
+    margin: 1rem 0 0;
+    padding: 0;
+
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 0.5rem;
+    }
+  }
+}
