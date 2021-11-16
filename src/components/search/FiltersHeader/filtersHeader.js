@@ -15,7 +15,7 @@ export default function () {
     const contentDiv = document.querySelector('.search-filters__content');
 
     if (openButton && returnButton && contentDiv) {
-      //Add eventlistener for the buttons
+      //Add eventlisteners for buttons
       function toggleClass() {
         openButton.classList.toggle('search-filters__button--open');
         contentDiv.classList.toggle('search-filters__content--open');
@@ -42,7 +42,7 @@ export default function () {
         }
         return lastElement;
       }
-      function goToLastElement(e) {
+      function focusLastElement(e) {
         const keyCode = e.keyCode ? e.keyCode : e.which;
         //If user pressed shift + tab on the return button, move focus to the end of the modal
         if (keyCode === 9 || e.key === 'Tab') {
@@ -54,7 +54,7 @@ export default function () {
         }
       }
 
-      function goToFirstItem(e) {
+      function focusFirstItem(e) {
         //Check if we are in the modal on mobile
         const position = window.getComputedStyle(contentDiv).getPropertyValue('position');;
         if (position !== 'fixed') return;
@@ -73,9 +73,9 @@ export default function () {
         }
       }
 
-      returnButton.addEventListener('keydown', goToLastElement);
+      returnButton.addEventListener('keydown', focusLastElement);
       //Use event delegation, because the last focusable element will change as filters change.
-      contentDiv.addEventListener('keydown', goToFirstItem);
+      contentDiv.addEventListener('keydown', focusFirstItem);
     }
   });
 }

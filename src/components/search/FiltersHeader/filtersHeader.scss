@@ -1,7 +1,11 @@
 @import 'src/lib.scss';
 
 body.overflow-hidden {
-  overflow: hidden;
+  overflow-y: hidden;
+
+  @media screen and (min-width: $fsa-md) {
+    overflow: auto;
+  }
 }
 
 .search-filters {
@@ -40,6 +44,11 @@ body.overflow-hidden {
 
     @media screen and (min-width: $fsa-md) {
       display: block;
+      z-index: 0;
+      width: auto;
+      height: auto;
+      padding: 0;
+      position: static;
     }
   }
 

@@ -14,6 +14,7 @@ export const FiltersHeader = Template.bind({});
 FiltersHeader.args = {
   title: 'Filter your search',
   link_text: 'Return to results',
+  button_text: 'Filter your search',
   checkbox_filters: [
     {
       title: 'Types of Content',
