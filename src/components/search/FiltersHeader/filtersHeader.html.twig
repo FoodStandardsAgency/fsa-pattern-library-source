@@ -6,7 +6,7 @@
     </div>
     <h4 class="search-filters__title">{{ title }}</h4>
     {% for filter in checkbox_filters %}
-      {% include "../CollapsibleCheckbox/collapsibleCheckbox.html.twig" with {
+      {% include "@components/components/search/CollapsibleCheckbox/collapsibleCheckbox.html.twig" with {
         title: filter.title,
         name: filter.name,
         fields: filter.fields,

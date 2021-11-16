@@ -56,7 +56,7 @@ export default function () {
 
       function focusFirstItem(e) {
         //Check if we are in the modal on mobile
-        const position = window.getComputedStyle(contentDiv).getPropertyValue('position');;
+        const position = window.getComputedStyle(contentDiv).getPropertyValue('position');
         if (position !== 'fixed') return;
 
         //Check if the element that triggered the event is the last focusable element
