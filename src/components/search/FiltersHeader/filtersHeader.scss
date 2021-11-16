@@ -1,12 +1,15 @@
 @import 'src/lib.scss';
 
-.search-filters {
+body.overflow-hidden {
+  overflow: hidden;
+}
 
+.search-filters {
   &__button {
     @include button(primary);
     width: 100%;
     font-weight: bold;
-    
+
     &--open {
       display: none;
     }
@@ -17,8 +20,22 @@
   }
 
   &__content {
+    display: none;
+
     &--open {
       display: block;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      margin: 0;
+      overflow-y: auto;
+      background: var(--fsa-primary_white);
     }
 
     @media screen and (min-width: $fsa-md) {

@@ -44,36 +44,90 @@
   {% include '../../components/search/FiltersHeader/filtersHeader.html.twig' with {
     title: 'Filter your search',
     link_text: 'Return to results',
-  } %}
-  {% include '../../components/search/CollapsibleCheckbox/multipleCollapsibleCheckbox.html.twig' with {
-    title: 'Types of Content',
-    name: 'content_type',
-    fields: [
-      { label: 'Alergy alert', id: 'allergy-alert', value: 'allergy-alert', results: 20, checked: "checked" },
-      { label: 'News', id: 'news', value: 'news', results: 10, checked: "checked" },
-      { label: 'Consultation', id: 'consultation', value: 'consultation', results: 15 },
-      { label: 'Business Guidance', id: 'business-guidance', value: 'business-guidance', results: 23 },
-      { label: 'Consumer Guidance', id: 'consumer-guidance', value: 'consumer-guidance', results: 3, checked: "checked" },
-    ],
-    title_one: "Topics",
-    name_one: 'topics',
-    fields_one: [
-      { label: 'Campylobacter', id: 'campylobacter', value: 'campylobacter', results: 82 },
-      { label: 'Ecoli', id: 'ecoli', value: 'ecoli', results: 46, checked: "checked" },
-      { label: 'Food safety', id: 'food-safety', value: 'food-safety', results: 22 },
-      { label: 'Listeria', id: 'listeria', value: 'listeria', results: 3 },
-      { label: 'Nutrition in Northern Ireland', id: 'northern-ireland-nutrition', value: 'northern-ireland-nutrition', results: 129 },
-      { label: 'Shellfish', id: 'shellfish', value: 'shellfish', results: 10 },
-    ],
-    title_two: "Nation",
-    name_two: 'nation',
-    fields_two: [
-      { label: 'England', id: 'england', value: 'england', results: 100, checked: "checked"  },
-      { label: 'Northern Ireland', id: 'northern-ireland', value: 'northern-ireland', results: 89, checked: "checked"  },
-      { label: 'Wales', id: 'wales', value: 'wales', results: 78 },
-    ],
-    open: false,
-    selected: 'selected',
+    checkbox_filters: [
+    {
+      title: 'Types of Content',
+      name: 'content_type',
+      fields: [
+        {
+          label: 'Allergy alert',
+          id: 'allergy-alert',
+          value: 'allergy-alert',
+          results: 20,
+        },
+        { label: 'News', id: 'news', value: 'news', results: 10 },
+        {
+          label: 'Consultation',
+          id: 'consultation',
+          value: 'consultation',
+          results: 15,
+        },
+        {
+          label: 'Business Guidance',
+          id: 'business-guidance',
+          value: 'business-guidance',
+          results: 23,
+        },
+        {
+          label: 'Consumer Guidance',
+          id: 'consumer-guidance',
+          value: 'consumer-guidance',
+          results: 3,
+        },
+      ],
+      open: true,
+      selected: 'selected',
+    },
+    {
+      title: 'Topics',
+      name: 'topics',
+      fields: [
+        {
+          label: 'Campylobacter',
+          id: 'campylobacter',
+          value: 'campylobacter',
+          results: 82,
+        },
+        {
+          label: 'Food safety',
+          id: 'food-safety',
+          value: 'food-safety',
+          results: 22,
+        },
+        { label: 'Listeria', id: 'listeria', value: 'listeria', results: 3 },
+        {
+          label: 'Nutrition in Northern Ireland',
+          id: 'northern-ireland-nutrition',
+          value: 'northern-ireland-nutrition',
+          results: 129,
+        },
+        {
+          label: 'Shellfish',
+          id: 'shellfish',
+          value: 'shellfish',
+          results: 10,
+        },
+      ],
+      open: true,
+      selected: 'selected',
+    },
+    {
+      title: 'Nation',
+      name: 'nation',
+      fields: [
+        { label: 'England', id: 'england', value: 'england', results: 100 },
+        {
+          label: 'Northern Ireland',
+          id: 'northern-ireland',
+          value: 'northern-ireland',
+          results: 89,
+        },
+        { label: 'Wales', id: 'wales', value: 'wales', results: 78 },
+      ],
+      open: true,
+      selected: 'selected',
+    },
+  ],
   } %}
 {% endblock %}
 
