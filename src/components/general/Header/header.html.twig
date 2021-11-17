@@ -6,10 +6,10 @@
           <nav class="header__languages">
             <ul class="header__languages-list">
               <li class="header__language">
-                <a href="{{ english_link }}" class="header__language-link {{ english ? " header__language-link--selected" : " " }}">{{ english_label }}</a>
+                <a href="{{ english_link }}" class="header__language-link header__language-link--{{ english ? "selected" : "" }}">{{ english_label }}</a>
               </li>
               <li class="header__language">
-                <a href="{{ welsh_link }}" class="header__language-link {{ not english ? " header__language-link--selected" : " " }}">{{ welsh_label }}</a>
+                <a href="{{ welsh_link }}" class="header__language-link header__language-link--{{ not english ? "selected" : "" }}">{{ welsh_label }}</a>
               </li>
             </ul>
           </nav>
@@ -18,10 +18,10 @@
           <div class="header__logo-wrapper">
             <a href="{{ logo_link }}" class="header__logo">
               <span class="header__logo-label visually-hidden">{{ logo_label }}</span>
-              <div class="header__logo-svg {{ english ? " header__logo-svg--english" : " header__logo-svg--welsh" }}" aria-hidden="true"></div>
+              <div class="header__logo-svg header__logo-svg--{{ english ? "english" : "welsh" }}" aria-hidden="true"></div>
             </a>
           </div>
-          <nav class="header__links" aria-label="Secondary Menu">
+          <nav class="header__links header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
             <div class="header__links-wrapper">
               <div class="header__links-item">
                 <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
