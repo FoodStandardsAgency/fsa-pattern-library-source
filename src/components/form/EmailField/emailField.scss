@@ -1,0 +1,31 @@
+@import 'src/lib.scss';
+
+.email-field {
+  margin-top: 2rem;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__content {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include body;
+  }
+
+  &__address {
+    margin: 0;
+  }
+
+  &__label {
+    font-weight: bold;
+  }
+
+  &__link, &__change {
+    display: block;
+    @include link;
+  }
+}
