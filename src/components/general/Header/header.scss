@@ -15,7 +15,12 @@
 }
 
 .header {
-  padding-top: 0.5rem;
+  overflow: hidden;
+  padding: 0.5rem 0 0;
+
+  @media screen and (min-width: $fsa-lg) {
+    padding: 0.5rem 0;
+  }
 
   &__grid-container {
     @include grid-container;

@@ -37,7 +37,7 @@
           {% if search_bar_visible %}
             <div class="header__search-bar-wrapper">
               <div class="header__search-bar header__search-bar--full">
-                {% include "../../search/SearchBar/searchBar.html.twig" with {
+                {% include "@components/components/search/SearchBar/searchBar.html.twig" with {
                 headerText: 'Search',
                 searchLink: '/search',
                 searchText: search_label,

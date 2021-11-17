@@ -3,9 +3,10 @@
 .hero {
   display: flex;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   &__mask-wrapper {
     display: flex;
+    order: 2;
     width: 100%;
     height: fit-content;
     overflow: visible;
@@ -20,15 +21,19 @@
     z-index: 1;
     @media screen and (min-width: $fsa-md) {
       background-image: url("./pattern.svg");
-      background-size: 90%;
+      background-size: 150%;
       background-position: right top;
       padding-bottom: 2.2rem;
     }
     @media screen and (min-width: $fsa-lg) {
-      padding-bottom: 2.6rem;
+      padding-bottom: 3.2rem;
+      background-size: 90%;
     }
     @media screen and (min-width: $fsa-xl) {
       align-items: center;
+    }
+    @media screen and (min-width: $fsa-xxl) {
+      background-size: 70%;
     }
     /* Remove background pattern in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -43,6 +48,7 @@
   &__row {
     @include grid-row;
     display: flex;
+    flex-direction: column;
   }
 
   &__content-wrapper {
@@ -57,7 +63,11 @@
     position: relative;
     z-index: 1;
     &:after {
-      content: "";
+    }
+  }
+
+  &--without-image {
+    .hero__bg-circle {
       position: absolute;
       background-color: inherit;
       align-self: center;
@@ -65,15 +75,15 @@
       width: 58.563rem;
       border-radius: 100%;
       z-index: -1;
-      left: -34rem;
+      right: -20%;
       @media screen and (min-width: $fsa-lg) {
-        left: -30rem;
+        right: -10%;
       }
-      @media screen and (min-width: $fsa-xl) {
-       left: -20rem;
-      }
+      // @media screen and (min-width: $fsa-xl) {
+      //   left: -20rem;
+      // }
     }
-  }
+  } 
   &__title {
     @include h1();
     color: inherit;
@@ -83,7 +93,7 @@
       background-image: url("./dot-white.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
-      width: 100%;
+      width: 101%;
       display: block;
       padding-bottom: 0.5rem;
       margin-top: 0.5rem;
@@ -96,9 +106,60 @@
   &__cta {
     margin-top: 1rem;
   }
+  &__services {
+    order: 3;
+    z-index: 10;
+    width: 100%;
+    @media screen and (min-width: $fsa-xl) {
+      position: absolute;
+      height: 100%;
+      bottom: -20rem;
+    }
+    // If it has an image and 4 columns, unset the height and reduce the bottom padding.
+    &--with-image#{&}--4-columns {
+      @media screen and (min-width: $fsa-xl) {
+        position: relative;
+        height: unset;
+        bottom: -2rem;
+      }
+    }
+    &__wrapper {
+      &--2-columns {
+        @media screen and (min-width: $fsa-xl) {
+          .service-links__cards {
+            width: 50%;
+          }
+        }
+      }
+    }
+    // Adjustments to the existing service links component
+    .service-links {
+      margin-top: 0;
+      &__text-wrapper {
+        text-align: left;
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        flex-basis: unset;
+        max-width: none;
+      }
+      &__cards {
+        margin-top: 0;
+      }
+      &__card {
+        @media screen and (max-width: 767px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
   &__image {
+    order: 1;
     height: 13.5rem;
     overflow: hidden;
+    z-index: 10;
     svg g {
       display: contents;
     }
@@ -108,7 +169,7 @@
       top: 0;
       right: 0;
       bottom: 0;
-      left: 0;
+      left: 50%;
       &__container {
         @include grid-container;
         position: relative;
@@ -118,7 +179,7 @@
         z-index: 1;
         position: absolute;
         top: -3.611rem;
-        right: 2rem;
+        left: 2rem;
         width: 18.667rem;
         height: 18.667rem;
         g {
@@ -128,16 +189,13 @@
     }
     @media screen and (min-width: $fsa-lg) {
       svg {
-        top: -6.188rem;
-        right: 2rem;
+        top: -8rem;
         width: 25rem;
         height: 25rem;
       }
     }
     @media screen and (min-width: $fsa-xl) {
       svg {
-        top: -8rem;
-        right: 3.125rem;
         width: 33.333rem;
         height: 33.333rem;
       }
@@ -169,17 +227,46 @@
     }
   }
   &--with-image {
-      flex-direction: column-reverse;
-      min-height: 29.5rem;
-      @media screen and (min-width: $fsa-md) {
-        flex-direction: row;
-      }
-      .hero__mask-wrapper {
-        background-image: none;
+    flex-direction: column;
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+    }
+    .hero__mask-wrapper {
+      background-image: none;
+
+      @media screen and (min-width: $fsa-xl) {
         min-height: 26rem;
       }
-      .hero__title {
-        margin-top: 1rem;
+    }
+    .hero__title {
+      margin-top: 1rem;
+    }
+  }
+  &--with-services {
+    display: flex;
+    flex-direction: column;
+    .hero__mask-wrapper {
+      @media screen and (min-width: $fsa-xl) {
+        align-items: unset;
       }
     }
+    .hero__content-wrapper {
+      @media screen and (min-width: $fsa-xl) {
+        margin-top: 2rem;
+        padding-bottom: 10rem;
+      }
+    }
+  }
+  &--with-image#{&}--with-services#{&}--services-full {
+    .hero__content-wrapper {
+      @media screen and (min-width: $fsa-xl) {
+        padding-bottom: 0;
+      }
+    }
+    .hero__mask-wrapper {
+      @media screen and (min-width: $fsa-xl) {
+        align-items: center;
+      }
+    }
+  }
 }

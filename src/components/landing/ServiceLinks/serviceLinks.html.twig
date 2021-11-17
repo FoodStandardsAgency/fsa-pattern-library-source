@@ -1,13 +1,15 @@
 <div class="service-links">
   <div class="service-links__container">
-    {% if title is defined %}
+    {% if title or description %}
     <div class="service-links__text-row">
       <div class="service-links__text-wrapper">
-        <h2 class="service-links__title">{{ title }}</h2>
+      {% if title %}    
+          <h2 class="service-links__title">{{ title }}</h2>
       {% endif %}
-      {% if description is defined %}
+      {% if description %}
         <p class="service-links__description">{{ description }}</p>
       </div>
+      {% endif %}
     </div>
     {% endif %}
     <ul class="service-links__cards">
