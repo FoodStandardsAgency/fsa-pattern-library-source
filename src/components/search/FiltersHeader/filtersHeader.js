@@ -1,4 +1,5 @@
 import './filtersHeader.html.twig';
+import './react/filtersHeader.html.twig';
 import './filtersHeader.scss';
 
 export default function () {
