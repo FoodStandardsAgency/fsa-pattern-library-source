@@ -3,12 +3,6 @@ import './titleAndText.scss';
 
 export default {
   title: 'Components/Form/Title and Text',
-  argTypes: {
-    tag: {
-      options: ['h1', 'h2'],
-      control: { type: 'radio' },
-    },
-  },
 };
 
 const Template = (args) => {
@@ -31,4 +25,11 @@ h2.args = {
   description:
     '<p>Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".</p>',
   tag: 'h2',
+};
+
+export const form = Template.bind({});
+form.args = {
+  title: 'SMS frequency',
+  description: '<p>SMS updates are sent immediately</p>',
+  tag: 'h5',
 };
