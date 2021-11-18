@@ -11,9 +11,16 @@
   &__content {
     margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     @include body;
+
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
   }
 
   &__address {
@@ -24,8 +31,17 @@
     font-weight: bold;
   }
 
-  &__link, &__change {
+  &__link,
+  &__change {
     display: block;
     @include link;
+  }
+
+  &__change {
+    margin-top: 1rem;
+
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 0;
+    }
   }
 }
