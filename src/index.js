@@ -29,6 +29,7 @@ import './components/form/MultistepFunction/multistepFunction';
 import './components/form/Radio/radio';
 import './components/form/Tabs/tabs';
 import './components/form/TitleAndText/titleAndText';
+import './components/form/EmailField/emailField';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
