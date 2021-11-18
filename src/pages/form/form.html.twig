@@ -106,6 +106,15 @@
       error: false,
       default: 'immediately',
     } %}
+
+    {% include '../../components/form/EmailField/emailField.html.twig' with {
+      title: 'Personal information',
+      email_label: 'email address',
+      email_link: '#',
+      email_address: 'rachaels@deeson.co.uk',
+      change_email_link: '#',
+      change_email_label: 'Change your email address',
+    } %}
     
     {% include '../../components/form/Checkbox/checkbox.html.twig' with {
       title: 'Consultations',
