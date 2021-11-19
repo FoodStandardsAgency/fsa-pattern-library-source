@@ -24,6 +24,6 @@ const Template = ({label, ...args}) => {
 
 export const SearchBar = Template.bind({});
 SearchBar.args = {
-  searchLink: '/search',
+  searchLink: '#',
   searchText: 'Search Food Standards Agency',
 }
