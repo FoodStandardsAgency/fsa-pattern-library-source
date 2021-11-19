@@ -15,7 +15,12 @@
 }
 
 .header {
-  padding-top: 0.5rem;
+  overflow: hidden;
+  padding: 0.5rem 0 0;
+
+  @media screen and (min-width: $fsa-lg) {
+    padding: 0.5rem 0;
+  }
 
   &__grid-container {
     @include grid-container;
@@ -154,31 +159,47 @@
     @media screen and (min-width: $fsa-xl) {
       margin-left: 2.75rem;
     }
+
   }
 
   &__links-wrapper {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     row-gap: 0.25rem;
   }
 
   &__links-item {
     &--right {
       flex-grow: 1;
-      margin-left: 2rem;
+      margin-left: 1rem;
       display: flex;
       justify-content: flex-end;
     }
 
     &:first-child {
-      margin-right: 2rem;
+      margin-right: 1rem;
     }
 
     @media screen and (min-width: $fsa-xl) {
       &:first-child {
         margin-right: 2.75rem;
       }
+    }
+  }
+
+  &__links--welsh {
+    margin-top: -1.5rem;
+    @media screen and (min-width: $fsa-xl) {
+      margin-top: 0rem;
+    }
+    .header__links-wrapper{
+      flex-wrap: wrap;
+    }
+    .header__links-item:first-child {
+      margin-left: 0;
+    }
+    .header__links-item--right {
+      margin-left: 2rem;
     }
   }
 

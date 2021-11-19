@@ -12,7 +12,7 @@
           <div class="largePromoGroup__description">{{ row.description|raw }}</div>
         {% endif %}
         <div class="largePromoGroup__cta">
-          {% include '../../general/Button/button.html.twig' with {
+          {% include '@components/components/general/Button/button.html.twig' with {
             element: 'link',
             type: key is even ? "secondary" : "primary",
             url: row.ctaLink,

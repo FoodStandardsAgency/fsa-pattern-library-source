@@ -23,7 +23,7 @@ const Template = (args) => {
 
 export const Hero = Template.bind({});
 Hero.args = {
-  type: 'hero',
+  type: 'hero--without-image',
   backgroundColour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
@@ -57,7 +57,7 @@ HeroWithImage.args = {
 
 export const HeroWithFourServices = Template.bind({});
 HeroWithFourServices.args = {
-  type: 'hero--with-services',
+  type: 'hero--with-services hero--without-image',
   backgroundColour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
@@ -77,7 +77,7 @@ HeroWithFourServices.args = {
 };
 export const HeroWithEightServices = Template.bind({});
 HeroWithEightServices.args = {
-  type: 'hero--with-services',
+  type: 'hero--with-services hero--without-image',
   backgroundColour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',

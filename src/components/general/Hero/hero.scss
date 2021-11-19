@@ -4,6 +4,7 @@
   display: flex;
   position: relative;
   overflow: visible;
+
   &__mask-wrapper {
     display: flex;
     order: 2;
@@ -26,7 +27,7 @@
       padding-bottom: 2.2rem;
     }
     @media screen and (min-width: $fsa-lg) {
-      padding-bottom: 2.6rem;
+      padding-bottom: 3.2rem;
       background-size: 90%;
     }
     @media screen and (min-width: $fsa-xl) {
@@ -34,20 +35,10 @@
     }
     @media screen and (min-width: $fsa-xxl) {
       background-size: 70%;
-      padding-bottom: 3.2rem;
     }
     /* Remove background pattern in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      background-color: inherit;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 60%;
     }
   }
   &__container {
@@ -72,8 +63,12 @@
     display: flex;
     position: relative;
     z-index: 1;
-    &:after {
-      content: '';
+  }
+
+  &--without-image {
+    overflow: hidden;
+
+    .hero__bg-circle {
       position: absolute;
       background-color: inherit;
       align-self: center;
@@ -81,15 +76,12 @@
       width: 58.563rem;
       border-radius: 100%;
       z-index: -1;
-      left: -34rem;
+      right: -20%;
       @media screen and (min-width: $fsa-lg) {
-        left: -30rem;
-      }
-      @media screen and (min-width: $fsa-xl) {
-        left: -20rem;
+        right: -10%;
       }
     }
-  }
+  } 
   &__title {
     @include h1();
     color: inherit;
