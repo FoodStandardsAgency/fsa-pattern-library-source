@@ -4,7 +4,12 @@ const updateParams = (name, value) => {
   params.delete(name);
   params.append(name, value);
   const query = params.toString();
-  window.location.href = window.location.origin + '?' + query;
+  const form = document.getElementsByClassName('search-bar');
+  let pathName = currUrl.pathname;
+  if (form) {
+    pathName = form[0].getAttribute('action');
+  }
+  window.location.href = window.location.origin + pathName + (query != '' ? '?' + query : '');
 }
 
 export default updateParams;
