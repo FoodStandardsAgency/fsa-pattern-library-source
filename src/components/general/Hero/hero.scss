@@ -4,6 +4,7 @@
   display: flex;
   position: relative;
   overflow: visible;
+
   &__mask-wrapper {
     display: flex;
     order: 2;
@@ -65,6 +66,8 @@
   }
 
   &--without-image {
+    overflow: hidden;
+
     .hero__bg-circle {
       position: absolute;
       background-color: inherit;
