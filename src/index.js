@@ -7,6 +7,7 @@ import './components/general/Breadcrumb/breadcrumb';
 import './components/general/Button/button';
 import './components/general/Header/header';
 import './components/general/Hero/hero';
+import './components/general/Link/link';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
