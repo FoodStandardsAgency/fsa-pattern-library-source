@@ -17,7 +17,7 @@ const Template = (args) => {
 
 export const SearchNoResults = Template.bind({});
 SearchNoResults.args = {
-  title: 'There are no matching results',
+  title: 'There are no matching results.',
   removeFiltersText: 'Try a new key word or',
   removeFiltersLinkText: 'remove all filters',
   foodHygieneRatingText: 'Were you looking for',
