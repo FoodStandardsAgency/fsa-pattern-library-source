@@ -29,6 +29,7 @@ English.args = {
   ratings_link: '#',
   ratings_label: 'Food hygiene ratings',
   search_label: 'Search Food Standards Agency',
+  search_link: '#',
   search_bar_visible: true,
   menu_label: 'menu',
 };
@@ -49,6 +50,7 @@ Welsh.args = {
   ratings_link: '#',
   ratings_label: 'Sgoriau Hylendid Bwyd',
   search_label: 'Chwilio Asiantaeth Safonau Bwyd...',
+  search_link: '#',
   search_bar_visible: true,
   menu_label: 'menu',
 };
