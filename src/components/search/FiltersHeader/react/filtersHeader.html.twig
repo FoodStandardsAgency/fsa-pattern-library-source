@@ -1,0 +1,33 @@
+<div class="search-filters">
+  <button class="search-filters__button">{{ button_text }}</button>
+  <div class="search-filters__content">
+    <div class="search-filters__return-wrapper">
+      <button class="search-filters__return">{{ link_text }}</button>
+    </div>
+    <h4 class="search-filters__title">{{ title }}</h4>
+    {% for filter in checkbox_filters %}
+      {% set spaceless_title = filter.title|replace({" ": ""})|lower %}
+      {% set description_id = "accordion__description--" ~ spaceless_title %}
+      {% set fields_id = "accordion__fields--" ~ spaceless_title %}
+      <fieldset class="accordion {{ filter.fields is empty or filter.fields is not defined ? " accordion--hidden" : " " }}" aria-describedby="{{ description_id }}" data-name="{{ filter.name }}">
+        <legend class="accordion__legend">
+          <button class="accordion__button {{ filter.open ? " accordion__button--expanded" : " "}}" aria-expanded={{ filter.open ? "true" : "false"}} aria-controls={{ fields_id }}>
+            <span class="accordion__title-text">{{ filter.title }}</span>
+          </button>
+        </legend>
+        <p class="accordion__description" id={{ description_id }} data-selected={{ filter.selected }}></p>
+        <div class="accordion__fields {{ filter.open ? " accordion__fields--active" : " "}}" id={{ fields_id }}>
+          {% for field in filter.fields %}
+            {% if field.results > 0 %}
+              <div class="accordion__field">
+                <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ filter.name ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked }}>
+                <label class="accordion__label" for="{{ field.id }}">{{ field.label }}
+                  ({{ field.results }})</label>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </fieldset>
+    {% endfor %}
+  </div>
+</div>

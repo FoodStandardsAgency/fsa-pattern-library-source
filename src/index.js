@@ -17,6 +17,7 @@ import './components/search/SearchBarHeader/searchBarHeader';
 import './components/search/SearchNoResults/searchNoResults';
 import './components/search/Showing/showing';
 import './components/search/SortBy/sortBy';
+import './components/search/FiltersHeader/filtersHeader';
 
 /* Form Components */
 import './components/form/Checkbox/checkbox';
@@ -28,6 +29,7 @@ import './components/form/MultistepFunction/multistepFunction';
 import './components/form/Radio/radio';
 import './components/form/Tabs/tabs';
 import './components/form/TitleAndText/titleAndText';
+import './components/form/EmailField/emailField';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
