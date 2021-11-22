@@ -2,6 +2,7 @@
   <div class="search-header__wrapper">
     <h1 class="search-header__title">{{ headerText }}</h1>
     {% include '../../SearchBar/react/searchBar.html.twig' with {
+      searchLink: searchLink,
       searchText: searchText,
       defaultValue: defaultValue,
     } %}
