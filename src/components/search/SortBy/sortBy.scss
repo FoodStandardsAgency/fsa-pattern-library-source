@@ -7,6 +7,7 @@
   }
 
   &__select {
+    color: var(--fsa-primary_black);
     display: inline-block;
     margin-right: 0;
     font-family: var(--body-font);
@@ -33,5 +34,9 @@
       box-shadow: inset 0 0 0px 2px var(--fsa-primary_black);
       outline: solid 3px var(--fsa-tertiary_light-yellow);
     }
+  }
+
+  &__option {
+    color: var(--fsa-primary_black);
   }
 }
