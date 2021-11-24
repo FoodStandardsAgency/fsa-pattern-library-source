@@ -31,6 +31,7 @@ import './components/form/Radio/radio';
 import './components/form/Tabs/tabs';
 import './components/form/TitleAndText/titleAndText';
 import './components/form/EmailField/emailField';
+import './components/form/Textarea/textarea';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
