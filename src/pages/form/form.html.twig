@@ -131,6 +131,24 @@
       required: "",
       error: false,
     } %}
+
+    {% include '../../components/form/Textarea/textarea.html.twig' with {
+      error: false,
+      name: 'crime',
+      label: 'What is the food crime you are reporting?',
+      required: '',
+      description: 'Please describe the food crime that you are reporting',
+        rows: 10,
+    } %}
+
+    {% include '../../components/form/Textarea/textarea.html.twig' with {
+      error: true,
+      name: 'crime',
+      label: 'What is the food crime you are reporting?',
+      required: 'required',
+      description: 'Please describe the food crime that you are reporting',
+        rows: 10,
+    } %}
    
     {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
       prevLink: '#',
