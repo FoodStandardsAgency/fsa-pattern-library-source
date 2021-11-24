@@ -1,9 +1,11 @@
-<div class="textarea textarea--{{ error ? " error" : " " }}">
-  <label class="textarea__label" for="textarea-{{ name }}">{{ label }}
-    <span class="textarea__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
+{% set label_id = "textarea-label-" ~ name %}
+{% set desc_id = "textarea-desc-" ~ name %}
+<div class="textarea textarea--{{ error ? "error" : "" }}">
+  <label class="textarea__label" for={{ label_id }}>{{ label }}
+    <span class="textarea__required">{{ required is defined ? "(" ~ required ~ ")" : "" }}</span>
   </label>
   {% if description is defined %}
-    <p class="textarea__description">{{ description }}</p>
+    <p class="textarea__description" id={{ desc_id }}>{{ description }}</p>
   {% endif %}
-  <textarea name={{ name }} id="textarea-{{ name }}" cols="30" rows={{ rows is defined ? rows : "" }} {{ required ? "required" : "" }}></textarea>
+  <textarea name={{ name }} id={{ label_id }} cols="30" rows={{ rows is defined ? rows : "5" }} {{ required ? "required" : "" }} {{ description is defined ? "aria-describedby=" ~ desc_id : "" }}></textarea>
 </div>
