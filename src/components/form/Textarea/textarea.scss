@@ -30,6 +30,7 @@
     margin-top: 0.5rem;
     padding: 0.85rem 1rem;
     width: 100%;
+    display: block;
     @include body;
     @media screen and (min-width: $fsa-xs) {
       padding: 0.75rem 1rem;
@@ -62,7 +63,7 @@
 
     .textarea__field {
       border: 0.25rem solid var(--fsa-secondary_mid-red);
-      
+
       &:focus {
         border-color: var(--fsa-primary_black);
         box-shadow: 0 0 0 0.25rem var(--fsa-tertiary_light-yellow);
