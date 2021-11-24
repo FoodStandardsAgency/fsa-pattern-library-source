@@ -4,14 +4,21 @@ export default {
   title: 'Components/Form/Textarea',
 };
 
-const Template = args => textarea(args);
+const Template = (args) => textarea(args);
 
 export const Normal = Template.bind({});
 Normal.args = {
   error: false,
-  name: "crime",
-  label: "What is the food crime you are reporting?",
-  required: "required",
-  description: "Please describe the food crime that you are reporting",
+  name: 'crime',
+  label: 'What is the food crime you are reporting?',
+  required: '',
+  description: 'Please describe the food crime that you are reporting',
   rows: 20,
-}
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  ...Normal.args,
+  error: true,
+  required: 'required',
+};

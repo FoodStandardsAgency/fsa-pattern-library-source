@@ -2,7 +2,7 @@
 {% set desc_id = "textarea-desc-" ~ name %}
 <div class="textarea textarea--{{ error ? "error" : "" }}">
   <label class="textarea__label" for={{ label_id }}>{{ label }}
-    <span class="textarea__required">{{ required is defined ? "(" ~ required ~ ")" : "" }}</span>
+    <span class="textarea__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
   </label>
   {% if description is defined %}
     <p class="textarea__description" id={{ desc_id }}>{{ description }}</p>
