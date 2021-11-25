@@ -3,7 +3,7 @@
   {% if region_is_defined %}
     <span class="document-download__region">{{ region }}</span>
   {% endif %}
-  <div class="document-download__content">
+  <div class="document-download__content document-download__content--{{ region_is_defined ? "with-region" : "" }}">
     <span class="document-download__format" aria-hidden="true">{{ format|upper }}</span>
     <a href="{{ link }}" class="document-download__link" target="_blank">
       <span class="visually-hidden">{{ view }} </span>

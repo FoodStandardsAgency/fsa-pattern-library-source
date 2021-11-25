@@ -1,4 +1,5 @@
 import documentDownload from './documentDownload.html.twig';
+import './documentDownload.scss';
 
 export default {
   title: 'Components/General/Document Download',
