@@ -1,7 +1,7 @@
 {% set region_is_defined = region is defined and region is not empty %}
 <section class="document-download">
   {% if region_is_defined %}
-    <p class="document-download__region" id="">{{ region }}</p>
+    <span class="document-download__region">{{ region }}</span>
   {% endif %}
   <div class="document-download__content">
     <span class="document-download__format" aria-hidden="true">{{ format }}</span>
