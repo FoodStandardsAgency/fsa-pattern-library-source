@@ -1,7 +1,6 @@
 import updateParams from '../../../helpers/updateParams';
 
 import './searchBar.html.twig';
-import './react/searchBar.html.twig';
 import './searchBar.scss';
 
 export default function () {
