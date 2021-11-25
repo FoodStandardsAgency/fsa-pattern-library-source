@@ -9,10 +9,10 @@ const Template = (args) => documentDownload(args);
 
 export const WithoutRegion = Template.bind({});
 WithoutRegion.args = {
-  format: 'PDF',
+  format: 'word',
   link: '#',
   view: 'View',
-  name: 'Step by step guide for meat approvals application as PDF',
+  name: 'Step by step guide for meat approvals application',
   as: 'as',
   new_window: 'Open in a new window',
   size: '559.42 KB',
@@ -22,4 +22,5 @@ export const WithRegion = Template.bind({});
 WithRegion.args = {
   ...WithoutRegion.args,
   region: ['England'],
+  format: 'pdf',
 };

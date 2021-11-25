@@ -1,6 +1,6 @@
 {% set region_is_defined = region is defined and region is not empty %}
 {% if region|length == 1 %}
-  {% set region_class = "document-download--" ~ region[0]|lower %}
+  {% set region_class = "document-download--" ~ region[0]|lower|replace({" ": "-"}) %}
 {% elseif region|length > 1 %}
   {% set region_class = "document-download--multi" %}
 {% endif %}
