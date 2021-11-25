@@ -21,5 +21,5 @@ WithoutRegion.args = {
 export const WithRegion = Template.bind({});
 WithRegion.args = {
   ...WithoutRegion.args,
-  region: 'England and Wales',
+  region: ['England'],
 };

@@ -1,10 +1,15 @@
 {% set region_is_defined = region is defined and region is not empty %}
-<section class="document-download">
+{% if region|length == 1 %}
+  {% set region_class = "document-download--" ~ region[0]|lower %}
+{% elseif region|length > 1 %}
+  {% set region_class = "document-download--multi" %}
+{% endif %}
+<section class="document-download {{ region_class is defined ? region_class : "" }}">
   {% if region_is_defined %}
-    <span class="document-download__region">{{ region }}</span>
+    <span class="document-download__region">{{ region|join(' and ') }}</span>
   {% endif %}
   <div class="document-download__content document-download__content--{{ region_is_defined ? "with-region" : "" }}">
-    <span class="document-download__format" aria-hidden="true">{{ format|upper }}</span>
+    <span class="document-download__format document-download__format--{{ format|lower }}" aria-hidden="true">{{ format|upper }}</span>
     <a href="{{ link }}" class="document-download__link" target="_blank">
       <span class="visually-hidden">{{ view }} </span>
       {{ name }}
