@@ -34,6 +34,7 @@
     padding: 0.85rem 1rem;
     width: 100%;
     display: block;
+    resize: none;
     @include body;
     @media screen and (min-width: $fsa-xs) {
       padding: 0.75rem 1rem;
