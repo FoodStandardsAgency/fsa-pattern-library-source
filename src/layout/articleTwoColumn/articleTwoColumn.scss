@@ -1,6 +1,6 @@
 @import 'src/lib.scss';
 
-.two-col {
+.article-two-col {
   max-width: 100%;
   &__container {
     @include grid-container;
@@ -36,18 +36,6 @@
     }
     @media screen and (min-width: $fsa-xl) {
       @include grid-cols(7)
-    }
-  }
-  &__right-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    @media screen and (min-width: $fsa-md) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
     }
   }
 }
