@@ -3,7 +3,7 @@
 .hero {
   display: flex;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 
   &__mask-wrapper {
     display: flex;
@@ -103,16 +103,15 @@
     z-index: 10;
     width: 100%;
     @media screen and (min-width: $fsa-xl) {
-      position: absolute;
+      margin-top: -11rem;
       height: 100%;
-      bottom: -20rem;
     }
     // If it has an image and 4 columns, unset the height and reduce the bottom padding.
     &--with-image#{&}--4-columns {
       @media screen and (min-width: $fsa-xl) {
         position: relative;
         height: unset;
-        bottom: -2rem;
+        margin-top: 0;
       }
     }
     &__wrapper {
