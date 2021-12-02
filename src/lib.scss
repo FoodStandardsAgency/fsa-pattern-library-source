@@ -34,6 +34,7 @@
   --fsa-secondary_mid-blue: #007fb2;
   --fsa-tertiary_lime: #cedc00;
   --fsa-tertiary_mauve: #8b84d7;
+  --fsa-tertiary_stripe-green: #006f51;
 
   /* Hover Colours */
   --fsa__link-green: #014b4c;
@@ -345,6 +346,11 @@ $mobileGutter: 1rem;
 
     &__label {
       padding: 0 0 0 1rem;
+      &-description {
+        color: var(--fsa-primary_dark-grey);
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
     }
 
     &--error {
