@@ -18,9 +18,15 @@ WithoutRegion.args = {
   size: '559.42 KB',
 };
 
-export const WithRegion = Template.bind({});
-WithRegion.args = {
+export const WithOneRegion = Template.bind({});
+WithOneRegion.args = {
   ...WithoutRegion.args,
   region: ['England'],
   format: 'pdf',
 };
+
+export const WithMultipleRegions = Template.bind({});
+WithMultipleRegions.args = {
+  ...WithOneRegion.args,
+  region: ['England', 'Wales', 'Northern Ireland'],
+}
