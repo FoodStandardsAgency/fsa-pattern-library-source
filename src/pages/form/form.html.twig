@@ -27,6 +27,10 @@
             {
               'label': 'Password',
               'id': 'password'
+            },
+            {
+              'label': 'What is the company or food business you wish to give information about?',
+              'id': 'textarea-label-company',
             }
           ]
         },
@@ -138,7 +142,15 @@
       label: 'What is the food crime you are reporting?',
       required: '',
       description: 'Please describe the food crime that you are reporting',
-        rows: 10,
+      rows: 10,
+    } %}
+
+    {% include '../../components/form/Textarea/textarea.html.twig' with {
+      error: true,
+      name: 'company',
+      label: 'What is the company or food business you wish to give information about?',
+      required: 'required',
+      rows: 10,
     } %}
    
     {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
