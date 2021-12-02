@@ -16,7 +16,7 @@
   {% endif %}
   <div class="document-download__content document-download__content--{{ region_is_defined ? "with-region" : "" }}">
     <span class="document-download__format document-download__format--{{ format|lower }}" aria-hidden="true">{{ format|upper }}</span>
-    <div>
+    <div class="document-download__link-wrapper">
       <a href="{{ link }}" class="document-download__link" target="_blank"><span class="visually-hidden">{{ view }} </span>{{ name }}<span class="visually-hidden"> {{ as }} {{ format }}({{ new_window }})</span></a>
       <span class="document-downdload__size">({{ size }})</span>
     </div>
