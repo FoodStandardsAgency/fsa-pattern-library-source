@@ -345,6 +345,11 @@ $mobileGutter: 1rem;
 
     &__label {
       padding: 0 0 0 1rem;
+      &-description {
+        color: var(--fsa-primary_dark-grey);
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
     }
 
     &--error {
