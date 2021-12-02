@@ -1,0 +1,26 @@
+{% set region_is_defined = region is defined and region is not empty %}
+{% if region_is_defined %}
+  {% if region|length == 1 %}
+    {% set region_class = "document-download--" ~ region[0]|lower|replace({" ": "-"}) %}
+    {% set region_string = region[0] %}
+  {% elseif region|length > 1 %}
+    {% set region_class = "document-download--multi" %}
+    {% set region_first = region|slice(0, region|length - 1) %}
+    {% set region_last = region[region|length - 1] %}
+    {% set region_string = region_first|join(", ") ~ " and " ~ region_last %}
+  {% endif %}
+{% endif %}
+<section class="document-download {{ region_class is defined ? region_class : "" }}">
+  {% if region_is_defined %}
+    <span class="document-download__region">{{ region_string }}</span>
+  {% endif %}
+  <div class="document-download__content document-download__content--{{ region_is_defined ? "with-region" : "" }}">
+    <span class="document-download__format document-download__format--{{ format|lower }}" aria-hidden="true">{{ format|upper }}</span>
+    <a href="{{ link }}" class="document-download__link" target="_blank">
+      <span class="visually-hidden">{{ view }} </span>
+      {{ name }}
+      <span class="visually-hidden"> {{ as }} {{ format }}({{ new_window }})</span>
+      <span class="document-downdload__size">({{ size }})</span>
+    </a>
+  </div>
+</section>

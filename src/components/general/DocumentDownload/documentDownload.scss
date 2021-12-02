@@ -1,0 +1,87 @@
+@import 'src/lib.scss';
+
+.document-download {
+  background-color: var(--fsa_tint);
+  border: 1px solid var(--fsa_border);
+  margin-top: 2rem;
+  padding: 0.5rem 0.5rem 0.5rem;
+  position: relative;
+
+  @media screen and (min-width: $fsa-md) {
+    padding: 1rem 1.5rem 1rem 2rem;
+  }
+
+  @media screen and (min-width: $fsa-lg) {
+    padding: 1rem 1rem 1rem 2rem;
+  }
+
+  &:before {
+    content: '';
+    height: calc(100% + 2px);
+    width: 5px;
+    position: absolute;
+    left: -5px;
+    top: -1px;
+  }
+
+  &--england:before {
+    background-color: var(--fsa-secondary_mid-red);
+  }
+
+  &--wales:before {
+    background-color: var(--fsa-tertiary_stripe-green);
+  }
+
+  &--northern-ireland:before {
+    background-color: var(--fsa-secondary_mid-yellow);
+  }
+
+  &--multi:before {
+    background-color: var(--fsa-primary_dark-grey);
+  }
+
+  &__region {
+    @include body;
+    font-weight: bold;
+    color: var(--fsa-primary_black);
+    display: block;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &--with-region {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__format {
+    @include body;
+    color: var(--fsa-primary_white);
+    min-width: 3.75rem;
+    text-align: center;
+    display: block;
+    background-color: var(--fsa-primary_dark-grey);
+
+    &--pdf {
+      background-color: var(--fsa-tertiary_dark-red);
+    }
+
+    &--word {
+      background-color: var(--fsa-secondary_dark-blue);
+    }
+  }
+
+  &__link {
+    margin-left: 0.5rem;
+
+    @media screen and (min-width: $fsa-md) {
+      margin-left: 1.5rem;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      margin-left: 1rem;
+    }
+  }
+}

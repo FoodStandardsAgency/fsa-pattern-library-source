@@ -8,6 +8,7 @@ import './components/general/Button/button';
 import './components/general/Header/header';
 import './components/general/Hero/hero';
 import './components/general/Link/link';
+import './components/general/DocumentDownload/documentDownload';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
@@ -44,6 +45,7 @@ import './components/landing/ServiceLinks/serviceLinks';
 import './layout/formLayout/formLayout';
 import './layout/twoColumn/twoColumn';
 import './layout/fullWidth/fullWidth';
+import './layout/contentLayout/contentLayout';
 
 import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
 import pagination from "./components/search/Pagination/pagination";
