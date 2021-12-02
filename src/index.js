@@ -45,7 +45,7 @@ import './components/landing/ServiceLinks/serviceLinks';
 import './layout/formLayout/formLayout';
 import './layout/twoColumn/twoColumn';
 import './layout/fullWidth/fullWidth';
-import './layout/articleTwoColumn/articleTwoColumn';
+import './layout/contentLayout/contentLayout';
 
 import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
 import pagination from "./components/search/Pagination/pagination";
