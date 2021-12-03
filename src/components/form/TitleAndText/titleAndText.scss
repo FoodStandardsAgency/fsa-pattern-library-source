@@ -10,5 +10,6 @@ h3.form-title {
 
 .form-description {
   @include body;
+  margin-top: 1rem;
   color: var(--fsa-primary_black);
 }
