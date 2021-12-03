@@ -12,15 +12,13 @@
 {% endif %}
 <section class="document-download {{ region_class is defined ? region_class : "" }}">
   {% if region_is_defined %}
-    <span class="document-download__region">{{ region_string }}</span>
+    <h3 class="document-download__region">{{ region_string }}</h3>
   {% endif %}
   <div class="document-download__content document-download__content--{{ region_is_defined ? "with-region" : "" }}">
     <span class="document-download__format document-download__format--{{ format|lower }}" aria-hidden="true">{{ format|upper }}</span>
-    <a href="{{ link }}" class="document-download__link" target="_blank">
-      <span class="visually-hidden">{{ view }} </span>
-      {{ name }}
-      <span class="visually-hidden"> {{ as }} {{ format }}({{ new_window }})</span>
+    <div class="document-download__link-wrapper">
+      <a href="{{ link }}" class="document-download__link" target="_blank"><span class="visually-hidden">{{ view }} </span>{{ name }}<span class="visually-hidden"> {{ as }} {{ format }}({{ new_window }})</span></a>
       <span class="document-downdload__size">({{ size }})</span>
-    </a>
+    </div>
   </div>
 </section>
