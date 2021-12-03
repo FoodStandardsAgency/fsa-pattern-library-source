@@ -75,6 +75,26 @@ HeroWithFourServices.args = {
     { label: 'Allergen guidance for businesses', url: '#' },
   ],
 };
+
+export const HeroWithTwoServices = Template.bind({});
+HeroWithTwoServices.args = {
+  type: 'hero--with-services hero--without-image',
+  backgroundColour: 'green',
+  title: 'Food we can trust',
+  content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+  ctas: [
+    {
+      external: false,
+      name: 'Food and allergy',
+      link: '#',
+    },
+  ],
+  services: [
+    { label: 'Safer food, better business', url: '#' },
+    { label: 'Apply for a regulated product authorisation', url: '#' },
+  ],
+};
+
 export const HeroWithEightServices = Template.bind({});
 HeroWithEightServices.args = {
   type: 'hero--with-services hero--without-image',

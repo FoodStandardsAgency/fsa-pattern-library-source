@@ -31,5 +31,5 @@ export const form = Template.bind({});
 form.args = {
   title: 'SMS frequency',
   description: '<p>SMS updates are sent immediately</p>',
-  tag: 'h5',
+  tag: 'h3',
 };

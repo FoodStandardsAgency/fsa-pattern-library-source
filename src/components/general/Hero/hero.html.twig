@@ -23,7 +23,10 @@
     {% set columns = 4 %}
     {% set serviceType = 'full' %}
   {% endif %}
+
 {% endif %}
+
+
 
 <section class="hero {{ type }}{{ serviceType ? ' hero--services-' ~ serviceType : '' }}">
   <div class="hero__mask-wrapper{{ theme }}">
@@ -68,7 +71,7 @@
     </div>
   {% endif %}
   {% if services %}
-    <div class="hero__services hero__services--{{ columns }}-columns{{ image ? ' hero__services--with-image' : '' }}">
+    <div class="hero__services hero__services--{{ columns }}-columns{{ image ? ' hero__services--with-image' : '' }}{{ services.length == 2 ? ' hero__services--half-two' : '' }}">
       <div class="hero__services__wrapper hero__services__wrapper--{{ columns }}-columns">
         {% include '@components/components/landing/ServiceLinks/serviceLinks.html.twig' with {
           title: NULL,
