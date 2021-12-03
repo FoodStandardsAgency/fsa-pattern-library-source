@@ -12,9 +12,9 @@
   &--cancel {
     @include button(cancel);
   }
+
+  & + & {
+    margin-left: 1rem;
+  }
 }
 
-
-.button+.button {
-  margin-left: 1rem;
-}
