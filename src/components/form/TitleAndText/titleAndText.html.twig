@@ -1,2 +1,6 @@
-<{{ tag }} class="form-title {{ class }}">{{ title }}</{{ tag }}>
-<div class="form-description">{{ description | raw }}</div>
+{% if title and tag %}
+  <{{ tag }} class="form-title {{ class }}">{{ title }}</{{ tag }}>
+{% endif %}
+{% if description %}
+  <div class="form-description">{{ description|raw }}</div>
+{% endif %}
