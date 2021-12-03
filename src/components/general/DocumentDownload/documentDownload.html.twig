@@ -12,7 +12,7 @@
 {% endif %}
 <section class="document-download {{ region_class is defined ? region_class : "" }}">
   {% if region_is_defined %}
-    <span class="document-download__region">{{ region_string }}</span>
+    <h3 class="document-download__region">{{ region_string }}</h3>
   {% endif %}
   <div class="document-download__content document-download__content--{{ region_is_defined ? "with-region" : "" }}">
     <span class="document-download__format document-download__format--{{ format|lower }}" aria-hidden="true">{{ format|upper }}</span>
