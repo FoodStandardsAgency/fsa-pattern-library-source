@@ -73,10 +73,9 @@
     }
   }
 
-  &__link {
+  &__link-wrapper {
     margin-left: 0.5rem;
-    text-decoration: underline;
-
+    
     @media screen and (min-width: $fsa-md) {
       margin-left: 1.5rem;
     }
@@ -84,6 +83,10 @@
     @media screen and (min-width: $fsa-lg) {
       margin-left: 1rem;
     }
+  }
+
+  &__link {
+    text-decoration: underline;
 
     &:hover {
       color: var(--fsa__link-green);
