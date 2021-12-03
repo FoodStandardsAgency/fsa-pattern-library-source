@@ -71,6 +71,6 @@ Footer.args = {
     { label: 'LinkedIn', external: true, link: '#', icon_type: 'linkedin' },
     { label: 'Youtube', external: true, link: '#', icon_type: 'youtube' },
     { label: 'Instagram', external: true, link: '#', icon_type: 'instagram' },
-    { label: 'FSA blog', external: false, link: '#', icon_type: 'facebook' },
+    { label: 'FSA blog', external: false, link: '#', icon_type: 'blog' },
   ],
 };

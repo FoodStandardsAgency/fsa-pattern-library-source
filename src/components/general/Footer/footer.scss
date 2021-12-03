@@ -1,5 +1,15 @@
 @import 'src/lib.scss';
 
+@mixin icon($type) {
+  &--#{$type} {
+    background-image: url('./fsa-#{$type}.svg');
+
+    &:hover {
+      background-image: url('./fsa-#{$type}-hover.svg');
+    }
+  }
+}
+
 .footer {
   background-color: var(--fsa__purple-hover);
   border-top: 8px solid var(--fsa-primary_mid-green);
@@ -15,6 +25,10 @@
 
   &__wrapper {
     @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(12, 12);
+      display: flex;
+    }
   }
 
   &__menu {
@@ -25,6 +39,10 @@
     margin: 0.5rem 0 0;
     list-style: none;
     padding: 0;
+
+    @media screen and (min-width: $fsa-xl) {
+      flex-direction: row;
+    }
   }
 
   &__menu-link {
@@ -80,13 +98,15 @@
   &__social-link {
     height: 2.75rem;
     width: 2.75rem;
-    border-radius: 50%;
     display: block;
-    background-color: var(--fsa-primary_white);
-
-    &:hover {
-      background-color: var(--fsa__grey-hover);
-    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include icon(facebook);
+    @include icon(twitter);
+    @include icon(instagram);
+    @include icon(linkedin);
+    @include icon(youtube);
+    @include icon(blog);
 
     &:focus {
       box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
