@@ -3,7 +3,9 @@ import './footer.scss';
 
 export default {
   title: 'Components/General/Footer',
-  parameters: {},
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 export const Footer = (args) => footer(args);
