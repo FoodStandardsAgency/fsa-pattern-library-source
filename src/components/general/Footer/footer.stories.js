@@ -1,4 +1,5 @@
 import footer from './footer.html.twig';
+import './footer.scss';
 
 export default {
   title: 'Components/General/Footer',
