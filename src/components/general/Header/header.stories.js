@@ -46,7 +46,7 @@ Welsh.args = {
   contact_link: '#',
   contact_label: 'Cysylltu',
   report_link: '#',
-  report_label: 'adroddiad',
+  report_label: 'Adroddiad',
   ratings_link: '#',
   ratings_label: 'Sgoriau Hylendid Bwyd',
   search_label: 'Chwilio Asiantaeth Safonau Bwyd...',

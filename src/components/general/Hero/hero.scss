@@ -103,7 +103,7 @@
     z-index: 10;
     width: 100%;
     @media screen and (min-width: $fsa-xl) {
-      margin-top: -11rem;
+      margin-top: -13rem;
       height: 100%;
     }
     // If it has an image and 4 columns, unset the height and reduce the bottom padding.
@@ -123,6 +123,13 @@
         }
       }
     }
+    // If there are 2 services
+    &--half-two {
+      @media screen and (min-width: $fsa-xl) {
+        padding-bottom: 5.5rem;
+      }
+    }
+
     // Adjustments to the existing service links component
     .service-links {
       margin-top: 0;
@@ -244,7 +251,7 @@
     .hero__content-wrapper {
       @media screen and (min-width: $fsa-xl) {
         margin-top: 2rem;
-        padding-bottom: 10rem;
+        padding-bottom: 12rem;
       }
     }
   }
