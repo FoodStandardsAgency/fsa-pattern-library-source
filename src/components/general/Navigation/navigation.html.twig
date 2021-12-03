@@ -30,9 +30,9 @@
                             <a href="{{ submenuLinkObj.link.href ? submenuLinkObj.link.href : '#' }}">{{ submenuLinkObj.link.label }}</a>
                           </li>
                         {% endfor %}
-                        {% if readMoreLink %}
+                        {% if group.readMoreLink %}
                         <li class="navigation__link navigation__link--read-more">
-                          <a href="{{ readMoreLink }}"><span class="navigation__link__read-more-arrow"></span>{{ readMoreLabel }}</a>
+                          <a href="{{ group.readMoreLink }}"><span class="navigation__link__read-more-arrow"></span>{{ group.readMoreLabel }}</a>
                         </li>
                         {% endif %}
                       </ul>
