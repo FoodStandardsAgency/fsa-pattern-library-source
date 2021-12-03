@@ -13,3 +13,8 @@
     @include button(cancel);
   }
 }
+
+
+.button+.button {
+  margin-left: 1rem;
+}
