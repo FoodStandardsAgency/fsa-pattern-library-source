@@ -16,3 +16,9 @@ Use `yarn` to install followed by:
 * `yarn storybook` to load a local instance of storybook on http://localhost:6006/
 * `yarn build-storybook` to build a local static version of storybook (This runs automatically on push and updates https://github.com/FoodStandardsAgency/fsa-pattern-library)
 * `yarn build` to build compiled js and css assets. (This runs automatically on push and updates https://github.com/FoodStandardsAgency/fsa-pattern-library-assets)
+
+## Running locally without docker
+If we want to use Storybook with the main site locally, run `make local`. Make sure to keep both react & main site repo under ``~/Sites/`` directory.
+```
+make local
+```
