@@ -1,35 +1,33 @@
 <footer class="footer">
   <div class="footer__grid-container">
     <div class="footer__grid-row">
-      <div class="footer__wrapper">
-        <nav>
-          <h2 class="visually-hidden">{{ footer_links }}</h2>
-          <ul class="footer__menu">
-            {% for menu_link in menu_links %}
-              <li class="footer__menu-item">
-                <a href="{{ menu_link.link }}" class="footer__menu-link {{ menu_link.external ? "external-link" : "" }}" target="{{ menu_link.external ? "_blank" : "_self" }}">{{ menu_link.title }}
-                  {% if menu_link.external %}
-                    <span class="visually-hidden">({{ new_window }})</span>
-                  {% endif %}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-        <div class="footer__social">
-          <p class="visually-hidden">{{ social_media }}</p>
-          <ul class="footer__social-list">
-            {% for social_link in social_links %}
-              <li class="footer__social-item">
-                <a href="{{ social_link.link }}" class="footer__social-link footer__social-link--{{ social_link.icon_type }}" title="{{ social_link.label }}" target="{{ social_link.external ? "_blank" : "_self" }}">
-                  <span class="visually-hidden">{{ social_link.label }}
-                    {{ social_link.external ? "(" ~ new_window ~ ")" : "" }}</span>
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-            </div>
+      <nav class="footer__nav">
+        <h2 class="visually-hidden">{{ footer_links }}</h2>
+        <ul class="footer__menu">
+          {% for menu_link in menu_links %}
+            <li class="footer__menu-item">
+              <a href="{{ menu_link.link }}" class="footer__menu-link {{ menu_link.external ? " external-link" : " " }}" target="{{ menu_link.external ? "_blank" : "_self" }}">{{ menu_link.title }}
+                {% if menu_link.external %}
+                  <span class="visually-hidden">({{ new_window }})</span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <p class="visually-hidden">{{ social_media }}</p>
+        <ul class="footer__social-list">
+          {% for social_link in social_links %}
+            <li class="footer__social-item">
+              <a href="{{ social_link.link }}" class="footer__social-link footer__social-link--{{ social_link.icon_type }}" title="{{ social_link.label }}" target="{{ social_link.external ? "_blank" : "_self" }}">
+                <span class="visually-hidden">{{ social_link.label }}
+                  {{ social_link.external ? "(" ~ new_window ~ ")" : "" }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
+    </div>
   </div>
 </footer>

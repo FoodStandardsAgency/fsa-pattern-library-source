@@ -21,13 +21,18 @@
 
   &__grid-row {
     @include grid-row;
+    @media screen and (min-width: $fsa-xl) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
 
-  &__wrapper {
+  &__nav {
     @include grid-cols(4, 4);
+
     @media screen and (min-width: $fsa-xl) {
-      @include grid-cols(12, 12);
-      display: flex;
+      @include grid-cols(7, 12);
     }
   }
 
@@ -38,10 +43,14 @@
     align-items: center;
     margin: 0.5rem 0 0;
     list-style: none;
-    padding: 0;
+    padding: 0; 
 
     @media screen and (min-width: $fsa-xl) {
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 1rem;
     }
   }
 
@@ -74,10 +83,18 @@
     &::after {
       background-image: url('./external-white.svg');
     }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin-right: 1.5rem;
+    }
   }
 
   &__social {
     margin-top: 2rem;
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(4, 12);
+    } 
   }
 
   &__social-list {
@@ -87,6 +104,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    @media screen and (min-width: $fsa-xl) {
+      justify-content: flex-end;
+    } 
   }
 
   &__social-item {
@@ -113,6 +133,7 @@
         0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
       outline: none;
       text-decoration: none;
+      border-radius: 50%;
     }
   }
 }
