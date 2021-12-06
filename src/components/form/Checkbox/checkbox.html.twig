@@ -2,11 +2,11 @@
 {% set id = "checkbox__description--" ~ spaceless_name %}
 <fieldset id="{{ fieldset_id is defined ? fieldset_id : ""}}" class="checkbox {{ error ? "checkbox--error" : "" }}" aria-describedby={{ description is defined ? id : "" }}>
   {% if title is defined %}
-    <legend class="checkbox__legend">
+    <legend class="checkbox__legend {{ description is defined and description is not empty ? "" : "checkbox__legend--without-desc" }}">
       {{ title }}<span class="checkbox__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
     </legend>
   {% endif %}
-  {% if description is defined %}
+  {% if description is defined and description is not empty %}
     <p class="checkbox__description" id={{ id }}>{{ description }}</p>
   {% endif %}
   <div class="checkbox__fields">

@@ -313,6 +313,10 @@ $mobileGutter: 1rem;
       font-weight: bold;
       /* Using a float trick here to make the border of fieldset wrap around, not going through, the legend.*/
       float: left;
+
+      &--without-desc {
+        margin-bottom: 1rem;
+      }
     }
 
     &__required {
@@ -334,6 +338,7 @@ $mobileGutter: 1rem;
       @include body;
       display: flex;
       align-items: flex-start;
+      clear: both;
     }
 
     &__input {
