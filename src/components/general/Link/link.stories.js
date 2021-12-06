@@ -1,5 +1,6 @@
 import link from './link.html.twig';
 import './link.js';
+import './link.scss';
 
 export default {
   title: 'Components/General/Link',

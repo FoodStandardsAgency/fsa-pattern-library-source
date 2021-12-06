@@ -1,4 +1,5 @@
 import documentDownload from './documentDownload.html.twig';
+import multipleDocumentDownload from './multipleDocumentDownload.html.twig';
 import './documentDownload.scss';
 
 export default {
@@ -30,3 +31,5 @@ WithMultipleRegions.args = {
   ...WithOneRegion.args,
   region: ['England', 'Wales', 'Northern Ireland'],
 }
+
+export const List = () => multipleDocumentDownload();

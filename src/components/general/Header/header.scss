@@ -188,7 +188,7 @@
   }
 
   &__links--welsh {
-    margin-top: -1.5rem;
+    margin-top: -0.5rem;
     @media screen and (min-width: $fsa-xl) {
       margin-top: 0rem;
     }
@@ -197,6 +197,10 @@
     }
     .header__links-item:first-child {
       margin-left: 0;
+      min-width: 21rem;
+      @media screen and (min-width: $fsa-xl) {
+        min-width: auto;
+      }
     }
     .header__links-item--right {
       margin-left: 2rem;

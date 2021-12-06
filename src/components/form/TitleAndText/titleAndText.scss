@@ -4,7 +4,12 @@
   margin: 2rem 0 0 0;
 }
 
+h3.form-title {
+  @include h5
+}
+
 .form-description {
   @include body;
+  margin-top: 1rem;
   color: var(--fsa-primary_black);
 }

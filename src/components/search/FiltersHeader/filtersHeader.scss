@@ -9,6 +9,10 @@ body.overflow-hidden {
 }
 
 .search-filters {
+  &__title {
+    @include h4;
+  }
+
   &__button {
     @include button(primary);
     width: 100%;

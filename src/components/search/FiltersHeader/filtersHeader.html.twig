@@ -4,7 +4,7 @@
     <div class="search-filters__return-wrapper">
       <button class="search-filters__return">{{ link_text }}</button>
     </div>
-    <h4 class="search-filters__title">{{ title }}</h4>
+    <h2 class="search-filters__title">{{ title }}</h2>
     {% for filter in checkbox_filters %}
       {% include "@components/components/search/CollapsibleCheckbox/collapsibleCheckbox.html.twig" with {
         title: filter.title,

@@ -1,0 +1,14 @@
+{% set document_args = {
+    format: 'word',
+    link: '#',
+    view: 'View',
+    name: 'Step by step guide for meat approvals application',
+    as: 'as',
+    new_window: 'Open in a new window',
+    size: '559.42 KB',} 
+  %}
+{% include './documentDownload.html.twig' with document_args %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Northern Ireland'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'word', region: ['England', 'Northern Ireland'] }) %}
