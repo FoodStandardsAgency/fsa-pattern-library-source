@@ -1,0 +1,18 @@
+<section class="feedback" aria-label="{{ section_title }}">
+  <div class="feedback__grid-container">
+    <div class="feedback__grid-row">
+      <div class="feedback__grid-wrapper">
+        <h2 class="feedback__heading">{{ question }}</h2>
+        <p class="feedback__options">
+          <button class="feedback__yes">{{ yes }}
+            <span class="visually-hidden">{{ useful }}</span>
+          </button>
+          <span class="feedback__or">{{ or }}</span>
+          <button class="feedback__no" aria-expanded="false" aria-controls="feedback-form">{{ no }}
+            <span class="visually-hidden">{{ not_useful }}</span>
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
