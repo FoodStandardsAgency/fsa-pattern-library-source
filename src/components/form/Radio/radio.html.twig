@@ -4,7 +4,7 @@
   <legend class="radio__legend">
     {{ title }}<span class="radio__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
   </legend>
-  {% if description is defined %}
+  {% if description is defined and description is not empty %}
     <p class="radio__description" id={{ id }}>{{ description }}</p>
   {% endif %}
   <div class="radio__fields">

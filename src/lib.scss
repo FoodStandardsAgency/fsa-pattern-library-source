@@ -330,10 +330,12 @@ $mobileGutter: 1rem;
     }
 
     &__field {
-      margin-top: 1rem;
+      padding-top: 1rem;
+      margin: 0;
       @include body;
       display: flex;
       align-items: flex-start;
+      clear: both;
     }
 
     &__input {
