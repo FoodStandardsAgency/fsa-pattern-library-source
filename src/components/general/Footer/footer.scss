@@ -1,190 +1,140 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import 'src/lib.scss';
 
-.social-media {
-  padding: 1em 0;
-  text-align: center;
+@mixin icon($type) {
+  &--#{$type} {
+    background-image: url('./fsa-#{$type}.svg');
 
-  @media (min-width: 60em) {
-    flex: 0 0 auto;
-    padding: 0;
-    margin-left: auto;
-    text-align: left;
-  }
-}
-
-.social-media__link {
-  display: inline-block;
-  padding: 0.25em;
-
-  .svg {
-    width: 2.2em;
-    height: 2.2em;
-
-    path {
-      fill: #FFF !important;
+    &:hover {
+      background-image: url('./fsa-#{$type}-hover.svg');
     }
   }
-
-  &.ext {
-    background: none;
-    padding: 0.25em;
-  }
-
-  &:--enter .svg path {
-    transition: fill 0.2s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-}
-
-.footer-top-wrapper {
-  position: relative;
-  z-index: 200;
-}
-
-.footer-top-wrapper__container {
-  background-color: 'e8ebed;'
-}
-
-.footer-wrapper {
-  position: relative;
-  z-index: 100;
-  color: #FFF;
-}
-
-.footer-wrapper__content {
-  border-top: 0.5em solid #6cb33d;
-  background-color: #2a0247;
-}
-
-.layout__content {
-  padding-left: 4em;
-  padding-right: 4em;
 }
 
 .footer {
-  font-family: Open Sans, sans-serif;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  background-color: var(--fsa__purple-hover);
+  border-top: 8px solid var(--fsa-primary_mid-green);
+  padding-bottom: 2rem;
 
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-
-  @media (min-width: 60em) {
-    flex-flow: row nowrap;
-  }
-}
-
-.footer__logo .svg {
-  width: 10em;
-  height: 6em;
-}
-
-.footer__content {
-  padding: 2em;
-
-  text-align: center;
-}
-
-.footer__paragraph {
-  font-size: 0.8889em;
-  padding: 1em 0;
-  margin: 0;
-
-  @media (min-width: 60em) {
-    flex: 0 0 auto;
-  }
-}
-
-.footer__links {
-  @media print {
-    display: none;
+  &__grid-container {
+    @include grid-container;
   }
 
-  & > ul {
+  &__grid-row {
+    @include grid-row;
+    @media screen and (min-width: $fsa-xl) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__nav {
+    @include grid-cols(4, 4);
+
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(7, 12);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0 0;
+    list-style: none;
+    padding: 0; 
+
+    @media screen and (min-width: $fsa-xl) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+  }
+
+  .footer__menu-link {
+    /* Use full css class to have a higher specificity to override the external class */
+    color: var(--fsa-primary_white);
+    @include body;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--fsa-primary_white);
+      text-decoration: underline;
+    }
+
+    &:focus {
+      color: var(--fsa-primary_black);
+      outline: none;
+      text-decoration: none;
+      background-color: var(--fsa-tertiary_light-yellow);
+      border-bottom: 0.25rem solid var(--fsa-primary_black);
+      margin-bottom: -0.25rem;
+
+      &::after {
+        background-image: url('./external-black.svg');
+      }
+    }
+
+    &::after {
+      background-image: url('./external-white.svg');
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__social {
+    margin-top: 2rem;
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(4, 12);
+    } 
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    text-align: center;
+    list-style: none;
+    @media screen and (min-width: $fsa-xl) {
+      justify-content: flex-end;
+    } 
+  }
 
-    @media (min-width: 50em) {
-      margin: 0 -0.5em;
-    }
-
-    @media (min-width: 60em) {
-      text-align: left;
-      max-width: 34em;
-    }
-
-    & > li {
-      display: block;
-      margin: 0 0.5em;
-
-      @media (min-width: 60em) {
-        display: inline-block;
-      }
-
-      & > a {
-        display: block;
-        padding: 0.5em 0;
-        font-size: 0.8889em;
-        background-color: transparent;
-        color: #FFF;
-        border-radius: 0;
-        transform: translateX(0%);
-        box-shadow: none;
-        text-decoration: underline;
-
-        @media (min-width: 60em) {
-          text-decoration: none;
-        }
-
-        :--not-touch &:--enter {
-          background-color: transparent;
-          /*
-          box-shadow: none !important;
-          */
-          text-decoration: underline;
-        }
-      }
+  &__social-item {
+    & + & {
+      margin-left: 1rem;
     }
   }
-}
 
-.page-feedback {
-  .page-feeback--useful {
-    font-family: fira sans,sans-serif;
-    font-size: 1em;
-    line-height: 1.2;
-    font-weight: 700;
-    color: inherit;
-    margin-bottom: .5em;
-    text-transform: none;
-  }
-  .page-feedback--yes {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-  }
-  #open-feedback {
-    float: none;
-    width: 100%;
-    text-align: left;
-    padding: 0;
-    @media (min-width: 50em) {
-      width: auto;
-      float: right;
-      line-height: 1.6;
+  &__social-link {
+    height: 2.75rem;
+    width: 2.75rem;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include icon(facebook);
+    @include icon(twitter);
+    @include icon(instagram);
+    @include icon(linkedin);
+    @include icon(youtube);
+    @include icon(blog);
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
+        0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
+      outline: none;
+      text-decoration: none;
+      border-radius: 50%;
     }
   }
-  .page-feedback--p {
-    padding: 1em 0;
-  }
-  a, button {
-    color: #005e59;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-}
-/** Fix a weird focus issue in firefix/IE */
-#webform_submission_page_feedback_node_94_add_form-ajax-content {
-  display: none !important;
 }
