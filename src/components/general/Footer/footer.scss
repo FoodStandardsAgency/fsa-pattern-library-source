@@ -54,7 +54,8 @@
     }
   }
 
-  &__menu-link {
+  .footer__menu-link {
+    /* Use full css class to have a higher specificity to override the external class */
     color: var(--fsa-primary_white);
     @include body;
     font-weight: bold;
