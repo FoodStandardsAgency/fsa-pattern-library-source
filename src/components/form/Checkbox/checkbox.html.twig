@@ -6,7 +6,7 @@
       {{ title }}<span class="checkbox__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
     </legend>
   {% endif %}
-  {% if description is defined %}
+  {% if description is defined and description is not empty %}
     <p class="checkbox__description" id={{ id }}>{{ description }}</p>
   {% endif %}
   <div class="checkbox__fields">
