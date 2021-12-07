@@ -11,6 +11,7 @@
   }
 
   &__grid-row {
+    padding: 1rem 0;
     @include grid-row;
     @media screen and (min-width: $fsa-xxl) {
       background-color: var(--fsa_online-grey)
@@ -18,7 +19,6 @@
   }
 
   &__grid-wrapper {
-    padding: 1rem 0;
     @include grid-cols(4, 4);
   }
 
@@ -51,7 +51,7 @@
     display: block;
   }
 
-  &__yes, &__no, &__report-button {
+  &__yes, &__no, &__report-button, &__close {
     @include body;
     @include link;
     border: none;
@@ -116,5 +116,11 @@
     resize: none;
     min-height: 8.5rem;
     width: 100%;
+    margin-top: 1rem;
   }
+
+  &__submit {
+    @include button(primary);
+  }
+
 }
