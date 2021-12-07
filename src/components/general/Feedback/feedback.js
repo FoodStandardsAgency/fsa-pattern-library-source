@@ -1,4 +1,3 @@
-import { list } from 'icss-utils/node_modules/postcss';
 import './feedback.html.twig';
 import './feedback.scss';
 
