@@ -12,41 +12,45 @@
   {% set ctaType = 'secondary' %}
 {% endif %}
 
-{% if services %}
-  {% if services.length <= 4 %}
-    {% set columns = 2 %}
+{% if columns %}
+  {% if columns == 2 %}
     {% set serviceType = 'half' %}
-  {% elseif services.length > 4 and services.length < 7 %}
-    {% set columns = 3 %}
-    {% set serviceType = 'full' %}
   {% else %}
-    {% set columns = 4 %}
     {% set serviceType = 'full' %}
   {% endif %}
-
 {% endif %}
 
-
+{% if services.length > 0 %}
+  {% if (columns == 2 and services.length <= 2) or (columns == 3 and services.length <= 3) or (columns == 4 and services.length <= 4) %}
+    {% set rows = 1 %}
+  {% else %}
+    {% set rows = 2 %}
+  {% endif %}
+{% endif %}
 
 <section class="hero {{ type }}{{ serviceType ? ' hero--services-' ~ serviceType : '' }}">
   <div class="hero__mask-wrapper{{ theme }}">
     <div class="hero__container">
       <div class="hero__row">
-        <div class="hero__content-wrapper">
+        <div class="hero__content-wrapper{{ rows ? ' hero__content-wrapper--' ~ rows ~ '-service-rows': ''}}">
           <div class="hero__content{{ theme }}">
             <div class="hero__text-content">
               <h1 class="hero__title">{{ title }}</h1>
               <p class="hero__description">{{ content }}</p>
-              {% for cta in ctas %}
-                <div class="hero__cta">
-                  {% include '@components/components/general/Button/button.html.twig' with {
-                    type: ctaType,
-                    url: cta.link,
-                    label: cta.name,
-                    element: 'link',
-                  } %}
+              {% if ctas.length > 0 %}
+                <div class="hero__cta-wrapper">
+                  {% for cta in ctas %}
+                    <div class="hero__cta">
+                      {% include '@components/components/general/Button/button.html.twig' with {
+                        type: ctaType,
+                        url: cta.link,
+                        label: cta.name,
+                        element: 'link',
+                      } %}
+                    </div>
+                  {% endfor %}
                 </div>
-              {% endfor %}
+              {% endif %}
             </div>
           </div>
         </div>
@@ -71,8 +75,8 @@
     </div>
   {% endif %}
   {% if services %}
-    <div class="hero__services hero__services--{{ columns }}-columns{{ image ? ' hero__services--with-image' : '' }}{{ services.length == 2 ? ' hero__services--half-two' : '' }}">
-      <div class="hero__services__wrapper hero__services__wrapper--{{ columns }}-columns">
+    <div class="hero__services{{ columns ? ' hero__services--' ~ columns ~ '-columns' }}{{ rows ? ' hero__services--' ~ rows ~ '-rows' }}{{ image ? ' hero__services--with-image' : '' }}">
+      <div class="hero__services__wrapper{{ columns ? ' hero__services__wrapper--' ~ columns ~ '-columns' }}">
         {% include '@components/components/landing/ServiceLinks/serviceLinks.html.twig' with {
           title: NULL,
           links: services,
