@@ -39,6 +39,7 @@
   /* Hover Colours */
   --fsa__link-green: #014b4c;
   --fsa__purple-hover: #2a0247;
+  --fsa__grey-hover: #d9d9d6;
 
   /* Typography */
   --body-font: 'Open Sans', sans-serif;
@@ -330,10 +331,12 @@ $mobileGutter: 1rem;
     }
 
     &__field {
-      margin-top: 1rem;
+      padding-top: 1rem;
+      margin: 0;
       @include body;
       display: flex;
       align-items: flex-start;
+      clear: both;
     }
 
     &__input {
