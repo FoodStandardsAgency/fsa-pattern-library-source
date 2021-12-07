@@ -1,5 +1,8 @@
 import feedback from './feedback.html.twig';
 import './feedback.scss';
+import feedbackJs from './feedback';
+
+feedbackJs();
 
 export default {
   title: 'Components/General/Feedback',

@@ -19,16 +19,23 @@
   }
 
   &__texts {
-    padding: 1rem;
     @media screen and (min-width: $fsa-xl) {
       background-color: var(--fsa_online-grey);
     }
   }
 
   &__questions {
+    padding: 1rem;
     @media screen and (min-width: $fsa-md) {
       display: flex;
       justify-content: space-between;
+    }
+    
+    &--hide {
+      display: none;
+      @media screen and (min-width: $fsa-md) {
+        display: none;
+      }
     }
   }
 
@@ -88,13 +95,23 @@
   }
 
   &__thank {
+    padding: 1rem;
     @include h5;
+    display: block;
+
+    &--hide {
+      display: none;
+    }
   }
 
   &__form-wrapper {
     padding: 1rem;
     @media screen and (min-width: $fsa-xl) {
       background-color: var(--fsa_online-grey);
+    }
+
+    &--hide {
+      display: none;
     }
   }
 
