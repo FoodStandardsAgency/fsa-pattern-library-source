@@ -14,7 +14,7 @@
     padding: 1rem 0;
     @include grid-row;
     @media screen and (min-width: $fsa-xxl) {
-      background-color: var(--fsa_online-grey)
+      background-color: var(--fsa_online-grey);
     }
   }
 
@@ -51,7 +51,10 @@
     display: block;
   }
 
-  &__yes, &__no, &__report-button, &__close {
+  &__yes,
+  &__no,
+  &__report-button,
+  &__close {
     @include body;
     @include link;
     border: none;
@@ -91,7 +94,7 @@
     position: relative;
     @include grid-cols(4, 4);
 
-    @media screen and (min-width: $fsa-xxl) {
+    @media screen and (min-width: $fsa-xl) {
       @include grid-cols(6, 12);
     }
   }
@@ -117,10 +120,23 @@
     min-height: 8.5rem;
     width: 100%;
     margin-top: 1rem;
+    vertical-align: top;
+    border-color: var(--fsa-primary_black);
+    background-color: var(--fsa-primary_white);
+    border-radius: 0;
+    @include body;
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem var(--fsa-primary_black),
+        0 0 0 0.5rem var(--fsa-tertiary_light-yellow);
+      outline: none;
+    }
   }
 
   &__submit {
     @include button(primary);
+    margin-left: auto;
+    display: block;
+    margin-top: 1rem;
   }
-
 }
