@@ -1,13 +1,17 @@
 import feedback from './feedback.html.twig';
+import './feedback.scss';
 
 export default {
   title: 'Components/General/Feedback',
-}
+  parameters: {
+    layout: 'fullscreen',
+  },
+};
 
-export const Feedback = args => feedback(args);
+export const Feedback = (args) => feedback(args);
 Feedback.args = {
   section_summary: 'Feedback about the content on the page',
-  heading: 'Is this page useful',
+  heading: 'Is this page useful?',
   yes: 'Yes',
   useful: 'this page is useful',
   or_text: 'or',
@@ -20,4 +24,4 @@ Feedback.args = {
   improve_question: 'How should we improve this page?',
   feedback: 'feedback',
   submit: 'submit',
-}
+};
