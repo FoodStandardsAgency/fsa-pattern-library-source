@@ -113,12 +113,13 @@
 
   &__legend {
     @include h5;
+    margin-right: 3.25rem;
   }
 
   &__close {
     position: absolute;
     top: 0;
-    right: 1rem;
+    right: 0;
   }
 
   &__textarea {
