@@ -218,6 +218,22 @@
 {% endblock %}
 
 {% block footer %}
+  {% include '../../components/general/Feedback/feedback.html.twig' with {
+    section_summary: 'Feedback about the content on the page',
+    heading: 'Is this page useful?',
+    yes: 'Yes',
+    useful: 'this page is useful',
+    or_text: 'or',
+    no: 'No',
+    not_useful: 'this page is not useful',
+    report_question: 'Is there anything wrong with this page?',
+    thank_you: 'Thanks for your feedback',
+    close: 'Close',
+    the_feedback_form: 'the feedback form',
+    improve_question: 'How should we improve this page?',
+    feedback: 'feedback',
+    submit: 'Submit',
+  } %}
   {% include '../../components/general/Footer/footer.html.twig' with {
     footer_links: 'Footer links',
     new_window: 'Open in a new window',
