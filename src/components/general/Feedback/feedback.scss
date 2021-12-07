@@ -2,7 +2,7 @@
 
 .feedback {
   background-color: var(--fsa_online-grey);
-  @media screen and (min-width: $fsa-xxl) {
+  @media screen and (min-width: $fsa-xl) {
     background: none;
   }
 
@@ -11,23 +11,24 @@
   }
 
   &__grid-row {
-    padding: 1rem 0;
     @include grid-row;
-    @media screen and (min-width: $fsa-xxl) {
-      background-color: var(--fsa_online-grey);
-    }
   }
 
   &__grid-wrapper {
     @include grid-cols(4, 4);
   }
 
+  &__texts {
+    padding: 1rem;
+    @media screen and (min-width: $fsa-xl) {
+      background-color: var(--fsa_online-grey);
+    }
+  }
+
   &__questions {
-    display: none;
     @media screen and (min-width: $fsa-md) {
       display: flex;
       justify-content: space-between;
-      display: none;
     }
   }
 
@@ -90,12 +91,17 @@
     @include h5;
   }
 
+  &__form-wrapper {
+    padding: 1rem;
+    @media screen and (min-width: $fsa-xl) {
+      background-color: var(--fsa_online-grey);
+    }
+  }
+
   &__form {
     position: relative;
-    @include grid-cols(4, 4);
-
     @media screen and (min-width: $fsa-xl) {
-      @include grid-cols(6, 12);
+      max-width: 50%;
     }
   }
 
