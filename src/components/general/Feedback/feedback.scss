@@ -37,13 +37,6 @@
     @media screen and (min-width: $fsa-xl) {
       padding: 1rem;
     }
-    
-    &--hide {
-      display: none;
-      @media screen and (min-width: $fsa-md) {
-        display: none;
-      }
-    }
   }
 
   &__heading {
@@ -103,14 +96,10 @@
   &__thank {
     padding: 1rem 0;
     @include h5;
-    display: block;
+    display: none;
 
     @media screen and (min-width: $fsa-xl) {
       padding: 1rem;
-    }
-
-    &--hide {
-      display: none;
     }
   }
 
@@ -124,9 +113,7 @@
       padding: 1rem;
     }
 
-    &--hide {
-      display: none;
-    }
+    display: none;
   }
 
   &__form {
@@ -176,5 +163,27 @@
     margin-left: auto;
     display: block;
     margin-top: 1rem;
+  }
+
+  &--thank,
+  &--form {
+    .feedback__questions {
+      display: none;
+      @media screen and (min-width: $fsa-md) {
+        display: none;
+      }
+    }
+  }
+
+  &--thank {
+    .feedback__thank {
+      display: block;
+    }
+  }
+
+  &--form {
+    .feedback__form-wrapper {
+      display: block;
+    }
   }
 }
