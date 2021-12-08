@@ -47,4 +47,11 @@ export const parameters = {
     },
   },
   viewport: { viewports: customViewports },
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: [],
+      locales: '',
+    },
+  },
 }
