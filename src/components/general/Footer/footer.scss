@@ -1,19 +1,10 @@
 @import 'src/lib.scss';
 
-@mixin icon($type) {
-  &--#{$type} {
-    background-image: url('./fsa-#{$type}.svg');
-
-    &:hover {
-      background-image: url('./fsa-#{$type}-hover.svg');
-    }
-  }
-}
-
 .footer {
   background-color: var(--fsa__purple-hover);
   border-top: 8px solid var(--fsa-primary_mid-green);
   padding-bottom: 2rem;
+  margin-top: 4rem;
 
   &__grid-container {
     @include grid-container;
@@ -21,7 +12,7 @@
 
   &__grid-row {
     @include grid-row;
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -31,7 +22,7 @@
   &__nav {
     @include grid-cols(4, 4);
 
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-cols(7, 12);
     }
   }
@@ -41,16 +32,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem 0 0;
+    margin: 1rem 0 -0.5rem;
     list-style: none;
-    padding: 0; 
+    padding: 0;
 
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: flex-start;
-      margin-top: 1rem;
+      margin: 1.5rem 0 -0.5rem -0.75rem;
+    }
+
+    .external-link::after {
+      top: 0.65rem;
     }
   }
 
@@ -59,7 +54,8 @@
     color: var(--fsa-primary_white);
     @include body;
     font-weight: bold;
-    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     display: block;
     text-decoration: none;
 
@@ -85,17 +81,26 @@
       background-image: url('./external-white.svg');
     }
 
-    @media screen and (min-width: $fsa-xl) {
-      margin-right: 1.5rem;
+    @media screen and (min-width: $fsa-lg) {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+
+      &.external-link {
+        padding-right: 2rem;
+
+        &::after {
+          right: 0.75rem;
+        }
+      }
     }
   }
 
   &__social {
     margin-top: 2rem;
     @include grid-cols(4, 4);
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-cols(4, 12);
-    } 
+    }
   }
 
   &__social-list {
@@ -105,9 +110,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       justify-content: flex-end;
-    } 
+    }
   }
 
   &__social-item {
@@ -117,24 +122,32 @@
   }
 
   &__social-link {
+    &:focus {
+      outline: none;
+      .footer__social-svg {
+        box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
+          0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
+        outline: none;
+        text-decoration: none;
+        border-radius: 50%;
+      }
+    }
+
+    &:hover {
+      svg path {
+        fill: #d9d9d6;
+      }
+    }
+  }
+
+  &__social-svg {
     height: 2.75rem;
     width: 2.75rem;
     display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    @include icon(facebook);
-    @include icon(twitter);
-    @include icon(instagram);
-    @include icon(linkedin);
-    @include icon(youtube);
-    @include icon(blog);
 
-    &:focus {
-      box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
-        0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
-      outline: none;
-      text-decoration: none;
-      border-radius: 50%;
+    svg {
+      width: 100%;
+      height: 100%;
     }
   }
 }

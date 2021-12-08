@@ -1,0 +1,39 @@
+<section class="feedback" aria-label="{{ section_summary }}" aria-live="polite">
+  <div class="feedback__grid-container">
+    <div class="feedback__grid-row">
+      <div class="feedback__grid-wrapper">
+
+        <div class="feedback__texts">
+          <div class="feedback__questions">
+            <div class="feedback__wrapper">
+              <h2 class="feedback__heading">{{ heading }}</h2>
+              <p class="feedback__options">
+                <a class="feedback__yes" role="button" href="#">{{ yes }}<span class="visually-hidden">{{ useful }}</span></a>
+                <span class="feedback__or">{{ or_text }}</span>
+                <a class="feedback__no" aria-expanded="false" aria-controls="feedback__form" role="button" href="#">{{ no }}<span class="visually-hidden">{{ not_useful }}</span></a>
+              </p>
+            </div>
+            <button class="feedback__report-button" aria-expanded="false" aria-controls="feedback__form">
+              {{ report_question }}
+            </button>
+          </div>
+          <span class="feedback__thank" role="status">{{ thank_you }}</span>
+        </div>
+        
+        <div class="feedback__form-wrapper">
+          <form class="feedback__form">
+            <fieldset class="feedback__fieldset">
+              <button class="feedback__close">{{ close }}
+                <span class="visually-hidden">{{ the_feedback_form }}</span>
+              </button>
+              <legend class="feedback__legend">{{ improve_question }}</legend>
+              <label for="feedback__textarea" class="visually-hidden">{{ feedback }}</label>
+              <textarea name="feedback" id="feedback__textarea" class="feedback__textarea"></textarea>
+            </fieldset>
+            <input type="submit" class="feedback__submit" value="{{ submit }}">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
