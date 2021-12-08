@@ -2,6 +2,9 @@
 
 .feedback {
   background-color: var(--fsa_online-grey);
+  position: relative;
+  top: 4rem;
+
   @media screen and (min-width: $fsa-xl) {
     background: none;
   }
@@ -25,10 +28,14 @@
   }
 
   &__questions {
-    padding: 1rem;
+    padding: 1rem 0;
     @media screen and (min-width: $fsa-md) {
       display: flex;
       justify-content: space-between;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      padding: 1rem;
     }
     
     &--hide {
@@ -67,7 +74,6 @@
     @include link;
     border: none;
     background: none;
-    color: var(--fsa__link-green);
     padding: 0;
     margin: 0;
     cursor: pointer;
@@ -105,9 +111,13 @@
   }
 
   &__form-wrapper {
-    padding: 1rem;
+    padding: 1rem 0;
     @media screen and (min-width: $fsa-xl) {
       background-color: var(--fsa_online-grey);
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      padding: 1rem;
     }
 
     &--hide {
