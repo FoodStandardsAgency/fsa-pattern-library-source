@@ -29,7 +29,6 @@ export default function () {
         questions.classList.add('feedback__questions--hide');
         thank.classList.add('feedback__thank--hide');
         form.classList.remove('feedback__form-wrapper--hide');
-        console.log('I ran');
       }
 
       function showQuestions(e) {
