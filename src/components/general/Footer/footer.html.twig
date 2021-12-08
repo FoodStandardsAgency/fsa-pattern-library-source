@@ -23,9 +23,9 @@
               <a href="{{ social_link.href }}" class="footer__social-link" title="{{ social_link.label }}" target="{{ social_link.external ? "_blank" : "_self" }}">
                 <span class="visually-hidden">{{ social_link.label }}
                   {{ social_link.external ? "(" ~ new_window ~ ")" : "" }}</span>
-                <div class="footer__social-svg" aria-hidden="true">
+                <span class="footer__social-svg" aria-hidden="true">
                   {{ social_link.svg }}
-                </div>
+                </span>
               </a>
             </li>
           {% endfor %}
