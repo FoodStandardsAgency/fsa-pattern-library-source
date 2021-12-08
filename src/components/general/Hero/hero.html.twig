@@ -20,8 +20,8 @@
   {% endif %}
 {% endif %}
 
-{% if services.length > 0 %}
-  {% if (columns == 2 and services.length <= 2) or (columns == 3 and services.length <= 3) or (columns == 4 and services.length <= 4) %}
+{% if services|length > 0 %}
+  {% if (columns == 2 and services|length <= 2) or (columns == 3 and services|length <= 3) or (columns == 4 and services|length <= 4) %}
     {% set rows = 1 %}
   {% else %}
     {% set rows = 2 %}
@@ -37,7 +37,7 @@
             <div class="hero__text-content">
               <h1 class="hero__title">{{ title }}</h1>
               <p class="hero__description">{{ content }}</p>
-              {% if ctas.length > 0 %}
+              {% if ctas|length > 0 %}
                 <div class="hero__cta-wrapper">
                   {% for cta in ctas %}
                     <div class="hero__cta">
