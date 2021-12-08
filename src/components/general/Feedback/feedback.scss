@@ -1,0 +1,189 @@
+@import 'src/lib.scss';
+
+.feedback {
+  background-color: var(--fsa_online-grey);
+  position: relative;
+  top: 4rem;
+
+  @media screen and (min-width: $fsa-xl) {
+    background: none;
+  }
+
+  &__grid-container {
+    @include grid-container;
+  }
+
+  &__grid-row {
+    @include grid-row;
+  }
+
+  &__grid-wrapper {
+    @include grid-cols(4, 4);
+  }
+
+  &__texts {
+    @media screen and (min-width: $fsa-xl) {
+      background-color: var(--fsa_online-grey);
+    }
+  }
+
+  &__questions {
+    padding: 1rem 0;
+    @media screen and (min-width: $fsa-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      padding: 1rem;
+    }
+  }
+
+  &__heading {
+    margin: 0 0.75rem 0 0;
+    @include h5;
+    display: inline-block;
+  }
+
+  &__options {
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__or {
+    @include body;
+    color: var(--fsa-primary_black);
+  }
+
+  &__report-button {
+    display: block;
+  }
+
+  &__yes,
+  &__no,
+  &__report-button,
+  &__close {
+    @include body;
+    @include link;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__yes {
+    margin-right: 0.25rem;
+  }
+
+  &__or {
+    margin-right: 0.25rem;
+  }
+
+  &__report-button {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+
+    @media screen and (min-width: $fsa-md) {
+      margin: 0;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      font-size: 1rem;
+    }
+  }
+
+  &__thank {
+    padding: 1rem 0;
+    @include h5;
+    display: none;
+
+    @media screen and (min-width: $fsa-xl) {
+      padding: 1rem;
+    }
+  }
+
+  &__form-wrapper {
+    padding: 1rem 0;
+    @media screen and (min-width: $fsa-xl) {
+      background-color: var(--fsa_online-grey);
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      padding: 1rem;
+    }
+
+    display: none;
+  }
+
+  &__form {
+    position: relative;
+    @media screen and (min-width: $fsa-xl) {
+      max-width: 50%;
+    }
+  }
+
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__legend {
+    @include h5;
+    margin-right: 3.25rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__textarea {
+    resize: none;
+    min-height: 8.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    vertical-align: top;
+    border-color: var(--fsa-primary_black);
+    background-color: var(--fsa-primary_white);
+    border-radius: 0;
+    @include body;
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem var(--fsa-primary_black),
+        0 0 0 0.5rem var(--fsa-tertiary_light-yellow);
+      outline: none;
+    }
+  }
+
+  &__submit {
+    @include button(primary);
+    margin-left: auto;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  &--thank,
+  &--form {
+    .feedback__questions {
+      display: none;
+      @media screen and (min-width: $fsa-md) {
+        display: none;
+      }
+    }
+  }
+
+  &--thank {
+    .feedback__thank {
+      display: block;
+    }
+  }
+
+  &--form {
+    .feedback__form-wrapper {
+      display: block;
+    }
+  }
+}

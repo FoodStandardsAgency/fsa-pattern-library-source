@@ -11,6 +11,7 @@ import './components/general/Link/link';
 import './components/general/DocumentDownload/documentDownload';
 import './components/general/Navigation/navigation';
 import './components/general/Footer/footer';
+import './components/general/Feedback/feedback';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';

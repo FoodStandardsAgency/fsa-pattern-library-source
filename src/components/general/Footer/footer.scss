@@ -14,6 +14,7 @@
   background-color: var(--fsa__purple-hover);
   border-top: 8px solid var(--fsa-primary_mid-green);
   padding-bottom: 2rem;
+  margin-top: 4rem;
 
   &__grid-container {
     @include grid-container;
