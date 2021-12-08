@@ -10,7 +10,7 @@ export default {
 
 export const Footer = (args) => footer(args);
 
-const svgs = {
+const social_svgs = {
   blog: `<?xml version="1.0" encoding="UTF-8"?>
   <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
@@ -128,11 +128,11 @@ Footer.args = {
   ],
   social_media: 'Food Standards Agency on social media',
   social_links: [
-    { label: 'Facebook', external: true, href: '#', svg: svgs.facebook },
-    { label: 'Twitter', external: true, href: '#', svg: svgs.twitter },
-    { label: 'LinkedIn', external: true, href: '#', svg: svgs.linkedin },
-    { label: 'Youtube', external: true, href: '#', svg: svgs.youtube },
-    { label: 'Instagram', external: true, href: '#', svg: svgs.instagram },
-    { label: 'FSA blog', external: false, href: '#', svg: svgs.blog },
+    { label: 'Facebook', external: true, href: '#', svg: social_svgs.facebook },
+    { label: 'Twitter', external: true, href: '#', svg: social_svgs.twitter },
+    { label: 'LinkedIn', external: true, href: '#', svg: social_svgs.linkedin },
+    { label: 'Youtube', external: true, href: '#', svg: social_svgs.youtube },
+    { label: 'Instagram', external: true, href: '#', svg: social_svgs.instagram },
+    { label: 'FSA blog', external: false, href: '#', svg: social_svgs.blog },
   ],
 };
