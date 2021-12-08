@@ -101,9 +101,13 @@
   }
 
   &__thank {
-    padding: 1rem;
+    padding: 1rem 0;
     @include h5;
     display: block;
+
+    @media screen and (min-width: $fsa-xl) {
+      padding: 1rem;
+    }
 
     &--hide {
       display: none;
