@@ -17,7 +17,6 @@ Feedback.args = {
   heading: 'Is this page useful?',
   yes: 'Yes',
   useful: 'this page is useful',
-  or_text: 'or',
   no: 'No',
   not_useful: 'this page is not useful',
   report_question: 'Is there anything wrong with this page?',

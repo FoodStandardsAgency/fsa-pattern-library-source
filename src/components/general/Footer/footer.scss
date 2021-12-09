@@ -53,7 +53,6 @@
     /* Use full css class to have a higher specificity to override the external class */
     color: var(--fsa-primary_white);
     @include body;
-    font-weight: bold;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     display: block;
