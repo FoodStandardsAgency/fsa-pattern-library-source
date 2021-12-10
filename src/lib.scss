@@ -39,6 +39,7 @@
   /* Hover Colours */
   --fsa__link-green: #014b4c;
   --fsa__purple-hover: #2a0247;
+  --fsa__grey-hover: #d9d9d6;
 
   /* Typography */
   --body-font: 'Open Sans', sans-serif;
@@ -53,10 +54,14 @@
   --container: 2rem;
   --gutter: 1rem;
   --max-width: 1336px;
+
+  /* Transitions */
+  --transition-time: 200;
 }
 
 $fsa-xs: 500px;
 $fsa-md: 768px;
+$fsa-md-minus: 767px;
 $fsa-lg: 1024px;
 $fsa-lg-minus: 1023px;
 $fsa-xl: 1440px;
@@ -330,10 +335,12 @@ $mobileGutter: 1rem;
     }
 
     &__field {
-      margin-top: 1rem;
+      padding-top: 1rem;
+      margin: 0;
       @include body;
       display: flex;
       align-items: flex-start;
+      clear: both;
     }
 
     &__input {

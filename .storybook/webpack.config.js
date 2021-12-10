@@ -5,6 +5,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
+    environment: {
+      arrowFunction: false,
+      bigIntLiteral: false,
+      const: false,
+      destructuring: false,
+      dynamicImport: false,
+      forOf: false,
+      module: false,
+    },
   },
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
@@ -40,6 +49,7 @@ module.exports = {
           "style-loader",
           // Translates CSS into CommonJS
           "css-loader",
+          "postcss-loader",
           // Compiles Sass to CSS
           "sass-loader",
         ],

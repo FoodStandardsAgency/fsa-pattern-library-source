@@ -2,7 +2,7 @@
   <div class="navigation__background-blur"></div>
   <div class="navigation__container">
     <div class="navigation__row">
-      {% if links.length > 0 %}
+      {% if links|length > 0 %}
         <ul class="navigation__menu navigation__menu--level-1">
           <li class="navigation__link navigation__link--home">
             <a href="{{ homeLink }}" aria-label="{{ homeLabel }}">
