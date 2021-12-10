@@ -132,10 +132,6 @@
     @media screen and (min-width: $fsa-xl) {
       height: 100%;
     }
-    // &--2-columns,
-    // &--3-columns {
-    //   padding-bottom: 5.5rem;
-    // }
     // If it has an image and 4 columns, unset the height and reduce the bottom padding.
     &--with-image#{&}--4-columns {
       @media screen and (min-width: $fsa-xl) {
@@ -261,6 +257,7 @@
 
       @media screen and (min-width: $fsa-xl) {
         min-height: 26rem;
+        padding-bottom: 3.5rem;
       }
     }
   }
@@ -272,7 +269,7 @@
     }
     &.hero--with-image {
       @media screen and (min-width: $fsa-xl) {
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
       }
     }
     .hero__mask-wrapper {
@@ -309,10 +306,10 @@
     @media screen and (min-width: $fsa-xl) {
       .hero__services {
         &--1-rows {
-          margin-top: -8.5rem;
+          margin-top: -7.5rem;
         }
         &--2-rows {
-          margin-top: -15.5rem;;
+          margin-top: -13.5rem;;
         }
       }
     }
