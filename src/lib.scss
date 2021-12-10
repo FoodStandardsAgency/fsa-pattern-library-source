@@ -341,6 +341,9 @@ $mobileGutter: 1rem;
       display: flex;
       align-items: flex-start;
       clear: both;
+      &-all {
+        margin-bottom: 1rem;
+      }
     }
 
     &__input {
