@@ -50,11 +50,6 @@
     margin: 0;
   }
 
-  &__or {
-    @include body;
-    color: var(--fsa-primary_black);
-  }
-
   &__report-button {
     display: block;
   }
