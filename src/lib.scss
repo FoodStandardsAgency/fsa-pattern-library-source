@@ -311,6 +311,10 @@ $mobileGutter: 1rem;
     margin: 2rem 0 0 0;
     color: var(--fsa-primary_black);
 
+    &-all {
+      margin-bottom: 2rem;
+    }
+
     &__legend {
       @include h5;
       margin: 0;
