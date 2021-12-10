@@ -17,7 +17,7 @@
       <ul class="pagination__item-group pagination__numbered">
         {% if currentPage == 1 %}
           <li class="pagination__item pagination__item--numbered">
-            <a data-page="1" href="#" aria-label="Current page, page 1" aria-current="page" aria-disabled="true" data-fsa-at="pagination-active">1</a>
+            <a data-page="1" href="#" aria-label="Current page, page 1" aria-current="page" aria-disabled="true" data-fsa-at="pagination-page-1">1</a>
           </li>
         {% else %}
           <li class="pagination__item pagination__item--numbered">
@@ -26,14 +26,14 @@
         {% endif %}
         {% if currentPage > maxVisiblePages %}
           <li class="pagination__item pagination__item--numbered">
-            <a data-page="{{ currentPage - maxVisiblePages }}" href="#" aria-label="Load previous {{ maxVisiblePages }} pages">...</a>
+            <a data-page="{{ currentPage - maxVisiblePages }}" href="#" aria-label="Load previous {{ maxVisiblePages }} pages" data-fsa-at="pagination-load-previous">...</a>
           </li>
         {% endif %}
         {% for page in range (currentPage - pageIndexPrev, currentPage + pageIndexNext) %}
           {% if page > 1 and page < totalPages %}
             {% if page == currentPage %}
               <li class="pagination__item pagination__item--numbered">
-                <a data-page="{{ page }}" href="#" aria-label="Current page, page {{ page }}" aria-current="page" aria-disabled="true" data-fsa-at="pagination-active">{{ page }}</a>
+                <a data-page="{{ page }}" href="#" aria-label="Current page, page {{ page }}" aria-current="page" aria-disabled="true" data-fsa-at="pagination-page-{{ page }}">{{ page }}</a>
               </li>
             {% else %}
               <li class="pagination__item pagination__item--numbered">
@@ -44,13 +44,13 @@
         {% endfor %}
         {% if currentPage < (totalPages - maxVisiblePages) %}
           <li class="pagination__item pagination__item--numbered">
-            <a aria-label="Load next {{ maxVisiblePages }} pages" data-page="{{ currentPage + maxVisiblePages }} " href="#">...</a>
+            <a aria-label="Load next {{ maxVisiblePages }} pages" data-page="{{ currentPage + maxVisiblePages }} " href="#" data-fsa-at="pagination-load-next">...</a>
           </li>
         {% endif %}
         {% if totalPages > 1 %}
           {% if currentPage == totalPages %}
             <li class="pagination__item pagination__item--numbered">
-              <a data-page="{{ totalPages }}" href="#" aria-label="Current page, page {{ totalPages }}" aria-current="page" aria-disabled="true" data-fsa-at="pagination-active">{{ totalPages }}</a>
+              <a data-page="{{ totalPages }}" href="#" aria-label="Current page, page {{ totalPages }}" aria-current="page" aria-disabled="true" data-fsa-at="pagination-page-{{ totalPages }}">{{ totalPages }}</a>
             </li>
           {% else %}
             <li class="pagination__item pagination__item--numbered">
