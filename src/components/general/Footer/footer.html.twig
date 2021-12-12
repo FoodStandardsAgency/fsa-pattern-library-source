@@ -20,9 +20,12 @@
         <ul class="footer__social-list">
           {% for social_link in social_links %}
             <li class="footer__social-item">
-              <a href="{{ social_link.href }}" class="footer__social-link footer__social-link--{{ social_link.icon_type }}" title="{{ social_link.label }}" target="{{ social_link.external ? "_blank" : "_self" }}">
+              <a href="{{ social_link.href }}" class="footer__social-link" title="{{ social_link.label }}" target="{{ social_link.external ? "_blank" : "_self" }}">
                 <span class="visually-hidden">{{ social_link.label }}
                   {{ social_link.external ? "(" ~ new_window ~ ")" : "" }}</span>
+                <span class="footer__social-svg" aria-hidden="true">
+                  {{ social_link.svg }}
+                </span>
               </a>
             </li>
           {% endfor %}

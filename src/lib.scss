@@ -54,10 +54,14 @@
   --container: 2rem;
   --gutter: 1rem;
   --max-width: 1336px;
+
+  /* Transitions */
+  --transition-time: 200;
 }
 
 $fsa-xs: 500px;
 $fsa-md: 768px;
+$fsa-md-minus: 767px;
 $fsa-lg: 1024px;
 $fsa-lg-minus: 1023px;
 $fsa-xl: 1440px;
@@ -337,6 +341,9 @@ $mobileGutter: 1rem;
       display: flex;
       align-items: flex-start;
       clear: both;
+      &-all {
+        margin-bottom: 1rem;
+      }
     }
 
     &__input {
