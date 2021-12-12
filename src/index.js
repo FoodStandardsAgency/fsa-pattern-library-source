@@ -10,6 +10,7 @@ import './components/general/Hero/hero';
 import './components/general/Link/link';
 import './components/general/DocumentDownload/documentDownload';
 import './components/general/Footer/footer';
+import navigation from './components/general/Navigation/navigation';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
@@ -60,3 +61,4 @@ breadcrumbJs();
 pagination();
 searchBar();
 sortBy();
+navigation();
