@@ -212,13 +212,15 @@
   &__links-item {
     margin-left: 1rem;
     @media screen and (min-width: $fsa-lg) {
-          margin-left: 0;
-        }
+      margin-left: 0;
+    }
     &--right {
       flex-grow: 1;
-      margin-left: 1rem;
       display: flex;
-      justify-content: flex-end;
+      align-items: center;
+      @media screen and (min-width: $fsa-lg) {
+        justify-content: flex-end;
+      }
     }
 
     &:first-child {
