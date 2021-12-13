@@ -62,16 +62,18 @@ function subMenuFocus(direction, event, link, classes, parent = null, submenu = 
 function prevAll(element) {
   var result = [];
 
-  while (element = element.previousElementSibling)
+  while (element = element.previousElementSibling) {
     result.push(element);
+  }
   return result;
 }
 
 function nextAll(element) {
   var result = [];
 
-  while (element = element.nextElementSibling)
+  while (element = element.nextElementSibling) {
     result.push(element);
+  }
   return result;
 }
 
@@ -84,11 +86,11 @@ function menuArrows(links) {
       if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
         return;
       }
+      // Make sure to stop event bubbling
+      e.preventDefault();
+      e.stopPropagation();
       switch (e.keyCode) {
         case 37: // left arrow
-          // Make sure to stop event bubbling
-          e.preventDefault();
-          e.stopPropagation();
           // This is the first item in the top level mega menu list
           // Focus on the previous item in the top level
           prev = prevAll(link)[0];
@@ -103,9 +105,6 @@ function menuArrows(links) {
           }
           break;
         case 39: // right arrow
-          // Make sure to stop event bubbling
-          e.preventDefault();
-          e.stopPropagation();
           // Focus on the next item in the top level
           next = nextAll(link)[0];
           if (next && getMode() == 'desktop') {
@@ -142,27 +141,21 @@ function subMenuArrows(group) {
       if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
         return;
       }
+      // Make sure to stop event bubbling
+      e.preventDefault();
+      e.stopPropagation();
       switch (e.keyCode) {
         case 37: // left arrow
-          // Make sure to stop event bubbling
-          e.preventDefault();
-          e.stopPropagation();
           if (prevAll(group)[0]) {
             prevAll(group)[0].querySelector('.navigation__menu > .navigation__link > a').focus();
           }
           break;
         case 39: // right arrow
-          // Make sure to stop event bubbling
-          e.preventDefault();
-          e.stopPropagation();
           if (nextAll(group)[0]) {
             nextAll(group)[0].querySelector('.navigation__menu > .navigation__link > a').focus();
           }
           break;
         case 38: /// up arrow
-          // Make sure to stop event bubbling
-          e.preventDefault();
-          e.stopPropagation();
           if (link.querySelector('a') == firstElement) {
             topLevel.querySelector('a').focus();
           } else if (prevAll(link)[0]) {
@@ -173,9 +166,6 @@ function subMenuArrows(group) {
           }
           break;
         case 40: // down arrow
-          // Make sure to stop event bubbling
-          e.preventDefault();
-          e.stopPropagation();
           if (nextAll(link)[0]) {
             nextAll(link)[0].querySelector('a').focus();
           } else if (nextAll(group)[0]) {
