@@ -34,15 +34,20 @@
     margin-left: 1rem;
     > a {
       width: 100%;
+      height: 100%;
       display: flex;
       justify-content: space-between;
-      &:focus {
+      align-items: center;
+      &:focus-visible {
         color: var(--fsa-primary_black);
         outline: none;
         text-decoration: none;
         background-color: var(--fsa-tertiary_light-yellow);
         border-bottom: 0.25rem solid var(--fsa-primary_black);
         margin-bottom: -0.25rem;
+      }
+      &:focus:not(:focus-visible) {
+        background-color: transparent;
       }
     }
     @media screen and (min-width: $fsa-md) {
@@ -68,7 +73,8 @@
       height: 100%;
       color: var(--fsa-primary_white);
       @media screen and (min-width: $fsa-lg) {
-        align-items: center;
+        display: flex;
+        justify-content: space-between;
       }
       @media screen and (min-width: $fsa-xl) {
         position: relative;
@@ -82,6 +88,44 @@
         &:last-child {
           margin-bottom: 2rem;
         }
+        > a {
+          &:focus-visible {
+            color: var(--fsa-primary_black);
+            outline: none;
+            text-decoration: none;
+            background-color: var(--fsa-tertiary_light-yellow);
+            border-bottom: 0.25rem solid var(--fsa-primary_black);
+            margin-bottom: 0;
+            span {
+              &:nth-child(2) {
+                svg {
+                  transform: rotateX(180deg);
+                  path {
+                    stroke: var(--fsa-primary_black);
+                    stroke-width: 2;
+                  }
+                }
+              }
+            }
+          }
+          &:focus:not(:focus-visible) {
+            background-color: transparent;
+          }
+          @media screen and (min-width: $fsa-lg) {
+            &:focus-visible {
+              border-bottom: none;
+              span {
+                &:first-child {
+                  border-bottom: 0.25rem solid var(--fsa-primary_black);
+                }
+              }
+            }
+
+            @media screen and (min-width: $fsa-xl) {
+              padding: 0 1.5rem;
+            }
+          }
+        }
         &__arrow {
           svg {
             transform: rotateX(0deg);
@@ -93,7 +137,6 @@
         }
         @media screen and (min-width: $fsa-lg) {
           margin: 0;
-          padding: 0 1rem;
           &:first-child {
             margin-top: 0;
           }
@@ -105,9 +148,6 @@
               margin-left: 0.625rem;
             }
           }
-        }
-        @media screen and (min-width: $fsa-xl) {
-          padding: 0 1.5rem;
         }
         &--open {
           background-color: var(--fsa-primary_white);
@@ -130,6 +170,12 @@
             display: flex;
             color: var(--fsa-primary_black);
             font-size: 1.125rem;
+            width: 100%;
+            span {
+              &:first-child {
+                border-bottom: none;
+              }
+            }
           }
 
           &:last-child {
@@ -137,7 +183,7 @@
           }
           @media screen and (min-width: $fsa-lg) {
             margin: 0;
-            padding: 0 1.5rem;
+            padding: 0;
             > a {
               @include body();
               display: flex;
@@ -187,6 +233,9 @@
         &--read-more {
           @media screen and (max-width: $fsa-lg-minus) {
             @include button(primary);
+            &:hover {
+              color: var(--fsa-primary_white);
+            }
           }
         }
         &:first-child {
@@ -203,6 +252,17 @@
               stroke-width: 2;
             }
           }
+        }
+        > a {
+          &:focus-visible {
+            border-bottom: 0.25rem solid var(--fsa-primary_black);
+            span {
+              &:first-child {
+                border-bottom: none;
+              }
+            }}
+
+
         }
         @media screen and (min-width: $fsa-lg) {
           padding: 0;
@@ -232,8 +292,6 @@
     background-color: var(--fsa-primary_white);
     margin-left: -1rem;
     padding: 0 0 0 1rem;
-    @media screen and (min-width: $fsa-md) {
-    }
     &--expanded {
       display: block;
       @media screen and (min-width: $fsa-lg) {
@@ -243,7 +301,7 @@
         right: 0rem;
         top: 3.438rem;
         background-color: var(--fsa-primary_white);
-        padding: 2.3rem 1rem;
+        padding: 2.3rem 2rem;
         display: flex;
         flex-wrap: wrap;
       }

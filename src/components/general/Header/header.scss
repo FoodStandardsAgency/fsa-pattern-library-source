@@ -276,6 +276,7 @@
     }
 
     &--report {
+      width: fit-content;
       &:before {
         content: url('./report-white.svg');
         height: 1rem;
