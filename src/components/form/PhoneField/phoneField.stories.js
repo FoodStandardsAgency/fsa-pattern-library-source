@@ -16,4 +16,11 @@ Normal.args = {
   prefix: '+44',
   name: 'phone',
   description: 'Subscribe to news and alerts.',
+  error: false,
+}
+
+Error.args = {
+  ...Normal.args,
+  required: 'required',
+  error: true,
 }
