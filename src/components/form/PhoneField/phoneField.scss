@@ -23,6 +23,7 @@
 
   &__content {
     margin-top: 1rem;
+    display: flex;
   }
 
   &__prefix {
@@ -34,6 +35,7 @@
     background-color: var(--fsa_online-grey);
     border: solid 1px var(--fsa-primary_dark-grey);
     @include body;
+    flex-grow: 1;
     &:focus {
       box-shadow: 0 0 0 0.25rem var(--fsa-primary_black),
         0 0 0 0.5rem var(--fsa-tertiary_light-yellow);
