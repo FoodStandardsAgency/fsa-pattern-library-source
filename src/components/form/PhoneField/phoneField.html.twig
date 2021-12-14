@@ -1,5 +1,6 @@
-<div class="phone-field {{ error ? "textarea--error" : "" }}">
-  <label class="phone-field__title" for="phone-field__input--{{ name }}">{{ title }}
+<div class="phone-field {{ error ? " phone-field--error" : " " }}">
+  <label class="phone-field__label" for="phone-field__input--{{ name }}">
+    <span class="phone-field__title">{{ label }}</span>
     <span class="phone-field__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
   </label>
   <div class="phone-field__content">
