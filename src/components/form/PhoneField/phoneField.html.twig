@@ -1,0 +1,23 @@
+{% if description is defined and description is not empty %}
+  {% set description_exists = true %}
+{% else %}
+  {% set description_exists = false %}
+{% endif %}
+<div class="phone-field">
+  <label class="phone-field__title" for="phone-field__input--{{ name }}">{{ title }}
+    <span class="phone-field__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
+  </label>
+  <div class="phone-field__content">
+    {% if prefix is defined and prefix is not empty %}
+      <span class="phone-field__prefix">{{ prefix }}</span>
+    {% endif %}
+    {% if description_exists %}
+      <input {{ required ? required : "" }} type="number" class="phone-field__input" name={{ name }} id="phone-field__input--{{ name }}" aria-describedby="phone-field__description--{{ name }}">
+    {% else %}
+      <input {{ required ? required : "" }} type="number" class="phone-field__input" name={{ name }} id="phone-field__input--{{ name }}">
+    {% endif %}
+  </div>
+  {% if description is defined and description is not empty %}
+    <p class="phone-field__description" id="phone-field__description--{{ name }}">{{ description }}</p>
+  {% endif %}
+</div>
