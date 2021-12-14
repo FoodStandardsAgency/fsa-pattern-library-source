@@ -1,6 +1,6 @@
 @import "src/lib.scss";
 
-.external-link {
+.external-link, .ext {
   @include link;
   padding-right: 1.25rem;
   position: relative;

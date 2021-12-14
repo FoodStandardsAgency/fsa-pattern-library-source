@@ -10,7 +10,7 @@
     {% set region_string = region_first|join(", ") ~ " and " ~ region_last %}
   {% endif %}
 {% endif %}
-<section class="document-download {{ region_class is defined ? region_class : "" }}">
+<section class="document-download{{ region_class is defined ? " " ~ region_class : "" }}">
   {% if region_is_defined %}
     <h3 class="document-download__region">{{ region_string }}</h3>
   {% endif %}
