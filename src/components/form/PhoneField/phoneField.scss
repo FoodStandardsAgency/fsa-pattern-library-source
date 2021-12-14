@@ -24,6 +24,7 @@
   &__content {
     margin-top: 1rem;
     display: flex;
+    align-items: center;
   }
 
   &__prefix {
@@ -34,8 +35,13 @@
   &__input {
     background-color: var(--fsa_online-grey);
     border: solid 1px var(--fsa-primary_dark-grey);
-    @include body;
     flex-grow: 1;
+    padding: 0.85rem 1rem;
+
+    @media screen and (min-width: $fsa-xs) {
+      padding: 0.75rem 1rem;
+    }  
+    
     &:focus {
       box-shadow: 0 0 0 0.25rem var(--fsa-primary_black),
         0 0 0 0.5rem var(--fsa-tertiary_light-yellow);
