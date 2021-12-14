@@ -119,6 +119,15 @@
       change_email_link: '#',
       change_email_label: 'Change your email address',
     } %}
+
+    {% include '../../components/form/PhoneField/phoneField.html.twig' with {
+      label: 'Phone number',
+      required: '',
+      prefix: '+44',
+      name: 'phone',
+      description: 'Subscribe to news and alerts.',
+      error: false,
+    } %}
     
     {% include '../../components/form/Checkbox/checkbox.html.twig' with {
       title: 'Consultations',
