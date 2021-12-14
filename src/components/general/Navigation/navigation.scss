@@ -256,6 +256,12 @@
           }
         }
         > a {
+          &:hover {
+            background-color: initial;
+            cursor: pointer;
+            color: var(--fsa__link-green);
+            text-decoration: underline;
+          }
           &:focus-visible {
             border-bottom: 0.25rem solid var(--fsa-primary_black);
             span {
