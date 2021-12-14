@@ -3,7 +3,7 @@
     <div class="header__grid-row">
       <div class="header__wrapper">
         <div class="header__top">
-          <nav class="header__languages">
+          <nav class="header__languages header__languages--desktop" aria-label="Language switcher" aria-hidden="false">
             <ul class="header__languages-list">
               <li class="header__language">
                 <a href="{{ english_link }}" class="header__language-link header__language-link--{{ english ? "selected" : "" }}">{{ english_label }}</a>
@@ -21,7 +21,7 @@
               <div class="header__logo-svg header__logo-svg--{{ english ? "english" : "welsh" }}" aria-hidden="true"></div>
             </a>
           </div>
-          <nav class="header__links header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
+          <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
             <div class="header__links-wrapper">
               <div class="header__links-item">
                 <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
@@ -57,5 +57,39 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="header__navigation">
+    <nav class="header__links header__links--mobile header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
+      <div class="header__links-wrapper">
+        <div class="header__links-item">
+          <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
+        </div>
+        <div class="header__links-item">
+          <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
+        </div>
+      </div>
+      <div class="header__links-item header__links-item--right">
+        <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
+      </div>
+    </nav>
+    <div class="header__navigation">
+      {% include '@components/components/general/Navigation/navigation.html.twig' with {
+        id: navigation.id,
+        label: navigation.label,
+        homeLink: navigation.homeLink,
+        homeLabel: navigation.homeLabel,
+        links: navigation.links,
+      } %}
+    </div>
+    <nav class="header__languages header__languages--mobile" aria-label="Language switcher" aria-hidden="true">
+      <ul class="header__languages-list">
+        <li class="header__language">
+          <a href="{{ english_link }}" class="header__language-link header__language-link--{{ english ? "selected" : "" }}">{{ english_label }}</a>
+        </li>
+        <li class="header__language">
+          <a href="{{ welsh_link }}" class="header__language-link header__language-link--{{ not english ? "selected" : "" }}">{{ welsh_label }}</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>

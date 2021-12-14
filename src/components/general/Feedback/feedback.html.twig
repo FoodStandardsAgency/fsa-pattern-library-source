@@ -8,8 +8,8 @@
             <div class="feedback__wrapper">
               <h2 class="feedback__heading">{{ heading }}</h2>
               <p class="feedback__options">
-                <a class="feedback__yes" role="button" href="#">{{ yes }}<span class="visually-hidden">{{ useful }}</span></a>
-                <a class="feedback__no" aria-expanded="false" aria-controls="feedback__form" role="button" href="#">{{ no }}<span class="visually-hidden">{{ not_useful }}</span></a>
+                <a class="feedback__yes" role="button" href="{{ yes_link }}">{{ yes }}<span class="visually-hidden">{{ useful }}</span></a>
+                <a class="feedback__no" aria-expanded="false" aria-controls="feedback__form" role="button" href="{{ no_link }}">{{ no }}<span class="visually-hidden">{{ not_useful }}</span></a>
               </p>
             </div>
             <button class="feedback__report-button" aria-expanded="false" aria-controls="feedback__form">
@@ -20,17 +20,19 @@
         </div>
         
         <div class="feedback__form-wrapper">
-          <form class="feedback__form">
-            <fieldset class="feedback__fieldset">
-              <button class="feedback__close">{{ close }}
-                <span class="visually-hidden">{{ the_feedback_form }}</span>
-              </button>
-              <legend class="feedback__legend">{{ improve_question }}</legend>
-              <label for="feedback__textarea" class="visually-hidden">{{ feedback }}</label>
-              <textarea name="feedback" id="feedback__textarea" class="feedback__textarea"></textarea>
-            </fieldset>
-            <input type="submit" class="feedback__submit" value="{{ submit }}">
-          </form>
+          {% block form %}
+            <form class="feedback__form">
+              <fieldset class="feedback__fieldset">
+                <button class="feedback__close">{{ close }}
+                  <span class="visually-hidden">{{ the_feedback_form }}</span>
+                </button>
+                <legend class="feedback__legend">{{ improve_question }}</legend>
+                <label for="feedback__textarea" class="visually-hidden">{{ feedback }}</label>
+                <textarea name="feedback" id="feedback__textarea" class="feedback__textarea"></textarea>
+              </fieldset>
+              <input type="submit" class="feedback__submit" value="{{ submit }}">
+            </form>
+          {% endblock %}
         </div>
       </div>
     </div>
