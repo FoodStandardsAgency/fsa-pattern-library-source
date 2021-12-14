@@ -89,6 +89,10 @@
           margin-bottom: 2rem;
         }
         > a {
+          &:hover {
+            background-color: var(--fsa-secondary_mid-purple);
+            cursor: pointer;
+          }
           &:focus-visible {
             color: var(--fsa-primary_black);
             outline: none;
@@ -197,7 +201,6 @@
             padding: 0 0.5rem 0 0;
           }
           @media screen and (min-width: $fsa-xl) {
-            margin-left: 0.625rem;
             padding: 0 1.5rem 0 0;
             align-self: center;
           }
@@ -212,7 +215,6 @@
             @media screen and (min-width: $fsa-lg) {
               display: block;
               align-self: center;
-              margin-left: 0.625rem;
             }
           }
         }
