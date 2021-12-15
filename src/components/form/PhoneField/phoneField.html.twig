@@ -4,7 +4,7 @@
     <span class="phone-field__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
   </label>
   <div class="phone-field__content">
-    {% if prefix is defined and prefix is not empty %}
+    {% if prefix %}
       <span class="phone-field__prefix">{{ prefix }}</span>
     {% endif %}
     {% if description %}
