@@ -979,30 +979,40 @@
       title: 'Types of Content',
       name: 'content_type',
       fields: [
-        {
+       {
           label: 'Allergy alert',
           id: 'allergy-alert',
           value: 'allergy-alert',
           results: 20,
+          data_fsa_at: 'allergy-alert',
         },
-        { label: 'News', id: 'news', value: 'news', results: 10 },
+        {
+          label: 'News',
+          id: 'news',
+          value: 'news',
+          results: 10,
+          data_fsa_at: 'news',
+        },
         {
           label: 'Consultation',
           id: 'consultation',
           value: 'consultation',
           results: 15,
+          data_fsa_at: 'consultation',
         },
         {
           label: 'Business Guidance',
           id: 'business-guidance',
           value: 'business-guidance',
           results: 23,
+          data_fsa_at: 'business-guidance',
         },
         {
           label: 'Consumer Guidance',
           id: 'consumer-guidance',
           value: 'consumer-guidance',
           results: 3,
+          data_fsa_at: 'consumer-guidance',
         },
       ],
       open: true,
@@ -1012,30 +1022,40 @@
       title: 'Topics',
       name: 'topics',
       fields: [
-        {
+       {
           label: 'Campylobacter',
           id: 'campylobacter',
           value: 'campylobacter',
           results: 82,
+          data_fsa_at: 'campylobacter',
         },
         {
           label: 'Food safety',
           id: 'food-safety',
           value: 'food-safety',
           results: 22,
+          data_fsa_at: 'food-safety',
         },
-        { label: 'Listeria', id: 'listeria', value: 'listeria', results: 3 },
+        {
+          label: 'Listeria',
+          id: 'listeria',
+          value: 'listeria',
+          results: 3,
+          data_fsa_at: 'listeria',
+        },
         {
           label: 'Nutrition in Northern Ireland',
           id: 'northern-ireland-nutrition',
           value: 'northern-ireland-nutrition',
           results: 129,
+          data_fsa_at: 'northern-ireland-nutrition',
         },
         {
           label: 'Shellfish',
           id: 'shellfish',
           value: 'shellfish',
           results: 10,
+          data_fsa_at: 'shellfish',
         },
       ],
       open: true,
@@ -1045,14 +1065,27 @@
       title: 'Nation',
       name: 'nation',
       fields: [
-        { label: 'England', id: 'england', value: 'england', results: 100 },
+         {
+          label: 'England',
+          id: 'england',
+          value: 'england',
+          results: 100,
+          data_fsa_at: 'england',
+        },
         {
           label: 'Northern Ireland',
           id: 'northern-ireland',
           value: 'northern-ireland',
           results: 89,
+          data_fsa_at: 'northern-ireland',
         },
-        { label: 'Wales', id: 'wales', value: 'wales', results: 78 },
+        {
+          label: 'Wales',
+          id: 'wales',
+          value: 'wales',
+          results: 78,
+          data_fsa_at: 'wales',
+        },
       ],
       open: true,
       selected: 'selected',
@@ -1067,27 +1100,33 @@
     filter_names: [
       {
         'name': 'Allergy Alert',
-        'value': 'allergy-alert'
+        'value': 'allergy-alert',
+        'fsa_data_at': 'allergy-alert',
       },
       {
         'name': 'News',
-        'value': 'news'
+        'value': 'news',
+        'fsa_data_at': 'news',
       },
       {
         'name': 'Ecoli',
-        'value': 'ecoli'
+        'value': 'ecoli',
+        'fsa_data_at': 'ecoli'
       },
       {
         'name': 'England',
-        'value': 'england'
+        'value': 'england',
+        'fsa_data_at': 'england',
       },
       {
         'name': 'Northern Ireland',
-        'value': 'northern-ireland'
+        'value': 'northern-ireland',
+        'fsa_data_at': 'northern-ireland',
       },
       {
         'name': 'Consumer Guidance',
-        'value': 'consumer-guidance'
+        'value': 'consumer-guidance',
+        'fsa_data_at': 'consumer-guidance',
       },
     ],
     remove_filter: 'Remove filter',
