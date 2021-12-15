@@ -6,7 +6,6 @@ function getMode() {
 }
 
 function menuFocus(direction, event, link, classes, submenu = null, anchor = null) {
-  return;
   if (direction == 'out') {
     if (link.contains(event.relatedTarget)) {
       return;
@@ -41,7 +40,6 @@ function resetArrows() {
 }
 
 function subMenuFocus(direction, event, link, classes, parent = null, submenu = null) {
-  return;
   if (direction == 'out') {
     if (parent.contains(event.relatedTarget)) {
       return;
