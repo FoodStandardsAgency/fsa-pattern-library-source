@@ -23,8 +23,10 @@
   }
   &__wrapper {
     @include grid-cols(4, 4);
+    margin-bottom: 2rem;
     @media screen and (min-width: $fsa-lg) {
       @include grid-cols(12);
+      margin-bottom: 0;
     }
   }
   &__link {
@@ -158,6 +160,9 @@
           margin: 0 -10rem;
           padding: 0 11rem;
           @media screen and (min-width: $fsa-md) {
+            padding: 0 10rem;
+          }
+          @media screen and (min-width: $fsa-lg) {
             padding: 1.188rem 11rem 0 11rem;
           }
           .navigation__link__arrow {
@@ -226,9 +231,6 @@
             @media screen and (min-width: $fsa-lg) {
               display: block;
               align-self: center;
-              &:focus-visible {
-
-              }
             }
           }
         }
