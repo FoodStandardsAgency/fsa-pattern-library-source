@@ -8,9 +8,9 @@
       <span class="phone-field__prefix">{{ prefix }}</span>
     {% endif %}
     {% if description %}
-      <input {{ required ? required : "" }} type="tel" class="phone-field__input" name={{ name }} id="phone-field__input--{{ name }}" aria-describedby="phone-field__description--{{ name }}">
+      <input {{ required ? required : "" }} type="tel" class="phone-field__input" name="{{ name }}" id="phone-field__input--{{ name }}" aria-describedby="phone-field__description--{{ name }}">
     {% else %}
-      <input {{ required ? required : "" }} type="tel" class="phone-field__input" name={{ name }} id="phone-field__input--{{ name }}">
+      <input {{ required ? required : "" }} type="tel" class="phone-field__input" name="{{ name }}" id="phone-field__input--{{ name }}">
     {% endif %}
   </div>
   {% if description %}
