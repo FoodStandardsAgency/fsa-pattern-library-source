@@ -4,6 +4,12 @@
   background-color: var(--fsa-primary_dark-green);
   padding: 1rem;
 
+  @media screen and (min-width: $fsa-xl) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__message,
   &__find-out-more,
   &__manage {
@@ -30,11 +36,19 @@
       flex-direction: row;
       align-items: center;
     }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin-top: 0;
+    }
   }
 
   &__manage {
     @media screen and (min-width: $fsa-md) {
       margin-right: 1rem;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin-right: 2rem;
     }
   }
 
