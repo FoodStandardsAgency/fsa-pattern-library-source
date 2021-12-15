@@ -120,13 +120,16 @@
       change_email_label: 'Change your email address',
     } %}
 
-    {% include '../../components/form/PhoneField/phoneField.html.twig' with {
-      label: 'Phone number',
-      required: '',
-      prefix: '+44',
+    {% include '../../components/form/InputField/inputField.html.twig' with {
       name: 'phone',
-      description: 'Subscribe to news and alerts.',
+      label: 'Phone number',
+      caption: 'Subscribe to news and alerts.',
+      required: 'required',
       error: false,
+      errorMessage: '',
+      value: '',
+      type: 'tel',
+      prefix: '+44',
     } %}
     
     {% include '../../components/form/Checkbox/checkbox.html.twig' with {
