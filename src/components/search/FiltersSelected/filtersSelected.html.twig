@@ -2,7 +2,7 @@
   <div class="filters">
     <div class="filters__buttons">
       {% for filterElement in filter_names %}
-        <button class="filters__button" aria-label="{{ remove_filter }} {{ filterElement.name }}" data-filter="{{ filterElement.value }}" data-fsa-at="filters-remove-{{ filterElement.name|lower|replace({' ': '-'}) }}">{{ filterElement.name }}</button>
+        <button class="filters__button" aria-label="{{ remove_filter }} {{ filterElement.name }}" data-filter="{{ filterElement.value }}" data-fsa-at="filters-remove-{{ filterElement.id }}">{{ filterElement.name }}</button>
       {% endfor %}
     </div>
     <div class="filters__remove-wrapper">
