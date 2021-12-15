@@ -32,6 +32,14 @@ function menuFocus(direction, event, link, classes, submenu = null, anchor = nul
   }
 }
 
+function resetArrows() {
+  const arrows = document.querySelectorAll('.navigation__link__arrow--flipped');
+  console.log('arrows', arrows);
+  arrows.forEach(arrow => {
+    arrow.classList.remove('navigation__link__arrow--flipped');
+  });
+}
+
 function subMenuFocus(direction, event, link, classes, parent = null, submenu = null) {
   if (direction == 'out') {
     if (parent.contains(event.relatedTarget)) {
@@ -39,6 +47,7 @@ function subMenuFocus(direction, event, link, classes, parent = null, submenu = 
     }
     link.classList.remove(classes.linkOpen);
     link.setAttribute('aria-expanded', 'false');
+    resetArrows();
     if (submenu) {
       submenu.classList.remove(classes.subMenuOpen);
     }
