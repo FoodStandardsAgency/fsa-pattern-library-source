@@ -39,7 +39,7 @@ export default function () {
         const anchor = link.querySelector('a');
         anchor.addEventListener('click', (e) => {
           e.preventDefault();
-          el.querySelectorAll('.navigation-link--open').forEach(openItem => {
+          navigation.querySelectorAll('.navigation-link--open').forEach(openItem => {
             if (openItem !== link) {
               openItem.classList.remove('navigation-link--open');
               openItem.setAttribute('aria-expanded', 'true');
