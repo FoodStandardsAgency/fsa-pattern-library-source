@@ -34,7 +34,6 @@ function menuFocus(direction, event, link, classes, submenu = null, anchor = nul
 
 function resetArrows() {
   const arrows = document.querySelectorAll('.navigation__link__arrow--flipped');
-  console.log('arrows', arrows);
   arrows.forEach(arrow => {
     arrow.classList.remove('navigation__link__arrow--flipped');
   });
