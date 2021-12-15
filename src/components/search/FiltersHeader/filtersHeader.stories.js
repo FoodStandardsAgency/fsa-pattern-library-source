@@ -25,6 +25,15 @@ FiltersHeader.args = {
           id: 'allergy-alert',
           value: 'allergy-alert',
           results: 20,
+<<<<<<< Updated upstream
+=======
+        },
+        {
+          label: 'News',
+          id: 'news',
+          value: 'news',
+          results: 10,
+>>>>>>> Stashed changes
         },
         { label: 'News', id: 'news', value: 'news', results: 10 },
         {
@@ -64,6 +73,15 @@ FiltersHeader.args = {
           id: 'food-safety',
           value: 'food-safety',
           results: 22,
+<<<<<<< Updated upstream
+=======
+        },
+        {
+          label: 'Listeria',
+          id: 'listeria',
+          value: 'listeria',
+          results: 3,
+>>>>>>> Stashed changes
         },
         { label: 'Listeria', id: 'listeria', value: 'listeria', results: 3 },
         {
@@ -92,6 +110,15 @@ FiltersHeader.args = {
           id: 'northern-ireland',
           value: 'northern-ireland',
           results: 89,
+<<<<<<< Updated upstream
+=======
+        },
+        {
+          label: 'Wales',
+          id: 'wales',
+          value: 'wales',
+          results: 78,
+>>>>>>> Stashed changes
         },
         { label: 'Wales', id: 'wales', value: 'wales', results: 78 },
       ],
