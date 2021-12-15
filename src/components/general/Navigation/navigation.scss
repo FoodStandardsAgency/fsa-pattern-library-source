@@ -253,7 +253,6 @@
         }
         &--read-more {
           @media screen and (max-width: $fsa-lg-minus) {
-//             @include button(primary);
             position: relative;
             width: 100%;
             align-content: center;
