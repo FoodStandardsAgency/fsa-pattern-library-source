@@ -36,6 +36,7 @@ import './components/form/Tabs/tabs';
 import './components/form/TitleAndText/titleAndText';
 import './components/form/EmailField/emailField';
 import './components/form/Textarea/textarea';
+import './components/form/PhoneField/phoneField';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
