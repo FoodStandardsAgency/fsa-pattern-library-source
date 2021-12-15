@@ -26,12 +26,7 @@ FiltersHeader.args = {
           value: 'allergy-alert',
           results: 20,
         },
-        {
-          label: 'News',
-          id: 'news',
-          value: 'news',
-          results: 10,
-        },
+        { label: 'News', id: 'news', value: 'news', results: 10 },
         {
           label: 'Consultation',
           id: 'consultation',
@@ -70,12 +65,7 @@ FiltersHeader.args = {
           value: 'food-safety',
           results: 22,
         },
-        {
-          label: 'Listeria',
-          id: 'listeria',
-          value: 'listeria',
-          results: 3,
-        },
+        { label: 'Listeria', id: 'listeria', value: 'listeria', results: 3 },
         {
           label: 'Nutrition in Northern Ireland',
           id: 'northern-ireland-nutrition',
@@ -96,24 +86,14 @@ FiltersHeader.args = {
       title: 'Nation',
       name: 'nation',
       fields: [
-        {
-          label: 'England',
-          id: 'england',
-          value: 'england',
-          results: 100,
-        },
+        { label: 'England', id: 'england', value: 'england', results: 100 },
         {
           label: 'Northern Ireland',
           id: 'northern-ireland',
           value: 'northern-ireland',
           results: 89,
         },
-        {
-          label: 'Wales',
-          id: 'wales',
-          value: 'wales',
-          results: 78,
-        },
+        { label: 'Wales', id: 'wales', value: 'wales', results: 78 },
       ],
       open: true,
       selected: 'selected',

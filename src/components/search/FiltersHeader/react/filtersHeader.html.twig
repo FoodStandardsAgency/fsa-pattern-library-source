@@ -20,7 +20,7 @@
           {% for field in filter.fields %}
             {% if field.results > 0 %}
               <div class="accordion__field">
-                <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ filter.name ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked }} data-fsa-at="{{ field.id }}">
+                <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ filter.name ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked }} data-fsa-at="filters-add-{{ field.id|lower|replace({' ': '-', '.': ''}) }}">
                 <label class="accordion__label" for="{{ field.id }}">{{ field.label }}
                   ({{ field.results }})</label>
               </div>
