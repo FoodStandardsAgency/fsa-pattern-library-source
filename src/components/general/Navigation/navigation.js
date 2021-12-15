@@ -10,8 +10,8 @@ export default function () {
       DOMContentFirstLoad = false;
       return;
     }
-    const el = document.querySelector('#navigation');
-    if (!el) {
+    const navigation = document.querySelector('#navigation');
+    if (!navigation) {
       return;
     }
     
