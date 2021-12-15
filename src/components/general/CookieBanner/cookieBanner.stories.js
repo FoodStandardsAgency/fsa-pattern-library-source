@@ -1,7 +1,11 @@
 import cookieBanner from './cookieBanner.html.twig';
+import './cookieBanner.scss';
 
 export default {
   title: 'Components/General/Cookie Banner',
+  parameters: {
+    layout: 'fullscreen',
+  },
 }
 
 export const CookieBanner = args => cookieBanner(args);
