@@ -5,10 +5,15 @@
     {% if error %}
     <div class="input-field__error-message">{{ errorMessage }}</div>
     {% endif %}
-    {% if value %}
-        <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ name }}-field" name="{{ name }}" value="{{ value }}" aria-required={{ required ? "true" : "false" }} />
-    {% else %}
-        <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ name }}-field" name="{{ name }}" aria-required={{ required ? "true" : "false" }} />
-    {% endif %}
+    <div class="input-field__wrapper">
+      {% if prefix %}
+        <span class="input-field__prefix">{{ prefix }}</span>
+      {% endif %}
+      {% if value %}
+          <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ name }}-field" name="{{ name }}" value="{{ value }}" aria-required={{ required ? "true" : "false" }} />
+      {% else %}
+          <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ name }}-field" name="{{ name }}" aria-required={{ required ? "true" : "false" }} />
+      {% endif %}
+    </div>
     <div class="input-field__caption">{{ caption }}</div>
 </div>
