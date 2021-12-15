@@ -15,32 +15,32 @@ FiltersSelected.args = {
     {
       'name': 'Allergy Alert',
       'value': 'allergy-alert',
-      'fsa_data_at': 'allergy-alert',
+      'id': 'allergy-alert',
     },
     {
       'name': 'News',
       'value': 'news',
-      'fsa_data_at': 'news',
+      'id': 'news',
     },
     {
       'name': 'Ecoli',
       'value': 'ecoli',
-      'fsa_data_at': 'ecoli'
+      'id': 'ecoli'
     },
     {
       'name': 'England',
       'value': 'england',
-      'fsa_data_at': 'england',
+      'id': 'england',
     },
     {
       'name': 'Northern Ireland',
       'value': 'northern-ireland',
-      'fsa_data_at': 'northern-ireland',
+      'id': 'northern-ireland',
     },
     {
       'name': 'Consumer Guidance',
       'value': 'consumer-guidance',
-      'fsa_data_at': 'consumer-guidance',
+      'id': 'consumer-guidance',
     },
   ],
   remove_filter: 'Remove filter',
