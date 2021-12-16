@@ -23,6 +23,10 @@
     white-space: nowrap;
     @include link;
     color: var(--fsa-primary_white);
+
+    &:hover {
+      color: var(--fsa__grey-hover);
+    }
   }
 
   &__actions {
@@ -55,6 +59,10 @@
   &__accept {
     margin-top: 1rem;
     @include button(secondary);
+    &:hover {
+      background-color: var(--fsa__grey-hover);
+      color: var(--fsa__link-green);
+    }
 
     @media screen and (min-width: $fsa-md) {
       margin-top: 0;
