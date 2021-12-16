@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .hero {
   display: flex;
@@ -11,23 +11,23 @@
     width: 100%;
     height: fit-content;
     overflow: visible;
-    mask: url('./hero.svg') no-repeat bottom;
+    mask: url("./hero.svg") no-repeat bottom;
     mask-size: 200%, 100%;
     mask-repeat: no-repeat;
-    -webkit-mask: url('./hero.svg') no-repeat bottom;
+    -webkit-mask: url("./hero.svg") no-repeat bottom;
     -webkit-mask-size: 200%, 100%;
     -webkit-mask-repeat: no-repeat;
     color: white;
     padding-bottom: 2rem;
     z-index: 1;
     @media screen and (min-width: $fsa-md) {
-      background-image: url('./pattern.svg');
+      background-image: url("./pattern.svg");
       background-size: 150%;
       background-position: right top;
       padding-bottom: 2.2rem;
     }
     @media screen and (min-width: $fsa-lg) {
-      padding-bottom: 3.2rem;
+      padding-bottom: 5.5rem;
       background-size: 90%;
     }
     @media screen and (min-width: $fsa-xl) {
@@ -39,6 +39,22 @@
     /* Remove background pattern in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
+    }
+  }
+  &--without-image.hero--with-services {
+    .hero__mask-wrapper {
+      padding-bottom: 2rem;
+      @media screen and (min-width: $fsa-xl) {
+        padding: 0;
+      }
+    }
+  }
+  &--with-services {
+    .hero__mask-wrapper {
+      margin-bottom: 1rem;
+      @media screen and (min-width: $fsa-xl) {
+        margin-bottom: 0;
+      }
     }
   }
   &__container {
@@ -64,7 +80,7 @@
     z-index: 1;
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       background-color: inherit;
       left: -48%;
@@ -81,8 +97,8 @@
     color: inherit;
     margin: 2rem 0 0.625rem 0;
     &:after {
-      content: '';
-      background-image: url('./dot-white.svg');
+      content: "";
+      background-image: url("./dot-white.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 101%;
@@ -95,15 +111,25 @@
     @include intro();
     margin-top: 0.625rem;
   }
+  &__cta-wrapper {
+    @media screen and (min-width: $fsa-xl) {
+      display: flex;
+    }
+  }
   &__cta {
     margin-top: 1rem;
+    @media screen and (min-width: $fsa-xl) {
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
   &__services {
     order: 3;
     z-index: 10;
     width: 100%;
     @media screen and (min-width: $fsa-xl) {
-      margin-top: -13rem;
       height: 100%;
     }
     // If it has an image and 4 columns, unset the height and reduce the bottom padding.
@@ -123,12 +149,6 @@
         }
       }
     }
-    // If there are 2 services
-    &--half-two {
-      @media screen and (min-width: $fsa-xl) {
-        padding-bottom: 5.5rem;
-      }
-    }
 
     // Adjustments to the existing service links component
     .service-links {
@@ -144,9 +164,12 @@
       }
       &__cards {
         margin-top: 0;
+        @media screen and (max-width: $fsa-md-minus) {
+          margin: 0;
+        }
       }
       &__card {
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $fsa-md-minus) {
           padding-left: 0;
           padding-right: 0;
         }
@@ -219,7 +242,7 @@
       h1 {
         color: var(--fsa-primary_dark-green);
         &:after {
-          background-image: url('./dot-grey.svg');
+          background-image: url("./dot-grey.svg");
         }
       }
     }
@@ -234,15 +257,21 @@
 
       @media screen and (min-width: $fsa-xl) {
         min-height: 26rem;
+        padding-bottom: 3.5rem;
       }
-    }
-    .hero__title {
-      margin-top: 1rem;
     }
   }
   &--with-services {
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $fsa-xl) {
+      padding-bottom: 1rem;
+    }
+    &.hero--with-image {
+      @media screen and (min-width: $fsa-xl) {
+        padding-bottom: 3rem;
+      }
+    }
     .hero__mask-wrapper {
       @media screen and (min-width: $fsa-xl) {
         align-items: unset;
@@ -250,11 +279,43 @@
     }
     .hero__content-wrapper {
       @media screen and (min-width: $fsa-xl) {
-        margin-top: 2rem;
-        padding-bottom: 12rem;
+        &--1-service-rows {
+          padding-bottom: 6rem;
+        }
+        &--2-service-rows {
+          padding-bottom: 12rem;
+        }
       }
     }
   }
+  //   If there is no image but there are services, set the top margin on the rows so that the services overlap the hero.
+  &--without-image#{&}--with-services {
+    @media screen and (min-width: $fsa-xl) {
+      .hero__services {
+        &--1-rows {
+          margin-top: -4rem;
+        }
+        &--2-rows {
+          margin-top: -10rem;
+        }
+      }
+    }
+  }
+  // If there is an image and services, but the services only take up half of the screen, set the top margin on the rows so that the services overlap the hero.
+  &--with-image#{&}--with-services#{&}--services-half {
+    @media screen and (min-width: $fsa-xl) {
+      .hero__services {
+        &--1-rows {
+          margin-top: -7.5rem;
+        }
+        &--2-rows {
+          margin-top: -13.5rem;;
+        }
+      }
+    }
+  }
+
+  // If there is an image and services, but the services take up the full width of the screen, remove the padding and push the services below the image.
   &--with-image#{&}--with-services#{&}--services-full {
     .hero__content-wrapper {
       @media screen and (min-width: $fsa-xl) {
