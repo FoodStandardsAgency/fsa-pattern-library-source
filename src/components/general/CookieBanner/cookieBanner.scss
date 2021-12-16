@@ -1,0 +1,78 @@
+@import 'src/lib.scss';
+
+.cookie-banner {
+  background-color: var(--fsa-primary_dark-green);
+  padding: 1rem;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+
+  &--hidden {
+    display: none;
+  }
+
+  @media screen and (min-width: $fsa-xl) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__message,
+  &__find-out-more,
+  &__manage {
+    margin: 0;
+    @include body;
+    color: var(--fsa-primary_white);
+  }
+
+  &__find-out-more,
+  &__manage {
+    white-space: nowrap;
+    @include link;
+    color: var(--fsa-primary_white);
+
+    &:hover {
+      color: var(--fsa__grey-hover);
+    }
+  }
+
+  &__actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin-top: 0;
+    }
+  }
+
+  &__manage {
+    @media screen and (min-width: $fsa-md) {
+      margin-right: 1rem;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__accept {
+    margin-top: 1rem;
+    @include button(secondary);
+    &:hover {
+      background-color: var(--fsa__grey-hover);
+      color: var(--fsa__link-green);
+    }
+
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 0;
+    }
+  }
+}
