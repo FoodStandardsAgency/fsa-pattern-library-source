@@ -1,5 +1,8 @@
 import cookieBanner from './cookieBanner.html.twig';
 import './cookieBanner.scss';
+import cookieBannerJs from './cookieBanner';
+
+cookieBannerJs();
 
 export default {
   title: 'Components/General/Cookie Banner',
