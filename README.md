@@ -19,7 +19,7 @@ Use `yarn` to install followed by:
 
 ## Running locally 
 If you want to use Storybook with the main site locally, copy `.env.local` into `.env` and 
-change the DRUPAL_PATTERN_LIBRARY_URL to the location of the pattern library folder in your Drupal project. 
+change the DRUPAL_PATTERN_LIBRARY_PATH to the location of the pattern library folder in your Drupal project. 
 
 Then run `make local` to build locally.
 ```
