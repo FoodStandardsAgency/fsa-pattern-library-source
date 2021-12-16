@@ -18,7 +18,10 @@ Use `yarn` to install followed by:
 * `yarn build` to build compiled js and css assets. (This runs automatically on push and updates https://github.com/FoodStandardsAgency/fsa-pattern-library-assets)
 
 ## Running locally 
-If we want to use Storybook with the main site locally, run `make local`. Make sure to keep both react & main site repo under ``~/Sites/`` directory.
+If you want to use Storybook with the main site locally, copy `.env.local` into `.env` and 
+change the DRUPAL_PATTERN_LIBRARY_URL to the location of the pattern library folder in your Drupal project. 
+
+Then run `make local` to build locally.
 ```
 make local
 ```
