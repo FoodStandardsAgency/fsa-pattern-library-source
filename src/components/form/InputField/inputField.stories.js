@@ -63,4 +63,5 @@ Phone.args = {
   value: '',
   type: 'tel',
   prefix: '+44',
+  nested: true
 }

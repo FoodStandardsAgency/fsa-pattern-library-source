@@ -1,5 +1,5 @@
 <div class="input-field{{ error ? " input-field--error" : "" }}{{ states ? ' js-form-item js-form-item-' ~ name : ''}}">
-  <label class="input-field__label" for="{{ name }}-field">{{ label }}
+  <label class="input-field__label{{ nested ? " input-field__nested" : "" }}" for="{{ name }}-field">{{ label }}
     <span class="input-field__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
   </label>
   {% if error %}
