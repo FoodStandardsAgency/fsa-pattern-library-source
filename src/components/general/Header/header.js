@@ -19,11 +19,11 @@ export default function () {
     const languageSwitcherDesktop = document.querySelector('.header__languages--desktop');
     if (languageSwitcherMobile && languageSwitcherDesktop) {
       if (mode == 'mobile') {
-        languageSwitcherMobile.setAttribute('aria-hidden', false);
-        languageSwitcherDesktop.setAttribute('aria-hidden', true);
+        //languageSwitcherMobile.setAttribute('aria-hidden', false);
+        //languageSwitcherDesktop.setAttribute('aria-hidden', true);
       } else if (mode == 'desktop') {
-        languageSwitcherMobile.setAttribute('aria-hidden', true);
-        languageSwitcherDesktop.setAttribute('aria-hidden', false);
+        //languageSwitcherMobile.setAttribute('aria-hidden', true);
+        //languageSwitcherDesktop.setAttribute('aria-hidden', false);
       }
     }
     const menuButton = document.querySelector('.header__menu');

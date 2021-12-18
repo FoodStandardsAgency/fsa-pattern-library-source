@@ -1079,6 +1079,31 @@
     },
   ],
   } %}
+  {% include '../../components/search/Datepicker/datepicker.html.twig' with {
+    title: 'Date',
+    name:'date_select',
+    fields: [
+      {
+        label: 'Updated from',
+        datepicker: [
+        { label: 'Day', accessibleLabel: 'Select a day', options: days },
+        { label: 'Month', accessibleLabel: 'Select a month', options: months },
+        { label: 'Year', accessibleLabel: 'Select a year', options: years },
+      ],
+      },
+      {
+        label: 'Updated to',
+        datepicker: [
+        { label: 'Day', accessibleLabel: 'Select a day', options: days },
+        { label: 'Month', accessibleLabel: 'Select a month', options: months },
+        { label: 'Year', accessibleLabel: 'Select a year', options: years },
+      ],
+      }
+    ],
+    open: true,
+    selected: 'selected',
+    apply: 'Apply date',
+  } %}
 {% endblock %}
 
 

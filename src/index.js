@@ -37,6 +37,7 @@ import './components/form/Tabs/tabs';
 import './components/form/TitleAndText/titleAndText';
 import './components/form/EmailField/emailField';
 import './components/form/Textarea/textarea';
+import select from './components/form/Select/select';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
@@ -64,3 +65,4 @@ pagination();
 searchBar();
 sortBy();
 navigation();
+// select();
