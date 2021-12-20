@@ -1,0 +1,101 @@
+@import 'src/lib.scss';
+
+.help-secondary-menu {
+  &__menu {
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__menu-item {
+    width: 100%;
+  }
+
+  &__category {
+    background-color: var(--fsa_online-grey);
+    color: var(--fsa-primary_black);
+    @include h2;
+    font-size: 1.35rem;
+    padding: 1rem 0;
+    display: block;
+    width: 100%;
+
+    &:hover {
+      background-color: var(--fsa_border);
+      color: var(--fsa__link-green);
+    }
+
+    &--1 {
+      text-align: right;
+      padding-right: 1rem;
+    }
+
+    &--2 {
+      padding-left: 1rem;
+    }
+  }
+
+  &__menu-item {
+    &--active {
+      .help-secondary-menu__submenu {
+        display: flex;
+        position: absolute;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .help-secondary-menu__category {
+        background-color: var(--fsa__purple-hover);
+        color: var(--fsa-primary_white);
+        position: relative;
+
+        &::after {
+          content: '';
+          border: 0.75rem solid transparent;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          top: 100%;
+          border-top-color: var(--fsa__purple-hover);
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &__submenu {
+    display: none;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+
+  &__submenu-link {
+    display: block;
+    background-color: var(--white);;
+    border: 0.25rem solid var(--fsa_border);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    color: var(--fsa-primary_dark-green);
+    @include body;
+    font-weight: bold;
+
+    &:hover {
+      border-color: var(--fsa-primary_dark-green);
+      color: var(--fsa__link-green);
+    }
+
+    &--active {
+      background-color: var(--fsa__purple-hover);
+      color: var(--fsa-primary_white);
+      border: none;
+
+      &:hover {
+        color: var(--fsa-primary_white);
+      }
+    }
+  }
+}
