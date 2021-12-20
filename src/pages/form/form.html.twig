@@ -119,6 +119,19 @@
       change_email_link: '#',
       change_email_label: 'Change your email address',
     } %}
+
+    {% include '../../components/form/InputField/inputField.html.twig' with {
+      name: 'phone',
+      label: 'Phone number',
+      caption: 'Subscribe to news and alerts.',
+      required: 'required',
+      error: false,
+      errorMessage: '',
+      value: '',
+      type: 'tel',
+      prefix: '+44',
+      nested: true
+    } %}
     
     {% include '../../components/form/Checkbox/checkbox.html.twig' with {
       title: 'Consultations',
@@ -152,7 +165,7 @@
       required: 'required',
       rows: 10,
     } %}
-   
+
     {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
       prevLink: '#',
       prevLabel: 'Previous',

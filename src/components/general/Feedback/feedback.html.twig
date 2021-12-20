@@ -21,7 +21,7 @@
         
         <div class="feedback__form-wrapper">
           {% block form %}
-            <form class="feedback__form">
+            <form class="feedback__form" method="post" action="{{ form_action }}">
               <fieldset class="feedback__fieldset">
                 <button class="feedback__close">{{ close }}
                   <span class="visually-hidden">{{ the_feedback_form }}</span>

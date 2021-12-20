@@ -28,4 +28,5 @@ Feedback.args = {
   improve_question: 'How should we improve this page?',
   feedback: 'feedback',
   submit: 'Submit',
+  form_action: '#'
 };

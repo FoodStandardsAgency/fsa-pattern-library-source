@@ -51,3 +51,17 @@ Password.args = {
   value: '',
   type: 'password'
 };
+
+export const Phone = Template.bind({});
+Phone.args = {
+  name: 'phone',
+  label: 'Phone number',
+  caption: 'Subscribe to news and alerts.',
+  required: 'required',
+  error: false,
+  errorMessage: '',
+  value: '',
+  type: 'tel',
+  prefix: '+44',
+  nested: true
+}
