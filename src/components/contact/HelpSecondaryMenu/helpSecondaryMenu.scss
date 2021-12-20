@@ -34,6 +34,11 @@
     &--2 {
       padding-left: 1rem;
     }
+
+    @media screen and (min-width: $fsa-xs) {
+      padding: 1rem 0;
+      text-align: center;
+    }
   }
 
   &__menu-item {
