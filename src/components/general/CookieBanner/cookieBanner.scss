@@ -67,8 +67,7 @@
     margin-top: 1rem;
     @include button(secondary);
     &:hover {
-      background-color: var(--fsa__grey-hover);
-      color: var(--fsa__link-green);
+      background-color: var(--fsa__link-green);
     }
 
     @media screen and (min-width: $fsa-md) {
