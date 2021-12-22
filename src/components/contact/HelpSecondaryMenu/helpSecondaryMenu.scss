@@ -1,22 +1,32 @@
 @import 'src/lib.scss';
 
 .help-secondary-menu {
-  max-width: 53rem;
-  margin: auto;
+  margin: 3rem auto 0;
 
-  @media screen and (min-width: $fsa-xxl) {
-    max-width: 47.5rem;
+  &__container {
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-container;
+    }
+  }
+
+  &__row {
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-row;
+      display: flex;
+    }
+  }
+
+  &__grid-wrapper {
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(8);
+      @include cols-push(2);
+    }
   }
 
   &__menu {
-    display: flex;
-    position: relative;
     padding: 0;
     margin: 0;
-  }
-
-  &__menu-item {
-    width: 100%;
+    position: relative;
   }
 
   &__category {
@@ -26,7 +36,8 @@
     font-size: 1.35rem;
     padding: 1rem 0;
     display: block;
-    width: 100%;
+    width: 50%;
+    position: relative;
 
     &:hover {
       background-color: var(--fsa_border);
@@ -40,6 +51,9 @@
 
     &--2 {
       padding-left: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
 
     @media screen and (min-width: $fsa-xs) {
@@ -65,9 +79,6 @@
     &--active {
       .help-secondary-menu__submenu {
         display: flex;
-        position: absolute;
-        right: 0;
-        left: 0;
         flex-direction: column;
         justify-content: center;
         padding: 0;
@@ -79,10 +90,10 @@
         }
       }
 
+
       .help-secondary-menu__category {
         background-color: var(--fsa__purple-hover);
         color: var(--fsa-primary_white);
-        position: relative;
 
         &::after {
           content: '';
