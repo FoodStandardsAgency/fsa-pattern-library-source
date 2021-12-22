@@ -1,6 +1,13 @@
 @import 'src/lib.scss';
 
 .help-secondary-menu {
+  max-width: 53rem;
+  margin: auto;
+
+  @media screen and (min-width: $fsa-xxl) {
+    max-width: 47.5rem;
+  }
+
   &__menu {
     display: flex;
     position: relative;
@@ -39,6 +46,10 @@
       padding: 1rem 0;
       text-align: center;
     }
+
+    @media screen and (min-width: $fsa-lg) {
+      padding: 2rem 0;
+    }
   }
 
   &__menu-item {
@@ -50,6 +61,13 @@
         left: 0;
         flex-direction: column;
         justify-content: center;
+        padding: 0;
+        margin-top: 0.5rem;
+
+        @media screen and (min-width: $fsa-lg) {
+          margin-top: 2rem;
+          flex-direction: row;
+        }
       }
 
       .help-secondary-menu__category {
@@ -66,6 +84,10 @@
           top: 100%;
           border-top-color: var(--fsa__purple-hover);
           transform: translateX(-50%);
+
+          @media screen and (min-width: $fsa-lg) {
+            border-width: 1.5rem;
+          }
         }
       }
     }
@@ -73,13 +95,19 @@
 
   &__submenu {
     display: none;
-    padding: 0;
-    margin-top: 0.5rem;
+  }
+
+  &__submenu-item {
+    @media screen and (min-width: $fsa-lg) {
+      & + & {
+        margin-left: 1rem;
+      }
+    }
   }
 
   &__submenu-link {
     display: block;
-    background-color: var(--white);;
+    background-color: var(--white);
     border: 0.25rem solid var(--fsa_border);
     text-align: center;
     padding: 1rem 0;
@@ -96,11 +124,16 @@
     &--active {
       background-color: var(--fsa__purple-hover);
       color: var(--fsa-primary_white);
-      border: none;
+      border-color: var(--fsa__purple-hover);
 
       &:hover {
         color: var(--fsa-primary_white);
+        border-color: var(--fsa__purple-hover);
       }
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      padding: 1rem; 
     }
   }
 }
