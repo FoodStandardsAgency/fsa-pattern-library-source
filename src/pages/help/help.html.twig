@@ -1,5 +1,6 @@
 {% extends '../../layout/helpLayout/helpLayout.html.twig' %}
-{% block content %}
+
+{% block top %}
   {% include '../../components/contact/HelpSecondaryMenu/helpSecondaryMenu.html.twig' with {
     heading: 'Help/contact menu',
     links: [
@@ -7,7 +8,7 @@
         link: {
           href: '#',
           label: 'For consumers',
-          active: false,
+          active: true,
         },
         submenu: {
           links: [
@@ -15,7 +16,7 @@
               link: {
                 href: '#',
                 label: 'Report a food problem',
-                active: false,
+                active: true,
               },
             },
             {
@@ -39,7 +40,7 @@
         link: {
           href: '#',
           label: 'For businesses',
-          active: true,
+          active: false,
         },
         submenu: {
           links: [
@@ -47,7 +48,7 @@
               link: {
                 href: '#',
                 label: 'Report a food concern',
-                active: true,
+                active: false,
               },
             },
             {
@@ -77,3 +78,5 @@
     ],
   } %}
 {% endblock %}
+
+{% block content %}{% endblock %}

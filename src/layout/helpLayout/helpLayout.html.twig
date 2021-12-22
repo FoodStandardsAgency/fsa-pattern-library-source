@@ -1,11 +1,6 @@
 <div class="help-layout">
+  <div class="help-layout__top">{% block top %}{% endblock %}</div>
   <div class="help-layout__container">
-    <div class="help-layout__row">
-      <div class="help-layout__top">
-        {% block top %}
-        {% endblock %}
-      </div>
-    </div>
     <div class="help-layout__row">
       <div class="help-layout__wrapper">
         {% block content %}
