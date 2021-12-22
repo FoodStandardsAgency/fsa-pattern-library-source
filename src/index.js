@@ -45,6 +45,9 @@ import './components/landing/LatestTeaser/latestTeaser';
 import './components/landing/PromoGroup/promoGroup';
 import './components/landing/ServiceLinks/serviceLinks';
 
+/* Contact Components */
+import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';
+
 /* Layout Components */
 import './layout/formLayout/formLayout';
 import './layout/twoColumn/twoColumn';
