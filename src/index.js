@@ -45,11 +45,15 @@ import './components/landing/LatestTeaser/latestTeaser';
 import './components/landing/PromoGroup/promoGroup';
 import './components/landing/ServiceLinks/serviceLinks';
 
+/* Contact Components */
+import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';
+
 /* Layout Components */
 import './layout/formLayout/formLayout';
 import './layout/twoColumn/twoColumn';
 import './layout/fullWidth/fullWidth';
 import './layout/contentLayout/contentLayout';
+import './layout/contactLayout/contactLayout';
 
 import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
 import pagination from "./components/search/Pagination/pagination";
