@@ -97,6 +97,26 @@
       value: ''
     } %}
 
+    {% include '../../components/form/Dropdown/dropdown.html.twig' with {
+      title: 'Delivery option',
+      description:
+        'Choose a delivery method from the dropdown list.',
+      options: [
+        {
+          'text': 'Email',
+          'value': 'email'
+        },
+        {
+          'text': 'SMS',
+          'value': 'sms'
+        }
+      ],
+      default: 'email',
+      name: 'delivery_method',
+      required: "",
+      error: false,
+    } %}
+
     {% include '../../components/form/Radio/radio.html.twig' with {
       title: 'Email frequency',
       description: 'How often the emails are sent',
