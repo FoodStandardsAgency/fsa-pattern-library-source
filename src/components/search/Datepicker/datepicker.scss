@@ -1,11 +1,12 @@
 @import 'src/lib.scss';
 
 .datepicker {
-  .accordion__fields {
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  &__label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
   }
-  .accordion__field {
+  &__select-wrapper {
     margin-top: 0;
     display: flex;
     justify-content: space-between;
@@ -18,17 +19,17 @@
         padding-right: 0;
       }
     }
-    &__apply-wrapper {
-      display: flex;
-      justify-content: flex-end;
-    }
-    &__apply-button {
-      @include link();
-      margin-top: 0.575rem;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+  }
+  &__apply-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__apply-button {
+    @include link();
+    margin-top: 0.575rem;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

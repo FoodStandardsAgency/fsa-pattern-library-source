@@ -75,6 +75,32 @@
   </svg>',
 } %}
 
+{# Generate date filter content #}
+{% set days = [] %}
+{% for i in 1..31  %}
+  {% set days = days|merge([i]) %}
+{% endfor %}
+{% set months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]
+%}
+{% set years = [] %}
+{% for i in 1990..2022  %}
+  {% set years = years|merge([i]) %}
+{% endfor %}
+{# End date generation #}
+
 {% extends '../../layout/twoColumn/twoColumn.html.twig' %}
 {% block header %}
   {% include '../../components/general/Header/header.html.twig' with {
@@ -974,135 +1000,154 @@
     title: 'Filter your search',
     link_text: 'Return to results',
     button_text: 'Filter your search',
-    checkbox_filters: [
-    {
-      title: 'Types of Content',
-      name: 'content_type',
-      fields: [
-       {
+    accordions: [
+      {
+        title: 'Types of Content',
+        name: 'content_type',
+        fields: [
+        {
+          type: 'collapsible_checkbox',
           label: 'Allergy alert',
           id: 'allergy-alert',
           value: 'allergy-alert',
           results: 20,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'News',
           id: 'news',
           value: 'news',
           results: 10,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Consultation',
           id: 'consultation',
           value: 'consultation',
           results: 15,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Business Guidance',
           id: 'business-guidance',
           value: 'business-guidance',
           results: 23,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Consumer Guidance',
           id: 'consumer-guidance',
           value: 'consumer-guidance',
           results: 3,
         },
       ],
-      open: true,
-      selected: 'selected',
-    },
-    {
-      title: 'Topics',
-      name: 'topics',
-      fields: [
-       {
+        open: true,
+        selected: 'selected',
+      },
+      {
+        title: 'Topics',
+        name: 'topics',
+        fields: [
+        {
+          type: 'collapsible_checkbox',
           label: 'Campylobacter',
           id: 'campylobacter',
           value: 'campylobacter',
           results: 82,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Food safety',
           id: 'food-safety',
           value: 'food-safety',
           results: 22,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Listeria',
           id: 'listeria',
           value: 'listeria',
           results: 3,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Nutrition in Northern Ireland',
           id: 'northern-ireland-nutrition',
           value: 'northern-ireland-nutrition',
           results: 129,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Shellfish',
           id: 'shellfish',
           value: 'shellfish',
           results: 10,
         },
       ],
-      open: true,
-      selected: 'selected',
-    },
-    {
-      title: 'Nation',
-      name: 'nation',
-      fields: [
-         {
+        open: true,
+        selected: 'selected',
+      },
+      {
+        title: 'Nation',
+        name: 'nation',
+        fields: [
+        {
+          type: 'collapsible_checkbox',
           label: 'England',
           id: 'england',
           value: 'england',
           results: 100,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Northern Ireland',
           id: 'northern-ireland',
           value: 'northern-ireland',
           results: 89,
         },
         {
+          type: 'collapsible_checkbox',
           label: 'Wales',
           id: 'wales',
           value: 'wales',
           results: 78,
         },
       ],
-      open: true,
-      selected: 'selected',
-    },
-  ],
-  } %}
-  {% include '../../components/search/Datepicker/datepicker.html.twig' with {
-    title: 'Date',
-    name:'date_select',
-    fields: [
-      {
-        label: 'Updated from',
-        datepicker: [
-        { label: 'Day', accessibleLabel: 'Select a day', options: days },
-        { label: 'Month', accessibleLabel: 'Select a month', options: months },
-        { label: 'Year', accessibleLabel: 'Select a year', options: years },
-      ],
+        open: true,
+        selected: 'selected',
       },
       {
-        label: 'Updated to',
-        datepicker: [
-        { label: 'Day', accessibleLabel: 'Select a day', options: days },
-        { label: 'Month', accessibleLabel: 'Select a month', options: months },
-        { label: 'Year', accessibleLabel: 'Select a year', options: years },
+        title: 'Date',
+        name: 'date_select',
+        fields: [
+        {
+          type: 'datepicker',
+          dateType: 'From',
+          label: 'Updated from',
+          applyLabel: 'Apply date',
+          applyLink: '#',
+          selects: [
+          { id: 'from_day', label: 'Day', accessibleLabel: 'Select a day', options: days },
+          { id: 'from_month', label: 'Month', accessibleLabel: 'Select a month', options: months },
+          { id: 'from_year', label: 'Year', accessibleLabel: 'Select a year', options: years },
+        ],
+        },
+        {
+          type: 'datepicker',
+          dateType: 'To',
+          label: 'Updated to',
+          applyLabel: 'Apply date',
+          applyLink: '#',
+          selects: [
+          { id: 'to_day', label: 'Day', accessibleLabel: 'Select a day', options: days },
+          { id: 'to_month', label: 'Month', accessibleLabel: 'Select a month', options: months },
+          { id: 'to_year', label: 'Year', accessibleLabel: 'Select a year', options: years },
+        ],
+        },
       ],
-      }
+        open: true,
+      },
     ],
-    open: true,
-    selected: 'selected',
-    apply: 'Apply date',
   } %}
 {% endblock %}
 

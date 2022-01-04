@@ -3,10 +3,10 @@
     {{ accessibleLabel }}
   </label>
   <span class="select__label" aria-hidden="true">{{ label }}</span>
-  <select class="select__button" name="{{ label }}" id="{{ label|trim|replace({' ': '-'})|lower }}">
+  <select class="select__button" name="{{ label }}" id="{{ id }}">
     <option value="none" disabled selected></option>
     {% for option in options %}
-      <option value="{{ option|trim|replace({' ': '-'})|lower }}">{{ option }}</option>
+      <option value="{{ loop.index - 1 }}" data-option-value="{{ option|trim|replace({' ': '-'})|lower }}">{{ option }}</option>
     {% endfor %}
   </select>
 </div>
