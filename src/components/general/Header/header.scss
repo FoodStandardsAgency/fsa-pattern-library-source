@@ -65,9 +65,9 @@
 
   &__languages {
     text-align: right;
-    background-color: var(--fsa-primary_white);
     &--mobile {
       display: block;
+      background-color: var(--fsa-primary_white);
       @media screen and (min-width: $fsa-lg) {
         display: none;
       }
