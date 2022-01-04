@@ -56,7 +56,7 @@ export const Phone = Template.bind({});
 Phone.args = {
   name: 'phone',
   label: 'Phone number',
-  caption: 'Subscribe to news and alerts.',
+  caption: '',
   required: 'required',
   error: false,
   errorMessage: '',
