@@ -35,7 +35,7 @@
     height: 100%;
     margin-left: 1rem;
     margin-right: 1rem;
-    > a {
+    > button, a {
       width: 100%;
       height: 100%;
       display: flex;
@@ -83,7 +83,9 @@
         position: relative;
       }
       .navigation__link {
-        > a {
+        > button, a {
+          @include body();
+          color: var(--fsa-primary_white);
           padding-top: 1rem;
           padding-bottom: 1rem;
           &:focus-visible {
@@ -174,7 +176,7 @@
               }
             }
           }
-          > a {
+          > button {
             @include h4();
             display: flex;
             color: var(--fsa-primary_black);
@@ -193,7 +195,7 @@
           @media screen and (min-width: $fsa-lg) {
             margin: 0;
             padding: 0;
-            > a {
+            > button {
               @include body();
               display: flex;
               color: var(--fsa-primary_black);
@@ -209,6 +211,8 @@
             @media screen and (min-width: $fsa-lg) {
               padding: 0 0.9rem;
               &:focus-visible {
+                border-bottom: none;
+                margin: 0;
                 svg {
                   path {
                     &:first-child {
@@ -251,6 +255,27 @@
         @media screen and (min-width: $fsa-lg) {
           margin: 1rem 0 0 1rem;
         }
+        > a {
+          color: var(--fsa-primary_dark-green);
+          padding: 0.5rem 0 0.5rem 1rem;
+          &:hover {
+            background-color: initial;
+            cursor: pointer;
+            color: var(--fsa__link-green);
+            text-decoration: underline;
+          }
+          &:focus-visible {
+            border-bottom: 0.25rem solid var(--fsa-primary_black);
+            span {
+              &:first-child {
+                border-bottom: none;
+              }
+            }
+          }
+          @media screen and (min-width: $fsa-lg) {
+            padding: 0;
+          }
+        }
         &--read-more {
           @media screen and (max-width: $fsa-lg-minus) {
             @include button(primary);
@@ -264,6 +289,7 @@
               right: 0;
               left: 0;
               bottom: 0;
+              color: var(--fsa-primary_white);
               &:hover {
                 color: var(--fsa-primary_white) !important;
                 text-decoration: none !important;
@@ -285,26 +311,6 @@
               stroke: var(--fsa-primary_dark-green);
               stroke-width: 2;
             }
-          }
-        }
-        > a {
-          padding: 0.5rem 0 0.5rem 1rem;
-          &:hover {
-            background-color: initial;
-            cursor: pointer;
-            color: var(--fsa__link-green);
-            text-decoration: underline;
-          }
-          &:focus-visible {
-            border-bottom: 0.25rem solid var(--fsa-primary_black);
-            span {
-              &:first-child {
-                border-bottom: none;
-              }
-            }
-          }
-          @media screen and (min-width: $fsa-lg) {
-            padding: 0;
           }
         }
         @media screen and (min-width: $fsa-lg) {
@@ -372,11 +378,21 @@
   }
   &__group-title {
     &--mobile {
-      @include link();
+      @include body();
+      font-size: 1rem;
+      color: var(--fsa-primary_dark-green);
       text-decoration: none;
       display: flex;
       justify-content: space-between;
       width: 100%;
+      &:focus-visible {
+        color: var(--fsa-primary_black);
+        outline: none;
+        text-decoration: none;
+        background-color: var(--fsa-tertiary_light-yellow);
+        border-bottom: 0.25rem solid var(--fsa-primary_black);
+        margin-bottom: -0.25rem;
+      }
       &:focus:not(:focus-visible) {
         color: var(--fsa-primary_dark-green);
         background-color: transparent;
@@ -410,5 +426,28 @@
         margin-top: 0;
       }
     }
+  }
+  button {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    padding: 0;
+  }
+
+  button:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+  }
+
+  button:active {
+    outline: none;
+    border: none;
+  }
+
+  button:focus {
+    outline: 0;
   }
 }
