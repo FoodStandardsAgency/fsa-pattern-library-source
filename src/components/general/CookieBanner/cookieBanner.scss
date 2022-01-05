@@ -3,18 +3,16 @@
 .cookie-banner {
   background-color: var(--fsa-primary_dark-green);
   padding: 1rem;
-  position: fixed;
-  z-index: 1000;
   width: 100%;
-
-  &--hidden {
-    display: none;
-  }
 
   @media screen and (min-width: $fsa-xl) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &--hidden {
+    display: none;
   }
 
   &__message,
@@ -67,8 +65,7 @@
     margin-top: 1rem;
     @include button(secondary);
     &:hover {
-      background-color: var(--fsa__grey-hover);
-      color: var(--fsa__link-green);
+      background-color: var(--fsa__link-green);
     }
 
     @media screen and (min-width: $fsa-md) {
