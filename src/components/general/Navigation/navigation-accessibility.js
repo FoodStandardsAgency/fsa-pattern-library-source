@@ -128,9 +128,7 @@ function menuArrows(links) {
           // If there is a UL available, place focus on the first focusable element within
           next = nextAll(link)[0];
           if (primarySubMenu && getMode() == 'desktop') {
-            // Make sure to stop event bubbling
-            e.preventDefault();
-            e.stopPropagation();
+            link.classList.add('navigation__link--open');
             primarySubMenu.classList.add('navigation__submenu--expanded');
             primarySubMenu.querySelectorAll(focusableElements)[0].focus();
           }
@@ -143,6 +141,7 @@ function menuArrows(links) {
 function subMenuArrows(group) {
   const links = group.querySelectorAll('.navigation__link');
   const topLevel = group.parentNode.parentNode;
+  const submenu = topLevel.querySelector('.navigation__submenu');
   const firstElement = group.parentNode.querySelector('.navigation__group > .navigation__menu > .navigation__link > a');
   links.forEach((link) => {
     link.addEventListener('keydown', e => {
@@ -166,6 +165,8 @@ function subMenuArrows(group) {
         case 38: /// up arrow
           if (link.querySelector('a') == firstElement) {
             topLevel.querySelector('a').focus();
+            topLevel.classList.remove('navigation__link--open');
+            submenu.classList.remove('navigation__submenu--expanded');
           } else if (prevAll(link)[0]) {
             prevAll(link)[0].querySelector('a').focus();
           } else if (prevAll(group)[0]) {
