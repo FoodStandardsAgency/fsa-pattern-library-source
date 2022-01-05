@@ -1,3 +1,6 @@
+import './onThisPage.html.twig';
+import './onThisPage.scss';
+
 export default function () {
   let DOMContentFirstLoad = true;
   window.addEventListener('DOMContentLoaded', function () {
