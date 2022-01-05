@@ -27,6 +27,7 @@ import './components/search/FiltersHeader/filtersHeader';
 
 /* Form Components */
 import './components/form/Checkbox/checkbox';
+import './components/form/Dropdown/dropdown';
 import './components/form/ErrorBox/errorBoxs';
 import './components/form/ExternalLink/externalLink';
 import './components/form/InputField/inputField';
