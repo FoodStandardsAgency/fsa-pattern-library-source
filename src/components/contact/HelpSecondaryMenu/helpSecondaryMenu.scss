@@ -4,19 +4,23 @@
   margin: 3rem auto 0;
 
   &__container {
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-container;
     }
   }
 
   &__row {
-    @media screen and (min-width: $fsa-xl) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-row;
       display: flex;
     }
   }
 
   &__grid-wrapper {
+    @media screen and (min-width: $fsa-lg) {
+      @include grid-cols(12);
+    }
+
     @media screen and (min-width: $fsa-xl) {
       @include grid-cols(8);
       @include cols-push(2);
