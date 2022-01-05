@@ -10,21 +10,19 @@ export default function () {
     }
 
     const sideNav = document.querySelector('.on-this-page');
-    const sideNavParent = sideNav.parentElement;
+    if (!sideNav) return;
 
-    if (sideNav && sideNavParent) {
-      function fixSideNav() {
-        const parentTop = sideNavParent.getBoundingClientRect().top;
-        const rem = parseInt(getComputedStyle(document.documentElement).fontSize);
+    function fixSideNav() {
+      const parentTop = sideNav.parentElement.getBoundingClientRect().top;
+      const rem = parseInt(getComputedStyle(document.documentElement).fontSize);
 
-        if (parentTop <= rem * 2) {
-          sideNav.classList.add('on-this-page--sticky');
-        } else {
-          sideNav.classList.remove('on-this-page--sticky');
-        }
+      if (parentTop <= rem * 2) {
+        sideNav.classList.add('on-this-page--sticky');
+      } else {
+        sideNav.classList.remove('on-this-page--sticky');
       }
-
-      window.addEventListener('scroll', fixSideNav);
     }
+
+    window.addEventListener('scroll', fixSideNav);
   });
 }
