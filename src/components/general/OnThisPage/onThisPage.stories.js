@@ -1,5 +1,8 @@
 import onThisPage from './onThisPage.html.twig';
 import './onThisPage.scss';
+import onThisPageJs from './onThisPage';
+
+onThisPageJs();
 
 export default {
   title: 'Components/General/On This Page',
