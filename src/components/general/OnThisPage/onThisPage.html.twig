@@ -1,0 +1,12 @@
+<nav class="on-this-page">
+  <h2 class="on-this-page__title">{{ on_this_page }}</h2>
+  <a href="#after-on-this-page" class="on-this-page__skip visually-hidden">{{ skip_this_menu }}</a>
+  <ol class="on-this-page__list">
+    {% for link in links %}
+      <li class="on-this-page__list-item">
+        <a href="{{ link.href }}" class="on-this-page__link">{{ link.label }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+  <a id="after-on-this-page"></a>
+</nav>
