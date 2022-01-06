@@ -24,7 +24,6 @@
     }
   }
   &__left {
-    position: relative;
     @include grid-cols(4, 4);
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(4);

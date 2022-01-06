@@ -1,18 +1,8 @@
 @import 'src/lib.scss';
 
 .on-this-page {
-  @media screen and (min-width: $fsa-md) {
-    max-width: 13rem;
-    position: absolute;
-    top: 0;
-    &--sticky {
-      position: fixed;
-      top: 2rem;
-    }
-  }
-
   @media screen and (min-width: $fsa-lg) {
-    max-width: 18rem;
+    padding-right: 2rem;
   }
 
   &__title {
