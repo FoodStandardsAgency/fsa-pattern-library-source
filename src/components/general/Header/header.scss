@@ -277,6 +277,7 @@
     display: flex;
     flex-wrap: nowrap;
     margin: 0.5rem 0;
+    width: fit-content;
     @media screen and (min-width: $fsa-lg) {
       color: var(--fsa-primary_dark-green);
     }
@@ -298,7 +299,6 @@
     }
 
     &--report {
-      width: fit-content;
       @include prefix-svg-mobile('report');
       @media screen and (min-width: $fsa-lg) {
         @include prefix-svg('report');

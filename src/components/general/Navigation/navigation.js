@@ -4,23 +4,32 @@ import './navigation.scss';
 import { getMode, menuFocus, subMenuFocus, menuArrows, subMenuArrows } from './navigation-accessibility';
 
 export default function () {
-  let DOMContentFirstLoad = true;
   window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
     const navigation = document.querySelector('#navigation');
     if (!navigation) {
       return;
     }
-    
+
+    function setRole(menuWrappers, mode) {
+      menuWrappers.forEach(menuWrapper => {
+        if (mode == 'desktop') {
+          menuWrapper.setAttribute('role', '');
+        }
+        else {
+          menuWrapper.setAttribute('role', 'region');
+        }
+      });
+    }
+
     // Set initial window size
     let mode = getMode();
-
+    // Set appropriate roles
+    const menuWrappers = document.querySelectorAll('.navigation__menu-wrapper');
+    setRole(menuWrappers, mode);
     // Update window size on resize
     window.addEventListener('resize', () => {
       mode = getMode();
+      setRole(menuWrappers, mode);
     });
 
     //Get top level menu
@@ -35,18 +44,20 @@ export default function () {
     topLevelLinks.forEach((link) => {
       const submenu = link.querySelector(".navigation__submenu");
       if (submenu) {
-        link.setAttribute('aria-expanded', 'false');
-        const anchor = link.querySelector('a');
-        anchor.addEventListener('click', (e) => {
-          e.preventDefault();
+        const button = link.querySelector('button');
+        button.addEventListener('click', (e) => {
           navigation.querySelectorAll('.navigation-link--open').forEach(openItem => {
             if (openItem !== link) {
               openItem.classList.remove('navigation-link--open');
-              openItem.setAttribute('aria-expanded', 'true');
+              const toggle = openItem.querySelector('button')
+              if (toggle) {
+                toggle.setAttribute('aria-expanded', 'false');
+              }
             }
           });
           submenu.classList.toggle("navigation__submenu--expanded");
           submenu.setAttribute('aria-modal', 'true')
+          button.setAttribute('aria-expanded', 'true');
           link.classList.toggle("navigation__link--open");
         });
         const classes = {
@@ -54,10 +65,10 @@ export default function () {
           subMenuOpen: 'navigation__submenu--expanded',
         };
         link.addEventListener('focusout', event => {
-          menuFocus('out', event, link, classes, submenu, anchor);
+          menuFocus('out', event, link, classes, submenu, button);
         });
         link.addEventListener('focusin', event => {
-          menuFocus('in', event, link, classes, submenu, anchor);
+          menuFocus('in', event, link, classes, submenu, button);
         });
       }
     });
@@ -76,7 +87,6 @@ export default function () {
         if (title) {
           const arrow = title.querySelector('.navigation__link__arrow');
           title.addEventListener('click', (e) => {
-            e.preventDefault();
             thirdLevel.classList.toggle("navigation__menu--level-2--expanded");
             arrow.classList.toggle('navigation__link__arrow--flipped');
           });
@@ -93,5 +103,5 @@ export default function () {
         }
       });
     });
-  });
+  }, { once: true });
 }
