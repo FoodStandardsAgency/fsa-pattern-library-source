@@ -1,4 +1,5 @@
 import promoLinks from './promoLinks.html.twig';
+import './promoLinks.scss';
 
 export default {
   title: 'Components/Contact/Promo Links',

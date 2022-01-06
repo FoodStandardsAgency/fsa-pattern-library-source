@@ -1,0 +1,52 @@
+@import 'src/lib.scss';
+
+.contact-promo {
+  margin-top: 1rem;
+
+  &__card {
+    padding: 1rem;
+    border: 4px solid var(--fsa_border);
+    display: block;
+    margin-top: 1rem;
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-color: var(--fsa-primary_dark-green);
+    }
+
+    &:focus {
+      border-color: var(--fsa-primary_black);
+      box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+      outline: none;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      padding: 1rem 2rem 1rem 1rem;
+    }
+  }
+
+  &__text {
+    margin: 0 1rem;
+    @media screen and (min-width: $fsa-lg) {
+      margin: 0 2rem 0 1rem;
+    }
+  }
+
+  &__title {
+    @include h4;
+    color: var(--fsa-primary_dark-green);
+    padding: 0;
+    margin: 0;
+  }
+
+  &__description {
+    display: none;
+    @include body;
+    color: var(--fsa-tertiary_light-black);
+    margin-top: 0.5rem;
+
+    @media screen and (min-width: $fsa-lg) {
+      display: block;
+    }
+  }
+}
