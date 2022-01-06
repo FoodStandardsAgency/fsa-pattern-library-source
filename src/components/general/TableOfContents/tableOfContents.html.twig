@@ -1,0 +1,10 @@
+<nav class="table-of-contents">
+  <h2 class="table-of-contents__title">{{ title|upper }}</h2>
+  <ol class="table-of-contents__list">
+    {% for link in links %}
+      <li class="table-of-contents__list-item">
+        <a href="{{ link.href }}" class="table-of-contents__link">{{ link.label }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

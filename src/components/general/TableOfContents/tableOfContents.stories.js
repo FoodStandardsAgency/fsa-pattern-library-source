@@ -1,13 +1,14 @@
-import onThisPage from './onThisPage.html.twig';
-import './onThisPage.scss';
+import tableOfContents from './tableOfContents.html.twig';
+import './tableOfContents.scss';
 
 export default {
-  title: 'Components/General/On This Page',
+  title: 'Components/General/Table of Contents',
 };
 
-export const OnThisPage = (args) => onThisPage(args);
-OnThisPage.args = {
-  on_this_page: 'on this page',
+export const TableOfContents = (args) => tableOfContents(args);
+TableOfContents.storyName = 'Table of Contents';
+TableOfContents.args = {
+  title: 'on this page',
   links: [
     { label: 'Explaning hazards', href: '#' },
     { label: 'Food safety management procedures', href: '#' },

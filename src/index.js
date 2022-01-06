@@ -13,7 +13,7 @@ import './components/general/Footer/footer';
 import navigation from './components/general/Navigation/navigation';
 import './components/general/Feedback/feedback';
 import './components/general/CookieBanner/cookieBanner';
-import './components/general/OnThisPage/onThisPage';
+import './components/general/TableOfContents/tableOfContents';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
