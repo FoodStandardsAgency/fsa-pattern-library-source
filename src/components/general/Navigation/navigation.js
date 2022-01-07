@@ -1,7 +1,7 @@
 import './navigation.html.twig';
 import './navigation.scss';
 
-import { getMode, menuFocus, subMenuFocus, menuArrows, subMenuArrows } from './navigation-accessibility';
+import { getMode, menuFocus, subMenuFocus, menuArrows, subMenuArrows, blurBackground } from './navigation-accessibility';
 
 export default function () {
   window.addEventListener('DOMContentLoaded', function () {
@@ -9,6 +9,10 @@ export default function () {
     if (!navigation) {
       return;
     }
+    // Get body
+    const body = document.body;
+    // Set initial window size
+    let mode = getMode();
 
     function setRole(menuWrappers, mode) {
       menuWrappers.forEach(menuWrapper => {
@@ -21,8 +25,6 @@ export default function () {
       });
     }
 
-    // Set initial window size
-    let mode = getMode();
     // Set appropriate roles
     const menuWrappers = document.querySelectorAll('.navigation__menu-wrapper');
     setRole(menuWrappers, mode);
@@ -30,6 +32,14 @@ export default function () {
     window.addEventListener('resize', () => {
       mode = getMode();
       setRole(menuWrappers, mode);
+    });
+
+    // Blur the background when clicking on the navigation menu
+    navigation.addEventListener('click', (e) => {
+      blurBackground(navigation);
+    });
+    navigation.addEventListener('focusout', (e) => {
+      blurBackground(navigation);
     });
 
     //Get top level menu
