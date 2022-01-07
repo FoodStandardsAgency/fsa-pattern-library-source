@@ -202,21 +202,23 @@ function subMenuArrows(group) {
 }
 
 function blurBackground(navigation) {
-  const backgroundBlur = navigation.querySelector('.navigation__background-blur');
   const mode = getMode();
-  const body = document.body;
-  const html = document.documentElement;
-  // Height of page
-  const height = Math.max( body.scrollHeight, body.offsetHeight,
-      html.clientHeight, html.scrollHeight, html.offsetHeight );
-  // Navigation distance from top
-  const distanceFromTop = window.pageYOffset + navigation.getBoundingClientRect().top;
-  const navHeight = navigation.offsetHeight;
-  if (navigation.querySelector('.navigation__submenu--expanded') && (mode == 'desktop')) {
-    backgroundBlur.classList.add('navigation__background-blur--blurred')
-    backgroundBlur.style.height = (height - distanceFromTop - navHeight) + 'px';
-  } else {
-    backgroundBlur.classList.remove('navigation__background-blur--blurred')
+  if (mode == 'desktop') {
+    const backgroundBlur = navigation.querySelector('.navigation__background-blur');
+    const body = document.body;
+    const html = document.documentElement;
+    // Height of page
+    const height = Math.max( body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
+    // Navigation distance from top
+    const distanceFromTop = window.pageYOffset + navigation.getBoundingClientRect().top;
+    const navHeight = navigation.offsetHeight;
+    if (navigation.querySelector('.navigation__submenu--expanded')) {
+      backgroundBlur.classList.add('navigation__background-blur--blurred')
+      backgroundBlur.style.height = (height - distanceFromTop - navHeight) + 'px';
+    } else {
+      backgroundBlur.classList.remove('navigation__background-blur--blurred');
+    }
   }
 }
 

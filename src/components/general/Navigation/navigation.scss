@@ -1,6 +1,7 @@
 @import "src/lib.scss";
 
 .navigation {
+  position: relative;
   z-index: 100;
   background-color: var(--fsa__purple-hover);
   border-bottom: 3px solid var(--fsa-primary_mid-green);
