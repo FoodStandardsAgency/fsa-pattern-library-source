@@ -1,13 +1,13 @@
 @import "src/lib.scss";
 
 .navigation {
-  position: relative;
   z-index: 100;
   background-color: var(--fsa__purple-hover);
   border-bottom: 3px solid var(--fsa-primary_mid-green);
   @media screen and (min-width: $fsa-lg) {
     height: 3.438rem;
     border: none;
+    position: relative;
   }
   &__container {
     @include grid-container;
