@@ -2,7 +2,7 @@ import helpSecondaryMenu from './helpSecondaryMenu.html.twig';
 import './helpSecondaryMenu.scss';
 
 export default {
-  title: 'Components/Help/Secondary Menu',
+  title: 'Components/Contact/Secondary Menu',
   parameters: {
     layout: 'fullscreen',
   },

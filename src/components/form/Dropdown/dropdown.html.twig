@@ -1,0 +1,17 @@
+{% set spaceless_name = name|replace({" ": ""})|lower %}
+{% set id = "dropdown__description--" ~ spaceless_name %}
+<div id="{{ fieldset_id is defined ? fieldset_id : ""}}" class="dropdown{{ error ? " dropdown--error" : "" }}" aria-describedby={{ description is defined ? id : "" }}>
+  {% if title is defined %}
+    <label for={{ id }} class="dropdown__label">
+      {{ title }}<span class="dropdown__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
+    </label>
+  {% endif %}
+  {% if description is defined and description is not empty %}
+    <p class="dropdown__description">{{ description }}</p>
+  {% endif %}
+  <select name="sort" id={{ id }} class="dropdown__select">
+    {% for option in options %}
+      <option value="{{ option.value|lower }}" class="dropdown__option" {{ option.value|lower == default|lower ? "selected" : "" }}>{{ option.text }}</option>
+    {% endfor %}
+  </select>
+</div>

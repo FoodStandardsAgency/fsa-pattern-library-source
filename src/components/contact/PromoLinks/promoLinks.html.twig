@@ -1,0 +1,18 @@
+<section class="contact-promo">
+  {% for link in links %}
+    <a href="{{ link.href }}" class="contact-promo__card">
+      <div class="contact-promo__wrapper">
+        <div class="contact-promo__icon" aria-hidden="true">
+          {{ link.svg }}
+        </div>
+        <div class="contact-promo__text">
+          <header class="contact-promo__header">
+            <h3 class="contact-promo__title">{{ link.title }}</h3>
+          </header>
+          <p class="contact-promo__description">{{ link.description }}</p>
+        </div>
+      </div>
+      <div class="contact-promo__arrow" aria-hidden="true"></div>
+    </a>
+  {% endfor %}
+</section>
