@@ -1,5 +1,7 @@
 @import "src/lib.scss";
 
+$nav-height: 3.438rem;
+
 .navigation {
   z-index: 100;
   background-color: var(--fsa__purple-hover);
@@ -359,6 +361,7 @@
       display: block;
       @media screen and (min-width: $fsa-lg) {
         position: absolute;
+        left: 0;
         left: 0;
         right: 0;
         top: $nav-height;
