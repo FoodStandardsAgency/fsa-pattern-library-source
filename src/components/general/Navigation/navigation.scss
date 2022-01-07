@@ -5,7 +5,7 @@
   background-color: var(--fsa__purple-hover);
   border-bottom: 3px solid var(--fsa-primary_mid-green);
   @media screen and (min-width: $fsa-lg) {
-    height: 3.438rem;
+    height: $nav-height;
     border: none;
     position: relative;
   }
@@ -37,7 +37,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: 3.438rem;
+      top: $nav-height;
       background-color: var(--fsa-primary_black);
       opacity: 0.4;
       overflow: hidden;
@@ -361,7 +361,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 3.438rem;
+        top: $nav-height;
         background-color: var(--fsa-primary_white);
         padding: 0 2rem 2rem 2rem;
         display: flex;
