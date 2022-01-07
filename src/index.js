@@ -47,6 +47,7 @@ import './components/landing/ServiceLinks/serviceLinks';
 
 /* Contact Components */
 import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';
+import './components/contact/PromoLinks/promoLinks';
 
 /* Article Components */
 import './components/article/TableOfContents/tableOfContents';
