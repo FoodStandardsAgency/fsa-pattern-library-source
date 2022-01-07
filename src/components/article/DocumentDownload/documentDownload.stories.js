@@ -3,7 +3,7 @@ import multipleDocumentDownload from './multipleDocumentDownload.html.twig';
 import './documentDownload.scss';
 
 export default {
-  title: 'Components/General/Document Download',
+  title: 'Components/Article/Document Download',
 };
 
 const Template = (args) => documentDownload(args);

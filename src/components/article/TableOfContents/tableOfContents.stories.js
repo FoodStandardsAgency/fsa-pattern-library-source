@@ -2,7 +2,7 @@ import tableOfContents from './tableOfContents.html.twig';
 import './tableOfContents.scss';
 
 export default {
-  title: 'Components/General/Table of Contents',
+  title: 'Components/Article/Table of Contents',
 };
 
 export const TableOfContents = (args) => tableOfContents(args);

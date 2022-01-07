@@ -8,12 +8,10 @@ import './components/general/Button/button';
 import './components/general/Header/header';
 import './components/general/Hero/hero';
 import './components/general/Link/link';
-import './components/general/DocumentDownload/documentDownload';
 import './components/general/Footer/footer';
 import navigation from './components/general/Navigation/navigation';
 import './components/general/Feedback/feedback';
 import './components/general/CookieBanner/cookieBanner';
-import './components/general/TableOfContents/tableOfContents';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
@@ -49,6 +47,10 @@ import './components/landing/ServiceLinks/serviceLinks';
 
 /* Contact Components */
 import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';
+
+/* Article Components */
+import './components/article/TableOfContents/tableOfContents';
+import './components/article/DocumentDownload/documentDownload';
 
 /* Layout Components */
 import './layout/formLayout/formLayout';
