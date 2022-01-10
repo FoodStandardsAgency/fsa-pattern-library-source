@@ -3,9 +3,7 @@ import './header.scss';
 import 'element-closest-polyfill';
 
 export default function () {
-  console.log('I am the header');
-
-  window.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('DOMContentLoaded', function () {
     let mode = window.innerWidth < 1024 ? 'mobile' : 'desktop';
     window.addEventListener('resize', () => {
       mode = window.innerWidth < 1024 ? 'mobile' : 'desktop';
