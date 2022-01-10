@@ -6,12 +6,12 @@
     </div>
     <h4 class="search-filters__title">{{ title }}</h4>
     {% for filter in checkbox_filters %}
-      {% set spaceless_title = filter.title|replace({" ": ""})|lower %}
+      {% set spaceless_title = filter.title|replace({" ": "-"})|lower %}
       {% set description_id = "accordion__description--" ~ spaceless_title %}
       {% set fields_id = "accordion__fields--" ~ spaceless_title %}
       <fieldset class="accordion {{ filter.fields is empty or filter.fields is not defined ? " accordion--hidden" : " " }}" aria-describedby="{{ description_id }}" data-name="{{ filter.name }}">
         <legend class="accordion__legend">
-          <button class="accordion__button {{ filter.open ? " accordion__button--expanded" : " "}}" aria-expanded={{ filter.open ? "true" : "false"}} aria-controls={{ fields_id }}>
+          <button class="accordion__button {{ filter.open ? " accordion__button--expanded" : " "}}" aria-expanded={{ filter.open ? "true" : "false"}} aria-controls={{ fields_id }} data-fsa-at="filters-header-{{spaceless_title}}">
             <span class="accordion__title-text">{{ filter.title }}</span>
           </button>
         </legend>
