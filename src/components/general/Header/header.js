@@ -3,13 +3,7 @@ import './header.scss';
 import 'element-closest-polyfill';
 
 export default function () {
-  let DOMContentFirstLoad = true;
-
-  window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
+    window.addEventListener('DOMContentLoaded', function () {
     let mode = window.innerWidth < 1024 ? 'mobile' : 'desktop';
     window.addEventListener('resize', () => {
       mode = window.innerWidth < 1024 ? 'mobile' : 'desktop';
@@ -45,5 +39,5 @@ export default function () {
       const header = menuButton.closest('.header');
       header.classList.toggle('header--expanded');
     }
-  });
+  }, { once: true });
 }
