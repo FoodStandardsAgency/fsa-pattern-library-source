@@ -1,15 +1,15 @@
 @import "src/lib.scss";
 
 .multistep-function {
-   margin-top: 2rem;
+  margin-top: 2rem;
 
-   &__container {
+  &__container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-   }
+  }
 
-   &__previous {
+  &__previous {
       @include link;
       padding: 0.5rem 0;
       background-image: url('./previous-arrow.svg');
@@ -21,7 +21,7 @@
       @media screen and (min-width: $fsa-xs) {
         margin-left: 0;
       }
-   }
+  }
 }
 .button {
   margin-left: auto;
