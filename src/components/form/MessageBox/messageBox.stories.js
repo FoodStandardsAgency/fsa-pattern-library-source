@@ -8,7 +8,6 @@ export default {
     layout: "centered",
     controls: {
       disabled: false,
-
     }
   }
 };
