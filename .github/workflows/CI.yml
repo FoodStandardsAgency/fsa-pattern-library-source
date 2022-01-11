@@ -57,6 +57,6 @@ jobs:
         with:
           source_file: ${{ env.BRANCH }}
           destination_repo: 'FoodStandardsAgency/fsa-pattern-library'
-          destination_branch: ${{ env.BRANCH }}
+          destination_branch: main
           user_email: 'peterb@deeson.co.uk'
           user_name: 'Peter Berryman'
