@@ -376,6 +376,23 @@ $mobileGutter: 1rem;
       .#{$input-type}__legend {
         color: var(--fsa-secondary_mid-red);
       }
+
+      .#{$input-type}__fields {
+        border: 4px solid var(--fsa-secondary_mid-red);
+        margin-top: 0.5rem;
+        padding: 0 0.5rem 0.5rem;
+        
+        @media screen and (min-width: $fsa-md) {
+          margin-left: -0.5rem;
+        }
+      }
+
+      .#{$input-type}__field {
+        padding-top: 1rem;
+        &:first-child {
+          padding-top: 0.5rem;
+        }
+      }
     }
   }
 }
@@ -403,7 +420,7 @@ $mobileGutter: 1rem;
 
   &:checked {
     background-color: var(--fsa-primary_dark-green);
-    background-image: url("./tick.svg");
+    background-image: url('./tick.svg');
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -455,7 +472,6 @@ $mobileGutter: 1rem;
   }
 }
 
-
 /* Used for Style guide pages */
 @mixin container {
   width: 100%;
@@ -493,5 +509,4 @@ $mobileGutter: 1rem;
     @include grid-cols(8, 12);
     @include cols-push(2, 12);
   }
-
 }
