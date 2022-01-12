@@ -25,7 +25,7 @@ import './components/search/Showing/showing';
 import './components/search/SortBy/sortBy';
 import './components/search/FiltersHeader/filtersHeader';
 import datepicker from './components/search/Datepicker/datepicker';
-import accordion form './components/search/Accordion/accordion';
+import accordion from './components/search/Accordion/accordion';
 
 /* Form Components */
 import './components/form/Checkbox/checkbox';
