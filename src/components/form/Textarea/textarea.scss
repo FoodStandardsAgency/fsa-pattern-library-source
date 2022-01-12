@@ -16,7 +16,7 @@
   }
 
   &__required {
-    @include small;
+    @include h5;
     font-weight: inherit;
     color: var(--fsa-primary_black);
   }

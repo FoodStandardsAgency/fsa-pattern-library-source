@@ -12,7 +12,7 @@
   }
 
   &__required {
-    @include small;
+    @include h5;
     margin-left: 1rem;
     color: var(--fsa-primary_black);
     font-weight: inherit;
