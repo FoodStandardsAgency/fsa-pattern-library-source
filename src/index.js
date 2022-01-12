@@ -9,7 +9,6 @@ import './components/general/Header/header';
 import './components/general/Hero/hero';
 import './components/general/Link/link';
 import './components/general/Footer/footer';
-import navigation from './components/general/Navigation/navigation';
 import './components/general/Feedback/feedback';
 import './components/general/CookieBanner/cookieBanner';
 import navigation from './components/general/Navigation/navigation';
