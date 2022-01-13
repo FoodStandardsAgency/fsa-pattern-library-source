@@ -40,7 +40,7 @@ jobs:
         run: echo "tags/${GITHUB_REF_NAME}"
 
       - name: Set env.TAG_BRANCH
-        run: echo "TAG_BRANCH=$(echo ${GITHUB_REF_NAME})" >> $GITHUB_ENV
+        run: echo "TAG_BRANCH=$(echo \"tags/\"${GITHUB_REF_NAME})" >> $GITHUB_ENV
 
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${GITHUB_REF_NAME}
