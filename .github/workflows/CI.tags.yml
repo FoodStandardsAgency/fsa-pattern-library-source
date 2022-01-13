@@ -39,6 +39,9 @@ jobs:
       - name: Display branch name
         run: echo "tags/${GITHUB_REF_NAME}"
 
+      - name: Set env.TAG_BRANCH
+        run: echo "TAG_BRANCH=$(echo ${GITHUB_REF_NAME})" >> $GITHUB_ENV
+
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${GITHUB_REF_NAME}
       - name: Push static assets
@@ -48,6 +51,6 @@ jobs:
         with:
           source_file: 'dist'
           destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
-          destination_branch_create: "tags/${GITHUB_REF_NAME}"
+          destination_branch_create: ${{ env.TAG_BRANCH }}
           user_email: 'peterb@deeson.co.uk'
           user_name: 'Peter Berryman'
