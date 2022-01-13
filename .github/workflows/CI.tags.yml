@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI.tags
 
 # Controls when the workflow will run
 on:
@@ -33,6 +33,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build the assets
         run: yarn build 
+
+      - name: Set env.BRANCH
+        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
 
       - name: Push static storybook
         uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
