@@ -34,16 +34,15 @@ jobs:
       - name: Build the assets
         run: yarn build 
 
-      - name: Set env.BRANCH
-        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
-
-      - name: Push static storybook
+      - name: Build static storybook
+        run: yarn build-storybook && mv storybook-static ${GITHUB_REF_NAME}
+      - name: Push static assets
         uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: ${{ env.BRANCH }}
-          destination_repo: 'FoodStandardsAgency/fsa-pattern-library'
+          source_file: 'dist'
+          destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
           destination_branch_create: 'tags/${GITHUB_REF_NAME}'
           user_email: 'peterb@deeson.co.uk'
           user_name: 'Peter Berryman'
