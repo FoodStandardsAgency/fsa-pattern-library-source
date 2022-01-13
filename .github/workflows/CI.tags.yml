@@ -37,7 +37,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Display branch name
-        run: echo 'tags/${GITHUB_REF_NAME}'
+        run: echo "tags/$(echo $GITHUB_REF_name)"
 
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${GITHUB_REF_NAME}
@@ -48,6 +48,6 @@ jobs:
         with:
           source_file: 'dist'
           destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
-          destination_branch_create: tags/${GITHUB_REF_NAME}
+          destination_branch_create: "tags/$(echo $GITHUB_REF_name)"
           user_email: 'peterb@deeson.co.uk'
           user_name: 'Peter Berryman'
