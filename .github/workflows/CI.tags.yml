@@ -44,6 +44,7 @@ jobs:
 
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${GITHUB_REF_NAME}
+
       - name: Push static assets
         uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
         env:
@@ -52,5 +53,16 @@ jobs:
           source_file: 'dist'
           destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
           destination_branch_create: ${{ env.TAG_BRANCH }}
+          user_email: 'peterb@deeson.co.uk'
+          user_name: 'Peter Berryman'
+
+      - name: Push static storybook
+        uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: ${{ env.BRANCH }}
+          destination_repo: 'FoodStandardsAgency/fsa-pattern-library'
+          destination_branch: main
           user_email: 'peterb@deeson.co.uk'
           user_name: 'Peter Berryman'

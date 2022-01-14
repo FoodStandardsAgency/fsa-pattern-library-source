@@ -39,20 +39,17 @@ jobs:
 
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${{ env.BRANCH }}
-      # Commenting this as we push to assets using tags.
-      # Otherwise the tag won't get created on distant repo 
-      # because no changes are detected
-      #- name: Push static assets
-      #  if: ${{ github.ref == 'refs/heads/main' }}
-      #  uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
-      #  env:
-      #    API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      #  with:
-      #    source_file: 'dist'
-      #    destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
-      #    destination_branch: ${{ env.BRANCH }}
-      #    user_email: 'peterb@deeson.co.uk'
-      #    user_name: 'Peter Berryman'
+      - name: Push static assets
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'dist'
+          destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
+          destination_branch: ${{ env.BRANCH }}
+          user_email: 'peterb@deeson.co.uk'
+           user_name: 'Peter Berryman'
       - name: Push static storybook
         uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
         env:
