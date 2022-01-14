@@ -49,7 +49,7 @@ jobs:
           destination_repo: 'FoodStandardsAgency/fsa-pattern-library-assets'
           destination_branch: ${{ env.BRANCH }}
           user_email: 'peterb@deeson.co.uk'
-           user_name: 'Peter Berryman'
+          user_name: 'Peter Berryman'
       - name: Push static storybook
         uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
         env:
