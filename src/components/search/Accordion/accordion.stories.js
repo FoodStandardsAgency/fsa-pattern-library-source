@@ -1,5 +1,3 @@
-import generateDatepickerContent from '../../../helpers/generateDatepickerContent';
-
 import accordion from './accordion.html.twig';
 import './accordion.scss';
 

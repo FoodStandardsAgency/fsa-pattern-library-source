@@ -1,5 +1,3 @@
-import generateDatepickerContent from '../../../helpers/generateDatepickerContent';
-
 import filtersHeader from './filtersHeader.html.twig';
 import './filtersHeader.scss';
 import filtersHeaderJS from './filtersHeader';

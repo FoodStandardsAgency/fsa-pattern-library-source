@@ -1,5 +1,3 @@
-import generateDatepickerContent from '../../../helpers/generateDatepickerContent';
-
 import datepicker from './datepicker.html.twig';
 import './datepicker.scss';
 
