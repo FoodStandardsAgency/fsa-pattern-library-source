@@ -1,0 +1,37 @@
+{% set spaceless_title = title|replace({" ": ""})|lower %}
+{% set description_id = "accordion__description--" ~ spaceless_title %}
+{% set fields_id = "accordion__fields--" ~ spaceless_title %}
+<fieldset class="accordion{{ fields is empty or fields is not defined ? " accordion--hidden" : "" }}"
+          aria-describedby="{{ description_id }}" data-name="{{ name }}">
+  <legend class="accordion__legend">
+    <button class="accordion__button{{ open ? " accordion__button--expanded" : "" }}"
+            aria-expanded={{ open ? "true" : "false" }} aria-controls={{ fields_id }}>
+      <span class="accordion__title-text">{{ title }}</span>
+    </button>
+  </legend>
+  <p class="accordion__description" id={{ description_id }} data-selected={{ selected }}></p>
+  <div class="accordion__fields{{ open ? " accordion__fields--active" : "" }}" id={{ fields_id }}>
+    {% for field in fields %}
+      {% if field.type == 'datepicker' %}
+        <div class="accordion__field accordion__field--datepicker">
+          {% include "../../Datepicker/datepicker.html.twig" with {
+            id.field.id,
+            type: field.dateType,
+            applyLabel: field.applyLabel,
+            applyLinks: field.applyLink,
+            label: field.label,
+            minimumSelection: field.minimumSelection,
+            invalidDate: field.invalidDate,
+          } %}
+        </div>
+      {% elseif field.type == 'collapsible_checkbox' %}
+        {% if field.results > 0 %}
+          <div class="accordion__field accordion__field--checkbox">
+            <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ name ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked }} data-fsa-at="filters-add-{{ field.id }}">
+            <label class="accordion__label" for="{{ field.id }}">{{ field.label }} ({{ field.results }})</label>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</fieldset>

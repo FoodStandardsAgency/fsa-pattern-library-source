@@ -3,14 +3,8 @@ import './react/filtersHeader.html.twig';
 import './filtersHeader.scss';
 
 export default function () {
-  let DOMContentFirstLoad = true;
 
   window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
-
     const openButton = document.querySelector('.search-filters__button');
     const returnButton = document.querySelector('.search-filters__return');
     const contentDiv = document.querySelector('.search-filters__content');
@@ -78,5 +72,5 @@ export default function () {
       //Use event delegation, because the last focusable element will change as filters change.
       contentDiv.addEventListener('keydown', focusFirstItem);
     }
-  });
+  }, { once: true });
 }

@@ -5,13 +5,12 @@
       <button class="search-filters__return">{{ link_text }}</button>
     </div>
     <h2 class="search-filters__title">{{ title }}</h2>
-    {% for filter in checkbox_filters %}
-      {% include "@components/components/search/CollapsibleCheckbox/collapsibleCheckbox.html.twig" with {
-        title: filter.title,
-        name: filter.name,
-        fields: filter.fields,
-        open: filter.open,
-        selected: filter.selected,
+    {% for accordion in accordions %}
+      {% include "@components/components/search/Accordion/accordion.html.twig" with {
+        title: accordion.title,
+        name: accordion.name,
+        fields: accordion.fields,
+        selected: accordion.selected,
       } %}
     {% endfor %}
   </div>
