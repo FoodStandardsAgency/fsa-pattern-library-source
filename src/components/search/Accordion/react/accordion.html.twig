@@ -14,7 +14,7 @@
     {% for field in fields %}
       {% if field.type == 'datepicker' %}
         <div class="accordion__field accordion__field--datepicker">
-          {% include "@components/components/search/Datepicker/datepicker.html.twig" with {
+          {% include "../../Datepicker/datepicker.html.twig" with {
             id.field.id,
             type: field.dateType,
             applyLabel: field.applyLabel,
@@ -23,7 +23,7 @@
             minimumSelection: field.minimumSelection,
             invalidDate: field.invalidDate,
           } %}
-          </div>
+        </div>
       {% elseif field.type == 'collapsible_checkbox' %}
         {% if field.results > 0 %}
           <div class="accordion__field accordion__field--checkbox">

@@ -1118,34 +1118,31 @@
       },
       {
         title: 'Date',
-        name: 'date_select',
+        name:'date_select',
         fields: [
         {
           type: 'datepicker',
           dateType: 'From',
+          id: 'from',
           label: 'Updated from',
           applyLabel: 'Apply date',
           applyLink: '#',
-          selects: [
-          { id: 'from_day', label: 'Day', accessibleLabel: 'Select a day', options: days },
-          { id: 'from_month', label: 'Month', accessibleLabel: 'Select a month', options: months },
-          { id: 'from_year', label: 'Year', accessibleLabel: 'Select a year', options: years },
-        ],
+          minimumSelection: 'Please select a year as a minimum, the day and month are optional.',
+          invalidDate: 'Please select a valid date combination.',
         },
         {
           type: 'datepicker',
           dateType: 'To',
+          id: 'to',
           label: 'Updated to',
           applyLabel: 'Apply date',
           applyLink: '#',
-          selects: [
-          { id: 'to_day', label: 'Day', accessibleLabel: 'Select a day', options: days },
-          { id: 'to_month', label: 'Month', accessibleLabel: 'Select a month', options: months },
-          { id: 'to_year', label: 'Year', accessibleLabel: 'Select a year', options: years },
-        ],
+          minimumSelection: 'Please select a year as a minimum, the day and month are optional.',
+          invalidDate: 'Please select a valid date combination.',
         },
       ],
         open: true,
+        selected: 'selected',
       },
     ],
   } %}

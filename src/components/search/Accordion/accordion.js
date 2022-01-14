@@ -1,14 +1,10 @@
 import './accordion.html.twig';
+import './react/accordion.html.twig';
 import './accordion.scss';
 import 'element-closest-polyfill';
 
 export default function () {
-  let DOMContentFirstLoad = true;
   window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
 
     const accordions = document.querySelectorAll('.accordion');
     if (!accordions) {
@@ -102,7 +98,6 @@ export default function () {
       if (keyCode === 35) {
         e.preventDefault();
         buttons[buttons.length - 1].focus();
-        return;
       }
     }
 
@@ -125,5 +120,5 @@ export default function () {
       //Add keyboard control
       button.addEventListener('keydown', moveFocus);
     });
-  });
+  }, { once: true });
 }
