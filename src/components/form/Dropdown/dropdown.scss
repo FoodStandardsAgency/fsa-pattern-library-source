@@ -36,6 +36,7 @@
     background: var(--fsa_tint);
     border: 1px solid var(--fsa-primary_black);
     border-radius: 0;
+    max-width: 100%;
 
     /* Add customised arrow */
     appearance: none;
@@ -46,7 +47,7 @@
     }
     background-image: url("./arrow-down.svg");
     background-repeat: no-repeat;
-    background-position: 90% center;
+    background-position: calc(100% - 1rem) center;
 
     &:focus {
       box-shadow: inset 0 0 0px 2px var(--fsa-primary_black);
