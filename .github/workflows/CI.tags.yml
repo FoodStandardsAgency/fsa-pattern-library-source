@@ -61,7 +61,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: ${{ GITHUB_REF_NAME }}
+          source_file: ${{ github.ref_name }}
           destination_repo: 'FoodStandardsAgency/fsa-pattern-library'
           destination_branch: main
           user_email: 'peterb@deeson.co.uk'
