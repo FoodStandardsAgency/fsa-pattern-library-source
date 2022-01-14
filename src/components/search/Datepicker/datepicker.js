@@ -24,7 +24,7 @@ export default function () {
     }
 
     function validateDate(day, month, year, datepicker, errorContainer) {
-      const shortMonths = [9, 4, 5, 11];
+      const shortMonths = [4, 6, 9, 11];
       if (day === 31 && shortMonths.includes(month)) {
         errorContainer.classList.add('datepicker__error-message--visible')
         return false;

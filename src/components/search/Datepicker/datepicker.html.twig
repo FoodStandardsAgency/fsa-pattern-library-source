@@ -35,7 +35,7 @@
       <select class="datepicker__select__button" name="Day" id="{{ type|lower }} day">
         <option value="none" disabled selected></option>
         {% for day in days %}
-          <option value="{{ loop.index}}" data-option-value="{{ day }}">{{ day }}</option>
+          <option value="{{ loop.index }}" data-option-value="{{ day }}">{{ day }}</option>
         {% endfor %}
       </select>
     </div>
