@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .accordion {
   border: none;
@@ -41,7 +41,7 @@
     }
 
     &::after {
-      content: url('./arrow.svg');
+      content: url("./svg/arrow.svg");
       transform: none;
     }
 

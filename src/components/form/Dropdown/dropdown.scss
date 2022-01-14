@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .dropdown {
   margin-top: 2rem;
@@ -44,7 +44,7 @@
     &::-ms-expand {
       display: none;
     }
-    background-image: url("./arrow-down.svg");
+    background-image: url("./svg/arrow-down.svg");
     background-repeat: no-repeat;
     background-position: 90% center;
 

@@ -1,39 +1,38 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 @mixin prefix-svg($name) {
   &::before {
-    content: url('./#{$name}-green.svg');
+    content: url("./svg/#{$name}/#{$name}-green.svg");
   }
 
   &:hover::before {
-    content: url('./#{$name}-dark-green.svg');
+    content: url("./svg/#{$name}/#{$name}-dark-green.svg");
   }
 
   &:focus::before {
-    content: url('./#{$name}-black.svg');
+    content: url("./svg/#{$name}/#{$name}-black.svg");
   }
 }
 
 @mixin prefix-svg-mobile($name) {
   &::before {
-    content: url('./#{$name}-white.svg');
+    content: url("./svg/#{$name}/#{$name}-white.svg");
     height: 1rem;
     width: 1rem;
   }
 
   &:hover::before {
-    content: url('./#{$name}-white.svg');
+    content: url("./svg/#{$name}/#{$name}-white.svg");
     height: 1rem;
     width: 1rem;
   }
 
   &:focus::before {
-    content: url('./#{$name}-black.svg');
+    content: url("./svg/#{$name}/#{$name}-black.svg");
     height: 1rem;
     width: 1rem;
   }
 }
-
 
 .header {
   display: flex;
@@ -78,7 +77,6 @@
         display: block;
       }
     }
-
   }
 
   &__languages-list {
@@ -98,7 +96,7 @@
   &__language {
     display: inline-block;
     &:first-child::after {
-      content: '|';
+      content: "|";
       margin: 0 0.25rem;
     }
   }
@@ -127,7 +125,7 @@
       position: relative;
       color: var(--fsa-primary_black);
       &::before {
-        content: '';
+        content: "";
         width: 100%;
         height: calc(100% + 0.75rem);
         top: -0.4rem;
@@ -170,7 +168,7 @@
 
   &__logo:focus {
     box-shadow: 0 0 0px 0.2rem var(--fsa-primary_black),
-    0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
+      0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 
@@ -182,11 +180,11 @@
     background-size: contain;
 
     &--english {
-      background-image: url('./logo-en.svg');
+      background-image: url("./svg/logo/logo-en.svg");
     }
 
     &--welsh {
-      background-image: url('./logo-cy.svg');
+      background-image: url("./svg/logo/logo-cy.svg");
     }
 
     @media screen and (min-width: $fsa-lg) {
@@ -260,7 +258,7 @@
     @media screen and (min-width: $fsa-xl) {
       margin-top: 0rem;
     }
-    .header__links-wrapper{
+    .header__links-wrapper {
       flex-wrap: wrap;
     }
     .header__links-item:first-child {
@@ -292,23 +290,23 @@
     }
 
     &--contact {
-      @include prefix-svg-mobile('contact');
+      @include prefix-svg-mobile("contact");
       @media screen and (min-width: $fsa-lg) {
-        @include prefix-svg('contact');
+        @include prefix-svg("contact");
       }
     }
 
     &--report {
-      @include prefix-svg-mobile('report');
+      @include prefix-svg-mobile("report");
       @media screen and (min-width: $fsa-lg) {
-        @include prefix-svg('report');
+        @include prefix-svg("report");
       }
     }
 
     &--ratings {
-      @include prefix-svg-mobile('search');
+      @include prefix-svg-mobile("search");
       @media screen and (min-width: $fsa-lg) {
-        @include prefix-svg('search');
+        @include prefix-svg("search");
       }
       white-space: nowrap;
     }
@@ -319,7 +317,7 @@
       position: relative;
       color: var(--fsa-primary_black);
       &::after {
-        content: '';
+        content: "";
         width: 100%;
         height: calc(100% + 0.5rem);
         position: absolute;
@@ -362,7 +360,7 @@
       &:focus {
         outline: none;
         box-shadow: 0 0 0px 0.2rem var(--fsa-primary_black),
-        0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
+          0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
       }
     }
 
@@ -405,7 +403,7 @@
   }
 
   &__search-svg {
-    background-image: url('./search-green.svg');
+    background-image: url("./svg/search/search-green.svg");
     background-repeat: no-repeat;
     background-size: contain;
     height: 1.75rem;
@@ -431,7 +429,7 @@
     &:focus {
       outline: none;
       box-shadow: 0 0 0px 0.2rem var(--fsa-primary_black),
-      0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
+        0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
     }
 
     @media screen and (min-width: $fsa-lg) {
@@ -452,7 +450,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: calc(50% - 6.5px);
       width: 19px;
@@ -489,7 +487,7 @@
         &:hover {
           background-color: var(--fsa-primary_dark-green);
           .header__search-svg {
-            background-image: url('./search-white.svg');
+            background-image: url("./svg/search/search-white.svg");
           }
         }
       }
@@ -528,11 +526,11 @@
 
       .header__logo-svg {
         &--english {
-          background-image: url('./logo-en-white.svg');
+          background-image: url("./svg/logo/logo-en-white.svg");
         }
 
         &--welsh {
-          background-image: url('./logo-cy-white.svg');
+          background-image: url("./svg/logo/logo-cy-white.svg");
         }
       }
       .header__navigation {

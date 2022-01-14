@@ -16,7 +16,7 @@
 
       &:after {
         content: "";
-        background-image: url("./dot.svg");
+        background-image: url("./svg/dot.svg");
         background-repeat: repeat-x;
         background-size: 25px 25px;
         width: 12rem;
@@ -85,7 +85,6 @@
         }
       }
     }
-
   }
 
   &__svg {
@@ -112,7 +111,6 @@
         width: 2.8rem;
       }
     }
-
   }
 
   &__link {
@@ -121,5 +119,4 @@
     text-decoration: none;
     text-align: center;
   }
-
 }

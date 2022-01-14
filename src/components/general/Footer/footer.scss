@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .footer {
   background-color: var(--fsa__purple-hover);
@@ -72,12 +72,12 @@
       margin-bottom: -0.25rem;
 
       &::after {
-        background-image: url('./external-black.svg');
+        background-image: url("./svg/external-black.svg");
       }
     }
 
     &::after {
-      background-image: url('./external-white.svg');
+      background-image: url("./svg/external-white.svg");
     }
 
     @media screen and (min-width: $fsa-lg) {

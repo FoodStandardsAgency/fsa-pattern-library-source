@@ -4,23 +4,23 @@
   margin-top: 2rem;
 
   &__container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__previous {
-      @include link;
-      padding: 0.5rem 0;
-      background-image: url('./previous-arrow.svg');
-      background-position: left 0 top 50%;
-      background-size: 1.6rem 1rem;
-      background-repeat: no-repeat;
-      padding-left: 2rem;
+    @include link;
+    padding: 0.5rem 0;
+    background-image: url("./svg/previous-arrow.svg");
+    background-position: left 0 top 50%;
+    background-size: 1.6rem 1rem;
+    background-repeat: no-repeat;
+    padding-left: 2rem;
 
-      @media screen and (min-width: $fsa-xs) {
-        margin-left: 0;
-      }
+    @media screen and (min-width: $fsa-xs) {
+      margin-left: 0;
+    }
   }
 }
 .button {

@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .help-secondary-menu {
   margin: 3rem auto 0;
@@ -94,13 +94,12 @@
         }
       }
 
-
       .help-secondary-menu__category {
         background-color: var(--fsa__purple-hover);
         color: var(--fsa-primary_white);
 
         &::after {
-          content: '';
+          content: "";
           border: 0.75rem solid transparent;
           position: absolute;
           bottom: 0;

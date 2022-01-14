@@ -1,22 +1,22 @@
-{% if backgroundColour == 'green' %}
+{% if background_colour == 'green' %}
   {% set theme = ' hero__theme--green' %}
-  {% set ctaType = 'secondary' %}
-{% elseif backgroundColour == 'blue' %}
+  {% set cta_type = 'secondary' %}
+{% elseif background_colour == 'blue' %}
   {% set theme = ' hero__theme--blue' %}
-  {% set ctaType = 'secondary' %}
-{% elseif backgroundColour == 'grey' %}
+  {% set cta_type = 'secondary' %}
+{% elseif background_colour == 'grey' %}
   {% set theme = ' hero__theme--grey' %}
-  {% set ctaType = 'primary' %}
+  {% set cta_type = 'primary' %}
 {% else %}
   {% set theme = ' hero__theme--green' %}
-  {% set ctaType = 'secondary' %}
+  {% set cta_type = 'secondary' %}
 {% endif %}
 
 {% if columns %}
   {% if columns == 2 %}
-    {% set serviceType = 'half' %}
+    {% set service_type = 'half' %}
   {% else %}
-    {% set serviceType = 'full' %}
+    {% set service_type = 'full' %}
   {% endif %}
 {% endif %}
 
@@ -28,7 +28,7 @@
   {% endif %}
 {% endif %}
 
-<section class="hero {{ type }}{{ serviceType ? ' hero--services-' ~ serviceType : '' }}">
+<section class="hero {{ type }}{{ service_type ? ' hero--services-' ~ service_type : '' }}">
   <div class="hero__mask-wrapper{{ theme }}">
     <div class="hero__container">
       <div class="hero__row">
@@ -42,7 +42,7 @@
                   {% for cta in ctas %}
                     <div class="hero__cta">
                       {% include '@components/components/general/Button/button.html.twig' with {
-                        type: ctaType,
+                        type: cta_type,
                         url: cta.link,
                         label: cta.name,
                         element: 'link',

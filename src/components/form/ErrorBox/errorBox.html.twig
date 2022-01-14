@@ -3,13 +3,11 @@
     <h3 class="error-box__title">{{ title }}</h3>
     {% for error in errorList %}
       <p class="error-box__label">{{ error.label }}</p>
-
       {% for field in error.fields %}
         <a href="#{{field.id}}" class="error-box__field link">
           {{ field.label }}
         </a>
       {% endfor %}
-
     {% endfor %}
   </div>
 </div>

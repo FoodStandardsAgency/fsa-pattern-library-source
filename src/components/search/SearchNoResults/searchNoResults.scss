@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .search-no-results {
   padding-bottom: 2rem;
@@ -7,7 +7,6 @@
     padding-left: 1rem;
     @media screen and (min-width: $fsa-xs) {
       padding-left: 3rem;
-
     }
   }
 

@@ -18,8 +18,8 @@ const Template = (args) => {
 export const MultistepFunction = Template.bind({});
 
 MultistepFunction.args = {
-  prevLink: '#',
-  prevLabel: 'Previous',
-  prevButton: true,
-  buttonLabel: 'Next'
+  prev_link: '#',
+  prev_label: 'Previous',
+  prev_button: true,
+  prev_button_label: 'Next'
 };

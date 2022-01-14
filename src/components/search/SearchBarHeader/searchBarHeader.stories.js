@@ -4,7 +4,7 @@ import './searchBarHeader.scss';
 export default {
   title: 'Components/Search/Search Bar Header',
   argTypes: {
-    headerText: {
+    header_text: {
       defaultValue: 'Search',
     },
   },
@@ -17,8 +17,8 @@ const Template = ({ label, ...args }) => {
 
 export const SearchBarHeader = Template.bind({});
 SearchBarHeader.args = {
-  headerText: 'Search',
-  searchLink: '#',
-  searchText: 'Search Food Standards Agency',
-  searchValue: '',
+  header_text: 'Search',
+  search_link: '#',
+  search_text: 'Search Food Standards Agency',
+  search_value: '',
 }

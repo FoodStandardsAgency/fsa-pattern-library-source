@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .latest-teaser {
   @include landing-margin-top;
@@ -19,7 +19,7 @@
   &__text-wrapper {
     @include landing-text-wrapper;
   }
-  
+
   &__title {
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@
 
     &:after {
       content: "";
-      background-image: url("./dot.svg");
+      background-image: url("./svg/dot.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 12rem;
@@ -51,8 +51,8 @@
     padding-left: 2.25rem;
     position: relative;
     &::before {
-      content: '';
-      background-image: url('./arrow-right.svg');
+      content: "";
+      background-image: url("./svg/arrow-right.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;
@@ -64,7 +64,7 @@
     }
     &:hover {
       &::before {
-        background-image: url('./arrow-hover.svg');
+        background-image: url("./svg/arrow-hover.svg");
       }
     }
   }
@@ -90,7 +90,7 @@
     }
 
     @media screen and (min-width: $fsa-xl) {
-        @include grid-cols(3);
+      @include grid-cols(3);
     }
   }
 
@@ -163,7 +163,6 @@
       @media screen and (min-width: $fsa-xs) {
         padding: 3px 0;
       }
-
     }
   }
 
@@ -174,8 +173,8 @@
     color: var(--fsa-primary_dark-grey);
     margin-top: auto;
     &::before {
-      content: '';
-      background-image: url('./arrow-right.svg');
+      content: "";
+      background-image: url("./svg/arrow-right.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;

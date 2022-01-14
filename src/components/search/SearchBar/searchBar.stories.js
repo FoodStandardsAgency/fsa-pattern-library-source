@@ -7,7 +7,7 @@ searchBarJs();
 export default {
   title: 'Components/Search/Search Bar',
   argTypes: {
-    searchText: {
+    search_text: {
       defaultValue: 'Search the food standards agency',
     },
   },
@@ -24,6 +24,6 @@ const Template = ({label, ...args}) => {
 
 export const SearchBar = Template.bind({});
 SearchBar.args = {
-  searchLink: '#',
-  searchText: 'Search Food Standards Agency',
+  search_link: '#',
+  search_text: 'Search Food Standards Agency',
 }

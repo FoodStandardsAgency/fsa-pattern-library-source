@@ -19,22 +19,22 @@ Tabs.args = {
   type: 'Account details',
   tabs: [
     {
-      isActive: true,
+      is_active: true,
       name: 'Food and allergy',
       link: '#',
     },
     {
-      isActive: false,
+      is_active: false,
       name: 'News and consultations',
       link: '#',
     },
     {
-      isActive: false,
+      is_active: false,
       name: 'Delivery options',
       link: '#',
     },
     {
-      isActive: false,
+      is_active: false,
       name: 'Account settings',
       link: '#',
     },

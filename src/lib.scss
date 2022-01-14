@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 
 :root {
   /* Primary Colours */
@@ -43,11 +43,11 @@
   --fsa__grey-hover: #d9d9d6;
 
   /* Typography */
-  --body-font: 'Open Sans', sans-serif;
+  --body-font: "Open Sans", sans-serif;
   --body-normal: 400;
   --body-bold: 600;
 
-  --heading-font: 'Fira Sans', sans-serif;
+  --heading-font: "Fira Sans", sans-serif;
   --heading-bold: 700;
 
   /* Grid */
@@ -381,7 +381,7 @@ $mobileGutter: 1rem;
         border: 4px solid var(--fsa-secondary_mid-red);
         margin: 0.5rem 0 0 -4px;
         padding: 0 0.5rem 0.5rem;
-        
+
         @media screen and (min-width: $fsa-md) {
           margin-left: calc(-0.5rem - 4px);
         }
@@ -420,7 +420,7 @@ $mobileGutter: 1rem;
 
   &:checked {
     background-color: var(--fsa-primary_dark-green);
-    background-image: url('./tick.svg');
+    background-image: url("./svg/tick.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -456,7 +456,7 @@ $mobileGutter: 1rem;
     border: none;
 
     &::before {
-      content: '';
+      content: "";
       width: 0.75rem;
       height: 0.75rem;
       border-radius: 50%;

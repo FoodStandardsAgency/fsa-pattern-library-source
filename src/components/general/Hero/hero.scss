@@ -11,17 +11,17 @@
     width: 100%;
     height: fit-content;
     overflow: visible;
-    mask: url("./hero.svg") no-repeat bottom;
+    mask: url("./svg/hero.svg") no-repeat bottom;
     mask-size: 200%, 100%;
     mask-repeat: no-repeat;
-    -webkit-mask: url("./hero.svg") no-repeat bottom;
+    -webkit-mask: url("./svg/hero.svg") no-repeat bottom;
     -webkit-mask-size: 200%, 100%;
     -webkit-mask-repeat: no-repeat;
     color: white;
     padding-bottom: 2rem;
     z-index: 1;
     @media screen and (min-width: $fsa-md) {
-      background-image: url("./pattern.svg");
+      background-image: url("./svg/pattern.svg");
       background-size: 150%;
       background-position: right top;
       padding-bottom: 2.2rem;
@@ -98,7 +98,7 @@
     margin: 2rem 0 0.625rem 0;
     &:after {
       content: "";
-      background-image: url("./dot-white.svg");
+      background-image: url("./svg/dot-white.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 101%;
@@ -242,7 +242,7 @@
       h1 {
         color: var(--fsa-primary_dark-green);
         &:after {
-          background-image: url("./dot-grey.svg");
+          background-image: url("./svg/dot-grey.svg");
         }
       }
     }
@@ -309,7 +309,7 @@
           margin-top: -7.5rem;
         }
         &--2-rows {
-          margin-top: -13.5rem;;
+          margin-top: -13.5rem;
         }
       }
     }

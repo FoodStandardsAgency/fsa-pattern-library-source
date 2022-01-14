@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .promo-group {
   @include landing-margin-top;
@@ -10,8 +10,8 @@
     margin: 0;
 
     &::after {
-      content: '';
-      background-image: url('./dot.svg');
+      content: "";
+      background-image: url("./svg/dot.svg");
       background-repeat: repeat-x;
       background-size: 1.5rem 0.5rem;
       width: 13rem;
@@ -35,7 +35,7 @@
   &__card-wrapper {
     padding: 0 1rem;
     @include grid-cols(4, 4);
-    margin-top: 1.25rem;  
+    margin-top: 1.25rem;
 
     @media screen and (min-width: $fsa-md) {
       margin-top: 2rem;
@@ -47,7 +47,7 @@
 
     @media screen and (min-width: $fsa-xl) {
       @include grid-cols(4);
-      padding: 0 1rem;;
+      padding: 0 1rem;
     }
   }
 
@@ -65,7 +65,7 @@
       padding-bottom: 3.25rem;
 
       &::after {
-        content: url('./arrow.svg');
+        content: url("./svg/arrow.svg");
         display: block;
         position: absolute;
         width: 1.75rem;
@@ -190,8 +190,8 @@
     }
 
     &::before {
-      content: '';
-      background-image: url('./arrow.svg');
+      content: "";
+      background-image: url("./svg/arrow.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;
@@ -207,7 +207,7 @@
       color: var(--fsa__link-green);
 
       &::before {
-        background-image: url('./arrow-hover.svg');
+        background-image: url("./svg/arrow-hover.svg");
       }
     }
   }
