@@ -144,6 +144,22 @@ $nav-height: 3.438rem;
                 }
               }
             }
+            &:focus-visible:hover {
+              color: var(--fsa-primary_white);
+              span {
+                &:nth-child(2) {
+                  svg {
+                    path {
+                      stroke: var(--fsa-primary_white);
+                      stroke-width: 2;
+                    }
+                  }
+                }
+                &:first-child {
+                  border-bottom: 0.25rem solid var(--fsa-primary_white);
+                }
+              }
+            }
 
             @media screen and (min-width: $fsa-xl) {
               padding: 0 1.5rem;
@@ -285,6 +301,16 @@ $nav-height: 3.438rem;
             span {
               &:first-child {
                 border-bottom: none;
+              }
+            }
+            &:focus-visible:hover {
+              border-bottom: 0.25rem solid var(--fsa-primary_black);
+              color: var(--fsa-primary_black);
+              background-color: var(--fsa-tertiary_light-yellow);
+              span {
+                &:first-child {
+                  border-bottom: none;
+                }
               }
             }
           }

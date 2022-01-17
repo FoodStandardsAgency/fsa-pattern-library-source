@@ -72,7 +72,7 @@ export default function () {
               day = selected !== 'none' ? parseInt(selected, 10) : null;
               break;
             case 'Month':
-              month = selected !== 'none' ? parseInt(selected, 10) - 1 : null;
+              month = selected !== 'none' ? parseInt(selected, 10): null;
               break;
             case 'Year':
               year = selected !== 'none' ? selected : null;
