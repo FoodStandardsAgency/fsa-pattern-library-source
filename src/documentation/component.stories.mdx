@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
 
-<Meta title="Documentation/1 - Introduction" />
+<Meta title="Documentation/3 - Component submission" />
 
 <style>{`
   .subheading {
@@ -104,16 +104,25 @@ import { Meta } from '@storybook/addon-docs';
   }
 `}</style>
 
-# Welcome to the Food Standards Agency Pattern Library
+# Submitting a new component
 
-## About
+Please refer to the Developer workflow page for more info on:
+- how to [install the project](?path=/story/documentation-2-developer-workflow--page#installation), 
+- what are the [coding standards](?path=/story/documentation-2-developer-workflow--page#general-coding-standards--naming-conventions), 
+- what are the [naming conventions](?path=/story/documentation-2-developer-workflow--page#general-coding-standards--naming-conventions),
+- what's the [folder structure](?path=/story/documentation-2-developer-workflow--page#workflow-summary),
+- what's the [workflow](?path=/story/documentation-2-developer-workflow--page#workflow-summary)...
 
-This style guide is intended to assist front-end developers and designers who work on food.gov.uk in the future. It aims to provide introductory information around the three following areas:
+and other useful information.
 
-- The front-end structure and tooling used throughout the site
-- The coding style and approaches to development
-- Visual examples of the components and colours used
+## Checklist before opening a PR
 
-Many of the components have been built in isolation, with CSS and JS tightly coupled with the HTML. Where this is the case, you can see the corresponding CSS and JS for that component by clicking on the respective tab. Where this is not the case, try inspecting the element in devtools to see where any styles have cascaded from.
-
-This style guide is best viewed at desktop resolutions (>1000px). Since the actual site is served by a Drupal backend, and this style guide is a static html file, some component functionalities (such as form submissions, links etc) are restricted.
+Before opening a PR, please make sure:
+- to import your scss and twig files in the javascript file. Without this, Webpack won't be able to compile them.
+- to import your newComponent in the index.js file.
+- your folder hierarchy follows the proper structure.
+- your code follows the coding standards and naming conventions defined.
+- your code has been tested as AA accessibility compliant to the WCAG 2.1 AA standard.
+- your code has been tested in all the browsers listed in the [GDS browser's list](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices), including IE11.
+- your code has been tested in all the different screensizes defined.
+- Provide a thorough description of your component, its usage with screenshots.
