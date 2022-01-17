@@ -15,32 +15,32 @@ export default {
     title: 'This is the services title',
     description:
       '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p><p>This is a description for the services section.</p>',
-    teaserLinkUrl: '#',
-    teaserLink: '',
+    teaser_link_url: '#',
+    teaser_link: '',
     cards: [
       { 
-        typeClass: 'news', 
+        type_class: 'news', 
         type: 'News', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
       },
       { 
-        typeClass: 'news', 
+        type_class: 'news', 
         type: 'News', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
       },
       { 
-        typeClass: 'alerts', 
+        type_class: 'alerts', 
         type: 'Allergy Alert', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
       },
       { 
-        typeClass: 'news', 
+        type_class: 'news', 
         type: 'News', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
@@ -48,7 +48,7 @@ export default {
       },
     ],
     ButtonUrl: '#',
-    ButtonLabel: 'More News and Alerts',
+    prev_button_label: 'More News and Alerts',
   };
 
   export const consultationsLatestTeaser = Template.bind({});
@@ -56,32 +56,32 @@ export default {
     title: 'This is the services title',
     description:
       '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p>',
-    teaserLinkUrl: '#',
-    teaserLink: 'More about consultations',
+    teaser_link_url: '#',
+    teaser_link: 'More about consultations',
     cards: [
       {
-        typeClass: 'consultations', 
+        type_class: 'consultations', 
         type: 'Consultations', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk. Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
       },
       {
-        typeClass: 'consultations', 
+        type_class: 'consultations', 
         type: 'Consultations', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
       },
       {
-        typeClass: 'consultations', 
+        type_class: 'consultations', 
         type: 'Consultations', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
         date: '5 November 2021'
       },
       {
-        typeClass: 'consultations', 
+        type_class: 'consultations', 
         type: 'Consultations', 
         url: '#', 
         title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
@@ -89,5 +89,5 @@ export default {
       },
     ],
     ButtonUrl: '#',
-    ButtonLabel: 'More Consultations',
+    prev_button_label: 'More Consultations',
   };

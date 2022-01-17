@@ -25,18 +25,16 @@ Normal.args = {
   caption: 'Enter your email address or username.',
   required: "",
   error: false,
-  errorMessage: 'Unrecognized username or password',
+  error_message: 'Unrecognized username or password',
   value: ''
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  name: 'email',
-  label: 'Email or username',
-  caption: 'Enter your email address or username.',
+  ...Normal.args,
   required: "required",
   error: true,
-  errorMessage: 'This information is required',
+  error_message: 'This information is required',
   value: ''
 };
 
@@ -47,7 +45,7 @@ Password.args = {
   caption: 'Enter your password.',
   required: "required",
   error: false,
-  errorMessage: 'Unrecognized password',
+  error_message: 'Unrecognized password',
   value: '',
   type: 'password'
 };
@@ -59,7 +57,7 @@ Phone.args = {
   caption: '',
   required: 'required',
   error: false,
-  errorMessage: '',
+  error_message: '',
   value: '',
   type: 'tel',
   prefix: '+44',

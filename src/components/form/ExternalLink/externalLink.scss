@@ -5,8 +5,8 @@
   padding-right: 1.25rem;
   position: relative;
   &::after {
-    content: '';
-    background-image: url('./external.svg');
+    content: "";
+    background-image: url("./assets/external.svg");
     display: inline-block;
     width: 0.85rem;
     height: 0.85rem;

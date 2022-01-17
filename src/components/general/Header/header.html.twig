@@ -38,10 +38,10 @@
             <div class="header__search-bar-wrapper">
               <div class="header__search-bar header__search-bar--full">
                 {% include "@components/components/search/SearchBar/searchBar.html.twig" with {
-                headerText: 'Search',
-                searchLink: search_link,
-                searchText: search_label,
-                searchValue: '',
+                header_text: 'Search',
+                search_link: search_link,
+                search_text: search_label,
+                search_value: '',
               } %}
               </div>
               <a class="header__search-bar header__search-bar--icon" href="{{ search_link }}">
@@ -76,8 +76,8 @@
       {% include '@components/components/general/Navigation/navigation.html.twig' with {
         id: navigation.id,
         label: navigation.label,
-        homeLink: navigation.homeLink,
-        homeLabel: navigation.homeLabel,
+        home_link: navigation.home_link,
+        home_label: navigation.home_label,
         links: navigation.links,
       } %}
     </div>

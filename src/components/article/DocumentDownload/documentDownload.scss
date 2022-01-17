@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .document-download {
   background-color: var(--fsa_tint);
@@ -16,7 +16,7 @@
   }
 
   &:before {
-    content: '';
+    content: "";
     height: calc(100% + 2px);
     width: 5px;
     position: absolute;
@@ -76,7 +76,7 @@
 
   &__link-wrapper {
     margin-left: 0.5rem;
-    
+
     @media screen and (min-width: $fsa-md) {
       margin-left: 1.5rem;
     }

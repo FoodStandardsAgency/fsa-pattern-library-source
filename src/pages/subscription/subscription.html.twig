@@ -1,7 +1,7 @@
 {% extends "../../layout/formLayout/formLayout.html.twig" %}
 {% block top %}
   {# Include templates for form components here #}
-  {% set breadcrumbItems = [
+  {% set breadcrumb_items = [
     {
       'text': 'Home',
       'url': '/'
@@ -16,35 +16,35 @@
     },
   ] %}
   {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
-    items: breadcrumbItems,
+    items: breadcrumb_items,
     expanded: false,
     subscription: {
-      isLoggedIn: false,
-      loggedOutLabel: 'Already have a subscription?',
-      loggedOutButtonLabel: 'Sign in',
-      loggedOutButtonLink: '#',
+      is_logged_in: false,
+      logged_out_label: 'Already have a subscription?',
+      logged_out_button_label: 'Sign in',
+      logged_out_button_link: '#',
     }
   } %}
 {% endblock %}
 {% block tabs %}
   {% set tabs = [
     {
-      isActive: false,
+      is_active: false,
       name: 'Food and allergy',
       link: '#',
     },
     {
-      isActive: false,
+      is_active: false,
       name: 'News and consultations',
       link: '#',
     },
     {
-      isActive: true,
+      is_active: true,
       name: 'Delivery options',
       link: '#',
     },
     {
-      isActive: false,
+      is_active: false,
       name: 'Account settings',
       link: '#',
     },

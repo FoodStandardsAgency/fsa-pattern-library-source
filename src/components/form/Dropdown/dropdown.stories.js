@@ -34,21 +34,7 @@ Normal.args = {
 
 export const Error = Template.bind({});
 Error.args = {
-  title: 'Delivery option',
-  description:
-    'Choose a delivery method from the dropdown list.',
-  options: [
-    {
-      'text': 'Email',
-      'value': 'email'
-    },
-    {
-      'text': 'SMS',
-      'value': 'sms'
-    }
-  ],
-  default: 'email',
-  name: 'delivery_method',
+  ...Normal.args,
   required: "required",
   error: true,
 };

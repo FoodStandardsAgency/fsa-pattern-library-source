@@ -1,7 +1,7 @@
 <div class="tabs" role="navigation" aria-label="{{ type }}">
   <ul class="tabs__list">
     {% for tab in tabs %}
-      {% if tab.isActive %}
+      {% if tab.is_active %}
         <li class="tabs__element tabs__element--active">
           {{ tab.name }}
         </li>

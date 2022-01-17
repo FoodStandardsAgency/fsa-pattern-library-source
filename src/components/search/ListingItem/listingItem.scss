@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .listing-item {
   margin-bottom: 1.5rem;
@@ -10,7 +10,6 @@
     @media screen and (min-width: $fsa-lg) {
       padding: 0 3rem 1.5rem 3rem;
     }
-
   }
 
   &__type {
@@ -21,7 +20,6 @@
 
     @media screen and (min-width: $fsa-md) {
       text-transform: uppercase;
-
     }
   }
 
@@ -53,15 +51,12 @@
         @media screen and (min-width: $fsa-xs) {
           padding: 3px 0;
         }
-
       }
-
     }
   }
 
   &__description {
     margin: 0.5rem 0;
-
   }
 
   &__date {

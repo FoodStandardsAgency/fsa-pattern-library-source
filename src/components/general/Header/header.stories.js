@@ -32,8 +32,8 @@ English.args = {
   navigation: {
     id: 'navigation',
     label: 'Main navigation',
-    homeLink: '#',
-    homeLabel: 'Home',
+    home_link: '#',
+    home_label: 'Home',
     links: [
       {
         link: {
@@ -44,8 +44,8 @@ English.args = {
         submenu: [
           {
             title: 'Latest updates',
-            readMoreLink: '#',
-            readMoreLabel: 'See more Latest Updates',
+            read_more_link: '#',
+            read_more_label: 'See more Latest Updates',
             links: [
               {
                 link: {
@@ -904,8 +904,8 @@ Welsh.args = {
   navigation: {
     id: 'navigation',
     label: 'Main navigation',
-    homeLink: '#',
-    homeLabel: 'Home',
+    home_link: '#',
+    home_label: 'Home',
     links: [
       {
         link: {
@@ -916,8 +916,8 @@ Welsh.args = {
         submenu: [
           {
             title: 'Latest updates',
-            readMoreLink: '#',
-            readMoreLabel: 'See more Latest Updates',
+            read_more_link: '#',
+            read_more_label: 'See more Latest Updates',
             links: [
               {
                 link: {

@@ -4,7 +4,7 @@ import './pagination.scss';
 export default {
   title: 'Components/Search/Pagination',
   argTypes: {
-    paginationType: {
+    pagination_type: {
       defaultValue: 'Search',
     },
   },
@@ -16,36 +16,36 @@ const Template = ({ label, ...args }) => {
 
 export const PaginationStart = Template.bind({});
 PaginationStart.args = {
-  paginationType: 'Search',
-  totalPages: 9,
-  currentPage: 1,
-  maxVisiblePages: 4,
-  firstLabel: "First",
-  previousLabel: "Previous",
-  nextLabel: "Next",
-  lastLabel: "Last",
+  pagination_type: 'Search',
+  total_pages: 9,
+  current_page: 1,
+  max_visible_pages: 4,
+  first_label: "First",
+  previous_label: "Previous",
+  next_label: "Next",
+  last_label: "Last",
 }
 
 export const PaginationMid = Template.bind({});
 PaginationMid.args = {
-  paginationType: 'Search',
-  totalPages: 16,
-  currentPage: 6,
-  maxVisiblePages: 4,
-  firstLabel: "First",
-  previousLabel: "Previous",
-  nextLabel: "Next",
-  lastLabel: "Last",
+  pagination_type: 'Search',
+  total_pages: 16,
+  current_page: 6,
+  max_visible_pages: 4,
+  first_label: "First",
+  previous_label: "Previous",
+  next_label: "Next",
+  last_label: "Last",
 }
 
 export const PaginationEnd = Template.bind({});
 PaginationEnd.args = {
-  paginationType: 'Search',
-  totalPages: 9,
-  currentPage: 9,
-  maxVisiblePages: 4,
-  firstLabel: "First",
-  previousLabel: "Previous",
-  nextLabel: "Next",
-  lastLabel: "Last",
+  pagination_type: 'Search',
+  total_pages: 9,
+  current_page: 9,
+  max_visible_pages: 4,
+  first_label: "First",
+  previous_label: "Previous",
+  next_label: "Next",
+  last_label: "Last",
 }

@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .sort {
   &__label {
@@ -26,7 +26,7 @@
     &::-ms-expand {
       display: none;
     }
-    background-image: url("./arrow-down.svg");
+    background-image: url("./assets/arrow-down.svg");
     background-repeat: no-repeat;
     background-position: 90% center;
 
