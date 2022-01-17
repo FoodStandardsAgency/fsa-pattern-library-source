@@ -102,10 +102,7 @@ import { Meta } from '@storybook/addon-docs';
     font-size: 12px;
     display: inline-block;
   }
-
-
 `}</style>
-
 
 # Developer Workflow
 ## Requirements
@@ -129,11 +126,34 @@ This is the workflow in place for this project:
 - Commit all of your changes to this branch,
 - Once done, create a PR in Github.
 
-## General coding standards
+## Folder hierarchy
 
-All the code should be indented using 2 white spaces.
+Every component is compartmentalised in its own section:
+- General: used for sitewide components like Header, Footer or Navigation.
+- Form: used for components specific to forms like Input fields, Checkboxes or Dropdowns.
+- Search: used for components specific to the search page, such as Search field, Filters or Pagination.
+- Contact, Landing and Article: used for components specific to these types of content/pages.
 
-Use snake_case for the variables in the twig templates.
+Your new component should sit under one of these categories. The folder structure should be as follows:
+```
+NewComponent
+- assets
+-- asset.svg
+- newComponent.html.twig
+- newComponent.js
+- newComponent.scss
+- newComponent.stories.js
+```
+
+The folder name should be in (upper) CamelCase and all the files in (lower) camelCase.
+All the assets should be SVGs and grouped in the `assets` folder.
+
+## General coding standards & naming conventions
+
+- All the code should be indented using 2 white spaces.
+- The Javascript variables should be named using `camelCase`.
+- The Twig variables and properties should be named using `snake_case`.
+- The CSS classes should be named following the `BEM` convention.
 
 ## JavaScript development
 
