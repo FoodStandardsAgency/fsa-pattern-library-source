@@ -126,19 +126,6 @@ $nav-height: 3.438rem;
             cursor: pointer;
             text-decoration: underline;
           }
-          &:focus-visible:hover {
-            color: var(--fsa-primary_white);
-            span {
-              &:nth-child(2) {
-                svg {
-                  path {
-                    stroke: var(--fsa-primary_white);
-                    stroke-width: 2;
-                  }
-                }
-              }
-            }
-          }
           &:focus:not(:focus-visible) {
             background-color: transparent;
           }
@@ -158,7 +145,16 @@ $nav-height: 3.438rem;
               }
             }
             &:focus-visible:hover {
+              color: var(--fsa-primary_white);
               span {
+                &:nth-child(2) {
+                  svg {
+                    path {
+                      stroke: var(--fsa-primary_white);
+                      stroke-width: 2;
+                    }
+                  }
+                }
                 &:first-child {
                   border-bottom: 0.25rem solid var(--fsa-primary_white);
                 }
