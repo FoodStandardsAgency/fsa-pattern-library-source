@@ -28,7 +28,7 @@
 
     &:after {
       content: "";
-      background-image: url("./svg/dot.svg");
+      background-image: url("./assets/dot.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 12rem;
@@ -116,7 +116,7 @@
 
     &::before {
       content: "";
-      background-image: url("./svg/arrow-right.svg");
+      background-image: url("./assets/arrow-right.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;
@@ -129,7 +129,7 @@
       text-decoration: underline;
       color: var(--fsa__link-green);
       &::before {
-        background-image: url("./svg/arrow-hover.svg");
+        background-image: url("./assets/arrow-hover.svg");
       }
     }
 

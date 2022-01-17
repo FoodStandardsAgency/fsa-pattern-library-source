@@ -10,21 +10,21 @@
     &--status {
       border-left: 0.25rem solid var(--fsa-primary_mid-green);
       p {
-        background-image: url("./svg/success.svg");
+        background-image: url("./assets/success.svg");
       }
     }
 
     &--error {
       border-left: 0.25rem solid var(--fsa-secondary_mid-red);
       p {
-        background-image: url("./svg/error.svg");
+        background-image: url("./assets/error.svg");
       }
     }
 
     &--warning {
       border-left: 0.25rem solid var(--fsa-secondary_mid-yellow);
       p {
-        background-image: url("./svg/warning.svg");
+        background-image: url("./assets/warning.svg");
       }
     }
   }

@@ -71,7 +71,7 @@
       &:after {
         content: "";
         height: 0.813rem;
-        background-image: url("./svg/arrow.svg");
+        background-image: url("./assets/arrow.svg");
         background-size: contain;
       }
       &:hover,
@@ -84,7 +84,7 @@
         &:after {
           content: "";
           height: 0.813rem;
-          background-image: url("./svg/arrow-hover.svg");
+          background-image: url("./assets/arrow-hover.svg");
           background-size: contain;
         }
       }
@@ -100,7 +100,7 @@
         &:before,
         &:after {
           color: var(--fsa-primary_black);
-          background-image: url("./svg/arrow-focus.svg");
+          background-image: url("./assets/arrow-focus.svg");
         }
       }
     }
