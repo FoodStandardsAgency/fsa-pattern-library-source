@@ -6,7 +6,7 @@ const updateParams = (name, value) => {
   const query = params.toString();
   const form = document.getElementsByClassName('search-bar');
   let pathName = currUrl.pathname;
-  if (form) {
+  if (form[0]) {
     pathName = form[0].getAttribute('action');
   }
   window.location.href = window.location.origin + pathName + (query != '' ? '?' + query : '');
