@@ -303,6 +303,16 @@ $nav-height: 3.438rem;
                 border-bottom: none;
               }
             }
+            &:focus-visible:hover {
+              border-bottom: 0.25rem solid var(--fsa-primary_black);
+              color: var(--fsa-primary_black);
+              background-color: var(--fsa-tertiary_light-yellow);
+              span {
+                &:first-child {
+                  border-bottom: none;
+                }
+              }
+            }
           }
           @media screen and (min-width: $fsa-lg) {
             padding: 0;
