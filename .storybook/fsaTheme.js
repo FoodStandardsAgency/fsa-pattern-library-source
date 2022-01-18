@@ -1,7 +1,7 @@
 // .storybook/fsaTheme.js
 
 import { create } from '@storybook/theming';
-import logo from '../src/components/general/Header/logo-en.svg';
+import logo from '../src/components/general/Header/assets/logo/logo-en.svg';
 
 export default create({
   base: 'light',

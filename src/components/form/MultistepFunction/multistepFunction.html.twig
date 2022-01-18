@@ -1,13 +1,13 @@
 <div class="multistep-function">
   <div class="multistep-function__container">
     
-    {% if prevButton %}
-      <a class="multistep-function__previous" href={{ prevLink }}>{{ prevLabel }}</a>
+    {% if prev_button %}
+      <a class="multistep-function__previous" href={{ prev_link }}>{{ prev_label }}</a>
     {% endif %}
 
     {% include '@components/components/general/Button/button.html.twig'  with { 
       type: 'primary',
-      label: buttonLabel,
+      label: prev_button_label,
       element: 'input'
     } %}
    

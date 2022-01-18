@@ -25,12 +25,12 @@ MessageBoxStatus.args = {
 
 export const MessageBoxError = Template.bind({});
 MessageBoxError.args = {
-  text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
+  ...MessageBoxStatus.args,
   type: 'error'
 };
 
 export const MessageBoxWarning = Template.bind({});
 MessageBoxWarning.args = {
-  text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
+  ...MessageBoxStatus.args,
   type: 'warning'
 };

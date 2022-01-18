@@ -1,4 +1,4 @@
-<div class="breadcrumb {{ expanded ? "expanded" : "collapsed" }} {{ subscription is defined ? (subscription.isLoggedIn ? "login" : "logout") : "full" }}">
+<div class="breadcrumb {{ expanded ? "expanded" : "collapsed" }} {{ subscription is defined ? (subscription.is_logged_in ? "login" : "logout") : "full" }}">
   <div class="breadcrumb__left">
     <p class="breadcrumb__label visually-hidden">Breadcrumb</p>
     <div class="breadcrumb__items">
@@ -18,17 +18,18 @@
   </div>
   {% if subscription is defined %}
     <div class="breadcrumb__right">
-      {% if subscription.isLoggedIn %}
-        <a href="{{ subscription.subscriptionLink }}" class="breadcrumb__link">{{ subscription.subscriptionLabel }}</a> |
-        <a href="{{ subscription.logOutLink }}" class="breadcrumb__link">{{ subscription.logOutLabel }}</a>
+      {% if subscription.is_logged_in %}
+        <a href="{{ subscription.subscription_link }}" class="breadcrumb__link">{{ subscription.subscription_label }}</a> |
+        <a href="{{ subscription.log_out_link }}" class="breadcrumb__link">{{ subscription.log_out_label }}</a>
       {% else %}
-        <span class="breadcrumb__label">{{ subscription.loggedOutLabel }}</span>
+        <span class="breadcrumb__label">{{ subscription.logged_out_label }}</span>
         {% include '@components/components/general/Button/button.html.twig' with { 
           type: 'primary',
-          label: subscription.loggedOutButtonLabel,
-          url: subscription.loggedOutButtonLink,
+          label: subscription.logged_out_button_label,
+          url: subscription.logged_out_button_link,
           is_anchor: true,
-          element: 'link' } %}
+          element: 'link' 
+        } %}
       {% endif %}
     </div>
   {% endif %}

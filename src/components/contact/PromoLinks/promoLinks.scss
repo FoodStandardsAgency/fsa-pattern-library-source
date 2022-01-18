@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .contact-promo {
   margin-top: 2rem;
@@ -51,6 +51,7 @@
     svg {
       height: 2.5rem;
       width: 2.5rem;
+      fill: white;
     }
 
     @media screen and (min-width: $fsa-lg) {
@@ -90,7 +91,7 @@
   }
 
   &__arrow {
-    background-image: url('./lg-arrow.svg');
+    background-image: url("./assets/lg-arrow.svg");
     min-width: 2.5rem;
     height: 2rem;
     background-repeat: no-repeat;

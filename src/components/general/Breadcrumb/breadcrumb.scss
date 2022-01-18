@@ -31,7 +31,8 @@ $mobileOverlayWidth: 0.75rem;
     }
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(4);
-      .login &, .logout & {
+      .login &,
+      .logout & {
         text-align: right;
       }
       margin: 0;
@@ -43,12 +44,11 @@ $mobileOverlayWidth: 0.75rem;
       font-size: 0.9rem;
       white-space: nowrap;
       margin: 0.5rem 0;
-      display:inline-block;
+      display: inline-block;
     }
     & .button {
       margin-left: 1rem;
       white-space: nowrap;
-      
     }
   }
   &__items {
@@ -59,7 +59,8 @@ $mobileOverlayWidth: 0.75rem;
     max-width: calc(100% - #{$mobileOverlayWidth});
     .expanded & {
       flex-direction: column;
-      &::before, &::after {
+      &::before,
+      &::after {
         display: none;
       }
     }
@@ -134,7 +135,7 @@ $mobileOverlayWidth: 0.75rem;
       width: 0.75rem;
       margin-top: 0.45rem;
       height: 0.5rem;
-      background-image: url("./arrow.svg");
+      background-image: url("./assets/arrow.svg");
       background-repeat: no-repeat;
       transition: transform var(--transition-time) ease-out;
     }

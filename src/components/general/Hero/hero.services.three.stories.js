@@ -10,7 +10,7 @@ export default {
     type: {
       defaultValue: 'hero',
     },
-    backgroundColour: {
+    background_colour: {
       options: ['green', 'blue', 'grey'],
       control: { type: 'radio' },
     },
@@ -29,7 +29,7 @@ const Template = (args) => {
 export const ThreeServices = Template.bind({});
 ThreeServices.args = {
   type: 'hero--with-services hero--without-image',
-  backgroundColour: 'green',
+  background_colour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [
@@ -49,7 +49,7 @@ ThreeServices.args = {
 export const SixServices = Template.bind({});
 SixServices.args = {
   type: 'hero--with-services hero--without-image',
-  backgroundColour: 'green',
+  background_colour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [
@@ -72,7 +72,7 @@ SixServices.args = {
 export const ThreeServicesWithImage = Template.bind({});
 ThreeServicesWithImage.args = {
   type: 'hero--with-image hero--with-services',
-  backgroundColour: 'green',
+  background_colour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [
@@ -96,7 +96,7 @@ ThreeServicesWithImage.args = {
 export const SixServicesWithImage = Template.bind({});
 SixServicesWithImage.args = {
   type: 'hero--with-image hero--with-services',
-  backgroundColour: 'green',
+  background_colour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [

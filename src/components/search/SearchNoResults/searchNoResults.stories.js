@@ -18,10 +18,10 @@ const Template = (args) => {
 export const SearchNoResults = Template.bind({});
 SearchNoResults.args = {
   title: 'There are no matching results.',
-  removeFiltersText: 'Try a new key word or',
-  removeFiltersLinkText: 'remove all filters',
-  foodHygieneRatingText: 'Were you looking for',
-  foodHygieneRatingLinkText: 'Food Hygiene Ratings',
-  removeFiltersLink: 'http://example.com/removeFilters',
-  foodHygieneRatingLink: 'http://example.com/foodHygiene'
+  remove_filters_text: 'Try a new key word or',
+  remove_filters_link_text: 'remove all filters',
+  food_hygiene_rating_text: 'Were you looking for',
+  food_hygiene_rating_link_text: 'Food Hygiene Ratings',
+  remove_filters_link: 'http://example.com/removeFilters',
+  food_hygiene_rating_link: 'http://example.com/foodHygiene'
 };

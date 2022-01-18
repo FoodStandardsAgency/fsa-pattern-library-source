@@ -109,8 +109,8 @@
       navigation: {
           id: 'navigation',
           label: 'Main navigation',
-          homeLink: '#',
-          homeLabel: 'Home',
+          home_link: '#',
+          home_label: 'Home',
           links: [
               {
                   link: {
@@ -121,8 +121,8 @@
                   submenu: [
                   {
                       title: 'Latest updates',
-                      readMoreLink: '#',
-                      readMoreLabel: 'See more Latest Updates',
+                      read_more_link: '#',
+                      read_more_label: 'See more Latest Updates',
                       links: [
                       {
                           link: {
@@ -961,7 +961,7 @@
   {% include '../../components/general/Header/header.html.twig' with headerData %}
 {% endblock %}
 {% block content %}
-  {% set breadcrumbItems = [
+  {% set breadcrumb_items = [
     {
       'text': 'Home',
       'url': '/'
@@ -980,7 +980,7 @@
     },
   ]
 %}
-  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumbItems, expanded: false } %}
+  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumb_items, expanded: false } %}
 {% endblock %}
 
 {% block footer %}

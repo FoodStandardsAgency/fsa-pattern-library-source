@@ -1,6 +1,6 @@
 <div class="latest-teaser">
   <div class="latest-teaser__container">
-    {% if title or description or teaserLink %}
+    {% if title or description or teaser_link %}
     <div class="latest-teaser__text-row">
       <div class="latest-teaser__text-wrapper">
         {% if title %}
@@ -9,9 +9,9 @@
         {% if description %}
           <div class="latest-teaser__description">{{ description|raw }}</div>
         {% endif %}
-        {% if teaserLink %}
+        {% if teaser_link %}
           <div class="latest-teaser__link-wrapper">
-            <a href="{{ teaserLinkUrl }}" class="latest-teaser__link">{{ teaserLink }}</a>
+            <a href="{{ teaser_link_url }}" class="latest-teaser__link">{{ teaser_link }}</a>
           </div>
         {% endif %}
       </div>
@@ -21,7 +21,7 @@
     <div class="latest-teaser__cards-row">
       {% for card in cards %}
         <div class="latest-teaser__card">
-          <div class="latest-teaser__card-wrapper latest-teaser__card-wrapper--{{ card.typeClass }}">
+          <div class="latest-teaser__card-wrapper latest-teaser__card-wrapper--{{ card.type_class }}">
             <h3 class="latest-teaser__type">{{ card.type }}</h3>
             <div class="latest-teaser__anchor-wrapper">
               <a href="{{ card.url }}" class="latest-teaser__anchor">{{ card.title }}</a>
@@ -32,10 +32,10 @@
       {% endfor %}
     </div>
 
-    {% if ButtonLabel %}
+    {% if prev_button_label %}
       <div class="latest-teaser__button-wrapper">
         <a href={{ ButtonUrl }} class="button button--primary">
-        {{ ButtonLabel }}
+        {{ prev_button_label }}
         </a>
       </div>
     {% endif %}
