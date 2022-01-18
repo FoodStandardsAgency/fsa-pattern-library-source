@@ -6,7 +6,7 @@
         {% if links|length > 0 %}
           <ul class="navigation__menu navigation__menu--level-1">
             <li class="navigation__link navigation__link--home">
-              <a href="{{ homeLink }}" aria-label="{{ homeLabel }}">
+              <a href="{{ home_link }}" aria-label="{{ home_label }}">
                 <span>Home</span>
                 <svg width="36" height="38" xmlns="http://www.w3.org/2000/svg"
                      viewBox="-1.5 -1.5 40 40">
@@ -54,10 +54,10 @@
                                 <a href="{{ submenuLinkObj.link.href ? submenuLinkObj.link.href : '#' }}">{{ submenuLinkObj.link.label }}</a>
                               </li>
                             {% endfor %}
-                            {% if group.readMoreLink %}
+                            {% if group.read_more_link %}
                               <li class="navigation__link navigation__link--read-more">
-                                <a href="{{ group.readMoreLink }}">
-                                  <span class="navigation__link__read-more-arrow"></span>{{ group.readMoreLabel }}
+                                <a href="{{ group.read_more_link }}">
+                                  <span class="navigation__link__read-more-arrow"></span>{{ group.read_more_label }}
                                 </a>
                               </li>
                             {% endif %}

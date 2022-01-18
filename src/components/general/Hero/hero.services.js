@@ -10,7 +10,7 @@ export default {
     type: {
       defaultValue: 'hero',
     },
-    backgroundColour: {
+    background_colour: {
       options: ['green', 'blue', 'grey'],
       control: { type: 'radio' },
     },
@@ -24,7 +24,7 @@ const Template = (args) => {
 export const Hero = Template.bind({});
 Hero.args = {
   type: 'hero--without-image',
-  backgroundColour: 'green',
+  background_colour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [
@@ -39,7 +39,7 @@ Hero.args = {
 export const HeroWithImage = Template.bind({});
 HeroWithImage.args = {
   type: 'hero--with-image',
-  backgroundColour: 'green',
+  background_colour: 'green',
   title: 'Food we can trust',
   content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [

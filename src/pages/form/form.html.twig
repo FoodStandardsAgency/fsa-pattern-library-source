@@ -52,7 +52,7 @@
       caption: 'Enter your title.',
       required: "",
       error: false,
-      errorMessage: '',
+      error_message: '',
       value: 'Mr.'
     } %}
 
@@ -62,7 +62,7 @@
       caption: 'Enter your first name.',
       required: "required",
       error: true,
-      errorMessage: 'First name is required.',
+      error_message: 'First name is required.',
       value: ''
     } %}
 
@@ -72,7 +72,7 @@
       caption: 'Enter your last name.',
       required: "required",
       error: false,
-      errorMessage: '',
+      error_message: '',
       value: 'Doe'
     } %}
 
@@ -82,7 +82,7 @@
       caption: 'Enter your email address.',
       required: "required",
       error: true,
-      errorMessage: 'Invalid email address',
+      error_message: 'Invalid email address',
       value: 'john.doe@example;com'
     } %}
 
@@ -93,7 +93,7 @@
       caption: 'Enter your password.',
       required: "required",
       error: true,
-      errorMessage: 'Password is required',
+      error_message: 'Password is required',
       value: ''
     } %}
 
@@ -146,7 +146,7 @@
       caption: '',
       required: 'required',
       error: false,
-      errorMessage: '',
+      error_message: '',
       value: '',
       type: 'tel',
       prefix: '+44',
@@ -187,10 +187,10 @@
     } %}
 
     {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
-      prevLink: '#',
-      prevLabel: 'Previous',
-      prevButton: true,
-      buttonLabel: 'Next'
+      prev_link: '#',
+      prev_label: 'Previous',
+      prev_button: true,
+      prev_button_label: 'Next'
     } %}
   </form>
 {% endblock %}

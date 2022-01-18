@@ -16,6 +16,6 @@ const Template = (args) => {
 
 export const ExternalLink = Template.bind({});
 ExternalLink.args = {
-  externalLinkUrl: '#',
-  externalLink: 'Privacy policy',
+  external_link_url: '#',
+  external_link: 'Privacy policy',
 };

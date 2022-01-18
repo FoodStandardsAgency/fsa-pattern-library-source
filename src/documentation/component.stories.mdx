@@ -1,0 +1,129 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="3 - Component submission" />
+
+<style>{`
+  .subheading {
+    --mediumdark: '#999999';
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 6px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .link-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+  }
+
+  @media (min-width: 620px) {
+    .link-list {
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media all and (-ms-high-contrast:none) {
+  .link-list {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+    }
+  }
+
+  .link-item {
+    display: block;
+    padding: 20px 30px 20px 15px;
+    border: 1px solid #00000010;
+    border-radius: 5px;
+    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+    color: #333333;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .link-item:hover {
+    border-color: #1EA7FD50;
+    transform: translate3d(0, -3px, 0);
+    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+  }
+
+  .link-item:active {
+    border-color: #1EA7FD;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .link-item strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .link-item img {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    flex: none;
+  }
+
+  .link-item span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tip {
+    display: inline-block;
+    border-radius: 1em;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 700;
+    background: #E7FDD8;
+    color: #66BF3C;
+    padding: 4px 12px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .tip-wrapper {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .tip-wrapper code {
+    font-size: 12px;
+    display: inline-block;
+  }
+`}</style>
+
+# Submitting a new component
+
+Please refer to the Developer workflow page for more info on:
+- how to [install the project](?path=/story/documentation-2-developer-workflow--page#installation), 
+- what are the [coding standards](?path=/story/documentation-2-developer-workflow--page#general-coding-standards--naming-conventions), 
+- what are the [naming conventions](?path=/story/documentation-2-developer-workflow--page#general-coding-standards--naming-conventions),
+- what's the [folder structure](?path=/story/documentation-2-developer-workflow--page#workflow-summary),
+- what's the [workflow](?path=/story/documentation-2-developer-workflow--page#workflow-summary)...
+
+and other useful information.
+
+## Checklist before opening a PR
+
+Before opening a PR, please make sure:
+- to provide a thorough description of your component and its usage with screenshots.
+- your work is in a branch based on and synced with the develop branch.
+- to import your scss and twig files in the javascript file. Without this, Webpack won't be able to compile them.
+- to import your newComponent in the index.js file.
+- your folder hierarchy follows the proper structure.
+- your code follows the coding standards and naming conventions defined.
+- your code has been tested as AA accessibility compliant to the WCAG 2.1 AA standard.
+- your code has been tested in all the browsers listed in the [GDS browser's list](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices), including IE11.
+- your code has been tested in all the different screensizes defined.

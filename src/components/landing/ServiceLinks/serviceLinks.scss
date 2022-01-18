@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .service-links {
   @include landing-margin-top;
@@ -19,7 +19,7 @@
   &__text-wrapper {
     @include landing-text-wrapper;
   }
-  
+
   &__title {
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@
 
     &:after {
       content: "";
-      background-image: url("./dot.svg");
+      background-image: url("./assets/dot.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 12rem;
@@ -83,7 +83,6 @@
         &:nth-child(3) {
           margin-top: 0;
         }
-
       }
 
       &--4 {
@@ -116,8 +115,8 @@
     position: relative;
 
     &::before {
-      content: '';
-      background-image: url('./arrow-right.svg');
+      content: "";
+      background-image: url("./assets/arrow-right.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;
@@ -130,10 +129,10 @@
       text-decoration: underline;
       color: var(--fsa__link-green);
       &::before {
-        background-image: url('./arrow-hover.svg');
+        background-image: url("./assets/arrow-hover.svg");
       }
     }
-  
+
     &:active,
     &:visited {
       color: var(--fsa-primary_black);

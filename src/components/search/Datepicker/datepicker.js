@@ -24,13 +24,22 @@ export default function () {
     }
 
     function validateDate(day, month, year, datepicker, errorContainer) {
+      const accordion = datepicker.closest('.accordion');
       const shortMonths = [4, 6, 9, 11];
       if (day === 31 && shortMonths.includes(month)) {
         errorContainer.classList.add('datepicker__error-message--visible')
+        datepicker.classList.add('datepicker--error');
+        if (accordion) {
+          accordion.classList.add('accordion--error');
+        }
         return false;
       }
       else if ((day > 29 && month === 2) || ((day === 29 && month === 2 && !isLeapYear(year)))) {
-        errorContainer.classList.add('datepicker__error-message--visible')
+        datepicker.classList.add('datepicker--error');
+        errorContainer.classList.add('datepicker__error-message--visible');
+        if (accordion) {
+          accordion.classList.add('accordion--error');
+        }
         return false;
       }
       else {
@@ -63,7 +72,7 @@ export default function () {
               day = selected !== 'none' ? parseInt(selected, 10) : null;
               break;
             case 'Month':
-              month = selected !== 'none' ? parseInt(selected, 10) - 1 : null;
+              month = selected !== 'none' ? parseInt(selected, 10): null;
               break;
             case 'Year':
               year = selected !== 'none' ? selected : null;
@@ -74,7 +83,7 @@ export default function () {
           minimumSelection(el, minimumSelectionErrMsg);
           return;
         }
-        if (validateDate(day, month, year, invalidDateErrMsg)) {
+        if (validateDate(day, month, year, el, invalidDateErrMsg)) {
           const date = new Date(year, month, day).getTime() / 1000;
           updateParams('date' + type, date);
         }
