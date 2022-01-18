@@ -4,8 +4,12 @@ import './accordion.scss';
 import 'element-closest-polyfill';
 
 export default function () {
+  let DOMContentFirstLoad = true;
   window.addEventListener('DOMContentLoaded', function () {
-    
+    if (DOMContentFirstLoad) {
+      DOMContentFirstLoad = false;
+      return;
+    }
     const accordions = document.querySelectorAll('.accordion');
     if (!accordions) {
       return;
