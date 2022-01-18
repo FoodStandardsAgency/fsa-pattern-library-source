@@ -36,9 +36,10 @@
     @media screen and (min-width: $fsa-xxl) {
       background-size: 70%;
     }
-    /* Remove background pattern in IE11 */
+    /* Remove background pattern and fit-content doesn't work in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
+      height: 100vh;
     }
   }
   &--without-image.hero--with-services {
