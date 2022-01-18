@@ -1,7 +1,7 @@
 import promoLinks from './promoLinks.html.twig';
 import './promoLinks.scss';
 
-import svgs from '../../svg-icons';
+import { svgs } from '../../svg-icons';
 
 export default {
   title: 'Components/Contact/Promo Links',
