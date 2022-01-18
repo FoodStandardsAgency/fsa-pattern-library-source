@@ -1,7 +1,7 @@
 import landingLinks from './landingLinks.html.twig';
 import './landingLinks.scss';
 
-import svgs from '../../svg-icons';
+import { svgs } from '../../svg-icons';
 
 export default {
   title: 'Components/Landing/Landing Links',

@@ -1,7 +1,7 @@
 import footer from './footer.html.twig';
 import './footer.scss';
 
-import social_svgs from '../../svg-icons';
+import { social_svgs } from '../../svg-icons';
 
 export default {
   title: 'Components/General/Footer',
