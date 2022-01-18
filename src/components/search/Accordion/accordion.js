@@ -5,7 +5,7 @@ import 'element-closest-polyfill';
 
 export default function () {
   window.addEventListener('DOMContentLoaded', function () {
-
+    
     const accordions = document.querySelectorAll('.accordion');
     if (!accordions) {
       return;
@@ -120,5 +120,5 @@ export default function () {
       //Add keyboard control
       button.addEventListener('keydown', moveFocus);
     });
-  }, { once: true });
+  });
 }
