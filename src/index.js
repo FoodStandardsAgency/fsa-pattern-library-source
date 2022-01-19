@@ -55,6 +55,7 @@ import './components/contact/PromoLinks/promoLinks';
 /* Article Components */
 import './components/article/TableOfContents/tableOfContents';
 import './components/article/DocumentDownload/documentDownload';
+import './components/article/ArticleHero/articleHero';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 
 /* Layout Components */
