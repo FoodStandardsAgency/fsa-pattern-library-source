@@ -1,14 +1,62 @@
 {% extends '../../layout/contentLayout/contentLayout.html.twig' %}
+{% set document_args = {
+  format: 'word',
+  link: '#',
+  view: 'View',
+  name: 'Step by step guide for meat approvals application',
+  as: 'as',
+  new_window: 'Open in a new window',
+  size: '559.42 KB',} %}
+{% set breadcrumb_items = [
+  {
+    'text': 'Home',
+    'url': '/'
+  },
+  {
+    'text': 'News',
+    'url': '/news'
+  },
+  {
+    'text': 'Hazard Analysis and Critical Control Point (HACCP)',
+    'url': null
+  },
+] %}
+{% block top %}
+  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+    items: breadcrumb_items,
+    expanded: false,
+  } %}
+{% endblock %}
+{% block left %}
+  {% include '@components/components/article/TableOfContents/tableOfContents.html.twig' with {
+    title: 'on this page',
+    links: [
+      { label: 'Explaning hazards', href: '#' },
+      { label: 'Food safety management procedures', href: '#' },
+      { label: 'HACCP system in meat plants', href: '#' },
+      { label: 'MyHACCP', href: '#' },
+      { label: 'MyHACCP step by step', href: '#' },
+      { label: 'Small business and retailers', href: '#' },
+    ],
+  } %}
+{% endblock %}
 {% block right %}
-  {% set document_args = {
-    format: 'word',
-    link: '#',
+  {% include '@components/components/article/ArticleHero/articleHero.html.twig' with {
+    type: 'news',
+    region: ['England'],
+    title: 'Hazard Analysis and Critical Control Point (HACCP)',
+    description: 'How to manage the food hygiene and safety procedures in your food business.',
+    last_updated_string: 'Last updated',
+    last_updated_date: '20 December 2017',
+    specific: 'specific',
+    pdf_link: '#',
+    pdf_name: 'Hazard Analysis and Critical Control Point (HACCP)',
     view: 'View',
-    name: 'Step by step guide for meat approvals application',
     as: 'as',
-    new_window: 'Open in a new window',
-    size: '559.42 KB',} 
-  %}
+    pdf: 'PDF',
+    new_window: 'Opens in a new window',
+    print_this_page: 'Print this page',
+  } %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
