@@ -981,6 +981,22 @@
   ]
 %}
   {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumb_items, expanded: false } %}
+  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+    region: ['Wales'],
+    wysiwyg_content: '<a href="#">Contact your local council in England</a> to apply for registration as a childminder if you provide food with your childminding business',
+    transparent_background: true,
+      files: [
+        {
+          format: 'word',
+          link: '#',
+          view: 'View',
+          name: 'Step by step guide for meat approvals application',
+          as: 'as',
+          new_window: 'Open in a new window',
+          size: '559.42 KB',
+        },
+      ],
+  } %}
 {% endblock %}
 
 {% block footer %}
