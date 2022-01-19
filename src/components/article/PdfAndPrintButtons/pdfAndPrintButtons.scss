@@ -40,8 +40,8 @@
       button {
         @include body();
         border: 0;
-        border-radius: unset;
-        background: unset;
+        border-radius: 0;
+        background: transparent;
         color: var(--fsa-primary_dark-green);
         font-weight: bold;
         text-decoration: none;
