@@ -1,0 +1,16 @@
+<div class="pdf-and-print-buttons">
+  <div class="pdf-and-print-buttons__button pdf-and-print-buttons__button--pdf">
+    <a href="{{ pdf_link }}">
+      <div class="pdf-and-print-buttons__text-wrapper">
+        {{ view }}<span class="visually-hidden"> {{ pdf_name }}</span> {{ as }} {{ pdf }}<span class="visually-hidden">({{ new_window }})</span>
+      </div>
+    </a>
+  </div>
+  <div class="pdf-and-print-buttons__button pdf-and-print-buttons__button--print">
+    <button>
+      <div class="pdf-and-print-buttons__text-wrapper">
+        {{ print_this_page }}
+      </div>
+    </button>
+  </div>
+</div>
