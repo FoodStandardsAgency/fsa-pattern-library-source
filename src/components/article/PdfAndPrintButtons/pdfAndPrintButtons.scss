@@ -1,0 +1,65 @@
+@import "src/lib.scss";
+
+.pdf-and-print-buttons {
+  display: flex;
+  justify-content: space-between;
+  &__button {
+    @include body();
+    color: var(--fsa-primary_dark-green);
+    font-weight: bold;
+    a, button {
+      display: flex;
+      align-items: center;
+      &:before {
+        content: '';
+        display: block;
+        background-color: var(--fsa-primary_dark-green);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 10rem;
+        height:2.75rem;
+        width: 2.75rem;
+        margin-right: 0.5rem;
+      }
+      &:hover {
+        cursor: pointer;
+        color: var(--fsa__link-green);
+        &:before {
+          background-color: var(--fsa__link-green);
+        }
+      }
+    }
+    &--pdf {
+      a {
+        &:before {
+          background-image: url("./assets/arrow.svg");
+        }
+      }
+    }
+    &--print {
+      button {
+        @include body();
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        color: var(--fsa-primary_dark-green);
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        &:hover {
+          cursor: pointer;
+          color: var(--fsa__link-green);
+        }
+        &:before {
+          background-image: url("./assets/printer.svg");
+        }
+      }
+      a {
+        &:before {
+          background-image: url("./assets/printer.svg");
+        }
+      }
+    }
+  }
+}
