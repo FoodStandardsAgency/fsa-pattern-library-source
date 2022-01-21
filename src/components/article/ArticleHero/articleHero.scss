@@ -1,0 +1,88 @@
+@import "src/lib.scss";
+
+.article-hero {
+  &__type {
+    @include body();
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.288rem;
+    &--news {
+      color: var(--fsa-secondary_mid-purple);
+    }
+    &--alerts {
+      color: var(--fsa-secondary_mid-red);
+    }
+    &--consultations {
+      color: var(--fsa-secondary_dark-blue);
+    }
+  }
+  &__title {
+    @include h1-article();
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+  &__region {
+    position: relative;
+    @include body();
+    font-weight: bold;
+    margin-bottom: 1rem;
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    &:before {
+      content: "";
+      height: 0.25rem;
+      width: 100%;
+      position: absolute;
+      bottom: -0.263rem;
+      @media screen and (min-width: $fsa-md) {
+        bottom: -0.575rem;
+      }
+    }
+    &--england:before {
+      background-color: var(--fsa-secondary_mid-red);
+    }
+
+    &--wales:before {
+      background-color: var(--fsa-tertiary_stripe-green);
+    }
+
+    &--northern-ireland:before {
+      background-color: var(--fsa-secondary_mid-yellow);
+    }
+
+    &--multi:before {
+      background-color: var(--fsa-primary_dark-grey);
+    }
+  }
+  &__description {
+    @include intro();
+    margin-bottom: 1rem;
+    p {
+      margin: 0;
+    }
+    @media screen and (min-width: $fsa-md) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__toolbar {
+    border-top: solid 1px var(--fsa__grey-hover);
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.5rem;
+    }
+    &__last-updated {
+      margin-bottom: 0.5rem;
+      height: 100%;
+      @media screen and (min-width: $fsa-md) {
+        display: contents;
+      }
+    }
+  }
+}

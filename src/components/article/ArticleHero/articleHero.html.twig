@@ -1,0 +1,49 @@
+{% set article_region_defined = region is defined and region is not empty %}
+{% if article_region_defined %}
+  {% if region|length == 1 %}
+    {% set article_region_class = "article-hero__region--" ~ region[0]|lower|replace({" ": "-"}) %}
+    {% set article_region_string = region[0] %}
+  {% elseif region|length > 1 %}
+    {% set article_region_class = "article-hero__region--multi" %}
+    {% set article_region_first = region|slice(0, region|length - 1) %}
+    {% set article_region_last = region[region|length - 1] %}
+    {% set article_region_string = article_region_first|join(", ") ~ " and " ~ article_region_last %}
+  {% endif %}
+{% endif %}
+
+<div class="article-hero">
+  {% if type %}
+    <div class="article-hero__type article-hero__type--{{ type }}">
+      {{ type_string is defined ? type_string : type }}
+    </div>
+  {% endif %}
+  <h1 class="article-hero__title">{{ title }}</h1>
+  {% if article_region_defined %}
+    <div class="article-hero__region{{ article_region_class is defined ? " " ~ article_region_class : "" }}">
+      {{ article_region_string }} {{ specific }}
+    </div>
+  {% endif %}
+  {% if description %}
+    <div class="article-hero__description">
+      <p>{{ description }}</p>
+    </div>
+  {% endif %}
+  <div class="article-hero__toolbar">
+    {% if last_updated_date %}
+      <div class="article-hero__toolbar__last-updated">
+        {{ last_updated_string }}: {{ last_updated_date }}
+      </div>
+    {% endif %}
+    <div class="article-hero__toolbar__buttons">
+      {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
+        pdf_link: pdf_link,
+        pdf_name: pdf_name,
+        view: view,
+        as: as,
+        pdf: pdf,
+        new_window: new_window,
+        print_this_page: print_this_page,
+      } %}
+    </div>
+  </div>
+</div>
