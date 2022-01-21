@@ -34,8 +34,18 @@ jobs:
       - name: Build the assets
         run: yarn build 
 
+      # Runs a set of commands using the runners shell
+      - name: Display branch name
+        run: echo "${GITHUB_REF_NAME}"
+
       - name: Set env.BRANCH
         run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+
+      - name: Check package version
+        run: echo "${GITHUB_REF}"
+      #  uses: technote-space/package-version-check-action@v1
+      #  with:
+      #    NEXT_VERSION: ${GITHUB_REF_NAME}
 
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${{ env.BRANCH }}
