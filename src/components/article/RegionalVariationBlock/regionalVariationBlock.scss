@@ -51,10 +51,20 @@
     @include body;
     color: var(--fsa-primary_black);
     margin-top: 0.5rem;
-  }
-  &__files {
     .document-download {
       margin-top: 1rem;
+    }
+    .document-download__region {
+      display: none;
+    }
+    ul {
+      list-style: disc;
+    }
+    ol {
+      list-style: roman;
+    }
+    a:not(.document-download__link) {
+      @include link();
     }
   }
 }
