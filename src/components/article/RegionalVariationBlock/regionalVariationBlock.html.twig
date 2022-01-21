@@ -1,0 +1,21 @@
+{% set block_region = region is defined and region is not empty %}
+{% if block_region %}
+  {% if region|length == 1 %}
+    {% set block_region_class = "regional-variation-block--" ~ region[0]|lower|replace({" ": "-"}) %}
+    {% set block_region_string = region[0] %}
+  {% elseif region|length > 1 %}
+    {% set block_region_class = "regional-variation-block--multi" %}
+    {% set block_region_first = region|slice(0, region|length - 1) %}
+    {% set block_region_last = region[region|length - 1] %}
+    {% set block_region_string = block_region_first|join(", ") ~ " and " ~ block_region_last %}
+  {% endif %}
+{% endif %}
+
+<div class="regional-variation-block{{ block_region_class is defined ? " " ~ block_region_class : "" }}{{ transparent_background ? "" : " regional-variation-block--solid" }}">
+  <h3 class="regional-variation-block__region">
+    {{ block_region_string }}
+  </h3>
+  <div class="regional-variation-block__copy">
+    {{ wysiwyg_content|raw }}
+  </div>
+</div>
