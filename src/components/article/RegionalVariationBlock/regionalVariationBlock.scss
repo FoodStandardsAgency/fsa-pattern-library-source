@@ -53,6 +53,9 @@
     margin-top: 0.5rem;
     .document-download {
       margin-top: 1rem;
+      &:before {
+        display: none;
+      }
     }
     .document-download__region {
       display: none;
