@@ -47,7 +47,7 @@ export default {
         date: '5 November 2021'
       },
     ],
-    ButtonUrl: '#',
+    button_url: '#',
     prev_button_label: 'More News and Alerts',
   };
 
@@ -88,6 +88,6 @@ export default {
         date: '5 November 2021'
       },
     ],
-    ButtonUrl: '#',
+    button_url: '#',
     prev_button_label: 'More Consultations',
   };
