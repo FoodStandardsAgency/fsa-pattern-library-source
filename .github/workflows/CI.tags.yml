@@ -45,7 +45,6 @@ jobs:
       - name: Check package version
         uses: technote-space/package-version-check-action@v1
         with:
-          COMMIT_DISABLED: 1
           NEXT_VERSION: ${GITHUB_REF_NAME}
 
       - name: Build static storybook
