@@ -56,6 +56,7 @@ import './components/contact/PromoLinks/promoLinks';
 import './components/article/TableOfContents/tableOfContents';
 import './components/article/DocumentDownload/documentDownload';
 import './components/article/RegionalVariationBlock/regionalVariationBlock';
+import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 
 /* Layout Components */
 import './layout/formLayout/formLayout';
@@ -80,3 +81,4 @@ navigation();
 datepicker();
 accordion();
 header();
+pdfAndPrintButtons();
