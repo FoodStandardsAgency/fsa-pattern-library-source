@@ -227,15 +227,21 @@
     &--green {
       background-color: var(--fsa-primary_dark-green);
       color: var(--fsa-primary_white);
-      a {
+      .button {
         &:hover {
-          background-color: var(--fsa__link-green) !important;
+          background-color: var(--fsa__dark-green-hover);
         }
       }
     }
     &--blue {
       background-color: #165c7d;
       color: var(--fsa-primary_white);
+      .button {
+        &:hover {
+          color: var(--fsa__dark-green-hover);
+          background-color: var(--fsa__grey-hover);
+        }
+      }
     }
     &--grey {
       background-color: var(--fsa_online-grey);
@@ -244,6 +250,11 @@
         color: var(--fsa-primary_dark-green);
         &:after {
           background-image: url("./assets/dot-grey.svg");
+        }
+      }
+      .button {
+        &:hover {
+          background-color: var(--fsa__link-green);
         }
       }
     }
