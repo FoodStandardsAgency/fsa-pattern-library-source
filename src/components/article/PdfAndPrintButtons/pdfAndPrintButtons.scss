@@ -56,6 +56,11 @@
           background-image: url("./assets/printer.svg");
         }
       }
+      a {
+        &:before {
+          background-image: url("./assets/printer.svg");
+        }
+      }
     }
   }
 }
