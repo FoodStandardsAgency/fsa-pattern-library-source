@@ -238,7 +238,7 @@
       color: var(--fsa-primary_white);
       .button {
         &:hover {
-          color: var(--fsa-primary_dark);
+          color: var(--fsa__dark-green-hover);
           background-color: var(--fsa__grey-hover);
         }
       }
