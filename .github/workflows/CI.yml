@@ -44,13 +44,14 @@ jobs:
         run: echo "${{ env.COMMIT }}"
 
       - name: Set env.VERSION
-        run: echo "VERSION=$( echo ${{ env.COMMIT }} | grep -E -o '[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_ENV
+        run: echo "VERSION=$( echo ${{ env.COMMIT }} | grep -E -o '[0-9]+\.[0-9]+\.[0-9]+' || true)" >> $GITHUB_ENV
 
       - name: Display VERSION
         run: echo "${{ env.VERSION }}"
 
       - name: Update Package.json version
         uses: technote-space/package-version-check-action@v1
+        if: ${{ env.VERSION != true }}
         with:
           NEXT_VERSION: ${{ env.VERSION }}
 
