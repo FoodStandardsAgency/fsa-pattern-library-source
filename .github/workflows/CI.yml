@@ -51,7 +51,7 @@ jobs:
 
       - name: Update Package.json version
         uses: technote-space/package-version-check-action@v1
-        if: ${{ github.ref == 'refs/heads/develop' && env.VERSION != "" }}
+        if: ${{ github.ref == 'refs/heads/develop' }}
         with:
           NEXT_VERSION: ${{ env.VERSION }}
 
