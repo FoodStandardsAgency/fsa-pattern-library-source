@@ -38,7 +38,7 @@ jobs:
         run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
 
       - name: Set env.COMMIT
-        run: echo "COMMIT=$(expr match git log -1 --oneline '[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_ENV
+        run: echo "COMMIT=$(git log -1 --oneline)" >> $GITHUB_ENV
 
       - name: Display COMMIT
         run: echo "${{env.COMMIT }}"
