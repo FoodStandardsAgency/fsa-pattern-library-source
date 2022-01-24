@@ -44,13 +44,15 @@ jobs:
         run: echo "${{ env.COMMIT }}"
 
       - name: Set env.VERSION
-        run: echo "VERSION=$( echo env.COMMIT | grep -E -o '[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_ENV
+        run: echo "VERSION=$( echo ${{ env.COMMIT }} | grep -E -o '[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_ENV
 
       - name: Display VERSION
         run: echo "${{ env.VERSION }}"
-      #  uses: technote-space/package-version-check-action@v1
-      #  with:
-      #    NEXT_VERSION: ${GITHUB_REF_NAME}
+
+      - name: Update Package.json version
+        uses: technote-space/package-version-check-action@v1
+        with:
+          NEXT_VERSION: ${{ env.VERSION }}
 
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${{ env.BRANCH }}
