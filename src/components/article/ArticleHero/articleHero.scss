@@ -5,7 +5,7 @@
     @include body();
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 0.288rem;
+    margin-bottom: 0.25rem;
     &--news {
       color: var(--fsa-secondary_mid-purple);
     }
@@ -18,52 +18,38 @@
   }
   &__title {
     @include h1-article();
-    margin-bottom: 1rem;
-    margin-top: 0;
+    margin: 0;
   }
   &__region {
     position: relative;
     @include body();
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 0.25rem;
     @media screen and (min-width: $fsa-md) {
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
-    &:before {
-      content: "";
-      height: 0.25rem;
-      width: 100%;
-      position: absolute;
-      bottom: -0.263rem;
-      @media screen and (min-width: $fsa-md) {
-        bottom: -0.575rem;
-      }
-    }
-    &--england:before {
-      background-color: var(--fsa-secondary_mid-red);
+    &--england {
+      border-bottom: 0.25rem var(--fsa-secondary_mid-red) solid;
     }
 
-    &--wales:before {
-      background-color: var(--fsa-tertiary_stripe-green);
+    &--wales {
+      border-bottom: 0.25rem var(--fsa-tertiary_stripe-green) solid;
     }
 
-    &--northern-ireland:before {
-      background-color: var(--fsa-secondary_mid-yellow);
+    &--northern-ireland {
+      border-bottom: 0.25rem var(--fsa-secondary_mid-yellow) solid;
     }
 
-    &--multi:before {
-      background-color: var(--fsa-primary_dark-grey);
+    &--multi {
+      border-bottom: 0.25rem var(--fsa-primary_dark-grey) solid;
     }
   }
   &__description {
     @include intro();
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     p {
       margin: 0;
-    }
-    @media screen and (min-width: $fsa-md) {
-      margin-bottom: 2rem;
     }
   }
   &__toolbar {
@@ -71,11 +57,13 @@
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
+    margin-top: 1rem;
     @media screen and (min-width: $fsa-md) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       padding-top: 0.5rem;
+      margin-top: 2rem;
     }
     &__last-updated {
       margin-bottom: 0.5rem;
