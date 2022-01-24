@@ -33,7 +33,6 @@
     }
     &__label {
       @include body();
-      text-transform: uppercase;
       &--hidden {
         border: 0;
         clip: rect(0 0 0 0);
