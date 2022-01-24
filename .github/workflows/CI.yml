@@ -44,7 +44,7 @@ jobs:
         run: echo "${{ env.COMMIT }}"
 
       - name: Set env.VERSION
-        run: echo "VERSION=$( echo ${{ env.COMMIT }} | grep -E -o \"[0-9]+\.[0-9]+\.[0-9]+\")" >> $GITHUB_ENV
+        run: echo VERSION=$(echo ${{ env.COMMIT }} | grep -E -o "[0-9]+\.[0-9]+\.[0-9]+") >> $GITHUB_ENV
 
       - name: Display VERSION
         run: echo "${{ env.VERSION }}"
