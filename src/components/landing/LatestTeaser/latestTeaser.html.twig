@@ -9,9 +9,9 @@
         {% if description %}
           <div class="latest-teaser__description">{{ description|raw }}</div>
         {% endif %}
-        {% if teaser_link %}
+        {% if teaser_link_url %}
           <div class="latest-teaser__link-wrapper">
-            <a href="{{ teaser_link_url }}" class="latest-teaser__link">{{ teaser_link }}</a>
+            <a href="{{ teaser_link_url }}" class="latest-teaser__link">{{ teaser_link_title }}</a>
           </div>
         {% endif %}
       </div>
@@ -34,7 +34,7 @@
 
     {% if prev_button_label %}
       <div class="latest-teaser__button-wrapper">
-        <a href={{ button_url }} class="button button--primary">
+        <a href="{{ button_url }}" class="button button--primary">
         {{ prev_button_label }}
         </a>
       </div>
