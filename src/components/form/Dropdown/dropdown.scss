@@ -25,6 +25,12 @@
     clear: both;
   }
 
+  &__field {
+    display: flex;
+    align-items: flex-start;
+    clear: both;
+  }
+
   &__select {
     color: var(--fsa-primary_black);
     margin-top: 1rem;
