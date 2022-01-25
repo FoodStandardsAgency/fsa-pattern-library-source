@@ -9,7 +9,7 @@
   {% if description is defined and description is not empty %}
     <p class="dropdown__description">{{ description }}</p>
   {% endif %}
-  <select name="sort" id={{ id }} class="dropdown__select">
+  <select name="{{ name }}" id={{ id }} class="dropdown__select">
     {% for option in options %}
       <option value="{{ option.value|lower }}" class="dropdown__option" {{ option.value|lower == default|lower ? "selected" : "" }}>{{ option.text }}</option>
     {% endfor %}
