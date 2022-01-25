@@ -2,7 +2,11 @@
   <div class="multistep-function__container">
     
     {% if prev_label %}
-      <input type="submit" class="multistep-function__previous" value="{{ prev_label }}" />
+      {% if prev_link %}
+        <a href="{{ prev_link }}" class="multistep-function__previous">{{ prev_label }}</a>
+      {% else %}
+        <input type="submit" class="multistep-function__previous" value="{{ prev_label }}" />
+      {% endif %}
     {% endif %}
 
     {% include '@components/components/general/Button/button.html.twig' with { 
