@@ -10,6 +10,7 @@
   }
 
   &__previous {
+    @include body;
     @include link;
     padding: 0.5rem 0;
     background-image: url("./assets/previous-arrow.svg");
