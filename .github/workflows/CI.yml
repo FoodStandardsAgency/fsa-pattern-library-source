@@ -52,7 +52,7 @@ jobs:
       - name: Update Package.json version
         uses: technote-space/package-version-check-action@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
           NEXT_VERSION: ${{ env.VERSION }}
 
       - name: Build static storybook
