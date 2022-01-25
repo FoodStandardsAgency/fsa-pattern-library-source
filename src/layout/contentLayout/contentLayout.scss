@@ -11,7 +11,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @media screen and (min-width: $fsa-md) {
+    @media screen and (min-width: $fsa-lg) {
       flex-direction: row;
     }
   }
@@ -19,19 +19,19 @@
   &__top {
     @include grid-cols(4, 4);
     margin-bottom: 3rem;
-    @media screen and (min-width: $fsa-md) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-cols(12);
     }
   }
   &__left {
     @include grid-cols(4, 4);
-    @media screen and (min-width: $fsa-md) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-cols(4);
     }
   }
   &__right {
     @include grid-cols(4, 4);
-    @media screen and (min-width: $fsa-md) {
+    @media screen and (min-width: $fsa-lg) {
       @include grid-cols(8);
     }
     @media screen and (min-width: $fsa-xl) {

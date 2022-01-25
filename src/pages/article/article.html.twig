@@ -28,38 +28,88 @@
   } %}
 {% endblock %}
 {% block left %}
-  {% include '@components/components/article/TableOfContents/tableOfContents.html.twig' with {
-    title: 'on this page',
-    links: [
-      { label: 'Explaning hazards', href: '#' },
-      { label: 'Food safety management procedures', href: '#' },
-      { label: 'HACCP system in meat plants', href: '#' },
-      { label: 'MyHACCP', href: '#' },
-      { label: 'MyHACCP step by step', href: '#' },
-      { label: 'Small business and retailers', href: '#' },
+  {% include '@components/components/article/StickySidebar/stickySidebar.html.twig' with {
+    sidebar_items: [
+      {
+        type: 'back_to',
+        label: 'All alerts',
+        url: '#',
+      },
+      {
+        type: 'table_of_contents',
+        title: 'On this page',
+        links: [
+          { label: 'Explaning hazards', href: '#' },
+          { label: 'Food safety management procedures', href: '#' },
+          { label: 'HACCP system in meat plants', href: '#' },
+          { label: 'MyHACCP', href: '#' },
+          { label: 'MyHACCP step by step', href: '#' },
+          { label: 'Small business and retailers', href: '#' },
+        ],
+      },
     ],
   } %}
 {% endblock %}
 {% block right %}
   {% include '@components/components/article/ArticleHero/articleHero.html.twig' with {
-    type: 'news',
+    type: 'alerts',
+    type_string: 'Allergy alert',
     region: ['England'],
-    title: 'Hazard Analysis and Critical Control Point (HACCP)',
-    description: 'How to manage the food hygiene and safety procedures in your food business.',
+    title: 'Worthenshaws recalls Kirsty’s Classic Beef Lasagne because of inaccurate allergen information on the label',
+    description: 'Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet, however, it is not suitable for those who have an allergy to Oats.',
     last_updated_string: 'Last updated',
     last_updated_date: '20 December 2017',
     specific: 'specific',
     pdf_link: '#',
-    pdf_name: 'Hazard Analysis and Critical Control Point (HACCP)',
+    pdf_name: 'Kirsty’s Classic Beef Lasagne Alert',
     view: 'View',
     as: 'as',
     pdf: 'PDF',
     new_window: 'Opens in a new window',
     print_this_page: 'Print this page',
   } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: 'Alert',
+    tag: 'h3',
+    description: 'Worthenshaws Ltd is recalling Kirsty’s Classic Beef Lasagne because it contains a statement on the label that the
+      product is free from all 14 allergens, which is not accurate as the product contains oats (that are gluten free).
+      Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet,
+      however, it is not suitable for those who have an allergy to Oats.'
+  } %}
+  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+    region: ['Wales'],
+    wysiwyg_content: '<a href="#">Contact your local council in England</a> to apply for registration as a childminder if you provide food with your childminding business',
+    transparent_background: true,
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: 'Risk statement',
+    tag: 'h3',
+    description: 'Allergen(s): Oats (that are gluten free)</ br>These products contain oats (that are gluten free) making it a possible health risk for anyone with an allergy to oats'
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: 'Action taken by the company',
+    tag: 'h3',
+    description: 'Worthenshaws Ltd is recalling the above products from customers and has contacted the relevant allergy
+    support organisations, which will tell their members about the recall. The company has issued a point-of-sale notice
+     to its customers. These notices explain to customers why the products are being recalled and tell them what to do
+     if they have bought the products.'
+  } %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Northern Ireland'] }) %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'word', region: ['England', 'Northern Ireland'] }) %}
+  <br /> {# Remove once the article footer is created #}
+  {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
+    multipage_guide: true,
+    pdf_link: '#',
+    pdf_name: 'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
+    view: 'View',
+    as: 'as',
+    pdf: 'PDF',
+    new_window: 'Opens in a new window',
+    print_this_page: 'Print this page',
+    view_entire_guide: 'View entire guide as PDF',
+    print_guide: 'Print guide',
+    multipage_guide_pdf_link: '#',
+    multipage_guide_print_link: '#',
+  } %}
 {% endblock %}

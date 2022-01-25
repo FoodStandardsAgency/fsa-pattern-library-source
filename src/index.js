@@ -57,7 +57,7 @@ import './components/article/TableOfContents/tableOfContents';
 import './components/article/DocumentDownload/documentDownload';
 import './components/article/ArticleHero/articleHero';
 import './components/article/RegionalVariationBlock/regionalVariationBlock';
-import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
+import './components/article/BackTo/backTo';
 
 /* Layout Components */
 import './layout/formLayout/formLayout';
@@ -70,6 +70,8 @@ import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
 import pagination from "./components/search/Pagination/pagination";
 import searchBar from "./components/search/SearchBar/searchBar";
 import sortBy from "./components/search/SortBy/sortBy";
+import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
+import stickySidebar from './components/article/StickySidebar/stickySidebar';
 
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars();
@@ -83,3 +85,4 @@ datepicker();
 accordion();
 header();
 pdfAndPrintButtons();
+stickySidebar();

@@ -16,7 +16,7 @@ TextOnly.args = {
 export const WithLink = args => regionalVariationBlock(args);
 WithLink.args = {
   region: ['Northern Ireland'],
-  wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>',
+  wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, <a class="external-link" href="#">This is an external link</a> sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>',
   transparent_background: true,
 }
 
