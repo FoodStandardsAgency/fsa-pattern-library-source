@@ -31,20 +31,29 @@ jobs:
         run: yarn
 
       # Runs a set of commands using the runners shell
-      - name: Build the assets
+      - name: ESLint & Build the assets
         run: yarn build 
 
       - name: Set env.BRANCH
         run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
 
       - name: Set env.COMMIT
-        run: echo "COMMIT=$(expr match 'git log -1 --oneline' '[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_ENV
+        run: echo "COMMIT=$(git log -1 --oneline)" >> $GITHUB_ENV
 
       - name: Display COMMIT
-        run: echo "${{env.COMMIT }}"
-      #  uses: technote-space/package-version-check-action@v1
-      #  with:
-      #    NEXT_VERSION: ${GITHUB_REF_NAME}
+        run: echo "${{ env.COMMIT }}"
+
+      - name: Set env.VERSION
+        run: echo VERSION=$(echo "${{ env.COMMIT }}" | grep -E -o "[0-9]+\.[0-9]+\.[0-9]+") >> $GITHUB_ENV
+
+      - name: Display VERSION
+        run: echo "${{ env.VERSION }}"
+
+      - name: Update Package.json version
+        uses: technote-space/package-version-check-action@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+          NEXT_VERSION: ${{ env.VERSION }}
 
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${{ env.BRANCH }}

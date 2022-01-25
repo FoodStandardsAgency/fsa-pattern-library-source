@@ -38,6 +38,17 @@ Error.args = {
   value: ''
 };
 
+export const DefaultValue = Template.bind({});
+DefaultValue.args = {
+  name: 'email',
+  label: 'Email or username',
+  caption: 'Enter your email address or username.',
+  required: "",
+  error: false,
+  error_message: 'Unrecognized username or password',
+  value: 'test@example.com'
+};
+
 export const Password = Template.bind({});
 Password.args = {
   name: 'password',

@@ -9,5 +9,5 @@
   {% if desc_is_defined %}
     <p class="textarea__description" id={{ desc_id }}>{{ description }}</p>
   {% endif %}
-  <textarea class="textarea__field textarea__field--{{ desc_is_defined ? "with-desc" : "" }}" name={{ name }} id={{ label_id }} rows={{ rows is defined ? rows : "5" }} {{ required ? "required" : "" }} {{ desc_is_defined ? "aria-describedby=" ~ desc_id : "" }}></textarea>
+  <textarea class="textarea__field textarea__field--{{ desc_is_defined ? "with-desc" : "" }}" name={{ name }} id={{ label_id }} rows={{ rows is defined ? rows : "5" }} {{ required ? "required" : "" }} {{ desc_is_defined ? "aria-describedby=" ~ desc_id : "" }}>{{ value }}</textarea>
 </div>
