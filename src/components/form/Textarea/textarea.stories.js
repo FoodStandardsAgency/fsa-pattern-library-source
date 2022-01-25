@@ -27,3 +27,14 @@ Error.args = {
   error: true,
   required: 'required',
 };
+
+export const DefaultValue = Template.bind({});
+DefaultValue.args = {
+  error: false,
+  name: 'crime',
+  label: 'What is the food crime you are reporting?',
+  required: 'required',
+  description: 'Please describe the food crime that you are reporting',
+  rows: 10,
+  value: "My custom text"
+};
