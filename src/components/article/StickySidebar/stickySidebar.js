@@ -8,10 +8,12 @@ export default function () {
       return;
     }
 
+    // Work out whether the screensize is mobile/desktop
     function getMode() {
       return window.innerWidth < 1024 ? 'mobile' : 'desktop';
     }
 
+    // If on desktop, leave the sidebar in the left region. Otherwise, move it in between the hero and content.
     function moveSidebar(mode, hero, leftRegion, el) {
       if (mode === 'desktop') {
         if (leftRegion.querySelector('.sticky-sidebar')) {
@@ -31,6 +33,7 @@ export default function () {
       }
     }
 
+    // Fixed elements are relative to the screen size. When the sidebar becomes fixed, check its parent's width and set its width to match.
     function changeSidebarWidth(parent, el) {
       const computedStyle = getComputedStyle(parent);
       let parentWidth = parent.clientWidth;
