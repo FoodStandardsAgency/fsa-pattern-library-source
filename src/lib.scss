@@ -261,7 +261,7 @@ $mobileGutter: 1rem;
   padding: 0.6rem 2.5rem;
   cursor: pointer;
   transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
-    border-radius 0.1s ease-out, border-bottom 0.1s ease-out;
+  border-radius 0.1s ease-out, border-bottom 0.1s ease-out;
 
   @if $button-type==primary {
     @include button-primary;
@@ -273,7 +273,7 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
-      0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
+    0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 }
@@ -417,7 +417,7 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
-      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+    0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
   }
@@ -450,7 +450,7 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
-      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+    0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
   }
@@ -512,5 +512,35 @@ $mobileGutter: 1rem;
   @media screen and (min-width: $fsa-lg) {
     @include grid-cols(8, 12);
     @include cols-push(2, 12);
+  }
+}
+
+@mixin list($list-type: ul) {
+  padding-inline-start: 0;
+  list-style-position: inside;
+  @if $list-type==ul {
+    li {
+      display: flex;
+      align-items: center;
+      &:before {
+        content: "\2022";
+        color: var(--fsa-primary_dark-green);
+        font-weight: bold;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        line-height: 1.6;
+      }
+    }
+  }
+  @else if $list-type==ol {
+    li {
+      &::before {
+        content: '';
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+    }
   }
 }
