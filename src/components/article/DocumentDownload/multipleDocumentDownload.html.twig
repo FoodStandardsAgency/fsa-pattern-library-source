@@ -7,72 +7,16 @@
   new_window: 'Open in a new window',
   size: '559.42 KB',
 } %}
-<h2>English</h2>
 {% include './documentDownload.html.twig' with document_args %}
-{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf',   region: [
-  {
-    class: 'England',
-    string: 'England',
-  }
-], }) %}
-{% include './documentDownload.html.twig' with document_args|merge({ format: 'excel',   region: [
-  {
-    class: 'Wales',
-    string: 'Wales',
-  }
-], }) %}
-{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf',   region: [
-  {
-    class: 'Northern Ireland',
-    string: 'Northern Ireland',
-  }
-], }) %}
-{% include './documentDownload.html.twig' with document_args|merge({ format: 'word',  region: [
-  {
-    class: 'England',
-    string: 'England',
-  },
-  {
-    class: 'Wales',
-    string: 'Wales',
-  },
-  {
-    class: 'Northern Ireland',
-    string: 'Northern Ireland',
-  },
-], }) %}
+
+<h2>English</h2>
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Northern Ireland'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'word', region: ['England', 'Northern Ireland'] }) %}
 
 <h2>Welsh</h2>
-{% include './documentDownload.html.twig' with document_args %}
-{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf',   region: [
-  {
-    class: 'England',
-    string: 'Lloegr',
-  }
-], }) %}
-{% include './documentDownload.html.twig' with document_args|merge({ format: 'excel',   region: [
-  {
-    class: 'Wales',
-    string: 'Cymru',
-  }
-], }) %}
-{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf',   region: [
-  {
-    class: 'Northern Ireland',
-    string: 'Gogledd Iwerddon',
-  }
-], }) %}
-{% include './documentDownload.html.twig' with document_args|merge({ format: 'word',  region: [
-  {
-    class: 'England',
-    string: 'Lloegr',
-  },
-  {
-    class: 'Wales',
-    string: 'Cymru',
-  },
-  {
-    class: 'Northern Ireland',
-    string: 'Gogledd Iwerddon',
-  },
-], }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Lloegr'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Cymru'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Gogledd Iwerddon'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'word', region: ['Lloegr', 'Gogledd Iwerddon'] }) %}

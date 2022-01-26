@@ -56,12 +56,7 @@
       however, it is not suitable for those who have an allergy to Oats.'
   } %}
   {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
-    region: [
-      {
-        class: 'England',
-        string: 'England',
-      }
-    ],
+    region: ['Wales'],
     wysiwyg_content: '<a href="#">Contact your local council in England</a> to apply for registration as a childminder if you provide food with your childminding business',
     transparent_background: true,
   } %}
@@ -79,22 +74,9 @@
      if they have bought the products.'
   } %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: [
-    {
-      class: 'England',
-      string: 'England',
-    }
-  ], }) %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'excel', region: [
-    {
-      class: 'England',
-      string: 'England',
-    },
-    {
-      class: 'Wales',
-      string: 'Wales',
-    }
-  ], }) %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Northern Ireland'] }) %}
   <br/> {# Remove once the article footer is created #}
   {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
     multipage_guide: true,
