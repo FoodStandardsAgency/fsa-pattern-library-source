@@ -380,12 +380,15 @@ $mobileGutter: 1rem;
 
       .#{$input-type}__fields {
         border: 4px solid var(--fsa-secondary_mid-red);
-        margin: 0.5rem 0 0 -4px;
+        margin: 2rem 0 0 -4px;
         padding: 0 0.5rem 0.5rem;
 
         @media screen and (min-width: $fsa-md) {
           margin-left: calc(-0.5rem - 4px);
         }
+      }
+      .#{$input-type}__description + .#{$input-type}__fields {
+        margin-top: 0.5rem;
       }
 
       .#{$input-type}__field {

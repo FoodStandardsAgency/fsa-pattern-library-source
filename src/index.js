@@ -58,7 +58,9 @@ import './components/article/DocumentDownload/documentDownload';
 import './components/article/ArticleHero/articleHero';
 import './components/article/RegionalVariationBlock/regionalVariationBlock';
 import './components/article/TextBlock/textBlock';
+import './components/article/BackTo/backTo';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
+import stickySidebar from './components/article/StickySidebar/stickySidebar';
 
 /* Layout Components */
 import './layout/formLayout/formLayout';
@@ -84,3 +86,4 @@ datepicker();
 accordion();
 header();
 pdfAndPrintButtons();
+stickySidebar();

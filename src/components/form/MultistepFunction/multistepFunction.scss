@@ -10,6 +10,7 @@
   }
 
   &__previous {
+    @include body;
     @include link;
     padding: 0.5rem 0;
     background-image: url("./assets/previous-arrow.svg");
@@ -17,6 +18,9 @@
     background-size: 1.6rem 1rem;
     background-repeat: no-repeat;
     padding-left: 2rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 
     @media screen and (min-width: $fsa-xs) {
       margin-left: 0;
