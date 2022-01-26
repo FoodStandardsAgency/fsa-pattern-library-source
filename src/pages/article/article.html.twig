@@ -21,10 +21,29 @@
     'url': null
   },
 ] %}
-{% block top %}
+{% block header %}
   {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
     items: breadcrumb_items,
     expanded: false,
+  } %}
+{% endblock %}
+{% block top %}
+  {% include '@components/components/article/ArticleHero/articleHero.html.twig' with {
+    type: 'alerts',
+    type_string: 'Allergy alert',
+    region: ['England'],
+    title: 'Worthenshaws recalls Kirsty’s Classic Beef Lasagne because of inaccurate allergen information on the label',
+    description: 'Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet, however, it is not suitable for those who have an allergy to Oats.',
+    last_updated_string: 'Last updated',
+    last_updated_date: '20 December 2017',
+    specific: 'specific',
+    pdf_link: '#',
+    pdf_name: 'Kirsty’s Classic Beef Lasagne Alert',
+    view: 'View',
+    as: 'as',
+    pdf: 'PDF',
+    new_window: 'Opens in a new window',
+    print_this_page: 'Print this page',
   } %}
 {% endblock %}
 {% block left %}
@@ -51,23 +70,6 @@
   } %}
 {% endblock %}
 {% block right %}
-  {% include '@components/components/article/ArticleHero/articleHero.html.twig' with {
-    type: 'alerts',
-    type_string: 'Allergy alert',
-    region: ['England'],
-    title: 'Worthenshaws recalls Kirsty’s Classic Beef Lasagne because of inaccurate allergen information on the label',
-    description: 'Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet, however, it is not suitable for those who have an allergy to Oats.',
-    last_updated_string: 'Last updated',
-    last_updated_date: '20 December 2017',
-    specific: 'specific',
-    pdf_link: '#',
-    pdf_name: 'Kirsty’s Classic Beef Lasagne Alert',
-    view: 'View',
-    as: 'as',
-    pdf: 'PDF',
-    new_window: 'Opens in a new window',
-    print_this_page: 'Print this page',
-  } %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
     title: 'Alert',
     tag: 'h3',

@@ -13,32 +13,17 @@ export default function () {
       return window.innerWidth < 1024 ? 'mobile' : 'desktop';
     }
 
-    // If on desktop, leave the sidebar in the left region. Otherwise, move it in between the hero and content.
-    function moveSidebar(mode, hero, leftRegion, el) {
-      if (mode === 'desktop') {
-        if (leftRegion.querySelector('.sticky-sidebar')) {
-          return;
-        }
-        else {
-          leftRegion.prepend(el);
-        }
+    // Fixed elements are relative to the screen size. When the sidebar becomes fixed, check its parent's width and set its width to match.
+    function changeSidebarWidth(parent, el, mode) {
+      if (mode === 'mobile') {
+        el.style.width = 'auto';
       }
       else {
-        if (hero.nextElementSibling.classList.contains('sticky-sidebar')) {
-          return;
-        }
-        else {
-          hero.parentNode.insertBefore(el, hero.nextSibling);
-        }
+        const computedStyle = getComputedStyle(parent);
+        let parentWidth = parent.clientWidth;
+        parentWidth -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
+        el.style.width = parentWidth + 'px';
       }
-    }
-
-    // Fixed elements are relative to the screen size. When the sidebar becomes fixed, check its parent's width and set its width to match.
-    function changeSidebarWidth(parent, el) {
-      const computedStyle = getComputedStyle(parent);
-      let parentWidth = parent.clientWidth;
-      parentWidth -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
-      el.style.width = parentWidth + 'px';
     }
 
     const viewportOffset = el.getBoundingClientRect();
@@ -48,25 +33,22 @@ export default function () {
     const leftRegion = document.querySelector('.content-layout__left');
 
     let mode = getMode();
-    if (mode === 'mobile') {
-      moveSidebar(mode, hero, leftRegion, el);
-    }
 
     window.addEventListener('resize', () => {
       mode = getMode();
-      moveSidebar(mode, hero, leftRegion, el);
-      changeSidebarWidth(parent, el);
+      changeSidebarWidth(parent, el, mode);
     });
 
     window.addEventListener('scroll', () => {
+      mode = getMode();
       if (mode === 'desktop') {
         const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         if (scrollTop + 18 >= top) {
           el.classList.add('sticky-sidebar--fixed');
-          changeSidebarWidth(parent, el);
+          changeSidebarWidth(parent, el, mode);
         } else {
           el.classList.remove('sticky-sidebar--fixed');
-          changeSidebarWidth(parent, el);
+          changeSidebarWidth(parent, el, mode);
         }
       }
     });

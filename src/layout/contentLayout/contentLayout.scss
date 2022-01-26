@@ -16,22 +16,41 @@
     }
   }
 
-  &__top {
+  &__header {
     @include grid-cols(4, 4);
     margin-bottom: 3rem;
     @media screen and (min-width: $fsa-lg) {
       @include grid-cols(12);
     }
   }
+
+  &__page {
+    position: relative;
+  }
+
+  &__top {
+    @include grid-cols(4, 4);
+    margin-bottom: 3rem;
+    @media screen and (min-width: $fsa-lg) {
+      @include grid-cols(8);
+      @include cols-push(4);
+    }
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(7);
+    }
+  }
   &__left {
     @include grid-cols(4, 4);
     @media screen and (min-width: $fsa-lg) {
       @include grid-cols(4);
+      position: absolute;
+      top: 0;
     }
   }
   &__right {
     @include grid-cols(4, 4);
     @media screen and (min-width: $fsa-lg) {
+      @include cols-push(4);
       @include grid-cols(8);
     }
     @media screen and (min-width: $fsa-xl) {
