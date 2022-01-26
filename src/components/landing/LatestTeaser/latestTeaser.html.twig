@@ -7,7 +7,9 @@
           <h2 class="latest-teaser__title">{{ title }}</h2>
         {% endif %}
         {% if description %}
-          <div class="latest-teaser__description">{{ description|raw }}</div>
+          <div class="latest-teaser__description">
+            <p>{{ description|raw }}</p>
+          </div>
         {% endif %}
         {% if teaser_link_url %}
           <div class="latest-teaser__link-wrapper">
