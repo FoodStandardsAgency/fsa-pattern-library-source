@@ -25,6 +25,14 @@ TextBlock.args = {
       '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in commodo magna. Pellentesque habitant morbi\n' +
       '    tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n' +
       '\n' +
+      '<h2>Text styles</h2>\n' +
+      '<p>' +
+      '  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Nulla eget odio nisl. Sed iaculis metus felis, non' +
+      '  dapibus nisl congue a.</b> Nam tempor, neque eu sodales vehicula, massa nisl maximus nibh, <u>sit amet sagittis sem' +
+      '  tellus sed urna</u>. Morbi tristique elit at quam molestie, <em>vel blandit mi iaculis</em>. Sed ut venenatis' +
+      '  tortor. Proin sed augue ut est luctus egestas a placerat est. Fusce efficitur pharetra odio quis venenatis.' +
+      '</p>' +
+      '\n' +
       '<h2>Ordered List</h2>\n' +
       '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n' +
       '<ol>\n' +
