@@ -44,8 +44,14 @@ export default function () {
 
     //Get top level menu
     const topLevel = navigation.querySelector('.navigation__menu--level-1');
+    if (!topLevel) {
+      return;
+    }
     // Get all top level links
     const topLevelLinks = topLevel.querySelectorAll('.navigation__menu--level-1 > .navigation__link');
+    if (!topLevelLinks) {
+      return;
+    }
 
     // Initialise arrow navigation
     menuArrows(topLevelLinks);
@@ -85,6 +91,9 @@ export default function () {
 
     // Get all second level links
     const secondLevel = navigation.querySelectorAll('.navigation__submenu');
+    if (!secondLevel) {
+      return;
+    }
     // Handle submenu opening and navigation
     secondLevel.forEach((submenu) => {
       // Need to do this for each group

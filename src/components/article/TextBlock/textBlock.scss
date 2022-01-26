@@ -1,0 +1,13 @@
+@import "src/lib.scss";
+
+.text-block {
+  a {
+    @include link();
+  }
+  ul {
+    @include list(ul);
+  }
+  ol {
+    @include list(ol);
+  }
+}
