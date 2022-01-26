@@ -22,14 +22,62 @@ WithoutRegion.args = {
 export const WithOneRegion = Template.bind({});
 WithOneRegion.args = {
   ...WithoutRegion.args,
-  region: ['England'],
+  region: [
+    {
+      class: 'England',
+      string: 'England',
+    }
+  ],
   format: 'pdf',
 };
 
 export const WithMultipleRegions = Template.bind({});
 WithMultipleRegions.args = {
-  ...WithOneRegion.args,
-  region: ['England', 'Wales', 'Northern Ireland'],
+  ...WithoutRegion.args,
+  region: [
+    {
+      class: 'England',
+      string: 'England',
+    },
+    {
+      class: 'Wales',
+      string: 'Wales',
+    },
+    {
+      class: 'Northern Ireland',
+      string: 'Northern Ireland',
+    },
+  ],
+}
+
+export const Translated = Template.bind({});
+Translated.args = {
+  ...WithoutRegion.args,
+  region: [
+    {
+      class: 'England',
+      string: 'Lloegr',
+    }
+  ],
+}
+
+export const TranslatedMultipleRegions = Template.bind({});
+TranslatedMultipleRegions.args = {
+  ...WithoutRegion.args,
+  region: [
+    {
+      class: 'England',
+      string: 'Lloegr',
+    },
+    {
+      class: 'Wales',
+      string: 'Cymru',
+    },
+    {
+      class: 'Northern Ireland',
+      string: 'Gogledd Iwerddon',
+    },
+  ],
 }
 
 export const List = () => multipleDocumentDownload();
