@@ -29,8 +29,6 @@ export default function () {
     const viewportOffset = el.getBoundingClientRect();
     const top = viewportOffset.top;
     const parent = el.parentNode;
-    const hero = document.querySelector('.article-hero');
-    const leftRegion = document.querySelector('.content-layout__left');
 
     let mode = getMode();
 
