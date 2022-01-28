@@ -3,6 +3,12 @@
 .pdf-and-print-buttons {
   display: flex;
   justify-content: space-between;
+  @media screen and (min-width: $fsa-lg) {
+    justify-content: flex-end;
+  }
+  &__text-wrapper {
+    text-align: left;
+  }
   &__button {
     @include body();
     color: var(--fsa-primary_dark-green);
@@ -17,8 +23,9 @@
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 10rem;
-        height:2.75rem;
+        height: 2.75rem;
         width: 2.75rem;
+        min-width: 2.75rem;
         margin-right: 0.5rem;
       }
       &:hover {
