@@ -3,6 +3,7 @@
 .external-link {
   @include link;
   padding-right: 1.25rem;
+  margin-right: 0.25rem;
   position: relative;
   &::after {
     content: "";

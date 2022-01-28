@@ -518,18 +518,16 @@ $mobileGutter: 1rem;
 @mixin list($list-type: ul) {
   padding-inline-start: 0;
   list-style-position: inside;
+  @include body();
+  line-height: 1.6;
   @if $list-type==ul {
     li {
-      display: flex;
-      align-items: center;
       &:before {
-        content: "\2022";
+        content: '\25CF';
         color: var(--fsa-primary_dark-green);
         font-weight: bold;
         display: inline-block;
-        font-size: 1.5rem;
         margin-right: 1rem;
-        line-height: 1.6;
       }
     }
   }
@@ -537,9 +535,7 @@ $mobileGutter: 1rem;
     li {
       &::before {
         content: '';
-        margin-left: 1rem;
-        font-size: 1.5rem;
-        line-height: 1.6;
+        margin-left: 0.5rem;
       }
     }
   }
