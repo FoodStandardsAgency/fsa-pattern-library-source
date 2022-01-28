@@ -115,9 +115,4 @@
     multipage_guide_pdf_link: '#',
     multipage_guide_print_link: '#',
   } %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Northern Ireland'] }) %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'word', region: ['England', 'Northern Ireland'] }) %}
 {% endblock %}
