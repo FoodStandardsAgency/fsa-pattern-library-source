@@ -23,16 +23,15 @@
     left: -5px;
     top: -1px;
   }
-
-  &--england:before {
+  &--england:before, &--lloegr:before {
     background-color: var(--fsa-secondary_mid-red);
   }
 
-  &--wales:before {
+  &--wales:before, &--cymru:before {
     background-color: var(--fsa-tertiary_stripe-green);
   }
 
-  &--northern-ireland:before {
+  &--northern-ireland:before, &--gogledd-iwerddon:before {
     background-color: var(--fsa-secondary_mid-yellow);
   }
 

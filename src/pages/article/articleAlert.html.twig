@@ -3,7 +3,7 @@
   format: 'word',
   link: '#',
   view: 'View',
-  name: 'Step by step guide for meat approvals application',
+  name: 'Allergy alert - Kirsty’s Classic Beef Lasagne Alert',
   as: 'as',
   new_window: 'Open in a new window',
   size: '559.42 KB',} %}
@@ -13,11 +13,15 @@
     'url': '/'
   },
   {
-    'text': 'News',
-    'url': '/news'
+    'text': 'News and alerts',
+    'url': '/news-and-alerts'
   },
   {
-    'text': 'Hazard Analysis and Critical Control Point (HACCP)',
+    'text': 'Alerts',
+    'url': '/alerts'
+  },
+  {
+    'text': 'Kirsty’s Classic Beef Lasagne Alert',
     'url': null
   },
 ] %}
@@ -51,25 +55,16 @@
     sidebar_items: [
       {
         type: 'back_to',
-        label: 'All alerts',
+        label: 'Back to alerts',
         url: '#',
-      },
-      {
-        type: 'table_of_contents',
-        title: 'On this page',
-        links: [
-          { label: 'Explaning hazards', href: '#' },
-          { label: 'Food safety management procedures', href: '#' },
-          { label: 'HACCP system in meat plants', href: '#' },
-          { label: 'MyHACCP', href: '#' },
-          { label: 'MyHACCP step by step', href: '#' },
-          { label: 'Small business and retailers', href: '#' },
-        ],
       },
     ],
   } %}
 {% endblock %}
 {% block right %}
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: '<p>Worthenshaws Ltd is recalling Kirsty’s Classic Beef Lasagne because it contains a statement on the label that the product is free from all 14 allergens, which is not accurate as the product contains oats (that are gluten free). Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet, however, it is not suitable for those who have an allergy to Oats.</p>'
+  } %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
     title: 'Alert',
     tag: 'h3',
@@ -78,16 +73,12 @@
       Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet,
       however, it is not suitable for those who have an allergy to Oats.'
   } %}
-  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
-    region: ['Wales'],
-    wysiwyg_content: '<a href="#">Contact your local council in England</a> to apply for registration as a childminder if you provide food with your childminding business',
-    transparent_background: true,
-  } %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
     title: 'Risk statement',
     tag: 'h3',
     description: 'Allergen(s): Oats (that are gluten free)</ br>These products contain oats (that are gluten free) making it a possible health risk for anyone with an allergy to oats'
   } %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
     title: 'Action taken by the company',
     tag: 'h3',
@@ -96,14 +87,17 @@
      to its customers. These notices explain to customers why the products are being recalled and tell them what to do
      if they have bought the products.'
   } %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
+  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+    region: ['England'],
+    wysiwyg_content: 'If you have bought the above products and have an allergy to oats (that are gluten free), do not eat them. Instead return it to the <a href="#">store</a> from where it was bought for a full refund.',
+    transparent_background: true,
+  } %}
   <br /> {# Remove once the article footer is created #}
   {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
     multipage_guide: true,
     pdf_link: '#',
     pdf_name: 'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
+    pdf_name: 'Kirsty’s Classic Beef Lasagne Alert',
     view: 'View',
     as: 'as',
     pdf: 'PDF',

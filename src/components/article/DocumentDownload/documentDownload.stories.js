@@ -32,4 +32,10 @@ WithMultipleRegions.args = {
   region: ['England', 'Wales', 'Northern Ireland'],
 }
 
+export const Translated = Template.bind({});
+Translated.args = {
+  ...WithOneRegion.args,
+  region: ['Lloegr', 'Cymru', 'Gogledd Iwerddon'],
+}
+
 export const List = () => multipleDocumentDownload();

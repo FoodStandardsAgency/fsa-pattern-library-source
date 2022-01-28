@@ -1,13 +1,13 @@
-import article from './article.html.twig';
+import article from './articleAlert.html.twig';
 
 export default {
-  title: 'Pages/Article',
+  title: 'Pages/Article/Alert',
   parameters: {
     controls: { disabled: true },
     layout: 'fullscreen',
   },
 };
 
-export const Article = () => {
+export const Alert = () => {
   return article();
 };

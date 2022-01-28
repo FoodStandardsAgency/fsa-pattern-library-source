@@ -8,7 +8,15 @@
   size: '559.42 KB',
 } %}
 {% include './documentDownload.html.twig' with document_args %}
+
+<h2>English</h2>
 {% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
 {% include './documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
 {% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Northern Ireland'] }) %}
 {% include './documentDownload.html.twig' with document_args|merge({ format: 'word', region: ['England', 'Northern Ireland'] }) %}
+
+<h2>Welsh</h2>
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Lloegr'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Cymru'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Gogledd Iwerddon'] }) %}
+{% include './documentDownload.html.twig' with document_args|merge({ format: 'word', region: ['Lloegr', 'Gogledd Iwerddon'] }) %}

@@ -25,17 +25,17 @@
     top: -1px;
   }
 
-  &--england:before {
-    background-color: var(--fsa-secondary_mid-red);
-  }
+   &--england:before, &--lloegr:before {
+     background-color: var(--fsa-secondary_mid-red);
+   }
 
-  &--wales:before {
-    background-color: var(--fsa-tertiary_stripe-green);
-  }
+   &--wales:before, &--cymru:before {
+     background-color: var(--fsa-tertiary_stripe-green);
+   }
 
-  &--northern-ireland:before {
-    background-color: var(--fsa-secondary_mid-yellow);
-  }
+   &--northern-ireland:before, &--gogledd-iwerddon:before {
+     background-color: var(--fsa-secondary_mid-yellow);
+   }
 
   &--multi:before {
     background-color: var(--fsa-primary_dark-grey);
@@ -59,6 +59,11 @@
     }
     .document-download__region {
       display: none;
+    }
+    .document-download__content {
+      &--with-region {
+        margin-top: 0;
+      }
     }
     ul {
       list-style: disc;
