@@ -1,0 +1,100 @@
+{% extends '../../layout/contentLayout/contentLayout.html.twig' %}
+{% set document_args = {
+  format: 'word',
+  link: '#',
+  view: 'View',
+  name: 'Step by step guide for meat approvals application',
+  as: 'as',
+  new_window: 'Open in a new window',
+  size: '559.42 KB',} %}
+{% set breadcrumb_items = [
+  {
+    'text': 'Home',
+    'url': '/'
+  },
+  {
+    'text': 'Business guidance',
+    'url': '#'
+  },
+  {
+    'text': 'Industry-specific advice',
+    'url': '#'
+  },
+  {
+    'text': 'Placing a regulated product on the market',
+    'url': null
+  },
+] %}
+{% block header %}
+  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+    items: breadcrumb_items,
+    expanded: false,
+  } %}
+{% endblock %}
+{% block top %}
+  {% include '@components/components/article/ArticleHero/articleHero.html.twig' with {
+    title: 'Placing a regulated product on the market',
+    description: 'Pre-market approval procedure for food and animal feed products and processes requiring authorisation.',
+    last_updated_string: 'Last updated',
+    last_updated_date: '31 December 2020',
+    specific: 'specific',
+    pdf_link: '#',
+    pdf_name: 'Placing a regulated product on the market',
+    view: 'View',
+    as: 'as',
+    pdf: 'PDF',
+    new_window: 'Opens in a new window',
+    print_this_page: 'Print this page',
+  } %}
+{% endblock %}
+{% block left %}
+  {% include '@components/components/article/StickySidebar/stickySidebar.html.twig' with {
+    sidebar_items: [
+      {
+        type: 'table_of_contents',
+        title: 'On this page',
+        links: [
+        { label: 'Placing your product on the market in Great Britain', href: '#gb-market' },
+        { label: 'Placing your product on the Northern Ireland market', href: '#ni-market' },
+      ],
+      },
+    ],
+  } %}
+{% endblock %}
+{% block right %}
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: '<p>Certain food and feed products, called regulated products, require authorisation before they can be sold in the
+    UK.</p>
+<p>Authorisation is required for the following regulated product types:</p>
+<ul>
+    <li>extraction solvents</li>
+    <li>feed additives</li>
+    <li>feed for particular nutritional uses</li>
+    <li>feed detoxification processes</li>
+    <li>flavourings</li>
+    <li>food contact materials</li>
+</ul>
+<p>For most regulated product types, once products or processes are authorised, they are listed in relevant legislation,
+    which also sets out how they can be used. These lists are referred to as positive lists.</p>'
+  } %}
+  <h2 id="gb-market">Placing your product on the market in Great Britain</h2>
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: 'The FSA with Food Standards Scotland (FSS) will carry out a risk analysis process for regulated products and provide advice to ministers, who will decide whether the product can be placed on the market in England, Wales and Scotland. When a decision is made to authorise a product, this will mean a change to the legislation. The legislation will set out how the product can be used and any associated conditions of use.'
+  } %}
+  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+    region: ['England'],
+    wysiwyg_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu congue blandit tincidunt. Pellentesque et elit nulla. Nullam posuere massa nec facilisis placerat. ',
+    transparent_background: false,
+  } %}
+  <h2 id="ni-market">Placing your product on the market in Northern Ireland</h2>
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: 'The EU law that applies to Northern Ireland is specified in Annex II to the <a href="#" class="external-link">Northern Ireland Protocol</a>. This means that any business seeking a new authorisation for a regulated food and feed product marketed in
+    Northern Ireland will have to continue to follow EU rules.',
+
+  } %}
+  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+    region: ['Northern Ireland'],
+    wysiwyg_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu congue blandit tincidunt. Pellentesque et elit nulla. Nullam posuere massa nec facilisis placerat. ',
+    transparent_background: true,
+  } %}
+{% endblock %}
