@@ -21,15 +21,13 @@
     'url': null
   },
 ] %}
-{% block top %}
+{% block header %}
   {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
     items: breadcrumb_items,
     expanded: false,
   } %}
 {% endblock %}
-{% block left %}
-{% endblock %}
-{% block right %}
+{% block top %}
   {% include '@components/components/article/ArticleHero/articleHero.html.twig' with {
     type: 'alerts',
     type_string: 'Allergy alert',
@@ -47,6 +45,31 @@
     new_window: 'Opens in a new window',
     print_this_page: 'Print this page',
   } %}
+{% endblock %}
+{% block left %}
+  {% include '@components/components/article/StickySidebar/stickySidebar.html.twig' with {
+    sidebar_items: [
+      {
+        type: 'back_to',
+        label: 'All alerts',
+        url: '#',
+      },
+      {
+        type: 'table_of_contents',
+        title: 'On this page',
+        links: [
+          { label: 'Explaning hazards', href: '#' },
+          { label: 'Food safety management procedures', href: '#' },
+          { label: 'HACCP system in meat plants', href: '#' },
+          { label: 'MyHACCP', href: '#' },
+          { label: 'MyHACCP step by step', href: '#' },
+          { label: 'Small business and retailers', href: '#' },
+        ],
+      },
+    ],
+  } %}
+{% endblock %}
+{% block right %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
     title: 'Alert',
     tag: 'h3',
@@ -76,12 +99,12 @@
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Northern Ireland'] }) %}
-  <br/> {# Remove once the article footer is created #}
+  <br /> {# Remove once the article footer is created #}
   {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
     multipage_guide: true,
     pdf_link: '#',
     pdf_name: 'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
+    pdf_name: 'Kirsty’s Classic Beef Lasagne Alert',
     view: 'View',
     as: 'as',
     pdf: 'PDF',
@@ -92,4 +115,9 @@
     multipage_guide_pdf_link: '#',
     multipage_guide_print_link: '#',
   } %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'excel', region: ['Wales'] }) %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['Northern Ireland'] }) %}
+  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'word', region: ['England', 'Northern Ireland'] }) %}
 {% endblock %}

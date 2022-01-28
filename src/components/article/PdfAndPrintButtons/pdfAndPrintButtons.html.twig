@@ -1,6 +1,6 @@
 <div class="pdf-and-print-buttons">
   <div class="pdf-and-print-buttons__button pdf-and-print-buttons__button--pdf">
-    <a href="{{ multipage_guide_pdf_link ? multipage_guide_pdf_link : pdf_link }}">
+    <a href="{{ multipage_guide_pdf_link ? multipage_guide_pdf_link : pdf_link }}" target=”_blank”>
       <div class="pdf-and-print-buttons__text-wrapper">
         {% if multipage_guide %}
           {{ view_entire_guide }}<span class="visually-hidden">({{ new_window }})</span>
@@ -13,7 +13,7 @@
   </div>
   <div class="pdf-and-print-buttons__button pdf-and-print-buttons__button--print">
     {% if multipage_guide %}
-      <a href="{{ multipage_guide_print_link }}">
+      <a href="{{ multipage_guide_print_link }}" target=”_blank”>
         <div class="pdf-and-print-buttons__text-wrapper">
           {{ print_guide }}<span class="visually-hidden">({{ new_window }})</span>
         </div>

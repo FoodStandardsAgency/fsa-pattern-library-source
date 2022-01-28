@@ -1,0 +1,20 @@
+@import "src/lib.scss";
+
+.sticky-sidebar {
+  margin-top: 2rem;
+  @media screen and (min-width: $fsa-lg) {
+     margin-top: 0;
+  }
+  &--fixed {
+    @media screen and (min-width: $fsa-lg) {
+      top: 1rem;
+      position: fixed;
+    }
+  }
+  &__content-item {
+    margin-top: 2rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
