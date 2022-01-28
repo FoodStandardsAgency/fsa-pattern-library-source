@@ -5,6 +5,7 @@
   padding-right: 1.25rem;
   margin-right: 0.25rem;
   position: relative;
+  display: inline-block;
   &::after {
     content: "";
     background-image: url("./assets/external.svg");
