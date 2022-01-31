@@ -62,6 +62,24 @@
   } %}
 {% endblock %}
 {% block right %}
+  {% include '../../components/article/ContentMetaData/contentMetaData.html.twig' with {
+    meta_data: [
+      {
+        label: 'Research programme',
+        content: 'Food allergy and intolerance research',
+        url: '#',
+      },{
+        label: 'Study duration',
+        content: 'January 2010 to March 2010',
+      },{
+        label: 'Project code',
+        content: 'T07063',
+      },{
+        label: 'Conducted by',
+        content: 'Jigsaw Research',
+      },
+    ],
+  } %}
   {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
     content: '<p>Worthenshaws Ltd is recalling Kirsty’s Classic Beef Lasagne because it contains a statement on the label that the product is free from all 14 allergens, which is not accurate as the product contains oats (that are gluten free). Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet, however, it is not suitable for those who have an allergy to Oats.</p>'
   } %}

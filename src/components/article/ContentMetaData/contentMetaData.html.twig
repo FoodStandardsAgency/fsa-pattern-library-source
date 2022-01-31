@@ -1,0 +1,15 @@
+<div class="content-meta-data">
+  {% for item in meta_data %}
+    <div class="content-meta-data__item">
+      <span class="content-meta-data__item__label">{{ item.label }}: </span>
+      <span class="content-meta-data__item__content">
+        {% if item.url %}
+          <a href="{{ item.url }}"
+             data-fsa-at="research-programme-{{ item.content|striptags|replace({" ": "-"})|lower }}">{{ item.content }}</a>
+        {% else %}
+          {{ item.content }}
+        {% endif %}
+      </span>
+    </div>
+  {% endfor %}
+</div>
