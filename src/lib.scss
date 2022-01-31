@@ -519,7 +519,7 @@ $mobileGutter: 1rem;
   counter-reset: list;
   padding-inline-start: 0;
   list-style-position: outside;
-  list-style: none;
+  list-style-type: none;
   @include body();
   line-height: 1.6;
   li {
