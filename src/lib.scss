@@ -520,6 +520,7 @@ $mobileGutter: 1rem;
   padding-inline-start: 0;
   list-style-position: outside;
   list-style-type: none;
+  padding: 0;
   @include body();
   line-height: 1.6;
   li {
