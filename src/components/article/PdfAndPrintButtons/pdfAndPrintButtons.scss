@@ -2,8 +2,7 @@
 
 .pdf-and-print-buttons {
   display: flex;
-  justify-content: space-between;
-  @media screen and (min-width: $fsa-lg) {
+  @media screen and (min-width: $fsa-md) {
     justify-content: flex-end;
   }
   &__text-wrapper {
@@ -13,9 +12,15 @@
     @include body();
     color: var(--fsa-primary_dark-green);
     font-weight: bold;
+    flex: 50%;
+    @media screen and (min-width: $fsa-md) {
+      flex: unset;
+    }
     a, button {
       display: flex;
-      align-items: center;
+      @media screen and (min-width: $fsa-md) {
+        align-items: center;
+      }
       &:before {
         content: '';
         display: block;

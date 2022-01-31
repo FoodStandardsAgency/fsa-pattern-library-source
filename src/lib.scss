@@ -516,17 +516,25 @@ $mobileGutter: 1rem;
 }
 
 @mixin list($list-type: ul) {
+  counter-reset: list;
   padding-inline-start: 0;
-  list-style-position: inside;
+  list-style-position: outside;
+  list-style: none;
   @include body();
   line-height: 1.6;
+  li {
+    margin-left: 1.5rem;
+    &:before {
+      display: inline-block;
+      margin-left: -1.5rem;
+    }
+  }
   @if $list-type==ul {
     li {
       &:before {
         content: '\25CF';
         color: var(--fsa-primary_dark-green);
         font-weight: bold;
-        display: inline-block;
         margin-right: 1rem;
       }
     }
@@ -534,8 +542,9 @@ $mobileGutter: 1rem;
   @else if $list-type==ol {
     li {
       &::before {
-        content: '';
-        margin-left: 0.5rem;
+        counter-increment: list;
+        content: counter(list) '.';
+        margin-right: 0.7rem;
       }
     }
   }

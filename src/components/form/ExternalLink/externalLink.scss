@@ -2,20 +2,17 @@
 
 .external-link {
   @include link;
-  padding-right: 1.25rem;
   margin-right: 0.25rem;
   position: relative;
-  display: inline-block;
+  display: inline;
   &::after {
     content: "";
     background-image: url("./assets/external.svg");
     display: inline-block;
     width: 0.85rem;
     height: 0.85rem;
+    margin-left: 0.25rem;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    right: 0;
-    top: 0.15rem;
   }
 }
