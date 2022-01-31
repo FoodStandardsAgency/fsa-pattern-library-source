@@ -12,7 +12,7 @@
   <div class="dropdown__field">
     <select name="{{ name }}" id={{ id }} class="dropdown__select">
       {% for option in options %}
-        <option value="{{ option.value|lower }}" class="dropdown__option" {{ option.value|lower == default|lower ? "selected" : "" }}>{{ option.text }}</option>
+        <option value="{{ option.value }}" class="dropdown__option" {{ option.value == default ? "selected" : "" }}>{{ option.text }}</option>
       {% endfor %}
     </select>
   </div>
