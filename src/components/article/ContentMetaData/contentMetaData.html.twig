@@ -5,7 +5,7 @@
       <span class="content-meta-data__item__content">
         {% if item.url %}
           <a href="{{ item.url }}"
-             data-fsa-at="research-programme-{{ item.label|striptags|replace({" ": "-"})|lower }}">{{ item.content }}</a>
+             data-fsa-at="research-programme-{{ item.content|striptags|replace({" ": "-"})|lower }}">{{ item.content }}</a>
         {% else %}
           {{ item.content }}
         {% endif %}
