@@ -18,9 +18,10 @@
 
   &__header {
     @include grid-cols(4, 4);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     @media screen and (min-width: $fsa-lg) {
       @include grid-cols(12);
+      margin-bottom: 3rem;
     }
   }
 
