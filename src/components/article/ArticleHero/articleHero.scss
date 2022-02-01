@@ -1,6 +1,10 @@
 @import "src/lib.scss";
 
 .article-hero {
+  margin-bottom: 2rem;
+  @media screen and (min-width: $fsa-md) {
+    margin-bottom: 3rem;
+  }
   &__type {
     @include body();
     text-transform: uppercase;
