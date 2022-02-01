@@ -1,17 +1,7 @@
 <div class="sticky-sidebar">
   {% for item in sidebar_items %}
     <div class="sticky-sidebar__content-item">
-      {% if item.type == 'back_to' %}
-        {% include '@components/components/article/BackTo/backTo.html.twig' with {
-          label: item.label,
-          url: item.url,
-        } %}
-      {% elseif item.type == 'table_of_contents' %}
-        {% include '@components/components/article/TableOfContents/tableOfContents.html.twig' with {
-          title: item.title,
-          links: item.links,
-        } %}
-      {% endif %}
+      {{ item }}
     </div>
   {% endfor %}
 </div>

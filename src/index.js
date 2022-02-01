@@ -60,6 +60,7 @@ import './components/article/RegionalVariationBlock/regionalVariationBlock';
 import './components/article/TextBlock/textBlock';
 import './components/article/BackTo/backTo';
 import './components/article/ContentMetaData/contentMetaData';
+import './components/article/RelatedContent/relatedContent';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 
