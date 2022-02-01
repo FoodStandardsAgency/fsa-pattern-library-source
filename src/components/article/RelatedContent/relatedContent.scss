@@ -1,0 +1,115 @@
+@import "src/lib.scss";
+
+.related-content {
+  @include landing-margin-top;
+
+  &__main-heading {
+    @include h2;
+    color: var(--fsa-primary_black);
+    text-align: center;
+    margin: 0;
+
+    &::after {
+      content: "";
+      background-image: url("./assets/dot.svg");
+      background-repeat: repeat-x;
+      background-size: 1.5rem 0.5rem;
+      width: 13rem;
+      height: 0.5rem;
+      display: block;
+      margin: 0.5rem auto 0rem;
+    }
+  }
+
+  &__grid-container {
+    @include grid-container;
+  }
+
+  &__grid-row {
+    @include grid-row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__card-wrapper {
+    padding: 0 1rem;
+    @include grid-cols(4, 4);
+    margin-top: 1.25rem;
+
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 2rem;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      @include grid-cols(6);
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(4);
+      padding: 0 1rem;
+    }
+  }
+
+  &__card {
+    background-color: var(--fsa_tint);
+    border: solid 4px var(--fsa_border);
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    transition: border-color 0.1s ease-in;
+    position: relative;
+    height: 100%;
+    padding-bottom: 3.75rem;
+
+    &::after {
+      content: "";
+      background-image: url("./assets/arrow.svg");
+      display: inline-block;
+      width: 1.75rem;
+      height: 1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 0.5rem;
+      position: absolute;
+      right: 2rem;
+      bottom: 2.25rem;
+    }
+
+    &:hover {
+      border-color: var(--fsa-primary_dark-green);
+
+      &::after {
+        background-image: url("./assets/arrow-hover.svg");
+      }
+    }
+  }
+
+  &__sub-heading {
+    @include h4;
+    color: var(--fsa-primary_black);
+    margin: 1rem 1.25rem 0;
+
+    @media screen and (min-width: $fsa-md) {
+      margin: 2rem 2.25rem 0;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin: 2rem 2rem 0;
+    }
+  }
+
+  &__description {
+    margin: 1rem 1.25rem 0;
+    @include body;
+    color: var(--fsa-primary_black);
+
+    @media screen and (min-width: $fsa-md) {
+      margin: 1rem 2.25rem 0;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin: 1rem 2rem 0;
+    }
+  }
+}
