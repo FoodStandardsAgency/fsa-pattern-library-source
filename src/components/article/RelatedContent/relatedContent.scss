@@ -55,8 +55,8 @@
     background-color: var(--fsa_tint);
     border: solid 4px var(--fsa_border);
     display: block;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
     transition: border-color 0.1s ease-in;
     position: relative;
     height: 100%;
