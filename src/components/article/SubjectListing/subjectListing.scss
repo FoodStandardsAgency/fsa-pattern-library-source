@@ -1,9 +1,7 @@
 @import "src/lib.scss";
 
 .subject-listing {
-  &__section {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 2rem;
   &__title {
     @include h2();
     margin: 0 0 1rem 0;
