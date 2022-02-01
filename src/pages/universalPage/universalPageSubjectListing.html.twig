@@ -49,36 +49,37 @@
 {% block right %}
   {% include '@components/components/article/SubjectListing/subjectListing.html.twig' with {
     section_header: 'In this section',
-    title: 'Fish and fishery products',
-    links: [
-      { label: 'Live bivalve mollusc (LBM) and fishery product approvals', href: '#' },
-      { label: 'Importing fishery products or bivalve molluscs', href: '#' },
-      { label: 'Freezing requirements for fish and fishery products', href: '#' },
-    ],
-  } %}
-  {% include '@components/components/article/SubjectListing/subjectListing.html.twig' with {
-    section_header: 'In this section',
-    title: 'Shellfish guidance',
-    links: [
-      { label: 'Shellfish Official Controls', href: '#' },
-      { label: 'Classification', href: '#' },
-    ],
-  } %}
-  {% include '@components/components/article/SubjectListing/subjectListing.html.twig' with {
-    section_header: 'In this section',
-    title: 'Monitoring, reports and surveys',
-    links: [
-      { label: 'Shellfish production area assessments', href: '#' },
-      { label: 'Chemical contaminant monitoring', href: '#' },
-      { label: 'Biotoxin and phytoplankton monitoring', href: '#' },
-      { label: 'Supplementary sampling', href: '#' },
-    ],
-  } %}
-  {% include '@components/components/article/SubjectListing/subjectListing.html.twig' with {
-    section_header: 'In this section',
-    title: 'Related content',
-    links: [
-      { label: 'Prepare your business for Brexit', href: '#' },
-    ],
+    subject_listing: [
+      {
+        title: 'Fish and fishery products',
+        links: [
+        { label: 'Live bivalve mollusc (LBM) and fishery product approvals', href: '#' },
+        { label: 'Importing fishery products or bivalve molluscs', href: '#' },
+        { label: 'Freezing requirements for fish and fishery products', href: '#' },
+      ],
+      },
+      {
+        title: 'Shellfish guidance',
+        links: [
+        { label: 'Shellfish Official Controls', href: '#' },
+        { label: 'Classification', href: '#' },
+      ],
+      },
+      {
+        title: 'Monitoring, reports and surveys',
+        links: [
+        { label: 'Shellfish production area assessments', href: '#' },
+        { label: 'Chemical contaminant monitoring', href: '#' },
+        { label: 'Biotoxin and phytoplankton monitoring', href: '#' },
+        { label: 'Supplementary sampling', href: '#' },
+      ],
+      },
+      {
+        title: 'Related content',
+        links: [
+        { label: 'Prepare your business for Brexit', href: '#' },
+      ],
+      },
+    ]
   } %}
 {% endblock %}
