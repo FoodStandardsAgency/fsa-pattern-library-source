@@ -1,0 +1,71 @@
+@import "src/lib.scss";
+
+.subject-listing {
+  &__section {
+    margin-bottom: 2rem;
+  }
+  &__title {
+    @include h2();
+    margin: 0 0 1rem 0;
+  }
+  &__description {
+    @include body();
+    margin: 0 0 1rem 0;
+  }
+  &__section-header {
+    @include body();
+    margin: 0 0 1rem 0;
+    font-weight: bold;
+  }
+  &__link-list {
+    list-style: none;
+    padding: 0;
+    &__item {
+      margin-top: 1.25rem;
+      @media screen and (min-width: $fsa-xl) {
+        margin-top: 1rem;
+      }
+      a {
+        @include body;
+        margin-left: 2.25rem;
+        text-indent: -2.25rem;
+        display: block;
+
+        &,
+        &:active,
+        &:visited {
+          color: var(--fsa-primary_dark-green);
+        }
+
+        &:focus {
+          color: var(--fsa-primary_black);
+          outline: none;
+          background-color: var(--fsa-tertiary_light-yellow);
+          border-bottom: 0.25rem solid var(--fsa-primary_black);
+        }
+
+        &::before {
+          content: "";
+          background-image: url("./assets/arrow.svg");
+          display: inline-block;
+          width: 1.75rem;
+          height: 1rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-right: 0.5rem;
+          position: relative;
+          top: 0.1rem;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--fsa__link-green);
+
+          &::before {
+            background-image: url("./assets/arrow-hover.svg");
+          }
+        }
+      }
+    }
+  }
+}
