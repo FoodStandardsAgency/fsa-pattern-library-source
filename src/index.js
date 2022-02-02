@@ -64,6 +64,7 @@ import './components/article/BackTo/backTo';
 import './components/article/ContentMetaData/contentMetaData';
 import './components/article/RelatedContent/relatedContent';
 import './components/article/SubjectListing/subjectListing';
+import './components/article/QuoteBlock/quoteBlock';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 
