@@ -7,7 +7,6 @@ export default function () {
 
     window.addEventListener('DOMContentLoaded', function () {
         const backToTop = document.querySelector('.back-to-top__link');
-        console.log(backToTop);
         if (!backToTop) {
             return;
         }
