@@ -4,7 +4,7 @@
   background-color: var(--fsa__grey-hover);
   border: 1px solid var(--fsa_border);
   font-size: 0.8rem;
-  padding: 1rem 0.88rem;
+  padding: 1rem;
   position: relative;
 
   @media screen and (min-width: $fsa-md) {
@@ -13,7 +13,7 @@
 
   @media screen and (min-width: $fsa-lg) {
     font-size: 0.9rem;
-    padding: 1rem 18.10rem;
+    padding: 1rem 18rem;
   }
 
   &--warning {
@@ -34,10 +34,10 @@
   &__content {
     display: flex;
     justify-content: flex-start;
-    padding-left: 0.44rem;
+    padding-left: 0.5rem;
 
     @media screen and (min-width: $fsa-md) {
-      padding-left: 0.84rem;
+      padding-left: 1rem;
     }
 
     @media screen and (min-width: $fsa-lg) {
@@ -52,10 +52,10 @@
       min-width: 2rem;
       min-height: 100%;
       position: relative;
-      left: -0.44rem;
+      left: -0.5rem;
 
       @media screen and (min-width: $fsa-md) {
-        left: -0.84rem;
+        left: -1rem;
       }
 
       @media screen and (min-width: $fsa-lg) {
