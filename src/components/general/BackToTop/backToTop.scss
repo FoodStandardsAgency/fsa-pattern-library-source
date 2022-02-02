@@ -4,6 +4,7 @@
   &__link {
     @include link;
     display: table;
+
     &::before {
       content: "";
       background-image: url("./assets/arrow-up.svg");
@@ -16,12 +17,7 @@
       vertical-align: middle;
     }
 
-    &:hover {
-      &::before {
-        background-image: url("./assets/arrow-up-hover.svg");
-      }
-    }
-    &:focus {
+    &:hover, &:focus {
       &::before {
         background-image: url("./assets/arrow-up-hover.svg");
       }
