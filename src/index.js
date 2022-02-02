@@ -12,6 +12,7 @@ import './components/general/Footer/footer';
 import './components/general/Feedback/feedback';
 import './components/general/CookieBanner/cookieBanner';
 import './components/general/TemporaryMessage/temporaryMessage';
+import backToTop from './components/general/BackToTop/backToTop';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
 
@@ -80,6 +81,7 @@ import sortBy from "./components/search/SortBy/sortBy";
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars();
 
+backToTop();
 breadcrumbJs();
 pagination();
 searchBar();
