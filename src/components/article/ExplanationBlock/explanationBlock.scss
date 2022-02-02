@@ -1,6 +1,7 @@
 @import 'src/lib.scss';
 
 .explanation-block {
+  margin-top: 2rem;
   &__header {
     @include h3();
     padding: 1rem;
