@@ -1,7 +1,7 @@
 @import "src/lib.scss";
 
 .sticky-sidebar {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   @media screen and (min-width: $fsa-lg) {
      margin-top: 0;
   }
