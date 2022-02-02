@@ -27,10 +27,7 @@
       }
       a {
         @include body;
-        margin-left: 2.25rem;
         text-indent: -2.25rem;
-        display: block;
-
         &,
         &:active,
         &:visited {
