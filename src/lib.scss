@@ -420,6 +420,7 @@ $mobileGutter: 1rem;
     0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
+    background-color: var(--fsa-primary_white);
   }
 
   &:checked {
@@ -453,6 +454,7 @@ $mobileGutter: 1rem;
     0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
+    background-color: var(--fsa-primary_white);
   }
 
   &:checked {
