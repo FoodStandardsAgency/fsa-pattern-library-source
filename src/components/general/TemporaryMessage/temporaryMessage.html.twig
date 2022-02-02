@@ -1,0 +1,10 @@
+{% set level_is_defined = level is defined and level is not empty %}
+{% if level_is_defined %}
+  {% set level_class = "temporary-message--" ~ level %}
+{% endif %}
+
+<section class="temporary-message{{ level_class is defined ? " " ~ level_class : "" }}">
+  <div class="temporary-message__content">
+    {{ message }}
+  </div>
+</section>

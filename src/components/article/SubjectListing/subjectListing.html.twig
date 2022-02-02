@@ -1,0 +1,23 @@
+<div class="subject-listing">
+  {% for section in subject_listing %}
+    <div class="subject-listing__section">
+      {% if section.title %}
+        <h2 class="subject-listing__title" id="{{ section.title|replace({" ": "-"})|lower }}">{{ section.title }}</h2>
+      {% endif %}
+      {% if section.description %}
+        <p class="subject-listing__description">{{ section.description }}</p>
+      {% endif %}
+      <h3 class="subject-listing__section-header">{{ section_header }}</h3>
+      {% if section.links|length > 0 %}
+        <ul class="subject-listing__link-list">
+          {% for link in section.links %}
+            <li class="subject-listing__link-list__item">
+              <a href="{{ link.href }}"
+                 data-fsa-at="in-this-section-{{ link.label|striptags|replace({" ": "-"})|lower }}">{{ link.label }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

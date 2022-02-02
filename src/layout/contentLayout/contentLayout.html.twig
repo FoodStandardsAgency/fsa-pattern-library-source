@@ -1,4 +1,8 @@
 <div class="content-layout">
+  <div class="content-layout__full-width">
+    {% block full_width %}
+    {% endblock %}
+  </div>
   <div class="content-layout__container">
     <div class="content-layout__row">
       <div class="content-layout__header">
@@ -9,7 +13,6 @@
       <div class="content-layout__page">
         <div class="content-layout__top">
           {% block top %}
-            <h1>The H1 for the page.</h1>
           {% endblock %}
         </div>
         <div class="content-layout__left">
