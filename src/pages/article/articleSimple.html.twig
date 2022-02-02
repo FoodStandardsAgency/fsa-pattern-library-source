@@ -51,14 +51,9 @@
 {% block left %}
   {% include '@components/components/article/StickySidebar/stickySidebar.html.twig' with {
     sidebar_items: [
-      {
-        type: 'table_of_contents',
-        title: 'On this page',
-        links: [
-        { label: 'Placing your product on the market in Great Britain', href: '#gb-market' },
-        { label: 'Placing your product on the Northern Ireland market', href: '#ni-market' },
-      ],
-      },
+      '<nav class="table-of-contents">\n  <h2 class="table-of-contents__title">ON THIS PAGE</h2>\n  <ol class="table-of-contents__list">\n         
+      <li class="table-of-contents__list-item">\n        <a href="#" class="table-of-contents__link">Placing your product on the market in Great Britain</a>\n      </li>\n          
+      <li class="table-of-contents__list-item">\n        <a href="#" class="table-of-contents__link">Placing your product on the Northern Ireland market</a>\n      </li>\n          </ol>\n</nav>'
     ],
   } %}
 {% endblock %}
