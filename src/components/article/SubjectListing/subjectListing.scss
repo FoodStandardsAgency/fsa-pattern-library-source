@@ -22,12 +22,12 @@
     padding: 0;
     &__item {
       margin-top: 1.25rem;
+      margin-left: 2rem;
       @media screen and (min-width: $fsa-xl) {
         margin-top: 1rem;
       }
       a {
         @include body;
-        text-indent: -2.25rem;
         &,
         &:active,
         &:visited {
@@ -49,9 +49,10 @@
           height: 1rem;
           background-repeat: no-repeat;
           background-position: center;
-          margin-right: 0.5rem;
           position: relative;
           top: 0.1rem;
+          margin-left: -2rem;
+          margin-right: 0.25rem;
         }
 
         &:hover {
