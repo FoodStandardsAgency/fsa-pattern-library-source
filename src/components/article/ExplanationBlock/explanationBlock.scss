@@ -1,0 +1,40 @@
+@import 'src/lib.scss';
+
+.explanation-block {
+  &__header {
+    @include h3();
+    padding: 1rem;
+    margin: 0;
+    font-weight: bold;
+    color: var(--fsa-primary_white);
+    @media screen and (min-width: $fsa-md) {
+      padding: 1rem 2rem;
+    }
+    &--important {
+      background-color: var(--fsa-secondary_mid-red);
+    }
+    &--fsa-explains {
+      background-color: var(--fsa-primary_dark-green);
+    }
+    &--best-practice {
+      background-color: var(--fsa-primary_mid-green);
+      color: var(--fsa-primary_black);
+    }
+    &--tips {
+      background-color: var(--fsa-secondary_light-purple);
+    }
+    &--legal-advice {
+      background-color: var(--fsa-secondary_dark-blue);
+    }
+  }
+  &__content {
+    padding: 2rem 1rem;
+    border: solid 1px var(--fsa_border);
+    color: var(--fsa-primary_black);
+    background-color: var(--fsa_tint);
+    @media screen and (min-width: $fsa-md) {
+      padding: 2rem;
+    }
+    @include wysiwyg-content();
+  }
+}

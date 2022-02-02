@@ -550,3 +550,39 @@ $mobileGutter: 1rem;
     }
   }
 }
+
+@mixin wysiwyg-content() {
+  @include body;
+  .document-download {
+    margin-top: 1rem;
+    &:before {
+      display: none;
+    }
+  }
+  .document-download__region {
+    display: none;
+  }
+  .document-download__content {
+    &--with-region {
+      margin-top: 0;
+    }
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: roman;
+  }
+  p, h1, h2, h3, h4, h5, h6, ul, ol {
+    margin-bottom: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a:not(.document-download__link) {
+    @include link();
+  }
+}
