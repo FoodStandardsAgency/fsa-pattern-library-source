@@ -53,11 +53,7 @@
 {% block left %}
   {% include '@components/components/article/StickySidebar/stickySidebar.html.twig' with {
     sidebar_items: [
-      {
-        type: 'back_to',
-        label: 'Back to alerts',
-        url: '#',
-      },
+      '<div class="back-to">\n  <a href="#" class="back-to__link" data-fsa-at="all-alerts">Back to alerts</a>\n</div>'
     ],
   } %}
 {% endblock %}

@@ -2,10 +2,10 @@ import fullwidth from './fullWidth.html.twig';
 import "./fullWidth.scss";
 
 export default {
-  title: 'Layout/Full Width',
+  title: 'Layout/Full Width Container',
 }
 
-export const FullWidth = (args) => {
+export const FullWidthContainer = (args) => {
   return fullwidth(args);
 }
-FullWidth.args = {}
+FullWidthContainer.args = {}

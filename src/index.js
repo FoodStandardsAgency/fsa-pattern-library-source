@@ -11,6 +11,8 @@ import './components/general/Link/link';
 import './components/general/Footer/footer';
 import './components/general/Feedback/feedback';
 import './components/general/CookieBanner/cookieBanner';
+import './components/general/TemporaryMessage/temporaryMessage';
+import backToTop from './components/general/BackToTop/backToTop';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
 
@@ -61,6 +63,7 @@ import './components/article/TextBlock/textBlock';
 import './components/article/BackTo/backTo';
 import './components/article/ContentMetaData/contentMetaData';
 import './components/article/RelatedContent/relatedContent';
+import './components/article/SubjectListing/subjectListing';
 import './components/article/ExplanationBlock/explanationBlock';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
@@ -80,6 +83,7 @@ import sortBy from "./components/search/SortBy/sortBy";
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars();
 
+backToTop();
 breadcrumbJs();
 pagination();
 searchBar();
