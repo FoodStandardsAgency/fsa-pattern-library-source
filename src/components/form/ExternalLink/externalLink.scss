@@ -16,3 +16,24 @@
     background-position: center;
   }
 }
+
+.temporary-message {
+  .external-link {
+    color: var(--fsa-primary_black);
+
+    &::after {
+      background-image: url("./assets/external-black.svg");
+    }
+  }
+
+  &--danger {
+    .external-link {
+      color: var(--fsa-primary_white);
+
+      &::after {
+        background-image: url("./assets/external-white.svg");
+      }
+    }
+  }
+}
+

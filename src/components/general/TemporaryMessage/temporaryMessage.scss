@@ -27,14 +27,6 @@
       &:before {
         background-image: url("./assets/warning-white.svg");
       }
-
-      a.external-link {
-        color: var(--fsa-primary_white);
-
-        &::after {
-          display: none;
-        }
-      }
     }
   }
 
@@ -72,14 +64,6 @@
 
     a {
       text-decoration: underline;
-
-      &.external-link {
-        color: var(--fsa-primary_black);
-
-        &::after {
-          display: none;
-        }
-      }
     }
 
     p {
