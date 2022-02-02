@@ -33,16 +33,11 @@
 {% block left %}
   {% include '@components/components/article/StickySidebar/stickySidebar.html.twig' with {
     sidebar_items: [
-      {
-        type: 'table_of_contents',
-        title: 'On this page',
-        links: [
-          { label: 'Fish and fishery products', href: '#products' },
-          { label: 'Shellfish guidance', href: '#guidance' },
-          { label: 'Monitoring, reports and surveys', href: '#reports' },
-          { label: 'Related content', href: '#related' },
-        ],
-      },
+      '<nav class="table-of-contents">\n  <h2 class="table-of-contents__title">ON THIS PAGE</h2>\n  <ol class="table-of-contents__list">\n         
+      <li class="table-of-contents__list-item">\n        <a href="#" class="table-of-contents__link">Fish and fishery products</a>\n      </li>\n          
+      <li class="table-of-contents__list-item">\n        <a href="#" class="table-of-contents__link">Shellfish guidance</a>\n      </li>\n          
+      <li class="table-of-contents__list-item">\n        <a href="#" class="table-of-contents__link">Monitoring, reports and surveys</a>\n      </li>\n          
+      <li class="table-of-contents__list-item">\n        <a href="#" class="table-of-contents__link">Related content</a>\n      </li>\n          </ol>\n</nav>'
     ],
   } %}
 {% endblock %}
