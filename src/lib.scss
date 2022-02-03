@@ -402,7 +402,7 @@ $mobileGutter: 1rem;
 }
 
 @mixin checkbox-input {
-  background-color: var(--fsa_tint);
+  background-color: var(--fsa_online-grey);
   appearance: none;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -420,6 +420,7 @@ $mobileGutter: 1rem;
     0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
+    background-color: var(--fsa-primary_white);
   }
 
   &:checked {
@@ -432,7 +433,7 @@ $mobileGutter: 1rem;
 
 @mixin radio-input {
   border-radius: 50%;
-  background-color: var(--fsa-primary_white);
+  background-color: var(--fsa_online-grey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,6 +454,7 @@ $mobileGutter: 1rem;
     0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
+    background-color: var(--fsa-primary_white);
   }
 
   &:checked {

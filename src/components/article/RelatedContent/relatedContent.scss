@@ -4,6 +4,8 @@
   @include landing-margin-top;
 
   &__main-heading {
+    @include landing-text-wrapper;
+
     @include h2;
     color: var(--fsa-primary_black);
     text-align: center;
@@ -42,7 +44,7 @@
     }
 
     @media screen and (min-width: $fsa-lg) {
-      @include grid-cols(6);
+      @include grid-cols(4);
     }
 
     @media screen and (min-width: $fsa-xl) {
