@@ -1,0 +1,37 @@
+@import "src/lib.scss";
+
+.team-contacts {
+  &__item {
+    padding-bottom: 3rem;
+
+    &__label {
+      @include h2;
+      margin: 0 0 1rem 0;
+    }
+
+    &__name {
+      @include h6;
+      margin: 0 0 1rem 0;
+    }
+
+    &__email {
+      @include link;
+
+      &:hover {
+        &:after {
+          background-image: url("./assets/email-hover.svg");
+        }
+      }
+
+      &:after {
+        content: "";
+        background-image: url("./assets/email.svg");
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 12px;
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
