@@ -2,7 +2,7 @@ import backToTop from './backToTop.html.twig';
 import './backToTop.scss';
 
 export default {
-  title: 'Components/General/Back To Top',
+  title: 'Components/Article/Back To Top',
 };
 
 const Template = (args) => backToTop(args);
