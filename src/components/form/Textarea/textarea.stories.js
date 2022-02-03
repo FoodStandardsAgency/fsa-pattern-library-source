@@ -14,6 +14,7 @@ const Template = (args) => textarea(args);
 export const Normal = Template.bind({});
 Normal.args = {
   error: false,
+  id: 'crime',
   name: 'crime',
   label: 'What is the food crime you are reporting?',
   required: 'required',
@@ -31,6 +32,7 @@ Error.args = {
 export const DefaultValue = Template.bind({});
 DefaultValue.args = {
   error: false,
+  id: 'crime',
   name: 'crime',
   label: 'What is the food crime you are reporting?',
   required: 'required',
