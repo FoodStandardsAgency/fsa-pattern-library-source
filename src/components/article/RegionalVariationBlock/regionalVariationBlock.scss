@@ -48,31 +48,8 @@
 
   }
   &__copy {
-    @include body;
     color: var(--fsa-primary_black);
     margin-top: 0.5rem;
-    .document-download {
-      margin-top: 1rem;
-      &:before {
-        display: none;
-      }
-    }
-    .document-download__region {
-      display: none;
-    }
-    .document-download__content {
-      &--with-region {
-        margin-top: 0;
-      }
-    }
-    ul {
-      list-style: disc;
-    }
-    ol {
-      list-style: roman;
-    }
-    a:not(.document-download__link) {
-      @include link();
-    }
+    @include wysiwyg-content();
   }
 }

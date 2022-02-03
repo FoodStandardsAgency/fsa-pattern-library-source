@@ -1,0 +1,10 @@
+<section class="explanation-block">
+  {% if heading %}
+    <div class="explanation-block__header{{ type ? " explanation-block__header--" ~ type : "" }}">
+      <div class="explanation-block__heading" role="heading" aria-level="3">{{ heading }}</div>
+    </div>
+  {% endif %}
+  <div class="explanation-block__content">
+    {{ wysiwyg_content }}
+  </div>
+</section>
