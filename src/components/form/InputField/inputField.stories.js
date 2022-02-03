@@ -20,13 +20,15 @@ const Template = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
+  id: 'email',
   name: 'email',
   label: 'Email or username',
   caption: 'Enter your email address or username.',
   required: "",
   error: false,
   error_message: 'Unrecognized username or password',
-  value: ''
+  value: '',
+  type: 'text'
 };
 
 export const Error = Template.bind({});
@@ -40,17 +42,20 @@ Error.args = {
 
 export const DefaultValue = Template.bind({});
 DefaultValue.args = {
+  id: 'email',
   name: 'email',
   label: 'Email or username',
   caption: 'Enter your email address or username.',
   required: "",
   error: false,
   error_message: 'Unrecognized username or password',
-  value: 'test@example.com'
+  value: 'test@example.com',
+  type: 'email'
 };
 
 export const Password = Template.bind({});
 Password.args = {
+  id: 'password',
   name: 'password',
   label: 'Password',
   caption: 'Enter your password.',
@@ -63,6 +68,7 @@ Password.args = {
 
 export const Phone = Template.bind({});
 Phone.args = {
+  id: 'phone',
   name: 'phone',
   label: 'Phone number',
   caption: '',
