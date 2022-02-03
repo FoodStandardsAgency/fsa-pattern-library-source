@@ -12,7 +12,6 @@ import './components/general/Footer/footer';
 import './components/general/Feedback/feedback';
 import './components/general/CookieBanner/cookieBanner';
 import './components/general/TemporaryMessage/temporaryMessage';
-import backToTop from './components/general/BackToTop/backToTop';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
 
@@ -65,6 +64,7 @@ import './components/article/ContentMetaData/contentMetaData';
 import './components/article/RelatedContent/relatedContent';
 import './components/article/SubjectListing/subjectListing';
 import './components/article/QuoteBlock/quoteBlock';
+import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 

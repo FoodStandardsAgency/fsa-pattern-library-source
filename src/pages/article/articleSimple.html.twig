@@ -93,4 +93,10 @@
     wysiwyg_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu congue blandit tincidunt. Pellentesque et elit nulla. Nullam posuere massa nec facilisis placerat. ',
     transparent_background: true,
   } %}
+
+  <p>
+    {% include '../../components/article/BackToTop/backToTop.html.twig' with {
+      back_to_top: 'Back to top',
+    } %}
+  </p>
 {% endblock %}
