@@ -1,5 +1,5 @@
 <div class="input-field{{ error ? " input-field--error" : "" }}{{ states ? ' js-form-item js-form-item-' ~ name : ''}}">
-  <label class="input-field__label{{ nested ? " input-field__nested" : "" }}" for="{{ name }}-field">{{ label }}
+  <label class="input-field__label{{ nested ? " input-field__nested" : "" }}" for="{{ id }}">{{ label }}
     <span class="input-field__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
   </label>
   {% if error %}
@@ -10,9 +10,9 @@
       <span class="input-field__prefix">{{ prefix }}</span>
     {% endif %}
     {% if value %}
-      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ name }}-field" name="{{ name }}" value="{{ value }}" aria-required={{ required ? "true" : "false" }} {{ states ? "data-drupal-states='" ~ states ~ "'" : ""}}/>
+      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" value="{{ value }}" aria-required={{ required ? "true" : "false" }} {{ states ? "data-drupal-states='" ~ states ~ "'" : ""}}/>
     {% else %}
-      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ name }}-field" name="{{ name }}" aria-required={{ required ? "true" : "false" }} {{ states ? "data-drupal-states=" ~ states : ""}}/>
+      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" aria-required={{ required ? "true" : "false" }} {{ states ? "data-drupal-states=" ~ states : ""}}/>
     {% endif %}
   </div>
   {% if caption %}
