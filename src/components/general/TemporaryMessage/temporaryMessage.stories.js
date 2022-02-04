@@ -7,19 +7,19 @@ export default {
 
 const Template = (args) => temporaryMessage(args);
 
-export const DefaultMessage = Template.bind({});
-DefaultMessage.args = {
+export const Low = Template.bind({});
+Low.args = {
   message: '<p><a href="#" class="external-link">Coronavirus (COVID 19):</a> Guidance and support</p>',
 };
 
-export const WarningMessage = Template.bind({});
-WarningMessage.args = {
-  ...DefaultMessage.args,
+export const Medium = Template.bind({});
+Medium.args = {
+  ...Low.args,
   level: 'warning',
 };
 
-export const DangerMessage = Template.bind({});
-DangerMessage.args = {
-  ...DefaultMessage.args,
+export const High = Template.bind({});
+High.args = {
+  ...Low.args,
   level: 'danger',
 };
