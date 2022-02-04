@@ -9,9 +9,11 @@
   }
   &__title {
     @include h2();
+    margin: 0;
   }
   &__description {
     @include body();
+    margin: 0;
   }
   &__section-header {
     @include body();
