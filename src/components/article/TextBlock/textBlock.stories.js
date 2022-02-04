@@ -28,8 +28,8 @@ TextBlock.args = {
       '<h2>Text styles</h2>\n' +
       '<p>' +
       '  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Nulla eget odio nisl. Sed iaculis metus felis, non' +
-      '  dapibus nisl congue a.</b> Nam tempor, neque eu sodales vehicula, massa nisl maximus nibh, <u>sit amet sagittis sem' +
-      '  tellus sed urna</u>. Morbi tristique elit at quam molestie, <em>vel blandit mi iaculis</em>. Sed ut venenatis' +
+      '  dapibus nisl congue a.</b> Nam tempor, neque eu sodales vehicula, massa nisl maximus nibh, sit amet sagittis sem' +
+      '  tellus sed urna. Morbi tristique elit at quam molestie, vel blandit mi iaculis. Sed ut venenatis' +
       '  tortor. Proin sed augue ut est luctus egestas a placerat est. Fusce efficitur pharetra odio quis venenatis.' +
       '</p>' +
       '\n' +
