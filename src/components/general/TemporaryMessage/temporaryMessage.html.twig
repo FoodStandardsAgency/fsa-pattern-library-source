@@ -4,7 +4,11 @@
 {% endif %}
 
 <section class="temporary-message{{ level_class is defined ? " " ~ level_class : "" }}">
-  <div class="temporary-message__content">
-    {{ message|raw }}
+  <div class="temporary-message__row">
+    <div class="temporary-message__wrapper">
+      <div class="temporary-message__content">
+        {{ message|raw }}
+      </div>
+    </div>
   </div>
 </section>
