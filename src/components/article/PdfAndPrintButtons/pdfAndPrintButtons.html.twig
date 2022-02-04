@@ -1,4 +1,4 @@
-<div class="pdf-and-print-buttons">
+<div class="pdf-and-print-buttons{{ multipage_guide ? " pdf-and-print-buttons--multipage": "" }}">
   <div class="pdf-and-print-buttons__button pdf-and-print-buttons__button--pdf">
     <a href="{{ multipage_guide_pdf_link ? multipage_guide_pdf_link : pdf_link }}" target=”_blank”>
       <div class="pdf-and-print-buttons__text-wrapper">

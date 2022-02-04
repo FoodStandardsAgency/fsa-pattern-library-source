@@ -79,38 +79,38 @@
   {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
     content: '<p>Worthenshaws Ltd is recalling Kirsty’s Classic Beef Lasagne because it contains a statement on the label that the product is free from all 14 allergens, which is not accurate as the product contains oats (that are gluten free). Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet, however, it is not suitable for those who have an allergy to Oats.</p>'
   } %}
-  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
-    title: 'Alert',
-    tag: 'h3',
-    description: 'Worthenshaws Ltd is recalling Kirsty’s Classic Beef Lasagne because it contains a statement on the label that the
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: '
+    <h3>Action taken by the company</h3>
+    <p>Worthenshaws Ltd is recalling Kirsty’s Classic Beef Lasagne because it contains a statement on the label that the
       product is free from all 14 allergens, which is not accurate as the product contains oats (that are gluten free).
       Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet,
-      however, it is not suitable for those who have an allergy to Oats.'
+      however, it is not suitable for those who have an allergy to Oats.</p>'
   } %}
   {% include '@components/components/article/QuoteBlock/quoteBlock.html.twig' with {
     quote: 'These findings are worrying. They indicate that people are often confused about food dates, potentially putting themselves and others at risk of illness. A use-by date on food is there for a reason. It is about safety. After the use-by date you cannot cook, freeze or eat the food safely, even if it smells or looks ok. It’s really not possible to tell whether food is safe to eat by smelling or tasting it. We would like everyone to take the use-by dates on their food seriously.',
     author: 'Professor Robin May, Chief Scientific Advisor',
   } %}
-  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
-    title: 'Risk statement',
-    tag: 'h3',
-    description: 'Allergen(s): Oats (that are gluten free)</ br>These products contain oats (that are gluten free) making it a possible health risk for anyone with an allergy to oats'
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: '<h3>Risk statement</h3>
+    <p>Allergen(s): Oats (that are gluten free)</ br>These products contain oats (that are gluten free) making it a
+    possible health risk for anyone with an allergy to oats</p>'
   } %}
   {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
-  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
-    title: 'Action taken by the company',
-    tag: 'h3',
-    description: 'Worthenshaws Ltd is recalling the above products from customers and has contacted the relevant allergy
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: '
+    <h3>Action taken by the company</h3>
+    <p>Worthenshaws Ltd is recalling the above products from customers and has contacted the relevant allergy
     support organisations, which will tell their members about the recall. The company has issued a point-of-sale notice
-     to its customers. These notices explain to customers why the products are being recalled and tell them what to do
-     if they have bought the products.'
+    to its customers. These notices explain to customers why the products are being recalled and tell them what to do
+    if they have bought the products.</p>'
   } %}
   {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
     region: ['England'],
     wysiwyg_content: 'If you have bought the above products and have an allergy to oats (that are gluten free), do not eat them. Instead return it to the <a href="#">store</a> from where it was bought for a full refund.',
     transparent_background: true,
   } %}
-  <br /> {# Remove once the article footer is created #}
+  <br/> {# Remove once the article footer is created #}
   {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
     multipage_guide: true,
     pdf_link: '#',

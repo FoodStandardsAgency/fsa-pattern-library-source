@@ -2,19 +2,20 @@
 
 .subject-listing {
   &__section {
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    &:first-child {
+      margin-top: 0;
+    }
   }
   &__title {
     @include h2();
-    margin: 0 0 1rem 0;
   }
   &__description {
     @include body();
-    margin: 0 0 1rem 0;
   }
   &__section-header {
     @include body();
-    margin: 0 0 1rem 0;
+    margin-top: 1rem;
     font-weight: bold;
   }
   &__link-list {
@@ -22,7 +23,7 @@
     padding: 0;
     &__item {
       margin-top: 1.25rem;
-      margin-left: 2rem;
+      margin-left: 2.25rem;
       @media screen and (min-width: $fsa-xl) {
         margin-top: 1rem;
       }
@@ -51,8 +52,8 @@
           background-position: center;
           position: relative;
           top: 0.1rem;
-          margin-left: -2rem;
-          margin-right: 0.25rem;
+          margin-left: -2.25rem;
+          margin-right: 0.5rem;
         }
 
         &:hover {
