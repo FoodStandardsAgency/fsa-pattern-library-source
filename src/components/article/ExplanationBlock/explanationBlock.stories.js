@@ -3,10 +3,10 @@ import './explanationBlock.scss';
 
 export default {
   title: 'Components/Article/Explanation Block',
-  type: {
-    options: ['general', 'fsa-explains', 'best-practice', 'tips', 'legal-advice', 'important'],
-    control: {
-      type: 'radio'
+  argTypes: {
+    type: {
+      options: ['general', 'fsa-explains', 'best-practice', 'tips', 'legal-advice', 'important'],
+      control: { type: 'radio' },
     },
   },
 }
