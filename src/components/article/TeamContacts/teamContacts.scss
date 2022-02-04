@@ -1,6 +1,8 @@
 @import "src/lib.scss";
 
 .team-contacts {
+  @include landing-margin-top;
+
   &__item {
     padding-bottom: 3rem;
 
