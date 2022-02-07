@@ -1,0 +1,7 @@
+@import "src/lib.scss";
+
+.error-response {
+  &__container {
+    @include wysiwyg-content();
+  }
+}
