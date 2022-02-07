@@ -50,6 +50,11 @@
   }
   &__right {
     @include grid-cols(4, 4);
+    * {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
     @media screen and (min-width: $fsa-lg) {
       @include cols-push(4);
       @include grid-cols(8);

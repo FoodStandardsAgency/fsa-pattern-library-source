@@ -58,7 +58,7 @@ Tips.args = {
     '<section class="document-download">\n' +
     '  <h3 class="document-download__region">England</h3>\n' +
     '  <div class="document-download__content document-download__content--">\n' +
-    '    <span class="document-download__format document-download__format--" aria-hidden="true">PDF</span>\n' +
+    '    <span class="document-download__format document-download__format--pdf" aria-hidden="true">PDF</span>\n' +
     '    <div class="document-download__link-wrapper">\n' +
     '      <a href="#" class="document-download__link" target="_blank"><span class="visually-hidden">View</span>Food Hygiene Advice for Small Businesses<span class="visually-hidden">as PDF(Opens in new window)</span></a>\n' +
     '      <span class="document-download__size">12MB</span>\n' +
@@ -75,7 +75,7 @@ LegalAdvice.args = {
     '<section class="document-download">\n' +
     '  <h3 class="document-download__region">England</h3>\n' +
     '  <div class="document-download__content document-download__content--">\n' +
-    '    <span class="document-download__format document-download__format--" aria-hidden="true">PDF</span>\n' +
+    '    <span class="document-download__format document-download__format--pdf" aria-hidden="true">PDF</span>\n' +
     '    <div class="document-download__link-wrapper">\n' +
     '      <a href="#" class="document-download__link" target="_blank"><span class="visually-hidden">View</span>Food Hygiene Advice for Small Businesses<span class="visually-hidden">as PDF(Opens in new window)</span></a>\n' +
     '      <span class="document-download__size">12MB</span>\n' +
@@ -87,7 +87,7 @@ LegalAdvice.args = {
     '<section class="document-download">\n' +
     '    <h3 class="document-download__region">Wales</h3>\n' +
     '    <div class="document-download__content document-download__content--">\n' +
-    '        <span class="document-download__format document-download__format--" aria-hidden="true">WORD</span>\n' +
+    '        <span class="document-download__format document-download__format--word" aria-hidden="true">WORD</span>\n' +
     '        <div class="document-download__link-wrapper">\n' +
     '            <a href="#" class="document-download__link" target="_blank"><span class="visually-hidden">View</span>Food Hygiene Advice for Small Businesses<span class="visually-hidden">as PDF(Opens in new window)</span></a>\n' +
     '            <span class="document-download__size">180MB</span>\n' +
@@ -102,7 +102,7 @@ LegalAdvice.args = {
     '<section class="document-download">\n' +
     '    <h3 class="document-download__region">Northern Ireland</h3>\n' +
     '    <div class="document-download__content document-download__content--">\n' +
-    '        <span class="document-download__format document-download__format--" aria-hidden="true">JPEG</span>\n' +
+    '        <span class="document-download__format document-download__format--jpeg" aria-hidden="true">JPEG</span>\n' +
     '        <div class="document-download__link-wrapper">\n' +
     '            <a href="#" class="document-download__link" target="_blank"><span class="visually-hidden">View</span>Food Hygiene Advice for Small Businesses<span class="visually-hidden">as PDF(Opens in new window)</span></a>\n' +
     '            <span class="document-download__size">20MB</span>\n' +
