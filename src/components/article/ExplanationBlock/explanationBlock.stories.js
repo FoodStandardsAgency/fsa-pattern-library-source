@@ -1,5 +1,6 @@
 import explanationBlock from './explanationBlock.html.twig';
 import './explanationBlock.scss';
+import documentDownload from "@components/components/article/DocumentDownload/documentDownload.html.twig";
 
 export default {
   title: 'Components/Article/Explanation Block',
@@ -55,16 +56,15 @@ Tips.args = {
   type: 'tips',
   heading: 'Tips',
   wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
-    '<section class="document-download">\n' +
-    '  <h3 class="document-download__region">England</h3>\n' +
-    '  <div class="document-download__content document-download__content--">\n' +
-    '    <span class="document-download__format document-download__format--" aria-hidden="true">PDF</span>\n' +
-    '    <div class="document-download__link-wrapper">\n' +
-    '      <a href="#" class="document-download__link" target="_blank"><span class="visually-hidden">View</span>Food Hygiene Advice for Small Businesses<span class="visually-hidden">as PDF(Opens in new window)</span></a>\n' +
-    '      <span class="document-download__size">12MB</span>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</section>',
+    documentDownload({
+      format: 'pdf',
+      link: '#',
+      view: 'View',
+      name: 'Food Hygiene Advice for Small Businesses',
+      as: 'as',
+      new_window: 'Open in a new window',
+      size: '12MB',
+    }),
 }
 
 export const LegalAdvice = args => explanationBlock(args);
@@ -72,41 +72,36 @@ LegalAdvice.args = {
   type: 'legal-advice',
   heading: 'Legal advice',
   wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
-    '<section class="document-download">\n' +
-    '  <h3 class="document-download__region">England</h3>\n' +
-    '  <div class="document-download__content document-download__content--">\n' +
-    '    <span class="document-download__format document-download__format--" aria-hidden="true">PDF</span>\n' +
-    '    <div class="document-download__link-wrapper">\n' +
-    '      <a href="#" class="document-download__link" target="_blank"><span class="visually-hidden">View</span>Food Hygiene Advice for Small Businesses<span class="visually-hidden">as PDF(Opens in new window)</span></a>\n' +
-    '      <span class="document-download__size">12MB</span>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</section>\n' +
-    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
-    '<p>Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
-    '<section class="document-download">\n' +
-    '    <h3 class="document-download__region">Wales</h3>\n' +
-    '    <div class="document-download__content document-download__content--">\n' +
-    '        <span class="document-download__format document-download__format--" aria-hidden="true">WORD</span>\n' +
-    '        <div class="document-download__link-wrapper">\n' +
-    '            <a href="#" class="document-download__link" target="_blank"><span class="visually-hidden">View</span>Food Hygiene Advice for Small Businesses<span class="visually-hidden">as PDF(Opens in new window)</span></a>\n' +
-    '            <span class="document-download__size">180MB</span>\n' +
-    '        </div>\n' +
-    '    </div>\n' +
-    '</section>\n' +
+    documentDownload({
+      format: 'pdf',
+      link: '#',
+      view: 'View',
+      name: 'Food Hygiene Advice for Small Businesses',
+      as: 'as',
+      new_window: 'Open in a new window',
+      size: '12MB',
+    }) +
+    documentDownload({
+      format: 'word',
+      link: '#',
+      view: 'View',
+      name: 'Food Hygiene Advice for Small Businesses',
+      as: 'as',
+      new_window: 'Open in a new window',
+      size: '12MB',
+    }) +
     '<ul>\n' +
     '    <li>Lorem ipsum</li>\n' +
     '    <li>Lorem ipsum</li>\n' +
     '    <li>Lorem ipsum</li>\n' +
     '</ul>\n' +
-    '<section class="document-download">\n' +
-    '    <h3 class="document-download__region">Northern Ireland</h3>\n' +
-    '    <div class="document-download__content document-download__content--">\n' +
-    '        <span class="document-download__format document-download__format--" aria-hidden="true">JPEG</span>\n' +
-    '        <div class="document-download__link-wrapper">\n' +
-    '            <a href="#" class="document-download__link" target="_blank"><span class="visually-hidden">View</span>Food Hygiene Advice for Small Businesses<span class="visually-hidden">as PDF(Opens in new window)</span></a>\n' +
-    '            <span class="document-download__size">20MB</span>\n' +
-    '        </div>\n' +
-    '    </div>\n' +
-    '</section>\n',
+    documentDownload({
+      format: 'jpeg',
+      link: '#',
+      view: 'View',
+      name: 'Food Hygiene Advice for Small Businesses',
+      as: 'as',
+      new_window: 'Open in a new window',
+      size: '12MB',
+    }),
 }

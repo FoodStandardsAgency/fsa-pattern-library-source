@@ -27,7 +27,9 @@
   &__quote {
     p {
       @include body();
-      margin: 0;
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
   &__author {
