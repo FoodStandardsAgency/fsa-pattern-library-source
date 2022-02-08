@@ -17,7 +17,7 @@
       {{ type_string is defined ? type_string : type }}
     </div>
   {% endif %}
-  <h1 class="article-hero__title">{{ title }}</h1>
+  <h1 class="article-hero__title">{{ title|raw }}</h1>
   {% if article_region_defined %}
     <div class="article-hero__region{{ article_region_class is defined ? " " ~ article_region_class : "" }}">
       {{ article_region_string }} {{ specific }}

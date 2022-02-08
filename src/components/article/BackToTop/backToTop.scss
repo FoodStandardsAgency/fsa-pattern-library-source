@@ -1,6 +1,7 @@
 @import "src/lib.scss";
 
 .back-to-top {
+  @include landing-margin-top;
   &__link {
     @include link;
     display: table;
