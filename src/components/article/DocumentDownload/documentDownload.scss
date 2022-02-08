@@ -85,9 +85,10 @@
     }
   }
 
-  &__link {
+  a.document-download__link {
+    color: var(--fsa-primary_black);
+
     text-decoration: underline;
-    color: var(--fsa-primary_black) !important;
 
     &:hover {
       color: var(--fsa__link-green);
@@ -103,3 +104,4 @@
     }
   }
 }
+
