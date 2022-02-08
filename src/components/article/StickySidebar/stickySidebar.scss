@@ -9,6 +9,7 @@
     @media screen and (min-width: $fsa-lg) {
       top: 1rem;
       position: fixed;
+      z-index: 1;
     }
   }
   &__content-item {

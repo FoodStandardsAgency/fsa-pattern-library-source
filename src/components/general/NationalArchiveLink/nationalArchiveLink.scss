@@ -1,0 +1,23 @@
+@import "src/lib.scss";
+
+.national-archive-link {
+  &__content {
+    &--left, &--right {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &--left {
+      text-align: left;
+    }
+    &--right {
+      text-align: right;
+    }
+  }
+  &__label {
+    @include body();
+  }
+  &__link {
+    @include link();
+  }
+}
