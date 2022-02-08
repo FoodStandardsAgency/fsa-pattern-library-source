@@ -1,17 +1,21 @@
 <div class="related-content">
-  <h2 class="related-content__main-heading">{{ title }}</h2>
   <div class="related-content__grid-container">
     <div class="related-content__grid-row">
+      <h2 class="related-content__main-heading">{{ title }}</h2>
+    </div>
+  </div>
+  <div class="related-content__grid-container">
+    <div class="related-content__grid-row related-content__grid-row--centered">
       {% for key,card in cards %}
         <div class="related-content__card-wrapper">
-            <a class="related-content__card" href="{{ card.link }}" data-fsa-at="related-content-{{ key }}">
+          <a class="related-content__card" href="{{ card.link }}" data-fsa-at="related-content-{{ key }}">
             <h3 class="related-content__sub-heading">
-                {{ card.title }}
+              {{ card.title }}
             </h3>
             {% if card.description is defined %}
               <p class="related-content__description">{{ card.description }}</p>
             {% endif %}
-            </a>
+          </a>
         </div>
       {% endfor %}
     </div>
