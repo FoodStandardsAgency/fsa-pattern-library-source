@@ -1,0 +1,958 @@
+{% include '../../components/general/CookieBanner/cookieBanner.html.twig' with {
+  text: 'We use cookies to make food.gov.uk work, understand how you use the website and make improvements. <br>They aren’t used to identify you personally.',
+  find_out_more_link: '#',
+  find_out_more_text: 'Find out more about cookies',
+  manage_link: '#',
+  manage_text: 'Manage cookies',
+  accept_button_label: 'Accept cookies',
+} %}
+
+{% include '../../components/general/Header/header.html.twig' with {
+  english: true,
+  english_link: '#',
+  english_label: 'English',
+  welsh_link: '#',
+  welsh_label: 'Cymraeg',
+  logo_link: '#',
+  logo_label: 'Food Standards Agency - Frontpage',
+  contact_link: '#',
+  contact_label: 'Contact',
+  report_link: '#',
+  report_label: 'Report',
+  ratings_link: '#',
+  ratings_label: 'Food hygiene ratings',
+  search_label: 'Search Food Standards Agency',
+  search_link: '#',
+  search_bar_visible: true,
+  menu_label: 'menu',
+  navigation: {
+    id: 'navigation',
+    label: 'Main navigation',
+    home_link: '#',
+    home_label: 'Home',
+    links: [
+      {
+        link: {
+        href:'#',
+        label: 'News and alerts',
+        active: 'false',
+      },
+        submenu: [
+        {
+          title: 'Latest updates',
+          read_more_link: '#',
+          read_more_label: 'See more Latest Updates',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'News',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food alerts',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Subscribe to food and alerts',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'FSA blog',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'RSS feeds',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Open policy making',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Consultations',
+            active: 'false',
+          },
+          },
+        ],
+        },
+      ],
+      },
+      {
+        link: {
+        href:'#',
+        label: 'Food safety and Hygiene',
+        active: 'true',
+      },
+        submenu: [
+        {
+          title: 'At home',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cooking your food',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Chilling',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cleaning',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cross-contamination',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Home food fact checker',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Buying and eating food',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Allergy and intolerance',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Report a food allergic reaction',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Best before and use-by dates',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food hygience rating',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food safety for comminity cooking and food banks',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food crime',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Advice for young adults with a food allergy',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Food poisoning',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Campylobacter',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Salmonella',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Hepatits E virus',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'E. Coli',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Food safety advice',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cannabidiol (CBD)',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Norovirus',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Raw drinking milk',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Acrylamide',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Radioactivity in food',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Additives',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Arsenic in rice',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Burgers',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Fake alcohol',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Nutrition (Northern Ireland)',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Check the label',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'The Eatwell Guide',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Folic acid',
+            active: 'false',
+          },
+          },
+        ],
+        },
+      ],
+      },
+      {
+        link: {
+        href:'#',
+        label: 'Business Guidance',
+        active: 'true',
+      },
+        submenu: [
+        {
+          title: 'At home',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cooking your food',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Chilling',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cleaning',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cross-contamination',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Home food fact checker',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Buying and eating food',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Allergy and intolerance',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Report a food allergic reaction',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Best before and use-by dates',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food hygience rating',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food safety for comminity cooking and food banks',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food crime',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Advice for young adults with a food allergy',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Food poisoning',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Campylobacter',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Salmonella',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Hepatits E virus',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'E. Coli',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Food safety advice',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cannabidiol (CBD)',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Norovirus',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Raw drinking milk',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Acrylamide',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Radioactivity in food',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Additives',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Arsenic in rice',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Burgers',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Fake alcohol',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Nutrition (Northern Ireland)',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Check the label',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'The Eatwell Guide',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Folic acid',
+            active: 'false',
+          },
+          },
+        ],
+        },
+      ],
+      },
+      {
+        link: {
+        href:'#',
+        label: 'About us',
+        active: 'true',
+      },
+        submenu: [
+        {
+          title: 'At home',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cooking your food',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Chilling',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cleaning',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cross-contamination',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Home food fact checker',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Buying and eating food',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Allergy and intolerance',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Report a food allergic reaction',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Best before and use-by dates',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food hygience rating',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food safety for comminity cooking and food banks',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Food crime',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Advice for young adults with a food allergy',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Food poisoning',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Campylobacter',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Salmonella',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Hepatits E virus',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'E. Coli',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Food safety advice',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Cannabidiol (CBD)',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Norovirus',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Raw drinking milk',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Acrylamide',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Radioactivity in food',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Additives',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Arsenic in rice',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Burgers',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Fake alcohol',
+            active: 'false',
+          },
+          },
+        ],
+        },
+        {
+          title: 'Nutrition (Northern Ireland)',
+          links: [
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Check the label',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'The Eatwell Guide',
+            active: 'false',
+          },
+          },
+          {
+            link: {
+            type: 'link',
+            href: '#',
+            label: 'Folic acid',
+            active: 'false',
+          },
+          },
+        ],
+        },
+      ],
+      },
+    ],
+  }
+} %}
+{% include '../../components/general/ErrorResponse/errorResponse.html.twig' with {
+  error: '403',
+  content: '<h1>Access denied</h1>
+    <p>The page you were looking for has been moved or does not exist.</p>
+    <div class="national-archive-link">
+      <p class="national-archive-link__content">
+        <a class="external-link" href="#">This page has been archived by The National Archives and is available through the UK Government Web Archive. (Opens in a new window)</a>
+      </p>
+    </div>
+    <p>Or use our search or browser from the <a href="#">homepage</a> to find the information you need.</p>',
+} %}
+{% include '../../components/general/Feedback/feedback.html.twig' with {
+  section_summary: 'Feedback about the content on the page',
+  heading: 'Is this page useful?',
+  yes: 'Yes',
+  yes_link: '#',
+  useful: 'this page is useful',
+  no: 'No',
+  no_link: '#',
+  not_useful: 'this page is not useful',
+  report_question: 'Is there anything wrong with this page?',
+  thank_you: 'Thanks for your feedback',
+  close: 'Close',
+  the_feedback_form: 'the feedback form',
+  improve_question: 'How should we improve this page?',
+  feedback: 'feedback',
+  submit: 'Submit',
+  form_action: '#'
+} %}
+
+{% include '../../components/general/Footer/footer.html.twig' with {
+  footer_links: 'Footer links',
+  new_window: 'Open in a new window',
+  menu_links: [
+    {
+      link: { label: 'Copyright', href: '#', external: false },
+    },
+    {
+      link: { label: 'Accessibility', href: '#', external: false },
+    },
+    {
+      link: { label: 'Freedom of information', href: '#', external: false },
+    },
+    {
+      link: { label: 'Terms and conditions', href: '#', external: false },
+    },
+    {
+      link: { label: 'Privacy', href: '#', external: false },
+    },
+    {
+      link: {
+      label: 'Personal information charter',
+      href: '#',
+      external: false,
+    },
+    },
+    {
+      link: { label: 'Feedback and complaints', href: '#', external: false },
+    },
+    {
+      link: { label: 'Cookies', href: '#', external: false },
+    },
+    {
+      link: { label: 'Data', href: '#', external: false },
+    },
+    {
+      link: { label: 'GOV.UK', href: '#', external: true },
+    },
+  ],
+  social_media: 'Food Standards Agency on social media',
+  social_links: [
+    { label: 'Facebook', external: true, href: '#', svg: facebook },
+    { label: 'Twitter', external: true, href: '#', svg: facebook },
+    { label: 'LinkedIn', external: true, href: '#', svg: linkedin },
+    { label: 'Youtube', external: true, href: '#', svg: youtube },
+    { label: 'Instagram', external: true, href: '#', svg: instagram },
+    { label: 'FSA blog', external: false, href: '#', svg: blog },
+  ],
+} %}

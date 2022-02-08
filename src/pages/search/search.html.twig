@@ -1212,6 +1212,12 @@
     next_label: "Next",
     last_label: "Last",
   } %}
+  {% include '@components/components/general/NationalArchiveLink/nationalArchiveLink.html.twig' with {
+    alignment: 'right',
+    label: 'Previous news and alerts',
+    link: '#',
+    link_label: 'National Archive',
+  } %}
 {% endblock %}
 
 {% block right_top %}
