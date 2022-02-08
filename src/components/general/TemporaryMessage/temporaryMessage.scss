@@ -1,11 +1,14 @@
 @import "src/lib.scss";
 
 .temporary-message {
-  @include grid-container;
   background-color: var(--fsa__grey-hover);
   font-size: 0.8rem;
-  padding: 1rem;
+  padding: 1rem 0;
   position: relative;
+
+  &__container {
+    @include grid-container;
+  }
 
   &__row {
     @include grid-row;
@@ -36,32 +39,21 @@
     @include body();
     display: flex;
     justify-content: flex-start;
-    padding-left: 0.5rem;
-
-    @media screen and (min-width: $fsa-md) {
-      padding-left: 1rem;
-    }
-
-    @media screen and (min-width: $fsa-lg) {
-      padding-left: 2rem;
-    }
 
     &:before {
       content: "";
       background-image: url("./assets/warning-black.svg");
       background-repeat: no-repeat;
       background-position: center;
-      min-width: 2rem;
-      min-height: 100%;
+      background-size: contain;
+      min-width: 1.875rem;
+      height: auto;
       position: relative;
-      left: -0.5rem;
-
+      display: block;
+      margin-right: 0.5rem;
       @media screen and (min-width: $fsa-md) {
-        left: -1rem;
-      }
-
-      @media screen and (min-width: $fsa-lg) {
-        left: -2rem;
+        margin-left: 0.9rem;
+        margin-right: 2rem;
       }
     }
 

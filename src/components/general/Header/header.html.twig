@@ -58,6 +58,14 @@
       </div>
     </div>
   </div>
+  {% if temporary_message %}
+    <div class="header__temporary-message">
+      {% include '@components/components/general/TemporaryMessage/temporaryMessage.html.twig' with {
+        message: temporary_message.message,
+        level: temporary_message.level,
+      } %}
+    </div>
+  {% endif %}
   <div class="header__navigation">
     <nav class="header__links header__links--mobile header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
       <div class="header__links-wrapper">
