@@ -1,7 +1,42 @@
 @import "src/lib.scss";
 
 .error-response {
+  margin-top: 3rem;
   &__container {
+    @include grid-container;
+  }
+  &__row {
+    @include grid-row;
+    display: flex;
+  }
+  &__wrapper {
+    @include grid-cols(4, 4);
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(12);
+    }
+    @media screen and (min-width: $fsa-xl) {
+      @include grid-cols(8);
+      @include cols-push(2);
+    }
+  }
+  &__message {
     @include wysiwyg-content();
+    z-index: 2;
+    text-align: center;
+    vertical-align: center;
+    p {
+      margin-top: 2rem;
+    }
+  }
+  &__image {
+    position: absolute;
+    z-index: -1;
+    width: 12rem;
+    height: auto;
+    opacity: 0.5;
   }
 }

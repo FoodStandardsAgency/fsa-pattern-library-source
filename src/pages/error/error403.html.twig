@@ -1042,8 +1042,8 @@
   }
 } %}
 {% include '../../components/general/ErrorResponse/errorResponse.html.twig' with {
-  errorCode: '403',
-  content: '',
+  error: '403',
+  content: '<h1>Access denied</h1>\n <p>Access has been denied. Please check the URL or go to the <a href="#">homepage.</a></p>',
 } %}
 {% include '../../components/general/Feedback/feedback.html.twig' with {
   section_summary: 'Feedback about the content on the page',
