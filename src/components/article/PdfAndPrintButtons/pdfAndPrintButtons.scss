@@ -43,6 +43,16 @@
           background-color: var(--fsa__link-green);
         }
       }
+      &:focus-visible {
+        outline: none;
+        text-decoration: none;
+        .pdf-and-print-buttons__text-wrapper {
+          color: var(--fsa-primary_black);
+          background-color: var(--fsa-tertiary_light-yellow);
+          border-bottom: 0.25rem solid var(--fsa-primary_black);
+          margin-bottom: -0.25rem;
+        }
+      }
     }
     &--pdf {
       margin-right: 1.4375rem;
