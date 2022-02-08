@@ -16,7 +16,7 @@ const Template403 = (args) => {
 }
 
 const Template403WithArchive = (args) => {
-  return error403WithArchive();
+  return error403WithArchive(args);
 }
 
 export const Error403 =  Template403.bind({});
