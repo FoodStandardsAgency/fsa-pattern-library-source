@@ -85,7 +85,9 @@
     }
   }
 
-  &__link {
+  a.document-download__link {
+    color: var(--fsa-primary_black);
+
     text-decoration: underline;
 
     &:hover {
@@ -102,3 +104,4 @@
     }
   }
 }
+
