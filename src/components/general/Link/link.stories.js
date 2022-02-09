@@ -15,8 +15,8 @@ const Template = (args) => {
   return link(args);
 };
 
-export const Link = Template.bind({});
-Link.args = {
+export const RegularLink = Template.bind({});
+RegularLink.args = {
   link_url: '#',
   link_text: 'Regular link',
 };
