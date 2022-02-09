@@ -8,12 +8,16 @@
         <input type="submit" class="multistep-function__previous" value="{{ prev_label }}" />
       {% endif %}
     {% endif %}
-
-    {% include '@components/components/general/Button/button.html.twig' with { 
-      type: 'primary',
-      label: next_label,
-      element: 'input'
-    } %}
+     
+    {% if next_element %}
+      {{ next_element }}
+    {% else %}
+       {% include '@components/components/general/Button/button.html.twig' with { 
+        type: 'primary',
+        label: next_label,
+        element: 'input'
+      } %}
+    {% endif %}
    
   </div>
 </div>
