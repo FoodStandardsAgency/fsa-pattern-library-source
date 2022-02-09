@@ -14,7 +14,7 @@
   }
   &__description {
     @include body();
-    margin: 0;
+    margin: 1rem 0 0 0;
   }
   &__section-header {
     @include body();
