@@ -1,0 +1,21 @@
+@import "src/lib.scss";
+
+.mail-link {
+  @include link;
+
+  &:hover {
+    &:after {
+      background-image: url("./assets/email-hover.svg");
+    }
+  }
+
+  &:after {
+    content: "";
+    background-image: url("./assets/email.svg");
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+}
