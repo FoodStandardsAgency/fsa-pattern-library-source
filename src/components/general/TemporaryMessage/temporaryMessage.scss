@@ -36,7 +36,7 @@
   }
 
   &__content {
-    @include body();
+    @include small();
     display: flex;
     justify-content: flex-start;
 
@@ -59,11 +59,8 @@
 
     a {
       text-decoration: underline;
-
-      &.external-link {
-        &::after {
-          display: none;
-        }
+      &:hover:not(:focus-visible) {
+        font-weight: bold;
       }
     }
 

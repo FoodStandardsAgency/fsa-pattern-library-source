@@ -1,9 +1,11 @@
 <div class="team-contacts">
   <div class="content-meta-data__item">
     <h2 class="team-contacts__item__label">{{ team_contacts }}</h2>
-    <h3 class="team-contacts__item__name">{{ team_name }}</h3>
-    <div class="team-contacts__item__email-wrapper">
-      <a class="team-contacts__item__email" href="mailto:{{ team_email }}">{{ team_email }}</a>
-    </div>
+    {% for team in teams %}
+      <h3 class="team-contacts__item__name">{{ team.team_name }}</h3>
+      <div class="team-contacts__item__email-wrapper">
+        <a class="team-contacts__item__email" href="mailto:{{ team.team_email }}">{{ team.team_email }}</a>
+      </div>
+    {% endfor %}
   </div>
 </div>

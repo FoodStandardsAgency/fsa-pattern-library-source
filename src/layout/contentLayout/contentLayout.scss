@@ -50,7 +50,7 @@
   }
   &__right {
     @include grid-cols(4, 4);
-    * {
+    > * {
       &:first-child {
         margin-top: 0;
       }
