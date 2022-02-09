@@ -1,6 +1,7 @@
 import updateParams from '../../../helpers/updateParams';
 
 import './datepicker.html.twig';
+import './react/datepicker.html.twig';
 import './datepicker.scss';
 
 export default function () {
