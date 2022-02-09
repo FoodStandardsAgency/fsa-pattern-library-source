@@ -14,7 +14,7 @@
     {% for field in fields %}
       {% if field.type == 'datepicker' %}
         <div class="accordion__field accordion__field--datepicker">
-          {% include "../../Datepicker/datepicker.html.twig" with {
+          {% include "../../Datepicker/react/datepicker.html.twig" with {
             id.field.id,
             type: field.dateType,
             applyLabel: field.applyLabel,
