@@ -1,4 +1,5 @@
 @import "src/lib.scss";
+@import "src/components/general/ExternalLink/externalLink.scss";
 
 .message-box {
   margin-top: 2rem;
@@ -35,5 +36,11 @@
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: left 1rem top 1.25rem;
+    & a {
+      @include link;
+    }
+    & a[target="_blank"] {
+      @include extlink;
+    }
   }
 }
