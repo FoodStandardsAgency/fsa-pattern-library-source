@@ -19,7 +19,7 @@ const Template = (args) => {
 
 export const MessageBoxStatus = Template.bind({});
 MessageBoxStatus.args = {
-  text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
+  text: 'You have just used your one-time login link. <a href="#">This is a link</a> Please set yourself a password that you can use to log in again. <a href="#" target="_blank">This is an external link</a>',
   type: 'status'
 };
 

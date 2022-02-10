@@ -1,13 +1,13 @@
 @import "src/lib.scss";
 
-.external-link {
+@mixin extlink {
   @include link;
   margin-right: 0.25rem;
   position: relative;
   display: inline;
   &::after {
     content: "";
-    background-image: url("./assets/external.svg");
+    background-image: url("/src/components/general/ExternalLink/assets/external.svg");
     display: inline-block;
     width: 0.85rem;
     height: 0.85rem;
@@ -17,12 +17,16 @@
   }
 }
 
+.external-link {
+  @include extlink;
+}
+
 .temporary-message {
   .external-link {
     color: var(--fsa-primary_black);
 
     &::after {
-      background-image: url("./assets/external-black.svg");
+      background-image: url("/src/components/general/ExternalLink/assets/external-black.svg");
     }
   }
 
@@ -31,7 +35,7 @@
       color: var(--fsa-primary_white);
 
       &::after {
-        background-image: url("./assets/external-white.svg");
+        background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
       }
     }
   }
