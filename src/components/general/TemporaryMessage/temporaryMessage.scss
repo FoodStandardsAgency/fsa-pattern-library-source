@@ -58,9 +58,10 @@
     }
 
     a {
-      text-decoration: underline;
+      text-decoration: none;
+      border-bottom: 1px solid;
       &:hover:not(:focus-visible) {
-        font-weight: bold;
+        border-bottom: 4px solid;
       }
     }
 
