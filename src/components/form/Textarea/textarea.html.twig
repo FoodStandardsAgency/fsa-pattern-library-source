@@ -1,4 +1,5 @@
-{% set desc_id = "textarea-desc-" ~ name %}
+{% set spaceless_name = name|replace({" ": ""}) %}
+{% set desc_id = spaceless_name %}
 {% set desc_is_defined = description is defined %}
 <div class="textarea{{ error ?  " textarea--error" : "" }}">
   <label class="textarea__label" for={{ id }}>
