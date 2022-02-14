@@ -22,6 +22,14 @@
 
   &--warning {
     background-color: var(--fsa-secondary_mid-yellow);
+    a:focus {
+      color: var(--fsa-primary_white);
+      background-color: var(--fsa-primary_black);
+      border-color: var(--fsa-primary_white);
+      &::after {
+        background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
+      }
+    }
   }
 
   &--danger {
@@ -31,6 +39,13 @@
     .temporary-message__content {
       &:before {
         background-image: url("./assets/warning-white.svg");
+      }
+
+      a:focus {
+        color: var(--fsa-primary_black);
+        &::after {
+          background-image: url("/src/components/general/ExternalLink/assets/external-black.svg");
+        }
       }
     }
   }
