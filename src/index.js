@@ -72,6 +72,9 @@ import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 
+/* Multipage guide Components */
+import './components/multipageguide/Pagination/pagination';
+
 /* Layout Components */
 import './layout/formLayout/formLayout';
 import './layout/twoColumn/twoColumn';

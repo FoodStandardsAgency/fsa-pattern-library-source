@@ -1,0 +1,82 @@
+@import "src/lib.scss";
+
+
+@mixin arrow($orientation: left, $child: '.multipage-guide-pagination__label') {
+  $position: ":before";
+  $margin: "right";
+  @if $orientation==right {
+    $position: ":after";
+    $margin: "left";
+  }
+
+  & #{$child}#{$position} {
+    content: "";
+    background-image: url("./assets/#{$orientation}/arrow.svg");
+    display: inline-block;
+    width: 1.75rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-#{$margin}: 1rem;
+    vertical-align: middle;
+  }
+  &:hover #{$child}#{$position} {
+    background-image: url("./assets/#{$orientation}/arrow-hover.svg");
+    
+  }
+  &:focus #{$child}#{$position} {
+    background-image: url("./assets/#{$orientation}/arrow-focus.svg");
+  }
+}
+
+.multipage-guide-pagination {
+  margin-top: 2rem;
+  border-top: solid 1px var(--fsa__grey-hover);
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    @media screen and (min-width: $fsa-lg) {
+      margin: 2rem 0;
+      flex-direction: row;
+    }
+  }
+  &__offset {
+    justify-content: right;
+  }
+  & a {
+    @include link;
+    text-decoration: none;
+  }
+  &__type {
+    text-decoration: underline;
+  }
+
+  &__prev,
+  &__next {
+    margin-top: 2rem;
+    @media screen and (min-width: $fsa-lg) {
+      margin: 0;
+      width: 50%;
+      flex-basis: 50%;
+      max-width: 50%;
+      //3. Requirements and overview of cooking methods and what if this is a super long title? what will happen? will it fold? will it overflow? who knows? Let's just try it out! :D I don't know if this is long enough but I sure hope so!
+    }
+    a { 
+      display: inline-block;
+    }
+  }
+  &__prev a {
+    @include arrow();
+  }
+  &__next { 
+    a {
+      @include arrow(right);
+    }
+    @media screen and (min-width: $fsa-lg) {
+      text-align: right; 
+    }
+  }
+}
