@@ -1,0 +1,119 @@
+@import "src/lib.scss";
+
+.campaign-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  @media screen and (min-width: $fsa-md) {
+    padding-bottom: 0;
+  }
+  &__image {
+    height: 15.75rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @media screen and (min-width: $fsa-md) {
+      position: absolute;
+      height: 100%;
+      z-index: -1;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      height: 12rem;
+      border-radius: 100%;
+      background: var(--fsa-primary_white);
+      bottom: -8.5rem;
+      left: -16rem;
+      right: -112rem;
+      @media screen and (min-width: $fsa-md) {
+        display: none;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      // Required for object-fit polyfill
+      font-family: 'object-fit: cover; object-position: top;';
+    }
+  }
+  &__container {
+    @include grid-container;
+    z-index: 1;
+  }
+  &__row {
+    @include grid-row;
+  }
+  &__wrapper {
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(6);
+      @include cols-push(6);
+      margin-top: 12.5rem;
+      overflow: hidden;
+    }
+    &--has-hero {
+      @media screen and (min-width: $fsa-md) {
+        margin-top: 21.875rem;
+      }
+      @media screen and (min-width: $fsa-xl) {
+        margin-top: 25rem;
+      }
+    }
+  }
+  &__swoosh {
+    display: none;
+    @media screen and (min-width: $fsa-md) {
+      position: relative;
+      display: block;
+      margin-top: 3rem;
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 12rem;
+        border-radius: 100%;
+        background-color: var(--fsa-primary_white);
+        top: -3rem;
+        left: -16rem;
+        right: -112rem;
+        z-index: -1;
+      }
+    }
+  }
+  &__content-wrapper {
+    @media screen and (min-width: $fsa-md) {
+      overflow:hidden;
+    }
+
+  }
+  &__content {
+    @media screen and (min-width: $fsa-md) {
+      z-index: 1;
+      background-color: var(--fsa-primary_white);
+      padding: 1rem 1rem 2rem 1rem;
+    }
+    @media screen and (min-width: $fsa-xl) {
+      padding: 2rem 2rem 3.625rem 2rem;
+    }
+  }
+  &__title {
+    @include h1();
+    margin: 0;
+    &--has-hero {
+      @include h2();
+      color: var(--fsa-primary__black);
+      margin: 0;
+    }
+  }
+  &__description {
+    @include body();
+    margin-top: 1rem;
+  }
+  &__cta {
+    margin-top: 1rem;
+  }
+}

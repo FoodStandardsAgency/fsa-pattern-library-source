@@ -54,3 +54,31 @@ HeroWithImage.args = {
     url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'
   },
 };
+
+export const HeroWithCampaignBlock = Template.bind({});
+HeroWithCampaignBlock.args = {
+  type: 'hero--without-image',
+  background_colour: 'grey',
+  title: 'Food we can trust',
+  content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+  ctas: [
+    {
+      external: false,
+      name: 'Food and allergy',
+      link: '#',
+    },
+  ],
+  campaign_block: {
+    title: 'Food Standards Agency launches new campaign',
+    description: 'The campaign is designed to educate and motivate consumers to make healthier informed choices when food shopping by looking at nutritional labels',
+    cta: {
+      url: '#',
+      label: 'Find out more',
+    },
+    image: {
+      alt: 'Alt text',
+      url: 'https://images.unsplash.com/photo-1589478489438-9a2091d9e2f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80'
+    },
+    has_hero: true,
+  }
+};
