@@ -44,8 +44,9 @@
     }
   }
   &__offset {
-    justify-content: right;
+    justify-content: flex-end;
   }
+  
   & a {
     @include link;
     text-decoration: none;
