@@ -7,11 +7,13 @@
   overflow: hidden;
 
   &__campaign-block {
-   margin-top: -2rem;
-   z-index: 1;
-   @media screen and (min-width: $fsa-md) {
-     margin-top: -12.5rem;
-   }
+    &--has-hero {
+      margin-top: -2rem;
+      z-index: 1;
+      @media screen and (min-width: $fsa-md) {
+        margin-top: -12.5rem;
+      }
+    }
   }
 
   &__mask-wrapper {
@@ -52,6 +54,9 @@
     }
     &--campaign-block {
       background-image: none;
+    }
+    &--hide-hero {
+      display: none;
     }
   }
   &--without-image.hero--with-services {
