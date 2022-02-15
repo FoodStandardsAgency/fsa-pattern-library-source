@@ -19,11 +19,13 @@ export const PaginationMid = Template.bind({});
 PaginationMid.args = {
   previous: {
     label: "Previous",
-    page_name: "1. Guidance summary"
+    page_name: "1. Guidance summary",
+    link: '#'
   },
   next: {
     label: "Next",
-    page_name: "3. Requirements and overview of cooking methods"
+    page_name: "3. Requirements and overview of cooking methods",
+    link: '#'
   }
 };
 
