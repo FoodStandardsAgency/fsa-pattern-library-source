@@ -1,0 +1,102 @@
+
+{% extends '../../layout/contentLayout/contentLayout.html.twig' %}
+{% set breadcrumb_items = [
+  {
+    'text': 'Home',
+    'url': '/'
+  },
+  {
+    'text': 'Business guidance',
+    'url': '/business-guidance'
+  },
+  {
+    'text': 'Introduction',
+    'url': null
+  },
+] %}
+{% block header %}
+  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+    items: breadcrumb_items,
+    expanded: false,
+  } %}
+{% endblock %}
+{% block top %}
+{# Add Multipage guide ArticleHero variant #}
+{% endblock %}
+{% block left %}
+  {% include '@components/components/article/StickySidebar/stickySidebar.html.twig' with {
+    sidebar_items: [
+      '<nav class="table-of-contents">
+        <h2 class="table-of-contents__title">IN THIS GUIDE</h2>
+        <ol class="table-of-contents__list">
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">Guidance summary</a>
+          </li>
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">Introduction</a>
+          </li>
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">
+              Requirements and overview of cooking methods
+            </a>
+          </li>
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">Sous vide cooking method</a>
+          </li>
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">Sear and shave method</a>
+          </li>
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">Source control method</a>
+          </li>
+        </ol>
+      </nav>',
+      '<nav class="table-of-contents">
+        <h2 class="table-of-contents__title">ON THIS PAGE</h2>
+        <ol class="table-of-contents__list">
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">Intended audience</a>
+          </li>
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">Purpose of the guidance</a>
+          </li>
+          <li class="table-of-contents__list-item">
+            <a href="#" class="table-of-contents__link">
+              Legal status of the guidance
+            </a>
+          </li>
+        </ol>
+      </nav>'
+    ],
+  } %}
+{% endblock %}
+{% block right %}
+  
+  {% include '@components/components/multipageguide/Pagination/pagination.html.twig' with {
+    previous: {
+      label: "Previous",
+      page_name: "1. Guidance summary"
+    },
+    next: {
+      label: "Next",
+      page_name: "3. Requirements and overview of cooking methods"
+    }
+  } %}
+  {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
+    multipage_guide: true,
+    pdf_link: '#',
+    pdf_name: 'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
+    pdf_name: 'Kirsty’s Classic Beef Lasagne Alert',
+    view: 'View',
+    as: 'as',
+    pdf: 'PDF',
+    new_window: 'Opens in a new window',
+    print_this_page: 'Print this page',
+    view_entire_guide: 'View entire guide as PDF',
+    print_guide: 'Print guide',
+    multipage_guide_pdf_link: '#',
+    multipage_guide_print_link: '#',
+  } %}
+{% endblock %}
+{% block footer %}
+{% endblock %}
