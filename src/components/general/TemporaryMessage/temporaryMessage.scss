@@ -57,8 +57,14 @@
 
       a {
         color: var(--fsa-primary_white);
+        border-color: var(--fsa-primary_white);
+        &:hover:not(:focus-visible) {
+          color: var(--fsa-primary_white);
+          border-color: var(--fsa-primary_white);
+        }
         &:focus {
           color: var(--fsa-primary_black);
+          border-color: var(--fsa-primary_black);
           &::after {
             background-image: url("/src/components/general/ExternalLink/assets/external-black.svg");
           }
