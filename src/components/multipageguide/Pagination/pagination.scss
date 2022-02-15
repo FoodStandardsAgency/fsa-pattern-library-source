@@ -46,7 +46,7 @@
   &__offset {
     justify-content: flex-end;
   }
-  
+
   & a {
     @include link;
     text-decoration: none;
@@ -63,7 +63,6 @@
       width: 50%;
       flex-basis: 50%;
       max-width: 50%;
-      //3. Requirements and overview of cooking methods and what if this is a super long title? what will happen? will it fold? will it overflow? who knows? Let's just try it out! :D I don't know if this is long enough but I sure hope so!
     }
     a { 
       display: inline-block;
