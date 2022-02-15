@@ -1,0 +1,293 @@
+{% include '../../components/general/CookieBanner/cookieBanner.html.twig' with {
+  text: 'We use cookies to make food.gov.uk work, understand how you use the website and make improvements. <br>They aren’t used to identify you personally.',
+  find_out_more_link: '#',
+  find_out_more_text: 'Find out more about cookies',
+  manage_link: '#',
+  manage_text: 'Manage cookies',
+  accept_button_label: 'Accept cookies',
+} %}
+
+{% include '../../components/general/Header/header.html.twig' with {
+  english: true,
+  english_link: '#',
+  english_label: 'English',
+  welsh_link: '#',
+  welsh_label: 'Cymraeg',
+  logo_link: '#',
+  logo_label: 'Food Standards Agency - Frontpage',
+  contact_link: '#',
+  contact_label: 'Contact',
+  report_link: '#',
+  report_label: 'Report',
+  ratings_link: '#',
+  ratings_label: 'Food hygiene ratings',
+  search_label: 'Search Food Standards Agency',
+  search_link: '#',
+  search_bar_visible: true,
+  menu_label: 'menu',
+  navigation: navigation_content,
+  temporary_message: {
+    message: '<p><a href="#" class="external-link">Coronavirus (COVID 19):</a> Guidance and support</p>',
+  }
+} %}
+{% include '../../components/general/Hero/hero.html.twig' with {
+ type: 'hero',
+ backgroundColour: 'green',
+ title: 'Food we can trust',
+ content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+ ctas: [
+   {
+     external: false,
+     name: 'Food and allergy',
+     link: '#',
+   },
+ ],
+  campaign_block: {
+    title: 'Food Standards Agency launches new campaign',
+    description: 'The campaign is designed to educate and motivate consumers to make healthier informed choices when food shopping by looking at nutritional labels',
+    cta: {
+      url: '#',
+      label: 'Find out more',
+    },
+    image: {
+      alt: 'Alt text',
+      url: 'https://images.unsplash.com/photo-1589478489438-9a2091d9e2f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80'
+    },
+    has_hero: true,
+  }
+} %}
+{% include '../../components/landing/LandingLinks/landingLinks.html.twig' with {
+  title: 'Are you looking for specific business guidance?',
+  items: [
+    {link_text: 'Import', url: '#', svg: svg.import},
+    {link_text: 'Farming', url: '#', svg: svg.farming},
+    {link_text: 'Regulated', url: '#', svg: svg.regulated},
+    {link_text: 'Fish', url: '#', svg: svg.fish},
+    {link_text: 'Meat', url: '#', svg: svg.meat},
+    {link_text: 'Wine', url: '#', svg: svg.wine}
+  ]
+} %}
+{% include "../../components/landing/PromoGroup/promoGroup.html.twig" with {
+  title: 'Popular content',
+  cards: [
+    {
+      title: 'Listeria',
+      description:
+        'What you can do to reduce the chances of your food being infected with listeria.',
+      promo_link: '#',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/NDawe_Bell_FSA_150320_324.jpg?itok=E9uzlVec',
+    },
+    {
+      title: 'For businesses',
+      description:
+        'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
+      promo_link: '#',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/industry-kitchen-cooking_0.jpg?itok=uyO6myYB',
+    },
+    {
+      title: 'Our risk analysis',
+      description:
+        'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
+      promo_link: '#',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/AS_FSA_011216_L1_276.jpg?itok=oVF8mrBO',
+    },
+    {
+      title: 'For consumers',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/NDawe_Bell_FSA_150320_324.jpg?itok=E9uzlVec',
+      link_list: [
+        { label: 'Food hygiene ratings scheme', href: '#' },
+        { label: 'Report a food problem', href: '#' },
+        { label: 'Allergy and intolerance', href: '#' },
+        { label: 'Subscribe to news and alerts', href: '#' },
+        { label: 'View all consumer advice', href: '#' },
+      ],
+    },
+    {
+      title: 'For businesses',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/industry-kitchen-cooking_0.jpg?itok=uyO6myYB',
+      link_list: [
+        { label: 'Food safety for food delivery', href: '#' },
+        { label: 'Placing a regulated product on the market', href: '#' },
+        { label: 'Starting a food business', href: '#' },
+        { label: 'Safer food, better business', href: '#' },
+        { label: 'Allergen guidance', href: '#' },
+      ],
+    },
+    {
+      title: 'About us',
+      image:
+        'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/AS_FSA_011216_L1_276.jpg?itok=oVF8mrBO',
+      link_list: [
+        { label: 'Who are we', href: '#' },
+        { label: 'Our risk analysis', href: '#' },
+        { label: 'Our approach to science', href: '#' },
+        { label: 'Our board', href: '#' },
+        { label: 'Contact us', href: '#' },
+      ],
+    },
+  ],
+} %}
+{% include '../../components/landing/ServiceLinks/serviceLinks.html.twig' with {
+  title: 'This is the services title',
+  description:
+    'This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.',
+  links: [
+    { label: 'Safer food, better business', url: '#' },
+    { label: 'Apply for a regulated product authorisation', url: '#' },
+    { label: 'Register a food business', url: '#' },
+    { label: 'Allergen guidance for businesses', hash: '#' },
+    { label: 'Safer food, better business', url: '#' },
+    { label: 'Apply for a regulated product authorisation', url: '#' },
+    { label: 'Register a food business', url: '#' },
+    { label: 'Allergen guidance for businesses', url: '#' },
+  ],
+  columns: 4,
+
+} %}
+
+{% include '../../components/landing/LatestTeaser/latestTeaser.html.twig' with {
+    title: 'This is the services title',
+    description:
+      '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p><p>This is a description for the services section.</p>',
+      teaser_link_url: '#',
+      teaser_link: 'More about consultations',
+      cards: [
+      { 
+        type_class: 'news', 
+        type: 'News', 
+        url: '#', 
+        title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
+        date: '5 November 2021'
+      },
+      { 
+        type_class: 'news', 
+        type: 'News', 
+        url: '#', 
+        title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
+        date: '5 November 2021'
+      },
+      { 
+        type_class: 'alerts', 
+        type: 'News', 
+        url: '#', 
+        title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
+        date: '5 November 2021'
+      },
+      { 
+        type_class: 'news', 
+        type: 'News', 
+        url: '#', 
+        title: 'Iceland recalls Iceland Ready to Eat Tikka Chicken Breast Slices because of undeclared milk', 
+        date: '5 November 2021'
+      },
+    ],
+    ButtonUrl: '#',
+    prev_button_label: 'More News and Alerts',
+} %}
+
+{% include '../../components/landing/LargePromoGroup/largePromoGroup.html.twig' with {
+  promoGroup: [
+    {
+      image: "https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/homepage-1.png",
+      title: "Report a food allergy, intolerance or coeliac reaction",
+      description: "<p>Use this tool to tell us about a reaction or near-miss that you, or someone you care for, has had due to a food allergy, intolerance or coeliac disease. This data will help inform future development, target research and help to produce effective government policy.</p><p>This is another paragarph</p>",
+      cta_link: "#",
+      cta_label: "Report a food allergy, intolerance or coeliac reaction"
+    },
+    {
+      image: "https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/fhrs-5_0.jpg",
+      title: "Food hygiene ratings",
+      description: "<p>Food hygiene ratings help you choose where to eat out or shop for food by telling you how seriously the business takes their food hygiene standards.</p>",
+      cta_link: "#",
+      cta_label: "Find a food hygiene rating"
+    },
+    {
+      image: "https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/juice-banner-1.png",
+      title: "Labelling guidance for prepacked for direct sale food",
+      description: "<p>Guidance to help food businesses, affected by the new prepacked for direct sale (PPDS) allergen labelling requirements, better understand how to label their food products ahead of new allergen labelling legislation coming into effect on 1 October 2021.</p>",
+      cta_link: "#",
+      cta_label: "All News and Alerts"
+    },
+    {
+      image: "https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/allergy-training-inspection.png",
+      title: "Food allergy and intolerance training",
+      description: "<p>Food business operators must make sure that staff receive training on managing allergens effectively. We have free online food safety courses available to help you and your business comply with food hygiene and food standards.</p>",
+      cta_link: "#",
+      cta_label: "Online food safety training"
+    }
+  ]
+} %}
+
+{% include '../../components/general/Feedback/feedback.html.twig' with {
+  section_summary: 'Feedback about the content on the page',
+  heading: 'Is this page useful?',
+  yes: 'Yes',
+  yes_link: '#',
+  useful: 'this page is useful',
+  no: 'No',
+  no_link: '#',
+  not_useful: 'this page is not useful',
+  report_question: 'Is there anything wrong with this page?',
+  thank_you: 'Thanks for your feedback',
+  close: 'Close',
+  the_feedback_form: 'the feedback form',
+  improve_question: 'How should we improve this page?',
+  feedback: 'feedback',
+  submit: 'Submit',
+  form_action: '#'
+} %}
+
+{% include '../../components/general/Footer/footer.html.twig' with {
+  footer_links: 'Footer links',
+  new_window: 'Open in a new window',
+  menu_links: [
+    {
+      link: { label: 'Copyright', href: '#', external: false },
+    },
+    {
+      link: { label: 'Accessibility', href: '#', external: false },
+    },
+    {
+      link: { label: 'Freedom of information', href: '#', external: false },
+    },
+    {
+      link: { label: 'Terms and conditions', href: '#', external: false },
+    },
+    {
+      link: { label: 'Privacy', href: '#', external: false },
+    },
+    {
+      link: {
+      label: 'Personal information charter',
+      href: '#',
+      external: false,
+    },
+    },
+    {
+      link: { label: 'Feedback and complaints', href: '#', external: false },
+    },
+    {
+      link: { label: 'Cookies', href: '#', external: false },
+    },
+    {
+      link: { label: 'Data', href: '#', external: false },
+    },
+    {
+      link: { label: 'GOV.UK', href: '#', external: true },
+    },
+  ],
+  social_media: 'Food Standards Agency on social media',
+  social_links: [
+    { label: 'Facebook', external: true, href: '#', svg: social_svg.facebook },
+    { label: 'Twitter', external: true, href: '#', svg: social_svg.twitter },
+    { label: 'LinkedIn', external: true, href: '#', svg: social_svg.linkedin },
+    { label: 'Youtube', external: true, href: '#', svg: social_svg.youtube },
+    { label: 'Instagram', external: true, href: '#', svg: social_svg.instagram },
+    { label: 'FSA blog', external: false, href: '#', svg: social_svg.blog },
+  ],
+} %}

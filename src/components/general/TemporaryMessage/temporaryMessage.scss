@@ -27,6 +27,7 @@
     border-bottom: 1px solid var(--fsa-primary_black);
     &:hover:not(:focus-visible) {
       border-bottom: 4px solid var(--fsa-primary_black);
+      color: var(--fsa-primary_black);
     }
   }
 

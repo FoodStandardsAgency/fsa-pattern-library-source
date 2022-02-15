@@ -1,0 +1,34 @@
+<div class="campaign-block">
+  <div class="campaign-block__image">
+    <img src="{{ image.url }}" alt="{{ image.alt }}">
+  </div>
+  <div class="campaign-block__container">
+    <div class="campaign-block__row">
+      <div class="campaign-block__wrapper{{ has_hero ? " campaign-block__wrapper--has-hero" : "" }}">
+        <div class="campaign-block__content-wrapper">
+          <div class="campaign-block__swoosh"></div>
+          <div class="campaign-block__content">
+            {% if has_hero %}
+              <h2 class="campaign-block__title campaign-block__title--has-hero">{{ title }}</h2>
+            {% else %}
+              <h1 class="campaign-block__title">{{ title }}</h1>
+            {% endif %}
+            {% if description %}
+              <p class="campaign-block__description">{{ description }}</p>
+            {% endif %}
+            {% if cta %}
+              <div class="campaign-block__cta">
+                {% include '@components/components/general/Button/button.html.twig' with {
+                  type: 'primary',
+                  url: cta.url,
+                  label: cta.label,
+                  element: 'link',
+                } %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

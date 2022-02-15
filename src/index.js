@@ -1,5 +1,6 @@
 import './base.scss';
 import 'url-polyfill';
+import objectFitImages from 'object-fit-images';
 import cssVars from 'css-vars-ponyfill';  
 
 /* General Components */
@@ -50,6 +51,7 @@ import './components/landing/LargePromoGroup/largePromoGroup';
 import './components/landing/LatestTeaser/latestTeaser';
 import './components/landing/PromoGroup/promoGroup';
 import './components/landing/ServiceLinks/serviceLinks';
+import './components/landing/CampaignBlock/campaignBlock';
 
 /* Contact Components */
 import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';
@@ -89,6 +91,8 @@ import sortBy from "./components/search/SortBy/sortBy";
 
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars();
+// Fixes object-fit on legacy browsers
+objectFitImages();
 
 backToTop();
 breadcrumbJs();

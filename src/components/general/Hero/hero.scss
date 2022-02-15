@@ -2,8 +2,17 @@
 
 .hero {
   display: flex;
+  flex-direction: column-reverse;
   position: relative;
   overflow: hidden;
+
+  &__campaign-block {
+   margin-top: -2rem;
+   z-index: 1;
+   @media screen and (min-width: $fsa-md) {
+     margin-top: -12.5rem;
+   }
+  }
 
   &__mask-wrapper {
     display: flex;
@@ -19,7 +28,7 @@
     -webkit-mask-repeat: no-repeat;
     color: white;
     padding-bottom: 2rem;
-    z-index: 1;
+    z-index: 2;
     @media screen and (min-width: $fsa-md) {
       background-image: url("./assets/pattern.svg");
       background-size: 150%;
@@ -40,6 +49,9 @@
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
       height: 100vh;
+    }
+    &--campaign-block {
+      background-image: none;
     }
   }
   &--without-image.hero--with-services {
