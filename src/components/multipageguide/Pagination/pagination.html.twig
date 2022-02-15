@@ -1,0 +1,20 @@
+<nav class="multipage-guide-pagination">
+  <ul class="multipage-guide-pagination__list{{ previous is not defined ? ' multipage-guide-pagination__offset' : '' }}">
+    {% if previous %}
+      <li class="multipage-guide-pagination__prev">
+        <a href="{{ previous.link }}" data-fsa-at="multipage-guide-pagination-previous">
+          <span class="multipage-guide-pagination__label">{{ previous.label }}</span>
+          <p class="multipage-guide-pagination__type">{{ previous.page_name }}</p>
+        </a>
+      </li>
+    {% endif %}
+    {% if next %}
+      <li class="multipage-guide-pagination__next">
+        <a href="{{ next.link }}" data-fsa-at="multipage-guide-pagination-next">
+          <span class="multipage-guide-pagination__label">{{ next.label }}</span>
+          <p class="multipage-guide-pagination__type">{{ next.page_name }}</p>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

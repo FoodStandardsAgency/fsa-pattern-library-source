@@ -29,7 +29,7 @@
 {% endif %}
 
 <section class="hero {{ type }}{{ service_type ? ' hero--services-' ~ service_type : '' }}">
-  <div class="hero__mask-wrapper{{ theme }}">
+  <div class="hero__mask-wrapper{{ theme }}{{ campaign_block ? " hero__mask-wrapper--campaign-block" : "" }}{{ campaign_block.has_hero ? "" : " hero__mask-wrapper--hide-hero" }}">
     <div class="hero__container">
       <div class="hero__row">
         <div class="hero__content-wrapper{{ rows ? ' hero__content-wrapper--' ~ rows ~ '-service-rows': ''}}">
@@ -57,7 +57,7 @@
       </div>
     </div>
   </div>
-  {% if image %}
+  {% if image and not campaign_block %}
     <div class="hero__image">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
             y="0px" viewBox="0 0 200 200" xml:space="preserve">
@@ -83,6 +83,18 @@
           columns: columns,
         } %}
       </div>
+    </div>
+  {% endif %}
+  {#  Prioritise services #}
+  {% if campaign_block and not services %}
+    <div class="hero__campaign-block{{ campaign_block.has_hero ? " hero__campaign-block--has-hero" : "" }}">
+      {% include '@components/components/landing/CampaignBlock/campaignBlock.html.twig' with {
+        title: campaign_block.title,
+        description: campaign_block.description,
+        cta: campaign_block.cta,
+        image: image,
+        has_hero: campaign_block.has_hero,
+      } %}
     </div>
   {% endif %}
 </section>
