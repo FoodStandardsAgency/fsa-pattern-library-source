@@ -1,10 +1,10 @@
 @import "src/lib.scss";
 
 .error-box {
-  margin: 2rem -0.75rem 0;
+  margin: 2rem -0.75rem 2rem;
 
   @media screen and (min-width: $fsa-md) {
-    margin: 2rem -1.25rem 0;
+    margin: 2rem -1.25rem 2rem;
   }
 
   &__container {
