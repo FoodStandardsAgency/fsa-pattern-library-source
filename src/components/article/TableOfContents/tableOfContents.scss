@@ -6,16 +6,67 @@
   }
 
   &__title {
-    @include body;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+    &--heading, &--button {
+      @include body;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+    &--heading {
+      display: none;
+      @media screen and (min-width: $fsa-md) {
+        display: block;
+      }
+    }
+    &--button {
+      @include link();
+      width: 100%;
+      color: var(--fsa-primary__black);
+      text-decoration: none;
+      background: none;
+      border: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        &::after {
+          content: url('./assets/arrow.svg');
+        }
+      }
+      &:focus {
+        span {
+          &::after {
+            content: url('./assets/arrow-black.svg');
+          }
+        }
+      }
+      &:hover:not(:focus-visible) {
+        color: var(--fsa-primary__black);
+      }
+      @media screen and (min-width: $fsa-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__arrow {
+    transform: rotate(0deg);
+    &--active {
+      transform: rotate(180deg);
+    }
   }
 
   &__list {
+    display: none;
     list-style: none;
     padding: 0;
     margin: 0;
+    @media screen and (min-width: $fsa-md) {
+      display: block;
+    }
+    &--open {
+      display: block;
+    }
   }
 
   &__list-item {
