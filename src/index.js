@@ -58,7 +58,6 @@ import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';
 import './components/contact/PromoLinks/promoLinks';
 
 /* Article Components */
-import './components/article/TableOfContents/tableOfContents';
 import './components/article/DocumentDownload/documentDownload';
 import './components/article/ArticleHero/articleHero';
 import './components/article/RegionalVariationBlock/regionalVariationBlock';
@@ -73,6 +72,7 @@ import './components/article/TeamContacts/teamContacts';
 import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
+import tableOfContents from "@components/components/article/TableOfContents/tableOfContents";
 
 /* Multipage guide Components */
 import './components/multipageguide/Pagination/pagination';
@@ -105,3 +105,4 @@ accordion();
 header();
 pdfAndPrintButtons();
 stickySidebar();
+tableOfContents();
