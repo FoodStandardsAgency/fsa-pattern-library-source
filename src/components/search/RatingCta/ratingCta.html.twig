@@ -1,0 +1,14 @@
+<div class="rating-cta">
+  <div class="rating-cta__item">
+    <h2 class="rating-cta__item__title">{{ cta_title }}</h2>
+    <div class="rating-cta__item__description">{{ cta_description }}</div>
+    <div class="rating-cta__item__link_wrapper">
+      {% include '@components/components/general/Button/button.html.twig' with {
+        element: 'link',
+        type: 'primary',
+        url: cta_link.url,
+        label: cta_link.label,
+      } %}
+    </div>
+  </div>
+</div>
