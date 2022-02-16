@@ -52,15 +52,12 @@
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(6);
       @include cols-push(6);
-      margin-top: 12.5rem;
+      margin-top: 10rem;
       overflow: hidden;
     }
     &--has-hero {
       @media screen and (min-width: $fsa-md) {
         margin-top: 21.875rem;
-      }
-      @media screen and (min-width: $fsa-xl) {
-        margin-top: 25rem;
       }
     }
   }
@@ -97,7 +94,7 @@
       padding: 1rem 1rem 2rem 1rem;
     }
     @media screen and (min-width: $fsa-xl) {
-      padding: 2rem 2rem 3.625rem 2rem;
+      padding: 2rem;
     }
   }
   &__title {
