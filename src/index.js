@@ -75,6 +75,7 @@ import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPr
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 
 /* Multipage guide Components */
+import './components/multipageguide/GuideHero/guideHero';
 import './components/multipageguide/Pagination/pagination';
 
 /* Layout Components */

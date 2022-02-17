@@ -1,0 +1,1 @@
+import './guideHero.scss';
