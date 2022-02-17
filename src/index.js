@@ -29,6 +29,7 @@ import './components/search/SearchNoResults/searchNoResults';
 import './components/search/Showing/showing';
 import './components/search/SortBy/sortBy';
 import './components/search/FiltersHeader/filtersHeader';
+import './components/search/RatingCta/ratingCta';
 import datepicker from './components/search/Datepicker/datepicker';
 import accordion from './components/search/Accordion/accordion';
 

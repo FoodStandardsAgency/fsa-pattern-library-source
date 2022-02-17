@@ -1,5 +1,35 @@
 @import "src/lib.scss";
 
 .rating-cta {
+  &__item {
+    border-top: 4px solid var(--fsa-primary_dark-green);
+    margin-top: 3rem;
 
+    &-wrapper {
+      padding: 0 1rem 0.5rem;
+    }
+
+    &-link-wrapper {
+      .button {
+        width: 100%;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 1.6rem;
+          height: 1rem;
+          top: 0.2rem;
+          left: 1rem;
+          position: relative;
+          background-image: url("./assets/cta-arrow.svg");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    &-title {
+      @include h4;
+      margin: 0.8rem 0 0.5rem 0;
+    }
+  }
 }
