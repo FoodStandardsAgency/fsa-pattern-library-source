@@ -26,47 +26,8 @@
 {% block left %}
   {% include '@components/components/article/StickySidebar/stickySidebar.html.twig' with {
     sidebar_items: [
-      '<nav class="table-of-contents">
-        <h2 class="table-of-contents__title">IN THIS GUIDE</h2>
-        <ol class="table-of-contents__list">
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">Guidance summary</a>
-          </li>
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">Introduction</a>
-          </li>
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">
-              Requirements and overview of cooking methods
-            </a>
-          </li>
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">Sous vide cooking method</a>
-          </li>
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">Sear and shave method</a>
-          </li>
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">Source control method</a>
-          </li>
-        </ol>
-      </nav>',
-      '<nav class="table-of-contents">
-        <h2 class="table-of-contents__title">ON THIS PAGE</h2>
-        <ol class="table-of-contents__list">
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">Intended audience</a>
-          </li>
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">Purpose of the guidance</a>
-          </li>
-          <li class="table-of-contents__list-item">
-            <a href="#" class="table-of-contents__link">
-              Legal status of the guidance
-            </a>
-          </li>
-        </ol>
-      </nav>'
+      in_this_guide,
+      on_this_page,
     ],
   } %}
 {% endblock %}

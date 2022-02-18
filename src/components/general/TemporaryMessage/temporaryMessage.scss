@@ -29,20 +29,19 @@
       border-bottom: 4px solid var(--fsa-primary_black);
       color: var(--fsa-primary_black);
     }
+    &:focus {
+      color: var(--fsa-primary_white);
+      background-color: var(--fsa-primary_black);
+      &::after {
+        background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
+      }
+    }
   }
 
   &--warning {
     background-color: var(--fsa-secondary_mid-yellow);
     a {
       color: var(--fsa-primary_black);
-      &:focus {
-        color: var(--fsa-primary_white);
-        background-color: var(--fsa-primary_black);
-        border-color: var(--fsa-primary_white);
-        &::after {
-          background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
-        }
-      }
     }
   }
 
@@ -63,11 +62,7 @@
           border-color: var(--fsa-primary_white);
         }
         &:focus {
-          color: var(--fsa-primary_black);
           border-color: var(--fsa-primary_black);
-          &::after {
-            background-image: url("/src/components/general/ExternalLink/assets/external-black.svg");
-          }
         }
       }
     }
