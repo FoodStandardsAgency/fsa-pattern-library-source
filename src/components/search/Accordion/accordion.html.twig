@@ -5,12 +5,12 @@
           aria-describedby="{{ description_id }}" data-name="{{ name }}">
   <legend class="accordion__legend">
     <button class="accordion__button{{ open ? " accordion__button--expanded" : "" }}"
-            aria-expanded={{ open ? "true" : "false" }} aria-controls={{ fields_id }}>
+            aria-expanded="{{ open ? "true" : "false" }}" aria-controls="{{ fields_id }}">
       <span class="accordion__title-text">{{ title }}</span>
     </button>
   </legend>
-  <p class="accordion__description" id={{ description_id }} data-selected={{ selected }}></p>
-  <div class="accordion__fields{{ open ? " accordion__fields--active" : "" }}" id={{ fields_id }}>
+  <p class="accordion__description" id="{{ description_id }}" data-selected="{{ selected }}"></p>
+  <div class="accordion__fields{{ open ? " accordion__fields--active" : "" }}" id="{{ fields_id }}">
     {% for field in fields %}
       {% if field.type == 'datepicker' %}
         <div class="accordion__field accordion__field--datepicker">
