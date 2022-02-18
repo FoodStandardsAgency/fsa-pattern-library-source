@@ -1,0 +1,9 @@
+@import "src/lib.scss";
+
+.step {
+  @include body;
+  display:inline-block;
+  margin-top: 2rem;
+  color: var(--fsa-primary_dark-grey);
+  text-align: left;
+}

@@ -46,6 +46,10 @@
       }
     }%}
 
+     {% include '../../components/form/Step/step.html.twig' with {
+      step: 'Step 3 of 5'
+    } %}
+
     {% include '../../components/form/InputField/inputField.html.twig' with {
       name: 'title',
       label: 'Title',
