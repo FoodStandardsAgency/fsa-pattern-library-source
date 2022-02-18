@@ -17,7 +17,8 @@ export default function () {
     function changeSidebarWidth(parent, el, mode) {
       if (mode === 'mobile') {
         el.style.width = 'auto';
-      } else {
+      }
+      else {
         const computedStyle = getComputedStyle(parent);
         let parentWidth = parent.clientWidth;
         parentWidth -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
