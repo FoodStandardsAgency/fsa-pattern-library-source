@@ -10,9 +10,9 @@
       <span class="input-field__prefix">{{ prefix }}</span>
     {% endif %}
     {% if value %}
-      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" value="{{ value }}" aria-required={{ required ? "true" : "false" }} {{ states ? "data-drupal-states=" ~ states ~ "" : ""}} />
+      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" value="{{ value }}" aria-required="{{ required ? "true" : "false" }}" {{ states ? "data-drupal-states=" ~ states ~ "" : ""}} />
     {% else %}
-      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" aria-required={{ required ? "true" : "false" }} {{ states ? "data-drupal-states=" ~ states : ""}} />
+      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" aria-required="{{ required ? "true" : "false" }}" {{ states ? "data-drupal-states=" ~ states : ""}} />
     {% endif %}
   </div>
   {% if caption %}
