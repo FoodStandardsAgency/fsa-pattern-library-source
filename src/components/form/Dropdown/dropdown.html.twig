@@ -10,7 +10,11 @@
     <p class="dropdown__description">{{ description }}</p>
   {% endif %}
   <div class="dropdown__field">
-    <select name="{{ name }}" id="{{ id }}" class="dropdown__select" data-drupal-states="{{ states ? states : '' }}" >
+    {% if states %}
+      <select name="{{ name }}" id="{{ id }}" class="dropdown__select" data-drupal-states="{{ states }}">
+    {% else %}
+      <select name="{{ name }}" id="{{ id }}" class="dropdown__select">
+    {% endif %}
       {% for option in options %}
         <option value="{{ option.value }}" class="dropdown__option" {{ option.value == default ? "selected" : "" }}>{{ option.text }}</option>
       {% endfor %}
