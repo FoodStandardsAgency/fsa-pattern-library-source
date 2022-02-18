@@ -10,7 +10,7 @@ const Template = (args) => articleHero(args);
 
 export const GuideHero = Template.bind({});
 GuideHero.args = {
-  type: 'guide',
+  type: 'multipage_guide',
   region: ['England', 'Northern Ireland', 'Wales'],
   type_string: 'FSA Board & Business Committee Meetings - September 2021',
   title: 'FSA Board Meeting - September 2021: Agenda and Papers',
