@@ -110,21 +110,8 @@
     wysiwyg_content: 'If you have bought the above products and have an allergy to oats (that are gluten free), do not eat them. Instead return it to the <a href="#">store</a> from where it was bought for a full refund.',
     transparent_background: true,
   } %}
-  <br/> {# Remove once the article footer is created #}
-  {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
-    multipage_guide: true,
-    pdf_link: '#',
-    pdf_name: 'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
-    pdf_name: 'Kirsty’s Classic Beef Lasagne Alert',
-    view: 'View',
-    as: 'as',
-    pdf: 'PDF',
-    new_window: 'Opens in a new window',
-    print_this_page: 'Print this page',
-    view_entire_guide: 'View entire guide as PDF',
-    print_guide: 'Print guide',
-    multipage_guide_pdf_link: '#',
-    multipage_guide_print_link: '#',
+  {% include '../../components/article/BackToTop/backToTop.html.twig' with {
+    back_to_top: 'Back to top',
   } %}
 {% endblock %}
 {% block footer %}
