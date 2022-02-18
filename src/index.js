@@ -76,6 +76,7 @@ import stickySidebar from './components/article/StickySidebar/stickySidebar';
 import tableOfContents from "@components/components/article/TableOfContents/tableOfContents";
 
 /* Multipage guide Components */
+import './components/multipageguide/GuideHero/guideHero';
 import './components/multipageguide/Pagination/pagination';
 
 /* Layout Components */

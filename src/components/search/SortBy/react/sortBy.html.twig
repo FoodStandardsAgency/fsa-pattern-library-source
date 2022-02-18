@@ -1,6 +1,6 @@
 <div class="sort">
   <label for="sort" class="sort__label">{{ sort_by }}</label>
-  <select name="sort" id="sort" class="sort__select" defaultValue={{ default|lower }} data-fsa-at="search-sort">
+  <select name="sort" id="sort" class="sort__select" defaultValue="{{ default|lower }}" data-fsa-at="search-sort">
     {% for option in options %}
       <option value="{{ option.value|lower }}" class="sort__option">{{ option.text }}</option>
     {% endfor %}
