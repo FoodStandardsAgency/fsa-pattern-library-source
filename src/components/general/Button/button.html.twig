@@ -1,5 +1,5 @@
 {% if element == 'link' %}
-  <a href={{ url }} class="button button--{{ type }}">
+  <a href="{{ url }}" class="button button--{{ type }}">
     {{ label }}
   </a>
 {% elseif element == 'button' %}
@@ -8,5 +8,5 @@
   </button>
 
 {% elseif element == 'input' %}
-  <input type="submit" class="button button--event button--{{ type }}" value={{ label }}>
+  <input type="submit" class="button button--event button--{{ type }}" value="{{ label }}">
 {% endif %}
