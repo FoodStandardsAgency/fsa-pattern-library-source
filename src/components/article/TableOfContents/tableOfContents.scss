@@ -49,6 +49,20 @@
     }
   }
 
+  &__skip {
+    @include link();
+    display: inline-block;
+    margin-top: 1rem;
+    &:not(:focus):not(:active) {
+      position: absolute;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+  }
+
   &__arrow {
     transform: rotate(0deg);
     &--active {
