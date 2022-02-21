@@ -2629,3 +2629,38 @@ Welsh.args = {
     ],
   }
 };
+
+export const MyHACCP = Template.bind({});
+MyHACCP.args = {
+  english: true,
+  english_link: '#',
+  english_label: 'English',
+  welsh_link: '#',
+  welsh_label: 'Cymraeg',
+  logo_link: '#',
+  logo_label: 'Food Standards Agency - Frontpage',
+  search_bar_visible: false,
+  menu_label: 'menu',
+  navigation: {
+    id: 'navigation',
+    label: 'Main navigation',
+    home_link: '#',
+    home_label: 'Home',
+    links: [
+      {
+        link: {
+          href:'#',
+          label: 'MyHACCP Web Tool',
+          active: 'false',
+        },
+      },
+      {
+        link: {
+          href:'#',
+          label: 'Help',
+          active: 'true',
+        },
+      },
+    ],
+  }
+};

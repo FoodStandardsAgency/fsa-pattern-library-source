@@ -23,16 +23,22 @@
           </div>
           <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
             <div class="header__links-wrapper">
-              <div class="header__links-item">
-                <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
-              </div>
-              <div class="header__links-item">
-                <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
-              </div>
+              {% if contact_link is not empty and contact_label is not empty %}
+                <div class="header__links-item">
+                  <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
+                </div>
+              {% endif %}
+              {% if report_link is not empty and report_label is not empty %}
+                <div class="header__links-item">
+                  <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
+                </div>
+              {% endif %}
             </div>
-            <div class="header__links-item header__links-item--right">
-              <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
-            </div>
+            {% if ratings_link is not empty and ratings_label is not empty %}
+              <div class="header__links-item header__links-item--right">
+                <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
+              </div>
+            {% endif %}
           </nav>
           {% if search_bar_visible %}
             <div class="header__search-bar-wrapper">
