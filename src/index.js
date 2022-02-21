@@ -55,7 +55,8 @@ import './components/landing/LatestTeaser/latestTeaser';
 import './components/landing/PromoGroup/promoGroup';
 import './components/landing/ServiceLinks/serviceLinks';
 import './components/landing/CampaignBlock/campaignBlock';
-import './components/landing/TextBlockWithTitle/textBlockWithTitle';
+import './components/landing/LandingText/landingText';
+import './components/landing/LandingTitle/landingTitle';
 
 /* Contact Components */
 import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';
