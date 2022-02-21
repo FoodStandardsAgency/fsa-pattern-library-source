@@ -10,8 +10,7 @@ const Template = (args) => textBlockWithTitle(args);
 export const TextBlockWithTitle = Template.bind({});
 TextBlockWithTitle.args = {
   title: 'Welcome to the FSA',
-  content: '<h2>[H2] Header </h2>\n' +
-      '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in commodo magna. Pellentesque habitant morbi\n' +
+  content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in commodo magna. Pellentesque habitant morbi\n' +
       '    tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n' +
       '<h3>[H3] Header </h3>\n' +
       '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in commodo magna. Pellentesque habitant morbi\n' +

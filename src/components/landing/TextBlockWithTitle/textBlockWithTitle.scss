@@ -13,8 +13,14 @@
       flex-direction: row;
     }
   }
-  &__wrapper {
+  &__title-wrapper {
     @include landing-text-wrapper;
+  }
+  &__content-wrapper {
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(12);
+    }
   }
   &__title {
     margin: 0;
@@ -36,5 +42,6 @@
   }
   &__content {
     @include wysiwyg-content();
+    text-align: left;
   }
 }
