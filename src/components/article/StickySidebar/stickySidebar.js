@@ -8,6 +8,11 @@ export default function () {
       return;
     }
 
+    // The top position for the sidebar once fixed.
+    const sidebarTopPosition = 18;
+    // The margin-top value for the footer once fixed.
+    const footerMarginTop = 54;
+
     // Work out whether the screensize is mobile/desktop
     function getMode() {
       return window.innerWidth < 1024 ? 'mobile' : 'desktop';
@@ -56,13 +61,13 @@ export default function () {
         // If there is a footer
         if (footerTop) {
           // If the scroll position is between the top of the page and the top of the footer, fix the sidebar
-          if ((scrollTop + 18 >= top) && (scrollTop + 54 <= footerTop)) {
+          if ((scrollTop + sidebarTopPosition >= top) && (scrollTop + footerMarginTop <= footerTop)) {
             el.classList.add('sticky-sidebar--fixed');
             el.classList.remove('sticky-sidebar--bottom');
             changeSidebarWidth(parent, el, mode);
           }
           // If the scroll position is past the footer, move the sidebar to the bottom.
-          else if (scrollTop + 54 > footerTop) {
+          else if (scrollTop + footerMarginTop > footerTop) {
             el.classList.add('sticky-sidebar--bottom');
             el.classList.remove('sticky-sidebar--fixed');
             changeSidebarWidth(parent, el, mode);
@@ -77,7 +82,7 @@ export default function () {
         // If there isn't a footer
         else {
           // If the scroll position is below the top of the page, fix the sidebar
-          if (scrollTop + 18 >= top) {
+          if (scrollTop + sidebarTopPosition >= top) {
             el.classList.add('sticky-sidebar--fixed');
             changeSidebarWidth(parent, el, mode);
           }
