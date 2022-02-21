@@ -1,0 +1,40 @@
+@import "src/lib.scss";
+
+.text-block-with-title {
+  @include landing-margin-top;
+  &__container {
+    @include grid-container();
+  }
+  &__row {
+    @media screen and (min-width: $fsa-md) {
+      @include grid-row();
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+  &__wrapper {
+    @include landing-text-wrapper;
+  }
+  &__title {
+    margin: 0;
+    padding: 0;
+    @include h2;
+    position: relative;
+    margin-bottom: 1rem;
+
+    &:after {
+      content: "";
+      background-image: url("./assets/dot.svg");
+      background-repeat: repeat-x;
+      background-size: 25px 25px;
+      width: 12rem;
+      display: block;
+      padding-bottom: 0.5rem;
+      margin: 0.5rem auto 0rem;
+    }
+  }
+  &__content {
+    @include wysiwyg-content();
+  }
+}
