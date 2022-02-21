@@ -1,0 +1,17 @@
+<div class="text-block-with-title">
+  <div class="text-block-with-title__container">
+    <div class="text-block-with-title__row">
+      {% if title %}
+        <div class="text-block-with-title__title-wrapper">
+          <h2 class="text-block-with-title__title">{{ title }}</h2>
+        </div>
+      {% endif %}
+      <div class="text-block-with-title__content-wrapper">
+        <div class="text-block-with-title__content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
