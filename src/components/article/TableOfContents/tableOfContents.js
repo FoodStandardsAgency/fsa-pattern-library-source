@@ -1,8 +1,10 @@
 import './tableOfContents.html.twig';
 import './tableOfContents.scss';
+import { getMode } from '../../general/Navigation/navigation-accessibility.js';
 
 export default function () {
   let DOMContentFirstLoad = true;
+
   window.addEventListener('DOMContentLoaded', function () {
     if (DOMContentFirstLoad) {
       DOMContentFirstLoad = false;
@@ -11,11 +13,6 @@ export default function () {
     const els = document.querySelectorAll('.table-of-contents');
     if (!els) {
       return;
-    }
-
-    // Work out whether the screen size is mobile/desktop
-    function getMode() {
-      return window.innerWidth < 1024 ? 'mobile' : 'desktop';
     }
 
     let mode = getMode();
@@ -33,6 +30,23 @@ export default function () {
           } else {
             button.setAttribute('aria-expanded', 'true');
           }
+        }
+      });
+
+      // Handle the visibility of the "skip menu" link
+      const skipLink = el.querySelector('.table-of-contents__skip');
+      skipLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        // If there is another group, move to that.
+        const nextGroup = el.parentElement.nextElementSibling;
+        if (nextGroup) {
+          nextGroup.querySelector('a').focus();
+        }
+        // Otherwise scroll and focus the top of the content
+        else {
+          const tocSkip = document.querySelector('#toc-skip-to');
+          tocSkip.scrollIntoView();
+          tocSkip.focus();
         }
       });
     });

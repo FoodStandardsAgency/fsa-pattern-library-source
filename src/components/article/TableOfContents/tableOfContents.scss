@@ -14,7 +14,7 @@
     }
     &--heading {
       display: none;
-      @media screen and (min-width: $fsa-md) {
+      @media screen and (min-width: $fsa-lg) {
         display: block;
       }
     }
@@ -43,9 +43,23 @@
       &:hover:not(:focus-visible) {
         color: var(--fsa-primary__black);
       }
-      @media screen and (min-width: $fsa-md) {
+      @media screen and (min-width: $fsa-lg) {
         display: none;
       }
+    }
+  }
+
+  &__skip {
+    @include link();
+    display: inline-block;
+    margin-top: 1rem;
+    &:not(:focus):not(:active) {
+      position: absolute;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
     }
   }
 
@@ -61,7 +75,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    @media screen and (min-width: $fsa-md) {
+    @media screen and (min-width: $fsa-lg) {
       display: block;
     }
     &--open {

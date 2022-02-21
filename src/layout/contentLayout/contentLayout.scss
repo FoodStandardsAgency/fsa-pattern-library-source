@@ -46,6 +46,7 @@
       @include grid-cols(4);
       position: absolute;
       top: 0;
+      height: 100%;
     }
   }
   &__right {

@@ -26,6 +26,7 @@ MultipageGuide.args = {
         { label: 'Sear and shave method', href: '#' },
         { label: 'Source control method', href: '#' },
       ],
+      skip_menu_text: 'Skip the menu of subheadings',
     }),
   on_this_page:
     tableOfContents({
@@ -35,5 +36,6 @@ MultipageGuide.args = {
         { label: 'Purpose of the guidance', href: '#' },
         { label: 'Legal status of the guidance', href: '#' },
       ],
+      skip_menu_text: 'Skip the menu of subheadings',
     }),
 }
