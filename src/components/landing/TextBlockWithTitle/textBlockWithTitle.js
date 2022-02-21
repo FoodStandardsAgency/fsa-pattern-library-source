@@ -1,2 +1,2 @@
-import './textBlock.html.twig';
-import './textBlock.scss';
+import './textBlockWithTitle.html.twig';
+import './textBlockWithTitle.scss';
