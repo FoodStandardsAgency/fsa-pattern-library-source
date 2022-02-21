@@ -1,0 +1,20 @@
+@import "src/lib.scss";
+
+.map-field {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__button {
+    margin-top: 1rem;
+    text-align: right;
+  }
+
+  &__map {
+    background-image: url("./assets/google-maps-placeholder.png");
+    height: 520px;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}

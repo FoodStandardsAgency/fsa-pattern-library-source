@@ -17,4 +17,5 @@ TableOfContents.args = {
     { label: 'MyHACCP step by step', href: '#' },
     { label: 'Small business and retailers', href: '#' },
   ],
+  skip_menu_text: 'Skip the menu of subheadings',
 };

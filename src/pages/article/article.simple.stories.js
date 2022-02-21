@@ -22,5 +22,6 @@ Simple.args = {
         { label: 'Placing your product on the market in Great Britain', href: '#gb-market' },
         { label: 'Placing your product on the market in Northern Ireland', href: '#ni-market' },
       ],
+      skip_menu_text: 'Skip the menu of subheadings',
     }),
 }

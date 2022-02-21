@@ -45,6 +45,8 @@ import './components/form/Tabs/tabs';
 import './components/form/TitleAndText/titleAndText';
 import './components/form/EmailField/emailField';
 import './components/form/Textarea/textarea';
+import './components/form/MapField/mapField';
+import './components/form/Step/step';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';

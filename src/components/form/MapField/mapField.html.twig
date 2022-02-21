@@ -1,0 +1,25 @@
+{% set spaceless_name = name|replace({" ": ""})|lower %}
+{% set id = spaceless_name %}
+<div class="map-field">
+  <div class="map-field__content">
+    <div class="map-field__input">
+      {% include '@components/components/form/InputField/inputField.html.twig' with {
+        name: name,
+        label: label,
+        required: required,
+        error: error,
+        error_message: error_message,
+        value: address,
+      } %}
+    </div>
+    <div class="map-field__button">
+      {% include '@components/components/general/Button/button.html.twig' with {
+        type: 'primary',
+        label: button,
+        element: 'input',
+      } %}
+    </div>
+
+    <div class="map-field__map"></div>
+  </div>
+</div>

@@ -5,6 +5,9 @@
       {{ title|upper }}
       <span class="table-of-contents__arrow"></span>
     </button>
+    <a href="#" class="table-of-contents__skip">
+      {{ skip_menu_text }} {{ title }}
+    </a>
   </div>
   <ol class="table-of-contents__list">
     {% for link in links %}
