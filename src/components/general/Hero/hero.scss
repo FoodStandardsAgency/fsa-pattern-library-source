@@ -74,6 +74,9 @@
         margin-bottom: 0;
       }
     }
+    .hero__row {
+      flex-direction: column;
+    }
   }
   &__container {
     position: relative;
@@ -83,7 +86,6 @@
   &__row {
     @include grid-row;
     display: flex;
-    flex-direction: column;
   }
 
   &__content-wrapper {
