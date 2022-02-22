@@ -9,7 +9,8 @@
     @include body();
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
     &--news {
       color: var(--fsa-secondary_mid-purple);
     }

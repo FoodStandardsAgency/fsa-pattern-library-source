@@ -6,7 +6,8 @@
   }
 
   &__title {
-    &--heading, &--button {
+    &--heading,
+    &--button {
       @include body;
       font-weight: bold;
       margin: 0;
@@ -21,7 +22,7 @@
     &--button {
       @include link();
       width: 100%;
-      color: var(--fsa-primary__black);
+      color: var(--fsa-primary_black);
       text-decoration: none;
       background: none;
       border: 0;
@@ -30,18 +31,18 @@
       align-items: center;
       span {
         &::after {
-          content: url('./assets/arrow.svg');
+          content: url("./assets/arrow.svg");
         }
       }
       &:focus {
         span {
           &::after {
-            content: url('./assets/arrow-black.svg');
+            content: url("./assets/arrow-black.svg");
           }
         }
       }
       &:hover:not(:focus-visible) {
-        color: var(--fsa-primary__black);
+        color: var(--fsa-primary_black);
       }
       @media screen and (min-width: $fsa-lg) {
         display: none;

@@ -47,7 +47,7 @@
                             </svg>
                           </span>
                         </button>
-                        <div class="navigation__menu-wrapper" role="region" aria-labelledby="{{ group.title|trim|replace({' ': '-'})|lower }}">
+                        <div class="navigation__menu-wrapper" aria-labelledby="{{ group.title|trim|replace({' ': '-'})|lower }}">
                           <ul class="navigation__menu navigation__menu--level-2">
                             {% for submenuLinkObj in group.links %}
                               <li class="navigation__link{{ active ? ' navigation__link--active' : '' }}">
