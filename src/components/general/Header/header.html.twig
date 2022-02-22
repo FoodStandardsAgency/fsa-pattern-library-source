@@ -3,7 +3,19 @@
     <div class="header__grid-row">
       <div class="header__wrapper">
         <div class="header__top">
-          <nav class="header__languages header__languages--desktop" aria-label="Language switcher" aria-hidden="false">
+          {% if sign_in_label %}
+          <nav class="header__user_options header__user_options--desktop header__nav" aria-label="User options" aria-hidden="false">
+            <ul class="header__user_options-list">
+              <li class="header__user_option">
+                <a href="{{ english_link }}" class="header__user-option-link">{{ user_logged_in ? my_account_label : register_label }}</a>
+              </li>
+              <li class="header__user_option">
+                <a href="{{ welsh_link }}" class="header__user-option-link">{{ user_logged_in ? register_label : sign_in_label }}</a>
+              </li>
+            </ul>
+          </nav>
+          {% endif %}
+          <nav class="header__languages header__languages--desktop header__nav" aria-label="Language switcher" aria-hidden="false">
             <ul class="header__languages-list">
               <li class="header__language">
                 <a href="{{ english_link }}" class="header__language-link header__language-link--{{ english ? "selected" : "" }}">{{ english_label }}</a>

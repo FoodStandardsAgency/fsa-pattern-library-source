@@ -2633,6 +2633,14 @@ Welsh.args = {
 export const MyHACCP = Template.bind({});
 MyHACCP.args = {
   english: true,
+  sign_in_link: '#',
+  sign_in_label: 'Sign in',
+  sign_out_link: '#',
+  sign_out_label: 'Sign out',
+  register_link: '#',
+  register_label: 'Register',
+  my_account_link: '#',
+  my_account_label: 'My account',
   english_link: '#',
   english_label: 'English',
   welsh_link: '#',
@@ -2640,6 +2648,7 @@ MyHACCP.args = {
   logo_link: '#',
   logo_label: 'Food Standards Agency - Frontpage',
   search_bar_visible: false,
+  user_logged_in: false,
   menu_label: 'menu',
   navigation: {
     id: 'navigation',
