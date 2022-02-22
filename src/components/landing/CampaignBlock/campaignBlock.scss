@@ -19,7 +19,7 @@
       z-index: -1;
     }
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       height: 12rem;
       border-radius: 100%;
@@ -37,7 +37,7 @@
       object-fit: cover;
       object-position: center;
       // Required for object-fit polyfill
-      font-family: 'object-fit: cover; object-position: center;';
+      font-family: "object-fit: cover; object-position: center;";
     }
   }
   &__container {
@@ -68,7 +68,7 @@
       display: block;
       margin-top: 3rem;
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         display: block;
         height: 12rem;
@@ -83,9 +83,8 @@
   }
   &__content-wrapper {
     @media screen and (min-width: $fsa-md) {
-      overflow:hidden;
+      overflow: hidden;
     }
-
   }
   &__content {
     @media screen and (min-width: $fsa-md) {
@@ -102,7 +101,7 @@
     margin: 0;
     &--has-hero {
       @include h2();
-      color: var(--fsa-primary__black);
+      color: var(--fsa-primary_black);
       margin: 0;
     }
   }

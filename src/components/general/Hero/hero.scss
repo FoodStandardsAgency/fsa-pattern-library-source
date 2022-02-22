@@ -154,7 +154,7 @@
     &--with-image#{&}--4-columns {
       @media screen and (min-width: $fsa-xl) {
         position: relative;
-        height: unset;
+        height: auto;
         margin-top: 0;
       }
     }
@@ -177,7 +177,7 @@
         margin-left: 0;
         padding-left: 0;
         padding-right: 0;
-        flex-basis: unset;
+        flex-basis: auto;
         max-width: none;
       }
       &__cards {
@@ -303,7 +303,7 @@
     }
     .hero__mask-wrapper {
       @media screen and (min-width: $fsa-xl) {
-        align-items: unset;
+        align-items: auto;
       }
     }
     .hero__content-wrapper {
