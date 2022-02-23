@@ -15,6 +15,9 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  &:focus::after {
+    background-image: url("/src/components/general/ExternalLink/assets/external-black.svg");
+  } 
 }
 
 .external-link {
