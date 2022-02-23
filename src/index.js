@@ -15,6 +15,7 @@ import './components/general/Footer/footer';
 import './components/general/Feedback/feedback';
 import './components/general/CookieBanner/cookieBanner';
 import './components/general/TemporaryMessage/temporaryMessage';
+import './components/general/NationalArchiveLink/nationalArchiveLink';
 import './components/general/ErrorResponse/errorResponse';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
