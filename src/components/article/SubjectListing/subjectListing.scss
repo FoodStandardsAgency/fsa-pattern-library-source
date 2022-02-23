@@ -1,6 +1,12 @@
 @import "src/lib.scss";
 
 .subject-listing {
+  &__container {
+    @include grid-container;
+  }
+  &__row {
+    @include grid-row;
+  }
   margin-top: 3rem;
   &__section {
     margin-top: 3rem;

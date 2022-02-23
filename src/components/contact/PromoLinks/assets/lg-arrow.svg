@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="43px" height="37px" viewBox="0 0 43 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>lg-arrow</title>
-    <g id="--contact-promo-links" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="contact-promo-links" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="contact-promo-links--desktop" transform="translate(-1310.000000, -49.000000)" stroke="#007C75" stroke-width="4">
             <g id="lg-arrow" transform="translate(1310.440511, 50.586409)">
-                <line x1="5.68298809e-14" y1="16.5335911" x2="38.7236358" y2="16.5335911" id="Path-2"></line>
-                <polyline id="Path-3" points="21.8092304 0 38.8092304 17 21.8092304 34"></polyline>
+                <line x1="5.68298809e-14" y1="16.5335911" x2="38.7236358" y2="16.5335911" id="path-lg-arrow"></line>
+                <polyline id="path2-lg-arrow" points="21.8092304 0 38.8092304 17 21.8092304 34"></polyline>
             </g>
         </g>
     </g>
