@@ -71,10 +71,10 @@
             <defs>
               <circle id="circle" cx="100" cy="100" r="100"/>
             </defs>
-        <clipPath>
+        <clipPath id="clip-circle">
           <use xlink:href="#circle" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#clip)">
+        <g clip-path="url(#clip-cirlce)">
           <image overflow="visible" href="{{ image.url }}" height="100%" width="100%"
                   preserveAspectRatio="xMidYMid slice"></image>
         </g>

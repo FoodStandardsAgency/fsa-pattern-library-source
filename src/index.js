@@ -96,7 +96,9 @@ import searchBar from "./components/search/SearchBar/searchBar";
 import sortBy from "./components/search/SortBy/sortBy";
 
 // Fixes css vars on legacy browsers (i.e. IE11)
-cssVars();
+cssVars({
+  silent: true
+});
 // Fixes object-fit on legacy browsers
 objectFitImages();
 
