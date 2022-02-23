@@ -3,15 +3,14 @@
     <div class="header__grid-row">
       <div class="header__wrapper">
         <div class="header__top">
-          {% if sign_in_label %}
-          <nav class="header__user_options header__user_options--desktop header__nav" aria-label="User options" aria-hidden="false">
-            <ul class="header__user_options-list">
-              <li class="header__user_option">
-                <a href="{{ english_link }}" class="header__user-option-link">{{ user_logged_in ? my_account_label : register_label }}</a>
+          {% if user_menu_navigation.links not empty %}
+          <nav class="header__user_menu header__user_menu--desktop header__nav" aria-label="User menu" aria-hidden="false">
+            <ul class="header__user_menu-list">
+              {% for user_menu_link in user_menu_navigation.links %}
+              <li class="header__user_menu_item">
+                <a href="{{ user_menu_link.link.href }}" class="header__user_menu-link">{{ user_menu_link.link.label }}</a>
               </li>
-              <li class="header__user_option">
-                <a href="{{ welsh_link }}" class="header__user-option-link">{{ user_logged_in ? register_label : sign_in_label }}</a>
-              </li>
+              {% endfor %}
             </ul>
           </nav>
           {% endif %}
