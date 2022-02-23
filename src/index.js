@@ -98,7 +98,9 @@ import sortBy from "./components/search/SortBy/sortBy";
 
 // Fixes css vars on legacy browsers (i.e. IE11)
 cssVars({
-  silent: true
+  silent: true,
+  preserveVars: false,
+  onlyLegacy: false
 });
 // Fixes object-fit on legacy browsers
 objectFitImages();
