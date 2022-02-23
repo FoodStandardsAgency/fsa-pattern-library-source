@@ -7,6 +7,12 @@
   &__row {
     @include grid-row;
   }
+  &__wrapper {
+    @include grid-cols(4, 4);
+    @media screen and (min-width: $fsa-md) {
+      @include grid-cols(12);
+    }
+  }
   margin-top: 3rem;
   &__section {
     margin-top: 3rem;
