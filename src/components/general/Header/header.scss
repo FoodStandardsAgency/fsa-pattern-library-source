@@ -80,16 +80,16 @@
       display: none;
       @media screen and (min-width: $fsa-lg) {
         display: block;
-        padding-top: 18px;
-        padding-bottom: 9px;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
       }
     }
   }
   
   &__user_menu {
-    margin: 0 18px 8px;
-    padding-left: 18px;
-    padding-right: 18px;    
+    margin: 0 1rem 8px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: var(--fsa_online-grey);
   }
 
@@ -223,7 +223,7 @@
 
   &__secondary-logo-wrapper {
     @media screen and (min-width: $fsa-md) {
-      margin-left: 36px;
+      margin-left: 2rem;
     }
   }
 
@@ -271,6 +271,15 @@
         display: none;
       }
     }
+    
+    &--mobile-user-mennu {
+      margin-left: 0;
+      
+      .navigation__wrapper {
+        margin-bottom: 0;
+      }
+    }
+    
     &--desktop {
       display: none;
       @media screen and (min-width: $fsa-lg) {
