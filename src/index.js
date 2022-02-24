@@ -15,6 +15,7 @@ import './components/general/Footer/footer';
 import './components/general/Feedback/feedback';
 import './components/general/CookieBanner/cookieBanner';
 import './components/general/TemporaryMessage/temporaryMessage';
+import './components/general/NationalArchiveLink/nationalArchiveLink';
 import './components/general/ErrorResponse/errorResponse';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
@@ -55,7 +56,8 @@ import './components/landing/LatestTeaser/latestTeaser';
 import './components/landing/PromoGroup/promoGroup';
 import './components/landing/ServiceLinks/serviceLinks';
 import './components/landing/CampaignBlock/campaignBlock';
-import './components/landing/TextBlockWithTitle/textBlockWithTitle';
+import './components/landing/LandingText/landingText';
+import './components/landing/LandingTitle/landingTitle';
 
 /* Contact Components */
 import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';
@@ -95,7 +97,11 @@ import searchBar from "./components/search/SearchBar/searchBar";
 import sortBy from "./components/search/SortBy/sortBy";
 
 // Fixes css vars on legacy browsers (i.e. IE11)
-cssVars();
+cssVars({
+  silent: true,
+  preserveVars: false,
+  onlyLegacy: false
+});
 // Fixes object-fit on legacy browsers
 objectFitImages();
 

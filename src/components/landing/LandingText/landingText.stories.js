@@ -1,15 +1,14 @@
-import textBlockWithTitle from './textBlockWithTitle.html.twig';
-import './textBlockWithTitle.scss';
+import landingText from './landingText.html.twig';
+import './landingText.scss';
 
 export default {
-  title: 'Components/Landing/Text Block With Title',
+  title: 'Components/Landing/Text',
 };
 
-const Template = (args) => textBlockWithTitle(args);
+const Template = (args) => landingText(args);
 
-export const TextBlockWithTitle = Template.bind({});
-TextBlockWithTitle.args = {
-  title: 'Welcome to the FSA',
+export const Text = Template.bind({});
+Text.args = {
   content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in commodo magna. Pellentesque habitant morbi\n' +
       '    tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n' +
       '<h3>[H3] Header </h3>\n' +

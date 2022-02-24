@@ -13,9 +13,9 @@
 
 <div class="article-hero">
   {% if type %}
-    <div class="article-hero__type article-hero__type--{{ type }}">
+    <span class="article-hero__type article-hero__type--{{ type }}">
       {{ type_string is defined ? type_string : type }}
-    </div>
+    </span>
   {% endif %}
   <h1 class="article-hero__title">{{ title|raw }}</h1>
   {% if article_region_defined %}

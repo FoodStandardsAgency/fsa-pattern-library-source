@@ -103,7 +103,7 @@
     padding: 0;
     @media screen and (min-width: $fsa-lg) {
       display: block;
-      height: unset;
+      height: 2rem;
     }
   }
   
@@ -385,20 +385,10 @@
       outline: none;
       position: relative;
       color: var(--fsa-primary_black);
-      &::after {
-        content: "";
-        width: 100%;
-        height: calc(100% + 0.5rem);
-        position: absolute;
-        top: -0.1rem;
-        background-color: var(--fsa-tertiary_light-yellow);
-        border-bottom: 4px solid var(--fsa-primary_black);
-        z-index: -1;
-      }
     }
 
     &:hover {
-      color: white;
+      color:  var(--fsa-primary_white);
       text-decoration: underline;
       @media screen and (min-width: $fsa-lg) {
         color: var(--fsa__link-green);

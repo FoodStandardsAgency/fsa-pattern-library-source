@@ -190,6 +190,12 @@
       rows: 10,
     } %}
 
+    {% include '../../components/form/MapField/mapField.html.twig' with {
+      label: 'What is the address of your business?',
+      button: 'Search on the map',
+      name: 'business_address',
+    } %}
+
     {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
       prev_label: 'Previous',
       next_label: 'Next'

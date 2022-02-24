@@ -1,9 +1,19 @@
 @import "src/lib.scss";
 
 .rating-cta {
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: $fsa-xs) {
+    margin-bottom: 0;
+  }
+
   &__item {
     border-top: 4px solid var(--fsa-primary_dark-green);
-    margin-top: 3rem;
+    margin-top: 2rem;
+
+    @media screen and (min-width: $fsa-lg) {
+      margin-top: 4rem;
+    }
 
     &-wrapper {
       padding: 0 1rem 0.5rem;
@@ -16,7 +26,7 @@
         &::after {
           content: "";
           display: inline-block;
-          width: 1.6rem;
+          width: 1.7rem;
           height: 1rem;
           top: 0.2rem;
           left: 1rem;
@@ -28,8 +38,12 @@
     }
 
     &-title {
-      @include h2;
-      margin: 0.8rem 0 0.5rem 0;
+      @include h3;
+      margin: 0.8rem 0 0 0;
+    }
+
+    &-description {
+      margin-top: 0.5rem;
     }
   }
 }
