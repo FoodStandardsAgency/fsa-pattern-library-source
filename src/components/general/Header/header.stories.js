@@ -2639,6 +2639,8 @@ MyHACCP.args = {
   welsh_label: 'Cymraeg',
   logo_link: '#',
   logo_label: 'Food Standards Agency - Frontpage',
+  secondary_logo_link: '#',
+  secondary_logo_label: 'Food Standards Agency - Frontpage',
   search_bar_visible: false,
   user_logged_in: false,
   menu_label: 'menu',
@@ -2676,7 +2678,7 @@ MyHACCP.args = {
       {
         link: {
           href:'#',
-          label: 'Login',
+          label: 'Sign in',
         },
       },
     ],

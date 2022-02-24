@@ -3,7 +3,7 @@
     <div class="header__grid-row">
       <div class="header__wrapper">
         <div class="header__top">
-          {% if user_menu_navigation.links not empty %}
+          {% if user_menu_navigation.links is not empty %}
           <nav class="header__user_menu header__user_menu--desktop header__nav" aria-label="User menu" aria-hidden="false">
             <ul class="header__user_menu-list">
               {% for user_menu_link in user_menu_navigation.links %}
@@ -26,11 +26,21 @@
           </nav>
         </div>
         <div class="header__bottom">
-          <div class="header__logo-wrapper">
-            <a href="{{ logo_link }}" class="header__logo">
-              <span class="header__logo-label visually-hidden">{{ logo_label }}</span>
-              <div class="header__logo-svg header__logo-svg--{{ english ? "english" : "welsh" }}" aria-hidden="true"></div>
-            </a>
+          <div class="header__logo-container">
+            <div class="header__logo-wrapper header__primary-logo-wrapper">
+              <a href="{{ logo_link }}" class="header__logo">
+                <span class="header__logo-label visually-hidden">{{ logo_label }}</span>
+                <div class="header__logo-svg header__logo-svg--{{ english ? "english" : "welsh" }}" aria-hidden="true"></div>
+              </a>
+            </div>
+          {% if secondary_logo_link is not empty %}
+            <div class="header__logo-wrapper header__secondary-logo-wrapper">
+              <a href="{{ secondary_logo_link }}" class="header__logo">
+                <span class="header__logo-label visually-hidden">{{ secondary_logo_label }}</span>
+                <div class="header__logo-svg header__logo-svg--secondary-logo" aria-hidden="true"></div>
+              </a>
+            </div>
+          {% endif %}
           </div>
           <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
             <div class="header__links-wrapper">
@@ -67,7 +77,7 @@
               </a>
             </div>
           {% endif %}
-          <button class="header__menu" aria-expanded="false" aria-controls="navigation">
+          <button class="header__menu {{ secondary_logo_link ? 'header__menu-has-secondary-logo' : '' }}" aria-expanded="false" aria-controls="navigation">
             <span class="visually-hidden">{{ menu_label }}</span>
             <div class="header__menu-symbol" aria-hidden="true"></div>
           </button>
@@ -84,6 +94,18 @@
     </div>
   {% endif %}
   <div class="header__navigation">
+    {% if user_menu_navigation.links is not empty %}
+    <nav class="navigation header__user-menu-navigation header__links--mobile" aria-label="User menu" aria-hidden="false">
+      <ul class="navigation__menu navigation__menu--level-1">
+        {% for user_menu_link in user_menu_navigation.links %}
+        <li class="navigation__link">
+          <a href="{{ user_menu_link.link.href }}">{{ user_menu_link.link.label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+    {% if user_menu_navigation.links is empty %}
     <nav class="header__links header__links--mobile header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
       <div class="header__links-wrapper">
         <div class="header__links-item">
@@ -97,6 +119,7 @@
         <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
       </div>
     </nav>
+    {% endif %}
     <div class="header__navigation">
       {% include '@components/components/general/Navigation/navigation.html.twig' with {
         id: navigation.id,

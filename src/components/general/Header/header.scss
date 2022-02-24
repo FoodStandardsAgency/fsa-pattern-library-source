@@ -192,12 +192,38 @@
       display: block;
     }
   }
+  
+  &__user-menu-navigation {
+    div & {
+      border-bottom: 0;
+    }
+  }
+  
+  &__logo-container {
+    flex-grow: 1;
+
+    @media screen and (min-width: $fsa-md) {
+      display: inline-flex;
+    }
+  }
 
   &__logo-wrapper {
     flex-grow: 1;
 
     @media screen and (min-width: $fsa-lg) {
       flex-grow: 0;
+    }
+  }
+
+  &__primary-logo-wrapper {
+    @media screen and (max-width: $fsa-lg) {
+      flex-grow: 0;
+    }
+  }
+
+  &__secondary-logo-wrapper {
+    @media screen and (min-width: $fsa-md) {
+      margin-left: 36px;
     }
   }
 
@@ -224,6 +250,10 @@
 
     &--welsh {
       background-image: url("./assets/logo/logo-cy.svg");
+    }
+
+    &--secondary-logo {
+      background-image: url("./assets/logo/my-haccp-logo.svg");
     }
 
     @media screen and (min-width: $fsa-lg) {
@@ -502,6 +532,12 @@
 
     &::after {
       transform: translateY(10px);
+    }
+  }
+
+  &__menu-has-secondary-logo {
+    @media screen and (max-width: $fsa-md-minus) {
+      margin-top: -4rem;
     }
   }
 
