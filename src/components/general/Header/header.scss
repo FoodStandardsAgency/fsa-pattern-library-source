@@ -272,7 +272,7 @@
       }
     }
     
-    &--mobile-user-mennu {
+    &--mobile-user-menu {
       margin-left: 0;
       
       .navigation__wrapper {
@@ -405,6 +405,12 @@
     }
   }
 
+  &__search-and-menu-container {
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+  }
+
   &__search-bar-wrapper {
     display: flex;
     align-items: center;
@@ -531,12 +537,6 @@
 
     &::after {
       transform: translateY(10px);
-    }
-  }
-
-  &__menu-has-secondary-logo {
-    @media screen and (max-width: $fsa-md-minus) {
-      margin-top: -4rem;
     }
   }
 

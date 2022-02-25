@@ -42,6 +42,7 @@
             </div>
           {% endif %}
           </div>
+          {% if user_menu_navigation.links is empty %}
           <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
             <div class="header__links-wrapper">
               {% if contact_link is not empty and contact_label is not empty %}
@@ -61,26 +62,29 @@
               </div>
             {% endif %}
           </nav>
-          {% if search_bar_visible %}
-            <div class="header__search-bar-wrapper">
-              <div class="header__search-bar header__search-bar--full">
-                {% include "@components/components/search/SearchBar/searchBar.html.twig" with {
-                header_text: 'Search',
-                search_link: search_link,
-                search_text: search_label,
-                search_value: '',
-              } %}
-              </div>
-              <a class="header__search-bar header__search-bar--icon" href="{{ search_link }}">
-                <span class="visually-hidden header__search-bar-label">{{ search_label }}</span>
-                <div aria-hidden="true" class="header__search-svg"></div>
-              </a>
-            </div>
           {% endif %}
-          <button class="header__menu {{ secondary_logo_link ? 'header__menu-has-secondary-logo' : '' }}" aria-expanded="false" aria-controls="navigation">
-            <span class="visually-hidden">{{ menu_label }}</span>
-            <div class="header__menu-symbol" aria-hidden="true"></div>
-          </button>
+          <div class="header__search-and-menu-container">
+            {% if search_bar_visible %}
+              <div class="header__search-bar-wrapper">
+                <div class="header__search-bar header__search-bar--full">
+                  {% include "@components/components/search/SearchBar/searchBar.html.twig" with {
+                  header_text: 'Search',
+                  search_link: search_link,
+                  search_text: search_label,
+                  search_value: '',
+                } %}
+                </div>
+                <a class="header__search-bar header__search-bar--icon" href="{{ search_link }}">
+                  <span class="visually-hidden header__search-bar-label">{{ search_label }}</span>
+                  <div aria-hidden="true" class="header__search-svg"></div>
+                </a>
+              </div>
+            {% endif %}
+            <button class="header__menu {{ secondary_logo_link ? 'header__menu-has-secondary-logo' : '' }}" aria-expanded="false" aria-controls="navigation">
+              <span class="visually-hidden">{{ menu_label }}</span>
+              <div class="header__menu-symbol" aria-hidden="true"></div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -95,7 +99,7 @@
   {% endif %}
   <div class="header__navigation">
     {% if user_menu_navigation.links is not empty %}
-    <nav class="navigation header__user-menu-navigation header__links--mobile header__links--mobile-user-mennu" aria-label="User menu" aria-hidden="false">
+    <nav class="navigation header__user-menu-navigation header__links--mobile header__links--mobile-user-menu" aria-label="User menu" aria-hidden="false">
       <div class="navigation__container">
           <div class="navigation__row">
             <div class="navigation__wrapper">      
