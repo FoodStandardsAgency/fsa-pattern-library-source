@@ -19,7 +19,7 @@
 ] %}
 
 {% set years = [] %}
-{% for y in range(1990 ,'now'| date('Y')) %}
+{% for y in range(start_year ? start_year : 2000,'now'| date('Y')) %}
   {% set years = years|merge([y]) %}
 {% endfor %}
 
@@ -63,14 +63,14 @@
     </div>
   </div>
   <div class="datepicker__apply-wrapper">
-    <a href="{{ applyLink }}" class="datepicker__apply-button">
-      {{ applyLabel }}
+    <a href="{{ apply_link }}" class="datepicker__apply-button">
+      {{ apply_label }}
     </a>
   </div>
   <div class="datepicker__error-message datepicker__error-message--minimum-selection">
-    {{ minimumSelection }}
+    {{ minimum_selection }}
   </div>
   <div class="datepicker__error-message datepicker__error-message--invalid-dates">
-    {{ invalidDate }}
+    {{ invalid_date }}
   </div>
 </div>
