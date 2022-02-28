@@ -19,7 +19,7 @@ Basic.args = {
         { label: 'Freezing requirements for fish and fishery products', href: '#' },
       ],
     },
-  ]
+  ],
 };
 
 export const WithDescription = Template.bind({});
@@ -28,14 +28,15 @@ WithDescription.args = {
   subject_listing: [
     {
       title: 'Fish and fishery products',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sed eros at sollicitudin. Nullam pharetra venenatis commodo. Proin mauris elit, convallis id nibh nec, laoreet venenatis enim.',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar sed eros at sollicitudin. Nullam pharetra venenatis commodo. Proin mauris elit, convallis id nibh nec, laoreet venenatis enim.',
       links: [
         { label: 'Live bivalve mollusc (LBM) and fishery product approvals', href: '#' },
         { label: 'Importing fishery products or bivalve molluscs', href: '#' },
         { label: 'Freezing requirements for fish and fishery products', href: '#' },
       ],
     },
-  ]
+  ],
 };
 
 export const Multiple = Template.bind({});
@@ -68,9 +69,7 @@ Multiple.args = {
     },
     {
       title: 'Related content',
-      links: [
-        { label: 'Prepare your business for Brexit', href: '#' },
-      ],
+      links: [{ label: 'Prepare your business for Brexit', href: '#' }],
     },
-  ]
+  ],
 };

@@ -1,9 +1,11 @@
+let navigation;
+
 window.addEventListener('DOMContentLoaded', function () {
-  const navigation = document.querySelector('#navigation');
+  navigation = document.querySelector('#navigation');
 });
 
 const focusableElements =
-    'a[href], button:not(.navigation__group-title--mobile), input:not(.js-form-submit), select, textarea, [tabindex]:not([tabindex="-1"])';
+  'a[href], button:not(.navigation__group-title--mobile), input:not(.js-form-submit), select, textarea, [tabindex]:not([tabindex="-1"])';
 
 function getMode() {
   return window.innerWidth < 1024 ? 'mobile' : 'desktop';
@@ -22,16 +24,13 @@ function menuFocus(direction, event, link, classes, submenu = null, button = nul
     }
   }
   if (direction == 'in') {
-    link.addEventListener('keydown', e => {
+    link.addEventListener('keydown', (e) => {
       if (e.keyCode === 27) {
         link.classList.remove(classes.linkOpen);
         button.setAttribute('aria-expanded', 'false');
         if (submenu) {
           submenu.classList.remove(classes.subMenuOpen);
           blurBackground(navigation);
-        }
-        if (anchor) {
-          anchor.focus();
         }
       }
     });
@@ -40,7 +39,7 @@ function menuFocus(direction, event, link, classes, submenu = null, button = nul
 
 function resetArrows() {
   const arrows = document.querySelectorAll('.navigation__link__arrow--flipped');
-  arrows.forEach(arrow => {
+  arrows.forEach((arrow) => {
     arrow.classList.remove('navigation__link__arrow--flipped');
   });
 }
@@ -59,7 +58,7 @@ function subMenuFocus(direction, event, link, classes, parent = null, submenu = 
     }
   }
   if (direction == 'in') {
-    link.addEventListener('keydown', e => {
+    link.addEventListener('keydown', (e) => {
       if (e.keyCode === 27) {
         link.classList.remove(classes.linkOpen);
         link.setAttribute('aria-expanded', 'false');
@@ -75,8 +74,10 @@ function subMenuFocus(direction, event, link, classes, parent = null, submenu = 
 function prevAll(element) {
   var result = [];
 
-  while (element = element.previousElementSibling) {
+  element = element.previousElementSibling;
+  while (element) {
     result.push(element);
+    element = element.previousElementSibling;
   }
   return result;
 }
@@ -84,8 +85,10 @@ function prevAll(element) {
 function nextAll(element) {
   var result = [];
 
-  while (element = element.nextElementSibling) {
+  element = element.nextElementSibling;
+  while (element) {
     result.push(element);
+    element = element.nextElementSibling;
   }
   return result;
 }
@@ -95,7 +98,7 @@ function menuArrows(links) {
     const primarySubMenu = link.querySelector('.navigation__submenu');
     let prev = [];
     let next = [];
-    link.addEventListener('keydown', e => {
+    link.addEventListener('keydown', (e) => {
       if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
         return;
       }
@@ -153,11 +156,13 @@ function menuArrows(links) {
 function subMenuArrows(group) {
   const links = group.querySelectorAll('.navigation__link');
   const parentButton = group.parentNode.previousSibling.previousSibling;
-  const firstElement = group.parentNode.querySelector('.navigation__group >  .navigation__menu-wrapper > .navigation__menu > .navigation__link > a');
+  const firstElement = group.parentNode.querySelector(
+    '.navigation__group >  .navigation__menu-wrapper > .navigation__menu > .navigation__link > a'
+  );
   const submenu = group.parentNode;
   const parentLink = group.parentNode.parentNode;
   links.forEach((link) => {
-    link.addEventListener('keydown', e => {
+    link.addEventListener('keydown', (e) => {
       if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
         return;
       }
@@ -184,7 +189,9 @@ function subMenuArrows(group) {
           } else if (prevAll(link)[0]) {
             prevAll(link)[0].querySelector('a').focus();
           } else if (prevAll(group)[0]) {
-            const sibLinks = prevAll(group)[0].querySelectorAll('.navigation__menu > .navigation__link > a');
+            const sibLinks = prevAll(group)[0].querySelectorAll(
+              '.navigation__menu > .navigation__link > a'
+            );
             sibLinks[sibLinks.length - 1].focus();
           }
           break;
@@ -192,7 +199,9 @@ function subMenuArrows(group) {
           if (nextAll(link)[0]) {
             nextAll(link)[0].querySelector('a').focus();
           } else if (nextAll(group)[0]) {
-            const sibLinks = nextAll(group)[0].querySelectorAll('.navigation__menu > .navigation__link > a');
+            const sibLinks = nextAll(group)[0].querySelectorAll(
+              '.navigation__menu > .navigation__link > a'
+            );
             sibLinks[0].focus();
           }
           break;
@@ -202,31 +211,30 @@ function subMenuArrows(group) {
 }
 
 function blurBackground(navigation) {
+  console.log(navigation);
   const mode = getMode();
   if (mode == 'desktop') {
     const backgroundBlur = navigation.querySelector('.navigation__background-blur');
     const body = document.body;
     const html = document.documentElement;
     // Height of page
-    const height = Math.max( body.scrollHeight, body.offsetHeight,
-        html.clientHeight, html.scrollHeight, html.offsetHeight );
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
     // Navigation distance from top
     const distanceFromTop = window.pageYOffset + navigation.getBoundingClientRect().top;
     const navHeight = navigation.offsetHeight;
     if (navigation.querySelector('.navigation__submenu--expanded')) {
-      backgroundBlur.classList.add('navigation__background-blur--blurred')
-      backgroundBlur.style.height = (height - distanceFromTop - navHeight) + 'px';
+      backgroundBlur.classList.add('navigation__background-blur--blurred');
+      backgroundBlur.style.height = height - distanceFromTop - navHeight + 'px';
     } else {
       backgroundBlur.classList.remove('navigation__background-blur--blurred');
     }
   }
 }
 
-export {
-  getMode,
-  menuFocus,
-  subMenuFocus,
-  menuArrows,
-  subMenuArrows,
-  blurBackground,
-}
+export { getMode, menuFocus, subMenuFocus, menuArrows, subMenuArrows, blurBackground };

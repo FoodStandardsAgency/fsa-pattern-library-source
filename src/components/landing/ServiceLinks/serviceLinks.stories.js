@@ -43,7 +43,6 @@ SixLinks.args = {
   columns: 3,
 };
 
-
 export const EightLinks = Template.bind({});
 EightLinks.args = {
   title: 'This is the services title',

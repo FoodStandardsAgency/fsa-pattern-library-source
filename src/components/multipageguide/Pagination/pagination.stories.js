@@ -10,29 +10,29 @@ const Template = (args) => pagination(args);
 export const PaginationStart = Template.bind({});
 PaginationStart.args = {
   next: {
-    label: "Next",
-    page_name: "2. Introduction"
-  }
+    label: 'Next',
+    page_name: '2. Introduction',
+  },
 };
 
 export const PaginationMid = Template.bind({});
 PaginationMid.args = {
   previous: {
-    label: "Previous",
-    page_name: "1. Guidance summary",
-    link: '#'
+    label: 'Previous',
+    page_name: '1. Guidance summary',
+    link: '#',
   },
   next: {
-    label: "Next",
-    page_name: "3. Requirements and overview of cooking methods",
-    link: '#'
-  }
+    label: 'Next',
+    page_name: '3. Requirements and overview of cooking methods',
+    link: '#',
+  },
 };
 
 export const PaginationEnd = Template.bind({});
 PaginationEnd.args = {
   previous: {
-    label: "Previous",
-    page_name: "2. Introduction"
-  }
+    label: 'Previous',
+    page_name: '2. Introduction',
+  },
 };

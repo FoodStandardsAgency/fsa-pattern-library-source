@@ -14,13 +14,16 @@ English.args = {
       label: 'Research programme',
       content: 'Food allergy and intolerance research',
       url: '#',
-    },{
+    },
+    {
       label: 'Study duration',
       content: 'January 2010 to March 2010',
-    },{
+    },
+    {
       label: 'Project code',
       content: 'T07063',
-    },{
+    },
+    {
       label: 'Conducted by',
       content: 'Jigsaw Research',
     },
@@ -49,4 +52,3 @@ Welsh.args = {
     },
   ],
 };
-

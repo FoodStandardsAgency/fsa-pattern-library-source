@@ -2,13 +2,13 @@ import tabs from './tabs.html.twig';
 import './tabs.js';
 
 export default {
-    title: 'Components/Form/Tabs',
-    argTypes: {
-      type: {
-        defaultValue: 'Account details',
-      },
+  title: 'Components/Form/Tabs',
+  argTypes: {
+    type: {
+      defaultValue: 'Account details',
     },
-  };
+  },
+};
 
 const Template = (args) => {
   return tabs(args);
@@ -40,4 +40,3 @@ Tabs.args = {
     },
   ],
 };
-

@@ -8,10 +8,9 @@ export default {
       disabled: true,
     },
     layout: 'fullscreen',
-  }
+  },
 };
 
-export const Grid = ({ label, ...args }) => {
+export const Grid = ({ ...args }) => {
   return grid(args);
-}
-
+};

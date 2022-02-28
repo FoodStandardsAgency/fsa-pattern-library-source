@@ -14,13 +14,13 @@ SortBy.args = {
   sort_by: 'Sort by',
   options: [
     {
-      'text': 'Relevance',
-      'value': 'relevance'
+      text: 'Relevance',
+      value: 'relevance',
     },
     {
-      'text': 'Most recent',
-      'value': 'created'
-    }
+      text: 'Most recent',
+      value: 'created',
+    },
   ],
   default: 'Relevance',
 };

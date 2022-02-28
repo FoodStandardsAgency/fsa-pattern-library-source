@@ -17,8 +17,8 @@ export default function () {
 
     let mode = getMode();
 
-    els.forEach(el => {
-      const button = el.querySelector('.table-of-contents__title button')
+    els.forEach((el) => {
+      const button = el.querySelector('.table-of-contents__title button');
       const list = el.querySelector('.table-of-contents__list');
       const arrow = button.querySelector('.table-of-contents__arrow');
       button.addEventListener('click', () => {

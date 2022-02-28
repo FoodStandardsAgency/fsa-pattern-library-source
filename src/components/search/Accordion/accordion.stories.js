@@ -10,7 +10,7 @@ const Template = (args) => accordion(args);
 export const Open = Template.bind({});
 Open.args = {
   title: 'Date',
-  name:'date_select',
+  name: 'date_select',
   fields: [
     {
       type: 'datepicker',

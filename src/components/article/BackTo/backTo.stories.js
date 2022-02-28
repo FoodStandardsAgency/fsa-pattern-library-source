@@ -12,4 +12,3 @@ BackTo.args = {
   label: 'Back to previous',
   url: '#',
 };
-

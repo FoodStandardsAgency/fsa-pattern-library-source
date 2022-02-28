@@ -7,7 +7,7 @@ import './searchBar.scss';
 export default function () {
   window.addEventListener('DOMContentLoaded', function () {
     const el = document.querySelector('.search-bar');
-    if(!el) {
+    if (!el) {
       return;
     }
 

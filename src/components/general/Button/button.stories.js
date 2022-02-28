@@ -6,7 +6,7 @@ export default {
   argTypes: {
     is_anchor: {
       table: { disable: true },
-    }
+    },
   },
 };
 
@@ -18,9 +18,9 @@ const darkBackground = {
   backgrounds: {
     default: 'purple',
     values: [
-      {name: 'dark', value:'#292828'},
-      {name: 'light', value: '#fff'},
-      {name: 'purple', value: '#2a0247'},
+      { name: 'dark', value: '#292828' },
+      { name: 'light', value: '#fff' },
+      { name: 'purple', value: '#2a0247' },
     ],
   },
 };
@@ -59,10 +59,10 @@ CancelButton.args = {
   ...PrimaryButton.args,
   type: 'cancel',
   label: 'Cancel',
-}
+};
 
 export const InputButton = Template.bind({});
 InputButton.args = {
   ...PrimaryButton.args,
-  element: 'input'
+  element: 'input',
 };

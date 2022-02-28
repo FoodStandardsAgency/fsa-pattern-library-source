@@ -22,11 +22,11 @@ export default function () {
     function changeSidebarWidth(parent, el, mode) {
       if (mode === 'mobile') {
         el.style.width = 'auto';
-      }
-      else {
+      } else {
         const computedStyle = getComputedStyle(parent);
         let parentWidth = parent.clientWidth;
-        parentWidth -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
+        parentWidth -=
+          parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
         el.style.width = parentWidth + 'px';
       }
     }
@@ -57,11 +57,14 @@ export default function () {
     window.addEventListener('scroll', () => {
       mode = getMode();
       if (mode === 'desktop') {
-        const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        const scrollTop =
+          window.pageYOffset !== undefined
+            ? window.pageYOffset
+            : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         // If there is a footer
         if (footerTop) {
           // If the scroll position is between the top of the page and the top of the footer, fix the sidebar
-          if ((scrollTop + sidebarTopPosition >= top) && (scrollTop + footerMarginTop <= footerTop)) {
+          if (scrollTop + sidebarTopPosition >= top && scrollTop + footerMarginTop <= footerTop) {
             el.classList.add('sticky-sidebar--fixed');
             el.classList.remove('sticky-sidebar--bottom');
             changeSidebarWidth(parent, el, mode);

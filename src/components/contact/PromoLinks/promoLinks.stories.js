@@ -13,36 +13,31 @@ PromoLinks.args = {
     {
       href: '#',
       title: 'Suspected food poisoning',
-      description:
-        'Report suspected food poisoning from a restaurant, takeaway or food shop.',
+      description: 'Report suspected food poisoning from a restaurant, takeaway or food shop.',
       svg: svgs.foodPoison,
     },
     {
       href: '#',
       title: 'Food product',
-      description:
-        "Report a problem with food that you've bought to the local authority.",
+      description: "Report a problem with food that you've bought to the local authority.",
       svg: svgs.foodProduct,
     },
     {
       href: '#',
       title: 'Poor food safety and hygiene practices',
-      description:
-        'Report suspected food poisoning from a restaurant, takeaway or food shop.',
+      description: 'Report suspected food poisoning from a restaurant, takeaway or food shop.',
       svg: svgs.poorFood,
     },
     {
       href: '#',
       title: 'Report a product labelling issue',
-      description:
-        'Report suspected food poisoning from a restaurant, takeaway or food shop.',
+      description: 'Report suspected food poisoning from a restaurant, takeaway or food shop.',
       svg: svgs.reportLabel,
     },
     {
       href: '#',
       title: 'Report a food crime',
-      description:
-        'Report suspected food poisoning from a restaurant, takeaway or food shop.',
+      description: 'Report suspected food poisoning from a restaurant, takeaway or food shop.',
       svg: svgs.foodCrime,
     },
   ],

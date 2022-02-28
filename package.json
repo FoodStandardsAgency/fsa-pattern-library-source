@@ -32,6 +32,7 @@
     "css-vars-ponyfill": "2.4.7",
     "deeson-webpack-config-starter": "https://github.com/teamdeeson/deeson-webpack-config#feature/drupal9-webpack5",
     "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.4.0",
     "file-loader": "6.2.0",
     "html-webpack-plugin": "5.3.2",
     "mini-css-extract-plugin": "2.1.0",
@@ -48,10 +49,11 @@
     "webpack-dev-server": "3.11.2"
   },
   "scripts": {
-    "lint": "eslint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "yarn lint && webpack"
+    "build": "yarn lint && webpack",
+    "lint": "eslint ./src && prettier --check ./src",
+    "lint-fix": "eslint --fix ./src && prettier --write ./src"
   },
   "browserslist": {
     "production": [

@@ -38,5 +38,5 @@ DefaultValue.args = {
   required: 'required',
   description: 'Please describe the food crime that you are reporting',
   rows: 10,
-  value: "My custom text"
+  value: 'My custom text',
 };

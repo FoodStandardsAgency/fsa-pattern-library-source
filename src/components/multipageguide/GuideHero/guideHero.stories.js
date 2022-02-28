@@ -14,7 +14,8 @@ GuideHero.args = {
   region: ['England', 'Northern Ireland', 'Wales'],
   type_string: 'FSA Board & Business Committee Meetings - September 2021',
   title: 'FSA Board Meeting - September 2021: Agenda and Papers',
-  description: 'Agenda and papers for The FSA Board meeting on 15 September 2021 at etc.venues -133 Houndsditch, Liverpool Street, London EC3A 7B',
+  description:
+    'Agenda and papers for The FSA Board meeting on 15 September 2021 at etc.venues -133 Houndsditch, Liverpool Street, London EC3A 7B',
   last_updated_string: 'Last updated',
   last_updated_date: '29 October 2021',
   specific: 'specific',

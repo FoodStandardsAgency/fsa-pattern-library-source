@@ -12,11 +12,11 @@ export default function () {
       if (!link) return;
       card.onclick = () => {
         link.click();
-      }
+      };
     }
 
-    cards.forEach(card => {
+    cards.forEach((card) => {
       makeClickable(card);
-    })
+    });
   });
 }
