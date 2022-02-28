@@ -8,6 +8,6 @@ export default {
   },
 };
 
-export const MyhaccpPage = () => {
+export const MyHaccpPage = () => {
   return myhaccpPage();
 };
