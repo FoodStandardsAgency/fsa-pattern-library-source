@@ -3,7 +3,18 @@
     <div class="header__grid-row">
       <div class="header__wrapper">
         <div class="header__top">
-          <nav class="header__languages header__languages--desktop" aria-label="Language switcher" aria-hidden="false">
+          {% if user_menu_navigation.links is not empty %}
+          <nav class="header__user_menu header__user_menu--desktop header__nav" aria-label="User menu" aria-hidden="false">
+            <ul class="header__user_menu-list">
+              {% for user_menu_link in user_menu_navigation.links %}
+              <li class="header__user_menu_item">
+                <a href="{{ user_menu_link.link.href }}" class="header__user_menu-link">{{ user_menu_link.link.label }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+          {% endif %}
+          <nav class="header__languages header__languages--desktop header__nav" aria-label="Language switcher" aria-hidden="false">
             <ul class="header__languages-list">
               <li class="header__language">
                 <a href="{{ english_link }}" class="header__language-link header__language-link--{{ english ? "selected" : "" }}">{{ english_label }}</a>
@@ -15,45 +26,65 @@
           </nav>
         </div>
         <div class="header__bottom">
-          <div class="header__logo-wrapper">
-            <a href="{{ logo_link }}" class="header__logo">
-              <span class="header__logo-label visually-hidden">{{ logo_label }}</span>
-              <div class="header__logo-svg header__logo-svg--{{ english ? "english" : "welsh" }}" aria-hidden="true"></div>
-            </a>
-          </div>
-          <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
-            <div class="header__links-wrapper">
-              <div class="header__links-item">
-                <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
-              </div>
-              <div class="header__links-item">
-                <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
-              </div>
+          <div class="header__logo-container">
+            <div class="header__logo-wrapper header__primary-logo-wrapper">
+              <a href="{{ logo_link }}" class="header__logo">
+                <span class="header__logo-label visually-hidden">{{ logo_label }}</span>
+                <div class="header__logo-svg header__logo-svg--{{ english ? "english" : "welsh" }}" aria-hidden="true"></div>
+              </a>
             </div>
-            <div class="header__links-item header__links-item--right">
-              <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
-            </div>
-          </nav>
-          {% if search_bar_visible %}
-            <div class="header__search-bar-wrapper">
-              <div class="header__search-bar header__search-bar--full">
-                {% include "@components/components/search/SearchBar/searchBar.html.twig" with {
-                header_text: 'Search',
-                search_link: search_link,
-                search_text: search_label,
-                search_value: '',
-              } %}
-              </div>
-              <a class="header__search-bar header__search-bar--icon" href="{{ search_link }}">
-                <span class="visually-hidden header__search-bar-label">{{ search_label }}</span>
-                <div aria-hidden="true" class="header__search-svg"></div>
+          {% if secondary_logo_link is not empty %}
+            <div class="header__logo-wrapper header__secondary-logo-wrapper">
+              <a href="{{ secondary_logo_link }}" class="header__logo">
+                <span class="header__logo-label visually-hidden">{{ secondary_logo_label }}</span>
+                <div class="header__logo-svg header__logo-svg--secondary-logo" aria-hidden="true"></div>
               </a>
             </div>
           {% endif %}
-          <button class="header__menu" aria-expanded="false" aria-controls="navigation">
-            <span class="visually-hidden">{{ menu_label }}</span>
-            <div class="header__menu-symbol" aria-hidden="true"></div>
-          </button>
+          </div>
+          {% if user_menu_navigation.links is empty %}
+          <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
+            <div class="header__links-wrapper">
+              {% if contact_link is not empty and contact_label is not empty %}
+                <div class="header__links-item">
+                  <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
+                </div>
+              {% endif %}
+              {% if report_link is not empty and report_label is not empty %}
+                <div class="header__links-item">
+                  <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
+                </div>
+              {% endif %}
+            </div>
+            {% if ratings_link is not empty and ratings_label is not empty %}
+              <div class="header__links-item header__links-item--right">
+                <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
+              </div>
+            {% endif %}
+          </nav>
+          {% endif %}
+          <div class="header__search-and-menu-container">
+            {% if search_bar_visible %}
+              <div class="header__search-bar-wrapper">
+                <div class="header__search-bar header__search-bar--full">
+                  {% include "@components/components/search/SearchBar/searchBar.html.twig" with {
+                  header_text: 'Search',
+                  search_link: search_link,
+                  search_text: search_label,
+                  search_value: '',
+                } %}
+                </div>
+                <a class="header__search-bar header__search-bar--icon" href="{{ search_link }}">
+                  <span class="visually-hidden header__search-bar-label">{{ search_label }}</span>
+                  <div aria-hidden="true" class="header__search-svg"></div>
+                </a>
+              </div>
+            {% endif %}
+            <button class="header__menu {{ secondary_logo_link ? 'header__menu-has-secondary-logo' : '' }}" aria-expanded="false" aria-controls="navigation">
+              <span class="visually-hidden">{{ menu_label }}</span>
+              <div class="header__menu-symbol" aria-hidden="true"></div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -67,6 +98,24 @@
     </div>
   {% endif %}
   <div class="header__navigation">
+    {% if user_menu_navigation.links is not empty %}
+    <nav class="navigation header__user-menu-navigation header__links--mobile header__links--mobile-user-menu" aria-label="User menu" aria-hidden="false">
+      <div class="navigation__container">
+          <div class="navigation__row">
+            <div class="navigation__wrapper">      
+              <ul class="navigation__menu navigation__menu--level-1">
+                {% for user_menu_link in user_menu_navigation.links %}
+                <li class="navigation__link">
+                  <a href="{{ user_menu_link.link.href }}">{{ user_menu_link.link.label }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+      </div>
+    </nav>
+    {% endif %}
+    {% if user_menu_navigation.links is empty %}
     <nav class="header__links header__links--mobile header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
       <div class="header__links-wrapper">
         <div class="header__links-item">
@@ -80,6 +129,7 @@
         <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
       </div>
     </nav>
+    {% endif %}
     <div class="header__navigation">
       {% include '@components/components/general/Navigation/navigation.html.twig' with {
         id: navigation.id,

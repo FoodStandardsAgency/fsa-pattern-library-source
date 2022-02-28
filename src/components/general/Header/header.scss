@@ -62,7 +62,12 @@
     }
   }
 
-  &__languages {
+  &__top {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__languages, &__user_menu {
     text-align: right;
     &--mobile {
       display: block;
@@ -75,11 +80,20 @@
       display: none;
       @media screen and (min-width: $fsa-lg) {
         display: block;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
       }
     }
   }
+  
+  &__user_menu {
+    margin: 0 1rem 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: var(--fsa_online-grey);
+  }
 
-  &__languages-list {
+  &__languages-list, &__user_menu-list{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,8 +106,13 @@
       height: 2rem;
     }
   }
+  
+  &__user_menu-list{
+    position: relative;
+    z-index: 2;
+  }
 
-  &__language {
+  &__language,&__user_menu_item {
     display: inline-block;
     &:first-child::after {
       content: "|";
@@ -136,6 +155,7 @@
       }
     }
   }
+
   &__bottom {
     display: flex;
     align-items: center;
@@ -146,11 +166,44 @@
     }
   }
 
+  &__user_menu-link {
+    &:focus {
+      text-decoration: none;
+      outline: none;
+      position: relative;
+      color: var(--fsa-primary_black);
+      &::before {
+        content: "";
+        width: 100%;
+        height: calc(100% + 0.75rem);
+        top: -0.4rem;
+        position: absolute;
+        background-color: var(--fsa-tertiary_light-yellow);
+        border-bottom: 4px solid var(--fsa-primary_black);
+        z-index: -1;
+      }
+    }
+  }
+
   &__navigation {
     display: none;
     @media screen and (min-width: $fsa-lg) {
       z-index: 50;
       display: block;
+    }
+  }
+  
+  &__user-menu-navigation {
+    div & {
+      border-bottom: 0;
+    }
+  }
+  
+  &__logo-container {
+    flex-grow: 1;
+
+    @media screen and (min-width: $fsa-md) {
+      display: inline-flex;
     }
   }
 
@@ -159,6 +212,18 @@
 
     @media screen and (min-width: $fsa-lg) {
       flex-grow: 0;
+    }
+  }
+
+  &__primary-logo-wrapper {
+    @media screen and (max-width: $fsa-lg) {
+      flex-grow: 0;
+    }
+  }
+
+  &__secondary-logo-wrapper {
+    @media screen and (min-width: $fsa-md) {
+      margin-left: 2rem;
     }
   }
 
@@ -187,6 +252,10 @@
       background-image: url("./assets/logo/logo-cy.svg");
     }
 
+    &--secondary-logo {
+      background-image: url("./assets/logo/my-haccp-logo.svg");
+    }
+
     @media screen and (min-width: $fsa-lg) {
       width: 9.25rem;
       height: 3.5rem;
@@ -202,6 +271,15 @@
         display: none;
       }
     }
+    
+    &--mobile-user-menu {
+      margin-left: 0;
+      
+      .navigation__wrapper {
+        margin-bottom: 0;
+      }
+    }
+    
     &--desktop {
       display: none;
       @media screen and (min-width: $fsa-lg) {
@@ -325,6 +403,12 @@
         color: var(--fsa__link-green);
       }
     }
+  }
+
+  &__search-and-menu-container {
+    display: flex;
+    flex-direction: row;
+    align-self: start;
   }
 
   &__search-bar-wrapper {

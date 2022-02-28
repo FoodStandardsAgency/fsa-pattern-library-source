@@ -1,11 +1,11 @@
 <blockquote class="quote-block">
   <div class="quote-block__wrapper">
     <div class="quote-block__quote">
-      <p>{{ quote }}</p>
+      {{ quote|raw }}
     </div>
     {% if author %}
       <div class="quote-block__author">
-        <p>{{ author }}</p>
+        {{ author|raw }}
       </div>
     {% endif %}
   </div>
