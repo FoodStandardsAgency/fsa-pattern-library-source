@@ -1,0 +1,70 @@
+{% extends '../../layout/contentLayout/contentLayout.html.twig' %}
+{% set breadcrumb_items = [
+  {
+    'text': 'Home',
+    'url': '/'
+  },
+  {
+    'text': 'Business guidance',
+    'url': '#'
+  },
+  {
+    'text': 'Industry-specific advice',
+    'url': '#'
+  },
+  {
+    'text': 'Fish and shellfish',
+    'url': null
+  },
+] %}
+{% block full_width %}
+  {% include '../../components/general/Hero/hero.html.twig' with {
+    type: 'hero',
+    backgroundColour: 'green',
+    title: 'Fish and shellfish',
+  } %}
+{% endblock %}
+{% block header %}
+  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+    items: breadcrumb_items,
+    expanded: false,
+  } %}
+{% endblock %}
+{% block left %}{% endblock %}
+{% block right %}
+  {% include '@components/components/article/SubjectListing/subjectListing.html.twig' with {
+    section_header: 'In this section',
+    subject_listing: [
+      {
+        title: 'Fish and fishery products',
+        links: [
+        { label: 'Live bivalve mollusc (LBM) and fishery product approvals', href: '#' },
+        { label: 'Importing fishery products or bivalve molluscs', href: '#' },
+        { label: 'Freezing requirements for fish and fishery products', href: '#' },
+      ],
+      },
+      {
+        title: 'Shellfish guidance',
+        links: [
+        { label: 'Shellfish Official Controls', href: '#' },
+        { label: 'Classification', href: '#' },
+      ],
+      },
+      {
+        title: 'Monitoring, reports and surveys',
+        links: [
+        { label: 'Shellfish production area assessments', href: '#' },
+        { label: 'Chemical contaminant monitoring', href: '#' },
+        { label: 'Biotoxin and phytoplankton monitoring', href: '#' },
+        { label: 'Supplementary sampling', href: '#' },
+      ],
+      },
+      {
+        title: 'Related content',
+        links: [
+        { label: 'Prepare your business for Brexit', href: '#' },
+      ],
+      },
+    ]
+  } %}
+{% endblock %}

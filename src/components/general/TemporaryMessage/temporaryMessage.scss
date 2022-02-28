@@ -21,21 +21,22 @@
   }
 
   a {
-    @include link;
     color: var(--fsa-primary_black);
     text-decoration: none;
     border-bottom: 1px solid var(--fsa-primary_black);
-    &:focus-visible {
+    &:focus {
       color: var(--fsa-primary_white);
       background-color: var(--fsa-primary_black);
       &::after {
         background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
       }
     }
-    &:hover:not(:focus-visible) {
+    &:hover {
       border-bottom: 4px solid var(--fsa-primary_black);
       color: var(--fsa-primary_black);
-      background-color: transparent;
+    }
+    &:hover:focus {
+      color: var(--fsa-primary_white);
     }
   }
 
@@ -58,13 +59,15 @@
       a {
         color: var(--fsa-primary_white);
         border-color: var(--fsa-primary_white);
-        &:focus-visible {
+        &:focus {
           border-color: var(--fsa-primary_black);
         }
-        &:hover:not(:focus-visible) {
+        &:hover {
+          border-bottom: 4px solid var(--fsa-primary_white);
           color: var(--fsa-primary_white);
-          border-color: var(--fsa-primary_white);
-          background-color: transparent;
+        }
+        &:hover:focus {
+          border-bottom: 4px solid var(--fsa-primary_black);
         }
       }
     }

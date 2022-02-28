@@ -1,5 +1,6 @@
 import tableOfContents from "@components/components/article/TableOfContents/tableOfContents.html.twig";
 import subjectListing from './landingSubjectListing.html.twig';
+import subjectListingNoColumn from './landingSubjectListingNoColumn.html.twig';
 
 export default {
   title: 'Pages/Landing/Subject Listing',
@@ -25,4 +26,12 @@ SubjectListing.args = {
         { label: 'Related content', href: '#' },
       ],
     }),
+}
+
+const TemplateNoColumn = (args) => {
+  return subjectListingNoColumn(args);
+}
+
+export const SubjectListingEmptyColumn = TemplateNoColumn.bind({});
+SubjectListingEmptyColumn.args = {
 }
