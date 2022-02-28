@@ -1,12 +1,14 @@
 @import "src/lib.scss";
 
 .pagination {
+  margin-top: 4rem;
+
   &__list {
     display: flex;
     justify-content: space-between;
     padding: 0;
     @media screen and (min-width: $fsa-lg) {
-      margin: 2rem 0;
+      margin: 2rem 0 0;
     }
   }
   &__item-group {
