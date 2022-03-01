@@ -1,26 +1,33 @@
 @import "src/lib.scss";
 
 .content-meta-data {
-  @include body();
+  @include body;
+
   width: 100%;
   border: solid 1px var(--fsa_border);
   background-color: var(--fsa_tint);
   padding: 2rem 1rem;
+
   @media screen and (min-width: $fsa-lg) {
-     padding: 2rem;
+    padding: 2rem;
   }
+
   &__item {
     margin: 0.5rem 0;
+
     &:first-child {
       margin-top: 0;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
+
     &__content {
       font-weight: bold;
+
       a {
-        @include link();
+        @include link;
       }
     }
   }

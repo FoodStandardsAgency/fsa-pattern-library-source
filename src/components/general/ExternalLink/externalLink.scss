@@ -2,9 +2,11 @@
 
 @mixin extlink {
   @include link;
+
   margin-right: 0.25rem;
   position: relative;
   display: inline;
+
   &::after {
     content: "";
     background-image: url("/src/components/general/ExternalLink/assets/external.svg");
@@ -15,9 +17,10 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
   &:focus::after {
     background-image: url("/src/components/general/ExternalLink/assets/external-black.svg");
-  } 
+  }
 }
 
 .external-link {
@@ -43,4 +46,3 @@
     }
   }
 }
-

@@ -2,7 +2,8 @@
 
 .step {
   @include body;
-  display:inline-block;
+
+  display: inline-block;
   margin-top: 2rem;
   color: var(--fsa-primary_dark-grey);
   text-align: left;

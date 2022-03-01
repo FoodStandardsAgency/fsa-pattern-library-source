@@ -8,26 +8,30 @@
 
     &__label {
       @include h2;
+
       margin: 0;
     }
 
     &__name {
       @include h6;
+
       margin: 1rem 0 0;
     }
+
     &__email-wrapper {
       margin-top: 0.5rem;
     }
+
     &__email {
       @include link;
 
       &:hover {
-        &:after {
+        &::after {
           background-image: url("./assets/email-hover.svg");
         }
       }
 
-      &:after {
+      &::after {
         content: "";
         background-image: url("./assets/email.svg");
         background-repeat: no-repeat;

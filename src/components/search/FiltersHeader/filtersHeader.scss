@@ -11,10 +11,18 @@ body.overflow-hidden {
 .search-filters {
   &__title {
     @include h4;
+
+    margin: 1rem 0 0;
+    padding: 0;
+
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 0.5rem;
+    }
   }
 
   &__button {
     @include button(primary);
+
     width: 100%;
     font-weight: bold;
 
@@ -70,16 +78,8 @@ body.overflow-hidden {
     background: none;
     padding: 0;
     cursor: pointer;
+
     @include body;
     @include link;
-  }
-
-  &__title {
-    margin: 1rem 0 0;
-    padding: 0;
-
-    @media screen and (min-width: $fsa-md) {
-      margin-top: 0.5rem;
-    }
   }
 }

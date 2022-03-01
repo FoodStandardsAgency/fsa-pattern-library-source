@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "scss/at-import-partial-extension": "always",
+    "custom-property-pattern": ".+",
+    "scss/dollar-variable-pattern": ".+",
+    "selector-class-pattern": ".+",
+    "no-descending-specificity": null,
+    "declaration-block-no-redundant-longhand-properties": null
+  }
+}

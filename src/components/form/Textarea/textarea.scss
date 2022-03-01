@@ -5,6 +5,7 @@
 
   &__label {
     @include h5;
+
     margin: 0;
     padding: 0;
     font-weight: bold;
@@ -17,13 +18,16 @@
 
   &__required {
     @include h5;
+
     font-weight: inherit;
     color: var(--fsa-primary_black);
   }
 
   &__description {
     margin-top: 0.5rem;
+
     @include body;
+
     color: var(--fsa-primary_black);
   }
 
@@ -35,7 +39,9 @@
     width: 100%;
     display: block;
     resize: none;
+
     @include body;
+
     @media screen and (min-width: $fsa-xs) {
       padding: 0.75rem 1rem;
     }
@@ -45,17 +51,18 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 0.25rem var(--fsa-primary_black),
+      box-shadow:
+        0 0 0 0.25rem var(--fsa-primary_black),
         0 0 0 0.5rem var(--fsa-tertiary_light-yellow);
       outline: none;
     }
   }
 
   &--error {
-    margin-left: -1.25rem;
     border-left: 0.25rem solid var(--fsa-secondary_mid-red);
     margin-left: -0.75rem;
     padding-left: 0.5rem;
+
     @media screen and (min-width: $fsa-md) {
       margin-left: -1.25rem;
       padding-left: 1rem;

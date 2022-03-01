@@ -5,6 +5,7 @@
 
   &__main-heading {
     @include h2;
+
     color: var(--fsa-primary_black);
     text-align: center;
     margin: 0;
@@ -17,7 +18,7 @@
       width: 13rem;
       height: 0.5rem;
       display: block;
-      margin: 0.5rem auto 0rem;
+      margin: 0.5rem auto 0;
     }
   }
 
@@ -27,6 +28,7 @@
 
   &__grid-row {
     @include grid-row;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -34,7 +36,9 @@
 
   &__card-wrapper {
     padding: 0 1rem;
+
     @include grid-cols(4, 4);
+
     margin-top: 1.25rem;
 
     @media screen and (min-width: $fsa-md) {
@@ -47,6 +51,7 @@
 
     @media screen and (min-width: $fsa-xl) {
       @include grid-cols(4);
+
       padding: 0 1rem;
     }
   }
@@ -114,6 +119,7 @@
 
   &__sub-heading {
     @include h3;
+
     color: var(--fsa-primary_black);
     margin: 1rem 1.25rem 0;
 
@@ -136,7 +142,9 @@
 
   &__description {
     margin: 1rem 1.25rem 0;
+
     @include body;
+
     color: var(--fsa-primary_black);
 
     @media screen and (min-width: $fsa-md) {
@@ -158,7 +166,7 @@
     }
 
     @media screen and (min-width: $fsa-xl) {
-      margin: 0rem 2rem;
+      margin: 0 2rem;
     }
   }
 
@@ -168,8 +176,10 @@
     @media screen and (min-width: $fsa-xl) {
       margin-top: 1rem;
     }
+
     & + & {
       margin-top: 1rem;
+
       @media screen and (min-width: $fsa-xl) {
         margin-top: 0.75rem;
       }
@@ -178,6 +188,7 @@
 
   &__list-link {
     @include body;
+
     margin-left: 2.25rem;
     text-indent: -2.25rem;
     display: block;

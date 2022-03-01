@@ -1,5 +1,4 @@
 @use "sass:math";
-
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 
@@ -11,8 +10,8 @@
   --fsa-primary_dark-grey: #53565a;
   --fsa_online-grey: #f0f3f5;
   --fsa_border: #dee2e5;
-  --fsa-primary_black: #000000;
-  --fsa-primary_white: #ffffff;
+  --fsa-primary_black: #000;
+  --fsa-primary_white: #fff;
   --fsa_tint: #fafcfd;
 
   /* Secondary Colours */
@@ -49,7 +48,6 @@
   --body-font: "Open Sans", sans-serif;
   --body-normal: 400;
   --body-bold: 600;
-
   --heading-font: "Fira Sans", sans-serif;
   --heading-bold: 700;
 
@@ -78,6 +76,7 @@ $fsa-xxl: 1920px;
   line-height: 1.1;
   letter-spacing: normal;
   color: var(--fsa-primary_dark-green);
+
   @media screen and (min-width: $fsa-lg) {
     font-size: 2.986rem;
   }
@@ -85,6 +84,7 @@ $fsa-xxl: 1920px;
 
 @mixin h1-article {
   @include h1;
+
   @media screen and (min-width: $fsa-lg) {
     font-family: var(--heading-font);
     font-size: 2.488rem;
@@ -100,6 +100,7 @@ $fsa-xxl: 1920px;
   font-weight: var(--heading-bold);
   line-height: 1.2;
   letter-spacing: normal;
+
   @media screen and (min-width: $fsa-lg) {
     font-size: 2.074rem;
   }
@@ -111,6 +112,7 @@ $fsa-xxl: 1920px;
   font-weight: var(--heading-bold);
   line-height: 1.2;
   letter-spacing: normal;
+
   @media screen and (min-width: $fsa-lg) {
     font-size: 1.728rem;
   }
@@ -122,6 +124,7 @@ $fsa-xxl: 1920px;
   font-weight: var(--heading-bold);
   line-height: 1.2;
   letter-spacing: normal;
+
   @media screen and (min-width: $fsa-lg) {
     font-size: 1.44rem;
   }
@@ -133,6 +136,7 @@ $fsa-xxl: 1920px;
   font-weight: var(--heading-bold);
   line-height: 1.4;
   letter-spacing: normal;
+
   @media screen and (min-width: $fsa-lg) {
     font-size: 1.2rem;
   }
@@ -234,9 +238,9 @@ $mobileGutter: 1rem;
 }
 
 @mixin grid-cols($count, $basis: 12) {
-  width: math.div(100% , $basis) * $count;
-  flex-basis: math.div(100% , $basis) * $count;
-  max-width: math.div(100% , $basis) * $count;
+  width: math.div(100%, $basis) * $count;
+  flex-basis: math.div(100%, $basis) * $count;
+  max-width: math.div(100%, $basis) * $count;
   padding-left: math.div($mobileGutter, 2);
   padding-right: math.div($mobileGutter, 2);
 
@@ -247,13 +251,13 @@ $mobileGutter: 1rem;
 }
 
 @mixin cols-push($count, $basis: 12) {
-  margin-left: math.div(100% , $basis) * $count;
+  margin-left: math.div(100%, $basis) * $count;
 }
 
 /* Custom Mixins */
 @mixin button($button-type: primary) {
   display: inline-block;
-  font-family: open sans, sans-serif;
+  font-family: "open sans", sans-serif;
   font-size: 1rem;
   text-align: center;
   line-height: 1.6rem;
@@ -263,20 +267,23 @@ $mobileGutter: 1rem;
   border-radius: 1.5rem;
   padding: 0.6rem 2.5rem;
   cursor: pointer;
-  transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
-  border-radius 0.1s ease-out, border-bottom 0.1s ease-out;
+  transition:
+    background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+    border-radius 0.1s ease-out,
+    border-bottom 0.1s ease-out;
 
-  @if $button-type==primary {
+  @if $button-type == primary {
     @include button-primary;
-  } @else if $button-type==secondary {
+  } @else if $button-type == secondary {
     @include button-secondary;
   } @else if $button-type == cancel {
     @include button-cancel;
   }
 
   &:focus {
-    box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
-    0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
+    box-shadow:
+      0 0 0 0.2rem var(--fsa-primary_black),
+      0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 }
@@ -303,6 +310,7 @@ $mobileGutter: 1rem;
 @mixin button-cancel {
   background-color: var(--fsa-secondary_mid-red);
   color: var(--fsa-primary_white);
+
   &:hover {
     background-color: var(--fsa-secondary-error-hover);
   }
@@ -313,20 +321,23 @@ $mobileGutter: 1rem;
   .#{$input-type} {
     border: none;
     padding: 0;
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 0;
     color: var(--fsa-primary_black);
 
     &__legend {
       @include h5;
+
       margin: 0;
       padding: 0;
       font-weight: bold;
-      /* Using a float trick here to make the border of fieldset wrap around, not going through, the legend.*/
+
+      /* Using a float trick here to make the border of fieldset wrap around, not going through, the legend. */
       float: left;
     }
 
     &__required {
       @include h5;
+
       margin-left: 1rem;
       color: var(--fsa-primary_black);
       font-weight: inherit;
@@ -334,18 +345,22 @@ $mobileGutter: 1rem;
 
     &__description {
       @include body;
+
       margin: 0;
-      padding: 0.5rem 0 0 0;
+      padding: 0.5rem 0 0;
       clear: both;
     }
 
     &__field {
       padding-top: 1rem;
       margin: 0;
+
       @include body;
+
       display: flex;
       align-items: flex-start;
       clear: both;
+
       &-all {
         margin-bottom: 1rem;
       }
@@ -361,6 +376,7 @@ $mobileGutter: 1rem;
 
     &__label {
       padding: 0 0 0 1rem;
+
       &-description {
         color: var(--fsa-primary_dark-grey);
         font-size: 1rem;
@@ -372,6 +388,7 @@ $mobileGutter: 1rem;
       border-left: 0.25rem solid var(--fsa-secondary_mid-red);
       margin-left: -0.75rem;
       padding-left: 0.5rem;
+
       @media screen and (min-width: $fsa-md) {
         margin-left: -1.25rem;
         padding-left: 1rem;
@@ -396,6 +413,7 @@ $mobileGutter: 1rem;
 
       .#{$input-type}__field {
         padding-top: 1rem;
+
         &:first-child {
           padding-top: 0.5rem;
         }
@@ -419,8 +437,9 @@ $mobileGutter: 1rem;
   }
 
   &:focus {
-    box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
-    0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+    box-shadow:
+      0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
     background-color: var(--fsa-primary_white);
@@ -453,8 +472,9 @@ $mobileGutter: 1rem;
   }
 
   &:focus {
-    box-shadow: 0 0 0 0.167rem var(--fsa-primary_black),
-    0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+    box-shadow:
+      0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
     background-color: var(--fsa-primary_white);
@@ -476,6 +496,7 @@ $mobileGutter: 1rem;
 
 @mixin landing-margin-top {
   margin: 3rem 0 0;
+
   @media screen and (min-width: $fsa-lg) {
     margin: 4rem 0 0;
   }
@@ -488,6 +509,7 @@ $mobileGutter: 1rem;
   margin: 0 auto;
   padding-left: var(--container-mobile);
   padding-right: var(--container-mobile);
+
   @media screen and (min-width: $fsa-md) {
     padding-left: var(--container);
     padding-right: var(--container);
@@ -508,6 +530,7 @@ $mobileGutter: 1rem;
 
 @mixin landing-text-wrapper {
   text-align: center;
+
   @include grid-cols(4, 4);
 
   @media screen and (min-width: $fsa-md) {
@@ -526,30 +549,34 @@ $mobileGutter: 1rem;
   list-style-position: outside;
   list-style-type: none;
   padding: 0;
-  @include body();
+
+  @include body;
+
   line-height: 1.6;
+
   li {
     margin-left: 1.5rem;
-    &:before {
+
+    &::before {
       display: inline-block;
       margin-left: -1.5rem;
     }
   }
-  @if $list-type==ul {
+
+  @if $list-type == ul {
     li {
-      &:before {
-        content: '\25CF';
+      &::before {
+        content: "\25CF";
         color: var(--fsa-primary_dark-green);
         font-weight: bold;
         margin-right: 1rem;
       }
     }
-  }
-  @else if $list-type==ol {
+  } @else if $list-type == ol {
     li {
       &::before {
         counter-increment: list;
-        content: counter(list) '.';
+        content: counter(list) ".";
         margin-right: 0.7rem;
       }
     }
@@ -558,36 +585,54 @@ $mobileGutter: 1rem;
 
 @mixin wysiwyg-content() {
   @include body;
+
   .document-download {
     margin-top: 1rem;
-    &:before {
+
+    &::before {
       display: none;
     }
   }
+
   .document-download__region {
     display: none;
   }
+
   .document-download__content {
     &--with-region {
       margin-top: 0;
     }
   }
+
   ul {
     @include list(ul);
   }
+
   ol {
     @include list(ol);
   }
-  > p, > h1, > h2, > h3, > h4, > h5, > h6, > ul, > ol {
+
+  > p,
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > ul,
+  > ol {
     margin-bottom: 0;
+
     &:first-child {
       margin-top: 0;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   a:not(.document-download__link) {
-    @include link();
+    @include link;
   }
 }

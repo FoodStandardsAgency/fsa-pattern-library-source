@@ -16,6 +16,7 @@
 
   &__button {
     @include body;
+
     background: var(--fsa-secondary_mid-purple);
     color: var(--fsa-primary_white);
     font-size: 0.9rem;
@@ -26,7 +27,8 @@
     padding: 0.6rem 3rem 0.6rem 1rem;
     margin: 0.5rem 0.5rem 0 0;
     cursor: pointer;
-    transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+    transition:
+      background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
       color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
       border-radius 0.2s cubic-bezier(0.19, 1, 0.22, 1);
     background-image: url("./assets/cross-white.svg");
@@ -38,8 +40,9 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0px 0.2rem var(--fsa-tertiary_light-yellow),
-        0 0 0px 0.4rem var(--fsa-primary_black);
+      box-shadow:
+        0 0 0 0.2rem var(--fsa-tertiary_light-yellow),
+        0 0 0 0.4rem var(--fsa-primary_black);
       outline: none;
     }
 
@@ -50,6 +53,7 @@
 
   &__remove {
     @include body;
+
     margin: 0;
     background: none;
     border: none;
