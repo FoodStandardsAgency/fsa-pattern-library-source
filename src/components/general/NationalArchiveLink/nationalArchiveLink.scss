@@ -1,6 +1,10 @@
 @import "src/lib.scss";
 
 .national-archive-link {
+  @media screen and (min-width: $fsa-lg) {
+    margin-top: 2rem;
+  }
+
   &__content {
     &--left, &--right {
       display: flex;

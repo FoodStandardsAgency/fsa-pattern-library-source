@@ -1,9 +1,4 @@
 <div class="subject-listing">
-  {% if standalone %}
-    <div class="subject-listing__container">
-      <div class="subject-listing__row">
-        <div class="subject-listing__wrapper">
-  {% endif %}
   {% for section in subject_listing %}
     <div class="subject-listing__section">
       {% if section.title %}
@@ -25,9 +20,4 @@
       {% endif %}
     </div>
   {% endfor %}
-  {% if standalone %}
-        </div>
-      </div>
-    </div>
-  {% endif %}
-</>
+</div>

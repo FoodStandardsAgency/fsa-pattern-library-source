@@ -1,14 +1,23 @@
 @import "src/lib.scss";
 
 .listing-item {
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+
+  &:after {
+    background: var(--fsa_border);
+    content: " ";
+    position: absolute;
+    margin-top: 1.5rem;
+    height: 4px;
+    width: 100%;
+  }
 
   &__content {
-    border-bottom: 4px solid var(--fsa_border);
-    padding: 0 1rem 1.5rem 1rem;
+    padding: 1.5rem 1rem 0 1rem;
 
     @media screen and (min-width: $fsa-lg) {
-      padding: 0 3rem 1.5rem 3rem;
+      padding: 1.5rem 3rem 0 3rem;
     }
   }
 
