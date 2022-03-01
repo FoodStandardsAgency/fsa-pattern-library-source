@@ -17,11 +17,12 @@
           {% include "@components/components/search/Datepicker/datepicker.html.twig" with {
             id.field.id,
             type: field.dateType,
-            applyLabel: field.applyLabel,
-            applyLinks: field.applyLink,
+            apply_label: field.apply_label,
+            apply_links: field.apply_links,
             label: field.label,
-            minimumSelection: field.minimumSelection,
-            invalidDate: field.invalidDate,
+            minimum_selection: field.minimum_selection,
+            invalid_date: field.invalid_date,
+            start_year: field.start_year,
           } %}
           </div>
       {% elseif field.type == 'collapsible_checkbox' %}
