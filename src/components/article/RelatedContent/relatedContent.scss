@@ -5,8 +5,8 @@
 
   &__main-heading {
     @include landing-text-wrapper;
-
     @include h2;
+
     color: var(--fsa-primary_black);
     margin: 0;
 
@@ -18,7 +18,7 @@
       width: 13rem;
       height: 0.5rem;
       display: block;
-      margin: 0.5rem auto 0rem;
+      margin: 0.5rem auto 0;
     }
   }
 
@@ -28,8 +28,10 @@
 
   &__grid-row {
     @include grid-row;
+
     display: flex;
     flex-wrap: wrap;
+
     &--centered {
       justify-content: center;
     }
@@ -37,8 +39,10 @@
 
   &__card-wrapper {
     @include grid-cols(4, 4);
+
     padding: 0;
     margin-top: 1.25rem;
+
     @media screen and (min-width: $fsa-md) {
       margin-top: 2rem;
       padding: 0;
@@ -46,10 +50,13 @@
 
     @media screen and (min-width: $fsa-xl) {
       @include grid-cols(4);
+
       padding: 0 1rem;
+
       &:first-child {
         padding-left: 0;
       }
+
       &:last-child {
         padding-right: 0;
       }
@@ -78,9 +85,11 @@
       position: absolute;
       right: 1.25rem;
       bottom: 0.5rem;
+
       @media screen and (min-width: $fsa-md) {
         bottom: 1.25rem;
       }
+
       @media screen and (min-width: $fsa-lg) {
         bottom: 1rem;
       }
@@ -97,6 +106,7 @@
 
   &__sub-heading {
     @include h4;
+
     color: var(--fsa-primary_black);
     margin: 1rem 1.25rem 0;
 
@@ -111,7 +121,9 @@
 
   &__description {
     margin: 1rem 1.25rem 0;
+
     @include body;
+
     color: var(--fsa-primary_black);
 
     @media screen and (min-width: $fsa-md) {

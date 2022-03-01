@@ -4,12 +4,13 @@
   @include landing-margin-top;
 
   &__container {
-    @include grid-container();
+    @include grid-container;
   }
 
   &__text-row {
     @media screen and (min-width: $fsa-md) {
-      @include grid-row();
+      @include grid-row;
+
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -23,10 +24,12 @@
   &__title {
     margin: 0;
     padding: 0;
+
     @include h2;
+
     position: relative;
 
-    &:after {
+    &::after {
       content: "";
       background-image: url("./assets/dot.svg");
       background-repeat: repeat-x;
@@ -34,7 +37,7 @@
       width: 12rem;
       display: block;
       padding-bottom: 0.5rem;
-      margin: 0.5rem auto 0rem;
+      margin: 0.5rem auto 0;
     }
   }
 
@@ -48,8 +51,10 @@
 
   &__link {
     @include link;
+
     padding-left: 2.25rem;
     position: relative;
+
     &::before {
       content: "";
       background-image: url("./assets/arrow-right.svg");
@@ -62,6 +67,7 @@
       left: 0;
       top: 0.25rem;
     }
+
     &:hover {
       &::before {
         background-image: url("./assets/arrow-hover.svg");
@@ -72,7 +78,8 @@
   /* Cards */
 
   &__cards-row {
-    @include grid-row();
+    @include grid-row;
+
     display: flex;
     flex-wrap: wrap;
 
@@ -83,6 +90,7 @@
 
   &__card {
     @include grid-cols(4, 4);
+
     margin-top: 2rem;
 
     @media screen and (min-width: $fsa-md) {
@@ -101,20 +109,26 @@
     flex: 1 1 auto;
     flex-direction: column;
     position: relative;
+
     &--news {
       border-top: 0.4rem solid var(--fsa-secondary_mid-purple);
+
       .latest-teaser__type {
         color: var(--fsa-secondary_mid-purple);
       }
     }
+
     &--alerts {
       border-top: 0.4rem solid var(--fsa-secondary_mid-red);
+
       .latest-teaser__type {
         color: var(--fsa-secondary_mid-red);
       }
     }
+
     &--consultations {
       border-top: 0.4rem solid var(--fsa-secondary_dark-blue);
+
       .latest-teaser__type {
         color: var(--fsa-secondary_dark-blue);
       }
@@ -123,6 +137,7 @@
 
   &__type {
     @include h6;
+
     font-weight: bold;
     text-transform: uppercase;
     margin: 0.5rem 0 0;
@@ -136,7 +151,7 @@
     color: var(--fsa-primary_black);
     cursor: pointer;
 
-    &:after {
+    &::after {
       position: absolute;
       top: 0;
       right: 0;
@@ -169,9 +184,9 @@
   &__date {
     position: relative;
     display: block;
-    margin-top: 0.5rem;
     color: var(--fsa-primary_dark-grey);
     margin-top: auto;
+
     &::before {
       content: "";
       background-image: url("./assets/arrow-right.svg");
@@ -189,6 +204,7 @@
   &__button-wrapper {
     display: flex;
     margin-top: 2rem;
+
     .button {
       margin: auto;
     }

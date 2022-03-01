@@ -6,7 +6,7 @@
   "dependencies": {
     "element-closest-polyfill": "1.0.4",
     "object-fit-images": "^3.2.4",
-    "postcss": "8.3.11",
+    "postcss": "8.4.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "smoothscroll-polyfill": "^0.4.4",
@@ -30,8 +30,9 @@
     "babel-loader": "8.2.2",
     "css-loader": "5.2.7",
     "css-vars-ponyfill": "2.4.7",
-    "deeson-webpack-config-starter": "https://github.com/teamdeeson/deeson-webpack-config#feature/drupal9-webpack5",
+    "deeson-webpack-config-starter": "git://github.com/teamdeeson/deeson-webpack-config#feature/drupal9-webpack5",
     "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.4.0",
     "file-loader": "6.2.0",
     "html-webpack-plugin": "5.3.2",
     "mini-css-extract-plugin": "2.1.0",
@@ -41,6 +42,8 @@
     "sass-loader": "12.1.0",
     "storybook-addon-preview": "2.1.2",
     "style-loader": "3.1.0",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard-scss": "^3.0.0",
     "twig-loader": "0.5.5",
     "twigjs-loader": "1.0.2",
     "webpack": "5.44.0",
@@ -48,10 +51,11 @@
     "webpack-dev-server": "3.11.2"
   },
   "scripts": {
-    "lint": "eslint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "yarn lint && webpack"
+    "build": "yarn lint && webpack",
+    "lint": "eslint ./src && stylelint ./src && prettier --check ./src",
+    "lint-fix": "eslint --fix ./src && stylelint --fix ./src && prettier --write ./src"
   },
   "browserslist": {
     "production": [

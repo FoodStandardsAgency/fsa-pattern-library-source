@@ -19,14 +19,18 @@
   &__find-out-more,
   &__manage {
     margin: 0;
+
     @include body;
+
     color: var(--fsa-primary_white);
   }
 
   &__find-out-more,
   &__manage {
     white-space: nowrap;
+
     @include link;
+
     color: var(--fsa-primary_white);
 
     &:hover {
@@ -63,7 +67,9 @@
 
   &__accept {
     margin-top: 1rem;
+
     @include button(secondary);
+
     &:hover {
       background-color: var(--fsa__link-green);
     }

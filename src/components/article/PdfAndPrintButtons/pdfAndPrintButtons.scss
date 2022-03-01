@@ -2,30 +2,40 @@
 
 .pdf-and-print-buttons {
   display: flex;
+
   &--multipage {
     margin-top: 2rem;
   }
+
   @media screen and (min-width: $fsa-md) {
     justify-content: flex-end;
   }
+
   &__text-wrapper {
     text-align: left;
   }
+
   &__button {
-    @include body();
+    @include body;
+
     color: var(--fsa-primary_dark-green);
     font-weight: bold;
     flex: 50%;
+
     @media screen and (min-width: $fsa-md) {
       flex: auto;
     }
-    a, button {
+
+    a,
+    button {
       display: flex;
+
       @media screen and (min-width: $fsa-md) {
         align-items: center;
       }
-      &:before {
-        content: '';
+
+      &::before {
+        content: "";
         display: block;
         background-color: var(--fsa-primary_dark-green);
         background-repeat: no-repeat;
@@ -36,16 +46,20 @@
         min-width: 2.75rem;
         margin-right: 0.5rem;
       }
+
       &:hover {
         cursor: pointer;
         color: var(--fsa__link-green);
-        &:before {
+
+        &::before {
           background-color: var(--fsa__link-green);
         }
       }
+
       &:focus-visible {
         outline: none;
         text-decoration: none;
+
         .pdf-and-print-buttons__text-wrapper {
           color: var(--fsa-primary_black);
           background-color: var(--fsa-tertiary_light-yellow);
@@ -54,17 +68,21 @@
         }
       }
     }
+
     &--pdf {
       margin-right: 1.4375rem;
+
       a {
-        &:before {
+        &::before {
           background-image: url("./assets/arrow.svg");
         }
       }
     }
+
     &--print {
       button {
-        @include body();
+        @include body;
+
         border: 0;
         border-radius: 0;
         background: transparent;
@@ -73,16 +91,19 @@
         text-decoration: none;
         padding: 0;
         margin: 0;
+
         &:hover {
           cursor: pointer;
           color: var(--fsa__link-green);
         }
-        &:before {
+
+        &::before {
           background-image: url("./assets/printer.svg");
         }
       }
+
       a {
-        &:before {
+        &::before {
           background-image: url("./assets/printer.svg");
         }
       }

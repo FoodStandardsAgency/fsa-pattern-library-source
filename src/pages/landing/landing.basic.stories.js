@@ -1,6 +1,6 @@
 import landingBasic from './landingBasic.html.twig';
-import {navigation} from "@components/components/default-content";
-import {social_svgs, svgs} from "@components/components/svg-icons";
+import { navigation } from '@components/components/default-content';
+import { social_svgs, svgs } from '@components/components/svg-icons';
 
 export default {
   title: 'Pages/Landing/Basic',
@@ -9,14 +9,14 @@ export default {
       disabled: true,
     },
     layout: 'fullscreen',
-  }
+  },
 };
 
 const Template = (args) => {
   return landingBasic(args);
-}
+};
 
-export const Basic =  Template.bind({});
+export const Basic = Template.bind({});
 Basic.args = {
   navigation_content: navigation,
   svg: {
@@ -35,5 +35,4 @@ Basic.args = {
     instagram: social_svgs.instagram,
     blog: social_svgs.blog,
   },
-}
-
+};

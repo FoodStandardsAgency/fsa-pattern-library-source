@@ -4,8 +4,10 @@
   position: relative;
   display: flex;
   margin-top: 1rem;
+
   &__label {
     @include body;
+
     display: flex;
     position: absolute;
     align-items: center;
@@ -13,8 +15,10 @@
     left: 2rem;
     height: 100%;
   }
+
   &__box {
     @include body;
+
     position: relative;
     border: solid 1px var(--fsa-primary_dark-grey);
     border-radius: 2rem;
@@ -22,19 +26,24 @@
     height: 3.75rem;
     padding-left: 2rem;
     background-color: var(--fsa_online-grey);
+
     &--has-content {
       z-index: 2;
     }
+
     &:focus {
       z-index: 2;
       outline: none;
+
       &:focus {
-        box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
+        box-shadow:
+          0 0 0 0.2rem var(--fsa-primary_black),
           0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
         border-radius: 2rem;
       }
     }
   }
+
   &__submit {
     position: absolute;
     top: calc(50% - 1.5rem);
@@ -51,12 +60,15 @@
     border: none;
     z-index: 2;
     cursor: pointer;
+
     &:hover {
       background-color: #005e59;
     }
+
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
+      box-shadow:
+        0 0 0 0.2rem var(--fsa-primary_black),
         0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
       border-radius: 2rem;
     }

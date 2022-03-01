@@ -7,7 +7,7 @@ export default {
       disabled: true,
     },
     layout: 'fullscreen',
-  }
+  },
 };
 
 export const Contact = () => {

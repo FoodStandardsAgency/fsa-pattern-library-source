@@ -11,9 +11,9 @@ export default {
   layout: 'fullscreen',
 };
 
-const Template = ({ label, ...args }) => {
+const Template = (args) => {
   return searchBarHeader(args);
-}
+};
 
 export const SearchBarHeader = Template.bind({});
 SearchBarHeader.args = {
@@ -21,4 +21,4 @@ SearchBarHeader.args = {
   search_link: '#',
   search_text: 'Search Food Standards Agency',
   search_value: '',
-}
+};

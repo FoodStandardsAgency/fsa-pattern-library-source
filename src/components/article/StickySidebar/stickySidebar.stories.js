@@ -1,7 +1,7 @@
 import stickySidebar from './stickySidebar.html.twig';
 import './stickySidebar.scss';
-import backTo from "../BackTo/backTo.html.twig";
-import tableOfContents from "../TableOfContents/tableOfContents.html.twig";
+import backTo from '../BackTo/backTo.html.twig';
+import tableOfContents from '../TableOfContents/tableOfContents.html.twig';
 
 export default {
   title: 'Components/Article/Sticky Sidebar',
@@ -28,6 +28,6 @@ StickySidebar.args = {
         { label: 'MyHACCP step by step', href: '#' },
         { label: 'Small business and retailers', href: '#' },
       ],
-    })
+    }),
   ],
 };

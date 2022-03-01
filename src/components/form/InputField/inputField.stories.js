@@ -1,22 +1,19 @@
 import inputField from './inputField.html.twig';
 import './inputField.scss';
 
-
 export default {
   title: 'Components/Form/Input Field',
   parameters: {
-    layout: "centered",
+    layout: 'centered',
     controls: {
       disabled: false,
-
-    }
-  }
+    },
+  },
 };
 
 const Template = (args) => {
   return inputField(args);
-}
-
+};
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -24,20 +21,20 @@ Normal.args = {
   name: 'email',
   label: 'Email or username',
   caption: 'Enter your email address or username.',
-  required: "",
+  required: '',
   error: false,
   error_message: 'Unrecognized username or password',
   value: '',
-  type: 'text'
+  type: 'text',
 };
 
 export const Error = Template.bind({});
 Error.args = {
   ...Normal.args,
-  required: "required",
+  required: 'required',
   error: true,
   error_message: 'This information is required',
-  value: ''
+  value: '',
 };
 
 export const DefaultValue = Template.bind({});
@@ -46,11 +43,11 @@ DefaultValue.args = {
   name: 'email',
   label: 'Email or username',
   caption: 'Enter your email address or username.',
-  required: "",
+  required: '',
   error: false,
   error_message: 'Unrecognized username or password',
   value: 'test@example.com',
-  type: 'email'
+  type: 'email',
 };
 
 export const Password = Template.bind({});
@@ -59,11 +56,11 @@ Password.args = {
   name: 'password',
   label: 'Password',
   caption: 'Enter your password.',
-  required: "required",
+  required: 'required',
   error: false,
   error_message: 'Unrecognized password',
   value: '',
-  type: 'password'
+  type: 'password',
 };
 
 export const Phone = Template.bind({});
@@ -78,5 +75,5 @@ Phone.args = {
   value: '',
   type: 'tel',
   prefix: '+44',
-  nested: true
-}
+  nested: true,
+};

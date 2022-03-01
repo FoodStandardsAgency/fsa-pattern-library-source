@@ -10,6 +10,6 @@ const updateParams = (name, value) => {
     pathName = form[0].getAttribute('action');
   }
   window.location.href = window.location.origin + pathName + (query != '' ? '?' + query : '');
-}
+};
 
 export default updateParams;

@@ -3,13 +3,15 @@
 
 .message-box {
   margin-top: 2rem;
+
   &__container {
     border-radius: 0.25rem;
-    box-shadow: 0 0.25rem 1rem 0 rgba(41, 41, 41, 0.15);
+    box-shadow: 0 0.25rem 1rem 0 rgb(41 41 41 / 15%);
     background-color: var(--fsa-primary_white);
 
     &--status {
       border-left: 0.25rem solid var(--fsa-primary_mid-green);
+
       p {
         background-image: url("./assets/success.svg");
       }
@@ -17,6 +19,7 @@
 
     &--error {
       border-left: 0.25rem solid var(--fsa-secondary_mid-red);
+
       p {
         background-image: url("./assets/error.svg");
       }
@@ -24,6 +27,7 @@
 
     &--warning {
       border-left: 0.25rem solid var(--fsa-secondary_mid-yellow);
+
       p {
         background-image: url("./assets/warning.svg");
       }
@@ -36,9 +40,11 @@
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: left 1rem top 1.25rem;
+
     & a {
       @include link;
     }
+
     & a[target="_blank"] {
       @include extlink;
     }

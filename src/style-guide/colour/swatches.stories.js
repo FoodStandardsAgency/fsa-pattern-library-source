@@ -8,10 +8,9 @@ export default {
       disabled: true,
     },
     layout: 'fullscreen',
-  }
+  },
 };
 
-export const Colour = ({ label, ...args }) => {
+export const Colour = (args) => {
   return swatches(args);
-}
-
+};

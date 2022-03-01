@@ -11,7 +11,8 @@ export const PDFAndPrintButtons = Template.bind({});
 PDFAndPrintButtons.args = {
   multipage_guide: false,
   pdf_link: '#',
-  pdf_name: 'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
+  pdf_name:
+    'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
   view: 'View',
   as: 'as',
   pdf: 'PDF',
@@ -23,7 +24,8 @@ export const MultipageGuideVersion = Template.bind({});
 MultipageGuideVersion.args = {
   multipage_guide: true,
   pdf_link: '#',
-  pdf_name: 'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
+  pdf_name:
+    'A third of UK consumers are willing to try lab-grown meat and a quarter would try insects',
   view: 'View',
   as: 'as',
   pdf: 'PDF',

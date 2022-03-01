@@ -2,38 +2,51 @@
 
 .article-hero {
   margin-bottom: 2rem;
+
   @media screen and (min-width: $fsa-md) {
     margin-bottom: 3rem;
   }
+
   &__type {
-    @include body();
+    @include body;
+
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: inline-block;
+
     &--news {
       color: var(--fsa-secondary_mid-purple);
     }
+
     &--alerts {
       color: var(--fsa-secondary_mid-red);
     }
+
     &--consultations {
       color: var(--fsa-secondary_dark-blue);
     }
   }
+
   &__title {
-    @include h1-article();
+    @include h1-article;
+
     margin: 0;
   }
+
   &__region {
     position: relative;
-    @include body();
+
+    @include body;
+
     font-weight: bold;
     margin-top: 1rem;
     padding-bottom: 0.25rem;
+
     @media screen and (min-width: $fsa-md) {
       margin-top: 2rem;
     }
+
     &--england {
       border-bottom: 0.25rem var(--fsa-secondary_mid-red) solid;
     }
@@ -50,19 +63,24 @@
       border-bottom: 0.25rem var(--fsa-primary_dark-grey) solid;
     }
   }
+
   &__description {
-    @include intro();
+    @include intro;
+
     margin-top: 1rem;
+
     p {
       margin: 0;
     }
   }
+
   &__toolbar {
     border-top: solid 1px var(--fsa__grey-hover);
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
     margin-top: 1rem;
+
     @media screen and (min-width: $fsa-md) {
       flex-direction: row;
       justify-content: space-between;
@@ -70,9 +88,11 @@
       padding-top: 0.5rem;
       margin-top: 2rem;
     }
+
     &__last-updated {
       margin-bottom: 0.5rem;
       height: 100%;
+
       @media screen and (min-width: $fsa-md) {
         display: contents;
       }

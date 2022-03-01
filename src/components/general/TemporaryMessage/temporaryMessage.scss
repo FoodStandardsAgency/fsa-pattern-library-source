@@ -12,6 +12,7 @@
 
   &__row {
     @include grid-row;
+
     display: flex;
     height: 100%;
   }
@@ -24,17 +25,21 @@
     color: var(--fsa-primary_black);
     text-decoration: none;
     border-bottom: 1px solid var(--fsa-primary_black);
+
     &:focus {
       color: var(--fsa-primary_white);
       background-color: var(--fsa-primary_black);
+
       &::after {
         background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
       }
     }
+
     &:hover {
       border-bottom: 4px solid var(--fsa-primary_black);
       color: var(--fsa-primary_black);
     }
+
     &:hover:focus {
       color: var(--fsa-primary_white);
     }
@@ -42,6 +47,7 @@
 
   &--warning {
     background-color: var(--fsa-secondary_mid-yellow);
+
     a {
       color: var(--fsa-primary_black);
     }
@@ -52,20 +58,23 @@
     color: var(--fsa-primary_white);
 
     .temporary-message__content {
-      &:before {
+      &::before {
         background-image: url("./assets/warning-white.svg");
       }
 
       a {
         color: var(--fsa-primary_white);
         border-color: var(--fsa-primary_white);
+
         &:focus {
           border-color: var(--fsa-primary_black);
         }
+
         &:hover {
           border-bottom: 4px solid var(--fsa-primary_white);
           color: var(--fsa-primary_white);
         }
+
         &:hover:focus {
           border-bottom: 4px solid var(--fsa-primary_black);
         }
@@ -74,11 +83,12 @@
   }
 
   &__content {
-    @include small();
+    @include small;
+
     display: flex;
     justify-content: flex-start;
 
-    &:before {
+    &::before {
       content: "";
       background-image: url("./assets/warning-black.svg");
       background-repeat: no-repeat;
@@ -89,6 +99,7 @@
       position: relative;
       display: block;
       margin-right: 0.5rem;
+
       @media screen and (min-width: $fsa-md) {
         margin-left: 0.9rem;
         margin-right: 2rem;

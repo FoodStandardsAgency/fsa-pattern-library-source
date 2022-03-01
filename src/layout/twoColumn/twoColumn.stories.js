@@ -14,6 +14,4 @@ const Template = (args) => {
   return twoColumn(args);
 };
 
-
 export const TwoColumns = Template.bind({});
-

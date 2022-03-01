@@ -31,7 +31,8 @@ ThreeServices.args = {
   type: 'hero--with-services hero--without-image',
   background_colour: 'green',
   title: 'Food we can trust',
-  content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+  content:
+    'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [
     {
       external: false,
@@ -51,7 +52,8 @@ SixServices.args = {
   type: 'hero--with-services hero--without-image',
   background_colour: 'green',
   title: 'Food we can trust',
-  content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+  content:
+    'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [
     {
       external: false,
@@ -74,7 +76,8 @@ ThreeServicesWithImage.args = {
   type: 'hero--with-image hero--with-services',
   background_colour: 'green',
   title: 'Food we can trust',
-  content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+  content:
+    'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [
     {
       external: false,
@@ -89,7 +92,7 @@ ThreeServicesWithImage.args = {
   ],
   image: {
     alt: 'Alt text',
-    url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'
+    url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
   },
 };
 
@@ -98,7 +101,8 @@ SixServicesWithImage.args = {
   type: 'hero--with-image hero--with-services',
   background_colour: 'green',
   title: 'Food we can trust',
-  content: 'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
+  content:
+    'Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and what it says it is.',
   ctas: [
     {
       external: false,
@@ -116,6 +120,6 @@ SixServicesWithImage.args = {
   ],
   image: {
     alt: 'Alt text',
-    url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'
+    url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
   },
 };

@@ -24,16 +24,14 @@ oneLink.args = {
     },
     {
       title: 'For businesses',
-      description:
-        'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
+      description: 'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
       promo_link: '#',
       image:
         'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/industry-kitchen-cooking_0.jpg?itok=uyO6myYB',
     },
     {
       title: 'Our risk analysis',
-      description:
-        'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
+      description: 'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
       promo_link: '#',
       image:
         'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/AS_FSA_011216_L1_276.jpg?itok=oVF8mrBO',
@@ -48,16 +46,14 @@ oneLink.args = {
     },
     {
       title: 'For businesses',
-      description:
-        'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
+      description: 'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
       promo_link: '#',
       image:
         'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/industry-kitchen-cooking_0.jpg?itok=uyO6myYB',
     },
     {
       title: 'Our risk analysis',
-      description:
-        'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
+      description: 'Cras sagittis. Vivamus in erat ut urna cursus vestibulum. Nulla facilisi.',
       promo_link: '#',
       image:
         'https://www.food.gov.uk/sites/default/files/styles/promo_medium/public/media/image/AS_FSA_011216_L1_276.jpg?itok=oVF8mrBO',

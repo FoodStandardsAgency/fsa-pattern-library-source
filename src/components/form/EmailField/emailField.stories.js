@@ -1,5 +1,5 @@
 import emailField from './emailField.html.twig';
-import './emailField.scss'
+import './emailField.scss';
 
 export default {
   title: 'Components/Form/Email Field',

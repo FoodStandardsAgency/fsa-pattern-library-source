@@ -3,13 +3,7 @@ import './tableOfContents.scss';
 import { getMode } from '../../general/Navigation/navigation-accessibility.js';
 
 export default function () {
-  let DOMContentFirstLoad = true;
-
   window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
     const els = document.querySelectorAll('.table-of-contents');
     if (!els) {
       return;
@@ -17,8 +11,8 @@ export default function () {
 
     let mode = getMode();
 
-    els.forEach(el => {
-      const button = el.querySelector('.table-of-contents__title button')
+    els.forEach((el) => {
+      const button = el.querySelector('.table-of-contents__title button');
       const list = el.querySelector('.table-of-contents__list');
       const arrow = button.querySelector('.table-of-contents__arrow');
       button.addEventListener('click', () => {

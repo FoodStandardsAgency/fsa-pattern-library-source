@@ -6,14 +6,13 @@ export default {
   parameters: {
     controls: {
       disabled: false,
-    } 
-  }
+    },
+  },
 };
 
 const Template = (args) => {
   return searchNoResults(args);
-}
-
+};
 
 export const SearchNoResults = Template.bind({});
 SearchNoResults.args = {
@@ -23,5 +22,5 @@ SearchNoResults.args = {
   food_hygiene_rating_text: 'Were you looking for',
   food_hygiene_rating_link_text: 'Food Hygiene Ratings',
   remove_filters_link: 'http://example.com/removeFilters',
-  food_hygiene_rating_link: 'http://example.com/foodHygiene'
+  food_hygiene_rating_link: 'http://example.com/foodHygiene',
 };

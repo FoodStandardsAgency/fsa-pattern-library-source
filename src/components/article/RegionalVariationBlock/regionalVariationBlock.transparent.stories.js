@@ -5,26 +5,29 @@ import documentDownload from '../DocumentDownload/documentDownload.html.twig';
 
 export default {
   title: 'Components/Article/Regional Variation Block/Transparent',
-}
+};
 
-export const TextOnly = args => regionalVariationBlock(args);
+export const TextOnly = (args) => regionalVariationBlock(args);
 TextOnly.args = {
   region: ['England'],
-  wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus tortor, pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>',
+  wysiwyg_content:
+    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus tortor, pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>',
   transparent_background: true,
-}
+};
 
-export const WithLink = args => regionalVariationBlock(args);
+export const WithLink = (args) => regionalVariationBlock(args);
 WithLink.args = {
   region: ['Northern Ireland'],
-  wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, <a class="external-link" href="#">This is an external link</a> sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>',
+  wysiwyg_content:
+    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, <a class="external-link" href="#">This is an external link</a> sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>',
   transparent_background: true,
-}
+};
 
-export const WithList = args => regionalVariationBlock(args);
+export const WithList = (args) => regionalVariationBlock(args);
 WithList.args = {
   region: ['England', 'Northern Ireland'],
-  wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
+  wysiwyg_content:
+    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
     '<ul>\n' +
     '    <li>Lorem ipsum</li>\n' +
     '    <li>Lorem ipsum</li>\n' +
@@ -38,12 +41,13 @@ WithList.args = {
     '    <li>Lorem ipsum</li>\n' +
     '</ol>',
   transparent_background: true,
-}
+};
 
-export const WithFile = args => regionalVariationBlock(args);
+export const WithFile = (args) => regionalVariationBlock(args);
 WithFile.args = {
   region: ['Wales'],
-  wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
+  wysiwyg_content:
+    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
     documentDownload({
       format: 'pdf',
       link: '#',
@@ -54,12 +58,13 @@ WithFile.args = {
       size: '12MB',
     }),
   transparent_background: true,
-}
+};
 
-export const Combination = args => regionalVariationBlock(args);
+export const Combination = (args) => regionalVariationBlock(args);
 Combination.args = {
   region: ['England', 'Northern Ireland', 'Wales'],
-  wysiwyg_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
+  wysiwyg_content:
+    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">This is a link</a> pharetra tempor vehicula eu, sagittis nec odio. Suspendisse hendrerit nisi sed mi accumsan, sed tincidunt lacus volutpat.</p>\n' +
     documentDownload({
       format: 'pdf',
       link: '#',
@@ -95,4 +100,4 @@ Combination.args = {
       size: '20MB',
     }),
   transparent_background: true,
-}
+};

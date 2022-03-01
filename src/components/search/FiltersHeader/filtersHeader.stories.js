@@ -133,7 +133,7 @@ FiltersHeader.args = {
     },
     {
       title: 'Date',
-      name:'date_select',
+      name: 'date_select',
       fields: [
         {
           type: 'datepicker',
