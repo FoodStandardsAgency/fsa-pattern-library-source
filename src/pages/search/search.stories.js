@@ -7,10 +7,9 @@ export default {
       disabled: true,
     },
     layout: 'fullscreen',
-  }
+  },
 };
 
-export const Search = ({ label, ...args }) => {
+export const Search = (args) => {
   return search(args);
-}
-
+};

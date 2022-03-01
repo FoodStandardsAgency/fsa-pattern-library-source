@@ -37,7 +37,7 @@ English.args = {
     links: [
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'News and alerts',
           active: 'false',
         },
@@ -106,7 +106,7 @@ English.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Food safety and Hygiene',
           active: 'true',
         },
@@ -364,7 +364,7 @@ English.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Business Guidance',
           active: 'true',
         },
@@ -622,7 +622,7 @@ English.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'About us',
           active: 'true',
         },
@@ -879,7 +879,7 @@ English.args = {
         ],
       },
     ],
-  }
+  },
 };
 
 export const WithTemporaryMessage = Template.bind({});
@@ -909,7 +909,7 @@ WithTemporaryMessage.args = {
     links: [
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'News and alerts',
           active: 'false',
         },
@@ -978,7 +978,7 @@ WithTemporaryMessage.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Food safety and Hygiene',
           active: 'true',
         },
@@ -1236,7 +1236,7 @@ WithTemporaryMessage.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Business Guidance',
           active: 'true',
         },
@@ -1494,7 +1494,7 @@ WithTemporaryMessage.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'About us',
           active: 'true',
         },
@@ -1753,9 +1753,10 @@ WithTemporaryMessage.args = {
     ],
   },
   temporary_message: {
-    message: '<p><a href="#" class="external-link">Coronavirus (COVID 19):</a> Guidance and support</p>',
+    message:
+      '<p><a href="#" class="external-link">Coronavirus (COVID 19):</a> Guidance and support</p>',
     level: 'low',
-  }
+  },
 };
 
 export const Welsh = Template.bind({});
@@ -1785,7 +1786,7 @@ Welsh.args = {
     links: [
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'News and alerts',
           active: 'false',
         },
@@ -1854,7 +1855,7 @@ Welsh.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Food safety and Hygiene',
           active: 'true',
         },
@@ -2112,7 +2113,7 @@ Welsh.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Business Guidance',
           active: 'true',
         },
@@ -2370,7 +2371,7 @@ Welsh.args = {
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'About us',
           active: 'true',
         },
@@ -2627,7 +2628,7 @@ Welsh.args = {
         ],
       },
     ],
-  }
+  },
 };
 
 export const MyHACCP = Template.bind({});
@@ -2652,14 +2653,14 @@ MyHACCP.args = {
     links: [
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'MyHACCP Web Tool',
           active: 'false',
         },
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Help',
           active: 'true',
         },
@@ -2671,16 +2672,16 @@ MyHACCP.args = {
     links: [
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Register',
         },
       },
       {
         link: {
-          href:'#',
+          href: '#',
           label: 'Sign in',
         },
       },
     ],
-  }
+  },
 };

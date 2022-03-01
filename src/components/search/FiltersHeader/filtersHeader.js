@@ -3,25 +3,22 @@ import './react/filtersHeader.html.twig';
 import './filtersHeader.scss';
 
 export default function () {
+  window.addEventListener(
+    'DOMContentLoaded',
+    function () {
+      const openButton = document.querySelector('.search-filters__button');
+      const returnButton = document.querySelector('.search-filters__return');
+      const contentDiv = document.querySelector('.search-filters__content');
 
-  window.addEventListener('DOMContentLoaded', function () {
-    const openButton = document.querySelector('.search-filters__button');
-    const returnButton = document.querySelector('.search-filters__return');
-    const contentDiv = document.querySelector('.search-filters__content');
-
-    if (openButton && returnButton && contentDiv) {
-      //Add eventlisteners for buttons
+      // Add eventlisteners for buttons.
       function toggleClass() {
         openButton.classList.toggle('search-filters__button--open');
         contentDiv.classList.toggle('search-filters__content--open');
         document.body.classList.toggle('overflow-hidden');
       }
 
-      openButton.addEventListener('click', toggleClass);
-      returnButton.addEventListener('click', toggleClass);
-
-      //Trap user focus within the modal
-      //Find the last visible focusable element in the modal
+      // Trap user focus within the modal.
+      // Find the last visible focusable element in the modal.
       function getLastElement() {
         let lastElement;
         const focusableElements = contentDiv.querySelectorAll(
@@ -37,6 +34,7 @@ export default function () {
         }
         return lastElement;
       }
+
       function focusLastElement(e) {
         const keyCode = e.keyCode ? e.keyCode : e.which;
         //If user pressed shift + tab on the return button, move focus to the end of the modal
@@ -68,9 +66,14 @@ export default function () {
         }
       }
 
-      returnButton.addEventListener('keydown', focusLastElement);
-      //Use event delegation, because the last focusable element will change as filters change.
-      contentDiv.addEventListener('keydown', focusFirstItem);
-    }
-  }, { once: true });
+      if (openButton && returnButton && contentDiv) {
+        openButton.addEventListener('click', toggleClass);
+        returnButton.addEventListener('click', toggleClass);
+        returnButton.addEventListener('keydown', focusLastElement);
+        //Use event delegation, because the last focusable element will change as filters change.
+        contentDiv.addEventListener('keydown', focusFirstItem);
+      }
+    },
+    { once: true }
+  );
 }

@@ -10,9 +10,9 @@ export default {
   },
 };
 
-const Template = ({ label, ...args }) => {
+const Template = (args) => {
   return pagination(args);
-}
+};
 
 export const PaginationStart = Template.bind({});
 PaginationStart.args = {
@@ -20,11 +20,11 @@ PaginationStart.args = {
   total_pages: 9,
   current_page: 1,
   max_visible_pages: 4,
-  first_label: "First",
-  previous_label: "Previous",
-  next_label: "Next",
-  last_label: "Last",
-}
+  first_label: 'First',
+  previous_label: 'Previous',
+  next_label: 'Next',
+  last_label: 'Last',
+};
 
 export const PaginationMid = Template.bind({});
 PaginationMid.args = {
@@ -32,11 +32,11 @@ PaginationMid.args = {
   total_pages: 16,
   current_page: 6,
   max_visible_pages: 4,
-  first_label: "First",
-  previous_label: "Previous",
-  next_label: "Next",
-  last_label: "Last",
-}
+  first_label: 'First',
+  previous_label: 'Previous',
+  next_label: 'Next',
+  last_label: 'Last',
+};
 
 export const PaginationEnd = Template.bind({});
 PaginationEnd.args = {
@@ -44,8 +44,8 @@ PaginationEnd.args = {
   total_pages: 9,
   current_page: 9,
   max_visible_pages: 4,
-  first_label: "First",
-  previous_label: "Previous",
-  next_label: "Next",
-  last_label: "Last",
-}
+  first_label: 'First',
+  previous_label: 'Previous',
+  next_label: 'Next',
+  last_label: 'Last',
+};

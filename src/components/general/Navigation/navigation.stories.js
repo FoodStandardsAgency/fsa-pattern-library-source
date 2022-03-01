@@ -26,57 +26,57 @@ Navigation.args = {
   links: [
     {
       link: {
-        href:'#',
+        href: '#',
         label: 'News and alerts',
         active: 'false',
       },
       submenu: [
         {
-        title: 'Latest updates',
-        read_more_link: '#',
-        read_more_label: 'See more Latest Updates',
-        links: [
-          {
-            link: {
-              type: 'link',
-              href: '#',
-              label: 'News',
-              active: 'false',
+          title: 'Latest updates',
+          read_more_link: '#',
+          read_more_label: 'See more Latest Updates',
+          links: [
+            {
+              link: {
+                type: 'link',
+                href: '#',
+                label: 'News',
+                active: 'false',
+              },
             },
-          },
-          {
-            link: {
-              type: 'link',
-              href: '#',
-              label: 'Food alerts',
-              active: 'false',
+            {
+              link: {
+                type: 'link',
+                href: '#',
+                label: 'Food alerts',
+                active: 'false',
+              },
             },
-          },
-          {
-            link: {
-              type: 'link',
-              href: '#',
-              label: 'Subscribe to food and alerts',
-              active: 'false',
+            {
+              link: {
+                type: 'link',
+                href: '#',
+                label: 'Subscribe to food and alerts',
+                active: 'false',
+              },
             },
-          },
-          {
-            link: {
-              type: 'link',
-              href: '#',
-              label: 'FSA blog',
-              active: 'false',
+            {
+              link: {
+                type: 'link',
+                href: '#',
+                label: 'FSA blog',
+                active: 'false',
+              },
             },
-          },
-          {
-            link: {
-              type: 'link',
-              href: '#',
-              label: 'RSS feeds',
-              active: 'false',
+            {
+              link: {
+                type: 'link',
+                href: '#',
+                label: 'RSS feeds',
+                active: 'false',
+              },
             },
-          },
-        ],
+          ],
         },
         {
           title: 'Open policy making',
@@ -95,7 +95,7 @@ Navigation.args = {
     },
     {
       link: {
-        href:'#',
+        href: '#',
         label: 'Food safety and Hygiene',
         active: 'true',
       },
@@ -353,7 +353,7 @@ Navigation.args = {
     },
     {
       link: {
-        href:'#',
+        href: '#',
         label: 'Business Guidance',
         active: 'true',
       },
@@ -611,7 +611,7 @@ Navigation.args = {
     },
     {
       link: {
-        href:'#',
+        href: '#',
         label: 'About us',
         active: 'true',
       },

@@ -14,6 +14,4 @@ const Template = (args) => {
   return contentLayout(args);
 };
 
-
 export const ContentLayout = Template.bind({});
-

@@ -5,7 +5,7 @@ import 'element-closest-polyfill';
 
 export default function () {
   let DOMContentFirstLoad = true;
-  
+
   window.addEventListener(
     'DOMContentLoaded',
     function () {
@@ -20,18 +20,13 @@ export default function () {
 
       //Update the 'x selected description for the accordion passed in as first arg
       function updateDesc(accordion) {
-        const remainingCheckboxes = accordion.querySelectorAll(
-          '.accordion__input'
-        );
+        const remainingCheckboxes = accordion.querySelectorAll('.accordion__input');
         const numChecked = Array.from(remainingCheckboxes).filter(
           (checkbox) => checkbox.checked
         ).length;
 
-        const descriptionElement = accordion.querySelector(
-          '.accordion__description'
-        );
-        const description =
-          numChecked + ' ' + descriptionElement.dataset.selected;
+        const descriptionElement = accordion.querySelector('.accordion__description');
+        const description = numChecked + ' ' + descriptionElement.dataset.selected;
         descriptionElement.textContent = numChecked ? description : '';
       }
 

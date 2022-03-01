@@ -6,7 +6,7 @@ export const navigation = {
   links: [
     {
       link: {
-        href:'#',
+        href: '#',
         label: 'News and alerts',
         active: 'false',
       },
@@ -75,7 +75,7 @@ export const navigation = {
     },
     {
       link: {
-        href:'#',
+        href: '#',
         label: 'Food safety and Hygiene',
         active: 'true',
       },
@@ -333,7 +333,7 @@ export const navigation = {
     },
     {
       link: {
-        href:'#',
+        href: '#',
         label: 'Business Guidance',
         active: 'true',
       },
@@ -591,7 +591,7 @@ export const navigation = {
     },
     {
       link: {
-        href:'#',
+        href: '#',
         label: 'About us',
         active: 'true',
       },
@@ -848,4 +848,4 @@ export const navigation = {
       ],
     },
   ],
-}
+};

@@ -3,31 +3,36 @@ import './errorBox.scss';
 
 const errorItems = {
   required: {
-    'label': 'Please complete the following required fields',
-    'fields': [{
-        'label': 'E-mail address',
-        'id': 'email'
+    label: 'Please complete the following required fields',
+    fields: [
+      {
+        label: 'E-mail address',
+        id: 'email',
       },
       {
-        'label': 'Password',
-        'id': 'password'
-      }
-    ]
+        label: 'Password',
+        id: 'password',
+      },
+    ],
   },
   format: {
-    'label': 'Please complete the following with the correct format',
-    'fields': [{
-      'label': 'Password',
-      'id': 'password'
-    }]
+    label: 'Please complete the following with the correct format',
+    fields: [
+      {
+        label: 'Password',
+        id: 'password',
+      },
+    ],
   },
   unrecognized: {
-    'label': 'Unrecognized username or password.',
-    'fields': [{
-      'label': 'Email address or username',
-      'id': 'email-username'
-    }]
-  }
+    label: 'Unrecognized username or password.',
+    fields: [
+      {
+        label: 'Email address or username',
+        id: 'email-username',
+      },
+    ],
+  },
 };
 
 export default {
@@ -36,13 +41,13 @@ export default {
     controls: {
       disabled: false,
     },
-    layout: "centered"
-  }
+    layout: 'centered',
+  },
 };
 
 const Template = (args) => {
   return errorBox(args);
-}
+};
 
 export const ErrorBox = Template.bind({});
 

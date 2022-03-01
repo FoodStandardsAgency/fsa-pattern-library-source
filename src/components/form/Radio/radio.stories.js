@@ -21,7 +21,7 @@ Normal.args = {
     { value: 'weekly', label: 'Send updates weekly', id: 'weekly' },
   ],
   name: 'frequency',
-  required: "",
+  required: '',
   error: false,
   default: 'immediately',
 };
@@ -29,6 +29,6 @@ Normal.args = {
 export const Error = Template.bind({});
 Error.args = {
   ...Normal.args,
-  required: "required",
+  required: 'required',
   error: true,
 };

@@ -1,7 +1,7 @@
 import landingCampaign from './landingCampaign.html.twig';
-import {social_svgs} from "@components/components/svg-icons";
-import {svgs} from "@components/components/svg-icons";
-import {navigation} from "@components/components/default-content";
+import { social_svgs } from '@components/components/svg-icons';
+import { svgs } from '@components/components/svg-icons';
+import { navigation } from '@components/components/default-content';
 
 export default {
   title: 'Pages/Landing/Campaign',
@@ -10,15 +10,14 @@ export default {
       disabled: true,
     },
     layout: 'fullscreen',
-  }
+  },
 };
 
 const Template = (args) => {
   return landingCampaign(args);
-}
+};
 
-
-export const Campaign =  Template.bind({});
+export const Campaign = Template.bind({});
 Campaign.args = {
   navigation_content: navigation,
   svg: {
@@ -37,4 +36,4 @@ Campaign.args = {
     instagram: social_svgs.instagram,
     blog: social_svgs.blog,
   },
-}
+};

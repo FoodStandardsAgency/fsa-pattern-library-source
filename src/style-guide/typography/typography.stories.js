@@ -8,10 +8,9 @@ export default {
       disabled: true,
     },
     layout: 'fullscreen',
-  }
+  },
 };
 
-export const Typography = ({ label, ...args }) => {
+export const Typography = (args) => {
   return typography(args);
-}
-
+};

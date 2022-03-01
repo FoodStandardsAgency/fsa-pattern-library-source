@@ -9,7 +9,8 @@ const Template = (args) => temporaryMessage(args);
 
 export const Low = Template.bind({});
 Low.args = {
-  message: '<p><a href="#" class="external-link">Coronavirus (COVID 19):</a> Guidance and support</p>',
+  message:
+    '<p><a href="#" class="external-link">Coronavirus (COVID 19):</a> Guidance and support</p>',
 };
 
 export const Medium = Template.bind({});

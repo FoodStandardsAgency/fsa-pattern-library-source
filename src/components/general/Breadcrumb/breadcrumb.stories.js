@@ -4,63 +4,62 @@ import breadcrumbJs from './breadcrumb.js';
 
 breadcrumbJs();
 
-
 export default {
   title: 'Components/General/Breadcrumb',
   parameters: {
     controls: {
       disabled: true,
-    }
-  }
+    },
+  },
 };
 
-const Template = (args) => { 
+const Template = (args) => {
   return breadcrumb(args);
-}
+};
 
 export const Breadcrumb = Template.bind({});
 Breadcrumb.args = {
   items: [
     {
-      'text': 'Home',
-      'url': '/'
+      text: 'Home',
+      url: '/',
     },
     {
-      'text': 'Business guidance',
-      'url': false
+      text: 'Business guidance',
+      url: false,
     },
     {
-      'text': 'Running a business',
-      'url': '/running-a-business'
+      text: 'Running a business',
+      url: '/running-a-business',
     },
     {
-      'text': 'Hazard Analysis and Critical Control Point',
-      'url': false
+      text: 'Hazard Analysis and Critical Control Point',
+      url: false,
     },
   ],
-  expanded: false
+  expanded: false,
 };
 
 export const BreadcrumbExpanded = Template.bind({});
 BreadcrumbExpanded.args = {
   ...Breadcrumb.args,
-  expanded: true
+  expanded: true,
 };
 
 export const BreadcrumbLoggedOut = Template.bind({});
 BreadcrumbLoggedOut.args = {
   items: [
     {
-      'text': 'Home',
-      'url': '/'
+      text: 'Home',
+      url: '/',
     },
     {
-      'text': 'News & Alerts',
-      'url': '/news-alerts'
+      text: 'News & Alerts',
+      url: '/news-alerts',
     },
     {
-      'text': 'Subscribe to news & alerts',
-      'url': false
+      text: 'Subscribe to news & alerts',
+      url: false,
     },
   ],
   expanded: false,
@@ -83,7 +82,6 @@ BreadcrumbLoggedIn.args = {
     log_out_label: 'Log out',
   },
 };
-
 
 export const BreadcrumbExpandedLoggedOut = Template.bind({});
 BreadcrumbExpandedLoggedOut.args = {
