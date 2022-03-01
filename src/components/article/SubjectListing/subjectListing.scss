@@ -4,46 +4,63 @@
   &__container {
     @include grid-container;
   }
+
   &__row {
     @include grid-row;
   }
+
   &__wrapper {
     @include grid-cols(4, 4);
+
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(12);
     }
   }
+
   margin-top: 3rem;
+
   &__section {
     margin-top: 3rem;
+
     &:first-child {
       margin-top: 0;
     }
   }
+
   &__title {
-    @include h2();
+    @include h2;
+
     margin: 0;
   }
+
   &__description {
-    @include body();
-    margin: 1rem 0 0 0;
+    @include body;
+
+    margin: 1rem 0 0;
   }
+
   &__section-header {
-    @include body();
+    @include body;
+
     margin-top: 1rem;
     font-weight: bold;
   }
+
   &__link-list {
     list-style: none;
     padding: 0;
+
     &__item {
       margin-top: 1.25rem;
       margin-left: 2.25rem;
+
       @media screen and (min-width: $fsa-xl) {
         margin-top: 1rem;
       }
+
       a {
         @include body;
+
         &,
         &:active,
         &:visited {

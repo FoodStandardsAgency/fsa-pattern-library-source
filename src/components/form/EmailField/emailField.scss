@@ -6,6 +6,7 @@
   &__title {
     margin: 0;
     padding: 0;
+
     @include h5;
   }
 
@@ -15,6 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
     @include body;
 
     @media screen and (min-width: $fsa-md) {
@@ -35,6 +37,7 @@
   &__link,
   &__change {
     display: block;
+
     @include link;
   }
 

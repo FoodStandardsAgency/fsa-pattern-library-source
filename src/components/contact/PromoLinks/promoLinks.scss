@@ -67,6 +67,7 @@
 
   &__text {
     margin: 0 0.5rem 0 1rem;
+
     @media screen and (min-width: $fsa-lg) {
       margin: 0 2rem 0 1rem;
       max-width: 80%;
@@ -75,6 +76,7 @@
 
   &__title {
     @include h4;
+
     color: var(--fsa-primary_dark-green);
     padding: 0;
     margin: 0;
@@ -82,7 +84,9 @@
 
   &__description {
     display: none;
+
     @include body;
+
     color: var(--fsa-tertiary_light-black);
     margin-top: 0.5rem;
 

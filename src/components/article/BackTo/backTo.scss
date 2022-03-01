@@ -3,7 +3,9 @@
 .back-to {
   &__link {
     @include link;
+
     display: table;
+
     &::before {
       content: "";
       background-image: url("./assets/arrow-left.svg");
@@ -15,11 +17,13 @@
       margin-right: 1rem;
       vertical-align: middle;
     }
+
     &:hover {
       &::before {
         background-image: url("./assets/arrow-hover.svg");
       }
     }
+
     &:focus {
       &::before {
         background-image: url("./assets/arrow-focus.svg");

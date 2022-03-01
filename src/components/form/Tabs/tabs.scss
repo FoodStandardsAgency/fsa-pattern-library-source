@@ -2,6 +2,7 @@
 
 .tabs {
   margin: 2.75rem 0 0;
+
   &__list {
     padding: 0;
     margin: 0;
@@ -9,19 +10,24 @@
     flex-direction: column;
     border-bottom: 1px solid var(--fsa-primary_black);
     align-items: center;
+
     @media screen and (min-width: $fsa-md) {
       flex-direction: row;
       justify-content: space-between;
     }
   }
+
   &__element {
     position: relative;
     font-weight: bold;
+
     a {
       @include link-simple;
+
       text-decoration: none;
       padding-bottom: 1rem;
       display: block;
+
       &:focus {
         color: var(--fsa-primary_black);
         outline: none;
@@ -30,46 +36,53 @@
         border-bottom: 0.25rem solid var(--fsa-primary_black);
         padding-bottom: 0.75rem;
       }
+
       @media screen and (min-width: $fsa-md) {
         padding: 0.25rem 0 0.75rem;
+
         &:hover {
-          &:after {
+          &::after {
             content: "";
             height: 0.25rem;
             width: 100%;
             display: block;
             background-color: var(--fsa__link-green);
             position: absolute;
-            bottom: 0rem;
+            bottom: 0;
           }
         }
+
         &:focus {
           padding-bottom: 0.5rem;
         }
       }
-  
     }
+
     &--active {
       color: var(--fsa-primary_black);
       padding: 0.25rem 0 1rem;
       display: block;
+
       @media screen and (min-width: $fsa-md) {
         padding: 0.25rem 0 0.75rem;
       }
+
       &:hover {
         color: var(--fsa-primary_black);
         cursor: auto;
       }
-      &:after {
+
+      &::after {
         content: "";
         height: 0.25rem;
         width: 100%;
         display: block;
         background-color: var(--fsa-primary_black);
+
         @media screen and (min-width: $fsa-md) {
           margin-top: 0;
           position: absolute;
-          bottom: 0rem;
+          bottom: 0;
         }
       }
     }

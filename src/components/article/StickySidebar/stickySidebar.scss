@@ -2,10 +2,12 @@
 
 .sticky-sidebar {
   margin-bottom: 2rem;
+
   @media screen and (min-width: $fsa-lg) {
-     height: 100%;
-     margin-top: 0;
+    height: 100%;
+    margin-top: 0;
   }
+
   &--fixed {
     @media screen and (min-width: $fsa-lg) {
       top: 1rem;
@@ -13,6 +15,7 @@
       z-index: 1;
     }
   }
+
   &--bottom {
     @media screen and (min-width: $fsa-lg) {
       position: relative;
@@ -21,8 +24,10 @@
       bottom: 0;
     }
   }
+
   &__content-item {
     margin-top: 2rem;
+
     &:first-child {
       margin-top: 0;
     }

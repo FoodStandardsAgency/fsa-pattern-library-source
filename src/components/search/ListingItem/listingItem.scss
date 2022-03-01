@@ -4,7 +4,7 @@
   margin-top: 1.5rem;
   position: relative;
 
-  &:after {
+  &::after {
     background: var(--fsa_border);
     content: " ";
     position: absolute;
@@ -14,17 +14,19 @@
   }
 
   &__content {
-    padding: 1.5rem 1rem 0 1rem;
+    padding: 1.5rem 1rem 0;
 
     @media screen and (min-width: $fsa-lg) {
-      padding: 1.5rem 3rem 0 3rem;
+      padding: 1.5rem 3rem 0;
     }
   }
 
   &__type {
     text-transform: none;
     margin: 0;
+
     @include body;
+
     font-weight: bold;
 
     @media screen and (min-width: $fsa-md) {
@@ -35,6 +37,7 @@
   &__title {
     margin-top: 0.5rem;
     margin-bottom: 0;
+
     @include h5;
 
     a {
@@ -70,6 +73,7 @@
 
   &__date {
     @include body;
+
     color: var(--fsa-primary_dark-grey);
   }
 }
