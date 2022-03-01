@@ -3,13 +3,7 @@ import './tableOfContents.scss';
 import { getMode } from '../../general/Navigation/navigation-accessibility.js';
 
 export default function () {
-  let DOMContentFirstLoad = true;
-
   window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
     const els = document.querySelectorAll('.table-of-contents');
     if (!els) {
       return;
