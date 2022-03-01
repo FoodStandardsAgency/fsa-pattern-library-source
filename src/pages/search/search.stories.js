@@ -10,6 +10,6 @@ export default {
   },
 };
 
-export const Search = ({ ...args }) => {
+export const Search = (args) => {
   return search(args);
 };

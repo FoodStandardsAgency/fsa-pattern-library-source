@@ -11,6 +11,6 @@ export default {
   },
 };
 
-export const Grid = ({ ...args }) => {
+export const Grid = (args) => {
   return grid(args);
 };

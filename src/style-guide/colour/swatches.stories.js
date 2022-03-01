@@ -11,6 +11,6 @@ export default {
   },
 };
 
-export const Colour = ({ ...args }) => {
+export const Colour = (args) => {
   return swatches(args);
 };

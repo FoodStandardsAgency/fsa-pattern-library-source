@@ -11,7 +11,7 @@ export default {
   layout: 'fullscreen',
 };
 
-const Template = ({ ...args }) => {
+const Template = (args) => {
   return searchBarHeader(args);
 };
 

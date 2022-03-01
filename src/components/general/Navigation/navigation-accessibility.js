@@ -211,7 +211,6 @@ function subMenuArrows(group) {
 }
 
 function blurBackground(navigation) {
-  console.log(navigation);
   const mode = getMode();
   if (mode == 'desktop') {
     const backgroundBlur = navigation.querySelector('.navigation__background-blur');

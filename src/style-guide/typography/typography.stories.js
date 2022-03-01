@@ -11,6 +11,6 @@ export default {
   },
 };
 
-export const Typography = ({ ...args }) => {
+export const Typography = (args) => {
   return typography(args);
 };
