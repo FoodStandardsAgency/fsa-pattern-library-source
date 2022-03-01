@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Code linting
+name: Code quality checks
 
 # Controls when the workflow will run
 on: [push, workflow_dispatch]
