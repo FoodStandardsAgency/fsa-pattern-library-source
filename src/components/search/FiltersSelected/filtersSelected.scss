@@ -3,11 +3,10 @@
 .filters {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+
   @media screen and (min-width: $fsa-md) {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 1.8rem;
   }
 
   &__buttons {
@@ -25,7 +24,7 @@
     box-shadow: none;
     min-height: 44px;
     padding: 0.6rem 3rem 0.6rem 1rem;
-    margin: 0 0.5rem 0.5rem 0;
+    margin: 0.5rem 0.5rem 0 0;
     cursor: pointer;
     transition: background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
       color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
