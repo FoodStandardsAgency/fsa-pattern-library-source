@@ -1,10 +1,10 @@
 @import "src/lib.scss";
 
-
-@mixin arrow($orientation: left, $child: '.multipage-guide-pagination__label') {
+@mixin arrow($orientation: left, $child: ".multipage-guide-pagination__label") {
   $position: ":before";
   $margin: "right";
-  @if $orientation==right {
+
+  @if $orientation == right {
     $position: ":after";
     $margin: "left";
   }
@@ -22,7 +22,6 @@
   }
   &:hover #{$child}#{$position} {
     background-image: url("./assets/#{$orientation}/arrow-hover.svg");
-    
   }
   &:focus #{$child}#{$position} {
     background-image: url("./assets/#{$orientation}/arrow-focus.svg");
@@ -32,25 +31,30 @@
 .multipage-guide-pagination {
   margin-top: 2rem;
   border-top: solid 1px var(--fsa__grey-hover);
+
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
     margin: 0;
+
     @media screen and (min-width: $fsa-lg) {
       margin: 2rem 0;
       flex-direction: row;
     }
   }
+
   &__offset {
     justify-content: flex-end;
   }
 
   & a {
     @include link;
+
     text-decoration: none;
   }
+
   &__type {
     text-decoration: underline;
   }
@@ -58,25 +62,30 @@
   &__prev,
   &__next {
     margin-top: 2rem;
+
     @media screen and (min-width: $fsa-lg) {
       margin: 0;
       width: 50%;
       flex-basis: 50%;
       max-width: 50%;
     }
-    a { 
+
+    a {
       display: inline-block;
     }
   }
+
   &__prev a {
-    @include arrow();
+    @include arrow;
   }
-  &__next { 
+
+  &__next {
     a {
       @include arrow(right);
     }
+
     @media screen and (min-width: $fsa-lg) {
-      text-align: right; 
+      text-align: right;
     }
   }
 }

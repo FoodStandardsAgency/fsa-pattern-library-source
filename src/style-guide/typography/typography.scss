@@ -1,28 +1,36 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .typography {
   &__container {
     @include container;
   }
+
   &__heading {
     font-size: 1rem;
     color: var(--fsa-tertiary__dark-purple);
     margin-bottom: 0;
   }
+
   &__example {
     margin-top: 0;
     margin-bottom: 2rem;
   }
+
   &__article {
     @include h1-article;
+
     margin-bottom: 2rem;
   }
+
   &__intro {
     @include intro;
+
     margin-bottom: 2rem;
   }
+
   &__small {
     @include small;
+
     margin-bottom: 2rem;
   }
 }

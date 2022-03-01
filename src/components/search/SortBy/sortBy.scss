@@ -21,17 +21,17 @@
 
     /* Add customised arrow */
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+
     &::-ms-expand {
       display: none;
     }
+
     background-image: url("./assets/arrow-down.svg");
     background-repeat: no-repeat;
     background-position: 90% center;
 
     &:focus {
-      box-shadow: inset 0 0 0px 2px var(--fsa-primary_black);
+      box-shadow: inset 0 0 0 2px var(--fsa-primary_black);
       outline: solid 3px var(--fsa-tertiary_light-yellow);
     }
   }

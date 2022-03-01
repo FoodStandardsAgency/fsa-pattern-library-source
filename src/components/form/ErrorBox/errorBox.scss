@@ -8,7 +8,8 @@
   }
 
   &__container {
-    @include grid-container();
+    @include grid-container;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -31,6 +32,7 @@
 
   &__field {
     @include h5;
+
     color: var(--fsa-secondary-error-red);
     text-decoration: underline;
     margin-top: 0.5rem;

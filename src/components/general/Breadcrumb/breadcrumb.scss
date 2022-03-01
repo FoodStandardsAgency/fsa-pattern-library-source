@@ -4,66 +4,85 @@ $mobileOverlayWidth: 0.75rem;
 
 .breadcrumb {
   @include small;
+
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: baseline;
+
   @media screen and (min-width: $fsa-md) {
     flex-direction: row;
   }
+
   &__left {
     @include grid-cols(4, 4);
+
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(8);
     }
+
     padding-left: 0 !important;
     padding-right: 0 !important;
     position: relative;
   }
+
   &__right {
     @include grid-cols(4, 4);
+
     margin-top: 1rem;
+
     .login & {
       text-align: center;
     }
+
     .logout & {
       text-align: left;
     }
+
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(4);
+
       .login &,
       .logout & {
         text-align: right;
       }
+
       margin: 0;
     }
+
     padding-left: 0 !important;
     padding-right: 0 !important;
     position: relative;
+
     & .breadcrumb__label {
       font-size: 0.9rem;
       white-space: nowrap;
       margin: 0.5rem 0;
       display: inline-block;
     }
+
     & .button {
       margin-left: 1rem;
       white-space: nowrap;
     }
   }
+
   &__items {
     display: flex;
     flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
     max-width: calc(100% - #{$mobileOverlayWidth});
+
     .expanded & {
       flex-direction: column;
+
       &::before,
       &::after {
         display: none;
       }
     }
+
     .overflowed & {
       &::before {
         position: absolute;
@@ -72,6 +91,7 @@ $mobileOverlayWidth: 0.75rem;
         right: $mobileOverlayWidth;
         z-index: 1;
       }
+
       &::after {
         content: "";
         position: absolute;
@@ -84,29 +104,35 @@ $mobileOverlayWidth: 0.75rem;
       }
     }
   }
+
   &__item {
     padding-right: 0.5rem;
+
     & > * {
       display: inline-block;
       margin: 0.5rem 0;
     }
+
     & + & {
       &::before {
         display: inline-block;
         width: 0;
         content: "/";
       }
+
       & > * {
         margin-left: 0.5rem;
       }
     }
   }
+
   /* :not property doesn't seem to work :'( */
   .expanded &__items &__item {
     /* lobotomized owl doesn't work here :'( */
     &::before {
       display: none;
     }
+
     & > * {
       margin-left: 0;
     }
@@ -114,21 +140,26 @@ $mobileOverlayWidth: 0.75rem;
 
   &__link {
     @include link;
+
     display: inline-block;
     margin: 0.5rem 0;
     border-bottom: 4px solid transparent;
+
     &:focus {
       margin-bottom: 0.5rem;
     }
   }
+
   &.overflowed &__mobile-overlay {
     @include link;
+
     z-index: 1;
     width: $mobileOverlayWidth;
     height: 1.4rem;
     position: absolute;
     right: 0;
     top: 0.6rem;
+
     &::after {
       content: "";
       display: block;
@@ -139,6 +170,7 @@ $mobileOverlayWidth: 0.75rem;
       background-repeat: no-repeat;
       transition: transform var(--transition-time) ease-out;
     }
+
     &[aria-expanded="true"] {
       &::after {
         margin-top: 0.35rem;

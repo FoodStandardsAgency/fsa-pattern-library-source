@@ -2,25 +2,32 @@
 
 .landing-text {
   @include landing-margin-top;
+
   &__container {
-    @include grid-container();
+    @include grid-container;
   }
+
   &__row {
     @media screen and (min-width: $fsa-md) {
-      @include grid-row();
+      @include grid-row;
+
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
     }
   }
+
   &__wrapper {
     @include grid-cols(4, 4);
+
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(12);
     }
   }
+
   &__content {
-    @include wysiwyg-content();
+    @include wysiwyg-content;
+
     text-align: left;
   }
 }

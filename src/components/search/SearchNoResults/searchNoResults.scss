@@ -5,6 +5,7 @@
 
   &__content {
     padding-left: 1rem;
+
     @media screen and (min-width: $fsa-xs) {
       padding-left: 3rem;
     }
@@ -12,6 +13,7 @@
 
   &__title {
     @include h5;
+
     margin: 0;
   }
 

@@ -1,8 +1,9 @@
-@import './lib.scss';
+@import "./lib.scss";
 
 html {
   font-family: sans-serif;
   font-size: 16px;
+
   @media screen and (min-width: $fsa-lg) {
     font-size: 18px;
   }
@@ -10,6 +11,7 @@ html {
 
 body {
   @include body;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--fsa-primary_white);
@@ -37,7 +39,6 @@ h1,
 .h1-article {
   @include h1-article;
 }
-
 
 h2,
 .h2 {
@@ -78,7 +79,7 @@ p {
 }
 
 .visually-hidden {
-  position: absolute!important;
+  position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
