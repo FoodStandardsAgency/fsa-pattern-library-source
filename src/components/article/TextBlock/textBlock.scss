@@ -24,7 +24,8 @@
   ol {
     @include list(ol);
   }
+
   table {
-    @include table();
+    @include table;
   }
 }
