@@ -19,7 +19,7 @@ export default function () {
       header.classList.add('responsive-table__heading');
       header.setAttribute('aria-hidden', 'true');
       header.innerHTML = headerLabel;
-      cell.prepend(header);
+      cell.insertAdjacentElement('afterbegin', header);
     }
     textBlocks.forEach((block) => {
       const tables = block.querySelectorAll('table');

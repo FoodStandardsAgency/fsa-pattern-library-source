@@ -597,7 +597,7 @@ $mobileGutter: 1rem;
     text-align: left;
     @media screen and (min-width: $fsa-lg) {
       @include h2();
-      background-color: initial;
+      background-color: transparent;
       border: none;
       color: var(--fsa-primary_black);
       padding: 0;
