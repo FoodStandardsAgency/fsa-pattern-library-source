@@ -15,4 +15,7 @@
   ol {
     @include list(ol);
   }
+  table {
+    @include table();
+  }
 }

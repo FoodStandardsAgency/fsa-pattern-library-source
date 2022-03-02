@@ -556,6 +556,105 @@ $mobileGutter: 1rem;
   }
 }
 
+@mixin table() {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+
+  caption {
+    @include h5();
+    background-color: var(--fsa__purple-hover);
+    border: 1px solid var(--fsa__purple-hover);
+    color: var(--fsa-primary_white);
+    padding: 1rem;
+    text-align: left;
+    @media screen and (min-width: $fsa-lg) {
+      @include h2();
+      background-color: initial;
+      border: none;
+      color: var(--fsa-primary_black);
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  thead {
+    @media screen and (max-width: $fsa-lg - 1) {
+      border: 0;
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(50%);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+    @media screen and (min-width: $fsa-lg) {
+      @include h5();
+      background-color: var(--fsa__purple-hover);
+      border: 1px solid var(--fsa__purple-hover);
+      th {
+        color: var(--fsa-primary_white);
+        font-weight: bold;
+        padding: 1rem;
+        text-align: left;
+      }
+    }
+  }
+
+  tbody td, tbody th {
+    @include body();
+    border: 1px solid var(--fsa_border);
+    padding: 1rem;
+    position: relative;
+  }
+
+  tbody tr {
+    display: block;
+    border-bottom: solid 4px var(--fsa_border);
+    &:last-child {
+      border: 1px solid var(--fsa_border);
+    }
+    @media screen and (min-width: $fsa-lg) {
+      display: table-row;
+      border: 1px solid var(--fsa_border);
+    }
+  }
+
+  tbody tr td, tbody tr th  {
+    display: flex;
+    min-width: 1px;
+    text-align: left;
+    @media screen and (min-width: $fsa-lg) {
+      display: table-cell;
+    }
+  }
+
+  .responsive-table__heading {
+    @include body();
+    padding: 0;
+    word-break: initial;
+    height: 100%;
+    width: 50%;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    &:after {
+      content: '';
+      position: absolute;
+      border: 1px solid var(--fsa_border);
+      height: 100%;
+      right: 50%;
+      top: 0;
+    }
+    @media screen and (min-width: $fsa-lg) {
+      display: none;
+    }
+  }
+}
+
 @mixin wysiwyg-content() {
   @include body;
   .document-download {
@@ -577,6 +676,9 @@ $mobileGutter: 1rem;
   }
   ol {
     @include list(ol);
+  }
+  table {
+    @include table();
   }
   > p, > h1, > h2, > h3, > h4, > h5, > h6, > ul, > ol {
     margin-bottom: 0;

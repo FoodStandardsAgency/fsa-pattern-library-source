@@ -67,7 +67,6 @@ import './components/contact/PromoLinks/promoLinks';
 import './components/article/DocumentDownload/documentDownload';
 import './components/article/ArticleHero/articleHero';
 import './components/article/RegionalVariationBlock/regionalVariationBlock';
-import './components/article/TextBlock/textBlock';
 import './components/article/BackTo/backTo';
 import './components/article/ContentMetaData/contentMetaData';
 import './components/article/RelatedContent/relatedContent';
@@ -79,6 +78,7 @@ import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 import tableOfContents from '@components/components/article/TableOfContents/tableOfContents';
+import textBlock from './components/article/TextBlock/textBlock';
 
 /* Multipage guide Components */
 import './components/multipageguide/GuideHero/guideHero';
@@ -117,3 +117,4 @@ header();
 pdfAndPrintButtons();
 stickySidebar();
 tableOfContents();
+textBlock();
