@@ -57,9 +57,10 @@ jobs:
 
       - name: Build static storybook
         run: yarn build-storybook && mv storybook-static ${{ env.BRANCH }}
+
       - name: Push static assets
         if: ${{ github.ref == 'refs/heads/main' }}
-        uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
+        uses: spleshka/copy_file_to_another_repo_action@a33d21a2f83b28c882ffa814a385275af41bb4c2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
@@ -68,8 +69,9 @@ jobs:
           destination_branch: ${{ env.BRANCH }}
           user_email: 'peterb@deeson.co.uk'
           user_name: 'Peter Berryman'
+
       - name: Push static storybook
-        uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
+        uses: spleshka/copy_file_to_another_repo_action@a33d21a2f83b28c882ffa814a385275af41bb4c2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:

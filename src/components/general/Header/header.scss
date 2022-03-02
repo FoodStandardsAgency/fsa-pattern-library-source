@@ -40,6 +40,7 @@
   flex-direction: column;
   z-index: 100;
   overflow: hidden;
+
   @media screen and (min-width: $fsa-lg) {
     padding: 0.5rem 0 0;
     overflow: visible;
@@ -55,8 +56,10 @@
 
   &__wrapper {
     @include grid-cols(4, 4);
+
     display: flex;
     flex-direction: column;
+
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(12);
     }
@@ -67,17 +70,22 @@
     justify-content: flex-end;
   }
 
-  &__languages, &__user_menu {
+  &__languages,
+  &__user_menu {
     text-align: right;
+
     &--mobile {
       display: block;
       background-color: var(--fsa-primary_white);
+
       @media screen and (min-width: $fsa-lg) {
         display: none;
       }
     }
+
     &--desktop {
       display: none;
+
       @media screen and (min-width: $fsa-lg) {
         display: block;
         padding-top: 1rem;
@@ -85,7 +93,7 @@
       }
     }
   }
-  
+
   &__user_menu {
     margin: 0 1rem 1rem;
     padding-left: 1rem;
@@ -93,7 +101,8 @@
     background-color: var(--fsa_online-grey);
   }
 
-  &__languages-list, &__user_menu-list{
+  &__languages-list,
+  &__user_menu-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,19 +110,22 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
     @media screen and (min-width: $fsa-lg) {
       display: block;
       height: 2rem;
     }
   }
-  
-  &__user_menu-list{
+
+  &__user_menu-list {
     position: relative;
     z-index: 2;
   }
 
-  &__language,&__user_menu_item {
+  &__language,
+  &__user_menu_item {
     display: inline-block;
+
     &:first-child::after {
       content: "|";
       margin: 0 0.25rem;
@@ -122,6 +134,7 @@
 
   &__language-link {
     @include small;
+
     color: var(--fsa-primary_dark-green);
     font-weight: bold;
 
@@ -133,6 +146,7 @@
     &--selected,
     &--selected:hover {
       color: var(--fsa-primary_black);
+
       &:hover {
         text-decoration: none;
       }
@@ -143,6 +157,7 @@
       outline: none;
       position: relative;
       color: var(--fsa-primary_black);
+
       &::before {
         content: "";
         width: 100%;
@@ -172,6 +187,7 @@
       outline: none;
       position: relative;
       color: var(--fsa-primary_black);
+
       &::before {
         content: "";
         width: 100%;
@@ -187,18 +203,19 @@
 
   &__navigation {
     display: none;
+
     @media screen and (min-width: $fsa-lg) {
       z-index: 50;
       display: block;
     }
   }
-  
+
   &__user-menu-navigation {
     div & {
       border-bottom: 0;
     }
   }
-  
+
   &__logo-container {
     flex-grow: 1;
 
@@ -232,8 +249,9 @@
   }
 
   &__logo:focus {
-    box-shadow: 0 0 0px 0.2rem var(--fsa-primary_black),
-      0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
+    box-shadow:
+      0 0 0 0.2rem var(--fsa-primary_black),
+      0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 
@@ -267,21 +285,23 @@
       display: flex;
       flex-direction: column;
       margin-left: 1rem;
+
       @media screen and (min-width: $fsa-lg) {
         display: none;
       }
     }
-    
+
     &--mobile-user-menu {
       margin-left: 0;
-      
+
       .navigation__wrapper {
         margin-bottom: 0;
       }
     }
-    
+
     &--desktop {
       display: none;
+
       @media screen and (min-width: $fsa-lg) {
         display: flex;
         margin-left: 1.25rem;
@@ -290,6 +310,7 @@
         flex-grow: 1;
         padding: 0;
       }
+
       @media screen and (min-width: $fsa-xl) {
         margin-left: 2.75rem;
       }
@@ -299,6 +320,7 @@
   &__links-wrapper {
     display: flex;
     flex-direction: column;
+
     @media screen and (min-width: $fsa-lg) {
       flex-direction: row;
       align-items: center;
@@ -308,13 +330,16 @@
 
   &__links-item {
     margin-left: 1rem;
+
     @media screen and (min-width: $fsa-lg) {
       margin-left: 0;
     }
+
     &--right {
       flex-grow: 1;
       display: flex;
       align-items: center;
+
       @media screen and (min-width: $fsa-lg) {
         justify-content: flex-end;
       }
@@ -333,15 +358,19 @@
 
   &__links--welsh {
     margin-top: -0.5rem;
+
     @media screen and (min-width: $fsa-xl) {
-      margin-top: 0rem;
+      margin-top: 0;
     }
+
     .header__links-wrapper {
       flex-wrap: wrap;
     }
+
     .header__links-item:first-child {
       margin-left: 0;
     }
+
     .header__links-item--right {
       margin-left: 2rem;
     }
@@ -349,11 +378,14 @@
 
   &__links-anchor {
     color: var(--fsa-primary_white);
+
     @include body;
+
     display: flex;
     flex-wrap: nowrap;
     margin: 0.5rem 0;
     width: fit-content;
+
     @media screen and (min-width: $fsa-lg) {
       color: var(--fsa-primary_dark-green);
     }
@@ -362,6 +394,7 @@
       margin-right: 0.7rem;
       position: relative;
       top: 0.2rem;
+
       @media screen and (min-width: $fsa-lg) {
         margin-right: 0.3rem;
       }
@@ -369,6 +402,7 @@
 
     &--contact {
       @include prefix-svg-mobile("contact");
+
       @media screen and (min-width: $fsa-lg) {
         @include prefix-svg("contact");
       }
@@ -376,6 +410,7 @@
 
     &--report {
       @include prefix-svg-mobile("report");
+
       @media screen and (min-width: $fsa-lg) {
         @include prefix-svg("report");
       }
@@ -383,9 +418,11 @@
 
     &--ratings {
       @include prefix-svg-mobile("search");
+
       @media screen and (min-width: $fsa-lg) {
         @include prefix-svg("search");
       }
+
       white-space: nowrap;
     }
 
@@ -397,8 +434,9 @@
     }
 
     &:hover {
-      color:  var(--fsa-primary_white);
+      color: var(--fsa-primary_white);
       text-decoration: underline;
+
       @media screen and (min-width: $fsa-lg) {
         color: var(--fsa__link-green);
       }
@@ -424,17 +462,18 @@
     }
 
     &--icon {
-      display: inline-block;
       width: 3rem;
       height: 3rem;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: var(--fsa-primary_white);
+
       &:focus {
         outline: none;
-        box-shadow: 0 0 0px 0.2rem var(--fsa-primary_black),
-          0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
+        box-shadow:
+          0 0 0 0.2rem var(--fsa-primary_black),
+          0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
       }
     }
 
@@ -464,6 +503,7 @@
       &__label {
         white-space: nowrap;
         left: 1rem;
+
         @include small;
       }
 
@@ -491,7 +531,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
     position: relative;
     border: none;
     padding: 0;
@@ -502,8 +541,9 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0px 0.2rem var(--fsa-primary_black),
-        0 0 0px 0.4rem var(--fsa-tertiary_light-yellow);
+      box-shadow:
+        0 0 0 0.2rem var(--fsa-primary_black),
+        0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     }
 
     @media screen and (min-width: $fsa-lg) {
@@ -540,7 +580,7 @@
     }
   }
 
-  /*Expanded navigation style will only be applied to mobile viewports*/
+  /* Expanded navigation style will only be applied to mobile viewports */
   @media screen and (max-width: $fsa-lg-minus) {
     &--expanded {
       position: absolute;
@@ -551,6 +591,7 @@
       background-color: var(--fsa__purple-hover);
       overflow-y: auto;
       overflow-x: hidden;
+
       .header__search-bar--icon {
         background-color: var(--fsa-primary_white);
         display: flex;
@@ -560,6 +601,7 @@
 
         &:hover {
           background-color: var(--fsa-primary_dark-green);
+
           .header__search-svg {
             background-image: url("./assets/search/search-white.svg");
           }
@@ -607,6 +649,7 @@
           background-image: url("./assets/logo/logo-cy-white.svg");
         }
       }
+
       .header__navigation {
         display: block;
         margin-top: 2rem;

@@ -12,6 +12,7 @@
 
   &__legend {
     @include h6;
+
     margin: 0;
     padding: 0;
     float: left;
@@ -34,6 +35,7 @@
 
     &:focus {
       outline: none;
+
       .accordion__title-text {
         background: var(--fsa-tertiary_light-yellow);
         border-bottom: 2px solid var(--fsa-primary_black);
@@ -73,7 +75,9 @@
 
   &__field {
     margin-top: 1rem;
+
     @include body;
+
     display: flex;
     align-items: center;
 

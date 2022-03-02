@@ -4,12 +4,12 @@
   @include link;
 
   &:hover {
-    &:after {
+    &::after {
       background-image: url("./assets/email-hover.svg");
     }
   }
 
-  &:after {
+  &::after {
     content: "";
     background-image: url("./assets/email.svg");
     background-repeat: no-repeat;

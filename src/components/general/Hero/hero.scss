@@ -10,6 +10,7 @@
     &--has-hero {
       margin-top: -2rem;
       z-index: 1;
+
       @media screen and (min-width: $fsa-md) {
         margin-top: -12.5rem;
       }
@@ -25,71 +26,70 @@
     mask: url("./assets/hero.svg") no-repeat bottom;
     mask-size: 200%, 100%;
     mask-repeat: no-repeat;
-    -webkit-mask: url("./assets/hero.svg") no-repeat bottom;
-    -webkit-mask-size: 200%, 100%;
-    -webkit-mask-repeat: no-repeat;
     color: white;
     padding-bottom: 2rem;
     z-index: 2;
+
     @media screen and (min-width: $fsa-md) {
       background-image: url("./assets/pattern.svg");
       background-size: 150%;
       background-position: right top;
       padding-bottom: 2.2rem;
     }
+
     @media screen and (min-width: $fsa-lg) {
       padding-bottom: 5.5rem;
       background-size: 90%;
     }
+
     @media screen and (min-width: $fsa-xl) {
       align-items: center;
     }
+
     @media screen and (min-width: $fsa-xxl) {
       background-size: 70%;
     }
+
     /* Remove background pattern and fit-content doesn't work in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
       height: 100vh;
     }
+
     &--campaign-block {
       background-image: none;
     }
+
     &--hide-hero {
       display: none;
     }
   }
+
   &--without-image.hero--with-services {
     .hero__mask-wrapper {
       padding-bottom: 2rem;
+
       @media screen and (min-width: $fsa-xl) {
         padding: 0;
       }
     }
   }
-  &--with-services {
-    .hero__mask-wrapper {
-      margin-bottom: 1rem;
-      @media screen and (min-width: $fsa-xl) {
-        margin-bottom: 0;
-      }
-    }
-    .hero__row {
-      flex-direction: column;
-    }
-  }
+
   &__container {
     position: relative;
+
     @include grid-container;
   }
 
   &__row {
     @include grid-row;
+
     display: flex;
   }
 
   &__content-wrapper {
     @include grid-cols(4, 4);
+
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(6);
     }
@@ -99,7 +99,7 @@
     display: flex;
     z-index: 1;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background-color: inherit;
@@ -113,10 +113,12 @@
   }
 
   &__title {
-    @include h1();
+    @include h1;
+
     color: inherit;
-    margin: 2rem 0 0.625rem 0;
-    &:after {
+    margin: 2rem 0 0.625rem;
+
+    &::after {
       content: "";
       background-image: url("./assets/dot-white.svg");
       background-repeat: repeat-x;
@@ -127,31 +129,40 @@
       margin-top: 0.5rem;
     }
   }
+
   &__description {
-    @include intro();
+    @include intro;
+
     margin-top: 0.625rem;
   }
+
   &__cta-wrapper {
     @media screen and (min-width: $fsa-xl) {
       display: flex;
     }
   }
+
   &__cta {
     margin-top: 1rem;
+
     @media screen and (min-width: $fsa-xl) {
       margin-left: 1rem;
+
       &:first-child {
         margin-left: 0;
       }
     }
   }
+
   &__services {
     order: 3;
     z-index: 10;
     width: 100%;
+
     @media screen and (min-width: $fsa-xl) {
       height: 100%;
     }
+
     // If it has an image and 4 columns, unset the height and reduce the bottom padding.
     &--with-image#{&}--4-columns {
       @media screen and (min-width: $fsa-xl) {
@@ -160,6 +171,7 @@
         margin-top: 0;
       }
     }
+
     &__wrapper {
       &--2-columns {
         @media screen and (min-width: $fsa-xl) {
@@ -173,6 +185,7 @@
     // Adjustments to the existing service links component
     .service-links {
       margin-top: 0;
+
       &__text-wrapper {
         text-align: left;
         width: 100%;
@@ -182,12 +195,15 @@
         flex-basis: auto;
         max-width: none;
       }
+
       &__cards {
         margin-top: 0;
+
         @media screen and (max-width: $fsa-md-minus) {
           margin: 0;
         }
       }
+
       &__card {
         @media screen and (max-width: $fsa-md-minus) {
           padding-left: 0;
@@ -196,14 +212,17 @@
       }
     }
   }
+
   &__image {
     order: 1;
     height: 13.5rem;
     overflow: hidden;
     z-index: 10;
+
     svg g {
       display: contents;
     }
+
     @media screen and (min-width: $fsa-md) {
       position: absolute;
       overflow: visible;
@@ -211,11 +230,14 @@
       right: 0;
       bottom: 0;
       left: 50%;
+
       &__container {
         @include grid-container;
+
         position: relative;
         height: 100%;
       }
+
       svg {
         z-index: 1;
         position: absolute;
@@ -223,11 +245,13 @@
         left: 2rem;
         width: 18.667rem;
         height: 18.667rem;
+
         g {
           display: block;
         }
       }
     }
+
     @media screen and (min-width: $fsa-lg) {
       svg {
         top: -8rem;
@@ -235,6 +259,7 @@
         height: 25rem;
       }
     }
+
     @media screen and (min-width: $fsa-xl) {
       svg {
         width: 33.333rem;
@@ -242,19 +267,23 @@
       }
     }
   }
+
   &__theme {
     &--green {
       background-color: var(--fsa-primary_dark-green);
       color: var(--fsa-primary_white);
+
       .button {
         &:hover {
           background-color: var(--fsa__dark-green-hover);
         }
       }
     }
+
     &--blue {
       background-color: #165c7d;
       color: var(--fsa-primary_white);
+
       .button {
         &:hover {
           color: var(--fsa__dark-green-hover);
@@ -262,15 +291,19 @@
         }
       }
     }
+
     &--grey {
       background-color: var(--fsa_online-grey);
       color: #101010;
+
       h1 {
         color: var(--fsa-primary_dark-green);
-        &:after {
+
+        &::after {
           background-image: url("./assets/dot-grey.svg");
         }
       }
+
       .button {
         &:hover {
           background-color: var(--fsa__link-green);
@@ -278,11 +311,14 @@
       }
     }
   }
+
   &--with-image {
     flex-direction: column;
+
     @media screen and (min-width: $fsa-md) {
       flex-direction: row;
     }
+
     .hero__mask-wrapper {
       background-image: none;
 
@@ -292,53 +328,72 @@
       }
     }
   }
+
   &--with-services {
     display: flex;
     flex-direction: column;
+
     @media screen and (min-width: $fsa-xl) {
       padding-bottom: 1rem;
     }
+
+    .hero__row {
+      flex-direction: column;
+    }
+
     &.hero--with-image {
       @media screen and (min-width: $fsa-xl) {
         padding-bottom: 3rem;
       }
     }
+
     .hero__mask-wrapper {
+      margin-bottom: 1rem;
+
       @media screen and (min-width: $fsa-xl) {
         align-items: auto;
+        margin-bottom: 0;
       }
     }
+
     .hero__content-wrapper {
       @media screen and (min-width: $fsa-xl) {
         &--1-service-rows {
           padding-bottom: 6rem;
         }
+
         &--2-service-rows {
           padding-bottom: 12rem;
         }
       }
     }
   }
-  //   If there is no image but there are services, set the top margin on the rows so that the services overlap the hero.
+
+  // If there is no image but there are services, set the top margin on the rows so that the services
+  // overlap the hero.
   &--without-image#{&}--with-services {
     @media screen and (min-width: $fsa-xl) {
       .hero__services {
         &--1-rows {
           margin-top: -4rem;
         }
+
         &--2-rows {
           margin-top: -10rem;
         }
       }
     }
   }
-  // If there is an image and services, but the services only take up half of the screen, set the top margin on the rows so that the services overlap the hero.
+
+  // If there is an image and services, but the services only take up half of the screen, set the top margin on the
+  // rows so that the services overlap the hero.
   &--with-image#{&}--with-services#{&}--services-half {
     @media screen and (min-width: $fsa-xl) {
       .hero__services {
         &--1-rows {
           margin-top: -7.5rem;
         }
+
         &--2-rows {
           margin-top: -13.5rem;
         }
@@ -346,13 +401,15 @@
     }
   }
 
-  // If there is an image and services, but the services take up the full width of the screen, remove the padding and push the services below the image.
+  // If there is an image and services, but the services take up the full width of the screen, remove the padding and
+  // push the services below the image.
   &--with-image#{&}--with-services#{&}--services-full {
     .hero__content-wrapper {
       @media screen and (min-width: $fsa-xl) {
         padding-bottom: 0;
       }
     }
+
     .hero__mask-wrapper {
       @media screen and (min-width: $fsa-xl) {
         align-items: center;

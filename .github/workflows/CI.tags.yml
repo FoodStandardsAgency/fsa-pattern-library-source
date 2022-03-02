@@ -46,7 +46,7 @@ jobs:
         run: yarn build-storybook && mv storybook-static ${GITHUB_REF_NAME}
 
       - name: Push static assets
-        uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
+        uses: spleshka/copy_file_to_another_repo_action@a33d21a2f83b28c882ffa814a385275af41bb4c2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
@@ -57,7 +57,7 @@ jobs:
           user_name: 'Peter Berryman'
 
       - name: Push static storybook
-        uses: dmnemec/copy_file_to_another_repo_action@3fe42250d47e0764da9de9939b151b09a26e5857
+        uses: spleshka/copy_file_to_another_repo_action@a33d21a2f83b28c882ffa814a385275af41bb4c2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:

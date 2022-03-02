@@ -12,6 +12,7 @@
   &__previous {
     @include body;
     @include link;
+
     padding: 0.5rem 0;
     background-image: url("./assets/previous-arrow.svg");
     background-position: left 0 top 50%;
@@ -27,6 +28,7 @@
     }
   }
 }
+
 .button {
   margin-left: auto;
 }

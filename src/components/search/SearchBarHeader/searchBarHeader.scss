@@ -3,14 +3,18 @@
 .search-header {
   @media screen and (min-width: $fsa-lg) {
     @include grid-cols(8);
+
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
   &__title {
     @include h1;
+
     color: var(--fsa-primary_dark-green);
     margin-bottom: 0;
     margin-top: 3rem;
+
     @media screen and (min-width: $fsa-lg) {
       margin-top: 4rem;
     }

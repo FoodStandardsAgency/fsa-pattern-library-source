@@ -3,6 +3,7 @@
 .showing {
   color: var(--fsa-primary_black);
   margin: 1rem 0;
+
   @media screen and (min-width: $fsa-md) {
     margin: 0;
   }

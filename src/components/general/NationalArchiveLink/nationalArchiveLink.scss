@@ -6,22 +6,27 @@
   }
 
   &__content {
-    &--left, &--right {
+    &--left,
+    &--right {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
+
     &--left {
       text-align: left;
     }
+
     &--right {
       text-align: right;
     }
   }
+
   &__label {
-    @include body();
+    @include body;
   }
+
   &__link {
-    @include link();
+    @include link;
   }
 }

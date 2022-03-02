@@ -5,9 +5,11 @@
   margin: 3rem -1rem 0;
   padding: 1rem;
   background-color: var(--fsa_online-grey);
+
   @media screen and (min-width: $fsa-md) {
-    margin: 3rem 0 0 ;
+    margin: 3rem 0 0;
   }
+
   &::before {
     content: "";
     background-image: url("./assets/quotes.svg");
@@ -19,22 +21,28 @@
     background-size: cover;
     margin-right: 1rem;
   }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+
   &__quote {
     p {
-      @include body();
+      @include body;
+
       &:first-child {
         margin-top: 0;
       }
     }
   }
+
   &__author {
-    @include body();
+    @include body;
+
     font-weight: bold;
+
     p {
       margin-top: 1rem;
     }

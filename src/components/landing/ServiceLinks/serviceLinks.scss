@@ -4,12 +4,13 @@
   @include landing-margin-top;
 
   &__container {
-    @include grid-container();
+    @include grid-container;
   }
 
   &__text-row {
     @media screen and (min-width: $fsa-md) {
-      @include grid-row();
+      @include grid-row;
+
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -23,10 +24,12 @@
   &__title {
     margin: 0;
     padding: 0;
+
     @include h2;
+
     position: relative;
 
-    &:after {
+    &::after {
       content: "";
       background-image: url("./assets/dot.svg");
       background-repeat: repeat-x;
@@ -34,7 +37,7 @@
       width: 12rem;
       display: block;
       padding-bottom: 0.5rem;
-      margin: 0.5rem auto 0rem;
+      margin: 0.5rem auto 0;
     }
   }
 
@@ -44,9 +47,11 @@
 
   &__cards {
     padding: 0;
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 0;
     list-style: none;
-    @include grid-row();
+
+    @include grid-row;
+
     display: flex;
     flex-wrap: wrap;
   }
@@ -56,13 +61,13 @@
     @include grid-cols(4, 4);
 
     & + & {
-      margin: 1rem 0 0 0;
+      margin: 1rem 0 0;
     }
 
     @media screen and (min-width: $fsa-md) {
       @include grid-cols(6);
 
-      /*Using css selectors as flex gap doesn't work in IE11.*/
+      /* Using css selectors as flex gap doesn't work in IE11. */
       &:nth-child(2) {
         margin-top: 0;
       }
@@ -103,7 +108,7 @@
   &__anchor {
     background-repeat: no-repeat;
     background-position: right 1rem top 1.25rem;
-    box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.5rem 0 rgb(0 0 0 / 10%);
     padding: 1rem 3.5rem 1rem 1rem;
     color: var(--fsa-primary_black);
     display: block;
@@ -125,9 +130,11 @@
       position: absolute;
       right: 1rem;
     }
+
     &:hover {
       text-decoration: underline;
       color: var(--fsa__link-green);
+
       &::before {
         background-image: url("./assets/arrow-hover.svg");
       }

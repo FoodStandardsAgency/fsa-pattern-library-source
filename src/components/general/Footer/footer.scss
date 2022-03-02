@@ -12,6 +12,7 @@
 
   &__grid-row {
     @include grid-row;
+
     @media screen and (min-width: $fsa-lg) {
       display: flex;
       justify-content: space-between;
@@ -52,7 +53,9 @@
   .footer__menu-link {
     /* Use full css class to have a higher specificity to override the external class */
     color: var(--fsa-primary_white);
+
     @include body;
+
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     display: block;
@@ -96,7 +99,9 @@
 
   &__social {
     margin-top: 2rem;
+
     @include grid-cols(4, 4);
+
     @media screen and (min-width: $fsa-lg) {
       @include grid-cols(4, 12);
     }
@@ -109,6 +114,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
     @media screen and (min-width: $fsa-lg) {
       justify-content: flex-end;
     }
@@ -123,8 +129,10 @@
   &__social-link {
     &:focus {
       outline: none;
+
       .footer__social-svg {
-        box-shadow: 0 0 0 0.2rem var(--fsa-primary_black),
+        box-shadow:
+          0 0 0 0.2rem var(--fsa-primary_black),
           0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
         outline: none;
         text-decoration: none;

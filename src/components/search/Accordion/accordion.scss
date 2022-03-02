@@ -1,4 +1,4 @@
-@import 'src/lib.scss';
+@import "src/lib.scss";
 
 .accordion {
   border: none;
@@ -16,6 +16,7 @@
 
   &__legend {
     @include h6;
+
     margin: 0;
     padding: 0;
     float: left;
@@ -38,6 +39,7 @@
 
     &:focus {
       outline: none;
+
       .accordion__title-text {
         background: var(--fsa-tertiary_light-yellow);
         border-bottom: 2px solid var(--fsa-primary_black);
@@ -45,7 +47,7 @@
     }
 
     &::after {
-      content: url('./assets/arrow.svg');
+      content: url("./assets/arrow.svg");
       transform: none;
     }
 
@@ -77,7 +79,9 @@
 
   &__field {
     margin-top: 1rem;
+
     @include body;
+
     display: flex;
     align-items: center;
 

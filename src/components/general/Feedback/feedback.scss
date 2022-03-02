@@ -29,6 +29,7 @@
 
   &__questions {
     padding: 1rem 0;
+
     @media screen and (min-width: $fsa-md) {
       display: flex;
       justify-content: space-between;
@@ -41,7 +42,9 @@
 
   &__heading {
     margin: 0 0.75rem 0 0;
+
     @include h5;
+
     display: inline-block;
   }
 
@@ -50,16 +53,13 @@
     margin: 0;
   }
 
-  &__report-button {
-    display: block;
-  }
-
   &__yes,
   &__no,
   &__report-button,
   &__close {
     @include body;
     @include link;
+
     border: none;
     background: none;
     padding: 0;
@@ -76,6 +76,7 @@
   }
 
   &__report-button {
+    display: block;
     margin-top: 1rem;
     font-size: 1.125rem;
 
@@ -90,7 +91,9 @@
 
   &__thank {
     padding: 1rem 0;
+
     @include h5;
+
     display: none;
 
     @media screen and (min-width: $fsa-xl) {
@@ -100,6 +103,7 @@
 
   &__form-wrapper {
     padding: 1rem 0;
+
     @media screen and (min-width: $fsa-xl) {
       background-color: var(--fsa_online-grey);
     }
@@ -113,6 +117,7 @@
 
   &__form {
     position: relative;
+
     @media screen and (min-width: $fsa-xl) {
       max-width: 50%;
     }
@@ -126,6 +131,7 @@
 
   &__legend {
     @include h5;
+
     margin-right: 3.25rem;
   }
 
@@ -144,10 +150,12 @@
     border-color: var(--fsa-primary_black);
     background-color: var(--fsa-primary_white);
     border-radius: 0;
+
     @include body;
 
     &:focus {
-      box-shadow: 0 0 0 0.25rem var(--fsa-primary_black),
+      box-shadow:
+        0 0 0 0.25rem var(--fsa-primary_black),
         0 0 0 0.5rem var(--fsa-tertiary_light-yellow);
       outline: none;
     }
@@ -155,6 +163,7 @@
 
   &__submit {
     @include button(primary);
+
     margin-left: auto;
     display: block;
     margin-top: 1rem;
@@ -164,6 +173,7 @@
   &--form {
     .feedback__questions {
       display: none;
+
       @media screen and (min-width: $fsa-md) {
         display: none;
       }
