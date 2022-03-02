@@ -75,6 +75,7 @@ import './components/article/SubjectListing/subjectListing';
 import './components/article/ExplanationBlock/explanationBlock';
 import './components/article/QuoteBlock/quoteBlock';
 import './components/article/TeamContacts/teamContacts';
+import './components/article/ChartBlock/chartBlock';
 import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
