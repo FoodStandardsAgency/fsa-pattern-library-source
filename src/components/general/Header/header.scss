@@ -91,17 +91,6 @@
       }
     }
   }
-  &__top--haccp {
-    .header__languages,
-    .header__user_menu {
-      &--desktop {
-        @media screen and (min-width: $fsa-lg) {
-          padding-top: 1rem;
-          padding-bottom: 0.5rem;
-        }
-      }
-    }
-  }
 
   &__user_menu {
     margin: 0 1rem 1rem;
@@ -662,6 +651,26 @@
       .header__navigation {
         display: block;
         margin-top: 2rem;
+      }
+    }
+  }
+
+  &--main {
+    .search-bar {
+      margin-top: 0;
+    }
+  }
+
+  &--haccp {
+    .header {
+      &__languages,
+      &__user_menu {
+        &--desktop {
+          @media screen and (min-width: $fsa-lg) {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+          }
+        }
       }
     }
   }
