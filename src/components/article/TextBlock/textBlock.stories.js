@@ -54,8 +54,8 @@ TextBlock.args = {
     '        fames ac turpis eges\n' +
     '    </li>\n' +
     '</ul>\n' +
-  '  <h2>Results</h2>\n' +
-      '  <p>The average overall percentage levels of campylobacter in the retailers’ data can be found in the table below.</p>\n' +
+    '  <h2>Results</h2>\n' +
+    '  <p>The average overall percentage levels of campylobacter in the retailers’ data can be found in the table below.</p>\n' +
     '  <table>\n' +
     '  <caption>Campylobacter levels</caption>' +
     '    <thead>\n' +
