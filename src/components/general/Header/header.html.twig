@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header{{ secondary_logo_link is not empty ? ' header--haccp' : ' header--main' }}">
   <div class="header__grid-container">
     <div class="header__grid-row">
       <div class="header__wrapper">
@@ -63,7 +63,9 @@
             {% endif %}
           </nav>
           {% endif %}
-          <div class="header__search-and-menu-container">
+          {% if secondary_logo_link is not empty %}
+            <div class="header__search-and-menu-container">
+          {% endif %}
             {% if search_bar_visible %}
               <div class="header__search-bar-wrapper">
                 <div class="header__search-bar header__search-bar--full">
@@ -84,7 +86,9 @@
               <span class="visually-hidden">{{ menu_label }}</span>
               <div class="header__menu-symbol" aria-hidden="true"></div>
             </button>
-          </div>
+          {% if secondary_logo_link is not empty %}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
