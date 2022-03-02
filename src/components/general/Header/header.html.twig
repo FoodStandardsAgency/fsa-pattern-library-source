@@ -2,7 +2,7 @@
   <div class="header__grid-container">
     <div class="header__grid-row">
       <div class="header__wrapper">
-        <div class="header__top">
+        <div class="header__top{{ user_menu_navigation.links is not empty ? ' header__top--haccp' : '' }}">
           {% if user_menu_navigation.links is not empty %}
           <nav class="header__user_menu header__user_menu--desktop header__nav" aria-label="User menu" aria-hidden="false">
             <ul class="header__user_menu-list">

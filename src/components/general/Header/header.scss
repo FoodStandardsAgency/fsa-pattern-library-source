@@ -88,8 +88,17 @@
 
       @media screen and (min-width: $fsa-lg) {
         display: block;
-        padding-top: 1rem;
-        padding-bottom: 0.5rem;
+      }
+    }
+  }
+  &__top--haccp {
+    .header__languages,
+    .header__user_menu {
+      &--desktop {
+        @media screen and (min-width: $fsa-lg) {
+          padding-top: 1rem;
+          padding-bottom: 0.5rem;
+        }
       }
     }
   }
