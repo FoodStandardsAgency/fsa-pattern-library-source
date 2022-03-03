@@ -27,22 +27,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 
-## [0.0.55] - 2022-03-01 (Example)
-
-### Added
-- Example record for newly added feature
-
-### Changed
-- Example record for modified behavior
-
-### Deprecated
-- Example record for deprecated feature
-
-### Removed
-- Example record for something that has been removed.
+## [0.0.58] - 2022-03-03 (Spacing fixes & amends)
 
 ### Fixed
-- Example record for a bug which was fixed.
-
-### Security
-- Example record for security fix.
+- Fixed spacing between the search elements
+- Fixed the spacing in the header, following the MyHACCP variant
