@@ -5,7 +5,7 @@ import subjectListingNoColumn from './landingSubjectListingNoColumn.html.twig';
 export default {
   title: 'Pages/Landing/Subject Listing',
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
     layout: 'fullscreen',
   },
 };

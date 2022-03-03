@@ -5,7 +5,7 @@ export default {
   title: 'Components/Form/Multistep Function',
   parameters: {
     controls: {
-      disabled: false,
+      disable: false,
     },
   },
 };

@@ -8,7 +8,7 @@ export default {
   title: 'Components/General/Breadcrumb',
   parameters: {
     controls: {
-      disabled: true,
+      disable: true,
     },
   },
 };
