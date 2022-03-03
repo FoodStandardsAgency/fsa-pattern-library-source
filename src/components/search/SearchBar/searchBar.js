@@ -23,7 +23,8 @@ export default function () {
     const submit = el.querySelector('.search-bar__submit');
     submit.addEventListener('click', (e) => {
       e.preventDefault();
-      updateParams('keywords', input.value);
+      const form = document.getElementsByClassName('search-bar');
+      updateParams('keywords', input.value, form[0]);
     });
   });
 }

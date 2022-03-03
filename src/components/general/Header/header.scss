@@ -304,9 +304,13 @@
         display: flex;
         margin-left: 1.25rem;
         margin-top: 0;
-        width: 100%;
+        width: 80%;
         flex-grow: 1;
         padding: 0;
+
+        & + .header__search-bar-wrapper {
+          width: 50%;
+        }
       }
 
       @media screen and (min-width: $fsa-xl) {

@@ -7,7 +7,7 @@ export default {
   title: 'Components/Landing/Landing Links',
   parameters: {
     controls: {
-      disabled: false,
+      disable: false,
     },
   },
 };

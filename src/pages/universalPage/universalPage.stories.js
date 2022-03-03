@@ -3,7 +3,7 @@ import universalPage from './universalPage.html.twig';
 export default {
   title: 'Pages/Universal Page',
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
     layout: 'fullscreen',
   },
 };
