@@ -1,6 +1,5 @@
 export const svgs = {
-  foodPoison: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="48px" height="68px" viewBox="0 0 48 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  foodPoison: `<svg width="48px" height="68px" viewBox="0 0 48 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>fsa-suspect-food-poisoning</title>
       <g id="contact-promo-links" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="contact-promo-links--desktop" transform="translate(-572.000000, -27.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -10,8 +9,7 @@ export const svgs = {
           </g>
       </g>
   </svg>`,
-  foodProduct: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  foodProduct: `<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>Shape</title>
       <g id="contact-promo-links" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="contact-promo-links--desktop" transform="translate(-569.000000, -191.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -21,8 +19,7 @@ export const svgs = {
           </g>
       </g>
   </svg>`,
-  poorFood: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="58px" height="56px" viewBox="0 0 58 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  poorFood: `<svg width="58px" height="56px" viewBox="0 0 58 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>fsa-poor-food copy</title>
       <g id="contact-promo-links" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="fsa-poor-food-copy" fill="#FFFFFF" fill-rule="nonzero">
@@ -30,8 +27,7 @@ export const svgs = {
           </g>
       </g>
   </svg>`,
-  reportLabel: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  reportLabel: `<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>fsa-report</title>
       <g id="contact-promo-links" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="fsa-report" fill="#FFFFFF" fill-rule="nonzero">
@@ -39,8 +35,7 @@ export const svgs = {
           </g>
       </g>
   </svg>`,
-  foodCrime: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  foodCrime: `<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>fsa-food-crime</title>
       <g id="contact-promo-links" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="fsa-food-crime" fill="#FFFFFF" fill-rule="nonzero">
@@ -140,8 +135,7 @@ export const svgs = {
 };
 
 export const social_svgs = {
-  blog: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  blog: `<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
           <polygon id="path-blog" points="0 0 44 0 44 44.0000862 0 44.0000862"></polygon>
       </defs>
@@ -163,8 +157,7 @@ export const social_svgs = {
           </g>
       </g>
   </svg>`,
-  facebook: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  facebook: `<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-1254.000000, -44.000000)" fill="#FFFFFF">
               <g id="fsa-facebook" transform="translate(1254.000000, 44.000000)">
@@ -173,8 +166,7 @@ export const social_svgs = {
           </g>
       </g>
   </svg>`,
-  instagram: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  instagram: `<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-1502.000000, -44.000000)" fill="#FFFFFF">
               <g id="fsa-instagram" transform="translate(1502.000000, 44.000000)">
@@ -183,8 +175,7 @@ export const social_svgs = {
           </g>
       </g>
   </svg>`,
-  linkedin: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  linkedin: `<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-1378.000000, -44.000000)" fill="#FFFFFF">
               <g id="fsa-linkedin" transform="translate(1378.000000, 44.000000)">
@@ -193,8 +184,7 @@ export const social_svgs = {
           </g>
       </g>
   </svg>`,
-  twitter: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  twitter: `<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-1316.000000, -44.000000)" fill="#FFFFFF">
               <g id="fsa-twitter" transform="translate(1316.000000, 44.000000)">
@@ -203,8 +193,7 @@ export const social_svgs = {
           </g>
       </g>
   </svg>`,
-  youtube: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  youtube: `<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-1440.000000, -44.000000)" fill="#FFFFFF">
               <g id="fsa-youtube" transform="translate(1440.000000, 44.000000)">
