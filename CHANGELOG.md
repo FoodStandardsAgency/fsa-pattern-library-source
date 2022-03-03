@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [0.0.59] - 2022-03-03 (Submit searchbar)
+
+### Fixed
+- Fixed submit action for the search bar
+
 
 ## [0.0.58] - 2022-03-03 (Spacing fixes & amends)
 
