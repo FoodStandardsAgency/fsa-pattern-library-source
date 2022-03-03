@@ -4,7 +4,7 @@ import tableOfContents from '@components/components/article/TableOfContents/tabl
 export default {
   title: 'Pages/Article/Simple',
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
     layout: 'fullscreen',
   },
 };

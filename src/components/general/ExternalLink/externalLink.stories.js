@@ -2,12 +2,7 @@ import externalLink from './externalLink.html.twig';
 import './externalLink.js';
 
 export default {
-  title: 'Components/General/Link',
-  argTypes: {
-    type: {
-      defaultValue: 'External link',
-    },
-  },
+  title: 'Components/General/External Link',
 };
 
 const Template = (args) => {

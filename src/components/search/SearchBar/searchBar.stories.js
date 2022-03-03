@@ -6,14 +6,9 @@ searchBarJs();
 
 export default {
   title: 'Components/Search/Search Bar',
-  argTypes: {
-    search_text: {
-      defaultValue: 'Search the food standards agency',
-    },
-  },
   parameters: {
     controls: {
-      disabled: true,
+      disable: true,
     },
   },
 };

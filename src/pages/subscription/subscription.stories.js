@@ -3,7 +3,7 @@ import subscription from './subscription.html.twig';
 export default {
   title: 'Pages/Subscription',
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
     layout: 'fullscreen',
   },
 };

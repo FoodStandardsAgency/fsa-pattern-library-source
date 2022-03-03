@@ -3,11 +3,6 @@ import './tabs.js';
 
 export default {
   title: 'Components/Form/Tabs',
-  argTypes: {
-    type: {
-      defaultValue: 'Account details',
-    },
-  },
 };
 
 const Template = (args) => {

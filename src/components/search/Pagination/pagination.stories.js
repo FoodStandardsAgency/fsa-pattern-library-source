@@ -3,11 +3,6 @@ import './pagination.scss';
 
 export default {
   title: 'Components/Search/Pagination',
-  argTypes: {
-    pagination_type: {
-      defaultValue: 'Search',
-    },
-  },
 };
 
 const Template = (args) => {

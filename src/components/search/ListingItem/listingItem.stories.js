@@ -5,7 +5,7 @@ export default {
   title: 'Components/Search/Listing Item',
   parameters: {
     controls: {
-      disabled: false,
+      disable: false,
     },
   },
 };

@@ -7,7 +7,7 @@ export default {
   title: 'Pages/Landing/Campaign',
   parameters: {
     controls: {
-      disabled: true,
+      disable: true,
     },
     layout: 'fullscreen',
   },
