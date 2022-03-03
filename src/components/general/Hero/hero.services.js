@@ -7,9 +7,6 @@ export default {
     layout: 'fullscreen',
   },
   argTypes: {
-    type: {
-      defaultValue: 'hero',
-    },
     background_colour: {
       options: ['green', 'blue', 'grey'],
       control: { type: 'radio' },

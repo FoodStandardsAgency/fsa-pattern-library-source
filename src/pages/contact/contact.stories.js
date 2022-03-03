@@ -4,7 +4,7 @@ export default {
   title: 'Pages/Contact',
   parameters: {
     controls: {
-      disabled: true,
+      disable: true,
     },
     layout: 'fullscreen',
   },

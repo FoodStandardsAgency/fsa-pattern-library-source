@@ -6,7 +6,7 @@ import { navigation } from '@components/components/default-content';
 export default {
   title: 'Pages/Error/Error 404',
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
     layout: 'fullscreen',
   },
 };

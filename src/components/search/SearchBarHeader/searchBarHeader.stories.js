@@ -3,11 +3,6 @@ import './searchBarHeader.scss';
 
 export default {
   title: 'Components/Search/Search Bar Header',
-  argTypes: {
-    header_text: {
-      defaultValue: 'Search',
-    },
-  },
   layout: 'fullscreen',
 };
 
