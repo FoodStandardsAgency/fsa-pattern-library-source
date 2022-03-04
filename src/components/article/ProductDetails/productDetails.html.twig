@@ -1,0 +1,9 @@
+<div class="product-details">
+  <h2 class="product-details__title">{{ title }}</h2>
+  {% for product in products %}
+    {% include "@components/components/article/AllergensTable/allergensTable.html.twig" with {
+      product_name: product.product_name,
+      rows: product.rows,
+    } %}
+  {% endfor %}
+</div>

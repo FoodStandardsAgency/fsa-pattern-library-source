@@ -1,0 +1,11 @@
+@import "src/lib.scss";
+
+.product-details {
+  margin-top: 3rem;
+
+  &__title {
+    @include h2;
+
+    margin-bottom: 0;
+  }
+}
