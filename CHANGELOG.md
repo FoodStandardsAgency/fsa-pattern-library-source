@@ -26,12 +26,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+- Product details component
+- Allergens table component
+
+### Changed
+- Text block component. Add styling for table elements.
+- articleAlert example page. Add Allergens Table and TextBlock table examples.
+
 ## [0.0.59] - 2022-03-03 (Submit searchbar & fixes)
 
 ### Fixed
 - Fixed submit action for the search bar
 - Fixed width of element in header for IE11
-- 
 
 
 ## [0.0.58] - 2022-03-03 (Spacing fixes & amends)
