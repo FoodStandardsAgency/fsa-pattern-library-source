@@ -5,7 +5,7 @@ export default {
   title: 'Components/Search/Search No Results',
   parameters: {
     controls: {
-      disabled: false,
+      disable: false,
     },
   },
 };

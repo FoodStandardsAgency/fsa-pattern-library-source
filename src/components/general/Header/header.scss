@@ -88,8 +88,6 @@
 
       @media screen and (min-width: $fsa-lg) {
         display: block;
-        padding-top: 1rem;
-        padding-bottom: 0.5rem;
       }
     }
   }
@@ -306,7 +304,7 @@
         display: flex;
         margin-left: 1.25rem;
         margin-top: 0;
-        width: 100%;
+        width: 55%;
         flex-grow: 1;
         padding: 0;
       }
@@ -653,6 +651,26 @@
       .header__navigation {
         display: block;
         margin-top: 2rem;
+      }
+    }
+  }
+
+  &--main {
+    .search-bar {
+      margin-top: 0;
+    }
+  }
+
+  &--haccp {
+    .header {
+      &__languages,
+      &__user_menu {
+        &--desktop {
+          @media screen and (min-width: $fsa-lg) {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+          }
+        }
       }
     }
   }

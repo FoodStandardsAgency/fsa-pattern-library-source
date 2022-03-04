@@ -3,6 +3,7 @@
 .filters {
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 
   @media screen and (min-width: $fsa-md) {
     flex-direction: row;
@@ -54,7 +55,7 @@
   &__remove {
     @include body;
 
-    margin: 0;
+    margin-top: 1rem;
     background: none;
     border: none;
     box-shadow: none;
@@ -78,7 +79,7 @@
     }
 
     @media screen and (min-width: $fsa-md) {
-      margin-top: 0.5rem;
+      margin-top: 1rem;
       margin-left: 1rem;
     }
   }
