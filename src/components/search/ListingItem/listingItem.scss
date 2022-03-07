@@ -4,8 +4,7 @@
   margin-top: 1.5rem;
   position: relative;
 
-  // Remove margin-top of 1st element only when there's no filters selected
-  .two-col__right-top + .listing &:first-child {
+  &:first-child {
     margin-top: 0;
   }
 
