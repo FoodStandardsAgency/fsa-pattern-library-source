@@ -26,10 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
-## [0.0.61] - 2022-03-07 (Fixing spacing)
+## [0.0.61] - 2022-03-07 (Fixing spacing & css variables)
 
 ### Fixed
 - Fixed few layout and spacing issues
+- Fixed css variables for IE11
 
 
 
