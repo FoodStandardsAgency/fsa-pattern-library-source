@@ -78,11 +78,14 @@
       @include grid-cols(7);
     }
   }
+
   &__centered {
     @media screen and (min-width: $fsa-lg) {
       margin: 0 auto;
+
       @include grid-cols(8);
     }
+
     @media screen and (min-width: $fsa-xl) {
       padding: 0 2rem;
     }

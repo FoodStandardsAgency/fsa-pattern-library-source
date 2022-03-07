@@ -13,5 +13,4 @@ const Template = (args) => {
 };
 
 export const Centered = Template.bind({});
-Centered.args = {
-};
+Centered.args = {};
