@@ -4,8 +4,10 @@
   margin-top: 1.5rem;
   position: relative;
 
-  &:first-child {
-    margin-top: 0;
+  @media screen and (min-width: $fsa-lg) {
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   &::after {
@@ -21,7 +23,7 @@
     padding: 1.5rem 1rem 0;
 
     @media screen and (min-width: $fsa-lg) {
-      padding: 1.5rem 3rem 0;
+      padding: 2rem 3rem 0;
     }
   }
 
