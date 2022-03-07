@@ -79,6 +79,45 @@
   {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
     content: '<p>Worthenshaws Ltd is recalling Kirsty’s Classic Beef Lasagne because it contains a statement on the label that the product is free from all 14 allergens, which is not accurate as the product contains oats (that are gluten free). Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet, however, it is not suitable for those who have an allergy to Oats.</p>'
   } %}
+  {% include '../../components/article/ProductDetails/productDetails.html.twig' with {
+    title: 'Product details',
+    products: [
+      {
+        product_name: 'Kirsty’s Mini Classic Beef Lasagne',
+        rows: [
+        {
+          label: 'Pack size',
+          content: '250g',
+        },
+        {
+          label: 'Use by',
+          content: 'all dates between 2 September to 19 October 2020',
+        },
+        {
+          label: 'Allergens',
+          content: 'Gluten (oats)',
+        },
+      ],
+      },
+      {
+        product_name: 'Kirsty’s Classic Beef Lasagne',
+        rows: [
+        {
+          label: 'Pack size',
+          content: '400g',
+        },
+        {
+          label: 'Use by',
+          content: 'all dates between 2 September to 19 October 2020',
+        },
+        {
+          label: 'Allergens',
+          content: 'Gluten (oats)',
+        },
+      ],
+      },
+    ],
+  } %}
   {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
     content: '
     <h3>Action taken by the company</h3>
@@ -104,6 +143,27 @@
     support organisations, which will tell their members about the recall. The company has issued a point-of-sale notice
     to its customers. These notices explain to customers why the products are being recalled and tell them what to do
     if they have bought the products.</p>'
+  } %}
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: '
+      <table>
+      <caption>Research results</caption>
+      <thead><tr><th scope="col">Contamination levels</th>
+      <th scope="col">July-September 2017</th>
+      <th scope="col">October-December 2017</th>
+    </tr></thead><tbody><tr><th scope="row">cfu/g less than 10</th>
+      <td>44.7%</td>
+      <td>52.7%</td>
+    </tr><tr><th scope="row">cfu/g 10-99</th>
+      <td>30.5%</td>
+      <td>24.3%</td>
+    </tr><tr><th scope="row">cfu/g 100-1000</th>
+      <td>20.3%</td>
+      <td>18.5%</td>
+    </tr><tr><th scope="row">cfu/g over 1000</th>
+      <td>5.1%</td>
+      <td>4.5%</td>
+    </tr></tbody></table>'
   } %}
   {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
     region: ['England'],

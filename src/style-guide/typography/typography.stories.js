@@ -5,7 +5,7 @@ export default {
   title: 'Style Guide/Typography',
   parameters: {
     controls: {
-      disabled: true,
+      disable: true,
     },
     layout: 'fullscreen',
   },

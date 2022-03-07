@@ -6,7 +6,7 @@ export default {
   parameters: {
     layout: 'centered',
     controls: {
-      disabled: false,
+      disable: false,
     },
   },
 };

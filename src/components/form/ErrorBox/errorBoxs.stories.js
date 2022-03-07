@@ -39,7 +39,7 @@ export default {
   title: 'Components/Form/Error Box',
   parameters: {
     controls: {
-      disabled: false,
+      disable: false,
     },
     layout: 'centered',
   },

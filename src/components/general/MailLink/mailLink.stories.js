@@ -2,12 +2,7 @@ import mailLink from './mailLink.html.twig';
 import './mailLink.js';
 
 export default {
-  title: 'Components/General/Link',
-  argTypes: {
-    type: {
-      defaultValue: 'Mail link',
-    },
-  },
+  title: 'Components/General/Mail Link',
 };
 
 const Template = (args) => {

@@ -1,0 +1,15 @@
+<table class="allergens-table">
+  <thead>
+    <tr>
+      <th colspan="2" scope="colgroup">{{ product_name }}</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <td>{{ row.label }}</td>
+      <td>{{ row.content }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
