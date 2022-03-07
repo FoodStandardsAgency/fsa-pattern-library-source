@@ -11,7 +11,7 @@
         {% endblock %}
       </div>
       <div class="content-layout__page">
-        <div class="content-layout__top">
+        <div class="content-layout__top{{ block('left') is empty ? ' content-layout__centered' : '' }}">
           {% block top %}
           {% endblock %}
         </div>
@@ -44,7 +44,7 @@
             {% endblock %}
           </div>
         {% endif %}
-        <div class="content-layout__right{{ block('left') is empty ? ' content-layout__right--centered' : '' }}">
+        <div class="content-layout__right{{ block('left') is empty ? ' content-layout__centered' : '' }}">
           <a id="toc-skip-to" tabindex="-1"></a>
           <div class="content-layout__right-content">          
             {% block right %}
