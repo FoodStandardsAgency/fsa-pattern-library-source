@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [Upcoming release] - 1971-11-03
+
+### Changed
+- Remove DOMContentFirstLoad to fix  tables on Drupal
+
 ## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
 
 ### Added
