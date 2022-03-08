@@ -1,9 +1,16 @@
 <div class="chart-block">
   <h3 class="chart-block__name">{{ name }}</h3>
-  <div class="chart-block__image">
-    <img src={{ image.url }} alt="{{ image.alt }}" />
-  </div>
-  <div class="chart-block__download-label">{{ downloadThisChart }}</div>
+  {% if image %}
+    <div class="chart-block__image">
+      <img src={{ image.url }} alt="{{ image.alt }}" />
+    </div>
+  {% endif %}
+  {% if content %}
+    <div class="chart-block__content">
+      {{ content }}
+    </div>
+  {% endif %}
+  <div class="chart-block__download-label">{{ downloadThis }}</div>
   <div class="chart-block__download-buttons">
     {% for link in links %}
       {% include '@components/components/general/Button/button.html.twig' with {
