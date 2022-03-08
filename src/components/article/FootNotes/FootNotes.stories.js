@@ -12,15 +12,17 @@ Basic.args = {
   links: [
     {
       key: '1',
-      label: 'In favour of men',
+      label: 'If this an internal link then this would be the icon',
     },
     {
       key: '2',
-      label: 'Based on average hourly pay',
+      label: 'Sometimes the link might be amongst other text ',
+      label_postfix: 'and there could be some text after the link',
     },
     {
       key: '3',
-      label: 'See action section of this report.',
+      label: 'and then the link is added and it can go over two lines if needed',
+      label_prefix: 'Or the resource could be before the link',
     },
   ],
 };
