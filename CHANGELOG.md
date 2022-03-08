@@ -36,6 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed spacing issues on search elements
+- Fixed centered layout spacing
+- Fixed alignment on Article Hero when no type is displayed
 
 
 ## [0.0.61] - 2022-03-07 (Fixing spacing & css variables)
