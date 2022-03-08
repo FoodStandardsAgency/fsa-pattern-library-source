@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Changed
-- Remove DOMContentFirstLoad to fix tables on Drupal
+- Change the template of footnotes.
 
 ## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
 
@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Add "_target" attribute for Button component.
+- Remove DOMContentFirstLoad to fix tables on Drupal
 
 ### Fixed
 - Fixed spacing issues on search elements

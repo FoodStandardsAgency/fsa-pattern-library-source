@@ -16,11 +16,13 @@ Basic.args = {
     },
     {
       key: '2',
-      label: '<a href="#">Sometimes the link might be amongst other text</a> and there could be some text after the link',
+      label:
+        '<a href="#">Sometimes the link might be amongst other text</a> and there could be some text after the link',
     },
     {
       key: '3',
-      label: 'Or the resource could be before the link <a href="#">and then the link is added and it can go over two lines if needed</a>',
+      label:
+        'Or the resource could be before the link <a href="#">and then the link is added and it can go over two lines if needed</a>',
     },
   ],
 };
