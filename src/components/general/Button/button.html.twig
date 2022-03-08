@@ -1,5 +1,10 @@
+{% set target_is_defined = target is defined and target is not empty %}
+{% if not target_is_defined %}
+  {% set target = "_self" %}
+{% endif %}
+
 {% if element == 'link' %}
-  <a href="{{ url }}" class="button button--{{ type }}">
+  <a href="{{ url }}" class="button button--{{ type }}" target="{{ target }}">
     {{ label }}
   </a>
 {% elseif element == 'button' %}

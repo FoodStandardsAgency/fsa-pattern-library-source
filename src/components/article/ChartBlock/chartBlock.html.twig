@@ -6,7 +6,13 @@
   <div class="chart-block__download-label">{{ downloadThisChart }}</div>
   <div class="chart-block__download-buttons">
     {% for link in links %}
-      <a href="{{ link.url }}" target="_blank" class="button button--primary">{{ link.label }}</a>
+      {% include '@components/components/general/Button/button.html.twig' with {
+        type: 'primary',
+        url: link.url,
+        label: link.label,
+        element: 'link',
+        target: '_blank',
+      } %}
     {% endfor %}
   </div>
 </div>

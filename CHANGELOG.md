@@ -31,6 +31,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Chart component
 
+### Changed
+- Add "_target" attribute for Button component.
+
 ## [0.0.60] - 2022-03-04 (Table component)
 
 ### Added
