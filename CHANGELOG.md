@@ -26,7 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
-## [0.0.62] - 2022-03-08 (Fixing spacing)
+## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
+
+### Added
+- Chart component
+
+### Changed
+- Add "_target" attribute for Button component.
 
 ### Fixed
 - Fixed spacing issues on search elements
