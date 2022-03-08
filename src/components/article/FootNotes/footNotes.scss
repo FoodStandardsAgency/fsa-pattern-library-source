@@ -12,14 +12,19 @@
     padding-left: 0.5rem;
     margin-top: 0.5rem;
 
-    &-link {
+    a {
       color: var(--fsa-primary_dark-green);
       text-decoration: underline;
-      margin-right: 0.6rem;
 
       &:hover {
         color: var(--fsa__link-green);
+      }
+    }
 
+    &-link {
+      margin-right: 0.6rem;
+
+      &:hover {
         &::after {
           background-image: url("./assets/arrow-up-hover.svg");
         }
