@@ -76,6 +76,7 @@ import './components/article/QuoteBlock/quoteBlock';
 import './components/article/TeamContacts/teamContacts';
 import './components/article/ProductDetails/productDetails';
 import './components/article/AllergensTable/allergensTable';
+import './components/article/ChartBlock/chartBlock';
 import './components/article/FootNotes/footNotes';
 import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';

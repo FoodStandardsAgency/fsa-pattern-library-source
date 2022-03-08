@@ -1,0 +1,18 @@
+<div class="chart-block">
+  <h3 class="chart-block__name">{{ name }}</h3>
+  <div class="chart-block__image">
+    <img src={{ image.url }} alt="{{ image.alt }}" />
+  </div>
+  <div class="chart-block__download-label">{{ downloadThisChart }}</div>
+  <div class="chart-block__download-buttons">
+    {% for link in links %}
+      {% include '@components/components/general/Button/button.html.twig' with {
+        type: 'primary',
+        url: link.url,
+        label: link.label,
+        element: 'link',
+        target: '_blank',
+      } %}
+    {% endfor %}
+  </div>
+</div>
