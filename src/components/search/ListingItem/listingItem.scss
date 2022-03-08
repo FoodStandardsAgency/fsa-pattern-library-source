@@ -4,8 +4,9 @@
   margin-top: 1.5rem;
   position: relative;
 
-  @media screen and (min-width: $fsa-lg) {
-    &:first-child {
+  
+  &:first-of-type {
+    @media screen and (min-width: $fsa-lg) {
       margin-top: 0;
     }
   }
