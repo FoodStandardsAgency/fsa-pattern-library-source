@@ -32,16 +32,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Skip to main content component
 
 ### Changed
-- Remove DOMContentFirstLoad to fix tables on Drupal
+- Change the template of footnotes.
 - Add Skip to Main Content link examples to landing pages
 
 ## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
 
 ### Added
 - Chart component
+- Footnotes component
 
 ### Changed
 - Add "_target" attribute for Button component.
+- Remove DOMContentFirstLoad to fix tables on Drupal
 
 ### Fixed
 - Fixed spacing issues on search elements
