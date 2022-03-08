@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Remove DOMContentFirstLoad to fix tables on Drupal
+- Display "content" as raw in chartBlock.
 
 ## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
 
