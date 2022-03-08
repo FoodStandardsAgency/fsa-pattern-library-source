@@ -1,0 +1,17 @@
+@import "src/lib.scss";
+
+.skip-to-main-content {
+  position: absolute;
+  left: -99999px;
+  top: 0;
+  background-color: var(--fsa-primary_white);
+  padding: 1rem;
+
+  &:focus-within {
+    left: 0;
+  }
+
+  a {
+    @include link;
+  }
+}
