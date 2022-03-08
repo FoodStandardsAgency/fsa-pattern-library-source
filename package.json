@@ -53,7 +53,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook --quiet --loglevel error",
     "build": "yarn lint && webpack",
     "lint": "eslint ./src && stylelint ./src && prettier --check ./src",
     "lint-fix": "eslint --fix ./src && stylelint --fix ./src && prettier --write ./src"
