@@ -2,12 +2,7 @@ import './textBlock.html.twig';
 import './textBlock.scss';
 
 export default function () {
-  let DOMContentFirstLoad = true;
   window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
     const textBlocks = document.querySelectorAll('.text-block');
     if (!textBlocks) {
       return;
