@@ -26,13 +26,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
-## [0.0.61] - 2022-03-08 (Chart component)
+## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
 
 ### Added
 - Chart component
 
 ### Changed
 - Add "_target" attribute for Button component.
+
+### Fixed
+- Fixed spacing issues on search elements
+
+
+## [0.0.61] - 2022-03-07 (Fixing spacing & css variables)
+
+### Fixed
+- Fixed few layout and spacing issues
+- Fixed css variables for IE11
+
 
 ## [0.0.60] - 2022-03-04 (Table component)
 
@@ -43,6 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Text block component. Add styling for table elements.
 - articleAlert example page. Add Allergens Table and TextBlock table examples.
+
 
 ## [0.0.59] - 2022-03-03 (Submit searchbar & fixes)
 
