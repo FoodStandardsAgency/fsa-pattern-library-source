@@ -2,7 +2,7 @@
 
 .foot-notes {
   border-top: 1px var(--fsa__grey-hover) solid;
-
+  margin-top: 3rem;
 
   &__link-list {
     padding-left: 1rem;
@@ -19,9 +19,7 @@
 
       &:hover {
         color: var(--fsa__link-green);
-      }
 
-      &:hover {
         &::after {
           background-image: url("./assets/arrow-up-hover.svg");
         }

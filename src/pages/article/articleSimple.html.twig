@@ -69,7 +69,11 @@
     <li>food contact materials</li>
 </ul>
 <p>For most regulated product types, once products or processes are authorised, they are listed in relevant legislation,
-    which also sets out how they can be used. These lists are referred to as positive lists.</p>'
+    which also sets out how they can be used. These lists are referred to as positive lists.</p>
+<p>It is an example of foot notes, go to <sup><a href="#fn:1" id="fnref:1" class="foot-notes__ref-link">first</a></sup> footnote,
+<sup><a href="#fn:2" id="fnref:2" class="foot-notes__ref-link">second</a></sup> footnote or
+<sup><a href="#fn:3" id="fnref:3" class="foot-notes__ref-link">third</a></sup> footnote.</p>
+'
   } %}
   {% include '@components/components/article/ExplanationBlock/explanationBlock.html.twig' with {
     type: 'fsa-explains',
@@ -101,6 +105,25 @@
     region: ['Northern Ireland'],
     wysiwyg_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu congue blandit tincidunt. Pellentesque et elit nulla. Nullam posuere massa nec facilisis placerat. ',
     transparent_background: true,
+  } %}
+
+  {% include '../../components/article/FootNotes/footNotes.html.twig' with {
+    links: [
+      {
+        key: '1',
+        label: 'If this an internal link then this would be the icon',
+      },
+      {
+        key: '2',
+        label: 'Sometimes the link might be amongst other text ',
+        label_postfix: 'and there could be some text after the link',
+      },
+      {
+        key: '3',
+        label: 'and then the link is added and it can go over two lines if needed',
+        label_prefix: 'Or the resource could be before the link',
+      },
+    ],
   } %}
 
   {% include '../../components/article/BackToTop/backToTop.html.twig' with {
