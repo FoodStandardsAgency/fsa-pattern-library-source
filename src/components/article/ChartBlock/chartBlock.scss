@@ -1,0 +1,12 @@
+@import "src/lib.scss";
+
+.chart-block {
+  &__download-buttons {
+    margin-top: 1rem;
+  }
+
+  &__download-label {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+}
