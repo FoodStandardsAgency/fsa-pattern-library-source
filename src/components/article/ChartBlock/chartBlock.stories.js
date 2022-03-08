@@ -12,7 +12,7 @@ ChartBlock.args = {
   name: 'COVID-19',
   image: {
     url: 'https://via.placeholder.com/400x300',
-    alt: 'Data for 2022'
+    alt: 'Data for 2022',
   },
   downloadThisChart: 'Download this chart',
   links: [
@@ -27,6 +27,6 @@ ChartBlock.args = {
     {
       url: '#',
       label: '.csv',
-    }
-  ]
+    },
+  ],
 };

@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [0.0.61] - 2022-03-08 (Chart component)
+
+### Added
+- Chart component
+
 ## [0.0.60] - 2022-03-04 (Table component)
 
 ### Added
