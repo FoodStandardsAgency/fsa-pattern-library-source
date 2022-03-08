@@ -12,9 +12,9 @@
 {% endif %}
 
 <div class="article-hero">
-  {% if type %}
+  {% if type and type_string %}
     <span class="article-hero__type article-hero__type--{{ type }}">
-      {{ type_string is defined ? type_string : type }}
+      {{ type_string }}
     </span>
   {% endif %}
   <h1 class="article-hero__title">{{ title|raw }}</h1>
