@@ -9,6 +9,10 @@ body.overflow-hidden {
 }
 
 .search-filters {
+  &--no-results {
+    display: none;
+  }
+
   &__title {
     @include h4;
 

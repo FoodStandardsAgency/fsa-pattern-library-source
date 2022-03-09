@@ -26,6 +26,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+- 
+
+### Changed
+- Change the params in searchNoResults to allow hiding of 'remove all filters' link
+- Updated styling on searchNoResults
+- Hide filters header if there are no results
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+- 
+
+### Security
+- 
+
 ## [0.0.63] - 2022-03-09 (New Skip to main content component and bugfixes)
 
 ### Added
