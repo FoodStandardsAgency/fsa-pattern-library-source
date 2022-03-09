@@ -30,7 +30,6 @@
     "autoprefixer": "9.8.6",
     "babel-loader": "8.2.2",
     "css-loader": "5.2.7",
-    "css-vars-ponyfill": "2.4.7",
     "deeson-webpack-config-starter": "git://github.com/teamdeeson/deeson-webpack-config#feature/drupal9-webpack5",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.4.0",
@@ -53,7 +52,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook --quiet --loglevel error",
     "build": "yarn lint && webpack",
     "lint": "eslint ./src && stylelint ./src && prettier --check ./src",
     "lint-fix": "eslint --fix ./src && stylelint --fix ./src && prettier --write ./src"

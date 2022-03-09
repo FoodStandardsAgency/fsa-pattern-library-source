@@ -1,6 +1,5 @@
 import './header.html.twig';
 import './header.scss';
-import 'element-closest-polyfill';
 
 export default function () {
   window.addEventListener(

@@ -1,7 +1,7 @@
 import './base.scss';
 import 'url-polyfill';
 import objectFitImages from 'object-fit-images';
-import cssVars from 'css-vars-ponyfill';
+import 'element-closest-polyfill';
 
 /* General Components */
 import './components/general/Breadcrumb/breadcrumb';
@@ -17,6 +17,7 @@ import './components/general/CookieBanner/cookieBanner';
 import './components/general/TemporaryMessage/temporaryMessage';
 import './components/general/NationalArchiveLink/nationalArchiveLink';
 import './components/general/ErrorResponse/errorResponse';
+import './components/general/SkipToMainContent/skipToMainContent';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
 
@@ -77,6 +78,7 @@ import './components/article/TeamContacts/teamContacts';
 import './components/article/ProductDetails/productDetails';
 import './components/article/AllergensTable/allergensTable';
 import './components/article/ChartBlock/chartBlock';
+import footNotes from './components/article/FootNotes/footNotes';
 import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
@@ -99,16 +101,11 @@ import pagination from './components/search/Pagination/pagination';
 import searchBar from './components/search/SearchBar/searchBar';
 import sortBy from './components/search/SortBy/sortBy';
 
-// Fixes css vars on legacy browsers (i.e. IE11)
-cssVars({
-  silent: true,
-  preserveVars: false,
-  onlyLegacy: false,
-});
 // Fixes object-fit on legacy browsers
 objectFitImages();
 
 backToTop();
+footNotes();
 breadcrumbJs();
 pagination();
 searchBar();

@@ -1,7 +1,6 @@
 import './accordion.html.twig';
 import './react/accordion.html.twig';
 import './accordion.scss';
-import 'element-closest-polyfill';
 
 export default function () {
   let DOMContentFirstLoad = true;

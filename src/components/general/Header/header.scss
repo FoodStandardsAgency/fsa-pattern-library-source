@@ -375,10 +375,10 @@
   }
 
   &__links-anchor {
+    @include link;
+
+    text-decoration: none;
     color: var(--fsa-primary_white);
-
-    @include body;
-
     display: flex;
     flex-wrap: nowrap;
     margin: 0.5rem 0;
@@ -429,9 +429,10 @@
       outline: none;
       position: relative;
       color: var(--fsa-primary_black);
+      margin-bottom: 0.5rem;
     }
 
-    &:hover {
+    &:hover:not(:focus) {
       color: var(--fsa-primary_white);
       text-decoration: underline;
 
@@ -651,6 +652,10 @@
       .header__navigation {
         display: block;
         margin-top: 2rem;
+      }
+
+      .header__temporary-message {
+        display: none;
       }
     }
   }

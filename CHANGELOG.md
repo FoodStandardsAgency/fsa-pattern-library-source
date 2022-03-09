@@ -26,13 +26,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [0.0.63] - 2022-03-09 (New Skip to main content component and bugfixes)
+
+### Added
+- Skip to main content component
+
+### Changed
+- Change the template of footnotes.
+- Changed the static storybook build to not display warning messages (prod)
+- Moved element-closest-polyfill in index.js as it's used in several places
+- Add Skip to Main Content link examples to landing pages
+- Increase z-index of skip link so that it sits on top of cookie banner in Drupal
+- Hide temporary message on mobile menu
+- Added a placeholder option on the input field
+
+### Removed
+- Removed CssPonyfill as it's been replaced by postcss-variables
+
+### Fixed
+- Error in Pdf buttons, multipage guide variant
+- Prevent icon from cutting off on small screens in the quote block
+- Fixed font-size in input field
+- Header link focus states
+
 ## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
 
 ### Added
 - Chart component
+- Footnotes component
 
 ### Changed
 - Add "_target" attribute for Button component.
+- Remove DOMContentFirstLoad to fix tables on Drupal
 
 ### Fixed
 - Fixed spacing issues on search elements
