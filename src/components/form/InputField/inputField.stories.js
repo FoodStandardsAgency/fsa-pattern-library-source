@@ -37,6 +37,20 @@ Error.args = {
   value: '',
 };
 
+export const Placeholder = Template.bind({});
+Placeholder.args = {
+  id: 'email',
+  name: 'email',
+  label: 'Email or username',
+  caption: 'Enter your email address or username.',
+  placeholder: 'Please enter your email address.',
+  required: '',
+  error: false,
+  error_message: 'Unrecognized username or password',
+  value: '',
+  type: 'text',
+};
+
 export const DefaultValue = Template.bind({});
 DefaultValue.args = {
   id: 'email',
