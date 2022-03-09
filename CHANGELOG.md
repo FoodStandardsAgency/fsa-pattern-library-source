@@ -9,6 +9,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
+
+### Changed
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+- 
+
+### Security
+- 
+
+
+## [Upcoming release] - 1971-11-03
+
+### Added
 - Switch between table/data view button for ChartBlock
 
 ### Changed
@@ -26,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 - 
+
 
 ## [0.0.63] - 2022-03-09 (New Skip to main content component and bugfixes)
 
