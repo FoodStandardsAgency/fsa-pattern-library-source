@@ -3,8 +3,13 @@
 .chart-block {
   margin-top: 3rem;
 
+  &__name {
+    margin: 0;
+  }
+
   &__switch-button {
     white-space: nowrap;
+    margin-top: 2rem;
 
     .button {
       padding: 0.6rem 2rem;
@@ -30,7 +35,7 @@
   }
 
   &__download-label {
-    font-weight: bold;
+    @include h4;
     margin-top: 1rem;
   }
 }

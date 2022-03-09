@@ -1,5 +1,5 @@
 <div class="chart-block">
-  <h3 class="chart-block__name">{{ name }}</h3>
+  <h2 class="chart-block__name">{{ name }}</h2>
   {% if image and content %}
     <div class="chart-block__switch-button chart-block__switch-button--table">
       {% include "@components/components/general/Button/button.html.twig" with {
@@ -26,7 +26,7 @@
       {{ content }}
     </div>
   {% endif %}
-  <div class="chart-block__download-label">{{ downloadThis }}</div>
+  <span class="chart-block__download-label">{{ downloadThis }}</span>
   <div class="chart-block__download-buttons">
     {% for link in links %}
       {% include '@components/components/general/Button/button.html.twig' with {
