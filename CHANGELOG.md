@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Moved element-closest-polyfill in index.js as it's used in several places
 - Add Skip to Main Content link examples to landing pages
 - Increase z-index of skip link so that it sits on top of cookie banner in Drupal
+- Added a placeholder option on the input field
 
 ### Removed
 - Removed CssPonyfill as it's been replaced by postcss-variables
