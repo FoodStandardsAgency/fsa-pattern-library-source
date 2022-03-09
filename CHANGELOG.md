@@ -33,7 +33,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Change the template of footnotes.
+- Changed the static storybook build to not display warning messages (prod)
+- Moved element-closest-polyfill in index.js as it's used in several places
 - Add Skip to Main Content link examples to landing pages
+
+### Removed
+- Removed CssPonyfill as it's been replaced by postcss-variables
+
+### Fixed
+- Error in Pdf buttons, multipage guide variant
 
 ## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
 
