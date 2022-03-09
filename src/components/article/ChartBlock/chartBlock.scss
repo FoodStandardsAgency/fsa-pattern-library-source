@@ -1,12 +1,18 @@
 @import "src/lib.scss";
 
 .chart-block {
+  margin-top: 3rem;
+
   &__switch-button {
     white-space: nowrap;
     margin: 2rem 0 1rem;
 
     @media screen and (min-width: $fsa-lg) {
       margin-bottom: 2rem;
+    }
+
+    .button {
+      padding: 0.6rem 2rem;
     }
   }
 
