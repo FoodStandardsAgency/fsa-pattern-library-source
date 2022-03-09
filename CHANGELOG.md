@@ -26,6 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [Upcoming release] - 1971-11-03
+
+### Fixed
+- Fixed the placeholder in input field
+
+
 ## [0.0.63] - 2022-03-09 (New Skip to main content component and bugfixes)
 
 ### Added
