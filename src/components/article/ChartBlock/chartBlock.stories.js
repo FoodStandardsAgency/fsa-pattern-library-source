@@ -25,8 +25,6 @@ ChartBlock.args = {
     label: 'Food Standards Agency and Committees',
     external: true,
   },
-  view: 'view',
-  newWindow: 'in a new window',
   links: [
     {
       url: 'https://via.placeholder.com/300x300',

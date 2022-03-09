@@ -28,12 +28,10 @@
   {% endif %}
   <p class="chart-block__source"><span class="chart-block__source-text">{{ sourceText }}: </span>
     {% if source.external %}
-      <span class="visually-hidden">{{ view }} </span>
       {% include '@components/components/general/ExternalLink/externalLink.html.twig' with {
         external_link_url: source.url,
         external_link: source.label,
       } %}
-      <span class="visually-hidden"> {{ newWindow }}</span>
     {% else %}
       {% include '@components/components/general/Link/link.html.twig' with {
         link_url: source.url,
