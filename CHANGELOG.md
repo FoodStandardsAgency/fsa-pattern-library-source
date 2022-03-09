@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Switch between table/data view button for ChartBlock
+- Source link for ChartBlock
 
 ### Changed
 - Fix the margins of ChartBlock download buttons and the size of ChartBlock placeholder image.
