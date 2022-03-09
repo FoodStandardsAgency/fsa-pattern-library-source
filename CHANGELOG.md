@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Error in Pdf buttons, multipage guide variant
 - Fixed font-size in input field
+- Header link focus states
 
 
 ## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
