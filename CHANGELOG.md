@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+<<<<<<< HEAD
 
 ## [Upcoming release] - 1971-11-03
 
@@ -42,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
-- 
+- Fixed the placeholder in input field
 
 ### Security
 - 
