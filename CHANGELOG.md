@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Error in Pdf buttons, multipage guide variant
 - Prevent icon from cutting off on small screens in the quote block
+- Fixed font-size in input field
 
 
 ## [0.0.62] - 2022-03-08 (Fixing spacing, Chart component)
