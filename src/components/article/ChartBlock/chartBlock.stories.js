@@ -11,7 +11,7 @@ export const ChartBlock = Template.bind({});
 ChartBlock.args = {
   name: 'COVID-19',
   image: {
-    url: 'https://via.placeholder.com/340x300',
+    url: 'https://via.placeholder.com/300x300',
     alt: 'Data for 2022',
   },
   content:
@@ -21,7 +21,7 @@ ChartBlock.args = {
   toChart: 'Change to chart view',
   links: [
     {
-      url: 'https://via.placeholder.com/340x300',
+      url: 'https://via.placeholder.com/300x300',
       label: 'Image',
     },
     {
