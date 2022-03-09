@@ -28,6 +28,15 @@
     display: none;
   }
 
+  &__source {
+    margin-top: 2rem;
+  }
+
+  &__source-text {
+    @include body;
+    font-weight: bold;
+  }
+
   &__download-buttons {
     .button {
       margin: 1rem 0.5rem 0 0;
@@ -36,6 +45,6 @@
 
   &__download-label {
     @include h4;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 }

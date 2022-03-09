@@ -26,7 +26,22 @@
       {{ content }}
     </div>
   {% endif %}
-  <span class="chart-block__download-label">{{ downloadThis }}</span>
+  <p class="chart-block__source"><span class="chart-block__source-text">{{ sourceText }}: </span>
+    {% if source.external %}
+      <span class="visually-hidden">{{ view }} </span>
+      {% include '@components/components/general/ExternalLink/externalLink.html.twig' with {
+        external_link_url: source.url,
+        external_link: source.label,
+      } %}
+      <span class="visually-hidden"> {{ newWindow }}</span>
+    {% else %}
+      {% include '@components/components/general/Link/link.html.twig' with {
+        link_url: source.url,
+        link_text: source.label,
+      } %}
+    {% endif %}
+  </p>
+  <p class="chart-block__download-label">{{ downloadThis }}</p>
   <div class="chart-block__download-buttons">
     {% for link in links %}
       {% include '@components/components/general/Button/button.html.twig' with {
