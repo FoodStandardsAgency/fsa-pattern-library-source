@@ -43,10 +43,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
-- 
+- Fixed the placeholder in input field
 
 ### Security
 - 
+
 
 ## [0.0.63] - 2022-03-09 (New Skip to main content component and bugfixes)
 
