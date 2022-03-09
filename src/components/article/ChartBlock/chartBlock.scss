@@ -9,10 +9,8 @@
     }
   }
 
-  &__image, &__content, &__switch-button{
-    &--hide {
-      display: none;
-    }
+  .hide {
+    display: none;
   }
 
   &__download-buttons {
