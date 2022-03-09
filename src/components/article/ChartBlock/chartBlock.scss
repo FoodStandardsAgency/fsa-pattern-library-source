@@ -1,6 +1,20 @@
 @import "src/lib.scss";
 
 .chart-block {
+  &__switch-button {
+    white-space: nowrap;
+    margin: 2rem 0 1rem;
+    @media screen and (min-width: $fsa-lg) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__image, &__content, &__switch-button{
+    &--hide {
+      display: none;
+    }
+  }
+
   &__download-buttons {
     margin-top: 1rem;
   }
