@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change the params in searchNoResults to allow hiding of 'remove all filters' link
 - Updated styling on searchNoResults
 - Hide filters header if there are no results
+- Fixed Header contact buttons aligned on left for wide screens
 
 ### Deprecated
 - 
