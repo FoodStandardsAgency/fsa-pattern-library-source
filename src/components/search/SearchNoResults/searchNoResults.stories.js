@@ -34,6 +34,6 @@ NoResultsWithFilters.args = {
   remove_filters_link_text: 'remove all selected filters',
   food_hygiene_rating_text: 'Were you looking for',
   food_hygiene_rating_link_text: 'Food Hygiene Ratings',
-  remove_filters_link: 'http://example.com/removeFilters',
-  food_hygiene_rating_link: 'http://example.com/foodHygiene',
+  remove_filters_link: '#',
+  food_hygiene_rating_link: '#',
 };
