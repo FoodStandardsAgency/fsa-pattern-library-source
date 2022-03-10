@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.64] - 2022-03-10 (New components in chartblock and bugfixes)
 
 ### Added
 - Switch between table/data view button for ChartBlock
@@ -41,17 +41,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hide filters header if there are no results
 - Fixed Header contact buttons aligned on left for wide screens
 
-### Deprecated
-- 
-
-### Removed
-- 
-
 ### Fixed
 - Fixed the placeholder in input field
-
-### Security
-- 
 
 
 ## [0.0.63] - 2022-03-09 (New Skip to main content component and bugfixes)
