@@ -1,15 +1,8 @@
 @import "src/lib.scss";
 
 .search-no-results {
+  padding-top: 2rem;
   padding-bottom: 2rem;
-
-  &__content {
-    padding-left: 1rem;
-
-    @media screen and (min-width: $fsa-xs) {
-      padding-left: 3rem;
-    }
-  }
 
   &__title {
     @include h5;

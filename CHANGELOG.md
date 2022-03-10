@@ -36,6 +36,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Fix the margins of ChartBlock download buttons and the size of ChartBlock placeholder image.
 - Add ChartBlock to the simple article page
+- Change the params in searchNoResults to allow hiding of 'remove all filters' link
+- Updated styling on searchNoResults
+- Hide filters header if there are no results
 
 ### Deprecated
 - 
