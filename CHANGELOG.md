@@ -9,10 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
-- 
+-
 
 ### Changed
-- 
+-
 
 ### Deprecated
 - 
@@ -25,6 +25,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 - 
+
+
+## [0.0.64] - 2022-03-10 (New components in chartblock and bugfixes)
+
+### Added
+- Switch between table/data view button for ChartBlock
+- Source link for ChartBlock
+
+### Changed
+- Fix the margins of ChartBlock download buttons and the size of ChartBlock placeholder image.
+- Add ChartBlock to the simple article page
+- Change the params in searchNoResults to allow hiding of 'remove all filters' link
+- Updated styling on searchNoResults
+- Hide filters header if there are no results
+- Fixed Header contact buttons aligned on left for wide screens
+
+### Fixed
+- Fixed the placeholder in input field
+
 
 ## [0.0.63] - 2022-03-09 (New Skip to main content component and bugfixes)
 

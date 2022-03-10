@@ -12,6 +12,7 @@ const Template = (args) => filtersHeader(args);
 
 export const FiltersHeader = Template.bind({});
 FiltersHeader.args = {
+  no_results: false,
   title: 'Filter your search',
   link_text: 'Return to results',
   button_text: 'Filter your search',
