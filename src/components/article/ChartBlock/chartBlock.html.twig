@@ -1,16 +1,45 @@
 <div class="chart-block">
-  <h3 class="chart-block__name">{{ name }}</h3>
+  <h2 class="chart-block__name">{{ name }}</h2>
+  {% if image and content %}
+    <div class="chart-block__switch-button chart-block__switch-button--table">
+      {% include "@components/components/general/Button/button.html.twig" with {
+      type: 'primary',
+      element: 'button',
+      label: toTable,
+    } %}
+    </div>
+    <div class="chart-block__switch-button chart-block__switch-button--chart hide">
+      {% include "@components/components/general/Button/button.html.twig" with {
+      type: 'primary',
+      element: 'button',
+      label: toChart,
+    } %}
+    </div>
+  {% endif %}
   {% if image %}
     <div class="chart-block__image">
-      <img src={{ image.url }} alt="{{ image.alt }}" />
+      <img src={{ image.url }} alt="{{ image.alt }}"/>
     </div>
   {% endif %}
   {% if content %}
-    <div class="chart-block__content">
+    <div class="chart-block__content{{ image ? " hide" : "" }}">
       {{ content }}
     </div>
   {% endif %}
-  <div class="chart-block__download-label">{{ downloadThis }}</div>
+  <p class="chart-block__source"><span class="chart-block__source-text">{{ sourceText }}: </span>
+    {% if source.external %}
+      {% include '@components/components/general/ExternalLink/externalLink.html.twig' with {
+        external_link_url: source.url,
+        external_link: source.label,
+      } %}
+    {% else %}
+      {% include '@components/components/general/Link/link.html.twig' with {
+        link_url: source.url,
+        link_text: source.label,
+      } %}
+    {% endif %}
+  </p>
+  <p class="chart-block__download-label">{{ downloadThis }}</p>
   <div class="chart-block__download-buttons">
     {% for link in links %}
       {% include '@components/components/general/Button/button.html.twig' with {

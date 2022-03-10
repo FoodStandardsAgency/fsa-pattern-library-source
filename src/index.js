@@ -84,6 +84,7 @@ import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPr
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 import tableOfContents from '@components/components/article/TableOfContents/tableOfContents';
 import textBlock from './components/article/TextBlock/textBlock';
+import chartBlock from './components/article/ChartBlock/chartBlock';
 
 /* Multipage guide Components */
 import './components/multipageguide/GuideHero/guideHero';
@@ -118,3 +119,4 @@ pdfAndPrintButtons();
 stickySidebar();
 tableOfContents();
 textBlock();
+chartBlock();
