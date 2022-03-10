@@ -1,12 +1,53 @@
 @import "src/lib.scss";
 
 .chart-block {
-  &__download-buttons {
+  margin-top: 3rem;
+
+  &__name {
+    margin: 0;
+  }
+
+  &__switch-button {
+    white-space: nowrap;
+    margin-top: 2rem;
+
+    .button {
+      padding: 0.6rem 2rem;
+    }
+  }
+
+  &__image,
+  &__content {
     margin-top: 1rem;
+
+    @media screen and (min-width: $fsa-lg) {
+      margin-top: 2rem;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  &__source {
+    margin-top: 2rem;
+  }
+
+  &__source-text {
+    @include body;
+
+    font-weight: bold;
+  }
+
+  &__download-buttons {
+    .button {
+      margin: 1rem 0.5rem 0 0;
+    }
   }
 
   &__download-label {
-    font-weight: bold;
-    margin-top: 1rem;
+    @include h4;
+
+    margin-top: 2rem;
   }
 }

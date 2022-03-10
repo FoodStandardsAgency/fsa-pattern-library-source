@@ -11,13 +11,23 @@ export const ChartBlock = Template.bind({});
 ChartBlock.args = {
   name: 'COVID-19',
   image: {
-    url: 'https://via.placeholder.com/400x300',
+    url: 'https://via.placeholder.com/300x300',
     alt: 'Data for 2022',
   },
+  content:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   downloadThis: 'Download this chart',
+  toTable: 'Change to table and accessible view',
+  toChart: 'Change to chart view',
+  sourceText: 'Source',
+  source: {
+    url: '#',
+    label: 'Food Standards Agency and Committees',
+    external: true,
+  },
   links: [
     {
-      url: 'https://via.placeholder.com/400x300',
+      url: 'https://via.placeholder.com/300x300',
       label: 'Image',
     },
     {
@@ -37,6 +47,12 @@ ContentBlock.args = {
   content:
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   downloadThis: 'Download this',
+  sourceText: 'Source',
+  source: {
+    url: '#',
+    label: 'Food Standards Agency and Committees',
+    external: false,
+  },
   links: [
     {
       url: '#',
