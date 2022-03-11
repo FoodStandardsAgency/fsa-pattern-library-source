@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Add margin to author div in the quote block
+- Improve screen reader accessibility on the navigation menu
 
 ### Security
 - 
