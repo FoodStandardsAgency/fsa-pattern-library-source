@@ -10,5 +10,5 @@
   </button>
 
 {% elseif element == 'input' %}
-  <input type="submit" class="button button--event button--{{ type }}" value="{{ label }}">
+  <input type="submit" class="button button--event button--{{ type }}" name="{{ label|striptags|replace({" ": "-"})|lower }}" value="{{ label }}">
 {% endif %}
