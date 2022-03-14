@@ -46,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prevent text overflow on error boxes on IE11
 - Changing example to show a table instead of a random text
 - Fixing button styling when nested in textBlock
+- Fixing an error with the table element
 
 ### Security
 - 
