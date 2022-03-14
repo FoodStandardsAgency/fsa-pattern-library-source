@@ -1,6 +1,7 @@
 import './base.scss';
 import 'url-polyfill';
 import objectFitImages from 'object-fit-images';
+import cssVars from 'css-vars-ponyfill';
 import 'element-closest-polyfill';
 
 /* General Components */
@@ -101,6 +102,13 @@ import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
 import pagination from './components/search/Pagination/pagination';
 import searchBar from './components/search/SearchBar/searchBar';
 import sortBy from './components/search/SortBy/sortBy';
+
+// Fixes css vars on legacy browsers (i.e. IE11) - this is required for Storybook
+cssVars({
+  silent: true,
+  preserveVars: false,
+  onlyLegacy: false,
+});
 
 // Fixes object-fit on legacy browsers
 objectFitImages();
