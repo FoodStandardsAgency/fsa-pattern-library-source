@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve screen reader accessibility on the navigation menu
 - Prevent text overflow on error boxes on IE11
 - Changing example to show a table instead of a random text
+- Fixing button styling when nested in textBlock
 
 ### Security
 - 

@@ -47,8 +47,9 @@
   <p class="chart-block__download-label">{{ downloadThis }}</p>
   <div class="chart-block__download-buttons">
     {% for link in links %}
+      {# Adding an extra class in type to have a finer control over buttons hover and focus states #}
       {% include '@components/components/general/Button/button.html.twig' with {
-        type: 'primary',
+        type: 'primary chart-block__buttons',
         url: link.url,
         label: link.label,
         element: 'link',
