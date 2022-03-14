@@ -44,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add margin to author div in the quote block
 - Improve screen reader accessibility on the navigation menu
 - Add names to form input/submit buttons for Drupal form API
+- Prevent text overflow on error boxes on IE11
 
 ### Security
 - 
