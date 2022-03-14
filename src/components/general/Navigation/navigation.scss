@@ -363,7 +363,7 @@ $nav-height: 3.438rem;
           padding: 0.5rem 0 0.5rem 1rem;
 
           &:hover {
-            background-color: initial;
+            background-color: transparent;
             cursor: pointer;
             color: var(--fsa__link-green);
             text-decoration: underline;
