@@ -37,6 +37,7 @@
     text-decoration: underline;
     margin-top: 0.5rem;
     display: block;
+    max-width: 100%;
 
     &:hover {
       color: var(--fsa-secondary-error-hover);

@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve screen reader accessibility on the navigation menu
 - Add css-vars-ponyfill back in to fix scss imports on Storybook
 - Change 'initial' to 'transparent' so that hover states look correct on IE11
+- Prevent text overflow on error boxes on IE11
 
 ### Security
 - 
