@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- Added a description below the chart title
 
 ### Changed
 -
@@ -44,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add margin to author div in the quote block
 - Improve screen reader accessibility on the navigation menu
 - Prevent text overflow on error boxes on IE11
+- Changing example to show a table instead of a random text
 
 ### Security
 - 
