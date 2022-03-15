@@ -749,7 +749,7 @@ $mobileGutter: 1rem;
     }
   }
 
-  a:not(.document-download__link) {
+  a:not(.document-download__link):not(.chart-block__buttons) {
     @include link;
   }
 }

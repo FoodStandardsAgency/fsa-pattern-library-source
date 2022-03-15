@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- Added a description below the chart title
 
 ### Changed
 -
@@ -47,6 +47,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change 'initial' to 'transparent' so that hover states look correct on IE11
 - Add names to form input/submit buttons for Drupal form API
 - Prevent text overflow on error boxes on IE11
+- Changing example to show a table instead of a random text
+- Fixing button styling when nested in textBlock
+- Fixing an error with the table element
 
 ### Security
 - 

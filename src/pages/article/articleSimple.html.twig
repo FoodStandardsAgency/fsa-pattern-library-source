@@ -109,12 +109,13 @@
 
   {% include '../../components/article/ChartBlock/chartBlock.html.twig' with {
     name: 'COVID-19',
+    description: 'Description text goes here and gets added via the text component',
     image: {
       url: 'https://via.placeholder.com/300x300',
       alt: 'Data for 2022',
     },
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "<table><thead><th>Column 1</th><th>Column 2</th></thead><tbody><tr><td>Row 1 - value 1</td><td>Row 1 - value 2</td></tr><tr><td>Row 2 - value 1</td><td>Row 2 - value 2</td></tr><tr><td>Row 3 - value 1</td><td>Row 3 - value 2</td></tr></tbody></table>",
     downloadThis: 'Download this chart',
     toTable: 'Change to table and accessible view',
     toChart: 'Change to chart view',
