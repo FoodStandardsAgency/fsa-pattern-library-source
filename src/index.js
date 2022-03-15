@@ -1,6 +1,7 @@
 import './base.scss';
 import 'url-polyfill';
 import objectFitImages from 'object-fit-images';
+import cssVars from 'css-vars-ponyfill';
 import 'element-closest-polyfill';
 
 /* General Components */
@@ -47,8 +48,8 @@ import './components/form/Tabs/tabs';
 import './components/form/TitleAndText/titleAndText';
 import './components/form/EmailField/emailField';
 import './components/form/Textarea/textarea';
-import './components/form/MapField/mapField';
 import './components/form/Step/step';
+import mapField from './components/form/MapField/mapField';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
@@ -102,6 +103,13 @@ import pagination from './components/search/Pagination/pagination';
 import searchBar from './components/search/SearchBar/searchBar';
 import sortBy from './components/search/SortBy/sortBy';
 
+// Fixes css vars on legacy browsers (i.e. IE11) - this is required for Storybook
+cssVars({
+  silent: true,
+  preserveVars: false,
+  onlyLegacy: false,
+});
+
 // Fixes object-fit on legacy browsers
 objectFitImages();
 
@@ -120,3 +128,4 @@ stickySidebar();
 tableOfContents();
 textBlock();
 chartBlock();
+mapField();

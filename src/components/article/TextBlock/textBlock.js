@@ -9,7 +9,11 @@ export default function () {
     }
     // Get the table header associated with the specified cell and add in a span to the cell
     function getAssocHeader(table, cell) {
-      const headerLabel = table.rows[0].cells[cell.cellIndex].innerHTML;
+      const headerCell = table.rows[0].cells[cell.cellIndex];
+      if (!headerCell) {
+        return;
+      }
+      const headerLabel = headerCell.innerHTML;
       const header = document.createElement('span');
       header.classList.add('responsive-table__heading');
       header.setAttribute('aria-hidden', 'true');

@@ -25,6 +25,10 @@
     }
   }
 
+  &__content table {
+    @include table;
+  }
+
   .hide {
     display: none;
   }

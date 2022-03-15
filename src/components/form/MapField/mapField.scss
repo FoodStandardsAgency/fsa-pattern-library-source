@@ -9,6 +9,10 @@
   &__button {
     margin-top: 1rem;
     text-align: right;
+
+    &--hidden {
+      display: none;
+    }
   }
 
   &__map {
@@ -16,5 +20,9 @@
     height: 520px;
     margin-top: 1rem;
     width: 100%;
+
+    &--hidden {
+      display: none;
+    }
   }
 }

@@ -26,6 +26,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [0.0.65] - 2022-03-15 (Added features to existing components and bugfixes)
+
+### Added
+- Added a description below the chart title
+
+### Changed
+- Hide map button and field on IE11
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+- Add margin to author div in the quote block
+- Improve screen reader accessibility on the navigation menu
+- Add css-vars-ponyfill back in to fix scss imports on Storybook
+- Change 'initial' to 'transparent' so that hover states look correct on IE11
+- Add names to form input/submit buttons for Drupal form API
+- Prevent text overflow on error boxes on IE11
+- Changing example to show a table instead of a random text
+- Fixing button styling when nested in textBlock
+- Fixing an error with the table element
+
+### Security
+- 
+
 
 ## [0.0.64] - 2022-03-10 (New components in chartblock and bugfixes)
 

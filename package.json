@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "css-vars-ponyfill": "2.4.7",
     "element-closest-polyfill": "1.0.4",
     "object-fit-images": "^3.2.4",
     "postcss": "8.4.8",
