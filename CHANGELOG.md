@@ -36,9 +36,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Added a description below the chart title
+- Add external link example to the subject listing section
 
 ### Changed
 - Hide map button and field on IE11
+- Remove underline on external links in subject listing
 
 ### Fixed
 - Add margin to author div in the quote block
