@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a description below the chart title
 
 ### Changed
--
+- Hide map button and field on IE11
 
 ### Deprecated
 - 
