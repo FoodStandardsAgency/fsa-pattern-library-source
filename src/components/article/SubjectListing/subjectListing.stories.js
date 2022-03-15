@@ -75,7 +75,6 @@ Multiple.args = {
   ],
 };
 
-
 export const WithExternalLink = () => {
   return withExternalLink();
 };
