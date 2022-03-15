@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.65] - 2022-03-15 (Added features to existing components and bugfixes)
 
 ### Added
 - Added a description below the chart title
