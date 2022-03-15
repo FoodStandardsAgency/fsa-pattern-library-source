@@ -26,6 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [0.0.66] - 2022-03-15 (Pipeline fix)
+
+### Fixed
+- Fixing pipeline error
+
+
 ## [0.0.65] - 2022-03-15 (Added features to existing components and bugfixes)
 
 ### Added
@@ -33,12 +39,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Hide map button and field on IE11
-
-### Deprecated
-- 
-
-### Removed
-- 
 
 ### Fixed
 - Add margin to author div in the quote block
@@ -50,9 +50,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changing example to show a table instead of a random text
 - Fixing button styling when nested in textBlock
 - Fixing an error with the table element
-
-### Security
-- 
 
 
 ## [0.0.64] - 2022-03-10 (New components in chartblock and bugfixes)
