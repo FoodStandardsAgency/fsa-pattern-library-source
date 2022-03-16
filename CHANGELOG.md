@@ -26,6 +26,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+- Add link styling to form input and error box for login
+
+### Security
+- 
+
+
 ## [0.0.66] - 2022-03-15 (Pipeline fix)
 
 ### Fixed
@@ -50,7 +72,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changing example to show a table instead of a random text
 - Fixing button styling when nested in textBlock
 - Fixing an error with the table element
-- Add link styling to form input and error box for login
 
 
 ## [0.0.64] - 2022-03-10 (New components in chartblock and bugfixes)
