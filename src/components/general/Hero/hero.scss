@@ -23,9 +23,19 @@
     width: 100%;
     height: fit-content;
     overflow: visible;
-    mask: url("./assets/hero.svg") no-repeat bottom;
+    mask-image: url("./assets/hero.svg");
+    mask-position: bottom;
     mask-size: 200%, 100%;
     mask-repeat: no-repeat;
+
+    /* mask not working in chrome */
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-mask-image: url("./assets/hero.svg");
+    -webkit-mask-position: bottom;
+    -webkit-mask-size: 200%, 100%;
+    -webkit-mask-repeat: no-repeat;
+
+    /* stylelint-enable property-no-vendor-prefix */
     color: white;
     padding-bottom: 2rem;
     z-index: 2;
