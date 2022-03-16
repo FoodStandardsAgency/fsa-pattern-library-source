@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
-- 
+- Removed top padding for My HACCP variation of the header, as per designs.
 
 ### Security
 - 
