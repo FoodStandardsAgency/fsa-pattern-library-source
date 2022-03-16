@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixing side effect on Error box
+- Fixing linting issue due to prefix (added because autoprefixer doesn't generate it)
 
 ### Security
 - 
