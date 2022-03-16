@@ -46,6 +46,10 @@
     overflow: visible;
   }
 
+  &--haccp {
+    padding-top: 0;
+  }
+
   &__grid-container {
     @include grid-container;
   }
