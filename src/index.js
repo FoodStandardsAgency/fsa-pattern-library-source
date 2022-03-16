@@ -111,7 +111,7 @@ cssVars({
   onlyLegacy: false,
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Fixes object-fit on legacy browsers
   objectFitImages();
 });
