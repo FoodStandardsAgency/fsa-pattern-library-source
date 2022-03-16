@@ -111,8 +111,10 @@ cssVars({
   onlyLegacy: false,
 });
 
-// Fixes object-fit on legacy browsers
-objectFitImages();
+document.addEventListener('DOMContentLoaded', function() {
+  // Fixes object-fit on legacy browsers
+  objectFitImages();
+});
 
 backToTop();
 footNotes();
