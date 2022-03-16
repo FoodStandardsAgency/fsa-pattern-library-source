@@ -30,6 +30,10 @@
     @include body;
   }
 
+  a:not(&__field) {
+    @include link;
+  }
+
   &__field {
     @include h5;
 
@@ -51,9 +55,5 @@
       border-bottom: 0.25rem solid var(--fsa-primary_black);
       margin-bottom: -0.25rem;
     }
-  }
-
-  a {
-    @include link;
   }
 }

@@ -26,6 +26,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 
+## [Upcoming release template] - 1971-11-03
+
+### Added
+- 
+
+### Changed
+- Added postcss addon to storybook
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+- Fixing side effect on Error box
+
+### Security
+- 
+
+
 ## [0.0.67] - 2022-03-16 (New components, updates & fixes)
 
 ### Added
