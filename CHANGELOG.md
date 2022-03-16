@@ -26,6 +26,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+
+## [Upcoming release] - 1971-11-03
+
+### Added
+- Add external link example to the subject listing section
+
+### Changed
+- Remove underline on external links in subject listing
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+- Add link styling to form input and error box for login
+
+### Security
+- 
+
+
 ## [0.0.66] - 2022-03-15 (Pipeline fix)
 
 ### Fixed
@@ -36,11 +58,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Added a description below the chart title
-- Add external link example to the subject listing section
 
 ### Changed
 - Hide map button and field on IE11
-- Remove underline on external links in subject listing
 
 ### Fixed
 - Add margin to author div in the quote block
