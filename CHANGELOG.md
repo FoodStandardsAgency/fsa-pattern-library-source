@@ -5,11 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-
-## [Upcoming release] - 1971-11-03
+## [Upcoming release template] - 1971-11-03
 
 ### Added
--
+- 
 
 ### Changed
 -
@@ -21,10 +20,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
-- 
+-
 
 ### Security
 - 
+
+
+## [0.0.67] - 2022-03-16 (New components, updates & fixes)
+
+### Added
+- Add external link example to the subject listing section
+- Site map component
+
+### Changed
+- Remove underline on external links in subject listing
+
+### Fixed
+- Add link styling to form input and error box for login
+- Removed top padding for My HACCP variation of the header, as per designs.
+
 
 ## [0.0.66] - 2022-03-15 (Pipeline fix)
 

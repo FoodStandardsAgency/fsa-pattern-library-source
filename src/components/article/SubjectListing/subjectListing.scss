@@ -61,6 +61,8 @@
       a {
         @include body;
 
+        text-decoration: none;
+
         &,
         &:active,
         &:visited {
