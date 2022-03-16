@@ -20,52 +20,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
-- Removed top padding for My HACCP variation of the header, as per designs.
-
-### Security
-- 
-
-
-## [Upcoming release] - 1971-11-03
-
-### Added
-- Site map component
-
-### Changed
 -
 
-### Deprecated
-- 
-
-### Removed
-- 
-
-### Fixed
-- 
-
 ### Security
 - 
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.67] - 2022-03-16 (New components, updates & fixes)
 
 ### Added
 - Add external link example to the subject listing section
+- Site map component
 
 ### Changed
 - Remove underline on external links in subject listing
 
-### Deprecated
-- 
-
-### Removed
-- 
-
 ### Fixed
 - Add link styling to form input and error box for login
-
-### Security
-- 
+- Removed top padding for My HACCP variation of the header, as per designs.
 
 
 ## [0.0.66] - 2022-03-15 (Pipeline fix)
