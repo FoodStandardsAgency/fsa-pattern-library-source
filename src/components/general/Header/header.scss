@@ -668,7 +668,9 @@
   }
 
   &--haccp {
-    padding-top: 0;
+    @media screen and (min-width: $fsa-lg) {
+      padding-top: 0;
+    }
 
     .header {
       &__languages,
