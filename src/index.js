@@ -10,6 +10,7 @@ import './components/general/Button/button';
 import './components/general/Header/header';
 import './components/general/Hero/hero';
 import './components/general/Link/link';
+import './components/general/SiteMap/siteMap';
 import './components/general/ExternalLink/externalLink';
 import './components/general/MailLink/mailLink';
 import './components/general/Footer/footer';
