@@ -1,5 +1,6 @@
 import subjectListing from './subjectListing.html.twig';
 import './subjectListing.scss';
+import withExternalLink from './subjectListingExternalExample.html.twig';
 
 export default {
   title: 'Components/Article/Subject Listing',
@@ -72,4 +73,8 @@ Multiple.args = {
       links: [{ label: 'Prepare your business for Brexit', href: '#' }],
     },
   ],
+};
+
+export const WithExternalLink = () => {
+  return withExternalLink();
 };
