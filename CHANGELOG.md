@@ -26,27 +26,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 
-## [Upcoming release template] - 1971-11-03
-
-### Added
-- 
+## [0.0.68] - 2022-03-16 (Fixing browser issues)
 
 ### Changed
 - Added postcss addon to storybook
-
-### Deprecated
-- 
-
-### Removed
-- 
 
 ### Fixed
 - Fixing side effect on Error box
 - Fixing linting issue due to prefix (added because autoprefixer doesn't generate it)
 - Fix for object-fit-image polyfill
-
-### Security
-- 
 
 
 ## [0.0.67] - 2022-03-16 (New components, updates & fixes)
