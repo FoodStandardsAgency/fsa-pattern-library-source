@@ -46,10 +46,6 @@
     overflow: visible;
   }
 
-  &--haccp {
-    padding-top: 0;
-  }
-
   &__grid-container {
     @include grid-container;
   }
@@ -672,6 +668,8 @@
   }
 
   &--haccp {
+    padding-top: 0;
+
     .header {
       &__languages,
       &__user_menu {
