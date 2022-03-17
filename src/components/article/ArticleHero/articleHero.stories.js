@@ -20,7 +20,7 @@ Basic.args = {
   pdf: 'PDF',
   new_window: 'Opens in a new window',
   print_this_page: 'Print this page',
-  revision_log: false,  
+  revision_log: false,
 };
 
 export const WithAlert = Template.bind({});
@@ -38,7 +38,7 @@ WithAlert.args = {
   pdf: 'PDF',
   new_window: 'Opens in a new window',
   print_this_page: 'Print this page',
-  revision_log: false,  
+  revision_log: false,
 };
 
 export const WithIntroduction = Template.bind({});
@@ -55,7 +55,7 @@ WithIntroduction.args = {
   pdf: 'PDF',
   new_window: 'Opens in a new window',
   print_this_page: 'Print this page',
-  revision_log: false,  
+  revision_log: false,
 };
 
 export const WithRegion = Template.bind({});
