@@ -95,9 +95,7 @@
     }
 
     &__revision-log {
-      color: var(--fsa-primary_dark-green);
-      text-decoration: underline;
-      border-bottom: 0.25rem solid transparent;
+      @include link;
     }
 
     &__last-updated {
