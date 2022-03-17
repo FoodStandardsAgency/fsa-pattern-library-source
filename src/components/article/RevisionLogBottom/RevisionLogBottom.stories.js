@@ -9,9 +9,9 @@ const Template = (args) => revisionLogBottom(args);
 
 export const Basic = Template.bind({});
 Basic.args = {
-  heading: "Revision log",
-  toggle_text_hide: "Hide all updates",
-  toggle_text_show: "Show all updates",
+  heading: 'Revision log',
+  toggle_text_hide: 'Hide all updates',
+  toggle_text_show: 'Show all updates',
   published_label: 'Published',
   published: '12 January 2012',
   last_updated_label: '20 January 2017',
