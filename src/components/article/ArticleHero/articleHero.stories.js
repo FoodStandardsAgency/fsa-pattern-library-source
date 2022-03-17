@@ -20,6 +20,7 @@ Basic.args = {
   pdf: 'PDF',
   new_window: 'Opens in a new window',
   print_this_page: 'Print this page',
+  revision_log: false,  
 };
 
 export const WithAlert = Template.bind({});
@@ -37,6 +38,7 @@ WithAlert.args = {
   pdf: 'PDF',
   new_window: 'Opens in a new window',
   print_this_page: 'Print this page',
+  revision_log: false,  
 };
 
 export const WithIntroduction = Template.bind({});
@@ -53,6 +55,7 @@ WithIntroduction.args = {
   pdf: 'PDF',
   new_window: 'Opens in a new window',
   print_this_page: 'Print this page',
+  revision_log: false,  
 };
 
 export const WithRegion = Template.bind({});
@@ -70,6 +73,7 @@ WithRegion.args = {
   pdf: 'PDF',
   new_window: 'Opens in a new window',
   print_this_page: 'Print this page',
+  revision_log: false,
 };
 
 export const WithEverything = Template.bind({});
@@ -88,4 +92,6 @@ WithEverything.args = {
   pdf: 'PDF',
   new_window: 'Opens in a new window',
   print_this_page: 'Print this page',
+  revision_log: true,
+  revision_label: 'See all updates',
 };

@@ -89,6 +89,17 @@
       margin-top: 2rem;
     }
 
+    &__last-updated-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__revision-log {
+      color: var(--fsa-primary_dark-green);
+      text-decoration: underline;
+      border-bottom: 0.25rem solid transparent;
+    }
+
     &__last-updated {
       margin-bottom: 0.5rem;
       height: 100%;
