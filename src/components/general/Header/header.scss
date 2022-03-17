@@ -279,6 +279,7 @@
 
     &--secondary-logo {
       background-image: url("./assets/logo/my-haccp-logo.svg");
+
       @media screen and (min-width: $fsa-md) {
         margin-left: 2rem;
       }
