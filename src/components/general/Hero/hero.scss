@@ -23,9 +23,19 @@
     width: 100%;
     height: fit-content;
     overflow: visible;
-    mask: url("./assets/hero.svg") no-repeat bottom;
+    mask-image: url("./assets/hero.svg");
+    mask-position: bottom;
     mask-size: 200%, 100%;
     mask-repeat: no-repeat;
+
+    /* mask not working in chrome */
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-mask-image: url("./assets/hero.svg");
+    -webkit-mask-position: bottom;
+    -webkit-mask-size: 200%, 100%;
+    -webkit-mask-repeat: no-repeat;
+
+    /* stylelint-enable property-no-vendor-prefix */
     color: white;
     padding-bottom: 2rem;
     z-index: 2;
@@ -53,7 +63,6 @@
     /* Remove background pattern and fit-content doesn't work in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
-      height: 100vh;
     }
 
     &--campaign-block {
@@ -109,6 +118,10 @@
       width: 100%;
       border-radius: 100%;
       z-index: -1;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        content: none;
+      }
     }
   }
 
@@ -338,7 +351,10 @@
     }
 
     .hero__row {
-      flex-direction: column;
+      @supports not (-ms-high-contrast: none) {
+        /* Non-IE styles here */
+        flex-direction: column;
+      }
     }
 
     &.hero--with-image {

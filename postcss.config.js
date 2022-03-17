@@ -4,7 +4,7 @@ const inlineSvg = require('postcss-inline-svg');
 const postcssVariable = require('postcss-css-variables');
 module.exports = {
   plugins: [
-    autoprefixer({ grid: true }),
+    autoprefixer({ grid: "no-autoplace" }),
     inlineSvg,
     postcssVariable({ preserve: true }),
   ],

@@ -243,7 +243,16 @@
   }
 
   &__logo {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+
+    @media screen and (min-width: $fsa-md) {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
   }
 
   &__logo:focus {
@@ -270,6 +279,10 @@
 
     &--secondary-logo {
       background-image: url("./assets/logo/my-haccp-logo.svg");
+
+      @media screen and (min-width: $fsa-md) {
+        margin-left: 2rem;
+      }
     }
 
     @media screen and (min-width: $fsa-lg) {
@@ -668,12 +681,20 @@
   }
 
   &--haccp {
+    @media screen and (min-width: $fsa-lg) {
+      padding-top: 0;
+    }
+
     .header {
       &__languages,
       &__user_menu {
+        @media screen and (min-width: $fsa-lg) {
+          margin: 0 1rem;
+        }
+
         &--desktop {
           @media screen and (min-width: $fsa-lg) {
-            padding-top: 1rem;
+            padding-top: 0.5rem;
             padding-bottom: 0.5rem;
           }
         }

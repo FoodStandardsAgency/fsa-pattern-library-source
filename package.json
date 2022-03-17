@@ -1,6 +1,6 @@
 {
   "name": "fsa-design-system",
-  "version": "0.0.66",
+  "version": "0.0.69",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -23,12 +23,13 @@
     "@storybook/addon-essentials": "6.4.0-alpha.16",
     "@storybook/addon-ie11": "0.0.6",
     "@storybook/addon-links": "6.4.0-alpha.16",
+    "@storybook/addon-postcss": "2.0.0",
     "@storybook/builder-webpack5": "6.4.0-alpha.16",
     "@storybook/html": "6.3.8",
     "@storybook/manager-webpack5": "6.4.0-alpha.16",
     "@storybook/preset-ie11": "0.0.1",
     "@whitespace/storybook-addon-html": "5.0.0",
-    "autoprefixer": "9.8.6",
+    "autoprefixer": "10.4.2",
     "babel-loader": "8.2.2",
     "css-loader": "5.2.7",
     "deeson-webpack-config-starter": "https://github.com/teamdeeson/deeson-webpack-config#feature/drupal9-webpack5",
