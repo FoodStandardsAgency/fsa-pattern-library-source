@@ -34,16 +34,18 @@
         {{ last_updated_string }}: {{ last_updated_date }}
       </div>
     {% endif %}
-    <div class="article-hero__toolbar__buttons">
-      {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
-        pdf_link: pdf_link,
-        pdf_name: pdf_name,
-        view: view,
-        as: as,
-        pdf: pdf,
-        new_window: new_window,
-        print_this_page: print_this_page,
-      } %}
-    </div>
+    {% if pdf_link is not empty or print_this_page is not empty %}
+      <div class="article-hero__toolbar__buttons">
+        {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
+          pdf_link: pdf_link,
+          pdf_name: pdf_name,
+          view: view,
+          as: as,
+          pdf: pdf,
+          new_window: new_window,
+          print_this_page: print_this_page,
+        } %}
+      </div>
+    {% endif %}
   </div>
 </div>

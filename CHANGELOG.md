@@ -30,6 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Added postcss addon to storybook
+- Styling fixes for the header component (MyHACCP)
+- Modified Article Hero component to be able to show only the title without buttons
 
 ### Fixed
 - Fixing side effect on Error box
