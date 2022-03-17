@@ -48,7 +48,7 @@ ContentBlock.args = {
   description: 'Description text goes here and gets added via the text component',
   content:
     '<table><thead><th>Column 1</th><th>Column 2</th></thead><tbody><tr><td>Row 1 - value 1</td><td>Row 1 - value 2</td></tr><tr><td>Row 2 - value 1</td><td>Row 2 - value 2</td></tr><tr><td>Row 3 - value 1</td><td>Row 3 - value 2</td></tr></tbody></table>',
-  downloadThis: 'Download this',
+  downloadThis: 'Download the data',
   sourceText: 'Source',
   source: {
     url: '#',
