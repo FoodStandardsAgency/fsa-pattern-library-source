@@ -26,12 +26,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 
+## [0.0.69] - 2022-03-17 (MyHACCP changes)
+
+### Changed
+- Styling fixes for the header component (MyHACCP)
+- Modified Article Hero component to be able to show only the title without buttons
+
+
 ## [0.0.68] - 2022-03-16 (Fixing browser issues)
 
 ### Changed
 - Added postcss addon to storybook
-- Styling fixes for the header component (MyHACCP)
-- Modified Article Hero component to be able to show only the title without buttons
 
 ### Fixed
 - Fixing side effect on Error box
