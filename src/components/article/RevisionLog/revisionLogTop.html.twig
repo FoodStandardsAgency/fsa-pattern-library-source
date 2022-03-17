@@ -1,0 +1,10 @@
+<div class="foot-notes">
+    <ol class="foot-notes__link-list">
+      {% for link in links %}
+        <li class="foot-notes__link-list__item" id="fn:{{ link.key }}">
+          <span class="foot-notes__link-list__item-label">{{ link.label }}</span>
+          <a href="#fnref:{{ link.key }}" class="foot-notes__link-list__item-link"></a>
+        </li>
+      {% endfor %}
+    </ol>
+</div>

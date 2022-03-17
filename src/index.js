@@ -80,6 +80,7 @@ import './components/article/ProductDetails/productDetails';
 import './components/article/AllergensTable/allergensTable';
 import './components/article/ChartBlock/chartBlock';
 import footNotes from './components/article/FootNotes/footNotes';
+import revisionLogBottom from './components/article/RevisionLogBottom/revisionLogBottom';
 import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
@@ -115,6 +116,7 @@ objectFitImages();
 
 backToTop();
 footNotes();
+revisionLogBottom();
 breadcrumbJs();
 pagination();
 searchBar();
