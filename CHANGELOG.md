@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add external link example to the subject listing section
+- Add new revision log componenet
 
 ### Changed
 - Remove underline on external links in subject listing
