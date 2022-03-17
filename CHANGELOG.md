@@ -25,6 +25,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - 
 
+## [0.0.70] - 2022-03-17 (Footnotes updated and fixes)
+
+### Fixed
+- Updated external link styling in navigation
+- Fixed styling on the footnotes
+- Fixed footnote example
+
 
 ## [0.0.69] - 2022-03-17 (MyHACCP changes)
 
