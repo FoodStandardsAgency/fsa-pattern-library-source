@@ -118,6 +118,7 @@
       width: 100%;
       border-radius: 100%;
       z-index: -1;
+
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         content: none;
       }
@@ -339,7 +340,6 @@
         padding-bottom: 3.5rem;
       }
     }
-    
   }
 
   &--with-services {
