@@ -4,15 +4,15 @@
         {{ heading }}
       </div>
       <div class="revision-log__toggle">
-        <button class="revision-log__toggle-button revision-log__toggle-button-hide">{{ toggle_text_hide }}</button>
-        <button class="revision-log__toggle-button revision-log__toggle-button-show">{{ toggle_text_show }}</button>
+        <button class="revision-log__toggle-button revision-log__toggle-button-hide" aria-hidden="false">{{ toggle_text_hide }}</button>
+        <button class="revision-log__toggle-button revision-log__toggle-button-show" aria-hidden="true">{{ toggle_text_show }}</button>
       </div>
     </div>
     <div  class="revision-log__dates">
       <p>{{ published_label }}: {{ published }}</p>
       <p>{{ last_updated_label }}: {{ last_updated }}</p>
     </div>
-    <ul class="revision-log__link-list">
+    <ul class="revision-log__link-list" aria-hidden="false">
       {% for log in logs %}
         <li class="revision-log__link-list__item" id="fn:{{ log.key }}">
           <strong class="revision-log__link-list__item-date">{{ log.date }}</strong>
