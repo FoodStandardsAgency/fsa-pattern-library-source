@@ -63,7 +63,6 @@
     /* Remove background pattern and fit-content doesn't work in IE11 */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
-      height: 100vh;
     }
 
     &--campaign-block {
@@ -119,6 +118,9 @@
       width: 100%;
       border-radius: 100%;
       z-index: -1;
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        content: none;
+      }
     }
   }
 
@@ -337,6 +339,7 @@
         padding-bottom: 3.5rem;
       }
     }
+    
   }
 
   &--with-services {
@@ -348,7 +351,10 @@
     }
 
     .hero__row {
-      flex-direction: column;
+      @supports not (-ms-high-contrast: none) {
+        /* Non-IE styles here */
+        flex-direction: column;
+      }
     }
 
     &.hero--with-image {
