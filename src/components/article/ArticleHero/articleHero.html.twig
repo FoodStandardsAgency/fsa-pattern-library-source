@@ -30,8 +30,13 @@
   {% endif %}
   <div class="article-hero__toolbar">
     {% if last_updated_date %}
-      <div class="article-hero__toolbar__last-updated">
-        {{ last_updated_string }}: {{ last_updated_date }}
+      <div class="article-hero__toolbar__last-updated-container">
+        <div class="article-hero__toolbar__last-updated">
+          {{ last_updated_string }}: {{ last_updated_date }}
+        </div>
+        {% if revision_log %}
+          <a class="article-hero__toolbar__revision-log" href="#revision-log">{{ revision_label }}</a>
+        {% endif %}
       </div>
     {% endif %}
     {% if pdf_link is not empty or print_this_page is not empty %}
