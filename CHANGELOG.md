@@ -5,11 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-
-## [Upcoming release] - 1971-11-03
+## [Upcoming release template] - 1971-11-03
 
 ### Added
--
+- 
 
 ### Changed
 -
@@ -21,32 +20,70 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
+-
+
+### Security
+
+
+## [Upcoming release template] - 1971-11-03
+
+### Added
+- Add revision log update to article hero component
+
+### Changed
+-
+
+### Deprecated
 - 
+
+### Removed
+- 
+
+### Fixed
+-
 
 ### Security
 - 
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.70] - 2022-03-17 (Footnotes updated and fixes)
+
+### Fixed
+- Updated external link styling in navigation
+- Fixed styling on the footnotes
+- Fixed footnote example
+
+
+## [0.0.69] - 2022-03-17 (MyHACCP changes)
+
+### Changed
+- Styling fixes for the header component (MyHACCP)
+- Modified Article Hero component to be able to show only the title without buttons
+
+
+## [0.0.68] - 2022-03-16 (Fixing browser issues)
+
+### Changed
+- Added postcss addon to storybook
+
+### Fixed
+- Fixing side effect on Error box
+- Fixing linting issue due to prefix (added because autoprefixer doesn't generate it)
+- Fix for object-fit-image polyfill
+
+
+## [0.0.67] - 2022-03-16 (New components, updates & fixes)
 
 ### Added
 - Add external link example to the subject listing section
-- Add revision log update to article hero component
+- Site map component
 
 ### Changed
 - Remove underline on external links in subject listing
 
-### Deprecated
-- 
-
-### Removed
-- 
-
 ### Fixed
 - Add link styling to form input and error box for login
-
-### Security
-- 
+- Removed top padding for My HACCP variation of the header, as per designs.
 
 
 ## [0.0.66] - 2022-03-15 (Pipeline fix)

@@ -31,16 +31,12 @@
               <a href="{{ logo_link }}" class="header__logo">
                 <span class="header__logo-label visually-hidden">{{ logo_label }}</span>
                 <div class="header__logo-svg header__logo-svg--{{ english ? "english" : "welsh" }}" aria-hidden="true"></div>
+                {% if secondary_logo_label is not empty %}
+                  <span class="header__logo-label visually-hidden">{{ secondary_logo_label }}</span>
+                  <div class="header__logo-svg header__logo-svg--secondary-logo" aria-hidden="true"></div>
+                {% endif %}
               </a>
             </div>
-          {% if secondary_logo_link is not empty %}
-            <div class="header__logo-wrapper header__secondary-logo-wrapper">
-              <a href="{{ secondary_logo_link }}" class="header__logo">
-                <span class="header__logo-label visually-hidden">{{ secondary_logo_label }}</span>
-                <div class="header__logo-svg header__logo-svg--secondary-logo" aria-hidden="true"></div>
-              </a>
-            </div>
-          {% endif %}
           </div>
           {% if user_menu_navigation.links is empty %}
           <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
