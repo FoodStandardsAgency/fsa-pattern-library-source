@@ -1,0 +1,64 @@
+@import "src/lib.scss";
+
+.revision-log {
+  &__control {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-weight: bold;
+    font-size: 1.4rem;
+
+    @media screen and (min-width: $fsa-md) {
+      font-size: 1.439rem;
+    }
+  }
+
+  &__dates {
+    margin-top: 0.5rem;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__toggle-button {
+    display: none;
+    background: var(--fsa-primary_white);
+    border: 0;
+    text-decoration: underline;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--fsa-primary_dark-green);
+  }
+
+  &__toggle-button-show {
+    .revision-log--closed & {
+      display: block;
+    }
+  }
+
+  &__toggle-button-hide {
+    .revision-log--open & {
+      display: block;
+    }
+  }
+
+  &__link-list {
+    padding: 0;
+    display: none;
+
+    .revision-log--open & {
+      display: block;
+    }
+
+    li {
+      margin-top: 1rem;
+
+      strong {
+        display: block;
+      }
+    }
+  }
+}

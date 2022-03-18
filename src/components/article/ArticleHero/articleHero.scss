@@ -89,6 +89,15 @@
       margin-top: 2rem;
     }
 
+    &__last-updated-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__revision-log {
+      @include link;
+    }
+
     &__last-updated {
       margin-bottom: 0.5rem;
       height: 100%;
