@@ -26,6 +26,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+- Add new revision log component
+- 
+
+### Changed
+-
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+-
+
+### Security
+- 
+
+
 ## [0.0.69] - 2022-03-17 (MyHACCP changes)
 
 ### Changed
@@ -49,7 +71,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add external link example to the subject listing section
 - Site map component
-- Add new revision log component
 
 ### Changed
 - Remove underline on external links in subject listing
