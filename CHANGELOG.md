@@ -23,12 +23,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
-- 
 
 
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
+- Add revision log update to article hero component
 - Polyfill for download attribute in IE11
 
 ### Changed
@@ -42,10 +42,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
-- Fixing side effect on Error box
+-
 
 ### Security
 - 
+
+
+## [0.0.70] - 2022-03-17 (Footnotes updated and fixes)
+
+### Fixed
+- Updated external link styling in navigation
+- Fixed styling on the footnotes
+- Fixed footnote example
+
+
+## [0.0.69] - 2022-03-17 (MyHACCP changes)
+
+### Changed
+- Styling fixes for the header component (MyHACCP)
+- Modified Article Hero component to be able to show only the title without buttons
+
+
+## [0.0.68] - 2022-03-16 (Fixing browser issues)
+
+### Changed
+- Added postcss addon to storybook
+
+### Fixed
+- Fixing side effect on Error box
+- Fixing linting issue due to prefix (added because autoprefixer doesn't generate it)
+- Fix for object-fit-image polyfill
 
 
 ## [0.0.67] - 2022-03-16 (New components, updates & fixes)

@@ -12,7 +12,16 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
     '@storybook/addon-postcss',
-    "@whitespace/storybook-addon-html"
+    "@whitespace/storybook-addon-html",
+    '@storybook/addon-postcss',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   core: {
     builder: "webpack5",

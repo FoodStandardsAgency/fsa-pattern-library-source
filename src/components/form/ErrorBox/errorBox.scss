@@ -30,7 +30,7 @@
     @include body;
   }
 
-  a:not(&__field) {
+  & a:not(&__field) {
     @include link;
   }
 

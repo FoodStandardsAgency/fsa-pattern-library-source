@@ -30,20 +30,27 @@
   {% endif %}
   <div class="article-hero__toolbar">
     {% if last_updated_date %}
-      <div class="article-hero__toolbar__last-updated">
-        {{ last_updated_string }}: {{ last_updated_date }}
+      <div class="article-hero__toolbar__last-updated-container">
+        <div class="article-hero__toolbar__last-updated">
+          {{ last_updated_string }}: {{ last_updated_date }}
+        </div>
+        {% if revision_log %}
+          <a class="article-hero__toolbar__revision-log" href="#revision-log">{{ revision_label }}</a>
+        {% endif %}
       </div>
     {% endif %}
-    <div class="article-hero__toolbar__buttons">
-      {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
-        pdf_link: pdf_link,
-        pdf_name: pdf_name,
-        view: view,
-        as: as,
-        pdf: pdf,
-        new_window: new_window,
-        print_this_page: print_this_page,
-      } %}
-    </div>
+    {% if pdf_link is not empty or print_this_page is not empty %}
+      <div class="article-hero__toolbar__buttons">
+        {% include '@components/components/article/PdfAndPrintButtons/pdfAndPrintButtons.html.twig' with {
+          pdf_link: pdf_link,
+          pdf_name: pdf_name,
+          view: view,
+          as: as,
+          pdf: pdf,
+          new_window: new_window,
+          print_this_page: print_this_page,
+        } %}
+      </div>
+    {% endif %}
   </div>
 </div>
