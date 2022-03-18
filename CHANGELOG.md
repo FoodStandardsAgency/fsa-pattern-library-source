@@ -29,10 +29,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
-- 
+- Polyfill for download attribute in IE11
 
 ### Changed
 - Added postcss addon to storybook
+- Add download option to button component
 
 ### Deprecated
 - 

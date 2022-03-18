@@ -5583,6 +5583,11 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
+dwnld-attr-polyfill@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/dwnld-attr-polyfill/-/dwnld-attr-polyfill-1.1.7.tgz#9a19de4c798dc83294ded539e3675cc16594816e"
+  integrity sha512-80Lig81Ji+teXHS8Sal+PbW4KlSDbZbWoHITVAA8pK/xO/+eCe4hxyU9f0ho8EEQcMYEUyf2V1qZTHgfTsW6GQ==
+
 editions@^2.2.0:
   version "2.3.1"
   resolved "https://registry.npmjs.org/editions/-/editions-2.3.1.tgz"
