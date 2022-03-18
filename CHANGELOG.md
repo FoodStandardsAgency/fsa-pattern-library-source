@@ -54,6 +54,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed footnote example
 
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+- Add new revision log component
+- 
+
+### Changed
+-
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+-
+
+### Security
+- 
+
+
 ## [0.0.69] - 2022-03-17 (MyHACCP changes)
 
 ### Changed
