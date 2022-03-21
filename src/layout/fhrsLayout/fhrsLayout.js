@@ -1,2 +1,2 @@
 import './fhrsLayout.html.twig';
-import './fhrsLayout.scss'
+import './fhrsLayout.scss';
