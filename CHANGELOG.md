@@ -23,6 +23,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
+
+
+## [Upcoming release] - 1971-11-03
+
+### Added
+- 
+
+### Changed
+- Updated the links in the Cookie Banner component to have a similar behavior as the ones in the Temporary message component
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+-
+
+### Security
+
 
 
 ## [0.0.73] - 2022-03-21 (Fixes for Footnotes & chart block)
