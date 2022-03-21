@@ -30,8 +30,11 @@
     text-decoration: none;
     border-bottom: 1px solid var(--fsa-primary_white);
 
-    &.external-link::after {
-      background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
+    &.external-link{
+      border-color: var(--fsa-primary_white);
+      &::after {
+        background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
+      }
     }
 
     &:focus {
