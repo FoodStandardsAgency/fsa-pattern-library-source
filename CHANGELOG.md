@@ -41,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Revision log component add missing border
+- Hide arrow from screenreaders on breadcrumb if the arrow isn't visible
 
 ### Security
 - 
