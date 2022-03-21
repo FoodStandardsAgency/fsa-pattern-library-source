@@ -89,7 +89,7 @@ import textBlock from './components/article/TextBlock/textBlock';
 import chartBlock from './components/article/ChartBlock/chartBlock';
 
 /* FHRS components */
-import './components/fhrs/LocalAuthority/localAuthority'
+import './components/fhrs/LocalAuthority/localAuthority';
 
 /* Multipage guide Components */
 import './components/multipageguide/GuideHero/guideHero';
