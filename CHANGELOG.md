@@ -25,27 +25,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 
-## [Upcoming release] - 1971-11-03
-
-### Added
-- 
+## [0.0.73] - 2022-03-21 (Fixes for Footnotes & chart block)
 
 ### Changed
 - Hide footnotes block if no links
 
-### Deprecated
-- 
-
-### Removed
-- 
-
 ### Fixed
 - Updating chartblock js logic to work with multiple elements
 
-### Security
 
-
-## [0.0.72] - 2022-03-21
+## [0.0.72] - 2022-03-21 (Various fixes)
 
 ### Added
 - Polyfill for download attribute in IE11
