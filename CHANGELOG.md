@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Polyfill for download attribute in IE11
+- Add General/Dropdown and Article.WebToolStudiesTable components
 
 ### Changed
 - Add download option to button component

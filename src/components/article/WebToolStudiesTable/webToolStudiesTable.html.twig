@@ -1,0 +1,28 @@
+<table class="allergens-table">
+  <thead>
+    <tr>
+      <th>{{ study_name }}</th>
+      <th>{{ created_on }}</th>
+      <th>{{ last_updated }}</th>
+      <th colspan="3" scope="colgroup">{{ status }}</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <td>{{ row.label }}</td>
+      <td>{{ row.created_at }}</td>
+      <td>{{ row.updated_at }}</td>
+      <td>{{ row.status }}</td>
+      <td>
+        {% include '@components/components/general/Button/button.html.twig' with {
+          element: 'link',
+          type: 'primary',
+          url: button.url,
+          label: button.label,
+        } %}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>

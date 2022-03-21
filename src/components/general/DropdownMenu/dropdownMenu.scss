@@ -1,0 +1,44 @@
+@import "src/lib.scss";
+
+.dropdown-menu {
+  position: relative;
+
+  &__label {
+    color: var(--fsa-primary_black);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    min-height: 44px;
+    background: var(--fsa-tint);
+    border: 1px solid var(--fsa-primary_black);
+    border-radius: 0;
+    max-width: 100%;
+    flex-grow: 1;
+    font-weight: bold;
+
+    background-image: url("./assets/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+  }
+
+  &__option {
+    border-top: solid 1px var(--fsa_border);
+
+    a {
+      display: block;
+      padding: 0.5rem 2.5rem 0.5rem 1rem;
+    }
+  }
+
+  &__options {
+    background: var(--fsa-primary_white);
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    &-open {
+      display: block;
+    }
+  }
+}
