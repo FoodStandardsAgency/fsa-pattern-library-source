@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
--
+- Updating chartblock js logic to work with multiple elements
 
 ### Security
 
