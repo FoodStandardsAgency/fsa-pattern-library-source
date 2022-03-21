@@ -1,4 +1,5 @@
 import localAuthority from './localAuthority.html.twig';
+import './localAuthority.scss';
 import logo from './site-logo-svg';
 
 export default {
