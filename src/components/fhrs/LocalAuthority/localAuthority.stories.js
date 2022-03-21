@@ -1,6 +1,6 @@
 import localAuthority from './localAuthority.html.twig';
 import './localAuthority.scss';
-import logo from './site-logo-svg';
+import logo from './coventryGovLogo';
 
 export default {
   title: 'Components/FHRS/Local Authority',
