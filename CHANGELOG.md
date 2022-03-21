@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Revision log component add missing border
 - Hide arrow from screenreaders on breadcrumb if the arrow isn't visible
+- Use correct variable for generating the previous label's name in the multipage function
 
 ### Security
 - 
