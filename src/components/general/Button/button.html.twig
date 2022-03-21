@@ -1,7 +1,7 @@
 {% set target_is_defined = target is defined and target is not empty %}
 
 {% if element == 'link' %}
-  <a href="{{ url }}" class="button button--{{ type }}" {{ target_is_defined ? 'target="' ~ target ~ '"' : '' }}>
+  <a href="{{ url }}" class="button button--{{ type }}" {{ target_is_defined ? 'target="' ~ target ~ '"' : '' }} {{ download ? ' download' : '' }}>
     {{ label }}
   </a>
 {% elseif element == 'button' %}

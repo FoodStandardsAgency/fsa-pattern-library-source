@@ -1,5 +1,6 @@
 import './base.scss';
 import 'url-polyfill';
+import 'dwnld-attr-polyfill';
 import objectFitImages from 'object-fit-images';
 import cssVars from 'css-vars-ponyfill';
 import 'element-closest-polyfill';
@@ -10,7 +11,6 @@ import './components/general/Button/button';
 import './components/general/Header/header';
 import './components/general/Hero/hero';
 import './components/general/Link/link';
-import './components/general/SiteMap/siteMap';
 import './components/general/ExternalLink/externalLink';
 import './components/general/MailLink/mailLink';
 import './components/general/Footer/footer';
@@ -81,6 +81,7 @@ import './components/article/ProductDetails/productDetails';
 import './components/article/AllergensTable/allergensTable';
 import './components/article/ChartBlock/chartBlock';
 import footNotes from './components/article/FootNotes/footNotes';
+import revisionLogBottom from './components/article/RevisionLogBottom/revisionLogBottom';
 import backToTop from './components/article/BackToTop/backToTop';
 import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPrintButtons';
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
@@ -122,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 backToTop();
 footNotes();
+revisionLogBottom();
 breadcrumbJs();
 pagination();
 searchBar();
