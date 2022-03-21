@@ -1,6 +1,9 @@
 @import "src/lib.scss";
 
 .revision-log {
+  padding-top: 2rem;
+  margin-top: 3rem;
+  border-top: solid 1px var(--fsa__grey-hover);
   &__control {
     display: flex;
     justify-content: space-between;
@@ -30,7 +33,7 @@
     text-decoration: underline;
     font-size: 1rem;
     cursor: pointer;
-    color: var(--fsa-primary_dark-green);
+    @include link;
   }
 
   &__toggle-button-show {
