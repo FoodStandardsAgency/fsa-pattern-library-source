@@ -29,6 +29,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Polyfill for download attribute in IE11
+- FHRS's local authority component
+- FHRS layout
+- FHRS page
 
 ### Changed
 - Add download option to button component
