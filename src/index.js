@@ -88,6 +88,9 @@ import tableOfContents from '@components/components/article/TableOfContents/tabl
 import textBlock from './components/article/TextBlock/textBlock';
 import chartBlock from './components/article/ChartBlock/chartBlock';
 
+/* FHRS components */
+import './components/fhrs/LocalAuthority/localAuthority'
+
 /* Multipage guide Components */
 import './components/multipageguide/GuideHero/guideHero';
 import './components/multipageguide/Pagination/pagination';
