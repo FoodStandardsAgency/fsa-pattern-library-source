@@ -25,6 +25,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 
+## [Upcoming release] - 1971-11-03
+
+
+### Added
+- 
+
+### Changed
+-
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+- Revision log component add missing border
+
+### Security
+- 
+
+
 ## [0.0.71] - 2022-03*18 (Revision log component)
 
 ### Added
