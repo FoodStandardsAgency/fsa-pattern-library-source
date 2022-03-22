@@ -2,33 +2,29 @@ import './chartBlock.html.twig';
 import './chartBlock.scss';
 
 export default function () {
-  let DOMContentFirstLoad = true;
   window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
-
-    const el = document.querySelector('.chart-block');
+    const el = document.querySelectorAll('.chart-block');
     if (!el) {
       return;
     }
 
-    const tableButton = el.querySelector('.chart-block__switch-button--table');
-    const chartButton = el.querySelector('.chart-block__switch-button--chart');
-    const image = el.querySelector('.chart-block__image');
-    const content = el.querySelector('.chart-block__content');
-    if (!tableButton || !chartButton || !image || !content) {
-      return;
-    }
+    for (const chartBlock of el) {
+      const tableButton = chartBlock.querySelector('.chart-block__switch-button--table');
+      const chartButton = chartBlock.querySelector('.chart-block__switch-button--chart');
+      const image = chartBlock.querySelector('.chart-block__image');
+      const content = chartBlock.querySelector('.chart-block__content');
+      if (!tableButton || !chartButton || !image || !content) {
+        return;
+      }
 
-    function toggleVisibility() {
-      [tableButton, chartButton, image, content].forEach((element) => {
-        element.classList.toggle('hide');
-      });
-    }
+      const toggleVisibility = function () {
+        [tableButton, chartButton, image, content].forEach((element) => {
+          element.classList.toggle('hide');
+        });
+      };
 
-    tableButton.addEventListener('click', toggleVisibility);
-    chartButton.addEventListener('click', toggleVisibility);
+      tableButton.addEventListener('click', toggleVisibility);
+      chartButton.addEventListener('click', toggleVisibility);
+    }
   });
 }
