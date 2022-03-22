@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
-- Add General/Dropdown and Article.WebToolStudiesTable components
+- Add General/DropdownMenu and Article/WebToolStudiesTable components
 
 ### Changed
 - Updated the links in the Cookie Banner component to have a similar behavior as the ones in the Temporary message component
