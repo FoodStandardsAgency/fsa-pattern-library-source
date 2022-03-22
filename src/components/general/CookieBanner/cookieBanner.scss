@@ -25,17 +25,42 @@
     color: var(--fsa-primary_white);
   }
 
+  & a {
+    color: var(--fsa-primary_white);
+    text-decoration: none;
+    border-bottom: 1px solid var(--fsa-primary_white);
+
+    &.external-link {
+      border-color: var(--fsa-primary_white);
+
+      &::after {
+        background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
+      }
+    }
+
+    &:focus {
+      outline: none;
+      color: var(--fsa__link-green);
+      background-color: var(--fsa-primary_white);
+
+      &::after {
+        background-image: url("/src/components/general/ExternalLink/assets/external.svg");
+      }
+    }
+
+    &:hover {
+      border-bottom: 4px solid var(--fsa-primary_white);
+      color: var(--fsa-primary_white);
+    }
+
+    &:hover:focus {
+      color: var(--fsa__link-green);
+    }
+  }
+
   &__find-out-more,
   &__manage {
     white-space: nowrap;
-
-    @include link;
-
-    color: var(--fsa-primary_white);
-
-    &:hover {
-      color: var(--fsa__grey-hover);
-    }
   }
 
   &__actions {
@@ -62,6 +87,10 @@
 
     @media screen and (min-width: $fsa-xl) {
       margin-right: 2rem;
+    }
+
+    &:hover {
+      margin-top: 3px; // to prevent the element to move due to the border increase
     }
   }
 

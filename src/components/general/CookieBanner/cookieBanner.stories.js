@@ -13,7 +13,7 @@ export default {
 
 export const CookieBanner = (args) => cookieBanner(args);
 CookieBanner.args = {
-  text: 'We use cookies to make food.gov.uk work, understand how you use the website and make improvements. <br>They aren’t used to identify you personally.',
+  text: 'We use cookies to make food.gov.uk work, understand how you use the website and make improvements. <br><a href="#" class="external-link">Checking external link</a>.They aren’t used to identify you personally.',
   find_out_more_link: '#',
   find_out_more_text: 'Find out more about cookies',
   manage_link: '#',
