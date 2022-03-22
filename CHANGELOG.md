@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
-- 
 
 ### Changed
 -
@@ -23,6 +22,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
+
+
+## [0.0.74] - 2022-03-22 (New Components, updates and fixes)
+
+### Added
+- Add General/DropdownMenu and Article/WebToolStudiesTable components
+- Table examples in text block
+
+### Changed
+- Updated the links in the Cookie Banner component to have a similar behavior as the ones in the Temporary message component
+- Changed bottom padding for the MyHACCP version of the header
+- Change focus order and remove submenu from secondary menu in contact form
+
+### Fixed
+- Allow tables to have headers in different positions
 
 
 ## [0.0.73] - 2022-03-21 (Fixes for Footnotes & chart block)

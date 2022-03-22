@@ -1,4 +1,7 @@
 <section class="contact-promo">
+  {% if title %}
+    <h3 class="contact-promo__submenu-title">{{ title }}</h3>
+  {% endif %}
   {% for link in links %}
     <a href="{{ link.href }}" class="contact-promo__card">
       <div class="contact-promo__wrapper">
