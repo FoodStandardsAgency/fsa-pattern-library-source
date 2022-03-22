@@ -1,4 +1,4 @@
-<table class="allergens-table">
+<table class="webtool-studies-table">
   <thead>
     <tr>
       <th>{{ study_name }}</th>
@@ -14,12 +14,18 @@
       <td>{{ row.created_at }}</td>
       <td>{{ row.updated_at }}</td>
       <td>{{ row.status }}</td>
-      <td>
+      <td class="right">
         {% include '@components/components/general/Button/button.html.twig' with {
           element: 'link',
           type: 'primary',
-          url: button.url,
-          label: button.label,
+          url: row.button.url,
+          label: row.button.label,
+        } %}
+      </td>
+      <td>
+        {% include '@components/components/general/DropdownMenu/dropdownMenu.html.twig' with {
+          label: 'More options',
+          options: row.options,
         } %}
       </td>
     </tr>

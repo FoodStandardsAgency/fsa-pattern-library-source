@@ -1,6 +1,6 @@
 @import "src/lib.scss";
 
-.allergens-table {
+.webtool-studies-table {
   width: 100%;
   margin-top: 2rem;
   text-align: left;
@@ -8,6 +8,12 @@
 
   td {
     border: 1px solid var(--fsa_border);
+    border-left: none;
+    border-right: none;
+
+    &.right {
+      text-align: right;
+    }
   }
 
   thead {

@@ -12,15 +12,18 @@ const Template = (args) => {
 export const DropdownMenu = Template.bind({});
 DropdownMenu.args = {
   label: 'All options',
-  options: [{
-    url: '#',
-    label: 'Download',
-  },{
-    url: '#',
-    label: 'Copy',
-  },
+  options: [
+    {
+      url: '#',
+      label: 'Download',
+    },
+    {
+      url: '#',
+      label: 'Copy',
+    },
     {
       url: '#',
       label: 'Delete',
-    }],
+    },
+  ],
 };
