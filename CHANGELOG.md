@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.74] - 2022-03-22 (New Components, updates and fixes)
 
 ### Added
 - Add General/DropdownMenu and Article/WebToolStudiesTable components
@@ -36,17 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed bottom padding for the MyHACCP version of the header
 - Change focus order and remove submenu from secondary menu in contact form
 
-### Deprecated
-- 
-
-### Removed
-- 
-
 ### Fixed
 - Allow tables to have headers in different positions
-
-### Security
-
 
 
 ## [0.0.73] - 2022-03-21 (Fixes for Footnotes & chart block)
