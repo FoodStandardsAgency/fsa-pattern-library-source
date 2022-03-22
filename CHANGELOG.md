@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated the links in the Cookie Banner component to have a similar behavior as the ones in the Temporary message component
 - Changed bottom padding for the MyHACCP version of the header
+- Change focus order and remove submenu from secondary menu in contact form
 
 ### Deprecated
 - 
