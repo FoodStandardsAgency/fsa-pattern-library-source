@@ -22,6 +22,7 @@ import './components/general/ErrorResponse/errorResponse';
 import './components/general/SkipToMainContent/skipToMainContent';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
+import dropdownMenu from './components/general/DropdownMenu/dropdownMenu';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
@@ -79,6 +80,7 @@ import './components/article/QuoteBlock/quoteBlock';
 import './components/article/TeamContacts/teamContacts';
 import './components/article/ProductDetails/productDetails';
 import './components/article/AllergensTable/allergensTable';
+import './components/article/WebToolStudiesTable/webToolStudiesTable';
 import footNotes from './components/article/FootNotes/footNotes';
 import revisionLogBottom from './components/article/RevisionLogBottom/revisionLogBottom';
 import backToTop from './components/article/BackToTop/backToTop';
@@ -133,3 +135,4 @@ tableOfContents();
 textBlock();
 chartBlock();
 mapField();
+dropdownMenu();
