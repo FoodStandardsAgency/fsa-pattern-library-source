@@ -16,10 +16,13 @@ export default function () {
   // Toggles the overflowed class to handle the overflow on the breadcrumb
   // depending on screensizes
   function overflow(breadcrumb, breadcrumbItems, breadcrumbLength) {
+    const arrow = breadcrumb.querySelector('.breadcrumb__mobile-overlay');
     if (breadcrumbLength > breadcrumbItems.clientWidth) {
       breadcrumb.classList.add('overflowed');
+      arrow.setAttribute('tabindex', 0);
     } else {
       breadcrumb.classList.remove('overflowed');
+      arrow.setAttribute('tabindex', -1);
     }
   }
 

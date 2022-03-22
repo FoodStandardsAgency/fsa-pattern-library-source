@@ -23,16 +23,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
 
 
 ## [Upcoming release] - 1971-11-03
 
 ### Added
-- Polyfill for download attribute in IE11
 - Add General/Dropdown and Article.WebToolStudiesTable components
 
 ### Changed
-- Add download option to button component
+- Updated the links in the Cookie Banner component to have a similar behavior as the ones in the Temporary message component
 
 ### Deprecated
 - 
@@ -41,10 +41,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
-- Revision log component add missing border
+-
 
 ### Security
-- 
+
+
+
+## [0.0.73] - 2022-03-21 (Fixes for Footnotes & chart block)
+
+### Changed
+- Hide footnotes block if no links
+
+### Fixed
+- Updating chartblock js logic to work with multiple elements
+
+
+## [0.0.72] - 2022-03-21 (Various fixes)
+
+### Added
+- Polyfill for download attribute in IE11
+
+### Changed
+- Add download option to button component
+
+### Fixed
+- Revision log component add missing border
+- Hide arrow from screenreaders on breadcrumb if the arrow isn't visible
+- Use correct variable for generating the previous label's name in the multipage function
 
 
 ## [0.0.71] - 2022-03*18 (Revision log component)
