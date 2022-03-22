@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Add download option to button component
+- Add a 'by search' variation of the local authority component
 
 ### Deprecated
 - 
