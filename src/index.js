@@ -80,7 +80,6 @@ import './components/article/QuoteBlock/quoteBlock';
 import './components/article/TeamContacts/teamContacts';
 import './components/article/ProductDetails/productDetails';
 import './components/article/AllergensTable/allergensTable';
-import './components/article/ChartBlock/chartBlock';
 import './components/article/WebToolStudiesTable/webToolStudiesTable';
 import footNotes from './components/article/FootNotes/footNotes';
 import revisionLogBottom from './components/article/RevisionLogBottom/revisionLogBottom';
