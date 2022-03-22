@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
-- 
 
 ### Changed
 -
@@ -30,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add General/DropdownMenu and Article/WebToolStudiesTable components
+- Table examples in text block
 
 ### Changed
 - Updated the links in the Cookie Banner component to have a similar behavior as the ones in the Temporary message component
@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
--
+- Allow tables to have headers in different positions
 
 ### Security
 
