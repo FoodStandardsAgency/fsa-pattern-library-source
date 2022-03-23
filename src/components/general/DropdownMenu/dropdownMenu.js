@@ -4,10 +4,11 @@ import './dropdownMenu.html.twig';
 export default function () {
   let DOMContentFirstLoad = true;
   window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
+    if (!DOMContentFirstLoad) {
       return;
     }
+
+    DOMContentFirstLoad = false;
 
     const dropdowns = document.querySelectorAll('.dropdown-menu__label');
 
