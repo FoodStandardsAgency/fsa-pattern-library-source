@@ -1,0 +1,70 @@
+@import "src/lib.scss";
+
+.webtool-progress-bar {
+  background: var(--fsa_online-grey);
+  border: 1px solid var(--fsa_border);
+  padding: 1rem;
+
+  &__line {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    & + & {
+      margin-top: 1rem;
+    }
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  &__steps {
+
+  }
+
+  &__step {
+    border-left: 4px solid var(--fsa-webtool-prgress-bar-border-step);
+    padding: 1rem 1.6rem;
+
+    a {
+      color: var(--fsa-primary_dark-green);
+      display: block;
+      font-size: 1.125rem;
+      font-weight: bold;
+      width: 100%;
+
+      &:hover {
+        color: var(--fsa__link-green);
+      }
+    }
+
+    &-completed {
+      border-color: var(--fsa-primary_dark-green);
+      margin-bottom: 1px;
+
+      a {
+        color: var(--fsa-primary_black);
+      }
+    }
+
+    &-upcoming {
+
+    }
+
+    &-active {
+      background: var(--fsa-primary_dark-green);
+
+      a {
+        color: var(--fsa-primary_white);
+
+        &:hover {
+          color: var(--fsa-primary_white);
+        }
+      }
+    }
+  }
+}

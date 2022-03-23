@@ -89,6 +89,7 @@ import stickySidebar from './components/article/StickySidebar/stickySidebar';
 import tableOfContents from '@components/components/article/TableOfContents/tableOfContents';
 import textBlock from './components/article/TextBlock/textBlock';
 import chartBlock from './components/article/ChartBlock/chartBlock';
+import webtoolProgressBar from './components/article/WebToolProgressBar/webToolProgressBar';
 
 /* Multipage guide Components */
 import './components/multipageguide/GuideHero/guideHero';
@@ -136,3 +137,4 @@ textBlock();
 chartBlock();
 mapField();
 dropdownMenu();
+webtoolProgressBar();
