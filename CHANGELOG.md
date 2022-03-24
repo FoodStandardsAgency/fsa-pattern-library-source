@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
+-
 
 ### Changed
 -
@@ -28,9 +29,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
+-
 
 ### Changed
 - Related content : top text, item images and optional links on items added.
+- Make Chart source optional
 
 ### Deprecated
 - 
@@ -39,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
--
+- The Chart image should resize to its container
 
 ### Security
 -
