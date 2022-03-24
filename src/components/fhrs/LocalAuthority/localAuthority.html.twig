@@ -1,0 +1,42 @@
+{% set mail_to_email = "mailto:" ~ email_address %}
+
+<div class="local-authority">
+  <h2 class="local-authority__title">{{ local_authority }}</h2>
+  <div class="local-authority__wrapper">
+    <div class="local-authority__content">
+      <div class="local-authority__text">
+        {% if name_content %}
+          <div class="local-authority__field">
+            <span class="local-authority__field-name">{{ name_title }}:</span>
+            <span class="local-authority__field-content">{{ name_content }}</span>
+          </div>
+        {% endif %}
+        {% if website_url %}
+          <div class="local-authority__field">
+            <span class="local-authority__field-name">{{ website_title }}:</span>
+            <span class="local-authority__field-content">
+              {% include "../../general/ExternalLink/externalLink.html.twig" with {
+                external_link: website_url,
+                external_link_url: website_url
+              } %}
+            </span>
+          </div>
+        {% endif %}
+        {% if email_address %}
+          <div class="local-authority__field">
+            <span class="local-authority__field-name">{{ email_title }}:</span>
+            <span class="local-authority__field-content">
+              {% include "../../general/Link/link.html.twig" with {
+                link_url: mail_to_email,
+                link_text: email_address
+              } %}
+            </span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="local-authority__logo-wrapper">
+      {{ logo_svg|raw }}
+    </div>
+  </div>
+</div>
