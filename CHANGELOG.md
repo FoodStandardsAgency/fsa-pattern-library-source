@@ -25,6 +25,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+
+### Changed
+- Related content : top text, item images and optional links on items added.
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+-
+
+### Security
+-
+
+
 ## [0.0.74] - 2022-03-22 (New Components, updates and fixes)
 
 ### Added
