@@ -5,37 +5,81 @@
   border: 1px solid var(--fsa_border);
   padding: 1rem;
 
+  @media screen and (min-width: $fsa-lg) {
+    display: inline-block;
+    padding-bottom: 2rem;
+  }
+
   &__line {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 
+    @media screen and (min-width: $fsa-lg) {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
     & + & {
       margin-top: 1rem;
+    }
+
+    &-opened .webtool-progress-bar__steps {
+      display: block;
+
+      @media screen and (min-width: $fsa-lg) {
+        display: flex;
+        flex-direction: row;
+      }
     }
   }
 
   &__label {
+    cursor: default;
     font-size: 1.4rem;
     font-weight: bold;
     line-height: 1;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    @media screen and (min-width: $fsa-lg) {
+      margin-right: 2.2rem;
+    }
   }
 
   &__steps {
+    display: none;
 
+    @media screen and (min-width: $fsa-lg) {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   &__step {
     border-left: 4px solid var(--fsa-webtool-prgress-bar-border-step);
-    padding: 1rem 1.6rem;
+
+    @media screen and (min-width: $fsa-lg) {
+      border-bottom: 4px solid var(--fsa-webtool-prgress-bar-border-step);
+      border-left: none;
+    }
 
     a {
       color: var(--fsa-primary_dark-green);
       display: block;
       font-size: 1.125rem;
       font-weight: bold;
+      padding: 1rem 1.6rem;
       width: 100%;
+
+      @media screen and (min-width: $fsa-lg) {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+      }
+
+      @media screen and (min-width: $fsa-xxl) {
+        padding: 1rem 2rem;
+      }
 
       &:hover {
         color: var(--fsa__link-green);
@@ -46,13 +90,14 @@
       border-color: var(--fsa-primary_dark-green);
       margin-bottom: 1px;
 
+      @media screen and (min-width: $fsa-lg) {
+        margin-right: 1px;
+        margin-bottom: 0;
+      }
+
       a {
         color: var(--fsa-primary_black);
       }
-    }
-
-    &-upcoming {
-
     }
 
     &-active {

@@ -5,8 +5,8 @@
 </script>
 
 <div class="webtool-progress-bar">
-  {% for line in lines %}
-    <div class="webtool-progress-bar__line">
+  {% for lineNum, line in lines %}
+    <div class="webtool-progress-bar__line {{ lineNum == 0 ? 'webtool-progress-bar__line-opened' : '' }}">
       <div class="webtool-progress-bar__label">
         {{ line.label }}
       </div>
