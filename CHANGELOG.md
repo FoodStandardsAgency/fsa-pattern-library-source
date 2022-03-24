@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
+- Related content : top text, item images and optional links on items added.
 - Make Chart source optional
 
 ### Deprecated
