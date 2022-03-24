@@ -26,26 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
-
-### Added
--
+## [0.0.75] - 2022-03-24 (Changes in Chart & Related content components)
 
 ### Changed
 - Related content : top text, item images and optional links on items added.
 - Make Chart source optional
 
-### Deprecated
-- 
-
-### Removed
-- 
-
 ### Fixed
 - The Chart image should resize to its container
-
-### Security
--
 
 
 ## [0.0.74] - 2022-03-22 (New Components, updates and fixes)
