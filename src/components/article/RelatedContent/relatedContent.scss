@@ -22,6 +22,11 @@
     }
   }
 
+  &__main-text {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
   &__grid-container {
     @include grid-container;
   }
@@ -101,6 +106,29 @@
       &::after {
         background-image: url("./assets/arrow-hover.svg");
       }
+    }
+  }
+
+  &__card_no_link {
+    &::after {
+      content: "";
+      background-image: none;
+    }
+
+    &:hover {
+      border-color: inherit;
+
+      &::after {
+        background-image: none;
+      }
+    }
+  }
+
+  &__image {
+    margin: 1rem 1.25rem 0;
+
+    img {
+      width: 100%;
     }
   }
 
