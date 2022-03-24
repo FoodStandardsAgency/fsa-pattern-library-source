@@ -699,6 +699,12 @@
           }
         }
       }
+
+      &__bottom {
+        @media screen and (min-width: $fsa-lg) {
+          padding-bottom: 1rem;
+        }
+      }
     }
   }
 }

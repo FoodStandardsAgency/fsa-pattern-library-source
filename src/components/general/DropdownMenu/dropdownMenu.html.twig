@@ -1,0 +1,10 @@
+<div class="dropdown-menu">
+  <div class="dropdown-menu__label">{{ label }}</div>
+  <div class="dropdown-menu__options">
+    {% for option in options %}
+      <div class="dropdown-menu__option">
+        <a href="{{ option.url }}">{{ option.label }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
