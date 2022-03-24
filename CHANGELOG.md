@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
+-
 
 ### Changed
 -
@@ -22,9 +23,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
 
 
-## [Upcoming release template] - 1971-11-03
+## [Upcoming release] - 1971-11-03
 
 ### Added
 - FHRS's local authority component
@@ -32,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - FHRS page
 
 ### Changed
--
+- Make Chart source optional
 
 ### Deprecated
 - 
@@ -41,10 +43,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 
 
 ### Fixed
--
+- The Chart image should resize to its container
 
 ### Security
 -
+
 
 ## [0.0.74] - 2022-03-22 (New Components, updates and fixes)
 
