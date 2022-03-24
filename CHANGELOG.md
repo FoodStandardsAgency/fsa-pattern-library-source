@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
-- 
+-
 
 ### Changed
 -
@@ -23,9 +23,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.75] - 2022-03-24 (Changes in Chart & Related content components)
+
+### Changed
+- Related content : top text, item images and optional links on items added.
+- Make Chart source optional
+
+### Fixed
+- The Chart image should resize to its container
+
+
+## [0.0.74] - 2022-03-22 (New Components, updates and fixes)
+
+### Added
+- Add General/DropdownMenu and Article/WebToolStudiesTable components
+- Table examples in text block
+
+### Changed
+- Updated the links in the Cookie Banner component to have a similar behavior as the ones in the Temporary message component
+- Changed bottom padding for the MyHACCP version of the header
+- Change focus order and remove submenu from secondary menu in contact form
+
+### Fixed
+- Allow tables to have headers in different positions
+
+
+## [0.0.73] - 2022-03-21 (Fixes for Footnotes & chart block)
+
+### Changed
+- Hide footnotes block if no links
+
+### Fixed
+- Updating chartblock js logic to work with multiple elements
+
+
+## [0.0.72] - 2022-03-21 (Various fixes)
 
 ### Added
 - Polyfill for download attribute in IE11
@@ -37,17 +72,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add download option to button component
 - Add a 'by search' variation of the local authority component
 
-### Deprecated
-- 
-
-### Removed
-- 
-
 ### Fixed
 - Revision log component add missing border
-
-### Security
-- 
+- Hide arrow from screenreaders on breadcrumb if the arrow isn't visible
+- Use correct variable for generating the previous label's name in the multipage function
 
 
 ## [0.0.71] - 2022-03*18 (Revision log component)

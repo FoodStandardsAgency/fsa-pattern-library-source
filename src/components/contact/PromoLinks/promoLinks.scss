@@ -3,6 +3,12 @@
 .contact-promo {
   margin-top: 2rem;
 
+  &__submenu-title {
+    @include h2;
+
+    margin-bottom: 0;
+  }
+
   &__card {
     padding: 1rem;
     padding-right: 0.75rem;

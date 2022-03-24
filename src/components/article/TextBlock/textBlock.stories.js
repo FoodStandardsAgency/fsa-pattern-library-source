@@ -1,5 +1,6 @@
 import textBlock from './textBlock.html.twig';
 import './textBlock.scss';
+import textBlockTables from './textBlockTables.html.twig';
 
 export default {
   title: 'Components/Article/Text Block',
@@ -98,4 +99,8 @@ TextBlock.args = {
     '    </tr>\n' +
     '    </tbody>\n' +
     '  </table>\n',
+};
+
+export const TableExamples = () => {
+  return textBlockTables();
 };
