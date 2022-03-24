@@ -31,6 +31,7 @@
       {{ content }}
     </div>
   {% endif %}
+  {% if source and source.url is not empty and source.label is not empty %}
   <p class="chart-block__source"><span class="chart-block__source-text">{{ sourceText }}: </span>
     {% if source.external %}
       {% include '@components/components/general/ExternalLink/externalLink.html.twig' with {
@@ -44,6 +45,7 @@
       } %}
     {% endif %}
   </p>
+  {% endif %}
   <p class="chart-block__download-label">{{ downloadThis }}</p>
   <div class="chart-block__download-buttons">
     {% for link in links %}
