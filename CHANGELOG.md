@@ -8,10 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
--
+- FHRS's local authority component
+- FHRS layout
+- FHRS page
 
 ### Changed
--
+- Add a 'by search' variation of the local authority component
 
 ### Deprecated
 - 
@@ -25,6 +27,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+- FHRS's local authority component
+- FHRS layout
+- FHRS page
+
+### Changed
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+-
+
+### Security
 
 ## [0.0.75] - 2022-03-24 (Changes in Chart & Related content components)
 
@@ -64,13 +85,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Polyfill for download attribute in IE11
-- FHRS's local authority component
-- FHRS layout
-- FHRS page
 
 ### Changed
 - Add download option to button component
-- Add a 'by search' variation of the local authority component
 
 ### Fixed
 - Revision log component add missing border
