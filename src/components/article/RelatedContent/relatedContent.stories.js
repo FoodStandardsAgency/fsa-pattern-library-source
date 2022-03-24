@@ -55,7 +55,7 @@ RelatedContentWithImage.args = {
       image: {
         url: 'https://via.placeholder.com/300x300',
         alt: 'Image 2',
-      },      
+      },
     },
     {
       title: 'EAT Study: early introduction of allergenic foods to induce tolerance',
@@ -93,7 +93,7 @@ RelatedContentWithNoLink.args = {
       image: {
         url: 'https://via.placeholder.com/300x300',
         alt: 'Image 2',
-      },      
+      },
     },
     {
       title: 'EAT Study: early introduction of allergenic foods to induce tolerance',
