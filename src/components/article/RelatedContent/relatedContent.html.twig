@@ -2,20 +2,36 @@
   <div class="related-content__grid-container">
     <div class="related-content__grid-row">
       <h2 class="related-content__main-heading">{{ title }}</h2>
+      {% if text is not empty %}
+        <p class="related-content__main-text">{{ text }}</p>
+      {% endif %}
     </div>
   </div>
   <div class="related-content__grid-container">
     <div class="related-content__grid-row related-content__grid-row--centered">
       {% for key,card in cards %}
         <div class="related-content__card-wrapper">
-          <a class="related-content__card" href="{{ card.link }}" data-fsa-at="related-content-{{ key }}">
-            <h3 class="related-content__sub-heading">
-              {{ card.title }}
-            </h3>
-            {% if card.description is defined %}
-              <p class="related-content__description">{{ card.description }}</p>
-            {% endif %}
-          </a>
+          {% if card.link is not empty %}
+            <a class="related-content__card" href="{{ card.link }}" data-fsa-at="related-content-{{ key }}">
+          {% else %}
+            <span class="related-content__card related-content__card_no_link" data-fsa-at="related-content-{{ key }}">
+          {% endif %}
+          <h3 class="related-content__sub-heading">
+            {{ card.title }}
+          </h3>
+          {% if card.image is defined %}
+            <div class="related-content__image">
+              <img src={{ card.image.url }} alt="{{ card.image.alt }}"/>
+            </div>
+          {% endif %}
+          {% if card.description is defined %}
+            <p class="related-content__description">{{ card.description }}</p>
+          {% endif %}
+          {% if card.link is not empty %}
+            </a>
+          {% else %}
+            </span>
+          {% endif %}
         </div>
       {% endfor %}
     </div>

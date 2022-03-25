@@ -1,0 +1,53 @@
+@import "src/lib.scss";
+
+.local-authority {
+  margin-top: 3rem;
+
+  &__wrapper {
+    display: inline-block;
+
+    @media screen and (min-width: $fsa-md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__field {
+    margin-top: 1rem;
+  }
+
+  &__field-name {
+    @include body;
+
+    font-weight: bold;
+    display: inline-block;
+    min-width: 6.25rem;
+  }
+
+  &__field-content {
+    @include body;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    max-height: 6.25rem;
+
+    @media screen and (min-width: $fsa-md) {
+      height: 7.5rem;
+      width: 11rem;
+      margin-top: 0;
+    }
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

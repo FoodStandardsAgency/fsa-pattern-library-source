@@ -1,0 +1,29 @@
+@import "src/lib.scss";
+
+.fhrs-layout {
+  max-width: 100%;
+
+  &__container {
+    @include grid-container;
+  }
+
+  &__row {
+    @include grid-row;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $fsa-lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__center {
+    @include grid-cols(4, 4);
+
+    @media screen and (min-width: $fsa-lg) {
+      @include grid-cols(8, 12);
+      @include cols-push(2, 12);
+    }
+  }
+}

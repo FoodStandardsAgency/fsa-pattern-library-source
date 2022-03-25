@@ -91,6 +91,9 @@ import textBlock from './components/article/TextBlock/textBlock';
 import chartBlock from './components/article/ChartBlock/chartBlock';
 import webtoolProgressBar from './components/article/WebToolProgressBar/webToolProgressBar';
 
+/* FHRS components */
+import './components/fhrs/LocalAuthority/localAuthority';
+
 /* Multipage guide Components */
 import './components/multipageguide/GuideHero/guideHero';
 import './components/multipageguide/Pagination/pagination';
@@ -101,6 +104,7 @@ import './layout/twoColumn/twoColumn';
 import './layout/fullWidth/fullWidth';
 import './layout/contentLayout/contentLayout';
 import './layout/contactLayout/contactLayout';
+import './layout/fhrsLayout/fhrsLayout';
 
 import breadcrumbJs from './components/general/Breadcrumb/breadcrumb';
 import pagination from './components/search/Pagination/pagination';
