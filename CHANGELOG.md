@@ -38,6 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Make Chart source optional
+- Make top section of revision log open rev log o click
+- Revision log now closed by default
 
 ### Deprecated
 - 
