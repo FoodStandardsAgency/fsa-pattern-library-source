@@ -11,25 +11,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
-
 -
 
 ### Deprecated
-
 -
 
 ### Removed
-
 -
 
 ### Fixed
-
 -
 
 ### Security
+-
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.76] - 2022-03-25 (New FHRS components, updated components)
 
 ### Added
 - FHRS's local authority component
@@ -38,20 +35,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Make Chart source optional
-- Make top section of revision log open rev log o click
+- Make top section of revision log open rev log on click
 - Revision log now closed by default
-
-### Deprecated
-- 
-
-### Removed
-- 
 
 ### Fixed
 - The Chart image should resize to its container
-
-### Security
--
 
 
 ## [0.0.75] - 2022-03-24 (Changes in Chart & Related content components)
