@@ -9,7 +9,7 @@ export default function () {
       if (!logs.length) {
         return;
       }
-      
+
       const gotoButton = document.querySelector('.article-hero__toolbar__revision-log');
       const showButton = document.querySelector('.revision-log__toggle-button-show');
       const hideButton = document.querySelector('.revision-log__toggle-button-hide');
@@ -34,8 +34,7 @@ export default function () {
           openRevisionLog();
         }
       }
-      function goToRevisionLog () 
-      {
+      function goToRevisionLog() {
         logsContainer.classList.add('revision-log--open');
         logsContainer.classList.remove('revision-log--closed');
         openRevisionLog();
