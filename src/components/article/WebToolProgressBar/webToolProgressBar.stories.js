@@ -13,9 +13,9 @@ WebToolProgressBar.args = {
       steps: [
         {
           url: '#',
-          callback: (function() {
-            document.location.href = 'https://myhaccp.food.gov.uk/';
-          }).toString(),
+          callback: function () {
+            alert('It is a custom callback.');
+          }.toString(),
           label: 'Intro',
           state: 'completed',
         },
@@ -135,6 +135,6 @@ WebToolProgressBar.args = {
           state: 'upcoming',
         },
       ],
-    }
-  ]
+    },
+  ],
 };

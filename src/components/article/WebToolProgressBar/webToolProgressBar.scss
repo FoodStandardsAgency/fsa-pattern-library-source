@@ -25,12 +25,20 @@
       margin-top: 1rem;
     }
 
-    &-opened .webtool-progress-bar__steps {
-      display: block;
+    &-opened {
+      .webtool-progress-bar__label {
+        &::after {
+          transform: none;
+        }
+      }
 
-      @media screen and (min-width: $fsa-lg) {
-        display: flex;
-        flex-direction: row;
+      .webtool-progress-bar__steps {
+        display: block;
+
+        @media screen and (min-width: $fsa-lg) {
+          display: flex;
+          flex-direction: row;
+        }
       }
     }
   }
@@ -41,9 +49,27 @@
     font-weight: bold;
     line-height: 1;
     padding-bottom: 1rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("./assets/arrow.svg");
+      display: inline-block;
+      width: 1.1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 0;
+      vertical-align: middle;
+      transform: rotate(180deg);
+    }
 
     @media screen and (min-width: $fsa-lg) {
       margin-right: 2.2rem;
+
+      &::after {
+        display: none;
+      }
     }
   }
 
