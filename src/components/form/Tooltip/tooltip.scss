@@ -1,0 +1,46 @@
+@import "src/lib.scss";
+
+.tooltip {
+  &__question-mark {
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+
+    &::before {
+      content: "";
+      background-image: url("./assets/question.svg");
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    height: 11px;
+    width: 11px;
+
+    &::before {
+      content: "";
+      background-image: url("./assets/close.svg");
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__body {
+    display: none;
+
+    &-opened {
+      display: block;
+    }
+
+  }
+
+  &__message {
+
+  }
+}
