@@ -2,8 +2,8 @@
 
 .tooltip {
   display: inline-block;
-  margin-left: 400px; // TODO: Delete!
   position: relative;
+  vertical-align: middle;
 
   &__question-mark {
     cursor: pointer;
@@ -45,10 +45,12 @@
     background: var(--fsa_online-grey);
     border: 3px solid var(--fsa-primary_dark-green);
     display: none;
+    font-size: 1rem;
     position: absolute;
     right: 1rem;
     top: 59px;
     text-align: right;
+    font-weight: normal;
     width: 20rem;
     z-index: 3;
 

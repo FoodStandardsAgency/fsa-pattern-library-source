@@ -13,6 +13,8 @@ export default function () {
   }
 
   function handleTooltip(e) {
+    e.preventDefault();
+
     const tooltip = e.target.closest('.tooltip');
     const body = tooltip.querySelector('.tooltip__body');
 

@@ -32,3 +32,9 @@ Error.args = {
   required: 'required',
   error: true,
 };
+
+export const WithTooltip = Template.bind({});
+WithTooltip.args = {
+  ...Normal.args,
+  tooltip_message: 'Choose how often you want to get emails.',
+};

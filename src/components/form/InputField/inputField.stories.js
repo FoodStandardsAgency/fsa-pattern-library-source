@@ -91,3 +91,17 @@ Phone.args = {
   prefix: '+44',
   nested: true,
 };
+
+export const WithTooltip = Template.bind({});
+WithTooltip.args = {
+  id: 'email',
+  name: 'email',
+  label: 'Email or username',
+  caption: 'Enter your email address or username.',
+  required: '',
+  error: false,
+  error_message: 'Unrecognized username or password',
+  value: '',
+  type: 'text',
+  tooltip_message: 'Type your email address here.',
+};
