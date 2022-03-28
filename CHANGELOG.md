@@ -26,13 +26,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.0.77] - 2022-03-28 (Added webtoolprogressbar & reexporting sitemap)
+
+### Added
+- Add Article/WebToolProgressBar component.
+
+### Fixed
+- Missing Sitemap component.
+
+
 ## [0.0.76] - 2022-03-25 (New FHRS components, updated components)
 
 ### Added
 - FHRS's local authority component
 - FHRS layout
 - FHRS page
-- Add Article/WebToolProgressBar component.
 
 ### Changed
 - Make Chart source optional
