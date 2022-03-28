@@ -1,14 +1,9 @@
 import './collapsibleCheckbox.html.twig';
 import './collapsibleCheckbox.scss';
+import {domContentLoadedWrapper} from '../../../domContentLoadedWrapper';
 
 export default function () {
-  let DOMContentFirstLoad = true;
-  window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
-
+  function callback() {
     const accordions = document.querySelectorAll('.accordion');
     if (!accordions) {
       return;
@@ -119,5 +114,7 @@ export default function () {
       //Add keyboard control
       button.addEventListener('keydown', moveFocus);
     });
-  });
+  }
+
+  return domContentLoadedWrapper(callback);
 }

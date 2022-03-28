@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Add a 'by search' variation of the local authority component
+- Create a wrapper for DOMContentLoaded and fix the events behavior.
 
 ### Deprecated
 -

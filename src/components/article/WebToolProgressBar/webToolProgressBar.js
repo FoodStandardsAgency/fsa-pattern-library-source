@@ -1,15 +1,9 @@
 import './webToolProgressBar.html.twig';
 import './webToolProgressBar.scss';
+import {domContentLoadedWrapper} from '../../../domContentLoadedWrapper';
 
 export default function () {
-  let DOMContentFirstLoad = true;
-  window.addEventListener('DOMContentLoaded', function () {
-    if (!DOMContentFirstLoad) {
-      return;
-    }
-
-    DOMContentFirstLoad = false;
-
+  function callback() {
     const labels = document.querySelectorAll('.webtool-progress-bar__label');
 
     for (const label of labels) {
@@ -32,5 +26,7 @@ export default function () {
         parentLine.classList.add('webtool-progress-bar__line-opened');
       });
     }
-  });
+  }
+
+  return domContentLoadedWrapper(callback);
 }
