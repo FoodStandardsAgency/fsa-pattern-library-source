@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
-- Add Article/WebToolProgressBar component.
+-
 
 ### Changed
 
@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - FHRS's local authority component
 - FHRS layout
 - FHRS page
+- Add Article/WebToolProgressBar component.
 
 ### Changed
 - Make Chart source optional

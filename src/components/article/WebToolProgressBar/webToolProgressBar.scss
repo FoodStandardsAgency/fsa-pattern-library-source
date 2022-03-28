@@ -15,14 +15,18 @@
     flex-wrap: wrap;
     flex-direction: column;
 
+    & + & {
+      margin-top: 1rem;
+    }
+
     @media screen and (min-width: $fsa-lg) {
       flex-direction: row;
       align-items: baseline;
       justify-content: space-between;
-    }
 
-    & + & {
-      margin-top: 1rem;
+      & + & {
+        margin-top: 3.5rem;
+      }
     }
 
     &-opened {
@@ -45,10 +49,9 @@
 
   &__label {
     cursor: default;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     line-height: 1;
-    padding-bottom: 1rem;
     position: relative;
 
     &::after {
@@ -59,13 +62,14 @@
       background-repeat: no-repeat;
       background-position: center;
       position: absolute;
+      height: 1rem;
       right: 0;
       vertical-align: middle;
       transform: rotate(180deg);
     }
 
     @media screen and (min-width: $fsa-lg) {
-      margin-right: 2.2rem;
+      margin-right: 2rem;
 
       &::after {
         display: none;
@@ -75,10 +79,12 @@
 
   &__steps {
     display: none;
+    margin-top: 1rem;
 
     @media screen and (min-width: $fsa-lg) {
       display: flex;
       flex-direction: row;
+      margin-top: 0;
     }
   }
 
@@ -93,21 +99,21 @@
     a {
       color: var(--fsa-primary_dark-green);
       display: block;
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: bold;
-      padding: 1rem 1.6rem;
+      padding: 1rem 1.5rem;
       width: 100%;
 
       @media screen and (min-width: $fsa-lg) {
-        font-size: 1.4rem;
-        padding: 0.8rem;
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
       }
 
-      @media screen and (min-width: $fsa-xxl) {
-        padding: 1rem 2rem;
+      @media screen and (min-width: $fsa-xl) {
+        padding: 0.5rem 2rem;
       }
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--fsa__link-green);
       }
     }
@@ -132,7 +138,7 @@
       a {
         color: var(--fsa-primary_white);
 
-        &:hover {
+        &:hover, &:focus {
           color: var(--fsa-primary_white);
         }
       }
