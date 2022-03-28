@@ -90,6 +90,7 @@ import stickySidebar from './components/article/StickySidebar/stickySidebar';
 import tableOfContents from '@components/components/article/TableOfContents/tableOfContents';
 import textBlock from './components/article/TextBlock/textBlock';
 import chartBlock from './components/article/ChartBlock/chartBlock';
+import webtoolProgressBar from './components/article/WebToolProgressBar/webToolProgressBar';
 
 /* FHRS components */
 import './components/fhrs/LocalAuthority/localAuthority';
@@ -141,3 +142,4 @@ textBlock();
 chartBlock();
 mapField();
 dropdownMenu();
+webtoolProgressBar();
