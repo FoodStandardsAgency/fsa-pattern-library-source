@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Changed
-- 
+-
 
 ### Deprecated
 -
@@ -22,8 +22,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
 
-## [Upcoming release] - 1971-11-03
+## [Upcoming release template] - 1971-11-03
+
+### Added
+
+### Changed
+- Add a 'by search' variation of the local authority component
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
+## [0.0.77] - 2022-03-28 (Added webtoolprogressbar & reexporting sitemap)
+
+### Added
+- Add Article/WebToolProgressBar component.
+
+### Fixed
+- Missing Sitemap component.
+
+
+## [0.0.76] - 2022-03-25 (New FHRS components, updated components)
 
 ### Added
 - FHRS's local authority component
@@ -31,18 +61,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - FHRS page
 
 ### Changed
-- Add a 'by search' variation of the local authority component
-
-### Deprecated
-- 
-
-### Removed
-- 
+- Make Chart source optional
+- Make top section of revision log open rev log on click
+- Revision log now closed by default
 
 ### Fixed
--
+- The Chart image should resize to its container
 
-### Security
 
 ## [0.0.75] - 2022-03-24 (Changes in Chart & Related content components)
 
