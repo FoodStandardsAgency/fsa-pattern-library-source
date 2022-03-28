@@ -1,10 +1,16 @@
 @import "src/lib.scss";
 
 .tooltip {
+  display: inline-block;
+  margin-left: 400px; // TODO: Delete!
+  position: relative;
+
   &__question-mark {
     cursor: pointer;
     height: 36px;
+    position: relative;
     width: 36px;
+    z-index: 2;
 
     &::before {
       content: "";
@@ -18,13 +24,17 @@
 
   &__close {
     cursor: pointer;
+    display: block;
     height: 11px;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
     width: 11px;
 
     &::before {
       content: "";
       background-image: url("./assets/close.svg");
-      display: inline-block;
+      display: block;
       width: 11px;
       height: 11px;
       background-repeat: no-repeat;
@@ -32,15 +42,59 @@
   }
 
   &__body {
+    background: var(--fsa_online-grey);
+    border: 3px solid var(--fsa-primary_dark-green);
     display: none;
+    position: absolute;
+    right: 1rem;
+    top: 59px;
+    text-align: right;
+    width: 20rem;
+    z-index: 3;
+
+    @media screen and (min-width: $fsa-md) {
+      width: 41rem;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      top: 57px;
+    }
+
+    &::before {
+      background: var(--fsa_online-grey);
+      border-right: 3px solid var(--fsa-primary_dark-green);
+      content: "";
+      position: absolute;
+      right: -3px;
+      top: -15px;
+      height: 15px;
+      width: 15px;
+    }
+
+    &::after {
+      background: var(--fsa-primary_white);
+      border-right: 3px solid var(--fsa-primary_dark-green);
+      content: "";
+      position: absolute;
+      right: 1px;
+      top: -27px;
+      height: 22px;
+      transform: rotate(45deg);
+      width: 22px;
+    }
+
+    a {
+      @include link;
+      font-weight: bold;
+    }
 
     &-opened {
       display: block;
     }
-
   }
 
   &__message {
-
+    padding: 1rem 2rem 1rem 1rem;
+    text-align: left;
   }
 }
