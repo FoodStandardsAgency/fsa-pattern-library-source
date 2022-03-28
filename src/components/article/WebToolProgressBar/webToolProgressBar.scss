@@ -113,7 +113,8 @@
         padding: 0.5rem 2rem;
       }
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: var(--fsa__link-green);
       }
     }
@@ -138,7 +139,8 @@
       a {
         color: var(--fsa-primary_white);
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: var(--fsa-primary_white);
         }
       }
