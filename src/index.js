@@ -11,6 +11,7 @@ import './components/general/Button/button';
 import './components/general/Header/header';
 import './components/general/Hero/hero';
 import './components/general/Link/link';
+import './components/general/SiteMap/siteMap';
 import './components/general/ExternalLink/externalLink';
 import './components/general/MailLink/mailLink';
 import './components/general/Footer/footer';
@@ -89,6 +90,7 @@ import stickySidebar from './components/article/StickySidebar/stickySidebar';
 import tableOfContents from '@components/components/article/TableOfContents/tableOfContents';
 import textBlock from './components/article/TextBlock/textBlock';
 import chartBlock from './components/article/ChartBlock/chartBlock';
+import webtoolProgressBar from './components/article/WebToolProgressBar/webToolProgressBar';
 
 /* FHRS components */
 import './components/fhrs/LocalAuthority/localAuthority';
@@ -140,3 +142,4 @@ textBlock();
 chartBlock();
 mapField();
 dropdownMenu();
+webtoolProgressBar();

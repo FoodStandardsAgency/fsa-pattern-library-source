@@ -26,6 +26,7 @@ export const Error = Template.bind({});
 Error.args = {
   ...Normal.args,
   error: true,
+  error_message: 'This field is required',
   required: 'required',
 };
 
