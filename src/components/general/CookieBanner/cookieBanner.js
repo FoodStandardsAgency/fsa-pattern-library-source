@@ -1,6 +1,6 @@
 import './cookieBanner.html.twig';
 import './cookieBanner.scss';
-import {domContentLoadedWrapper} from '../../../domContentLoadedWrapper';
+import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
 
 export default function () {
   function callback() {

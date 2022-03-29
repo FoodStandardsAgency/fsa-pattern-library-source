@@ -1,6 +1,6 @@
 import './dropdownMenu.scss';
 import './dropdownMenu.html.twig';
-import {domContentLoadedWrapper} from '../../../domContentLoadedWrapper';
+import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
 
 export default function () {
   function callback() {

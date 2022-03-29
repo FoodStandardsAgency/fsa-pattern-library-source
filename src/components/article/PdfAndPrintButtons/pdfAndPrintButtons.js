@@ -1,6 +1,6 @@
 import './pdfAndPrintButtons.html.twig';
 import './pdfAndPrintButtons.scss';
-import {domContentLoadedWrapper} from '../../../domContentLoadedWrapper';
+import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
 
 export default function () {
   function callback() {
