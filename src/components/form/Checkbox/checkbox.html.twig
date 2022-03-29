@@ -4,6 +4,12 @@
   {% if title is defined %}
     <legend class="checkbox__legend">
       {{ title }}<span class="checkbox__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
+
+      {% if tooltip_message is defined %}
+        {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
+          message: tooltip_message,
+        } %}
+      {% endif %}
     </legend>
   {% endif %}
   {% if description is defined and description is not empty %}

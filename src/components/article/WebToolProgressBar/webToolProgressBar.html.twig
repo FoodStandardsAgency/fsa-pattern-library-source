@@ -7,7 +7,7 @@
       <div class="webtool-progress-bar__steps">
         {% for step in line.steps %}
           <div class="webtool-progress-bar__step webtool-progress-bar__step-{{ step.state }}">
-            <a href="{{ step.url }}" class="webtool-progress-bar__step--{{ line.label|lower }}-{{ step.label|lower }}" onClick="{{ step.callback ? '(' ~ step.callback ~ ')(); return false;' : '' }}">{{ step.label }}</a>
+            <a href="{{ step.url }}" class="webtool-progress-bar__step--{{ line.label|lower }}-{{ step.label|lower }}" onClick="{{ step.callback ? step.callback ~ '(); return false;' : '' }}">{{ step.label }}</a>
           </div>
         {% endfor %}
       </div>
