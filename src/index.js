@@ -89,7 +89,7 @@ import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPr
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 import tableOfContents from '@components/components/article/TableOfContents/tableOfContents';
 import textBlock from './components/article/TextBlock/textBlock';
-import chartBlock from './components/article/ChartBlock/chartBlock'
+import chartBlock from './components/article/ChartBlock/chartBlock';
 
 /* HACPP components */
 import './components/hacpp/WebToolStudiesTable/webToolStudiesTable';
