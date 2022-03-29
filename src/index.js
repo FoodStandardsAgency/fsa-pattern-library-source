@@ -53,6 +53,7 @@ import './components/form/EmailField/emailField';
 import './components/form/Textarea/textarea';
 import './components/form/Step/step';
 import mapField from './components/form/MapField/mapField';
+import tooltip from './components/form/Tooltip/tooltip';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
@@ -143,3 +144,4 @@ chartBlock();
 mapField();
 dropdownMenu();
 webtoolProgressBar();
+tooltip();

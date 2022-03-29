@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
+-
 
 ### Changed
 -
@@ -24,24 +25,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-## [Upcoming release template] - 1971-11-03
+
+## [0.0.78] - 2022-03-29 (New and updated HACCP components)
 
 ### Added
+- Add Form/Tooltip component.
 
 ### Changed
 - Add a 'by search' variation of the local authority component
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
+- InputField, Radio, Checkbox, Dropdown, Textarea components.
+- Create a wrapper for DOMContentLoaded and fix the events behavior.
 
 
 ## [0.0.77] - 2022-03-28 (Added webtoolprogressbar & reexporting sitemap)

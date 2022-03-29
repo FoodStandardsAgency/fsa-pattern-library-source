@@ -4,6 +4,12 @@
   {% if title is defined %}
     <label for="{{ id }}" class="dropdown__label">
       {{ title }}<span class="dropdown__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
+
+      {% if tooltip_message is defined %}
+        {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
+          message: tooltip_message,
+        } %}
+      {% endif %}
     </label>
   {% endif %}
   {% if description is defined and description is not empty %}
