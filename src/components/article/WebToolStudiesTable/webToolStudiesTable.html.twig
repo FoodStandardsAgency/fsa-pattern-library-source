@@ -2,19 +2,20 @@
   <thead>
     <tr>
       <th>{{ study_name }}</th>
-      <th>{{ created_on }}</th>
-      <th>{{ last_updated }}</th>
-      <th colspan="3" scope="colgroup">{{ status }}</th>
+      <th class="hide-on-mobile">{{ created_on }}</th>
+      <th class="hide-on-mobile">{{ last_updated }}</th>
+      <th colspan="3" scope="colgroup" class="hide-on-mobile">{{ status }}</th>
+      <th class="show-on-mobile"></th>
     </tr>
   </thead>
   <tbody>
   {% for row in rows %}
     <tr>
       <td>{{ row.label }}</td>
-      <td>{{ row.created_at }}</td>
-      <td>{{ row.updated_at }}</td>
-      <td>{{ row.status }}</td>
-      <td class="right">
+      <td class="hide-on-mobile">{{ row.created_at }}</td>
+      <td class="hide-on-mobile">{{ row.updated_at }}</td>
+      <td class="hide-on-mobile">{{ row.status }}</td>
+      <td class="right hide-on-mobile">
         {% include '@components/components/general/Button/button.html.twig' with {
           element: 'link',
           type: 'primary',
@@ -22,7 +23,7 @@
           label: row.button.label,
         } %}
       </td>
-      <td>
+      <td class="right">
         {% include '@components/components/general/DropdownMenu/dropdownMenu.html.twig' with {
           label: row.more_options,
           options: row.options,

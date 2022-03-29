@@ -1,10 +1,28 @@
 @import "src/lib.scss";
 
 .webtool-studies-table {
+  @include landing-margin-top;
   width: 100%;
-  margin-top: 2rem;
   text-align: left;
   border-collapse: collapse;
+
+  th {
+    &.hide-on-mobile {
+      display: none;
+
+      @media screen and (min-width: $fsa-lg) {
+        display: table-cell;
+      }
+    }
+
+    &.show-on-mobile {
+      display: table-cell;
+
+      @media screen and (min-width: $fsa-lg) {
+        display: none;
+      }
+    }
+  }
 
   td {
     border: 1px solid var(--fsa_border);
@@ -13,6 +31,14 @@
 
     &.right {
       text-align: right;
+    }
+
+    &.hide-on-mobile {
+      display: none;
+
+      @media screen and (min-width: $fsa-lg) {
+        display: table-cell;
+      }
     }
   }
 
