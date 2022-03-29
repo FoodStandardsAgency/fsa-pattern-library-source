@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
--
+- Add haccp namespace and move webtool components to there.
 
 ### Deprecated
 -
@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Form/Tooltip component.
 
 ### Changed
-- Add a 'by search' variation of the local authority component
+- Add a 'by search' variation of the local authority component.
 - InputField, Radio, Checkbox, Dropdown, Textarea components.
 - Create a wrapper for DOMContentLoaded and fix the events behavior.
 
