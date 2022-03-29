@@ -1,13 +1,9 @@
 import './pdfAndPrintButtons.html.twig';
 import './pdfAndPrintButtons.scss';
+import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
 
 export default function () {
-  let DOMContentFirstLoad = true;
-  window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
+  function callback() {
     const el = document.querySelector('.pdf-and-print-buttons');
     if (!el) {
       return;
@@ -19,5 +15,7 @@ export default function () {
     printButton.addEventListener('click', () => {
       window.print();
     });
-  });
+  }
+
+  return domContentLoadedWrapper(callback);
 }
