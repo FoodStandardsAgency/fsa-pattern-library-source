@@ -30,6 +30,10 @@
     border-left: none;
     border-right: none;
 
+    a.study-label {
+      @include link;
+    }
+
     &.right {
       text-align: right;
     }

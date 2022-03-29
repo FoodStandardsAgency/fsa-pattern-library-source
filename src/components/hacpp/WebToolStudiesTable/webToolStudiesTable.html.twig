@@ -11,7 +11,7 @@
   <tbody>
   {% for row in rows %}
     <tr>
-      <td>{{ row.label }}</td>
+      <td><a href="{{ row.url }}" class="study-label">{{ row.label }}</a></td>
       <td class="hide-on-mobile">{{ row.created_at }}</td>
       <td class="hide-on-mobile">{{ row.updated_at }}</td>
       <td class="hide-on-mobile">{{ row.status }}</td>
@@ -19,8 +19,8 @@
         {% include '@components/components/general/Button/button.html.twig' with {
           element: 'link',
           type: 'primary',
-          url: row.button.url,
-          label: row.button.label,
+          url: row.url,
+          label: row.button_label,
         } %}
       </td>
       <td class="right">
