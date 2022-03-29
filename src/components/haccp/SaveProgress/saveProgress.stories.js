@@ -2,7 +2,7 @@ import saveProgress from './saveProgress.html.twig';
 import './saveProgress.scss';
 
 export default {
-  title: 'Components/HACPP/Save Progress',
+  title: 'Components/HACCP/Save Progress',
 };
 
 const Template = (args) => saveProgress(args);

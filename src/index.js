@@ -96,6 +96,9 @@ import webtoolProgressBar from './components/article/WebToolProgressBar/webToolP
 /* FHRS components */
 import './components/fhrs/LocalAuthority/localAuthority';
 
+/* HACCP components */
+import './components/haccp/SaveProgress/saveProgress';
+
 /* Multipage guide Components */
 import './components/multipageguide/GuideHero/guideHero';
 import './components/multipageguide/Pagination/pagination';
