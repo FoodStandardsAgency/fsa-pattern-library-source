@@ -1,0 +1,12 @@
+<div class="hacpp-save-progress">
+  <div class="hacpp-save-progress__message">
+    {{ message|raw }}
+  </div>
+  <div class="hacpp-save-progress__actions">
+    {% include '@components/components/form/MultistepFunction/multistepFunction.html.twig' with {
+      prev_label: previous,
+      prev_link: prev_link,
+      next_label: save_and_continue,
+    } %}
+  </div>
+</div>
