@@ -91,9 +91,9 @@ import tableOfContents from '@components/components/article/TableOfContents/tabl
 import textBlock from './components/article/TextBlock/textBlock';
 import chartBlock from './components/article/ChartBlock/chartBlock';
 
-/* HACPP components */
-import './components/hacpp/WebToolStudiesTable/webToolStudiesTable';
-import webtoolProgressBar from './components/hacpp/WebToolProgressBar/webToolProgressBar';
+/* HACCP components */
+import './components/haccp/WebToolStudiesTable/webToolStudiesTable';
+import webtoolProgressBar from './components/haccp/WebToolProgressBar/webToolProgressBar';
 
 /* FHRS components */
 import './components/fhrs/LocalAuthority/localAuthority';

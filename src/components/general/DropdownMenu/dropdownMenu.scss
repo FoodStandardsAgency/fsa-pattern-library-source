@@ -3,6 +3,7 @@
 .dropdown-menu {
   display: inline-block;
   position: relative;
+  text-align: left;
 
   &__label {
     color: var(--fsa-primary_black);
