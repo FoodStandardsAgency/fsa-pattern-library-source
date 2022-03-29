@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
+-
 
 ### Changed
 -
@@ -24,12 +25,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-## [Upcoming release template] - 1971-11-03
+
+## [Upcoming release] - 1971-11-03
 
 ### Added
+- Add Form/Tooltip component.
 
 ### Changed
 - Add a 'by search' variation of the local authority component
+- InputField, Radio, Checkbox, Dropdown, Textarea components.
 - Create a wrapper for DOMContentLoaded and fix the events behavior.
 
 ### Deprecated

@@ -41,3 +41,9 @@ DefaultValue.args = {
   rows: 10,
   value: 'My custom text',
 };
+
+export const WithTooltip = Template.bind({});
+WithTooltip.args = {
+  ...Normal.args,
+  tooltip_message: Normal.args.description,
+};
