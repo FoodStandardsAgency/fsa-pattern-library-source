@@ -69,6 +69,7 @@
     &::before {
       background: var(--fsa_online-grey);
       border-right: 3px solid var(--fsa-primary_dark-green);
+      border-radius: 10rem 0 0 0;
       content: "";
       position: absolute;
       right: -0.17rem;
@@ -85,7 +86,6 @@
     }
 
     &::after {
-      background: var(--fsa-primary_white);
       border-right: 3px solid var(--fsa-primary_dark-green);
       content: "";
       position: absolute;
