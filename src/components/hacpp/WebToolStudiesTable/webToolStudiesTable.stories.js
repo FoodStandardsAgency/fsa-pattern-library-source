@@ -2,7 +2,7 @@ import webToolStudiesTable from './webToolStudiesTable.html.twig';
 import './webToolStudiesTable.scss';
 
 export default {
-  title: 'Components/Article/Web Tool Studies Table',
+  title: 'Components/HACPP/Web Tool Studies Table',
 };
 
 const row = {

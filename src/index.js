@@ -82,7 +82,6 @@ import './components/article/QuoteBlock/quoteBlock';
 import './components/article/TeamContacts/teamContacts';
 import './components/article/ProductDetails/productDetails';
 import './components/article/AllergensTable/allergensTable';
-import './components/article/WebToolStudiesTable/webToolStudiesTable';
 import footNotes from './components/article/FootNotes/footNotes';
 import revisionLogBottom from './components/article/RevisionLogBottom/revisionLogBottom';
 import backToTop from './components/article/BackToTop/backToTop';
@@ -90,8 +89,11 @@ import pdfAndPrintButtons from './components/article/PdfAndPrintButtons/pdfAndPr
 import stickySidebar from './components/article/StickySidebar/stickySidebar';
 import tableOfContents from '@components/components/article/TableOfContents/tableOfContents';
 import textBlock from './components/article/TextBlock/textBlock';
-import chartBlock from './components/article/ChartBlock/chartBlock';
-import webtoolProgressBar from './components/article/WebToolProgressBar/webToolProgressBar';
+import chartBlock from './components/article/ChartBlock/chartBlock'
+
+/* HACPP components */
+import './components/hacpp/WebToolStudiesTable/webToolStudiesTable';
+import webtoolProgressBar from './components/hacpp/WebToolProgressBar/webToolProgressBar';
 
 /* FHRS components */
 import './components/fhrs/LocalAuthority/localAuthority';

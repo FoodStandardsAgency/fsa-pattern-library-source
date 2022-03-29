@@ -2,7 +2,7 @@ import webToolProgressBar from './webToolProgressBar.html.twig';
 import './webToolProgressBar.scss';
 
 export default {
-  title: 'Components/Article/Web Tool Progress Bar',
+  title: 'Components/HACPP/Web Tool Progress Bar',
 };
 
 // The custom callback for a step of progress bar.
