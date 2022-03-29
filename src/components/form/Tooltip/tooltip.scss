@@ -7,36 +7,39 @@
 
   &__question-mark {
     cursor: pointer;
-    height: 36px;
     position: relative;
-    width: 36px;
     z-index: 2;
 
     &::before {
       content: "";
       background-image: url("./assets/question.svg");
       display: inline-block;
-      width: 36px;
-      height: 36px;
+      width: 2.3rem;
+      height: 2.3rem;
       background-repeat: no-repeat;
+
+      @media screen and (min-width: $fsa-lg) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 
   &__close {
     cursor: pointer;
     display: block;
-    height: 11px;
+    height: 0.7rem;
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
-    width: 11px;
+    width: 0.7rem;
 
     &::before {
       content: "";
       background-image: url("./assets/close.svg");
       display: block;
-      width: 11px;
-      height: 11px;
+      width: 0.7rem;
+      height: 0.7rem;
       background-repeat: no-repeat;
     }
   }
@@ -48,18 +51,19 @@
     font-size: 1rem;
     position: absolute;
     right: 1rem;
-    top: 59px;
+    top: 3.4rem;
     text-align: right;
     font-weight: normal;
     width: 20rem;
     z-index: 3;
 
     @media screen and (min-width: $fsa-md) {
+      top: 3.6rem;
       width: 41rem;
     }
 
     @media screen and (min-width: $fsa-lg) {
-      top: 57px;
+      top: 3.27rem;
     }
 
     &::before {
@@ -67,10 +71,17 @@
       border-right: 3px solid var(--fsa-primary_dark-green);
       content: "";
       position: absolute;
-      right: -3px;
-      top: -15px;
-      height: 15px;
-      width: 15px;
+      right: -0.17rem;
+      top: -0.91rem;
+      height: 0.9rem;
+      width: 0.84rem;
+
+      @media screen and (min-width: $fsa-md) {
+        right: -0.17rem;
+        top: -0.83rem;
+        height: 0.83rem;
+        width: 0.83rem;
+      }
     }
 
     &::after {
@@ -78,11 +89,21 @@
       border-right: 3px solid var(--fsa-primary_dark-green);
       content: "";
       position: absolute;
-      right: 1px;
-      top: -27px;
-      height: 22px;
+      right: 0.07rem;
+      top: -1.39rem;
+      height: 1.15rem;
       transform: rotate(45deg);
-      width: 22px;
+      width: 1.15rem;
+
+      @media screen and (min-width: $fsa-md) {
+        right: 0.04rem;
+        top: -1.4rem;
+      }
+
+      @media screen and (min-width: $fsa-lg) {
+        right: 0.07rem;
+        top: -1.45rem;
+      }
     }
 
     a {

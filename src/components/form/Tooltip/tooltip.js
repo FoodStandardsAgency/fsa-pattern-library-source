@@ -20,8 +20,6 @@ export default function () {
 
     closeAllTooltips(body);
 
-    console.log(tooltip.getBoundingClientRect().left);
-
     body.style.maxWidth = `${tooltip.getBoundingClientRect().left - 20}px`;
 
     body.classList.toggle('tooltip__body-opened');
