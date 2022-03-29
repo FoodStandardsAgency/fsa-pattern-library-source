@@ -43,7 +43,7 @@ export default function () {
       closeMark.addEventListener('click', handleTooltip);
     }
 
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       const tooltip = e.target.closest('.tooltip');
 
       if (!tooltip) {
