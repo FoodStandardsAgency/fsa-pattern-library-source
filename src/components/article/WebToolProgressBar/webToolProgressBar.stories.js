@@ -5,6 +5,12 @@ export default {
   title: 'Components/Article/Web Tool Progress Bar',
 };
 
+// The custom callback for a step of progress bar.
+// In Drupal implementation locate it in "Drupal.behaviors" namespace.
+window.customPreparatoryIntroCallback = function() {
+  alert('It is a custom callback.');
+}
+
 export const WebToolProgressBar = (args) => webToolProgressBar(args);
 WebToolProgressBar.args = {
   lines: [
@@ -13,9 +19,7 @@ WebToolProgressBar.args = {
       steps: [
         {
           url: '#',
-          callback: function () {
-            alert('It is a custom callback.');
-          }.toString(),
+          callback: 'customPreparatoryIntroCallback',
           label: 'Intro',
           state: 'completed',
         },
