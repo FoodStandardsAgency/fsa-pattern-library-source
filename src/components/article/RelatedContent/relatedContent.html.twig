@@ -19,11 +19,6 @@
           <h3 class="related-content__sub-heading">
             {{ card.title }}
           </h3>
-          {% if card.image is defined %}
-            <div class="related-content__image">
-              <img src={{ card.image.url }} alt="{{ card.image.alt }}"/>
-            </div>
-          {% endif %}
           {% if card.description is defined %}
             <p class="related-content__description">{{ card.description }}</p>
           {% endif %}
