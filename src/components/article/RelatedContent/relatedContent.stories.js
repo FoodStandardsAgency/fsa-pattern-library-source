@@ -69,3 +69,30 @@ RelatedContentWithNoLink.args = {
     },
   ],
 };
+
+
+export const RelatedContentWithMarkup = Template.bind({});
+RelatedContentWithMarkup.args = {
+  title: 'Related content',
+  text: 'The MyHACCP Tool will be able to produce a food safety management system that shows how your business identifies and controls any hazards that may occur in the food you manufacture. You will find a range of resources to assist you with completing the tool and with understanding implementation of HACCP principles more generally in the Help section.',
+  cards: [
+    {
+      title: 'Who is this site for?',
+      markup:
+        'The study aimed to develop an understanding of the choices and eating behaviours of food allergic and intolerant consumers when eating out.',
+      link: '#',
+    },
+    {
+      title: 'Are you a smaller business?',
+      markup:
+        'In 2006, we published voluntary Guidance on Allergen Management and Consumer Information. This is best practice guidance on controlling food allergens in the factory setting, with particular reference to avoiding cross-contamination and using appropriate advisory labelling (e.g. ‘may contain’ labelling).',
+      link: '#',
+    },
+    {
+      title: 'What next?',
+      markup:
+        '<ol><li>Sign up for an account.</li><li>Start the MyHACCP process at the beginning or at any point – you can come back and finish it at any time</li><li>Complete the MyHACCP process  - you can preview what the output will look like at any stage</li><li>Print or download the completed food safety management system documents for your records</li></ol>',
+      link: '#',
+    },
+  ],
+};
