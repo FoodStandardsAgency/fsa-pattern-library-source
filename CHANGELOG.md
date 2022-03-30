@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - White logo for expanded primary navigation for MyHACCP.
+- Add haccp namespace and move webtool components to there.
 
 ### Changed
 - Added missing placeholder to the search bar for MyHACCP version of the header.
@@ -56,7 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Form/Tooltip component.
 
 ### Changed
-- Add a 'by search' variation of the local authority component
+- Add a 'by search' variation of the local authority component.
 - InputField, Radio, Checkbox, Dropdown, Textarea components.
 - Create a wrapper for DOMContentLoaded and fix the events behavior.
 

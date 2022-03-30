@@ -2,7 +2,7 @@
 {% set id = spaceless_name %}
 <div id="{{ fieldset_id is defined ? fieldset_id : ""}}" class="dropdown{{ error ? " dropdown--error" : "" }}{{ classes ? ' ' ~ classes : ''}}" aria-describedby="{{ description is defined ? id : "" }}">
   {% if title is defined %}
-    <label for="{{ id }}" class="dropdown__label">
+    <label for="{{ id }}" class="dropdown__label{{ tooltip_message is defined ? " with-tooltip" : "" }}">
       {{ title }}<span class="dropdown__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
 
       {% if tooltip_message is defined %}
