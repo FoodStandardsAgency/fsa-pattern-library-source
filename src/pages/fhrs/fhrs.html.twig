@@ -1,4 +1,4 @@
-{% extends '../../layout/fhrsLayout/fhrsLayout.html.twig' %}
+{% extends '@components/layout/fhrsLayout/fhrsLayout.html.twig' %}
 {% set coventry_gov_logo = '<?xml version="1.0" encoding="UTF-8"?>
 <svg width="156px" height="95px" viewBox="0 0 156 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Coventry Logo</title>
@@ -11,7 +11,7 @@
     </g>
 </svg>' %}
 {% block content %}
-  {% include '../../components/fhrs/LocalAuthority/localAuthority.html.twig' with {
+  {% include '@components/components/fhrs/LocalAuthority/localAuthority.html.twig' with {
       local_authority: 'The data is provided by Coventry City Council',
       website_title: 'Website',
       website_url: 'www.coventry.gov.uk',
@@ -19,7 +19,7 @@
       email_address: 'ehcommercial@coventry.gov.uk',
       logo_svg: coventry_gov_logo,
     } %}
-  {% include '../../components/fhrs/LocalAuthority/localAuthority.html.twig' with {
+  {% include '@components/components/fhrs/LocalAuthority/localAuthority.html.twig' with {
       local_authority: 'Local Authority',
       name_title: 'Name',
       name_content: 'Coventry City Council',
