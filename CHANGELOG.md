@@ -11,7 +11,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+## [Upcoming release] - 1971-11-03
+
+### Added
 - Add haccp namespace and move webtool components to there.
+
+### Changed
+-
 
 ### Deprecated
 -
