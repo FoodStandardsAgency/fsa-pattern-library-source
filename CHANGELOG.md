@@ -26,6 +26,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [Upcoming] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Related content remove image, as not needed.
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
 ## [0.0.78] - 2022-03-29 (New and updated HACCP components)
 
 ### Added
