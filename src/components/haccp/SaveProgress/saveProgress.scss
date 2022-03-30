@@ -1,0 +1,23 @@
+@import "src/lib.scss";
+
+.haccp-save-progress {
+  &__message {
+    @include body;
+
+    text-align: left;
+
+    @media screen and (min-width: $fsa-md) {
+      text-align: right;
+    }
+
+    a {
+      @include link;
+    }
+  }
+
+  &__actions {
+    .multistep-function {
+      margin-top: 1rem;
+    }
+  }
+}
