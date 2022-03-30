@@ -69,7 +69,7 @@
   </svg>',
 } %}
 
-{% include '../../components/general/CookieBanner/cookieBanner.html.twig' with {
+{% include '@components/components/general/CookieBanner/cookieBanner.html.twig' with {
   text: 'We use cookies to make food.gov.uk work, understand how you use the website and make improvements. <br>They aren’t used to identify you personally.',
   find_out_more_link: '#',
   find_out_more_text: 'Find out more about cookies',
@@ -949,9 +949,9 @@
         ],
     }
 } %}
-{% include '../../components/general/Header/header.html.twig' with headerData %}
+{% include '@components/components/general/Header/header.html.twig' with headerData %}
 
-{% embed "../../layout/fullWidth/fullWidth.html.twig" %}
+{% embed "@components/layout/fullWidth/fullWidth.html.twig" %}
   {% block content %}
     {% set breadcrumb_items = [
       {
@@ -971,10 +971,10 @@
         'url': null
       },
     ] %}
-    {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumb_items, expanded: false } %}
+    {% include '@components/components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumb_items, expanded: false } %}
   {% endblock %}
 {% endembed %}
-{% include '../../components/general/Feedback/feedback.html.twig' with {
+{% include '@components/components/general/Feedback/feedback.html.twig' with {
   section_summary: 'Feedback about the content on the page',
   heading: 'Is this page useful?',
   yes: 'Yes',
@@ -992,7 +992,7 @@
   submit: 'Submit',
 form_action: '#'
 } %}
-{% include '../../components/general/Footer/footer.html.twig' with {
+{% include '@components/components/general/Footer/footer.html.twig' with {
   footer_links: 'Footer links',
   new_window: 'Open in a new window',
   menu_links: [

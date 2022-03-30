@@ -130,7 +130,7 @@
     ],
   }
 } %}
-{% include '../../components/general/Header/header.html.twig' with headerData %}
+{% include '@components/components/general/Header/header.html.twig' with headerData %}
 
 {% set hero_args = {
   type: 'hero--without-image',
@@ -138,16 +138,16 @@
   title: 'MyHACCP Guidance',
   content: 'You can find help related to the MyHACCP Web Tool and a range of additional resources on HACCP in general in this section of the website.',
 } %}
-{% include '../../components/general/Hero/hero.html.twig' with hero_args %}
+{% include '@components/components/general/Hero/hero.html.twig' with hero_args %}
 
-{% embed "../../layout/fullWidth/fullWidth.html.twig" %}
+{% embed "@components/layout/fullWidth/fullWidth.html.twig" %}
   {% block content %}
 
     <div class="text-block">
       <p>Help has been broken down by each stage of the Web Tool. You can find a complete overview of the Help section below:</p>
     </div>
 
-    {% include '../../components/general/SiteMap/siteMap.html.twig' with { links: [
+    {% include '@components/components/general/SiteMap/siteMap.html.twig' with { links: [
       {
         label: 'Introduction to MyHACCP',
         href: '#',
@@ -214,7 +214,7 @@
   {% endblock %}
 {% endembed %}
 
-{% include '../../components/general/Footer/footer.html.twig' with {
+{% include '@components/components/general/Footer/footer.html.twig' with {
   footer_links: 'Footer links',
   new_window: 'Open in a new window',
   menu_links: [

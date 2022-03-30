@@ -2,8 +2,8 @@
 
 .webtool-progress-bar {
   background: var(--fsa_online-grey);
-  border: 1px solid var(--fsa_border);
   padding: 1rem;
+  width: 100%;
 
   @media screen and (min-width: $fsa-lg) {
     display: inline-block;
@@ -32,7 +32,7 @@
     &-opened {
       .webtool-progress-bar__label {
         &::after {
-          transform: none;
+          transform: rotate(180deg);
         }
       }
 
@@ -48,9 +48,9 @@
   }
 
   &__label {
+    @include h4;
+
     cursor: default;
-    font-size: 1.5rem;
-    font-weight: bold;
     line-height: 1;
     position: relative;
 
@@ -65,7 +65,6 @@
       height: 1rem;
       right: 0;
       vertical-align: middle;
-      transform: rotate(180deg);
     }
 
     @media screen and (min-width: $fsa-lg) {
@@ -80,31 +79,49 @@
   &__steps {
     display: none;
     margin-top: 1rem;
+    width: 80%;
 
     @media screen and (min-width: $fsa-lg) {
       display: flex;
       flex-direction: row;
       margin-top: 0;
     }
+
+    @media screen and (min-width: $fsa-xl) {
+      width: 85%;
+    }
   }
 
   &__step {
     border-left: 4px solid var(--fsa-webtool-prgress-bar-border-step);
+    flex: 1;
+
+    .sr-desktop {
+      display: inline;
+    }
 
     @media screen and (min-width: $fsa-lg) {
       border-bottom: 4px solid var(--fsa-webtool-prgress-bar-border-step);
       border-left: none;
+      text-align: center;
+
+      .sr-desktop {
+        display: none;
+      }
     }
 
     a {
-      color: var(--fsa-primary_dark-green);
+      @include h6;
+      @include link;
+
       display: block;
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 1rem 1.5rem;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
       width: 100%;
 
       @media screen and (min-width: $fsa-lg) {
+        @include h4;
+
         font-size: 1.5rem;
         padding: 0 0.5rem;
       }
@@ -113,9 +130,9 @@
         padding: 0.5rem 2rem;
       }
 
-      &:hover,
-      &:focus {
-        color: var(--fsa__link-green);
+      &:hover {
+        background: var(--fsa-primary_dark-green);
+        color: var(--fsa-primary_white);
       }
     }
 
