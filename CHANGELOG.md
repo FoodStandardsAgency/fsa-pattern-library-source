@@ -26,6 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.0.81] - 2022-03-30 (Import typo)
+
+### Fixed
+- Import typo
+
+
 ## [0.0.80] - 2022-03-30 (Fixes and removing "react" variants)
 
 ### Changed
