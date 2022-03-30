@@ -2,7 +2,7 @@
 {% set id = spaceless_name %}
 <fieldset id="{{ fieldset_id is defined ? fieldset_id : ""}}" class="checkbox{{ error ? " checkbox--error" : "" }}" aria-describedby="{{ description is defined ? id : "" }}">
   {% if title is defined %}
-    <legend class="checkbox__legend">
+    <legend class="checkbox__legend{{ tooltip_message is defined ? " with-tooltip" : "" }}">
       {{ title }}<span class="checkbox__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
 
       {% if tooltip_message is defined %}

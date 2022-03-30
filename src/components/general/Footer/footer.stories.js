@@ -29,17 +29,17 @@ Footer.args = {
       link: { label: 'Terms and conditions', href: '#', external: false },
     },
     {
-      link: { label: 'Privacy', href: '#', external: false },
+      link: { label: 'Privacy', href: '#', external: true },
     },
     {
       link: {
         label: 'Personal information charter',
         href: '#',
-        external: false,
+        external: true,
       },
     },
     {
-      link: { label: 'Feedback and complaints', href: '#', external: false },
+      link: { label: 'Feedback and complaints', href: '#', external: true },
     },
     {
       link: { label: 'Cookies', href: '#', external: false },
