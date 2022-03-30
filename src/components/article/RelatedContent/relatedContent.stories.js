@@ -70,7 +70,6 @@ RelatedContentWithNoLink.args = {
   ],
 };
 
-
 export const RelatedContentWithMarkup = Template.bind({});
 RelatedContentWithMarkup.args = {
   title: 'Related content',
