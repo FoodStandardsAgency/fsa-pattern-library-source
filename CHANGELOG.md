@@ -26,12 +26,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming] - 1971-11-03
+## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- White logo for expanded primary navigation for MyHACCP.
 
 ### Changed
+- Added missing placeholder to the search bar for MyHACCP version of the header.
+- Revision log added article simple page
+- Revision log styling fixes
 - Related content remove image, as not needed.
 
 ### Deprecated
@@ -41,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Removed unneeded right padding for the external links in the footer navigation.
 
 ### Security
 -

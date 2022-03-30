@@ -2642,6 +2642,7 @@ MyHACCP.args = {
   logo_label: 'Food Standards Agency - Frontpage',
   secondary_logo_link: '#',
   secondary_logo_label: 'Food Standards Agency - Frontpage',
+  search_label: 'Search Food Standards Agency',
   search_bar_visible: true,
   user_logged_in: false,
   menu_label: 'menu',
