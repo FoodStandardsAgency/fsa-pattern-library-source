@@ -23,12 +23,17 @@
             minimum_selection: field.minimum_selection,
             invalid_date: field.invalid_date,
             start_year: field.start_year,
+            default_value: default_value
           } %}
           </div>
       {% elseif field.type == 'collapsible_checkbox' %}
         {% if field.results > 0 %}
           <div class="accordion__field accordion__field--checkbox">
-            <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ name ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked }} data-fsa-at="filters-add-{{ field.id }}">
+            {% if default_value is defined %}
+              <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ name ~ '[' ~ field.value ~ ']' }}" defaultValue="{{ field.value }}" {{ field.checked }} data-fsa-at="filters-add-{{ field.id }}">
+            {% else %}
+              <input class="accordion__input" type="checkbox" id="{{ field.id }}" name="{{ name ~ '[' ~ field.value ~ ']' }}" value="{{ field.value }}" {{ field.checked }} data-fsa-at="filters-add-{{ field.id }}">
+            {% endif %}
             <label class="accordion__label" for="{{ field.id }}">{{ field.label }} ({{ field.results }})</label>
           </div>
         {% endif %}

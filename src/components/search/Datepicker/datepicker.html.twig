@@ -32,8 +32,13 @@
       <label class="datepicker__select__label" for="{{ type|lower }} day">
         Day
       </label>
-      <select class="datepicker__select__button" name="Day" id="{{ type|lower }} day">
-        <option value="none" disabled selected></option>
+      {% if default_value is defined %}
+        <select class="datepicker__select__button" name="Day" id="{{ type|lower }} day" defaultValue="none">
+          <option value="none" disabled></option>
+      {% else %}
+        <select class="datepicker__select__button" name="Day" id="{{ type|lower }} day">
+          <option value="none" disabled selected></option>
+      {% endif %}
         {% for day in days %}
           <option value="{{ loop.index }}" data-option-value="{{ day }}">{{ day }}</option>
         {% endfor %}
@@ -43,8 +48,13 @@
       <label class="datepicker__select__label" for="{{ type|lower }} month">
         Month
       </label>
-      <select class="datepicker__select__button" name="Month" id="{{ type|lower }} month">
-        <option value="none" disabled selected></option>
+      {% if default_value is defined %}
+        <select class="datepicker__select__button" name="Month" id="{{ type|lower }} month" defaultValue="none">
+          <option value="none" disabled></option>
+      {% else %}
+        <select class="datepicker__select__button" name="Month" id="{{ type|lower }} month">
+          <option value="none" disabled selected></option>
+      {% endif %}
         {% for month in months %}
           <option value="{{ loop.index }}" data-option-value="{{ month }}">{{ month }}</option>
         {% endfor %}
@@ -54,8 +64,13 @@
       <label class="datepicker__select__label" for="{{ type|lower }} year">
         Year
       </label>
-      <select class="datepicker__select__button" name="Year" id="{{ type|lower }} year">
-        <option value="none" disabled selected></option>
+      {% if default_value is defined %}
+        <select class="datepicker__select__button" name="Year" id="{{ type|lower }} year" defaultValue="none">
+          <option value="none" disabled></option>
+      {% else %}
+        <select class="datepicker__select__button" name="Year" id="{{ type|lower }} year">
+          <option value="none" disabled selected></option>
+      {% endif %}
         {% for year in years %}
           <option value="{{ year }}" data-option-value="{{ year }}">{{ year }}</option>
         {% endfor %}
