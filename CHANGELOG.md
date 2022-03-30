@@ -25,32 +25,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-## [Upcoming release] - 1971-11-03
-
-### Added
-- Add saveProgress component.
-
-### Changed
--
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
-
 
 ## [Upcoming release] - 1971-11-03
 
 ### Added
 - White logo for expanded primary navigation for MyHACCP.
 - Add haccp namespace and move webtool components to there.
+- Add saveProgress component.
 
 ### Changed
 - Added missing placeholder to the search bar for MyHACCP version of the header.
