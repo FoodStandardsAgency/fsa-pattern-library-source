@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updated webToolStudiesTable component.
+- Added markup field to allow other types of element to be children on the itembs block.
 
 ### Deprecated
 -
