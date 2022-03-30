@@ -1,5 +1,6 @@
 import './tooltip.scss';
 import './tooltip.html.twig';
+import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
 
 export default function () {
   function closeAllTooltips(except = null) {
@@ -25,14 +26,7 @@ export default function () {
     body.classList.toggle('tooltip__body-opened');
   }
 
-  let DOMContentFirstLoad = true;
-  window.addEventListener('DOMContentLoaded', function () {
-    if (!DOMContentFirstLoad) {
-      return;
-    }
-
-    DOMContentFirstLoad = false;
-
+  function callback() {
     const questionMarks = document.querySelectorAll('.tooltip__question-mark');
     for (const questionMark of questionMarks) {
       questionMark.addEventListener('click', handleTooltip);
@@ -50,5 +44,7 @@ export default function () {
         closeAllTooltips();
       }
     });
-  });
+  }
+
+  return domContentLoadedWrapper(callback);
 }

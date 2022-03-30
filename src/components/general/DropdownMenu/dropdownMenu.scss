@@ -1,7 +1,9 @@
 @import "src/lib.scss";
 
 .dropdown-menu {
+  display: inline-block;
   position: relative;
+  text-align: left;
 
   &__label {
     color: var(--fsa-primary_black);
@@ -10,15 +12,19 @@
     font-size: 1rem;
     padding: 0.5rem 2.5rem 0.5rem 1rem;
     min-height: 2.4rem;
-    background: var(--fsa-tint);
+    background-color: var(--fsa_tint);
     border: 1px solid var(--fsa-primary_black);
     border-radius: 0;
     max-width: 100%;
     flex-grow: 1;
-    font-weight: bold;
+    font-weight: normal;
     background-image: url("./assets/arrow-down.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem) center;
+
+    @media screen and (min-width: $fsa-md) {
+      font-weight: bold;
+    }
   }
 
   &__option {
@@ -29,7 +35,7 @@
       padding: 0.5rem 2.5rem 0.5rem 1rem;
 
       &:hover {
-        background: var(--fsa_online-grey);
+        background: var(--fsa_tint);
       }
     }
   }

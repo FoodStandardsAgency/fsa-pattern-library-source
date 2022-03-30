@@ -2,7 +2,7 @@ import webToolStudiesTable from './webToolStudiesTable.html.twig';
 import './webToolStudiesTable.scss';
 
 export default {
-  title: 'Components/Article/Web Tool Studies Table',
+  title: 'Components/HACCP/Web Tool Studies Table',
 };
 
 const row = {
@@ -10,10 +10,8 @@ const row = {
   created_at: '17/04/2020',
   updated_at: '17/04/2020',
   status: 'Active',
-  button: {
-    url: '#',
-    label: 'Resume',
-  },
+  button_label: 'Resume',
+  url: '#',
   more_options: 'More options',
   options: [
     {

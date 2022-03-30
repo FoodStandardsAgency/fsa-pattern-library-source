@@ -69,6 +69,7 @@
     &::before {
       background: var(--fsa_online-grey);
       border-right: 3px solid var(--fsa-primary_dark-green);
+      border-radius: 10rem 0 0;
       content: "";
       position: absolute;
       right: -0.17rem;
@@ -78,14 +79,13 @@
 
       @media screen and (min-width: $fsa-md) {
         right: -0.17rem;
-        top: -0.83rem;
+        top: -0.82rem;
         height: 0.83rem;
         width: 0.83rem;
       }
     }
 
     &::after {
-      background: var(--fsa-primary_white);
       border-right: 3px solid var(--fsa-primary_dark-green);
       content: "";
       position: absolute;
@@ -118,7 +118,24 @@
   }
 
   &__message {
-    padding: 1rem 2rem 1rem 1rem;
+    @include body;
+
+    padding: 1rem 1.5rem 1rem 1rem;
     text-align: left;
+  }
+}
+
+.with-tooltip {
+  position: relative;
+  padding-right: 2rem;
+
+  .tooltip {
+    position: absolute;
+    top: -0.3rem;
+    right: 0;
+
+    @media screen and (min-width: $fsa-lg) {
+      top: -0.2rem;
+    }
   }
 }
