@@ -1,0 +1,22 @@
+@import "src/lib.scss";
+
+.multivalue-field {
+  &__add-entity {
+    @include link;
+    margin-top: 1rem;
+  }
+
+  &__delete-entity {
+    &::before {
+      content: "";
+      background-image: url("./assets/delete.svg");
+      display: inline-block;
+      width: 1.75rem;
+      height: 1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 1rem;
+      vertical-align: middle;
+    }
+  }
+}
