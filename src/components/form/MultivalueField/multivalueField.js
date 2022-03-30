@@ -34,7 +34,8 @@ export default function () {
     const multivalueFields = document.querySelectorAll('.multivalue-field');
 
     for (const field of multivalueFields) {
-      const values = JSON.parse(field.querySelector('.multivalue-field__values').innerHTML).slice(1);
+      const parsedValues = JSON.parse(field.querySelector('.multivalue-field__values').innerHTML);
+      const values = Array.isArray(parsedValues) && parsedValues.length ? parsedValues.slice(1) : [];
 
       for (const value of values) {
         addField(field, value);

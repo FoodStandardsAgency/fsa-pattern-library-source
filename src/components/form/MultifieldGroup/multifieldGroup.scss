@@ -19,10 +19,14 @@
     text-align: center;
   }
 
-  &__wrapper {
+  &__item {
     & + & {
       border-top: 4px solid var(--fsa__grey-hover);
       margin: 2rem 0;
     }
+  }
+
+  &__template {
+    display: none;
   }
 }
