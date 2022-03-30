@@ -112,10 +112,11 @@
 
     a {
       @include h6;
+      @include link;
 
-      color: var(--fsa-primary_dark-green);
       display: block;
       padding: 0.75rem 1.5rem;
+      text-decoration: none;
       width: 100%;
 
       @media screen and (min-width: $fsa-lg) {
@@ -132,11 +133,6 @@
       &:hover {
         background: var(--fsa-primary_dark-green);
         color: var(--fsa-primary_white);
-      }
-
-      &:focus {
-        background: var(--fsa-tertiary_light-yellow);
-        color: var(--fsa-primary_black);
       }
     }
 
