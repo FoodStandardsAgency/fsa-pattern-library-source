@@ -26,6 +26,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [Upcoming] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Added markup field to allow other types of element to be children on the itembs block.
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
 ## [0.0.79] - 2022-03-30 (HACCP components & fixes)
 
 ### Added
