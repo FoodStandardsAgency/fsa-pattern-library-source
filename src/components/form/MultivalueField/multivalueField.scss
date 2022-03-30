@@ -6,7 +6,13 @@
     margin-top: 1rem;
   }
 
+  &__values {
+    display: none;
+  }
+
   &__delete-entity {
+    cursor: pointer;
+
     &::before {
       content: "";
       background-image: url("./assets/delete.svg");
@@ -17,6 +23,22 @@
       background-position: center;
       margin-right: 1rem;
       vertical-align: middle;
+    }
+  }
+
+  .input-field__wrapper {
+    position: relative;
+
+    & + & {
+      input {
+        padding-right: 2rem;
+      }
+    }
+
+    .multivalue-field__delete-entity {
+      position: absolute;
+      right: -0.8rem;
+      top: 0.5rem;
     }
   }
 }
