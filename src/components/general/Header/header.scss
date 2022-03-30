@@ -605,6 +605,10 @@
       overflow-y: auto;
       overflow-x: hidden;
 
+      .header__logo-svg--secondary-logo {
+        background-image: url("./assets/logo/my-haccp-logo-white.svg");
+      }
+
       .header__search-bar--icon {
         background-color: var(--fsa-primary_white);
         display: flex;
