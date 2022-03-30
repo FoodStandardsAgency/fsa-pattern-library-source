@@ -146,6 +146,15 @@
 
     color: var(--fsa-primary_black);
 
+    ol,
+    ul {
+      padding-left: 1rem;
+
+      li {
+        margin-top: 1rem;
+      }
+    }
+
     @media screen and (min-width: $fsa-md) {
       margin: 1rem 2.25rem 0;
     }
