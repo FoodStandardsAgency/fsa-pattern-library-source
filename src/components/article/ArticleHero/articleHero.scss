@@ -96,6 +96,8 @@
 
     &__revision-log {
       @include link;
+
+      font-family: var(--body-font);
     }
 
     &__last-updated {

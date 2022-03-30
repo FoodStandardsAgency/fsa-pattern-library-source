@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
-- Add haccp namespace and move webtool components to there.
+-
 
 ### Deprecated
 -
@@ -24,6 +24,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 -
+
+
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Updated webToolStudiesTable component.
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
+## [0.0.79] - 2022-03-30 (HACCP components & fixes)
+
+### Added
+- White logo for expanded primary navigation for MyHACCP.
+- Add haccp namespace and move webtool components to there.
+- Add saveProgress component.
+
+### Changed
+- Added missing placeholder to the search bar for MyHACCP version of the header.
+- Revision log added article simple page
+- Revision log styling fixes
+- Related content remove image, as not needed.
+
+### Fixed
+- Removed unneeded right padding for the external links in the footer navigation.
 
 
 ## [0.0.78] - 2022-03-29 (New and updated HACCP components)
