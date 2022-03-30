@@ -2,14 +2,17 @@
 
 .multifield-group {
   margin-top: 3rem;
-  position: relative;
+
+  &__items {
+    display: none;
+  }
 
   &__delete-item {
     @include link;
 
     @media screen and (min-width: $fsa-lg) {
       position: absolute;
-      top: 0;
+      top: 0.5rem;
       right: 0;
     }
   }
@@ -20,9 +23,15 @@
   }
 
   &__item {
+    position: relative;
+
     & + & {
       border-top: 4px solid var(--fsa__grey-hover);
       margin: 2rem 0;
+
+      .multifield-group__delete-item {
+        top: 2.2rem;
+      }
     }
   }
 

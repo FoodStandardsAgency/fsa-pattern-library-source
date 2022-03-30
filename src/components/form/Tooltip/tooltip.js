@@ -1,6 +1,6 @@
 import './tooltip.scss';
 import './tooltip.html.twig';
-import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
+import { domContentLoadedWrapper } from '../../../helpers';
 
 export default function () {
   function closeAllTooltips(except = null) {

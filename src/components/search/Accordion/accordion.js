@@ -1,7 +1,7 @@
 import './accordion.html.twig';
 import './react/accordion.html.twig';
 import './accordion.scss';
-import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
+import { domContentLoadedWrapper } from '../../../helpers';
 
 export default function () {
   function callback() {
