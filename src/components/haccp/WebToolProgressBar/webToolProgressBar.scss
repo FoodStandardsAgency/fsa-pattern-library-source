@@ -95,10 +95,18 @@
     border-left: 4px solid var(--fsa-webtool-prgress-bar-border-step);
     flex: 1;
 
+    .sr-desktop {
+      display: inline;
+    }
+
     @media screen and (min-width: $fsa-lg) {
       border-bottom: 4px solid var(--fsa-webtool-prgress-bar-border-step);
       border-left: none;
       text-align: center;
+
+      .sr-desktop {
+        display: none;
+      }
     }
 
     a {
@@ -118,10 +126,14 @@
         padding: 0.5rem 2rem;
       }
 
-      &:hover,
-      &:focus {
+      &:hover {
         background: var(--fsa-primary_dark-green);
         color: var(--fsa-primary_white);
+      }
+
+      &:focus {
+        background: var(--fsa-tertiary_light-yellow);
+        color: var(--fsa-primary_black);
       }
     }
 
