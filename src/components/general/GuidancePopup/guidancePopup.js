@@ -21,7 +21,7 @@ export default function () {
 }
 
 export function activatePopup(sourceElement, popup) {
-  sourceElement.addEventListener('click', function(e) {
+  sourceElement.addEventListener('click', function (e) {
     e.preventDefault();
     popup.classList.add('guidance-popup__opened');
   });
@@ -29,5 +29,5 @@ export function activatePopup(sourceElement, popup) {
   popup.querySelector('.guidance-popup__close').addEventListener('click', function (e) {
     e.preventDefault();
     e.target.closest('.guidance-popup').classList.remove('guidance-popup__opened');
-  })
+  });
 }

@@ -1,7 +1,7 @@
 import './tooltip.scss';
 import './tooltip.html.twig';
 import { domContentLoadedWrapper } from '../../../helpers';
-import {activatePopup} from '../../general/GuidancePopup/guidancePopup';
+import { activatePopup } from '../../general/GuidancePopup/guidancePopup';
 
 export default function () {
   function callback() {

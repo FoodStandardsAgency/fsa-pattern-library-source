@@ -24,14 +24,6 @@
     }
   }
 
-  &__close {
-    margin-left: 2.5rem;
-
-    @media screen and (min-width: $fsa-md) {
-      margin-left: 2rem;
-    }
-  }
-
   &__wrapper {
     background: var(--fsa-primary_white);
     border: 3px solid var(--fsa-primary_dark-green);
@@ -89,6 +81,7 @@
 
   &__label {
     @include h6;
+
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -99,6 +92,11 @@
 
   &__close {
     display: inline-block;
+    margin-left: 2.5rem;
+
+    @media screen and (min-width: $fsa-md) {
+      margin-left: 2rem;
+    }
 
     a {
       &::before {
