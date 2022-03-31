@@ -1,8 +1,4 @@
-<div class="multivalue-field">
-  <div class="multivalue-field__values">
-    {{ values|json_encode() }}
-  </div>
-
+<div class="multivalue-field" data-values='{{ values|json_encode() }}'>
   {% include '@components/components/form/InputField/inputField.html.twig' with {
     value: values[0] is defined ? values[0] : '',
   } %}

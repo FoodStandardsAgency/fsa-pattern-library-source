@@ -7,7 +7,7 @@ export default function () {
     const multivalueFields = document.querySelectorAll('.multivalue-field');
 
     for (const field of multivalueFields) {
-      const parsedValues = JSON.parse(field.querySelector('.multivalue-field__values').innerHTML);
+      const parsedValues = JSON.parse(field.getAttribute('data-values'));
       const values =
         Array.isArray(parsedValues) && parsedValues.length ? parsedValues.slice(1) : [];
 

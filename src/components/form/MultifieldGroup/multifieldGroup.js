@@ -57,7 +57,7 @@ export default function () {
         addGroup(e.target);
       });
 
-      const parsedValues = JSON.parse(group.querySelector('.multifield-group__items').innerHTML);
+      const parsedValues = JSON.parse(group.getAttribute('data-items'));
       const values = Array.isArray(parsedValues) ? parsedValues : [];
 
       for (const value of values) {

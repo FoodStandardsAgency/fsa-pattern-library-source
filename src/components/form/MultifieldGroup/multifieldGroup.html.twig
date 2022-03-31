@@ -1,4 +1,4 @@
-<div class="multifield-group">
+<div class="multifield-group" data-items='{{ items|json_encode() }}'>
   <div class="multifield-group__template">
     <div class="multifield-group__item">
       <h2>{{ label }}</h2>
@@ -9,9 +9,6 @@
         {{ template }}
       </div>
     </div>
-  </div>
-  <div class="multifield-group__items">
-    {{ items|json_encode() }}
   </div>
   <div class="multifield-group__add-item">
     {% include "@components/components/general/Button/button.html.twig" with {

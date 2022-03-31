@@ -3,10 +3,6 @@
 .multifield-group {
   margin-top: 3rem;
 
-  &__items {
-    display: none;
-  }
-
   &__delete-item {
     @include link;
 
