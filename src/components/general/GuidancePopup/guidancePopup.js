@@ -1,6 +1,6 @@
 import './guidancePopup.scss';
 import './guidancePopup.html.twig';
-import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
+import { domContentLoadedWrapper } from '../../../helpers';
 
 export default function () {
   function callback() {

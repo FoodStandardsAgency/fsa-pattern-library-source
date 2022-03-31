@@ -26,9 +26,15 @@ export default function () {
 export function activateTooltip(tooltip) {
   const questionMark = tooltip.querySelector('.tooltip__question-mark');
   const closeMark = tooltip.querySelector('.tooltip__close');
+  const guidancePopup = tooltip.querySelector('.guidance-popup');
 
   questionMark.addEventListener('click', handleTooltip);
   closeMark.addEventListener('click', handleTooltip);
+
+  if (guidancePopup) {
+    const openLink = tooltip.querySelector('.tooltip__popup-open');
+    activatePopup(openLink, guidancePopup);
+  }
 }
 
 function closeAllTooltips(except = null) {
@@ -52,34 +58,4 @@ function handleTooltip(e) {
   body.style.maxWidth = `${tooltip.getBoundingClientRect().left - 20}px`;
 
   body.classList.toggle('tooltip__body-opened');
-}
-
-function callback() {
-  const questionMarks = document.querySelectorAll('.tooltip__question-mark');
-  for (const questionMark of questionMarks) {
-    questionMark.addEventListener('click', handleTooltip);
-  }
-
-  const closeMarks = document.querySelectorAll('.tooltip__close');
-  for (const closeMark of closeMarks) {
-    closeMark.addEventListener('click', handleTooltip);
-  }
-
-  const popups = document.querySelectorAll('.tooltip__popup .guidance-popup');
-  for (const popup of popups) {
-    const tooltip = popup.closest('.tooltip');
-    const openLink = tooltip.querySelector('.tooltip__popup-open');
-
-    activatePopup(openLink, popup);
-  }
-
-  document.addEventListener('click', function (e) {
-    const tooltip = e.target.closest('.tooltip');
-
-    if (!tooltip) {
-      closeAllTooltips();
-    }
-  });
-
-  return domContentLoadedWrapper(callback);
 }
