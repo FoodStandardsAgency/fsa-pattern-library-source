@@ -5,6 +5,10 @@
   position: relative;
   vertical-align: middle;
 
+  &__popup {
+    display: inline;
+  }
+
   &__question-mark {
     cursor: pointer;
     position: relative;

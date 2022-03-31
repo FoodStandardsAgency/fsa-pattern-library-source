@@ -4,6 +4,12 @@
     <div class="tooltip__close"></div>
     <div class="tooltip__message">
       {{ message|raw }}
+      {% if guidance_popup is defined %}
+        <div class="tooltip__popup">
+          <a href="#" class="tooltip__popup-open">{{ guidance_popup.open_popup }}</a>
+          {% include '@components/components/general/GuidancePopup/guidancePopup.html.twig' with guidance_popup %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

@@ -4,6 +4,7 @@
     {% if tooltip_message is defined %}
       {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
         message: tooltip_message,
+        guidance_popup: guidance_popup,
       } %}
     {% endif %}
   </label>

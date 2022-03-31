@@ -1,6 +1,7 @@
 import './tooltip.scss';
 import './tooltip.html.twig';
 import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
+import {activatePopup} from '../../general/GuidancePopup/guidancePopup';
 
 export default function () {
   function closeAllTooltips(except = null) {
@@ -35,6 +36,14 @@ export default function () {
     const closeMarks = document.querySelectorAll('.tooltip__close');
     for (const closeMark of closeMarks) {
       closeMark.addEventListener('click', handleTooltip);
+    }
+
+    const popups = document.querySelectorAll('.tooltip__popup .guidance-popup');
+    for (const popup of popups) {
+      const tooltip = popup.closest('.tooltip');
+      const openLink = tooltip.querySelector('.tooltip__popup-open');
+
+      activatePopup(openLink, popup);
     }
 
     document.addEventListener('click', function (e) {
