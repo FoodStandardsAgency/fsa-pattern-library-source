@@ -1,6 +1,7 @@
 import './tooltip.scss';
 import './tooltip.html.twig';
 import { domContentLoadedWrapper } from '../../../helpers';
+import { activatePopup } from '../../general/GuidancePopup/guidancePopup';
 
 export default function () {
   function callback() {
@@ -25,9 +26,15 @@ export default function () {
 export function activateTooltip(tooltip) {
   const questionMark = tooltip.querySelector('.tooltip__question-mark');
   const closeMark = tooltip.querySelector('.tooltip__close');
+  const guidancePopup = tooltip.querySelector('.guidance-popup');
 
   questionMark.addEventListener('click', handleTooltip);
   closeMark.addEventListener('click', handleTooltip);
+
+  if (guidancePopup) {
+    const openLink = tooltip.querySelector('.tooltip__popup-open');
+    activatePopup(openLink, guidancePopup);
+  }
 }
 
 function closeAllTooltips(except = null) {

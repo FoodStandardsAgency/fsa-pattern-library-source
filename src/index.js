@@ -24,6 +24,7 @@ import './components/general/SkipToMainContent/skipToMainContent';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
 import dropdownMenu from './components/general/DropdownMenu/dropdownMenu';
+import guidancePopup from './components/general/GuidancePopup/guidancePopup';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
@@ -154,3 +155,4 @@ webtoolProgressBar();
 tooltip();
 multivalueField();
 multifieldGroup();
+guidancePopup();

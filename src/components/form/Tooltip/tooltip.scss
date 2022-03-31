@@ -5,6 +5,10 @@
   position: relative;
   vertical-align: middle;
 
+  &__popup {
+    display: inline;
+  }
+
   &__question-mark {
     cursor: pointer;
     position: relative;
@@ -67,42 +71,18 @@
     }
 
     &::before {
-      background: var(--fsa_online-grey);
-      border-right: 3px solid var(--fsa-primary_dark-green);
-      border-radius: 10rem 0 0;
       content: "";
+      background-image: url("./assets/top-part.svg");
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
       position: absolute;
-      right: -0.17rem;
-      top: -0.91rem;
-      height: 0.9rem;
-      width: 0.84rem;
-
-      @media screen and (min-width: $fsa-md) {
-        right: -0.17rem;
-        top: -0.82rem;
-        height: 0.83rem;
-        width: 0.83rem;
-      }
-    }
-
-    &::after {
-      border-right: 3px solid var(--fsa-primary_dark-green);
-      content: "";
-      position: absolute;
-      right: 0.07rem;
-      top: -1.39rem;
-      height: 1.15rem;
-      transform: rotate(45deg);
-      width: 1.15rem;
-
-      @media screen and (min-width: $fsa-md) {
-        right: 0.04rem;
-        top: -1.4rem;
-      }
+      background-repeat: no-repeat;
+      top: -19px; // exactly PX because there is top corner of toolbox.
+      right: -13.5px; // exactly PX because there is top corner of toolbox.
 
       @media screen and (min-width: $fsa-lg) {
-        right: 0.07rem;
-        top: -1.45rem;
+        right: -17.5px; // exactly PX because there is top corner of toolbox.
       }
     }
 
@@ -126,7 +106,7 @@
   }
 }
 
-.with-tooltip {
+.label-with-tooltip {
   position: relative;
   padding-right: 2rem;
   width: 100%;
