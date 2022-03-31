@@ -1,14 +1,15 @@
 {% set target_is_defined = target is defined and target is not empty %}
+{% set id_is_defined = id is defined and id is not empty %}
 
 {% if element == 'link' %}
-  <a href="{{ url }}" class="button button--{{ type }}" {{ target_is_defined ? 'target="' ~ target ~ '"' : '' }} {{ download ? ' download' : '' }}>
+  <a href="{{ url }}" class="button button--{{ type }}" {{ id_is_defined ? 'id="' ~ id ~ '"' : '' }} {{ target_is_defined ? 'target="' ~ target ~ '"' : '' }} {{ download ? ' download' : '' }}>
     {{ label }}
   </a>
 {% elseif element == 'button' %}
-  <button class="button button--event button--{{ type }}" onClick="{{ callback is defined ? callback ~ '(); return false;' : '' }}">
+  <button class="button button--event button--{{ type }}" {{ id_is_defined ? 'id="' ~ id ~ '"' : '' }}>
     {{ label }}
   </button>
 
 {% elseif element == 'input' %}
-  <input type="submit" class="button button--event button--{{ type }}" name="{{ label|striptags|replace({" ": "-"})|lower }}" value="{{ label }}" onClick="{{ callback is defined ? callback ~ '(); return false;' : '' }}">
+  <input type="submit" class="button button--event button--{{ type }}" {{ id_is_defined ? 'id="' ~ id ~ '"' : '' }} name="{{ label|striptags|replace({" ": "-"})|lower }}" value="{{ label }}">
 {% endif %}

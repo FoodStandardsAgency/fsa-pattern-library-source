@@ -1,6 +1,6 @@
 import './webToolProgressBar.html.twig';
 import './webToolProgressBar.scss';
-import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
+import { domContentLoadedWrapper } from '../../../helpers';
 
 export default function () {
   function callback() {

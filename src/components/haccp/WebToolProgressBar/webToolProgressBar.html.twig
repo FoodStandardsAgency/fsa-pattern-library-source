@@ -1,18 +1,24 @@
 <div class="webtool-progress-bar">
-  {% for lineNum, line in lines %}
-    <div class="webtool-progress-bar__line {{ lineNum == 0 ? 'webtool-progress-bar__line-opened' : '' }}">
-      <div class="webtool-progress-bar__label">
-        {{ line.label }}
-      </div>
-      <div class="webtool-progress-bar__steps">
-        {% for step in line.steps %}
-          <div class="webtool-progress-bar__step webtool-progress-bar__step-{{ step.state }}">
-            <a href="{{ step.url is defined ? step.url : '#' }}" class="webtool-progress-bar__step--{{ line.label|lower }}-{{ step.label|lower }}" onClick="{{ step.callback is defined ? step.callback ~ '(); return false;' : '' }}">
-              {{ step.label }}{{ step.description ? '<span class="sr-desktop">: ' ~ step.description ~ '</span>' : "" }}
-            </a>
+  <div class="webtool-progress-bar__wrapper">
+    <div class="webtool-progress-bar__grid-row">
+      <div class="webtool-progress-bar__grid-col">
+        {% for lineNum, line in lines %}
+          <div class="webtool-progress-bar__line {{ lineNum == 0 ? 'webtool-progress-bar__line-opened' : '' }}">
+            <div class="webtool-progress-bar__label">
+              {{ line.label }}
+            </div>
+            <div class="webtool-progress-bar__steps">
+              {% for step in line.steps %}
+                <div class="webtool-progress-bar__step webtool-progress-bar__step-{{ step.state }}">
+                  <a href="{{ step.url is defined ? step.url : '#' }}" class="webtool-progress-bar__step--{{ line.label|lower }}-{{ step.label|lower }}">
+                    {{ step.label }}{{ step.description ? '<span class="sr-desktop">: ' ~ step.description ~ '</span>' : "" }}
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
           </div>
         {% endfor %}
       </div>
     </div>
-  {% endfor %}
+  </div>
 </div>

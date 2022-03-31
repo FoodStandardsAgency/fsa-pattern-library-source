@@ -1,6 +1,6 @@
 import './feedback.html.twig';
 import './feedback.scss';
-import { domContentLoadedWrapper } from '../../../domContentLoadedWrapper';
+import { domContentLoadedWrapper } from '../../../helpers';
 
 export default function () {
   function callback() {

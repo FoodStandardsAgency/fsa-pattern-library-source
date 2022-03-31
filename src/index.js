@@ -54,6 +54,8 @@ import './components/form/Textarea/textarea';
 import './components/form/Step/step';
 import mapField from './components/form/MapField/mapField';
 import tooltip from './components/form/Tooltip/tooltip';
+import multivalueField from './components/form/MultivalueField/multivalueField';
+import multifieldGroup from './components/form/MultifieldGroup/multifieldGroup';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
@@ -150,3 +152,5 @@ mapField();
 dropdownMenu();
 webtoolProgressBar();
 tooltip();
+multivalueField();
+multifieldGroup();
