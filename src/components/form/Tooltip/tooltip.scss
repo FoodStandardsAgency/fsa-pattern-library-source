@@ -79,7 +79,11 @@
       position: absolute;
       background-repeat: no-repeat;
       top: -19px; // exactly PX because there is top corner of toolbox.
-      right: -17.5px; // exactly PX because there is top corner of toolbox.
+      right: -13.5px; // exactly PX because there is top corner of toolbox.
+
+      @media screen and (min-width: $fsa-lg) {
+        right: -17.5px; // exactly PX because there is top corner of toolbox.
+      }
     }
 
     a {
