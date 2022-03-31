@@ -25,46 +25,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-## [Upcoming release] - 1971-11-03
+
+## [0.0.82] - 2022-03-31 (HACCP components)
 
 ### Added
 - Add multivalueField and multifieldGroup components.
 
 ### Changed
--
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
-
-
-## [Upcoming release] - 1971-11-03
-
-### Added
--
-
-### Changed
 - Buttons, multistepFunction and saveProgress components are supports id attribute.
-
-### Deprecated
--
 
 ### Removed
 - Callbacks support.
-
-### Fixed
--
-
-### Security
--
 
 
 ## [0.0.81] - 2022-03-30 (Import typo)
