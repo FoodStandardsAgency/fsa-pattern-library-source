@@ -5,10 +5,10 @@
     {{ label }}
   </a>
 {% elseif element == 'button' %}
-  <button class="button button--event button--{{ type }}">
+  <button class="button button--event button--{{ type }}" onClick="{{ callback is defined ? callback ~ '(); return false;' : '' }}">
     {{ label }}
   </button>
 
 {% elseif element == 'input' %}
-  <input type="submit" class="button button--event button--{{ type }}" name="{{ label|striptags|replace({" ": "-"})|lower }}" value="{{ label }}">
+  <input type="submit" class="button button--event button--{{ type }}" name="{{ label|striptags|replace({" ": "-"})|lower }}" value="{{ label }}" onClick="{{ callback is defined ? callback ~ '(); return false;' : '' }}">
 {% endif %}

@@ -1,5 +1,4 @@
 import './accordion.html.twig';
-import './react/accordion.html.twig';
 import './accordion.scss';
 import { domContentLoadedWrapper } from '../../../helpers';
 

@@ -26,15 +26,19 @@ export default function () {
     body.classList.toggle('tooltip__body-opened');
   }
 
+  function activateTooltip(tooltip) {
+    const questionMark = tooltip.querySelector('.tooltip__question-mark');
+    const closeMark = tooltip.querySelector('.tooltip__close');
+
+    questionMark.addEventListener('click', handleTooltip);
+    closeMark.addEventListener('click', handleTooltip);
+  }
+
   function callback() {
     const tooltips = document.querySelectorAll('.tooltip');
 
     for (const tooltip of tooltips) {
-      const questionMark = tooltip.querySelector('.tooltip__question-mark');
-      const closeMark = tooltip.querySelector('.tooltip__close');
-
-      questionMark.addEventListener('click', handleTooltip);
-      closeMark.addEventListener('click', handleTooltip);
+      activateTooltip(tooltip);
     }
 
     document.addEventListener('click', function (e) {

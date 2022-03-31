@@ -1,4 +1,4 @@
-{% include '../../components/general/CookieBanner/cookieBanner.html.twig' with {
+{% include '@components/components/general/CookieBanner/cookieBanner.html.twig' with {
   text: 'We use cookies to make food.gov.uk work, understand how you use the website and make improvements. <br>They aren’t used to identify you personally.',
   find_out_more_link: '#',
   find_out_more_text: 'Find out more about cookies',
@@ -7,7 +7,7 @@
   accept_button_label: 'Accept cookies',
 } %}
 
-{% include '../../components/general/Header/header.html.twig' with {
+{% include '@components/components/general/Header/header.html.twig' with {
   english: true,
   english_link: '#',
   english_label: 'English',
@@ -28,13 +28,13 @@
   navigation: navigation_content,
 } %}
 
-{% include '../../components/general/ErrorResponse/errorResponse.html.twig' with {
+{% include '@components/components/general/ErrorResponse/errorResponse.html.twig' with {
   error: '404',
   content: '<h1>Page not found</h1>\n
     <p>The page you were looking for has been moved or does not exist.</p>\n
     <p>Please go to the <a href="#">homepage</a> or use our search to find the information you need.</p>',
 } %}
-{% include '../../components/general/Feedback/feedback.html.twig' with {
+{% include '@components/components/general/Feedback/feedback.html.twig' with {
   section_summary: 'Feedback about the content on the page',
   heading: 'Is this page useful?',
   yes: 'Yes',
@@ -53,7 +53,7 @@
   form_action: '#'
 } %}
 
-{% include '../../components/general/Footer/footer.html.twig' with {
+{% include '@components/components/general/Footer/footer.html.twig' with {
   footer_links: 'Footer links',
   new_window: 'Open in a new window',
   menu_links: [

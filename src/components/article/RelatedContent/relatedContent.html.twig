@@ -22,6 +22,9 @@
           {% if card.description is defined %}
             <p class="related-content__description">{{ card.description }}</p>
           {% endif %}
+          {% if card.markup is defined %}
+            <div class="related-content__description">{{ card.markup }}</div>
+          {% endif %}
           {% if card.link is not empty %}
             </a>
           {% else %}

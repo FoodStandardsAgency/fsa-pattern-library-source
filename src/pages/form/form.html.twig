@@ -1,19 +1,19 @@
-{% extends '../../layout/formLayout/formLayout.html.twig' %}
+{% extends '@components/layout/formLayout/formLayout.html.twig' %}
 {% block content %}
   <form>
-    {% include '../../components/form/TitleAndText/titleAndText.html.twig' with {
+    {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
       title: 'Form title',
       description:
         '<p>Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".</p>',
       tag: 'h2',
     } %}
 
-    {% include '../../components/form/MessageBox/messageBox.html.twig' with {
+    {% include '@components/components/form/MessageBox/messageBox.html.twig' with {
       text: 'You have just used your one-time login link. Please set yourself a password that you can use to log in again.',
       type: 'status'
     } %}
     
-    {% include '../../components/form/ErrorBox/errorBox.html.twig' with {
+    {% include '@components/components/form/ErrorBox/errorBox.html.twig' with {
       title: 'There is a problem with your submission',
       errors: 'required',
       errorList: {
@@ -46,11 +46,11 @@
       }
     }%}
 
-    {% include '../../components/form/Step/step.html.twig' with {
+    {% include '@components/components/form/Step/step.html.twig' with {
       step: 'Step 3 of 5'
     } %}
 
-    {% include '../../components/form/InputField/inputField.html.twig' with {
+    {% include '@components/components/form/InputField/inputField.html.twig' with {
       name: 'title',
       id: 'title',
       label: 'Title',
@@ -61,7 +61,7 @@
       value: 'Mr.'
     } %}
 
-    {% include '../../components/form/InputField/inputField.html.twig' with {
+    {% include '@components/components/form/InputField/inputField.html.twig' with {
       name: 'firstname',
       id: 'firstname',
       label: 'First name',
@@ -72,7 +72,7 @@
       value: ''
     } %}
 
-    {% include '../../components/form/InputField/inputField.html.twig' with {
+    {% include '@components/components/form/InputField/inputField.html.twig' with {
       name: 'lastname',
       id: 'lastname',
       label: 'Last name',
@@ -83,7 +83,7 @@
       value: 'Doe'
     } %}
 
-    {% include '../../components/form/InputField/inputField.html.twig' with {
+    {% include '@components/components/form/InputField/inputField.html.twig' with {
       name: 'email',
       id: 'email',
       label: 'E-mail address',
@@ -94,7 +94,7 @@
       value: 'john.doe@example;com'
     } %}
 
-    {% include '../../components/form/InputField/inputField.html.twig' with {
+    {% include '@components/components/form/InputField/inputField.html.twig' with {
       name: 'password',
       id: 'password',
       type:'password',
@@ -106,7 +106,7 @@
       value: ''
     } %}
 
-    {% include '../../components/form/Dropdown/dropdown.html.twig' with {
+    {% include '@components/components/form/Dropdown/dropdown.html.twig' with {
       title: 'Delivery option',
       description:
         'Choose a delivery method from the dropdown list.',
@@ -126,7 +126,7 @@
       error: false,
     } %}
 
-    {% include '../../components/form/Radio/radio.html.twig' with {
+    {% include '@components/components/form/Radio/radio.html.twig' with {
       title: 'Email frequency',
       description: 'How often the emails are sent',
       fields: [
@@ -140,7 +140,7 @@
       default: 'immediately',
     } %}
 
-    {% include '../../components/form/EmailField/emailField.html.twig' with {
+    {% include '@components/components/form/EmailField/emailField.html.twig' with {
       title: 'Personal information',
       email_label: 'Email address',
       email_link: '#',
@@ -149,7 +149,7 @@
       change_email_label: 'Change your email address',
     } %}
 
-    {% include '../../components/form/InputField/inputField.html.twig' with {
+    {% include '@components/components/form/InputField/inputField.html.twig' with {
       name: 'phone',
       id: 'phone',
       label: 'Phone number',
@@ -163,7 +163,7 @@
       nested: true
     } %}
     
-    {% include '../../components/form/Checkbox/checkbox.html.twig' with {
+    {% include '@components/components/form/Checkbox/checkbox.html.twig' with {
       title: 'Consultations',
       description:
         'Stay up to date with the FSA\'s latest news and consultations by email.',
@@ -180,7 +180,7 @@
       error: false,
     } %}
 
-    {% include '../../components/form/Textarea/textarea.html.twig' with {
+    {% include '@components/components/form/Textarea/textarea.html.twig' with {
       error: false,
       name: 'crime',
       id: 'crime',
@@ -190,7 +190,7 @@
       rows: 10,
     } %}
 
-    {% include '../../components/form/Textarea/textarea.html.twig' with {
+    {% include '@components/components/form/Textarea/textarea.html.twig' with {
       error: true,
       name: 'company',
       id: 'company',
@@ -199,13 +199,13 @@
       rows: 10,
     } %}
 
-    {% include '../../components/form/MapField/mapField.html.twig' with {
+    {% include '@components/components/form/MapField/mapField.html.twig' with {
       label: 'What is the address of your business?',
       button: 'Search on the map',
       name: 'business_address',
     } %}
 
-    {% include '../../components/form/MultistepFunction/multistepFunction.html.twig' with {
+    {% include '@components/components/form/MultistepFunction/multistepFunction.html.twig' with {
       prev_label: 'Previous',
       next_label: 'Next'
     } %}

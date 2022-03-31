@@ -46,6 +46,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.0.81] - 2022-03-30 (Import typo)
+
+### Fixed
+- Import typo
+
+
+## [0.0.80] - 2022-03-30 (Fixes and removing "react" variants)
+
+### Changed
+- Add callbacks for saveProgress action buttons.
+- Updated webToolStudiesTable component.
+- Added markup field to allow other types of element to be children on the itembs block.
+- Adapted the components which had "react" variants to handle both options
+- Updated all the include paths to be from @components
+
+### Removed
+- Removed all the "react" specific templates
+
+
 ## [0.0.79] - 2022-03-30 (HACCP components & fixes)
 
 ### Added

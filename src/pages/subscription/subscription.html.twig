@@ -1,4 +1,4 @@
-{% extends "../../layout/formLayout/formLayout.html.twig" %}
+{% extends "@components/layout/formLayout/formLayout.html.twig" %}
 {% block top %}
   {# Include templates for form components here #}
   {% set breadcrumb_items = [
@@ -15,7 +15,7 @@
       'url': null
     },
   ] %}
-  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+  {% include '@components/components/general/Breadcrumb/breadcrumbs.html.twig' with {
     items: breadcrumb_items,
     expanded: false,
     subscription: {
@@ -49,7 +49,7 @@
       link: '#',
     },
   ] %}
-  {% include '../../components/form/Tabs/tabs.html.twig' with {
+  {% include '@components/components/form/Tabs/tabs.html.twig' with {
     type: 'Subscription details',
     tabs: tabs,
   } %}

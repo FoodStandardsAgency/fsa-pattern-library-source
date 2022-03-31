@@ -1,9 +1,9 @@
-{% include '../../components/general/SkipToMainContent/skipToMainContent.html.twig' with {
+{% include '@components/components/general/SkipToMainContent/skipToMainContent.html.twig' with {
   link_text: 'Skip to main content',
   href: '#main-content',
 } %}
 
-{% include '../../components/general/CookieBanner/cookieBanner.html.twig' with {
+{% include '@components/components/general/CookieBanner/cookieBanner.html.twig' with {
   text: 'We use cookies to make food.gov.uk work, understand how you use the website and make improvements. <br>They aren’t used to identify you personally.',
   find_out_more_link: '#',
   find_out_more_text: 'Find out more about cookies',
@@ -12,7 +12,7 @@
   accept_button_label: 'Accept cookies',
 } %}
 
-{% include '../../components/general/Header/header.html.twig' with {
+{% include '@components/components/general/Header/header.html.twig' with {
   english: true,
   english_link: '#',
   english_label: 'English',
@@ -36,7 +36,7 @@
   }
 } %}
 <a id="main-content" tabindex="-1"></a>
-{% include '../../components/general/Hero/hero.html.twig' with {
+{% include '@components/components/general/Hero/hero.html.twig' with {
   type: 'hero',
   backgroundColour: 'green',
   title: 'Food we can trust',
@@ -49,10 +49,10 @@
     },
   ],
 } %}
-{% include '../../components/landing/LandingTitle/landingTitle.html.twig' with {
+{% include '@components/components/landing/LandingTitle/landingTitle.html.twig' with {
   title: 'Welcome to the food standards agency',
 } %}
-{% include '../../components/landing/LandingText/landingText.html.twig' with {
+{% include '@components/components/landing/LandingText/landingText.html.twig' with {
   content: '<p>Our job is to use our expertise and influence
     so that people can trust that the food they buy and eat is safe and what it says it is. Curabitur ullamcorper
     ultricies nisi. <a href="#" class="external-link">Phasellus magna</a> Lorem ipsum dolor sit amet, consectetur
@@ -61,7 +61,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in augue quam. Vivamus non luctus ipsum. Nunc
     massa nisi, tempus non lectus eget, sodales dapibus ligula. </p>',
 } %}
-{% include '../../components/landing/LandingLinks/landingLinks.html.twig' with {
+{% include '@components/components/landing/LandingLinks/landingLinks.html.twig' with {
   title: 'Are you looking for specific business guidance?',
   items: [
     {link_text: 'Import', url: '#', svg: svg.import},
@@ -72,7 +72,7 @@
     {link_text: 'Wine', url: '#', svg: svg.wine}
   ]
 } %}
-{% include "../../components/landing/PromoGroup/promoGroup.html.twig" with {
+{% include "@components/components/landing/PromoGroup/promoGroup.html.twig" with {
   title: 'Popular content',
   cards: [
     {
@@ -137,7 +137,7 @@
     },
   ],
 } %}
-{% include '../../components/landing/ServiceLinks/serviceLinks.html.twig' with {
+{% include '@components/components/landing/ServiceLinks/serviceLinks.html.twig' with {
   title: 'This is the services title',
   description:
   'This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.',
@@ -155,7 +155,7 @@
 
 } %}
 
-{% include '../../components/landing/LatestTeaser/latestTeaser.html.twig' with {
+{% include '@components/components/landing/LatestTeaser/latestTeaser.html.twig' with {
   title: 'This is the services title',
   description:
   '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p><p>This is a description for the services section.</p>',
@@ -195,7 +195,7 @@
   prev_button_label: 'More News and Alerts',
 } %}
 
-{% include '../../components/landing/LargePromoGroup/largePromoGroup.html.twig' with {
+{% include '@components/components/landing/LargePromoGroup/largePromoGroup.html.twig' with {
   promoGroup: [
     {
       image: "https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/homepage-1.png",
@@ -228,7 +228,7 @@
   ]
 } %}
 
-{% include '../../components/general/Feedback/feedback.html.twig' with {
+{% include '@components/components/general/Feedback/feedback.html.twig' with {
   section_summary: 'Feedback about the content on the page',
   heading: 'Is this page useful?',
   yes: 'Yes',
@@ -247,7 +247,7 @@
   form_action: '#'
 } %}
 
-{% include '../../components/general/Footer/footer.html.twig' with {
+{% include '@components/components/general/Footer/footer.html.twig' with {
   footer_links: 'Footer links',
   new_window: 'Open in a new window',
   menu_links: [

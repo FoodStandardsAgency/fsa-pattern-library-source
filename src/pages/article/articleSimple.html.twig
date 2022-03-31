@@ -1,4 +1,4 @@
-{% extends '../../layout/contentLayout/contentLayout.html.twig' %}
+{% extends '@components/layout/contentLayout/contentLayout.html.twig' %}
 {% set document_args = {
   format: 'word',
   link: '#',
@@ -27,7 +27,7 @@
   },
 ] %}
 {% block header %}
-  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+  {% include '@components/components/general/Breadcrumb/breadcrumbs.html.twig' with {
     items: breadcrumb_items,
     expanded: false,
   } %}
@@ -90,7 +90,7 @@
      Scotland. When a decision is made to authorise a product, this will mean a change to the legislation. The
      legislation will set out how the product can be used and any associated conditions of use.</p>'
   } %}
-  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+  {% include '@components/components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
     region: ['England'],
     wysiwyg_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu congue blandit tincidunt. Pellentesque et elit nulla. Nullam posuere massa nec facilisis placerat. ',
     transparent_background: false,
@@ -103,13 +103,13 @@
     authorisation for a regulated food and feed product marketed in
     Northern Ireland will have to continue to follow EU rules.</p>',
   } %}
-  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+  {% include '@components/components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
     region: ['Northern Ireland'],
     wysiwyg_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu congue blandit tincidunt. Pellentesque et elit nulla. Nullam posuere massa nec facilisis placerat. ',
     transparent_background: true,
   } %}
 
-  {% include '../../components/article/ChartBlock/chartBlock.html.twig' with {
+  {% include '@components/components/article/ChartBlock/chartBlock.html.twig' with {
     name: 'COVID-19',
     description: 'Description text goes here and gets added via the text component',
     image: {
@@ -143,7 +143,7 @@
     ],
   } %}
 
-  {% include '../../components/article/FootNotes/footNotes.html.twig' with {
+  {% include '@components/components/article/FootNotes/footNotes.html.twig' with {
     links: [
       {
         key: '1',
@@ -160,7 +160,7 @@
     ],
   } %}
 
-  {% include '../../components/article/RevisionLogBottom/revisionLogBottom.html.twig' with {
+  {% include '@components/components/article/RevisionLogBottom/revisionLogBottom.html.twig' with {
     heading: 'Revision log',
     toggle_text_hide: 'Hide all updates',
     toggle_text_show: 'Show all updates',
@@ -187,7 +187,7 @@
     ],
   } %}
 
-  {% include '../../components/article/BackToTop/backToTop.html.twig' with {
+  {% include '@components/components/article/BackToTop/backToTop.html.twig' with {
     back_to_top: 'Back to top',
   } %}
 {% endblock %}
