@@ -27,13 +27,13 @@ export default function () {
   }
 
   function callback() {
-    const questionMarks = document.querySelectorAll('.tooltip__question-mark');
-    for (const questionMark of questionMarks) {
-      questionMark.addEventListener('click', handleTooltip);
-    }
+    const tooltips = document.querySelectorAll('.tooltip');
 
-    const closeMarks = document.querySelectorAll('.tooltip__close');
-    for (const closeMark of closeMarks) {
+    for (const tooltip of tooltips) {
+      const questionMark = tooltip.querySelector('.tooltip__question-mark');
+      const closeMark = tooltip.querySelector('.tooltip__close');
+
+      questionMark.addEventListener('click', handleTooltip);
       closeMark.addEventListener('click', handleTooltip);
     }
 

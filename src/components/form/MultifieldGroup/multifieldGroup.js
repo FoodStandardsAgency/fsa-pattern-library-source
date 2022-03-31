@@ -32,7 +32,7 @@ export default function () {
       }
     }
 
-    // Handle multivalueFields.
+    // Handle multivalue fields.
     const multivalueFields = template.querySelectorAll('.multivalue-field');
     for (const field of multivalueFields) {
       field.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
