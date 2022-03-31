@@ -65,6 +65,14 @@
 
     td {
       padding: 1rem;
+
+      &.right {
+        vertical-align: top;
+
+        @media screen and (max-width: $fsa-md-minus) {
+          padding: 1rem 0;
+        }
+      }
     }
   }
 }

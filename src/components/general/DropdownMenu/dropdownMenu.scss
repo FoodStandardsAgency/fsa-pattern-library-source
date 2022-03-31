@@ -21,6 +21,7 @@
     background-image: url("./assets/arrow-down.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem) center;
+    white-space: nowrap;
 
     @media screen and (min-width: $fsa-md) {
       font-weight: bold;
