@@ -5,12 +5,6 @@ export default {
   title: 'Components/HACCP/Web Tool Progress Bar',
 };
 
-// The custom callback for a step of progress bar.
-// In Drupal implementation locate it in "Drupal.behaviors" namespace.
-window.customPreparatoryIntroCallback = function () {
-  alert('It is a custom callback.');
-};
-
 export const WebToolProgressBar = (args) => webToolProgressBar(args);
 WebToolProgressBar.args = {
   lines: [
@@ -19,7 +13,6 @@ WebToolProgressBar.args = {
       steps: [
         {
           url: '#',
-          callback: 'customPreparatoryIntroCallback',
           label: 'Intro',
           state: 'completed',
         },

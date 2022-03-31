@@ -1,11 +1,13 @@
+{% set prev_id_is_defined = prev_id is defined and prev_id is not empty %}
+
 <div class="multistep-function">
   <div class="multistep-function__container">
     
     {% if prev_label %}
       {% if prev_link %}
-        <a href="{{ prev_link }}" class="multistep-function__previous" onClick="{{ prev_callback is defined ? prev_callback ~ '(); return false;' : '' }}">{{ prev_label }}</a>
+        <a href="{{ prev_link }}" class="multistep-function__previous" {{ prev_id_is_defined ? 'id="' ~ prev_id ~ '"' : '' }}>{{ prev_label }}</a>
       {% else %}
-        <input type="submit" class="multistep-function__previous" name="{{ prev_label|striptags|replace({" ": "-"})|lower }}" value="{{ prev_label }}"  onClick="{{ prev_callback is defined ? prev_callback ~ '(); return false;' : '' }}" />
+        <input type="submit" class="multistep-function__previous" {{ prev_id_is_defined ? 'id="' ~ prev_id ~ '"' : '' }} name="{{ prev_label|striptags|replace({" ": "-"})|lower }}" value="{{ prev_label }}" />
       {% endif %}
     {% endif %}
   
@@ -13,7 +15,7 @@
       type: 'primary',
       label: next_label,
       element: 'input',
-      callback: next_callback,
+      id: next_id,
     } %}
 
   </div>
