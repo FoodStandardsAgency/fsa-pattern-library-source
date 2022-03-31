@@ -1,7 +1,7 @@
 import './multifieldGroup.html.twig';
 import './multifieldGroup.scss';
 import { domContentLoadedWrapper } from '../../../helpers';
-import { addField } from '../MultivalueField/multivalueField';
+import {activateMultivalueField, addField} from '../MultivalueField/multivalueField';
 import { activateTooltip } from '../Tooltip/tooltip';
 
 export default function () {
@@ -36,10 +36,7 @@ export default function () {
     // Handle multivalue fields.
     const multivalueFields = template.querySelectorAll('.multivalue-field');
     for (const field of multivalueFields) {
-      field.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
-        e.preventDefault();
-        addField(field);
-      });
+      activateMultivalueField(field);
     }
 
     // Activate tooltips.
