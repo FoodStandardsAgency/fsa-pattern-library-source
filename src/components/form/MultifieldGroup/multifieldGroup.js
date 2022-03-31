@@ -1,7 +1,7 @@
 import './multifieldGroup.html.twig';
 import './multifieldGroup.scss';
 import { domContentLoadedWrapper } from '../../../helpers';
-import {activateMultivalueField, addField} from '../MultivalueField/multivalueField';
+import { activateMultivalueField, addField } from '../MultivalueField/multivalueField';
 import { activateTooltip } from '../Tooltip/tooltip';
 
 export default function () {
