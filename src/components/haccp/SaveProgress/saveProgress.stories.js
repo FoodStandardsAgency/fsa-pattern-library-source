@@ -11,6 +11,8 @@ export const SaveProgress = Template.bind({});
 SaveProgress.args = {
   previous: 'Previous',
   prev_link: '#',
+  prev_id: 'prev_step_el',
+  next_id: 'next_step_el',
   save_and_continue: 'Save and continue',
   message:
     '<p>Navigating within the tool will save your progress.</p><p>If you are leaving the tool entirely you can <a href="#">save this page</a></p>',
