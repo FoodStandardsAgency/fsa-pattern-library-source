@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.83] - 2022-03-31 (HACCP components & fixes)
 
 ### Added
 - Guidance Popup component.
@@ -34,18 +34,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Fix color in tooltip component for "error input" case.
 - Improvements for webToolStudiesTable component.
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
 
 
 ## [0.0.82] - 2022-03-31 (HACCP components)
