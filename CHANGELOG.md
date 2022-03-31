@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Fix color in tooltip component for "error input" case.
+- Improvements for webToolStudiesTable component.
 
 ### Deprecated
 -
