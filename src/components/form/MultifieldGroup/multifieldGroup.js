@@ -2,6 +2,7 @@ import './multifieldGroup.html.twig';
 import './multifieldGroup.scss';
 import { domContentLoadedWrapper } from '../../../helpers';
 import { addField } from '../MultivalueField/multivalueField';
+import { activateTooltip } from '../Tooltip/tooltip';
 
 export default function () {
   function addGroup(group, values = {}) {
@@ -39,6 +40,12 @@ export default function () {
         e.preventDefault();
         addField(field);
       });
+    }
+
+    // Activate tooltips.
+    const tooltips = template.querySelectorAll('.tooltip');
+    for (const tooltip of tooltips) {
+      activateTooltip(tooltip);
     }
 
     parent.insertBefore(template, group.parentNode);
