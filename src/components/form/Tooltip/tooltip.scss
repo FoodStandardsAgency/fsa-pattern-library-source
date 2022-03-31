@@ -124,6 +124,7 @@
   &__message {
     @include body;
 
+    color: var(--fsa-primary_black);
     padding: 1rem 1.5rem 1rem 1rem;
     text-align: left;
   }
@@ -132,6 +133,7 @@
 .with-tooltip {
   position: relative;
   padding-right: 2rem;
+  width: 100%;
 
   .tooltip {
     position: absolute;
