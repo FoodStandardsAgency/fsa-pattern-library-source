@@ -16,7 +16,7 @@ Default.args = {
   website_title: 'Website',
   website_url: 'www.coventry.gov.uk',
   email_title: 'Email',
-  email_address: 'ehcommercial@coventry.gov.uk',
+  email_address: 'ehcommercialverylongemailaddress@coventry.gov.uk',
   logo_svg: logo,
 };
 
