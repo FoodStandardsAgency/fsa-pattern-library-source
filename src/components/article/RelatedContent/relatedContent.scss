@@ -22,6 +22,11 @@
     }
   }
 
+  &__main-text {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
   &__grid-container {
     @include grid-container;
   }
@@ -104,6 +109,21 @@
     }
   }
 
+  &__card_no_link {
+    &::after {
+      content: "";
+      background-image: none;
+    }
+
+    &:hover {
+      border-color: inherit;
+
+      &::after {
+        background-image: none;
+      }
+    }
+  }
+
   &__sub-heading {
     @include h4;
 
@@ -125,6 +145,15 @@
     @include body;
 
     color: var(--fsa-primary_black);
+
+    ol,
+    ul {
+      padding-left: 1rem;
+
+      li {
+        margin-top: 1rem;
+      }
+    }
 
     @media screen and (min-width: $fsa-md) {
       margin: 1rem 2.25rem 0;

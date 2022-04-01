@@ -15,21 +15,117 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Deprecated
-
 -
 
 ### Removed
-
 -
 
 ### Fixed
-
 -
 
 ### Security
+-
+
+## [Upcoming release template] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Local authority anchor links will wrap when it overflows
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.83] - 2022-03-31 (HACCP components & fixes)
+
+### Added
+- Guidance Popup component.
+
+### Changed
+- Fix color in tooltip component for "error input" case.
+- Improvements for webToolStudiesTable component.
+
+
+## [0.0.82] - 2022-03-31 (HACCP components)
+
+### Added
+- Add multivalueField and multifieldGroup components.
+
+### Changed
+- Buttons, multistepFunction and saveProgress components are supports id attribute.
+
+### Removed
+- Callbacks support.
+
+
+## [0.0.81] - 2022-03-30 (Import typo)
+
+### Fixed
+- Import typo
+
+
+## [0.0.80] - 2022-03-30 (Fixes and removing "react" variants)
+
+### Changed
+- Add callbacks for saveProgress action buttons.
+- Updated webToolStudiesTable component.
+- Added markup field to allow other types of element to be children on the itembs block.
+- Adapted the components which had "react" variants to handle both options
+- Updated all the include paths to be from @components
+
+### Removed
+- Removed all the "react" specific templates
+
+
+## [0.0.79] - 2022-03-30 (HACCP components & fixes)
+
+### Added
+- White logo for expanded primary navigation for MyHACCP.
+- Add haccp namespace and move webtool components to there.
+- Add saveProgress component.
+
+### Changed
+- Added missing placeholder to the search bar for MyHACCP version of the header.
+- Revision log added article simple page
+- Revision log styling fixes
+- Related content remove image, as not needed.
+
+### Fixed
+- Removed unneeded right padding for the external links in the footer navigation.
+
+
+## [0.0.78] - 2022-03-29 (New and updated HACCP components)
+
+### Added
+- Add Form/Tooltip component.
+
+### Changed
+- Add a 'by search' variation of the local authority component.
+- InputField, Radio, Checkbox, Dropdown, Textarea components.
+- Create a wrapper for DOMContentLoaded and fix the events behavior.
+
+
+## [0.0.77] - 2022-03-28 (Added webtoolprogressbar & reexporting sitemap)
+
+### Added
+- Add Article/WebToolProgressBar component.
+
+### Fixed
+- Missing Sitemap component.
+
+
+## [0.0.76] - 2022-03-25 (New FHRS components, updated components)
 
 ### Added
 - FHRS's local authority component
@@ -38,18 +134,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Make Chart source optional
-
-### Deprecated
-- 
-
-### Removed
-- 
+- Make top section of revision log open rev log on click
+- Revision log now closed by default
 
 ### Fixed
 - The Chart image should resize to its container
 
-### Security
--
+
+## [0.0.75] - 2022-03-24 (Changes in Chart & Related content components)
+
+### Changed
+- Related content : top text, item images and optional links on items added.
+- Make Chart source optional
+
+### Fixed
+- The Chart image should resize to its container
 
 
 ## [0.0.74] - 2022-03-22 (New Components, updates and fixes)

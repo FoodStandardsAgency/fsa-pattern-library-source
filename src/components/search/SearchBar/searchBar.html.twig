@@ -1,6 +1,10 @@
 <form class="search-bar" action="{{ search_link }}" autocomplete="off">
   <label class="search-bar__label" for="search">{{ search_text }}</label>
-  <input class="search-bar__box" value="{{ search_value }}" name="keywords" type="search" id="search" data-fsa-at="search-input">
+  {% if default_value is defined %}
+    <input class="search-bar__box{{ defaultValue != "" ? " search-bar__box--has-content" : "" }}" defaultValue="{{ defaultValue }}" name="keywords" type="search" id="search" data-fsa-at="search-input">
+  {% else %}
+    <input class="search-bar__box" value="{{ search_value }}" name="keywords" type="search" id="search" data-fsa-at="search-input">
+  {% endif %}
   <button class="search-bar__submit" aria-label="search" data-fsa-at="search-submit">
     <span class="search-bar__span visually-hidden">{{ search_text }}</span>
   </button>

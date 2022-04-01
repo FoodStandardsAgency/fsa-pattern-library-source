@@ -1,7 +1,6 @@
 import updateParams from '../../../helpers/updateParams';
 
 import './sortBy.html.twig';
-import './react/sortBy.html.twig';
 import './sortBy.scss';
 
 export default function () {

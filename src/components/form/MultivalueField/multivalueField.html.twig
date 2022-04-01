@@ -1,0 +1,9 @@
+<div class="multivalue-field" data-values='{{ values|json_encode() }}'>
+  {% include '@components/components/form/InputField/inputField.html.twig' with {
+    value: values[0] is defined ? values[0] : '',
+  } %}
+
+  <div class="multivalue-field__add-entity">
+    <a href="#">{{ add_another }} {{ entity_name }}</a>
+  </div>
+</div>

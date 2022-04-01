@@ -24,9 +24,9 @@
 {% endfor %}
 {# End date generation #}
 
-{% extends '../../layout/twoColumn/twoColumn.html.twig' %}
+{% extends '@components/layout/twoColumn/twoColumn.html.twig' %}
 {% block header %}
-  {% include '../../components/general/Header/header.html.twig' with {
+  {% include '@components/components/general/Header/header.html.twig' with {
   english: true,
   english_link: '#',
   english_label: 'English',
@@ -909,8 +909,8 @@
       }
     ]
   %}
-  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumb_items, expanded: false } %}
-  {% include '../../components/search/SearchBarHeader/searchBarHeader.html.twig' with {
+  {% include '@components/components/general/Breadcrumb/breadcrumbs.html.twig' with { items: breadcrumb_items, expanded: false } %}
+  {% include '@components/components/search/SearchBarHeader/searchBarHeader.html.twig' with {
     header_text: 'Search',
     search_link: '#',
     search_text: 'Search Food Standards Agency',
@@ -919,7 +919,7 @@
 {% endblock %}
 
 {% block left %}
-  {% include '../../components/search/FiltersHeader/filtersHeader.html.twig' with {
+  {% include '@components/components/search/FiltersHeader/filtersHeader.html.twig' with {
     title: 'Filter your search',
     link_text: 'Return to results',
     button_text: 'Filter your search',
@@ -1069,7 +1069,7 @@
       },
     ],
   } %}
-  {% include '../../components/search/RatingCta/ratingCta.html.twig' with {
+  {% include '@components/components/search/RatingCta/ratingCta.html.twig' with {
     title: 'FSA News & Alerts subscription',
     description: 'This is some explainer text why the user should subscribe.',
     url: '#',
@@ -1115,7 +1115,7 @@
     remove_filter: 'Remove filter',
     remove_all_filters: 'Remove all filters',    
   } %}
-  {% include '../../components/search/FiltersSelected/filtersSelected.html.twig' with filter_params %}
+  {% include '@components/components/search/FiltersSelected/filtersSelected.html.twig' with filter_params %}
   {% set content = {
     type: 'Allergy alert',
     title: 'Update from the Food Standards Agency, Food Standards Scotland and Defra following the rise in cases of feline pancytopenia',
@@ -1123,16 +1123,16 @@
     date: '8 September 2021',
     url: 'http://google.com',
   } %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 0}) %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 1}) %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 2}) %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 3}) %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 4}) %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 5}) %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 6}) %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 7}) %}
-  {% include '../../components/search/ListingItem/listingItem.html.twig' with content|merge({index: 8}) %}
-  {% include '../../components/search/Pagination/pagination.html.twig' with {
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 0}) %}
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 1}) %}
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 2}) %}
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 3}) %}
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 4}) %}
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 5}) %}
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 6}) %}
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 7}) %}
+  {% include '@components/components/search/ListingItem/listingItem.html.twig' with content|merge({index: 8}) %}
+  {% include '@components/components/search/Pagination/pagination.html.twig' with {
     total_pages: 12,
     current_page: 1,
     max_visible_pages: 4,
@@ -1150,14 +1150,14 @@
 {% endblock %}
 
 {% block right_top %}
-  {% include '../../components/search/Showing/showing.html.twig' with {
+  {% include '@components/components/search/Showing/showing.html.twig' with {
     showing: 'Showing',
     of: 'of',
     results: 'results',
     displayed_results: '1-10',
     total_results: '103',
   } %}
-  {% include '../../components/search/SortBy/sortBy.html.twig' with {
+  {% include '@components/components/search/SortBy/sortBy.html.twig' with {
     sort_by: 'Sort by',
     options: [
       {
@@ -1174,7 +1174,7 @@
 {% endblock %}
 
 {% block footer %}
-  {% include '../../components/general/Feedback/feedback.html.twig' with {
+  {% include '@components/components/general/Feedback/feedback.html.twig' with {
     section_summary: 'Feedback about the content on the page',
     heading: 'Is this page useful?',
     yes: 'Yes',
@@ -1192,7 +1192,7 @@
     submit: 'Submit',
   form_action: '#'
   } %}
-  {% include '../../components/general/Footer/footer.html.twig' with {
+  {% include '@components/components/general/Footer/footer.html.twig' with {
     footer_links: 'Footer links',
     new_window: 'Open in a new window',
     menu_links: [

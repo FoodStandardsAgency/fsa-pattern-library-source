@@ -38,3 +38,9 @@ Error.args = {
   required: 'required',
   error: true,
 };
+
+export const WithTooltip = Template.bind({});
+WithTooltip.args = {
+  ...Normal.args,
+  tooltip_message: Normal.args.description,
+};

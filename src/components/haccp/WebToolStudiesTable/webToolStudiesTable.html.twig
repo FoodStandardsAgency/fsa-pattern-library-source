@@ -1,0 +1,35 @@
+<table class="webtool-studies-table">
+  <thead>
+    <tr>
+      <th>{{ study_name }}</th>
+      <th class="hide-on-mobile">{{ created_on }}</th>
+      <th class="hide-on-mobile">{{ last_updated }}</th>
+      <th colspan="3" scope="colgroup" class="hide-on-mobile">{{ status }}</th>
+      <th class="show-on-mobile"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <td><a href="{{ row.url }}" class="study-label">{{ row.label }}</a></td>
+      <td class="hide-on-mobile">{{ row.created_at }}</td>
+      <td class="hide-on-mobile">{{ row.updated_at }}</td>
+      <td class="hide-on-mobile">{{ row.status }}</td>
+      <td class="right hide-on-mobile">
+        {% include '@components/components/general/Button/button.html.twig' with {
+          element: 'link',
+          type: 'primary',
+          url: row.url,
+          label: row.button_label,
+        } %}
+      </td>
+      <td class="right">
+        {% include '@components/components/general/DropdownMenu/dropdownMenu.html.twig' with {
+          label: row.more_options,
+          options: row.options,
+        } %}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>

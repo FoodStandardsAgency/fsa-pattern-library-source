@@ -1,4 +1,4 @@
-{% extends '../../layout/contentLayout/contentLayout.html.twig' %}
+{% extends '@components/layout/contentLayout/contentLayout.html.twig' %}
 {% set document_args = {
   format: 'word',
   link: '#',
@@ -26,7 +26,7 @@
   },
 ] %}
 {% block header %}
-  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+  {% include '@components/components/general/Breadcrumb/breadcrumbs.html.twig' with {
     items: breadcrumb_items,
     expanded: false,
   } %}
@@ -58,7 +58,7 @@
   } %}
 {% endblock %}
 {% block right %}
-  {% include '../../components/article/ContentMetaData/contentMetaData.html.twig' with {
+  {% include '@components/components/article/ContentMetaData/contentMetaData.html.twig' with {
     meta_data: [
       {
         label: 'Research programme',
@@ -79,7 +79,7 @@
   {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
     content: '<p>Worthenshaws Ltd is recalling Kirsty’s Classic Beef Lasagne because it contains a statement on the label that the product is free from all 14 allergens, which is not accurate as the product contains oats (that are gluten free). Oats is also not emphasised on the label. This means the product is suitable for someone following a gluten free diet, however, it is not suitable for those who have an allergy to Oats.</p>'
   } %}
-  {% include '../../components/article/ProductDetails/productDetails.html.twig' with {
+  {% include '@components/components/article/ProductDetails/productDetails.html.twig' with {
     title: 'Product details',
     products: [
       {
@@ -135,7 +135,7 @@
     <p>Allergen(s): Oats (that are gluten free)</ br>These products contain oats (that are gluten free) making it a
     possible health risk for anyone with an allergy to oats</p>'
   } %}
-  {% include '../../components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
+  {% include '@components/components/article/DocumentDownload/documentDownload.html.twig' with document_args|merge({ format: 'pdf', region: ['England'] }) %}
   {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
     content: '
     <h3>Action taken by the company</h3>
@@ -165,12 +165,12 @@
       <td>4.5%</td>
     </tr></tbody></table>'
   } %}
-  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+  {% include '@components/components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
     region: ['England'],
     wysiwyg_content: 'If you have bought the above products and have an allergy to oats (that are gluten free), do not eat them. Instead return it to the <a href="#">store</a> from where it was bought for a full refund.',
     transparent_background: true,
   } %}
-  {% include '../../components/article/BackToTop/backToTop.html.twig' with {
+  {% include '@components/components/article/BackToTop/backToTop.html.twig' with {
     back_to_top: 'Back to top',
   } %}
 {% endblock %}

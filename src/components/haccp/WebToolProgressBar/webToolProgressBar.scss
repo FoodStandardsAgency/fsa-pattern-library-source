@@ -1,0 +1,184 @@
+@import "src/lib.scss";
+
+.webtool-progress-bar {
+  background: var(--fsa_online-grey);
+  padding: 1rem;
+  width: 100%;
+
+  @media screen and (min-width: $fsa-lg) {
+    display: inline-block;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  &__wrapper {
+    @include grid-container;
+
+    @media screen and (max-width: $fsa-lg-minus) {
+      padding: 0;
+    }
+  }
+
+  &__grid {
+    &-row {
+      @include grid-row;
+    }
+
+    &-col {
+      @include grid-cols(12);
+    }
+  }
+
+  &__line {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    & + & {
+      margin-top: 2rem;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+
+      & + & {
+        margin-top: 3.5rem;
+      }
+    }
+
+    &-opened {
+      .webtool-progress-bar__label {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      .webtool-progress-bar__steps {
+        display: block;
+
+        @media screen and (min-width: $fsa-lg) {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  &__label {
+    @include h4;
+
+    cursor: default;
+    line-height: 1;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("./assets/arrow.svg");
+      display: inline-block;
+      width: 1.1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      height: 1rem;
+      right: 0;
+      vertical-align: middle;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__steps {
+    display: none;
+    margin-top: 1rem;
+    width: 100%;
+
+    @media screen and (min-width: $fsa-lg) {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0;
+      width: 80%;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      width: 85%;
+    }
+  }
+
+  &__step {
+    border-left: 4px solid var(--fsa-webtool-prgress-bar-border-step);
+    flex: 1;
+
+    .sr-desktop {
+      display: inline;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      border-bottom: 4px solid var(--fsa-webtool-prgress-bar-border-step);
+      border-left: none;
+      text-align: center;
+
+      .sr-desktop {
+        display: none;
+      }
+    }
+
+    a {
+      @include h6;
+      @include link;
+
+      display: block;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      width: 100%;
+
+      @media screen and (min-width: $fsa-lg) {
+        @include h4;
+
+        font-size: 1.5rem;
+        padding: 0 0.25rem;
+      }
+
+      @media screen and (min-width: $fsa-xl) {
+        padding: 0.5rem 1.5rem;
+      }
+
+      &:hover {
+        background: var(--fsa-primary_dark-green);
+        color: var(--fsa-primary_white);
+      }
+    }
+
+    &-completed {
+      border-color: var(--fsa-primary_dark-green);
+      margin-bottom: 1px;
+
+      @media screen and (min-width: $fsa-lg) {
+        margin-right: 1px;
+        margin-bottom: 0;
+      }
+
+      a {
+        color: var(--fsa-primary_black);
+      }
+    }
+
+    &-active {
+      background: var(--fsa-primary_dark-green);
+
+      a {
+        color: var(--fsa-primary_white);
+
+        &:hover,
+        &:focus {
+          color: var(--fsa-primary_white);
+        }
+      }
+    }
+  }
+}
