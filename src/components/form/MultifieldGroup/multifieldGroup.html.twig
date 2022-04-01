@@ -1,0 +1,20 @@
+<div class="multifield-group" data-items='{{ items|json_encode() }}'>
+  <div class="multifield-group__template">
+    <div class="multifield-group__item">
+      <h2>{{ label }}</h2>
+      <div class="multifield-group__delete-item">
+        <a href="#">{{ remove_this }} {{ entity_name|lower }}</a>
+      </div>
+      <div class="multifield-group__form">
+        {{ template }}
+      </div>
+    </div>
+  </div>
+  <div class="multifield-group__add-item">
+    {% include "@components/components/general/Button/button.html.twig" with {
+      element: 'button',
+      type: 'primary',
+      label: add_another ~ " " ~ entity_name,
+    } %}
+  </div>
+</div>

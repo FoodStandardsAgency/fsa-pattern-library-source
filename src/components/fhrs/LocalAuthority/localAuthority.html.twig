@@ -15,7 +15,7 @@
           <div class="local-authority__field">
             <span class="local-authority__field-name">{{ website_title }}:</span>
             <span class="local-authority__field-content">
-              {% include "../../general/ExternalLink/externalLink.html.twig" with {
+              {% include "@components/components/general/ExternalLink/externalLink.html.twig" with {
                 external_link: website_url,
                 external_link_url: website_url
               } %}
@@ -26,7 +26,7 @@
           <div class="local-authority__field">
             <span class="local-authority__field-name">{{ email_title }}:</span>
             <span class="local-authority__field-content">
-              {% include "../../general/Link/link.html.twig" with {
+              {% include "@components/components/general/Link/link.html.twig" with {
                 link_url: mail_to_email,
                 link_text: email_address
               } %}

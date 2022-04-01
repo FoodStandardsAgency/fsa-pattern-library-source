@@ -1,14 +1,9 @@
 import './feedback.html.twig';
 import './feedback.scss';
+import { domContentLoadedWrapper } from '../../../helpers';
 
 export default function () {
-  let DOMContentFirstLoad = true;
-  window.addEventListener('DOMContentLoaded', function () {
-    if (DOMContentFirstLoad) {
-      DOMContentFirstLoad = false;
-      return;
-    }
-
+  function callback() {
     const feedback = document.querySelector('.feedback');
     if (!feedback) return;
 
@@ -42,5 +37,7 @@ export default function () {
     addButtonListener('.feedback__report-button', showForm);
     addButtonListener('.feedback__close', showQuestions);
     addButtonListener('.feedback__submit', showThanks);
-  });
+  }
+
+  return domContentLoadedWrapper(callback);
 }

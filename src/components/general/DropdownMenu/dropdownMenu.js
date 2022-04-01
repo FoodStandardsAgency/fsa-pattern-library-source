@@ -1,15 +1,9 @@
 import './dropdownMenu.scss';
 import './dropdownMenu.html.twig';
+import { domContentLoadedWrapper } from '../../../helpers';
 
 export default function () {
-  let DOMContentFirstLoad = true;
-  window.addEventListener('DOMContentLoaded', function () {
-    if (!DOMContentFirstLoad) {
-      return;
-    }
-
-    DOMContentFirstLoad = false;
-
+  function callback() {
     const dropdowns = document.querySelectorAll('.dropdown-menu__label');
 
     for (const dropdown of dropdowns) {
@@ -34,5 +28,7 @@ export default function () {
         }
       }
     });
-  });
+  }
+
+  return domContentLoadedWrapper(callback);
 }

@@ -26,6 +26,7 @@ export const Error = Template.bind({});
 Error.args = {
   ...Normal.args,
   error: true,
+  error_message: 'This field is required',
   required: 'required',
 };
 
@@ -39,4 +40,10 @@ DefaultValue.args = {
   description: 'Please describe the food crime that you are reporting',
   rows: 10,
   value: 'My custom text',
+};
+
+export const WithTooltip = Template.bind({});
+WithTooltip.args = {
+  ...Normal.args,
+  tooltip_message: Normal.args.description,
 };

@@ -23,7 +23,7 @@
     flex: 50%;
 
     @media screen and (min-width: $fsa-md) {
-      flex: auto;
+      flex: none;
     }
 
     a,

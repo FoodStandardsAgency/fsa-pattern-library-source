@@ -13,6 +13,7 @@
   &__heading {
     font-weight: bold;
     font-size: 1.4rem;
+    margin: 0;
 
     @media screen and (min-width: $fsa-md) {
       font-size: 1.439rem;
@@ -28,13 +29,14 @@
   }
 
   &__toggle-button {
+    @include link;
+
     display: none;
     background: var(--fsa-primary_white);
     border: 0;
     font-size: 1rem;
     cursor: pointer;
-
-    @include link;
+    font-family: var(--body-font);
   }
 
   &__toggle-button-show {

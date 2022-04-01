@@ -1,4 +1,4 @@
-{% extends '../../layout/contentLayout/contentLayout.html.twig' %}
+{% extends '@components/layout/contentLayout/contentLayout.html.twig' %}
 {% set breadcrumb_items = [
   {
     'text': 'Home',
@@ -18,14 +18,14 @@
   },
 ] %}
 {% block full_width %}
-  {% include '../../components/general/Hero/hero.html.twig' with {
+  {% include '@components/components/general/Hero/hero.html.twig' with {
     type: 'hero',
     backgroundColour: 'green',
     title: 'Fish and shellfish',
   } %}
 {% endblock %}
 {% block header %}
-  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+  {% include '@components/components/general/Breadcrumb/breadcrumbs.html.twig' with {
     items: breadcrumb_items,
     expanded: false,
   } %}

@@ -1,7 +1,7 @@
-{% extends '../../layout/contactLayout/contactLayout.html.twig' %}
+{% extends '@components/layout/contactLayout/contactLayout.html.twig' %}
 
 {% block top %}
-  {% include '../../components/contact/HelpSecondaryMenu/helpSecondaryMenu.html.twig' with {
+  {% include '@components/components/contact/HelpSecondaryMenu/helpSecondaryMenu.html.twig' with {
     heading: 'Help/contact menu',
     links: [
       {
@@ -127,7 +127,7 @@
 } %}
 
 {% block content %}
-  {% include '../../components/contact/PromoLinks/promoLinks.html.twig' with {
+  {% include '@components/components/contact/PromoLinks/promoLinks.html.twig' with {
     links: [
     {
       href: '#',

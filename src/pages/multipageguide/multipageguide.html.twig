@@ -1,5 +1,5 @@
 
-{% extends '../../layout/contentLayout/contentLayout.html.twig' %}
+{% extends '@components/layout/contentLayout/contentLayout.html.twig' %}
 {% set breadcrumb_items = [
   {
     'text': 'Home',
@@ -15,7 +15,7 @@
   },
 ] %}
 {% block header %}
-  {% include '../../components/general/Breadcrumb/breadcrumbs.html.twig' with {
+  {% include '@components/components/general/Breadcrumb/breadcrumbs.html.twig' with {
     items: breadcrumb_items,
     expanded: false,
   } %}
@@ -76,7 +76,7 @@
      Scotland. When a decision is made to authorise a product, this will mean a change to the legislation. The
      legislation will set out how the product can be used and any associated conditions of use.</p>'
   } %}
-  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+  {% include '@components/components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
     region: ['England'],
     wysiwyg_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu congue blandit tincidunt. Pellentesque et elit nulla. Nullam posuere massa nec facilisis placerat. ',
     transparent_background: false,
@@ -89,12 +89,12 @@
     authorisation for a regulated food and feed product marketed in
     Northern Ireland will have to continue to follow EU rules.</p>',
   } %}
-  {% include '../../components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
+  {% include '@components/components/article/RegionalVariationBlock/regionalVariationBlock.html.twig' with {
     region: ['Northern Ireland'],
     wysiwyg_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum arcu congue blandit tincidunt. Pellentesque et elit nulla. Nullam posuere massa nec facilisis placerat. ',
     transparent_background: true,
   } %}
-  {% include '../../components/article/BackToTop/backToTop.html.twig' with {
+  {% include '@components/components/article/BackToTop/backToTop.html.twig' with {
     back_to_top: 'Back to top',
   } %}
   {% include '@components/components/multipageguide/Pagination/pagination.html.twig' with {

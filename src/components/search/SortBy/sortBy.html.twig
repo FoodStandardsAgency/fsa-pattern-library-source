@@ -1,8 +1,12 @@
 <div class="sort">
   <label for="sort" class="sort__label">{{ sort_by }}</label>
-  <select name="sort" id="sort" class="sort__select" data-fsa-at="search-sort">
+  {% if default_value is defined %}
+    <select name="sort" id="sort" class="sort__select" defaultValue="{{ default|lower }}" data-fsa-at="search-sort">
+  {% else %}
+    <select name="sort" id="sort" class="sort__select" data-fsa-at="search-sort">
+  {% endif %}
     {% for option in options %}
-      <option value="{{ option.value|lower }}" class="sort__option" {{ option.value|lower == default|lower ? "selected" : "" }}>{{ option.text }}</option>
+      <option value="{{ option.value|lower }}" class="sort__option" {{ default_value is not defined and option.value|lower == default|lower ? "selected" : "" }}>{{ option.text }}</option>
     {% endfor %}
   </select>
 </div>

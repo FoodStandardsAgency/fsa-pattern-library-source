@@ -11,6 +11,7 @@ import './components/general/Button/button';
 import './components/general/Header/header';
 import './components/general/Hero/hero';
 import './components/general/Link/link';
+import './components/general/SiteMap/siteMap';
 import './components/general/ExternalLink/externalLink';
 import './components/general/MailLink/mailLink';
 import './components/general/Footer/footer';
@@ -23,6 +24,7 @@ import './components/general/SkipToMainContent/skipToMainContent';
 import navigation from './components/general/Navigation/navigation';
 import header from './components/general/Header/header';
 import dropdownMenu from './components/general/DropdownMenu/dropdownMenu';
+import guidancePopup from './components/general/GuidancePopup/guidancePopup';
 
 /* Search Components */
 import './components/search/CollapsibleCheckbox/collapsibleCheckbox';
@@ -52,6 +54,9 @@ import './components/form/EmailField/emailField';
 import './components/form/Textarea/textarea';
 import './components/form/Step/step';
 import mapField from './components/form/MapField/mapField';
+import tooltip from './components/form/Tooltip/tooltip';
+import multivalueField from './components/form/MultivalueField/multivalueField';
+import multifieldGroup from './components/form/MultifieldGroup/multifieldGroup';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
@@ -80,7 +85,6 @@ import './components/article/QuoteBlock/quoteBlock';
 import './components/article/TeamContacts/teamContacts';
 import './components/article/ProductDetails/productDetails';
 import './components/article/AllergensTable/allergensTable';
-import './components/article/WebToolStudiesTable/webToolStudiesTable';
 import footNotes from './components/article/FootNotes/footNotes';
 import revisionLogBottom from './components/article/RevisionLogBottom/revisionLogBottom';
 import backToTop from './components/article/BackToTop/backToTop';
@@ -90,8 +94,15 @@ import tableOfContents from '@components/components/article/TableOfContents/tabl
 import textBlock from './components/article/TextBlock/textBlock';
 import chartBlock from './components/article/ChartBlock/chartBlock';
 
+/* HACCP components */
+import './components/haccp/WebToolStudiesTable/webToolStudiesTable';
+import webtoolProgressBar from './components/haccp/WebToolProgressBar/webToolProgressBar';
+
 /* FHRS components */
 import './components/fhrs/LocalAuthority/localAuthority';
+
+/* HACCP components */
+import './components/haccp/SaveProgress/saveProgress';
 
 /* Multipage guide Components */
 import './components/multipageguide/GuideHero/guideHero';
@@ -140,3 +151,8 @@ textBlock();
 chartBlock();
 mapField();
 dropdownMenu();
+webtoolProgressBar();
+tooltip();
+multivalueField();
+multifieldGroup();
+guidancePopup();

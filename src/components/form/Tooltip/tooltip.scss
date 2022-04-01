@@ -1,0 +1,123 @@
+@import "src/lib.scss";
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+
+  &__popup {
+    display: inline;
+  }
+
+  &__question-mark {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      background-image: url("./assets/question.svg");
+      display: inline-block;
+      width: 2.3rem;
+      height: 2.3rem;
+      background-repeat: no-repeat;
+
+      @media screen and (min-width: $fsa-lg) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    display: block;
+    height: 0.7rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 0.7rem;
+
+    &::before {
+      content: "";
+      background-image: url("./assets/close.svg");
+      display: block;
+      width: 0.7rem;
+      height: 0.7rem;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__body {
+    background: var(--fsa_online-grey);
+    border: 3px solid var(--fsa-primary_dark-green);
+    display: none;
+    font-size: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 3.4rem;
+    text-align: right;
+    font-weight: normal;
+    width: 20rem;
+    z-index: 3;
+
+    @media screen and (min-width: $fsa-md) {
+      top: 3.6rem;
+      width: 41rem;
+    }
+
+    @media screen and (min-width: $fsa-lg) {
+      top: 3.27rem;
+    }
+
+    &::before {
+      content: "";
+      background-image: url("./assets/top-part.svg");
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: -19px; // exactly PX because there is top corner of toolbox.
+      right: -13.5px; // exactly PX because there is top corner of toolbox.
+
+      @media screen and (min-width: $fsa-lg) {
+        right: -17.5px; // exactly PX because there is top corner of toolbox.
+      }
+    }
+
+    a {
+      @include link;
+
+      font-weight: bold;
+    }
+
+    &-opened {
+      display: block;
+    }
+  }
+
+  &__message {
+    @include body;
+
+    color: var(--fsa-primary_black);
+    padding: 1rem 1.5rem 1rem 1rem;
+    text-align: left;
+  }
+}
+
+.label-with-tooltip {
+  position: relative;
+  padding-right: 2rem;
+  width: 100%;
+
+  .tooltip {
+    position: absolute;
+    top: -0.3rem;
+    right: 0;
+
+    @media screen and (min-width: $fsa-lg) {
+      top: -0.2rem;
+    }
+  }
+}
