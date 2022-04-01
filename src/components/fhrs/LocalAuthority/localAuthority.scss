@@ -19,6 +19,9 @@
 
   &__field {
     margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &__field-name {
@@ -31,6 +34,10 @@
 
   &__field-content {
     @include body;
+
+    a {
+      overflow-wrap: anywhere;
+    }
   }
 
   &__logo-wrapper {
