@@ -2,13 +2,15 @@
 {% set id = spaceless_name %}
 <fieldset id="{{ fieldset_id is defined ? fieldset_id : ""}}" class="checkbox{{ error ? " checkbox--error" : "" }}" aria-describedby="{{ description is defined ? id : "" }}">
   {% if title is defined %}
-    <div class="{{ tooltip_message is defined ? "label-with-tooltip" : "" }}">
+    <div class="{{ tooltip is defined ? "label-with-tooltip" : "" }}">
       <legend class="checkbox__legend">
         {{ title }}<span class="checkbox__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
       </legend>
-      {% if tooltip_message is defined %}
+      {% if tooltip is defined %}
         {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
-          message: tooltip_message,
+          open: tooltip.open,
+          close: tooltip.close,
+          message: tooltip.message,
           guidance_popup: guidance_popup,
         } %}
       {% endif %}

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
+
 -
 
 ### Deprecated
@@ -24,6 +25,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 -
+
+
+## [0.0.84] - 2022-04-04 (fixes on HACCP components)
+
+### Changed
+- Local authority anchor links will wrap when it overflows
+- Improve the behavior of multivalueField component.
+- Update styles for "save page" component.
+- Update styles for progress bar component.
+- Update tooltip component.
+
+### Fixed
+- Revision og fix heading from h4 to h4 and give correct font.
 
 
 ## [0.0.83] - 2022-03-31 (HACCP components & fixes)

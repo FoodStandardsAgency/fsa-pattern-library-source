@@ -2,13 +2,15 @@
 {% set id = spaceless_name %}
 <div id="{{ fieldset_id is defined ? fieldset_id : ""}}" class="dropdown{{ error ? " dropdown--error" : "" }}{{ classes ? ' ' ~ classes : ''}}" aria-describedby="{{ description is defined ? id : "" }}">
   {% if title is defined %}
-    <div class="{{ tooltip_message is defined ? "label-with-tooltip" : "" }}">
+    <div class="{{ tooltip is defined ? "label-with-tooltip" : "" }}">
       <label for="{{ id }}" class="dropdown__label">
         {{ title }}<span class="dropdown__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
       </label>
-      {% if tooltip_message is defined %}
+      {% if tooltip is defined %}
         {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
-          message: tooltip_message,
+          open: tooltip.open,
+          close: tooltip.close,
+          message: tooltip.message,
           guidance_popup: guidance_popup,
         } %}
       {% endif %}

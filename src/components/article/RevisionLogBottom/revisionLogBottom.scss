@@ -11,13 +11,9 @@
   }
 
   &__heading {
-    font-weight: bold;
-    font-size: 1.4rem;
     margin: 0;
 
-    @media screen and (min-width: $fsa-md) {
-      font-size: 1.439rem;
-    }
+    @include h4;
   }
 
   &__dates {

@@ -36,5 +36,9 @@ Error.args = {
 export const WithTooltip = Template.bind({});
 WithTooltip.args = {
   ...Normal.args,
-  tooltip_message: 'Choose how often you want to get emails.',
+  tooltip: {
+    open: 'Open tooltip',
+    close: 'Close',
+    message: 'Choose how often you want to get emails.',
+  },
 };

@@ -1,11 +1,13 @@
 <div class="input-field{{ error ? " input-field--error" : "" }}{{ states ? ' js-form-item js-form-item-' ~ name : ''}}">
-  <div class="{{ tooltip_message is defined ? "label-with-tooltip" : "" }}">
+  <div class="{{ tooltip is defined ? "label-with-tooltip" : "" }}">
     <label class="input-field__label{{ nested ? " input-field__nested" : "" }}" for="{{ id }}">{{ label }}
       <span class="input-field__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
     </label>
-    {% if tooltip_message is defined %}
+    {% if tooltip is defined %}
       {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
-        message: tooltip_message,
+        open: tooltip.open,
+        close: tooltip.close,
+        message: tooltip.message,
         guidance_popup: guidance_popup,
       } %}
     {% endif %}

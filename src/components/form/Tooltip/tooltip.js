@@ -55,7 +55,15 @@ function handleTooltip(e) {
 
   closeAllTooltips(body);
 
-  body.style.maxWidth = `${tooltip.getBoundingClientRect().left - 20}px`;
+  // Used to provide the proper space from left side of a tooltip.
+  const oneMobileRem = 16;
+
+  if (window.innerWidth < 1024) {
+    const parentWidth = tooltip.parentNode.offsetWidth;
+    body.style.width = `${parentWidth - oneMobileRem}px`;
+  } else {
+    body.style.maxWidth = `${tooltip.getBoundingClientRect().left - oneMobileRem}px`;
+  }
 
   body.classList.toggle('tooltip__body-opened');
 }
