@@ -2,14 +2,16 @@
 {% set desc_id = spaceless_name %}
 {% set desc_is_defined = description is defined %}
 <div class="textarea{{ error ?  " textarea--error" : "" }}">
-  <div class="{{ tooltip_message is defined ? "label-with-tooltip" : "" }}">
+  <div class="{{ tooltip is defined ? "label-with-tooltip" : "" }}">
     <label class="textarea__label" for="{{ id }}">
       <span class="textarea__label-content">{{ label }}</span>
       <span class="textarea__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
     </label>
-    {% if tooltip_message is defined %}
+    {% if tooltip is defined %}
       {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
-        message: tooltip_message,
+        open: tooltip.open,
+        close: tooltip.close,
+        message: tooltip.message,
         guidance_popup: guidance_popup,
       } %}
     {% endif %}

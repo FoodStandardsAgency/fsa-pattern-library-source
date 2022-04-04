@@ -1,7 +1,7 @@
 <div class="tooltip">
-  <div class="tooltip__question-mark"></div>
+  <a href="#" class="tooltip__question-mark" title="{{ open }}"></a>
   <div class="tooltip__body">
-    <div class="tooltip__close"></div>
+    <a href="#" class="tooltip__close" title="{{ close }}"></a>
     <div class="tooltip__message">
       {{ message|raw }}
       {% if guidance_popup is defined %}

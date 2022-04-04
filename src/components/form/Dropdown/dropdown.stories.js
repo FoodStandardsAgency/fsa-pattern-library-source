@@ -41,5 +41,9 @@ Error.args = {
 export const WithTooltip = Template.bind({});
 WithTooltip.args = {
   ...Normal.args,
-  tooltip_message: Normal.args.description,
+  tooltip: {
+    open: 'Open tooltip',
+    close: 'Close',
+    message: Normal.args.description,
+  },
 };
