@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Local authority anchor links will wrap when it overflows
+- Improve the behavior of multivalueField component.
 - Update styles for "save page" component.
 - Update styles for progress bar component.
 

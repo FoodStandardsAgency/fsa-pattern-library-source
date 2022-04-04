@@ -15,10 +15,7 @@ export default function () {
         addField(field, value);
       }
 
-      field.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
-        e.preventDefault();
-        addField(field);
-      });
+      activateMultivalueField(field);
     }
   }
 
@@ -37,17 +34,13 @@ export function addField(scope, initialValue = '') {
   }
   clonedEl.querySelector('input').value = initialValue;
 
-  const deleteButton = document.createElement('div');
-  deleteButton.classList.add('multivalue-field__delete-entity');
-
-  deleteButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    e.target.parentNode.remove();
-  });
+  const deleteButton = buildDeleteButton(scope);
 
   clonedEl.append(deleteButton);
 
   wrapper.parentNode.insertBefore(clonedEl, wrapper.nextSibling);
+
+  scope.setAttribute('data-count', wrappers.length + 1);
 }
 
 export function activateMultivalueField(scope, initialValue = '') {
@@ -55,4 +48,21 @@ export function activateMultivalueField(scope, initialValue = '') {
     e.preventDefault();
     addField(scope, initialValue);
   });
+
+  const deleteButton = buildDeleteButton(scope);
+  scope.querySelector('.input-field__wrapper').append(deleteButton);
+}
+
+function buildDeleteButton(scope) {
+  const deleteButton = document.createElement('a');
+  deleteButton.href = '#';
+  deleteButton.classList.add('multivalue-field__delete-entity');
+
+  deleteButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.target.parentNode.remove();
+    scope.setAttribute('data-count', scope.getAttribute('data-count') - 1);
+  });
+
+  return deleteButton;
 }

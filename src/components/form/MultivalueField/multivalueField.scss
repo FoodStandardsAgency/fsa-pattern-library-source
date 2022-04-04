@@ -2,13 +2,23 @@
 
 .multivalue-field {
   &__add-entity {
-    @include link;
+    a {
+      @include link;
+    }
 
     margin-top: 1rem;
   }
 
+  &[data-count="1"] {
+    .multivalue-field__delete-entity {
+      display: none;
+    }
+  }
+
   &__delete-entity {
     cursor: pointer;
+    height: 1.75rem;
+    width: 1.75rem;
 
     &::before {
       content: "";
@@ -21,20 +31,23 @@
       margin-right: 1rem;
       vertical-align: middle;
     }
+
+    &:focus {
+      // Required to override a bottom border passed from ".input-field a".
+      border-bottom-color: var(--fsa-tertiary_light-yellow) !important;
+    }
   }
 
   .input-field__wrapper {
     position: relative;
 
-    & + & {
-      input {
-        padding-right: 2rem;
-      }
+    input {
+      padding-right: 2rem;
     }
 
     .multivalue-field__delete-entity {
       position: absolute;
-      right: -0.8rem;
+      right: 0.2rem;
       top: 0.5rem;
     }
   }
