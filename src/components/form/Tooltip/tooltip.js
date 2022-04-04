@@ -55,7 +55,12 @@ function handleTooltip(e) {
 
   closeAllTooltips(body);
 
-  body.style.maxWidth = `${tooltip.getBoundingClientRect().left - 20}px`;
+  if (window.innerWidth < 1024) {
+    const parentWidth = tooltip.parentNode.offsetWidth;
+    body.style.width = `${parentWidth - 16}px`;
+  } else {
+    body.style.maxWidth = `${tooltip.getBoundingClientRect().left - 20}px`;
+  }
 
   body.classList.toggle('tooltip__body-opened');
 }

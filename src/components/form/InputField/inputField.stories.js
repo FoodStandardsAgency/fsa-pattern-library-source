@@ -103,7 +103,11 @@ WithTooltip.args = {
   error_message: 'Unrecognized username or password',
   value: '',
   type: 'text',
-  tooltip_message: 'Type your email address here.',
+  tooltip: {
+    open: 'Open tooltip',
+    close: 'Close',
+    message: 'Type your email address here.',
+  },
   guidance_popup: {
     open_popup: 'See more information',
     label: 'Help',
