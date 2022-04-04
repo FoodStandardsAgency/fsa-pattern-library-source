@@ -27,6 +27,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Say open/close for tooltip component.
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
 ## [0.0.84] - 2022-04-04 (fixes on HACCP components)
 
 ### Changed

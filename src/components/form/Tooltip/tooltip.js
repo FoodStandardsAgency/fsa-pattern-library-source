@@ -71,7 +71,10 @@ function handleTooltip(e) {
     const parentWidth = tooltip.parentNode.offsetWidth;
     body.style.width = `${parentWidth - oneMobileRem}px`;
   } else {
-    body.style.maxWidth = `${Math.max(minWidth, tooltip.getBoundingClientRect().left - oneMobileRem)}px`;
+    body.style.maxWidth = `${Math.max(
+      minWidth,
+      tooltip.getBoundingClientRect().left - oneMobileRem
+    )}px`;
   }
 
   body.classList.toggle('tooltip__body-opened');
