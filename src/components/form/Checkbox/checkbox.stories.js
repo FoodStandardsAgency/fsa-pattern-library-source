@@ -46,5 +46,5 @@ WithTooltip.args = {
     open: 'Open tooltip',
     close: 'Close',
     message: Normal.args.description,
-  }
+  },
 };
