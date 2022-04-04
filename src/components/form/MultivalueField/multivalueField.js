@@ -14,6 +14,8 @@ export default function () {
       for (const value of values) {
         addField(field, value);
       }
+
+      activateMultivalueField(field);
     }
   }
 
