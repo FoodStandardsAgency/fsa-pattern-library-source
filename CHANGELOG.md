@@ -27,10 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
-
-### Added
--
+## [0.0.84] - 2022-04-04 (fixes on HACCP components)
 
 ### Changed
 - Local authority anchor links will wrap when it overflows
@@ -39,17 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update styles for progress bar component.
 - Update tooltip component.
 
-### Deprecated
--
-
-### Removed
--
-
 ### Fixed
 - Revision og fix heading from h4 to h4 and give correct font.
-
-### Security
--
 
 
 ## [0.0.83] - 2022-03-31 (HACCP components & fixes)
