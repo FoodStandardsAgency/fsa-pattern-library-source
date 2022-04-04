@@ -1,6 +1,8 @@
 @import "src/lib.scss";
 
 .haccp-save-progress {
+  margin-top: 3rem;
+
   &__message {
     @include body;
 
