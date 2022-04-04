@@ -26,13 +26,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-## [Upcoming release template] - 1971-11-03
+
+## [Upcoming release] - 1971-11-03
 
 ### Added
 -
 
 ### Changed
 - Local authority anchor links will wrap when it overflows
+- Update styles for progress bar component.
 
 ### Deprecated
 -
