@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Local authority anchor links will wrap when it overflows
 - Update styles for "save page" component.
+- Update styles for progress bar component.
 
 ### Deprecated
 -
@@ -43,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Revision og fix heading from h4 to h4 and give correct font.
 
 ### Security
 -
