@@ -1,9 +1,11 @@
 <div class="tooltip">
-  <a href="#" class="tooltip__question-mark" title="{{ open }}"></a>
+  <a href="#" class="tooltip__question-mark" aria-label="{{ open }}"></a>
   <div class="tooltip__body">
-    <a href="#" class="tooltip__close" title="{{ close }}"></a>
+    <a href="#" class="tooltip__close" aria-label="{{ close }}"></a>
     <div class="tooltip__message">
-      {{ message|raw }}
+      <div class="tooltip__message-content">
+        {{ message|raw }}
+      </div>
       {% if guidance_popup is defined %}
         <div class="tooltip__popup">
           <a href="#" class="tooltip__popup-open">{{ guidance_popup.open_popup }}</a>
