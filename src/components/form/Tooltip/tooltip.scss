@@ -7,6 +7,11 @@
 
   &__popup {
     display: inline;
+
+    &-open {
+      @include link;
+      font-weight: bold;
+    }
   }
 
   &__question-mark {
@@ -87,16 +92,19 @@
 
   &__message {
     @include body;
-
-    a {
-      @include link;
-
-      font-weight: bold;
-    }
-
     color: var(--fsa-primary_black);
     padding: 1rem 1.5rem 1rem 1rem;
     text-align: left;
+
+    &-content {
+      display: inline;
+
+      a {
+        @include link;
+
+        font-weight: bold;
+      }
+    }
   }
 
   &__close {
