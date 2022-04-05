@@ -1,6 +1,6 @@
 import './tooltip.scss';
 import './tooltip.html.twig';
-import { domContentLoadedWrapper, speak } from '../../../helpers';
+import { domContentLoadedWrapper } from '../../../helpers';
 import { activatePopup } from '../../general/GuidancePopup/guidancePopup';
 
 export default function () {
@@ -52,12 +52,6 @@ function handleTooltip(e) {
 
   const tooltip = e.target.closest('.tooltip');
   const body = tooltip.querySelector('.tooltip__body');
-
-  if (!body.classList.contains('tooltip__body-opened')) {
-    speak(tooltip.querySelector('.tooltip__question-mark span').innerHTML);
-  } else {
-    speak(tooltip.querySelector('.tooltip__close span').innerHTML);
-  }
 
   closeAllTooltips(body);
 
