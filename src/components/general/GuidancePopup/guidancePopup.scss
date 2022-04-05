@@ -27,7 +27,7 @@
   &__wrapper {
     background: var(--fsa-primary_white);
     border: 3px solid var(--fsa-primary_dark-green);
-    padding: 1rem;
+    padding: 0.25rem 1rem;
     position: fixed;
     top: 1rem;
     left: 1rem;
@@ -36,7 +36,7 @@
     z-index: 101;
 
     @media screen and (min-width: $fsa-md) {
-      padding: 1rem 2rem;
+      padding: 0.25rem 2rem;
       top: 2rem;
       left: 2rem;
       height: calc(100% - 4rem);
@@ -87,25 +87,44 @@
   }
 
   &__more {
-    @include link;
+    a {
+      @include link;
+    }
   }
 
   &__close {
     display: inline-block;
-    margin-left: 2.5rem;
+    margin-left: 0.5rem;
+    position: relative;
+    right: -1rem;
 
     @media screen and (min-width: $fsa-md) {
-      margin-left: 2rem;
+      right: -2rem;
     }
 
     a {
+      display: block;
+      height: 1.8rem;
+      width: 1.8rem;
+      position: relative;
+
+      &:focus {
+        background-color: var(--fsa-primary_black);
+        border: 2px solid var(--fsa-tertiary_light-yellow);
+      }
+
       &::before {
         content: "";
         background-image: url("./assets/close.svg");
+        background-color: var(--fsa-primary_white);
         display: block;
-        width: 1.2rem;
-        height: 1.2rem;
+        position: absolute;
+        height: calc(100% - 4px);
+        width: calc(100% - 4px);
+        top: 2px;
+        left: 2px;
         background-repeat: no-repeat;
+        background-position: center;
       }
     }
   }

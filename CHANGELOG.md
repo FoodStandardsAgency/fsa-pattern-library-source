@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
-
 -
 
 ### Deprecated
@@ -25,6 +24,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 -
+
+
+## [0.0.85] - 2022-04-05 (fixes on HACCP components)
+
+### Changed
+- Adapt styles for guidance popup component.
+- Say open/close for tooltip component.
+- Adapt webToolProgressBar component.
 
 
 ## [0.0.84] - 2022-04-04 (fixes on HACCP components)
