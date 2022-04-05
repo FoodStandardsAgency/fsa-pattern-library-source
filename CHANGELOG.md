@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
-
 -
 
 ### Deprecated
@@ -26,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+
 ## [Upcoming release] - 1971-11-03
 
 ### Added
@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Adapt styles for guidance popup component.
+- Say open/close for tooltip component.
 
 ### Deprecated
 -
