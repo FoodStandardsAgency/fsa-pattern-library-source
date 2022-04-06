@@ -79,9 +79,15 @@ function buildDeleteButton(scope) {
   deleteButton.addEventListener('click', function (e) {
     e.preventDefault();
 
-    dispatchMultigroupEvent(e.target);
+    const parent = e.target.parentNode;
+    const group = e.target.closest('.multifield-group');
 
-    e.target.parentNode.remove();
+    parent.remove();
+
+    if (group) {
+      dispatchMultigroupEvent(group);
+    }
+
     scope.setAttribute('data-count', scope.getAttribute('data-count') - 1);
   });
 
