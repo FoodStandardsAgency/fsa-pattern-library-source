@@ -74,7 +74,7 @@ export function activateMultivalueField(scope) {
   }
 }
 
-function setMappingForLabel(label) {
+export function setMappingForLabel(label) {
   const multiWrapper = label.closest('.multivalue-field');
   const singleWrapper = label.closest('.input-field');
 

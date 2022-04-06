@@ -1,7 +1,11 @@
 import './multifieldGroup.html.twig';
 import './multifieldGroup.scss';
 import { domContentLoadedWrapper, generateHash } from '../../../helpers';
-import { activateMultivalueField, addField } from '../MultivalueField/multivalueField';
+import {
+  activateMultivalueField,
+  addField,
+  setMappingForLabel,
+} from '../MultivalueField/multivalueField';
 import { activateTooltip } from '../Tooltip/tooltip';
 
 export default function () {
@@ -61,6 +65,16 @@ export default function () {
       const name = element.getAttribute('name').replace('[]', '');
       element.setAttribute('data-field-name', name);
       element.setAttribute('data-sub-group-id', groupId);
+
+      // Set mapping between labels and fields for single fields.
+      const multiWrapper = element.closest('.multivalue-field');
+      if (!multiWrapper) {
+        const singleWrapper = element.closest('.input-field');
+        if (singleWrapper) {
+          const label = singleWrapper.querySelector('label');
+          setMappingForLabel(label);
+        }
+      }
     }
 
     // Set errors.
