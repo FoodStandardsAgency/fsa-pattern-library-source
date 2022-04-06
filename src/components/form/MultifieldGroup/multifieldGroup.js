@@ -11,6 +11,9 @@ export default function () {
       .querySelector('.multifield-group__template .multifield-group__item')
       .cloneNode(true);
 
+    const groupId = generateHash();
+    template.setAttribute('data-sub-group-id', groupId);
+
     template
       .querySelector('.multifield-group__delete-item')
       .addEventListener('click', function (e) {
@@ -18,17 +21,25 @@ export default function () {
         e.target.closest('.multifield-group__item').remove();
       });
 
+    // Handle multivalue fields.
+    const multivalueFields = template.querySelectorAll('.multivalue-field');
+    for (const field of multivalueFields) {
+      activateMultivalueField(field);
+    }
+
+    // Activate tooltips.
+    const tooltips = template.querySelectorAll('.tooltip');
+    for (const tooltip of tooltips) {
+      activateTooltip(tooltip);
+    }
+
     // Set existed values.
-    const groupId = generateHash();
     for (const key in values.values) {
       const element = template.querySelector(`[name^="${key}"]`);
 
       if (element) {
-        const name = element.getAttribute('name').replace('[]', '');
-
         const multivalueField = element.closest('.multivalue-field');
         if (multivalueField && Array.isArray(values.values[key]) && values.values[key].length) {
-          element.setAttribute('name', `${name}[${groupId}][]`);
           element.setAttribute('value', values.values[key][0]);
 
           for (const value of values.values[key].splice(1)) {
@@ -36,19 +47,16 @@ export default function () {
           }
         } else {
           element.setAttribute('value', values.values[key]);
-          element.setAttribute('name', `${name}[${groupId}]`);
-          element.setAttribute('id', `${name}-${groupId}`);
         }
-
-        if (multivalueField) {
-          element.setAttribute('data-field-type', 'multi');
-        } else {
-          element.setAttribute('data-field-type', 'single');
-        }
-
-        element.setAttribute('data-field-name', name);
-        element.setAttribute('data-sub-group-id', groupId);
       }
+    }
+
+    // Set proper attrs for all fields, even no predefined.
+    const allInputs = template.querySelectorAll(`input`);
+    for (const element of allInputs) {
+      const name = element.getAttribute('name').replace('[]', '');
+      element.setAttribute('data-field-name', name);
+      element.setAttribute('data-sub-group-id', groupId);
     }
 
     // Set errors.
@@ -62,18 +70,6 @@ export default function () {
           wrapper.classList.add('input-field--error');
         }
       }
-    }
-
-    // Handle multivalue fields.
-    const multivalueFields = template.querySelectorAll('.multivalue-field');
-    for (const field of multivalueFields) {
-      activateMultivalueField(field);
-    }
-
-    // Activate tooltips.
-    const tooltips = template.querySelectorAll('.tooltip');
-    for (const tooltip of tooltips) {
-      activateTooltip(tooltip);
     }
 
     parent.insertBefore(template, group.parentNode);

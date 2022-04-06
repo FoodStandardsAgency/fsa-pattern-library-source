@@ -32,8 +32,19 @@ export function addField(scope, initialValue = '') {
   if (clonedDeleteButton) {
     clonedDeleteButton.remove();
   }
-  clonedEl.querySelector('input').value = initialValue;
-  clonedEl.querySelector('input').setAttribute('id', `multifield-${generateHash()}`);
+
+  const clonedInput = clonedEl.querySelector('input');
+
+  clonedInput.value = initialValue;
+  clonedInput.setAttribute('id', `multifield-${generateHash()}`);
+  clonedInput.setAttribute('data-field-name', clonedInput.getAttribute('name').replace('[]', ''));
+
+  const multifieldSubGroup = scope.closest('.multifield-group__item');
+  if (multifieldSubGroup && multifieldSubGroup.hasAttribute('data-sub-group-id')) {
+    clonedEl
+      .querySelector('input')
+      .setAttribute('data-sub-group-id', multifieldSubGroup.getAttribute('data-sub-group-id'));
+  }
 
   const deleteButton = buildDeleteButton(scope);
 
@@ -46,10 +57,10 @@ export function addField(scope, initialValue = '') {
   return clonedEl;
 }
 
-export function activateMultivalueField(scope, initialValue = '') {
+export function activateMultivalueField(scope) {
   scope.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
     e.preventDefault();
-    addField(scope, initialValue);
+    addField(scope, '');
   });
 
   const deleteButton = buildDeleteButton(scope);
