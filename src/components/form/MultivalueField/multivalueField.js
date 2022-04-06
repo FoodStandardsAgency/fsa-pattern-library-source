@@ -1,6 +1,7 @@
 import './multivalueField.html.twig';
 import './multivalueField.scss';
 import { domContentLoadedWrapper, generateHash } from '../../../helpers';
+import { dispatchMultigroupEvent } from '@components/components/form/MultifieldGroup/multifieldGroup';
 
 export default function () {
   function callback() {
@@ -62,6 +63,7 @@ export function activateMultivalueField(scope) {
   scope.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
     e.preventDefault();
     addField(scope, '');
+    dispatchMultigroupEvent(e.target);
   });
 
   const deleteButton = buildDeleteButton(scope);
@@ -76,6 +78,9 @@ function buildDeleteButton(scope) {
 
   deleteButton.addEventListener('click', function (e) {
     e.preventDefault();
+
+    dispatchMultigroupEvent(e.target);
+
     e.target.parentNode.remove();
     scope.setAttribute('data-count', scope.getAttribute('data-count') - 1);
   });

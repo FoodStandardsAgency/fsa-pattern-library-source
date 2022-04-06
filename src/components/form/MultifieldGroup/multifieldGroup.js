@@ -18,6 +18,7 @@ export default function () {
       .querySelector('.multifield-group__delete-item')
       .addEventListener('click', function (e) {
         e.preventDefault();
+        dispatchMultigroupEvent(e.target);
         e.target.closest('.multifield-group__item').remove();
       });
 
@@ -87,6 +88,7 @@ export default function () {
       const button = group.querySelector('.multifield-group__add-item button');
       button.addEventListener('click', function (e) {
         addGroup(e.target, count);
+        dispatchMultigroupEvent(e.target);
       });
 
       const parsedValues = JSON.parse(group.getAttribute('data-items'));
@@ -100,4 +102,12 @@ export default function () {
   }
 
   return domContentLoadedWrapper(callback);
+}
+
+export function dispatchMultigroupEvent(element, event = 'input') {
+  const group = element.closest('.multifield-group');
+
+  if (group) {
+    group.dispatchEvent(new Event(event));
+  }
 }
