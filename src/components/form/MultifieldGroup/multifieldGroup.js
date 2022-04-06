@@ -19,17 +19,32 @@ export default function () {
       });
 
     // Set existed values.
-    for (const key in values) {
+    for (const key in values.values) {
       const element = template.querySelector(`[name^="${key}"]`);
 
-      const multivalueField = element.closest('.multivalue-field');
-      if (multivalueField && Array.isArray(values[key]) && values[key].length) {
-        element.setAttribute('value', values[key][0]);
-        for (const value of values[key].splice(1)) {
-          addField(multivalueField, value);
+      if (element) {
+        const multivalueField = element.closest('.multivalue-field');
+        if (multivalueField && Array.isArray(values.values[key]) && values.values[key].length) {
+          element.setAttribute('value', values.values[key][0]);
+          for (const value of values.values[key].splice(1)) {
+            addField(multivalueField, value);
+          }
+        } else {
+          element.setAttribute('value', values.values[key]);
         }
-      } else {
-        element.setAttribute('value', values[key]);
+      }
+    }
+
+    // Set errors.
+    for (const field of values.errors) {
+      const element = template.querySelector(`[name^="${field}"]`);
+
+      if (element) {
+        const wrapper = element.closest('.input-field');
+
+        if (wrapper) {
+          wrapper.classList.add('input-field--error');
+        }
       }
     }
 
