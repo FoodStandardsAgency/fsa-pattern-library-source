@@ -37,8 +37,11 @@ export default function () {
         } else {
           element.setAttribute('value', values.values[key]);
           element.setAttribute('name', `${name}[${groupId}]`);
-          element.setAttribute('id', `${name}-${groupId}-${generateHash()}`);
+          element.setAttribute('id', `${name}-${groupId}`);
         }
+
+        element.setAttribute('data-field-name', name);
+        element.setAttribute('data-sub-group-id', groupId);
       }
     }
 
