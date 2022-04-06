@@ -110,10 +110,10 @@
   }
 
   &__card_no_link {
-    a{
+    a {
       @include link;
-
     }
+
     &::after {
       content: "";
       background-image: none;
