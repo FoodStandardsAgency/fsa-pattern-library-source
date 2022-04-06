@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Implement the logic of "error inputs" for multifield groups.
+- Adjust the logis of multifield groups generally.
 
 ### Deprecated
 -

@@ -12,6 +12,7 @@ const ContentTemplate = (args) => multifieldGroupContent({ ...args, step_number:
 export const MultifieldGroup = Template.bind({});
 MultifieldGroup.args = {
   template: ContentTemplate.bind({}),
+  id: 'multi-steps',
   items: [
     {
       values: {
