@@ -5,7 +5,7 @@
     </h3>
     <div class="revision-log__toggle">
       <button class="revision-log__toggle-button revision-log__toggle-button-hide" aria-hidden="false">{{ toggle_text_hide }}</button>
-      <button class="revision-log__toggle-button revision-log__toggle-button-show" aria-hidden="true">{{ toggle_text_show }}</button>
+      <button class="revision-log__toggle-button revision-log__toggle-button-show" aria-hidden="true" tabindex="-1">{{ toggle_text_show }}</button>
     </div>
   </div>
   <div  class="revision-log__dates">
@@ -13,9 +13,9 @@
     <p>{{ last_updated_label }}: {{ last_updated }}</p>
   </div>
   {% if logs %}
-  <ul class="revision-log__link-list" aria-hidden="false">
+  <ul class="revision-log__link-list" aria-hidden="true">
     {% for log in logs %}
-      <li class="revision-log__link-list__item" id="fn:{{ log.key }}">
+      <li class="revision-log__link-list__item" id="{{ log.key }}">
         <strong class="revision-log__link-list__item-date">{{ log.date }}</strong>
         <span  class="revision-log__link-list__item-text">{{ log.text }}</span>
       </li>

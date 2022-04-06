@@ -12,7 +12,6 @@ const Template = (args) => filtersHeader(args);
 
 export const FiltersHeader = Template.bind({});
 FiltersHeader.args = {
-  no_results: false,
   title: 'Filter your search',
   link_text: 'Return to results',
   button_text: 'Filter your search',
@@ -138,26 +137,27 @@ FiltersHeader.args = {
       fields: [
         {
           type: 'datepicker',
-          dateType: 'From',
+          date_type: 'From',
           id: 'from',
           label: 'Updated from',
-          applyLabel: 'Apply date',
-          applyLink: '#',
-          minimumSelection: 'Please select a year as a minimum, the day and month are optional.',
-          invalidDate: 'Please select a valid date combination.',
+          apply_label: 'Apply date',
+          apply_link: '#',
+          minimum_selection: 'Please select a year as a minimum, the day and month are optional.',
+          invalid_date: 'Please select a valid date combination.',
+          start_year: 2016,
         },
         {
           type: 'datepicker',
-          dateType: 'To',
+          date_type: 'To',
           id: 'to',
           label: 'Updated to',
-          applyLabel: 'Apply date',
-          applyLink: '#',
-          minimumSelection: 'Please select a year as a minimum, the day and month are optional.',
-          invalidDate: 'Please select a valid date combination.',
+          apply_label: 'Apply date',
+          apply_link: '#',
+          minimum_selection: 'Please select a year as a minimum, the day and month are optional.',
+          invalid_date: 'Please select a valid date combination.',
+          start_year: 2016,
         },
       ],
-      open: true,
     },
   ],
 };

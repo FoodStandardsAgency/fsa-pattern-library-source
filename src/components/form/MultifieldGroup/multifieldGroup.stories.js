@@ -7,7 +7,7 @@ export default {
 };
 
 const Template = (args) => multifieldGroup(args);
-const ContentTemplate = (args) => multifieldGroupContent(args);
+const ContentTemplate = (args) => multifieldGroupContent({ ...args, step_number: 1 });
 
 export const MultifieldGroup = Template.bind({});
 MultifieldGroup.args = {

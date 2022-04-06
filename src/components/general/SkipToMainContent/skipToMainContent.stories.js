@@ -11,5 +11,5 @@ export default {
 export const SkipToMainContent = (args) => skipToMainContent(args);
 SkipToMainContent.args = {
   link_text: 'Skip to main content',
-  href: '#main-content',
+  href: '#',
 };

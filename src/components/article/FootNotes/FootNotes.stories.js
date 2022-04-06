@@ -7,8 +7,8 @@ export default {
 
 const Template = (args) => footNotes(args);
 
-export const Basic = Template.bind({});
-Basic.args = {
+export const FootNotes = Template.bind({});
+FootNotes.args = {
   links: [
     {
       key: '1',
