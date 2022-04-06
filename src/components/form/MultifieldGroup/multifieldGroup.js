@@ -12,7 +12,7 @@ export default function () {
       .cloneNode(true);
 
     const groupId = generateHash();
-    template.setAttribute('data-sub-group-id', groupId);
+    template.setAttribute('id', groupId);
 
     template
       .querySelector('.multifield-group__delete-item')

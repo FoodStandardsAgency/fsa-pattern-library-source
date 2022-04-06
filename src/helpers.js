@@ -12,8 +12,11 @@ export function domContentLoadedWrapper(callback) {
 }
 
 export function generateHash() {
-  return Math.random()
-    .toString(36)
-    .replace(/[^a-z]+/g, '')
-    .substr(0, 10);
+  const hash = () =>
+    Math.random()
+      .toString(36)
+      .replace(/[^a-z]+/g, '')
+      .substr(0, 6);
+
+  return `uniq-${hash()}${hash()}`;
 }

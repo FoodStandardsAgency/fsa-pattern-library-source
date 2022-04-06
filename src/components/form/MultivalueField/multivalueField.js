@@ -41,7 +41,7 @@ export function addField(scope, initialValue = '', labelId = '') {
   clonedInput.setAttribute('data-field-name', clonedInput.getAttribute('name').replace('[]', ''));
 
   const multifieldSubGroup = scope.closest('.multifield-group__item');
-  if (multifieldSubGroup && multifieldSubGroup.hasAttribute('data-sub-group-id')) {
+  if (multifieldSubGroup && multifieldSubGroup.hasAttribute('id')) {
     clonedEl
       .querySelector('input')
       .setAttribute('data-sub-group-id', multifieldSubGroup.getAttribute('data-sub-group-id'));
