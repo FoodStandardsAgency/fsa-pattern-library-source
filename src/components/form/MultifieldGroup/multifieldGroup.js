@@ -1,6 +1,6 @@
 import './multifieldGroup.html.twig';
 import './multifieldGroup.scss';
-import { domContentLoadedWrapper } from '../../../helpers';
+import { domContentLoadedWrapper, generateHash } from '../../../helpers';
 import { activateMultivalueField, addField } from '../MultivalueField/multivalueField';
 import { activateTooltip } from '../Tooltip/tooltip';
 
@@ -19,10 +19,7 @@ export default function () {
       });
 
     // Set existed values.
-    const groupId = Math.random()
-      .toString(36)
-      .replace(/[^a-z]+/g, '')
-      .substr(0, 10);
+    const groupId = generateHash();
     for (const key in values.values) {
       const element = template.querySelector(`[name^="${key}"]`);
 
@@ -32,6 +29,7 @@ export default function () {
         const multivalueField = element.closest('.multivalue-field');
         if (multivalueField && Array.isArray(values.values[key]) && values.values[key].length) {
           element.setAttribute('name', `${name}[${groupId}][]`);
+          element.setAttribute('id', `${name}-${groupId}-${generateHash()}`);
           element.setAttribute('value', values.values[key][0]);
           for (const value of values.values[key].splice(1)) {
             addField(multivalueField, value);
@@ -39,6 +37,7 @@ export default function () {
         } else {
           element.setAttribute('value', values.values[key]);
           element.setAttribute('name', `${name}[${groupId}]`);
+          element.setAttribute('id', `${name}-${groupId}-${generateHash()}`);
         }
       }
     }
