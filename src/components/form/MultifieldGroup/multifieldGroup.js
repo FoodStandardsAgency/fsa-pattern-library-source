@@ -19,18 +19,23 @@ export default function () {
       });
 
     // Set existed values.
+    const groupId = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10);
     for (const key in values.values) {
       const element = template.querySelector(`[name^="${key}"]`);
 
       if (element) {
+        const name = element.getAttribute('name').replace('[]', '');
+
         const multivalueField = element.closest('.multivalue-field');
         if (multivalueField && Array.isArray(values.values[key]) && values.values[key].length) {
+          element.setAttribute('name', `${name}[${groupId}][]`);
           element.setAttribute('value', values.values[key][0]);
           for (const value of values.values[key].splice(1)) {
             addField(multivalueField, value);
           }
         } else {
           element.setAttribute('value', values.values[key]);
+          element.setAttribute('name', `${name}[${groupId}]`);
         }
       }
     }
