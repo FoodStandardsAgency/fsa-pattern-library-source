@@ -22,7 +22,7 @@ export default function () {
   return domContentLoadedWrapper(callback);
 }
 
-export function addField(scope, initialValue = '',  labelId = '') {
+export function addField(scope, initialValue = '', labelId = '') {
   const wrappers = scope.querySelectorAll('.input-field__wrapper');
   const wrapper = wrappers[wrappers.length - 1];
 
@@ -33,7 +33,9 @@ export function addField(scope, initialValue = '',  labelId = '') {
     clonedDeleteButton.remove();
   }
   clonedEl.querySelector('input').value = initialValue;
-  clonedEl.querySelector('input').setAttribute('id', clonedEl.querySelector('input').getAttribute('id') + '-' + wrappers.length);
+  clonedEl
+    .querySelector('input')
+    .setAttribute('id', clonedEl.querySelector('input').getAttribute('id') + '-' + wrappers.length);
   clonedEl.querySelector('input').setAttribute('aria-labelledby', labelId);
 
   const deleteButton = buildDeleteButton(scope);

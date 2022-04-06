@@ -30,7 +30,7 @@ export default function () {
       const multivalueField = element.closest('.multivalue-field');
       if (multivalueField && Array.isArray(values[key]) && values[key].length) {
         element.setAttribute('value', values[key][0]);
-        
+
         for (const value of values[key].splice(1)) {
           addField(multivalueField, value, labelId);
         }

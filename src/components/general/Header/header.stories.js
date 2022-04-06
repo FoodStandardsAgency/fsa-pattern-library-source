@@ -597,7 +597,8 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Code of conduct, standing orders, and terms of reference for the FSA Board',
+                  label:
+                    'Code of conduct, standing orders, and terms of reference for the FSA Board',
                   active: 'false',
                 },
               },
@@ -1336,7 +1337,8 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Code of conduct, standing orders, and terms of reference for the FSA Board',
+                  label:
+                    'Code of conduct, standing orders, and terms of reference for the FSA Board',
                   active: 'false',
                 },
               },
@@ -2080,7 +2082,8 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Code of conduct, standing orders, and terms of reference for the FSA Board',
+                  label:
+                    'Code of conduct, standing orders, and terms of reference for the FSA Board',
                   active: 'false',
                 },
               },
