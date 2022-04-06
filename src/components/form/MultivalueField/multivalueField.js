@@ -23,7 +23,7 @@ export default function () {
   return domContentLoadedWrapper(callback);
 }
 
-export function addField(scope, initialValue = '', labelId = '') {
+export function addField(scope, initialValue = '') {
   const wrappers = scope.querySelectorAll('.input-field__wrapper');
   const wrapper = wrappers[wrappers.length - 1];
 
@@ -37,8 +37,6 @@ export function addField(scope, initialValue = '', labelId = '') {
   const clonedInput = clonedEl.querySelector('input');
 
   clonedInput.value = initialValue;
-  clonedInput.setAttribute('aria-labelledby', labelId);
-  clonedInput.setAttribute('id', `multifield-${generateHash()}`);
   clonedInput.setAttribute('data-field-name', clonedInput.getAttribute('name').replace('[]', ''));
 
   const multifieldSubGroup = scope.closest('.multifield-group__item');
@@ -68,6 +66,26 @@ export function activateMultivalueField(scope) {
 
   const deleteButton = buildDeleteButton(scope);
   scope.querySelector('.input-field__wrapper').append(deleteButton);
+
+  // Set mapping between labels and inputs.
+  const labels = scope.querySelectorAll('label');
+  for (const label of labels) {
+    setMappingForLabel(label);
+  }
+}
+
+function setMappingForLabel(label) {
+  const multiWrapper = label.closest('.multivalue-field');
+  const singleWrapper = label.closest('.input-field');
+
+  const input = multiWrapper ? multiWrapper : singleWrapper;
+
+  if (input) {
+    const id = generateHash();
+    input.querySelector('input').setAttribute('id', id);
+    label.setAttribute('for', id);
+    label.setAttribute('id', `${id}-label`);
+  }
 }
 
 function buildDeleteButton(scope) {
@@ -81,12 +99,15 @@ function buildDeleteButton(scope) {
 
     const parent = e.target.parentNode;
     const group = e.target.closest('.multifield-group');
+    const label = parent.closest('.multivalue-field').querySelector('label');
 
     parent.remove();
 
     if (group) {
       dispatchMultigroupEvent(group);
     }
+
+    setMappingForLabel(label);
 
     scope.setAttribute('data-count', scope.getAttribute('data-count') - 1);
   });

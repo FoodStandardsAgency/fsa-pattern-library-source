@@ -40,11 +40,6 @@ export default function () {
     // Set existed values.
     for (const key in values.values) {
       const element = template.querySelector(`[name^="${key}"]`);
-      element.setAttribute('id', element.getAttribute('id') + '-' + count);
-      const label = template.querySelector(`[for^="${key}"]`);
-      label.setAttribute('for', label.getAttribute('for') + '-' + count);
-      const labelId = element.getAttribute('id') + '-label-' + count;
-      label.setAttribute('id', labelId);
 
       if (element) {
         const multivalueField = element.closest('.multivalue-field');
@@ -52,7 +47,7 @@ export default function () {
           element.setAttribute('value', values.values[key][0]);
 
           for (const value of values.values[key].splice(1)) {
-            addField(multivalueField, value, labelId);
+            addField(multivalueField, value);
           }
         } else {
           element.setAttribute('value', values.values[key]);
