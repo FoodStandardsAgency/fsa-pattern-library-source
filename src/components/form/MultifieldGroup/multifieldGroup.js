@@ -31,6 +31,7 @@ export default function () {
           element.setAttribute('name', `${name}[${groupId}][]`);
           element.setAttribute('id', `${name}-${groupId}-${generateHash()}`);
           element.setAttribute('value', values.values[key][0]);
+          element.setAttribute('data-field-type', 'multi');
           for (const value of values.values[key].splice(1)) {
             addField(multivalueField, value);
           }
@@ -38,6 +39,7 @@ export default function () {
           element.setAttribute('value', values.values[key]);
           element.setAttribute('name', `${name}[${groupId}]`);
           element.setAttribute('id', `${name}-${groupId}`);
+          element.setAttribute('data-field-type', 'single');
         }
 
         element.setAttribute('data-field-name', name);
