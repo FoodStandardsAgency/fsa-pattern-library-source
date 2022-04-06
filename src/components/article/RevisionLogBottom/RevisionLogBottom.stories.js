@@ -7,8 +7,8 @@ export default {
 
 const Template = (args) => revisionLogBottom(args);
 
-export const Basic = Template.bind({});
-Basic.args = {
+export const RevisionLogBottom = Template.bind({});
+RevisionLogBottom.args = {
   heading: 'Revision log',
   toggle_text_hide: 'Hide all updates',
   toggle_text_show: 'Show all updates',
