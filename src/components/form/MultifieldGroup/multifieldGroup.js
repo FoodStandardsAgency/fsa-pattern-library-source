@@ -5,7 +5,7 @@ import { activateMultivalueField, addField } from '../MultivalueField/multivalue
 import { activateTooltip } from '../Tooltip/tooltip';
 
 export default function () {
-  function addGroup(group, values = {}) {
+  function addGroup(group, values = { values: {}, errors: [] }) {
     const parent = group.closest('.multifield-group');
     const template = parent
       .querySelector('.multifield-group__template .multifield-group__item')
