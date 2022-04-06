@@ -75,10 +75,7 @@ export function activateMultivalueField(scope) {
 }
 
 export function setMappingForLabel(label) {
-  const multiWrapper = label.closest('.multivalue-field');
-  const singleWrapper = label.closest('.input-field');
-
-  const input = multiWrapper ? multiWrapper : singleWrapper;
+  const input = label.closest('.input-field');
 
   if (input) {
     const id = generateHash();
