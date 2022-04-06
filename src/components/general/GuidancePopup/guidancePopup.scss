@@ -24,6 +24,33 @@
     }
   }
 
+  &__compact {
+    .guidance-popup__wrapper {
+      top: 3rem;
+      left: 1rem;
+      height: calc(100% - 6rem);
+      width: calc(100% - 6rem);
+
+      @media screen and (min-width: $fsa-md) {
+        padding: 0.25rem 2rem;
+        top: 6rem;
+        left: 6rem;
+        height: calc(100% - 12rem);
+        width: calc(100% - 12rem);
+      }
+
+      @media screen and (min-width: $fsa-lg) {
+        left: calc(50% - 22rem);
+        width: 44rem;
+      }
+
+      @media screen and (min-width: $fsa-xl) {
+        left: calc(50% - 24rem);
+        width: 48rem;
+      }
+    }
+  }
+
   &__wrapper {
     background: var(--fsa-primary_white);
     border: 3px solid var(--fsa-primary_dark-green);
