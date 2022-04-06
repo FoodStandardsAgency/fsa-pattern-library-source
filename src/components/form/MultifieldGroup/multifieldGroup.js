@@ -19,7 +19,10 @@ export default function () {
       });
 
     // Set existed values.
-    const groupId = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10);
+    const groupId = Math.random()
+      .toString(36)
+      .replace(/[^a-z]+/g, '')
+      .substr(0, 10);
     for (const key in values.values) {
       const element = template.querySelector(`[name^="${key}"]`);
 
