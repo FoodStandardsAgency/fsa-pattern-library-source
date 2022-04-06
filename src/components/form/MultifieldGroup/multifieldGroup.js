@@ -29,9 +29,8 @@ export default function () {
         const multivalueField = element.closest('.multivalue-field');
         if (multivalueField && Array.isArray(values.values[key]) && values.values[key].length) {
           element.setAttribute('name', `${name}[${groupId}][]`);
-          element.setAttribute('id', `${name}-${groupId}-${generateHash()}`);
           element.setAttribute('value', values.values[key][0]);
-          element.setAttribute('data-field-type', 'multi');
+
           for (const value of values.values[key].splice(1)) {
             addField(multivalueField, value);
           }
@@ -39,6 +38,11 @@ export default function () {
           element.setAttribute('value', values.values[key]);
           element.setAttribute('name', `${name}[${groupId}]`);
           element.setAttribute('id', `${name}-${groupId}`);
+        }
+
+        if (multivalueField) {
+          element.setAttribute('data-field-type', 'multi');
+        } else {
           element.setAttribute('data-field-type', 'single');
         }
 
