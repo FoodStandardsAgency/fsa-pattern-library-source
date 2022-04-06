@@ -73,7 +73,7 @@ RelatedContentWithNoLink.args = {
 export const RelatedContentWithMarkup = Template.bind({});
 RelatedContentWithMarkup.args = {
   title: 'Related content',
-  text: 'The MyHACCP Tool will be able to produce a food safety management system that shows how your business identifies and controls any hazards that may occur in the food you manufacture. You will find a range of resources to assist you with completing the tool and with understanding implementation of HACCP principles more generally in the Help section.',
+  markup: '<p>The MyHACCP Tool will be able to produce a food safety management system that shows how your business identifies and controls any hazards that may occur in the food you manufacture. You will find a range of resources to assist you with completing the tool and with understanding implementation of HACCP principles more generally in the Help section.</p>',
   cards: [
     {
       title: 'Who is this site for?',
@@ -90,8 +90,8 @@ RelatedContentWithMarkup.args = {
     {
       title: 'What next?',
       markup:
-        '<ol><li>Sign up for an account.</li><li>Start the MyHACCP process at the beginning or at any point – you can come back and finish it at any time</li><li>Complete the MyHACCP process  - you can preview what the output will look like at any stage</li><li>Print or download the completed food safety management system documents for your records</li></ol>',
-      link: '#',
+        '<ol><li><a href="">Sign up for an account.</a></li><li>Start the MyHACCP process at the beginning or at any point – you can come back and finish it at any time</li><li>Complete the MyHACCP process  - you can preview what the output will look like at any stage</li><li>Print or download the completed food safety management system documents for your records</li></ol>',
+      link: '',
     },
   ],
 };

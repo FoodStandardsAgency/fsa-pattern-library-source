@@ -5,6 +5,9 @@
       {% if text is not empty %}
         <p class="related-content__main-text">{{ text }}</p>
       {% endif %}
+      {% if markup is not empty %}
+        <div class="related-content__main-text">{{ markup }}</div>
+      {% endif %}
     </div>
   </div>
   <div class="related-content__grid-container">
