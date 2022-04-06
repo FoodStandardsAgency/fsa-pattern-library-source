@@ -46,6 +46,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [Upcoming] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Related content - inline links within items have the correct link style.
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
 ## [0.0.86] - 2022-04-05 (Accessibility fix and improvement)
 
 ### Changed
