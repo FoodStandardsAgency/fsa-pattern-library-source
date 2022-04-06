@@ -1,6 +1,6 @@
 import './multivalueField.html.twig';
 import './multivalueField.scss';
-import { domContentLoadedWrapper } from '../../../helpers';
+import { domContentLoadedWrapper, generateHash } from '../../../helpers';
 
 export default function () {
   function callback() {
@@ -33,10 +33,8 @@ export function addField(scope, initialValue = '', labelId = '') {
     clonedDeleteButton.remove();
   }
   clonedEl.querySelector('input').value = initialValue;
-  clonedEl
-    .querySelector('input')
-    .setAttribute('id', clonedEl.querySelector('input').getAttribute('id') + '-' + wrappers.length);
   clonedEl.querySelector('input').setAttribute('aria-labelledby', labelId);
+  clonedEl.querySelector('input').setAttribute('id', `multifield-${generateHash()}`);
 
   const deleteButton = buildDeleteButton(scope);
 
@@ -45,6 +43,8 @@ export function addField(scope, initialValue = '', labelId = '') {
   wrapper.parentNode.insertBefore(clonedEl, wrapper.nextSibling);
 
   scope.setAttribute('data-count', wrappers.length + 1);
+
+  return clonedEl;
 }
 
 export function activateMultivalueField(scope, initialValue = '') {
