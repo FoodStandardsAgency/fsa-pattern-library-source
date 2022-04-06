@@ -26,6 +26,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.0.86] - 2022-04-05 (Accessibility fix and improvement)
+
+### Changed
+- Improve guidance popup and a little fix for errorbox.
+
+### Fixed
+- Fixed some accessibility issues on the dropdown menu component.
+
+
 ## [0.0.85] - 2022-04-05 (fixes on HACCP components)
 
 ### Changed
@@ -44,7 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update tooltip component.
 
 ### Fixed
-- Revision og fix heading from h4 to h4 and give correct font.
+- Revision log fix heading from h4 to h4 and give correct font.
 
 
 ## [0.0.83] - 2022-03-31 (HACCP components & fixes)

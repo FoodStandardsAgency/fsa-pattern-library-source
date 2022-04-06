@@ -18,8 +18,10 @@ export default function () {
         } else {
           const scopes = [];
           th.forEach((header) => {
-            const scope = header.getAttribute('scope').toString();
-            scopes.push(scope);
+            if (header.hasAttribute('scope')) {
+              const scope = header.getAttribute('scope').toString();
+              scopes.push(scope);
+            }
           });
           if (scopes.includes('col') && scopes.includes('row')) {
             return 'mixed';

@@ -403,6 +403,7 @@ $mobileGutter: 1rem;
 
       .#{$input-type}__fields {
         border: 4px solid var(--fsa-secondary_mid-red);
+        clear: both;
         margin: 2rem 0 0 -4px;
         padding: 0 0.5rem 0.5rem;
 
