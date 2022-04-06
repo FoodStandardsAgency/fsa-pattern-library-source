@@ -370,13 +370,13 @@ English.args = {
         },
         submenu: [
           {
-            title: 'At home',
+            title: 'Starting a food business',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cooking your food',
+                  label: 'Registering a food business',
                   active: 'false',
                 },
               },
@@ -384,7 +384,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Chilling',
+                  label: 'Setting up a food business',
                   active: 'false',
                 },
               },
@@ -392,7 +392,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cleaning',
+                  label: 'Starting a food business from home',
                   active: 'false',
                 },
               },
@@ -400,7 +400,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cross-contamination',
+                  label: 'Managing food safely',
                   active: 'false',
                 },
               },
@@ -408,20 +408,20 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Home food fact checker',
+                  label: 'Food safety for food delivery',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Buying and eating food',
+            title: 'Applying for authorisation or approval',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Allergy and intolerance',
+                  label: 'Apply for a regulated product authorisation',
                   active: 'false',
                 },
               },
@@ -429,7 +429,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Report a food allergic reaction',
+                  label: 'Regulated products application guidance',
                   active: 'false',
                 },
               },
@@ -437,7 +437,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Best before and use-by dates',
+                  label: 'Applying for approval of a meat establishment',
                   active: 'false',
                 },
               },
@@ -445,44 +445,20 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food hygience rating',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Food safety for comminity cooking and food banks',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Food crime',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Advice for young adults with a food allergy',
+                  label: 'Applying for approval of a food establishment',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food poisoning',
+            title: 'Running a business',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Campylobacter',
+                  label: 'Allergen labelling changes for prepacked for direct sale (PPDS) food',
                   active: 'false',
                 },
               },
@@ -490,7 +466,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Salmonella',
+                  label: 'Reopening and adapting your food business during COVID-19',
                   active: 'false',
                 },
               },
@@ -498,7 +474,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Hepatits E virus',
+                  label: 'Safer food, better business',
                   active: 'false',
                 },
               },
@@ -506,20 +482,20 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'E. Coli',
+                  label: 'Allergen guidance',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food safety advice',
+            title: 'Industry-specific advice',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cannabidiol (CBD)',
+                  label: 'Placing a regulated product on the market',
                   active: 'false',
                 },
               },
@@ -527,7 +503,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Norovirus',
+                  label: 'The UK has left the EU',
                   active: 'false',
                 },
               },
@@ -535,7 +511,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Raw drinking milk',
+                  label: 'Cannabidiol (CBD) guidance',
                   active: 'false',
                 },
               },
@@ -543,7 +519,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Acrylamide',
+                  label: 'Imports and exports',
                   active: 'false',
                 },
               },
@@ -551,7 +527,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Radioactivity in food',
+                  label: 'Allergen labelling',
                   active: 'false',
                 },
               },
@@ -559,7 +535,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Additives',
+                  label: 'Precautionary allergen labelling',
                   active: 'false',
                 },
               },
@@ -567,7 +543,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Arsenic in rice',
+                  label: 'Farming and animal feed',
                   active: 'false',
                 },
               },
@@ -575,7 +551,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Burgers',
+                  label: 'Meat and slaughter',
                   active: 'false',
                 },
               },
@@ -583,36 +559,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Fake alcohol',
-                  active: 'false',
-                },
-              },
-            ],
-          },
-          {
-            title: 'Nutrition (Northern Ireland)',
-            links: [
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Check the label',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'The Eatwell Guide',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Folic acid',
+                  label: 'Fish and shellfish',
                   active: 'false',
                 },
               },
@@ -628,13 +575,13 @@ English.args = {
         },
         submenu: [
           {
-            title: 'At home',
+            title: 'Our FSA Board meetings',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cooking your food',
+                  label: 'FSA Board Meetings',
                   active: 'false',
                 },
               },
@@ -642,7 +589,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Chilling',
+                  label: 'Members of the FSA Board',
                   active: 'false',
                 },
               },
@@ -650,36 +597,21 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cleaning',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Cross-contamination',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Home food fact checker',
+                  label:
+                    'Code of conduct, standing orders, and terms of reference for the FSA Board',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Buying and eating food',
+            title: 'Science and research',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Allergy and intolerance',
+                  label: 'Our approach to science',
                   active: 'false',
                 },
               },
@@ -687,7 +619,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Report a food allergic reaction',
+                  label: 'Research reports',
                   active: 'false',
                 },
               },
@@ -695,7 +627,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Best before and use-by dates',
+                  label: 'Areas of research interest',
                   active: 'false',
                 },
               },
@@ -703,7 +635,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food hygience rating',
+                  label: 'Science committees',
                   active: 'false',
                 },
               },
@@ -711,7 +643,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food safety for comminity cooking and food banks',
+                  label: 'Apply for research funding',
                   active: 'false',
                 },
               },
@@ -719,28 +651,20 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food crime',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Advice for young adults with a food allergy',
+                  label: 'Framework for assessing third-party evidence',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food poisoning',
+            title: 'Our people',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Campylobacter',
+                  label: 'Leadership team',
                   active: 'false',
                 },
               },
@@ -748,36 +672,20 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Salmonella',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Hepatits E virus',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'E. Coli',
+                  label: 'National Food Crime Unit',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food safety advice',
+            title: 'Our committees',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cannabidiol (CBD)',
+                  label: 'Committees of FSA Board',
                   active: 'false',
                 },
               },
@@ -785,7 +693,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Norovirus',
+                  label: 'Northern Ireland Food Advisory Committee',
                   active: 'false',
                 },
               },
@@ -793,7 +701,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Raw drinking milk',
+                  label: 'Welsh Food Advisory Committee',
                   active: 'false',
                 },
               },
@@ -801,60 +709,20 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Acrylamide',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Radioactivity in food',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Additives',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Arsenic in rice',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Burgers',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Fake alcohol',
+                  label: 'Meat charging steering group',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Nutrition (Northern Ireland)',
+            title: 'How we work',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Check the label',
+                  label: 'Who we are',
                   active: 'false',
                 },
               },
@@ -862,7 +730,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'The Eatwell Guide',
+                  label: 'Our strategy',
                   active: 'false',
                 },
               },
@@ -870,7 +738,7 @@ English.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Folic acid',
+                  label: 'Engagement and consultations',
                   active: 'false',
                 },
               },
@@ -1242,13 +1110,13 @@ WithTemporaryMessage.args = {
         },
         submenu: [
           {
-            title: 'At home',
+            title: 'Starting a food business',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cooking your food',
+                  label: 'Registering a food business',
                   active: 'false',
                 },
               },
@@ -1256,7 +1124,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Chilling',
+                  label: 'Setting up a food business',
                   active: 'false',
                 },
               },
@@ -1264,7 +1132,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cleaning',
+                  label: 'Starting a food business from home',
                   active: 'false',
                 },
               },
@@ -1272,7 +1140,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cross-contamination',
+                  label: 'Managing food safely',
                   active: 'false',
                 },
               },
@@ -1280,20 +1148,20 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Home food fact checker',
+                  label: 'Food safety for food delivery',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Buying and eating food',
+            title: 'Applying for authorisation or approval',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Allergy and intolerance',
+                  label: 'Apply for a regulated product authorisation',
                   active: 'false',
                 },
               },
@@ -1301,7 +1169,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Report a food allergic reaction',
+                  label: 'Regulated products application guidance',
                   active: 'false',
                 },
               },
@@ -1309,7 +1177,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Best before and use-by dates',
+                  label: 'Applying for approval of a meat establishment',
                   active: 'false',
                 },
               },
@@ -1317,44 +1185,20 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food hygience rating',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Food safety for comminity cooking and food banks',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Food crime',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Advice for young adults with a food allergy',
+                  label: 'Applying for approval of a food establishment',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food poisoning',
+            title: 'Running a business',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Campylobacter',
+                  label: 'Allergen labelling changes for prepacked for direct sale (PPDS) food',
                   active: 'false',
                 },
               },
@@ -1362,7 +1206,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Salmonella',
+                  label: 'Reopening and adapting your food business during COVID-19',
                   active: 'false',
                 },
               },
@@ -1370,7 +1214,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Hepatits E virus',
+                  label: 'Safer food, better business',
                   active: 'false',
                 },
               },
@@ -1378,20 +1222,20 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'E. Coli',
+                  label: 'Allergen guidance',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food safety advice',
+            title: 'Industry-specific advice',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cannabidiol (CBD)',
+                  label: 'Placing a regulated product on the market',
                   active: 'false',
                 },
               },
@@ -1399,7 +1243,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Norovirus',
+                  label: 'The UK has left the EU',
                   active: 'false',
                 },
               },
@@ -1407,7 +1251,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Raw drinking milk',
+                  label: 'Cannabidiol (CBD) guidance',
                   active: 'false',
                 },
               },
@@ -1415,7 +1259,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Acrylamide',
+                  label: 'Imports and exports',
                   active: 'false',
                 },
               },
@@ -1423,7 +1267,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Radioactivity in food',
+                  label: 'Allergen labelling',
                   active: 'false',
                 },
               },
@@ -1431,7 +1275,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Additives',
+                  label: 'Precautionary allergen labelling',
                   active: 'false',
                 },
               },
@@ -1439,7 +1283,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Arsenic in rice',
+                  label: 'Farming and animal feed',
                   active: 'false',
                 },
               },
@@ -1447,7 +1291,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Burgers',
+                  label: 'Meat and slaughter',
                   active: 'false',
                 },
               },
@@ -1455,36 +1299,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Fake alcohol',
-                  active: 'false',
-                },
-              },
-            ],
-          },
-          {
-            title: 'Nutrition (Northern Ireland)',
-            links: [
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Check the label',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'The Eatwell Guide',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Folic acid',
+                  label: 'Fish and shellfish',
                   active: 'false',
                 },
               },
@@ -1500,13 +1315,13 @@ WithTemporaryMessage.args = {
         },
         submenu: [
           {
-            title: 'At home',
+            title: 'Our FSA Board meetings',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cooking your food',
+                  label: 'FSA Board Meetings',
                   active: 'false',
                 },
               },
@@ -1514,7 +1329,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Chilling',
+                  label: 'Members of the FSA Board',
                   active: 'false',
                 },
               },
@@ -1522,36 +1337,21 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cleaning',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Cross-contamination',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Home food fact checker',
+                  label:
+                    'Code of conduct, standing orders, and terms of reference for the FSA Board',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Buying and eating food',
+            title: 'Science and research',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Allergy and intolerance',
+                  label: 'Our approach to science',
                   active: 'false',
                 },
               },
@@ -1559,7 +1359,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Report a food allergic reaction',
+                  label: 'Research reports',
                   active: 'false',
                 },
               },
@@ -1567,7 +1367,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Best before and use-by dates',
+                  label: 'Areas of research interest',
                   active: 'false',
                 },
               },
@@ -1575,7 +1375,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food hygience rating',
+                  label: 'Science committees',
                   active: 'false',
                 },
               },
@@ -1583,7 +1383,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food safety for comminity cooking and food banks',
+                  label: 'Apply for research funding',
                   active: 'false',
                 },
               },
@@ -1591,28 +1391,20 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food crime',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Advice for young adults with a food allergy',
+                  label: 'Framework for assessing third-party evidence',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food poisoning',
+            title: 'Our people',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Campylobacter',
+                  label: 'Leadership team',
                   active: 'false',
                 },
               },
@@ -1620,36 +1412,20 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Salmonella',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Hepatits E virus',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'E. Coli',
+                  label: 'National Food Crime Unit',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food safety advice',
+            title: 'Our committees',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cannabidiol (CBD)',
+                  label: 'Committees of FSA Board',
                   active: 'false',
                 },
               },
@@ -1657,7 +1433,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Norovirus',
+                  label: 'Northern Ireland Food Advisory Committee',
                   active: 'false',
                 },
               },
@@ -1665,7 +1441,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Raw drinking milk',
+                  label: 'Welsh Food Advisory Committee',
                   active: 'false',
                 },
               },
@@ -1673,60 +1449,20 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Acrylamide',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Radioactivity in food',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Additives',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Arsenic in rice',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Burgers',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Fake alcohol',
+                  label: 'Meat charging steering group',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Nutrition (Northern Ireland)',
+            title: 'How we work',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Check the label',
+                  label: 'Who we are',
                   active: 'false',
                 },
               },
@@ -1734,7 +1470,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'The Eatwell Guide',
+                  label: 'Our strategy',
                   active: 'false',
                 },
               },
@@ -1742,7 +1478,7 @@ WithTemporaryMessage.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Folic acid',
+                  label: 'Engagement and consultations',
                   active: 'false',
                 },
               },
@@ -2119,13 +1855,13 @@ Welsh.args = {
         },
         submenu: [
           {
-            title: 'At home',
+            title: 'Starting a food business',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cooking your food',
+                  label: 'Registering a food business',
                   active: 'false',
                 },
               },
@@ -2133,7 +1869,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Chilling',
+                  label: 'Setting up a food business',
                   active: 'false',
                 },
               },
@@ -2141,7 +1877,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cleaning',
+                  label: 'Starting a food business from home',
                   active: 'false',
                 },
               },
@@ -2149,7 +1885,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cross-contamination',
+                  label: 'Managing food safely',
                   active: 'false',
                 },
               },
@@ -2157,20 +1893,20 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Home food fact checker',
+                  label: 'Food safety for food delivery',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Buying and eating food',
+            title: 'Applying for authorisation or approval',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Allergy and intolerance',
+                  label: 'Apply for a regulated product authorisation',
                   active: 'false',
                 },
               },
@@ -2178,7 +1914,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Report a food allergic reaction',
+                  label: 'Regulated products application guidance',
                   active: 'false',
                 },
               },
@@ -2186,7 +1922,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Best before and use-by dates',
+                  label: 'Applying for approval of a meat establishment',
                   active: 'false',
                 },
               },
@@ -2194,44 +1930,20 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food hygience rating',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Food safety for comminity cooking and food banks',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Food crime',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Advice for young adults with a food allergy',
+                  label: 'Applying for approval of a food establishment',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food poisoning',
+            title: 'Running a business',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Campylobacter',
+                  label: 'Allergen labelling changes for prepacked for direct sale (PPDS) food',
                   active: 'false',
                 },
               },
@@ -2239,7 +1951,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Salmonella',
+                  label: 'Reopening and adapting your food business during COVID-19',
                   active: 'false',
                 },
               },
@@ -2247,7 +1959,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Hepatits E virus',
+                  label: 'Safer food, better business',
                   active: 'false',
                 },
               },
@@ -2255,20 +1967,20 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'E. Coli',
+                  label: 'Allergen guidance',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food safety advice',
+            title: 'Industry-specific advice',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cannabidiol (CBD)',
+                  label: 'Placing a regulated product on the market',
                   active: 'false',
                 },
               },
@@ -2276,7 +1988,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Norovirus',
+                  label: 'The UK has left the EU',
                   active: 'false',
                 },
               },
@@ -2284,7 +1996,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Raw drinking milk',
+                  label: 'Cannabidiol (CBD) guidance',
                   active: 'false',
                 },
               },
@@ -2292,7 +2004,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Acrylamide',
+                  label: 'Imports and exports',
                   active: 'false',
                 },
               },
@@ -2300,7 +2012,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Radioactivity in food',
+                  label: 'Allergen labelling',
                   active: 'false',
                 },
               },
@@ -2308,7 +2020,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Additives',
+                  label: 'Precautionary allergen labelling',
                   active: 'false',
                 },
               },
@@ -2316,7 +2028,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Arsenic in rice',
+                  label: 'Farming and animal feed',
                   active: 'false',
                 },
               },
@@ -2324,7 +2036,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Burgers',
+                  label: 'Meat and slaughter',
                   active: 'false',
                 },
               },
@@ -2332,36 +2044,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Fake alcohol',
-                  active: 'false',
-                },
-              },
-            ],
-          },
-          {
-            title: 'Nutrition (Northern Ireland)',
-            links: [
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Check the label',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'The Eatwell Guide',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Folic acid',
+                  label: 'Fish and shellfish',
                   active: 'false',
                 },
               },
@@ -2377,13 +2060,13 @@ Welsh.args = {
         },
         submenu: [
           {
-            title: 'At home',
+            title: 'Our FSA Board meetings',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cooking your food',
+                  label: 'FSA Board Meetings',
                   active: 'false',
                 },
               },
@@ -2391,7 +2074,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Chilling',
+                  label: 'Members of the FSA Board',
                   active: 'false',
                 },
               },
@@ -2399,36 +2082,21 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cleaning',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Cross-contamination',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Home food fact checker',
+                  label:
+                    'Code of conduct, standing orders, and terms of reference for the FSA Board',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Buying and eating food',
+            title: 'Science and research',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Allergy and intolerance',
+                  label: 'Our approach to science',
                   active: 'false',
                 },
               },
@@ -2436,7 +2104,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Report a food allergic reaction',
+                  label: 'Research reports',
                   active: 'false',
                 },
               },
@@ -2444,7 +2112,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Best before and use-by dates',
+                  label: 'Areas of research interest',
                   active: 'false',
                 },
               },
@@ -2452,7 +2120,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food hygience rating',
+                  label: 'Science committees',
                   active: 'false',
                 },
               },
@@ -2460,7 +2128,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food safety for comminity cooking and food banks',
+                  label: 'Apply for research funding',
                   active: 'false',
                 },
               },
@@ -2468,28 +2136,20 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Food crime',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Advice for young adults with a food allergy',
+                  label: 'Framework for assessing third-party evidence',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food poisoning',
+            title: 'Our people',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Campylobacter',
+                  label: 'Leadership team',
                   active: 'false',
                 },
               },
@@ -2497,36 +2157,20 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Salmonella',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Hepatits E virus',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'E. Coli',
+                  label: 'National Food Crime Unit',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Food safety advice',
+            title: 'Our committees',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Cannabidiol (CBD)',
+                  label: 'Committees of FSA Board',
                   active: 'false',
                 },
               },
@@ -2534,7 +2178,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Norovirus',
+                  label: 'Northern Ireland Food Advisory Committee',
                   active: 'false',
                 },
               },
@@ -2542,7 +2186,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Raw drinking milk',
+                  label: 'Welsh Food Advisory Committee',
                   active: 'false',
                 },
               },
@@ -2550,60 +2194,20 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Acrylamide',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Radioactivity in food',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Additives',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Arsenic in rice',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Burgers',
-                  active: 'false',
-                },
-              },
-              {
-                link: {
-                  type: 'link',
-                  href: '#',
-                  label: 'Fake alcohol',
+                  label: 'Meat charging steering group',
                   active: 'false',
                 },
               },
             ],
           },
           {
-            title: 'Nutrition (Northern Ireland)',
+            title: 'How we work',
             links: [
               {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Check the label',
+                  label: 'Who we are',
                   active: 'false',
                 },
               },
@@ -2611,7 +2215,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'The Eatwell Guide',
+                  label: 'Our strategy',
                   active: 'false',
                 },
               },
@@ -2619,7 +2223,7 @@ Welsh.args = {
                 link: {
                   type: 'link',
                   href: '#',
-                  label: 'Folic acid',
+                  label: 'Engagement and consultations',
                   active: 'false',
                 },
               },

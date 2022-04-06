@@ -4,6 +4,7 @@
   <div class="map-field__content">
     <div class="map-field__input">
       {% include '@components/components/form/InputField/inputField.html.twig' with {
+        id: id,
         name: name,
         label: label,
         required: required,
@@ -17,6 +18,7 @@
         type: 'primary',
         label: button,
         element: 'input',
+        id: id ~ '-button'
       } %}
     </div>
 

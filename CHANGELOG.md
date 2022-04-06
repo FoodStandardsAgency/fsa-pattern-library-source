@@ -46,7 +46,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming] - 1971-11-03
+
+## [Upcoming release] - 1971-11-03
 
 ### Added
 -
@@ -61,7 +62,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fixing accessibility issues.
 
 ### Security
 -

@@ -22,7 +22,7 @@ export default function () {
   return domContentLoadedWrapper(callback);
 }
 
-export function addField(scope, initialValue = '') {
+export function addField(scope, initialValue = '', labelId = '') {
   const wrappers = scope.querySelectorAll('.input-field__wrapper');
   const wrapper = wrappers[wrappers.length - 1];
 
@@ -33,6 +33,7 @@ export function addField(scope, initialValue = '') {
     clonedDeleteButton.remove();
   }
   clonedEl.querySelector('input').value = initialValue;
+  clonedEl.querySelector('input').setAttribute('aria-labelledby', labelId);
   clonedEl.querySelector('input').setAttribute('id', `multifield-${generateHash()}`);
 
   const deleteButton = buildDeleteButton(scope);
@@ -60,6 +61,7 @@ function buildDeleteButton(scope) {
   const deleteButton = document.createElement('a');
   deleteButton.href = '#';
   deleteButton.classList.add('multivalue-field__delete-entity');
+  deleteButton.setAttribute('aria-label', 'Delete element');
 
   deleteButton.addEventListener('click', function (e) {
     e.preventDefault();

@@ -42,8 +42,8 @@ ChartBlock.args = {
   ],
 };
 
-export const ContentBlock = Template.bind({});
-ContentBlock.args = {
+export const TableBlock = Template.bind({});
+TableBlock.args = {
   name: 'COVID-19',
   description: 'Description text goes here and gets added via the text component',
   content:
