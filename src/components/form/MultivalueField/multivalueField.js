@@ -44,7 +44,7 @@ export function addField(scope, initialValue = '', labelId = '') {
   if (multifieldSubGroup && multifieldSubGroup.hasAttribute('id')) {
     clonedEl
       .querySelector('input')
-      .setAttribute('data-sub-group-id', multifieldSubGroup.getAttribute('data-sub-group-id'));
+      .setAttribute('data-sub-group-id', multifieldSubGroup.getAttribute('id'));
   }
 
   const deleteButton = buildDeleteButton(scope);
