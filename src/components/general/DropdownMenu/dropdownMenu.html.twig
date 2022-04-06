@@ -1,5 +1,8 @@
 <div class="dropdown-menu">
-  <div class="dropdown-menu__label">{{ label }}</div>
+  <div class="dropdown-menu__label">
+    {{ label }}
+    <span class="dropdown-menu__label-arrow"></span>
+  </div>
   <div class="dropdown-menu__options">
     {% for option in options %}
       <div class="dropdown-menu__option">
