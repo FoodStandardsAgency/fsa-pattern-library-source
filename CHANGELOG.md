@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Develop "updateErrors" event for multifieldGroup component.
 
 ### Changed
--
+- Adapt styles for tooltip and guidance popup.
 
 ### Deprecated
 -
