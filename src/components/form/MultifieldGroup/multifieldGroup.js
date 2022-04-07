@@ -110,6 +110,8 @@ export default function () {
         addGroup(button, count, value);
         count++;
       }
+
+      dispatchMultigroupEvent(group);
     }
   }
 
