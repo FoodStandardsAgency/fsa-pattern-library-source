@@ -18,33 +18,36 @@
   &__question-mark {
     @include link;
 
+    border: 2px solid transparent;
     cursor: pointer;
+    display: block;
     position: relative;
     z-index: 2;
-    width: 2.3rem;
-    height: 2.3rem;
+    width: 3em;
+    height: 3rem;
 
     @media screen and (min-width: $fsa-lg) {
-      width: 2rem;
-      height: 2rem;
+      width: 2.7rem;
+      height: 2.7rem;
     }
 
     &:focus {
-      border-bottom-color: var(--fsa-tertiary_light-yellow);
+      background-color: var(--fsa-primary_black);
+      border: 2px solid var(--fsa-tertiary_light-yellow);
     }
 
     &::before {
       content: "";
       background-image: url("./assets/question.svg");
+      background-color: var(--fsa-primary_white);
       display: block;
-      width: 2.3rem;
-      height: 2.3rem;
+      height: calc(100% - 4px);
+      width: calc(100% - 4px);
+      position: absolute;
+      top: 2px;
+      left: 2px;
       background-repeat: no-repeat;
-
-      @media screen and (min-width: $fsa-lg) {
-        width: 2rem;
-        height: 2rem;
-      }
+      background-position: center;
     }
   }
 
@@ -95,7 +98,7 @@
     @include body;
 
     color: var(--fsa-primary_black);
-    padding: 1rem 1.5rem 1rem 1rem;
+    padding: 1rem 2rem 1rem 1rem;
     text-align: left;
 
     &-content {
@@ -112,25 +115,33 @@
   &__close {
     @include link;
 
+    border: 2px solid transparent;
     cursor: pointer;
     display: block;
-    height: 0.6rem;
+    height: 1.2rem;
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
-    width: 0.6rem;
+    width: 1.2rem;
+    margin: 0;
 
     &::before {
       content: "";
+      background-color: var(--fsa_online-grey);
       background-image: url("./assets/close.svg");
       display: block;
-      width: 0.6rem;
-      height: 0.6rem;
+      height: calc(100% - 4px);
+      width: calc(100% - 4px);
+      top: 2px;
+      left: 2px;
+      position: absolute;
       background-repeat: no-repeat;
+      background-position: center;
     }
 
     &:focus {
-      border-bottom-color: var(--fsa-tertiary_light-yellow);
+      background-color: var(--fsa-primary_black);
+      border: 2px solid var(--fsa-tertiary_light-yellow);
     }
   }
 }
@@ -142,11 +153,11 @@
 
   .tooltip {
     position: absolute;
-    top: -0.3rem;
+    top: -0.9rem;
     right: 0;
 
     @media screen and (min-width: $fsa-lg) {
-      top: -0.2rem;
+      top: -0.6rem;
     }
   }
 }
