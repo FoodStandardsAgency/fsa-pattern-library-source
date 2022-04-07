@@ -25,48 +25,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-## [Upcoming release] - 1971-11-03
 
-### Added
--
-
-### Changed
-- Implement the logic of "error inputs" for multifield groups.
-- Adjust the logis of multifield groups generally.
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
-
-
-
-## [Upcoming release] - 1971-11-03
-
-### Added
--
+## [0.0.87] - 2022-04-07 (Accessibility fixes and updates on components)
 
 ### Changed
 - Related content - inline links within items have the correct link style.
-
-### Deprecated
--
-
-### Removed
--
+- Implement the logic of "error inputs" for multifield groups.
+- Adjust the logis of multifield groups generally.
 
 ### Fixed
 - Fixing accessibility issues.
-
-### Security
--
 
 
 ## [0.0.86] - 2022-04-05 (Accessibility fix and improvement)
