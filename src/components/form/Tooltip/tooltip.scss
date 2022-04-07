@@ -34,6 +34,7 @@
     &:focus {
       background-color: var(--fsa-primary_black);
       border: 2px solid var(--fsa-tertiary_light-yellow);
+      outline: none;
     }
 
     &::before {
@@ -137,6 +138,7 @@
     &:focus {
       background-color: var(--fsa-primary_black);
       border: 2px solid var(--fsa-tertiary_light-yellow);
+      outline: none;
     }
   }
 }
