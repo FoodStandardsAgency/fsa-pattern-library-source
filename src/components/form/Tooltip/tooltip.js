@@ -63,7 +63,9 @@ function handleTooltip(e) {
   // Min width of a tooltip.
   const minWidth = 100;
 
-  const parentWidth = tooltip.parentNode.offsetWidth;
+  const tooltipWrapper = tooltip.closest('.label-with-tooltip');
+
+  const parentWidth = tooltipWrapper ? tooltipWrapper.offsetWidth : tooltip.parentNode.offsetWidth;
 
   if (window.innerWidth < 1024) {
     body.style.width = `${parentWidth - oneMobileRem - borders}px`;
