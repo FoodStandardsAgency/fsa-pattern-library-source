@@ -58,6 +58,7 @@ function handleTooltip(e) {
   // Used to provide the proper space from left side of a tooltip.
   const oneMobileRem = 16;
   const oneDesktopRem = 18;
+  const borders = 4;
 
   // Min width of a tooltip.
   const minWidth = 100;
@@ -65,9 +66,9 @@ function handleTooltip(e) {
   const parentWidth = tooltip.parentNode.offsetWidth;
 
   if (window.innerWidth < 1024) {
-    body.style.width = `${parentWidth - oneMobileRem}px`;
+    body.style.width = `${parentWidth - oneMobileRem - borders}px`;
   } else {
-    body.style.maxWidth = `${Math.max(minWidth, parentWidth - oneDesktopRem)}px`;
+    body.style.maxWidth = `${Math.max(minWidth, parentWidth - oneDesktopRem - borders)}px`;
   }
 
   body.classList.toggle('tooltip__body-opened');

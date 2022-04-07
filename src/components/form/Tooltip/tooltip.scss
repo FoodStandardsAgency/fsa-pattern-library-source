@@ -57,20 +57,15 @@
     display: none;
     font-size: 1rem;
     position: absolute;
-    right: 1rem;
-    top: 3.4rem;
+    right: 1.2rem;
+    top: 4rem;
     text-align: right;
     font-weight: normal;
     width: 20rem;
     z-index: 50;
 
     @media screen and (min-width: $fsa-md) {
-      top: 3.6rem;
       width: 41rem;
-    }
-
-    @media screen and (min-width: $fsa-lg) {
-      top: 3.27rem;
     }
 
     &::before {
