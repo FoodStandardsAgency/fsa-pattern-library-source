@@ -13,6 +13,7 @@ export const MultifieldGroup = Template.bind({});
 MultifieldGroup.args = {
   template: ContentTemplate.bind({}),
   id: 'multi-steps',
+  required: true,
   items: [
     {
       values: {
