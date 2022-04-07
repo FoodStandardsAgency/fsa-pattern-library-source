@@ -17,12 +17,16 @@ export default function () {
       const logsList = document.querySelector('.revision-log__link-list');
       function closeRevisionLog() {
         showButton.setAttribute('aria-hidden', 'true');
+        showButton.setAttribute('tabindex', '-1');
         hideButton.setAttribute('aria-hidden', 'false');
+        hideButton.removeAttribute('tabindex');
         logsList.setAttribute('aria-hidden', 'false');
       }
       function openRevisionLog() {
         showButton.setAttribute('aria-hidden', 'false');
+        showButton.removeAttribute('tabindex');
         hideButton.setAttribute('aria-hidden', 'true');
+        hideButton.setAttribute('tabindex', '-1');
         logsList.setAttribute('aria-hidden', 'true');
       }
       function toggleClass() {

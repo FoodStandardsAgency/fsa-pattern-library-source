@@ -26,6 +26,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.0.87] - 2022-04-07 (Accessibility fixes and updates on components)
+
+### Changed
+- Related content - inline links within items have the correct link style.
+- Implement the logic of "error inputs" for multifield groups.
+- Adjust the logis of multifield groups generally.
+
+### Fixed
+- Fixing accessibility issues.
+
+
 ## [0.0.86] - 2022-04-05 (Accessibility fix and improvement)
 
 ### Changed

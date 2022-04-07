@@ -14,7 +14,7 @@ newsLatestTeaser.args = {
   description:
     '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p><p>This is a description for the services section.</p>',
   teaser_link_url: '#',
-  teaser_link: '',
+  teaser_link_title: 'This is an optional link',
   cards: [
     {
       type_class: 'news',
@@ -59,7 +59,7 @@ consultationsLatestTeaser.args = {
   description:
     '<p>This is a description for the services section. Phasellus magna. Curabitur ullamcorper ultricies nisi.</p>',
   teaser_link_url: '#',
-  teaser_link: 'More about consultations',
+  teaser_link_title: 'More about consultations',
   cards: [
     {
       type_class: 'consultations',

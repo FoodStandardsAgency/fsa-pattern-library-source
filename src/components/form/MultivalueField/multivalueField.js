@@ -1,6 +1,7 @@
 import './multivalueField.html.twig';
 import './multivalueField.scss';
-import { domContentLoadedWrapper } from '../../../helpers';
+import { domContentLoadedWrapper, generateHash } from '../../../helpers';
+import { dispatchMultigroupEvent } from '@components/components/form/MultifieldGroup/multifieldGroup';
 
 export default function () {
   function callback() {
@@ -32,7 +33,18 @@ export function addField(scope, initialValue = '') {
   if (clonedDeleteButton) {
     clonedDeleteButton.remove();
   }
-  clonedEl.querySelector('input').value = initialValue;
+
+  const clonedInput = clonedEl.querySelector('input');
+
+  clonedInput.value = initialValue;
+  clonedInput.setAttribute('data-field-name', clonedInput.getAttribute('name').replace('[]', ''));
+
+  const multifieldSubGroup = scope.closest('.multifield-group__item');
+  if (multifieldSubGroup && multifieldSubGroup.hasAttribute('id')) {
+    clonedEl
+      .querySelector('input')
+      .setAttribute('data-sub-group-id', multifieldSubGroup.getAttribute('id'));
+  }
 
   const deleteButton = buildDeleteButton(scope);
 
@@ -41,26 +53,59 @@ export function addField(scope, initialValue = '') {
   wrapper.parentNode.insertBefore(clonedEl, wrapper.nextSibling);
 
   scope.setAttribute('data-count', wrappers.length + 1);
+
+  return clonedEl;
 }
 
-export function activateMultivalueField(scope, initialValue = '') {
+export function activateMultivalueField(scope) {
   scope.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
     e.preventDefault();
-    addField(scope, initialValue);
+    addField(scope, '');
+    dispatchMultigroupEvent(e.target);
   });
 
   const deleteButton = buildDeleteButton(scope);
   scope.querySelector('.input-field__wrapper').append(deleteButton);
+
+  // Set mapping between labels and inputs.
+  const labels = scope.querySelectorAll('label');
+  for (const label of labels) {
+    setMappingForLabel(label);
+  }
+}
+
+export function setMappingForLabel(label) {
+  const input = label.closest('.input-field');
+
+  if (input) {
+    const id = generateHash();
+    input.querySelector('input').setAttribute('id', id);
+    label.setAttribute('for', id);
+    label.setAttribute('id', `${id}-label`);
+  }
 }
 
 function buildDeleteButton(scope) {
   const deleteButton = document.createElement('a');
   deleteButton.href = '#';
   deleteButton.classList.add('multivalue-field__delete-entity');
+  deleteButton.setAttribute('aria-label', 'Delete element');
 
   deleteButton.addEventListener('click', function (e) {
     e.preventDefault();
-    e.target.parentNode.remove();
+
+    const parent = e.target.parentNode;
+    const group = e.target.closest('.multifield-group');
+    const label = parent.closest('.multivalue-field').querySelector('label');
+
+    parent.remove();
+
+    if (group) {
+      dispatchMultigroupEvent(group);
+    }
+
+    setMappingForLabel(label);
+
     scope.setAttribute('data-count', scope.getAttribute('data-count') - 1);
   });
 

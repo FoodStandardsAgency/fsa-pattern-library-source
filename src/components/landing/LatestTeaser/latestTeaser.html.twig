@@ -11,7 +11,7 @@
             <p>{{ description|raw }}</p>
           </div>
         {% endif %}
-        {% if teaser_link_url %}
+        {% if teaser_link_url and teaser_link_title %}
           <div class="latest-teaser__link-wrapper">
             <a href="{{ teaser_link_url }}" class="latest-teaser__link">{{ teaser_link_title }}</a>
           </div>

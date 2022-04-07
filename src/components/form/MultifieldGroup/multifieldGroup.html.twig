@@ -1,4 +1,6 @@
-<div class="multifield-group" data-items='{{ items|json_encode() }}'>
+{% set is_required = required is defined and required %}
+
+<div class="multifield-group{{ is_required ? " multifield-group--required" : "" }}" id="{{ id }}" data-items='{{ items|json_encode() }}'>
   <div class="multifield-group__template">
     <div class="multifield-group__item">
       <h2>{{ label }}</h2>
@@ -15,6 +17,7 @@
       element: 'button',
       type: 'primary',
       label: add_another ~ " " ~ entity_name,
+      id: 'multistep-group_button-step' ~ step_number
     } %}
   </div>
 </div>

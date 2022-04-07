@@ -3,6 +3,14 @@
 .multifield-group {
   margin-top: 3rem;
 
+  &--required {
+    .multifield-group__template + .multifield-group__item {
+      .multifield-group__delete-item {
+        display: none;
+      }
+    }
+  }
+
   &__delete-item {
     @include link;
 
@@ -14,7 +22,7 @@
   }
 
   &__add-item {
-    margin-top: 1px;
+    margin-top: 2rem;
     text-align: center;
   }
 
@@ -23,7 +31,7 @@
 
     & + & {
       border-top: 4px solid var(--fsa__grey-hover);
-      margin: 2rem 0;
+      margin-top: 2rem;
 
       .multifield-group__delete-item {
         top: 2.2rem;
