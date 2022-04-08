@@ -29,7 +29,7 @@ Navigation.args = {
         {
           title: 'Latest updates',
           read_more_link: '#',
-          read_more_label: 'See more Latest Updates',
+          read_more_label: 'More in Latest Updates',
           links: [
             {
               link: {
