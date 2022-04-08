@@ -10,6 +10,14 @@
     margin: 0;
   }
 
+  &__content {
+    padding-left: 1rem;
+
+    @media screen and (min-width: $fsa-xs) {
+      padding-left: 3rem;
+    }
+  }
+
   &__text {
     @include body;
 
