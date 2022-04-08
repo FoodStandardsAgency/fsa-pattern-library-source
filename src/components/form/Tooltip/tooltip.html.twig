@@ -1,7 +1,7 @@
 <div class="tooltip">
-  <a href="#" class="tooltip__question-mark" aria-label="{{ open }}"></a>
+  <a href="#" class="tooltip__question-mark" aria-label="{{ open }}"><span class="visually-hidden">{{ open }}</span></a>
   <div class="tooltip__body">
-    <a href="#" class="tooltip__close" aria-label="{{ close }}"></a>
+    <a href="#" class="tooltip__close" aria-label="{{ close }}"><span class="visually-hidden">{{ close }}</span></a>
     <div class="tooltip__message">
       <div class="tooltip__message-content">
         {{ message|raw }}

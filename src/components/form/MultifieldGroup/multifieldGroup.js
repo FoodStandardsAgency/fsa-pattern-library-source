@@ -112,6 +112,36 @@ export default function () {
       }
 
       dispatchMultigroupEvent(group);
+
+      group.addEventListener('updateErrors', function (e) {
+        const dataItems = JSON.parse(e.target.getAttribute('data-items'));
+
+        if (!dataItems) {
+          return;
+        }
+
+        const errorFields = e.target.querySelectorAll('.input-field--error');
+        for (const errorField of errorFields) {
+          errorField.classList.remove('input-field--error');
+        }
+
+        for (const i in dataItems) {
+          const line = dataItems[i];
+          if (line.errors.length) {
+            const items = e.target.querySelectorAll('.multifield-group__item');
+            const item = items[+i + 1];
+
+            if (item) {
+              for (const fieldName of line.errors) {
+                const elements = item.querySelectorAll(`input[data-field-name="${fieldName}"]`);
+                for (const element of elements) {
+                  element.closest('.input-field').classList.add('input-field--error');
+                }
+              }
+            }
+          }
+        }
+      });
     }
   }
 

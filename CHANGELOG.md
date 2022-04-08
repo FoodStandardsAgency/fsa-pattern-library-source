@@ -26,6 +26,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.0.88] - 2022-04-08 (HACCP changes & new component)
+
+### Added
+- Develop "updateErrors" event for multifieldGroup component.
+
+### Changed
+- Adapt styles for tooltip and guidance popup.
+
+
 ## [0.0.87] - 2022-04-07 (Accessibility fixes and updates on components)
 
 ### Changed
