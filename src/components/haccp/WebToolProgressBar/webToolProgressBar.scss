@@ -2,13 +2,12 @@
 
 .webtool-progress-bar {
   background: var(--fsa_online-grey);
-  padding: 1rem;
+  padding: 0;
   width: 100%;
 
   @media screen and (min-width: $fsa-lg) {
     display: inline-block;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding: 2rem 1rem 3rem 1rem;
   }
 
   &__wrapper {
@@ -33,10 +32,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-
-    & + & {
-      margin-top: 2rem;
-    }
 
     @media screen and (min-width: $fsa-lg) {
       flex-direction: row;
@@ -82,13 +77,22 @@
       background-position: center;
       position: absolute;
       height: 1rem;
-      right: 0;
+      right: 1rem;
       vertical-align: middle;
     }
 
     @media screen and (min-width: $fsa-lg) {
       &::after {
         display: none;
+      }
+    }
+
+    @media screen and (max-width: $fsa-lg-minus) {
+      padding: 1rem;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+        border: 1px solid var(--fsa-primary_black);
       }
     }
   }
