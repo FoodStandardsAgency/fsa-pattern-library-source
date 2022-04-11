@@ -74,7 +74,7 @@ export const RelatedContentWithMarkup = Template.bind({});
 RelatedContentWithMarkup.args = {
   title: 'Related content',
   markup:
-    '<p>The MyHACCP Tool will be able to produce a food safety management system that shows how your business identifies and controls any hazards that may occur in the food you manufacture. You will find a range of resources to assist you with completing the tool and with understanding implementation of HACCP principles more generally in the Help section.</p>',
+    '<p>The MyHACCP Tool will be able to <a href="">produce a food safety management system</a> that shows how your business identifies and controls any hazards that may occur in the food you manufacture. You will find a range of resources to assist you with completing the tool and with understanding implementation of HACCP principles more generally in the Help section.</p>',
   cards: [
     {
       title: 'Who is this site for?',
