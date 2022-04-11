@@ -26,19 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
-
-### Added
--
-
-### Changed
--
-
-### Deprecated
--
-
-### Removed
--
+## [0.0.89] - 2022-04-08 (various fixes on PL and HACCP components)
 
 ### Fixed
 - Putting back the padding on the search no results component.
@@ -47,9 +35,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adapt Web Tool studies table.
 - Adapt Progress bar.
 - Tooltip component.
-
-### Security
--
 
 
 ## [0.0.88] - 2022-04-08 (HACCP changes & new component)
