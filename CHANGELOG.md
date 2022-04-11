@@ -44,6 +44,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Putting back the padding on the search no results component.
 - Fixed issue with not displaying html markup on the Related Content block description.
 - Fixed top margin for Related Content block with markup.
+- Adapt Web Tool studies table.
+- Adapt Progress bar.
+- Tooltip component.
 
 ### Security
 -

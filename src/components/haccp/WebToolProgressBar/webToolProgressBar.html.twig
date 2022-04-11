@@ -2,11 +2,11 @@
   <div class="webtool-progress-bar__wrapper">
     <div class="webtool-progress-bar__grid-row">
       <div class="webtool-progress-bar__grid-col">
-        {% for lineNum, line in lines %}
-          <div class="webtool-progress-bar__line {{ lineNum == 0 ? 'webtool-progress-bar__line-opened' : '' }}">
-            <div class="webtool-progress-bar__label">
+        {% for line in lines %}
+          <div class="webtool-progress-bar__line">
+            <a href="#" class="webtool-progress-bar__label">
               {{ line.label }}
-            </div>
+            </a>
             <div class="webtool-progress-bar__steps">
               {% for step in line.steps %}
                 <div class="webtool-progress-bar__step webtool-progress-bar__step-{{ step.state }}">
