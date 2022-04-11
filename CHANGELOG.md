@@ -42,6 +42,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Putting back the padding on the search no results component.
+- Adapt Web Tool studies table.
+- Adapt Progress bar.
+- Tooltip component.
 
 ### Security
 -

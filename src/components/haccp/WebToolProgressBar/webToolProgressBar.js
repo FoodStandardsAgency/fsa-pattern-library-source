@@ -8,6 +8,8 @@ export default function () {
 
     for (const label of labels) {
       label.addEventListener('click', function (e) {
+        e.preventDefault();
+
         const parentLine = e.target.closest('.webtool-progress-bar__line');
         const isOpened = parentLine.classList.contains('webtool-progress-bar__line-opened');
 
