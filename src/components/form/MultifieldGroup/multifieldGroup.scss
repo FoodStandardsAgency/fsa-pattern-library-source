@@ -11,6 +11,13 @@
     }
   }
 
+  &--frozen-steps {
+    .multifield-group__delete-item,
+    .multifield-group__add-item {
+      display: none;
+    }
+  }
+
   &__delete-item {
     @include link;
 
