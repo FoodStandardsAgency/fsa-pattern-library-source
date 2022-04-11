@@ -91,4 +91,14 @@
     required: "",
     error: false,
   } %}
+
+  {% include '@components/components/form/Textarea/textarea.html.twig' with {
+    error: false,
+    name: 'notes',
+    id: 'notes',
+    label: 'Notes',
+    required: '',
+    description: 'Please leave your notes here',
+    rows: 10,
+  } %}
 </div>

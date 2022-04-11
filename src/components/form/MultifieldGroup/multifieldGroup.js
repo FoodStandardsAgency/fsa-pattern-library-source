@@ -57,6 +57,8 @@ export default function () {
         } else {
           if (element.tagName === 'INPUT') {
             element.setAttribute('value', values.values[key]);
+          } else if (element.tagName === 'TEXTAREA') {
+            element.value = values.values[key];
           } else if (element.tagName === 'SELECT') {
             const selectedIndex = [...element.options].findIndex(
               (option) => option.value === values.values[key]
@@ -70,10 +72,7 @@ export default function () {
     }
 
     // Set proper attrs for all fields, even no predefined.
-    const allInputs = [
-      ...template.querySelectorAll('input'),
-      ...template.querySelectorAll('select'),
-    ];
+    const allInputs = template.querySelectorAll('input, select, textarea');
 
     for (const element of allInputs) {
       const name = element.getAttribute('name').replace('[]', '');
@@ -92,6 +91,12 @@ export default function () {
         }
       } else if (element.tagName === 'SELECT') {
         const singleWrapper = element.closest('.dropdown');
+        if (singleWrapper) {
+          const label = singleWrapper.querySelector('label');
+          setLabelMappingForSelect(label);
+        }
+      } else if (element.tagName === 'TEXTAREA') {
+        const singleWrapper = element.closest('.textarea');
         if (singleWrapper) {
           const label = singleWrapper.querySelector('label');
           setLabelMappingForSelect(label);
@@ -115,6 +120,12 @@ export default function () {
 
           if (wrapper) {
             wrapper.classList.add('dropdown--error');
+          }
+        } else if (element.tagName === 'TEXTAREA') {
+          const wrapper = element.closest('.textarea');
+
+          if (wrapper) {
+            wrapper.classList.add('textarea--error');
           }
         }
       }
@@ -150,13 +161,13 @@ export default function () {
           return;
         }
 
-        const errorFields = [
-          ...e.target.querySelectorAll('.input-field--error'),
-          ...e.target.querySelectorAll('.dropdown--error'),
-        ];
+        const errorFields = e.target.querySelectorAll(
+          '.input-field--error, .dropdown--error, .textarea--error'
+        );
         for (const errorField of errorFields) {
           errorField.classList.remove('input-field--error');
           errorField.classList.remove('dropdown--error');
+          errorField.classList.remove('textarea--error');
         }
 
         for (const i in dataItems) {
@@ -173,6 +184,9 @@ export default function () {
                     element.closest('.input-field').classList.add('input-field--error');
                   } else if (element.tagName === 'SELECT') {
                     element.closest('.dropdown').classList.add('dropdown--error');
+                  }
+                  if (element.tagName === 'TEXTAREA') {
+                    element.closest('.textarea').classList.add('textarea--error');
                   }
                 }
               }
