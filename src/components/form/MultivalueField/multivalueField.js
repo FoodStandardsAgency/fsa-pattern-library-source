@@ -70,16 +70,27 @@ export function activateMultivalueField(scope) {
   // Set mapping between labels and inputs.
   const labels = scope.querySelectorAll('label');
   for (const label of labels) {
-    setMappingForLabel(label);
+    setLabelMappingForInput(label);
   }
 }
 
-export function setMappingForLabel(label) {
+export function setLabelMappingForInput(label) {
   const input = label.closest('.input-field');
 
   if (input) {
     const id = generateHash();
     input.querySelector('input').setAttribute('id', id);
+    label.setAttribute('for', id);
+    label.setAttribute('id', `${id}-label`);
+  }
+}
+
+export function setLabelMappingForSelect(label) {
+  const select = label.closest('.dropdown');
+
+  if (select) {
+    const id = generateHash();
+    select.querySelector('select').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);
   }
@@ -104,7 +115,7 @@ function buildDeleteButton(scope) {
       dispatchMultigroupEvent(group);
     }
 
-    setMappingForLabel(label);
+    setLabelMappingForInput(label);
 
     scope.setAttribute('data-count', scope.getAttribute('data-count') - 1);
   });
