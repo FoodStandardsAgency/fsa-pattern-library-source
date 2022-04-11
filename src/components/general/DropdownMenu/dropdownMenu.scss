@@ -8,17 +8,24 @@
   &__label {
     color: var(--fsa-primary_black);
     cursor: pointer;
+    display: block;
     font-family: var(--body-font);
     font-size: 1rem;
-    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    padding: 0.7rem 2.7rem 0.7rem 1.2rem;
     min-height: 2.4rem;
     border: 1px solid var(--fsa-primary_black);
     border-radius: 0;
     max-width: 100%;
     flex-grow: 1;
     font-weight: normal;
-    background: var(--fsa_tint);
+    background: var(--fsa_online-grey);
     white-space: nowrap;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+      border-width: 0.2rem;
+      padding: 0.5rem 2.5rem 0.5rem 1rem;
+    }
 
     &-arrow {
       background-image: url("./assets/arrow-down.svg");
@@ -46,6 +53,11 @@
 
       &:hover {
         background: var(--fsa_tint);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+        border: 1px solid var(--fsa-primary_black);
       }
     }
   }
