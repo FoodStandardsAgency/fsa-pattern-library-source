@@ -5,7 +5,8 @@ import {
   activateMultivalueField,
   addField,
   setLabelMappingForInput,
-  setLabelMappingForSelect, setLabelMappingForTextarea,
+  setLabelMappingForSelect,
+  setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
 import { activateTooltip } from '../Tooltip/tooltip';
 
