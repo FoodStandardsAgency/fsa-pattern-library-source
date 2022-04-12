@@ -33,6 +33,7 @@ export default function () {
     // Handle multivalue fields.
     const multivalueFields = template.querySelectorAll('.multivalue-field');
     for (const field of multivalueFields) {
+      field.removeAttribute('pl-listener-assigned');
       activateMultivalueField(field);
     }
 

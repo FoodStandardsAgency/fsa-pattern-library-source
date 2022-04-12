@@ -58,6 +58,10 @@ export function addField(scope, initialValue = '') {
 }
 
 export function activateMultivalueField(scope) {
+  if (scope.hasAttribute('pl-listener-assigned')) {
+    return;
+  }
+
   scope.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
     e.preventDefault();
     addField(scope, '');
@@ -72,6 +76,8 @@ export function activateMultivalueField(scope) {
   for (const label of labels) {
     setLabelMappingForInput(label);
   }
+
+  scope.setAttribute('pl-listener-assigned', '1');
 }
 
 export function setLabelMappingForInput(label) {
