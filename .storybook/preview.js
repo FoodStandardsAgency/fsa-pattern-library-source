@@ -1,5 +1,7 @@
 import '../src/index.js';
 
+window.isStorybook = true;
+
 const customViewports = {
   mobile: {
     name: 'Mobile',

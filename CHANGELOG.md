@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add UUID package.
+- Add a global variable to preview.js so that we know if JS is running in Storybook
 
 ### Changed
 -
@@ -41,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fix slow loading speed on IE11
 
 ### Security
 -
@@ -49,8 +50,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.93] - 2022-04-12 (0.0.92 failed - re-releasing)
 
-### Changed
-- Dropdown: Duplicate value in data-value for react app
+
+## [0.0.92] - 2022-04-12 (0.0.91 failed - re-releasing)
+
 
 ## [0.0.91] - 2022-04-12 (Dropdown: Duplicate value in data-value for react app)
 
