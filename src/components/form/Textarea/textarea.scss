@@ -12,13 +12,10 @@
     color: var(--fsa-primary_black);
   }
 
-  &__label-content {
-    margin-right: 1rem;
-  }
-
   &__required {
     @include h5;
 
+    margin-left: 0.5rem;
     font-weight: inherit;
     color: var(--fsa-primary_black);
   }

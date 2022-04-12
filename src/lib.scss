@@ -341,7 +341,7 @@ $mobileGutter: 1rem;
     &__required {
       @include h5;
 
-      margin-left: 1rem;
+      margin-left: 0.5rem;
       color: var(--fsa-primary_black);
       font-weight: inherit;
     }
