@@ -1,6 +1,7 @@
 {% set is_required = required is defined and required %}
+{% set is_frozen_steps = frozen_steps is defined and frozen_steps %}
 
-<div class="multifield-group{{ is_required ? " multifield-group--required" : "" }}" id="{{ id }}" data-items='{{ items|json_encode() }}'>
+<div class="multifield-group{{ is_required ? " multifield-group--required" : "" }}{{ is_frozen_steps ? " multifield-group--frozen-steps" : "" }}" id="{{ id }}" data-items='{{ items|json_encode() }}'>
   <div class="multifield-group__template">
     <div class="multifield-group__item">
       <h2>{{ label }}</h2>

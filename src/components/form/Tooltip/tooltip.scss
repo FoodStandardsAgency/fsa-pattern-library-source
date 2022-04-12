@@ -19,34 +19,32 @@
     @include link;
 
     border: 2px solid transparent;
+    border-radius: 2rem;
     cursor: pointer;
     display: block;
     position: relative;
     z-index: 2;
-    width: 3em;
-    height: 3rem;
+    width: 2.8em;
+    height: 2.8rem;
 
     @media screen and (min-width: $fsa-lg) {
-      width: 2.7rem;
-      height: 2.7rem;
+      width: 2.65rem;
+      height: 2.65rem;
     }
 
     &:focus {
-      background-color: var(--fsa-primary_black);
-      border: 2px solid var(--fsa-tertiary_light-yellow);
+      background: transparent;
+      box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+      border: 2px solid var(--fsa-primary_black);
       outline: none;
     }
 
     &::before {
       content: "";
       background-image: url("./assets/question.svg");
-      background-color: var(--fsa-primary_white);
       display: block;
-      height: calc(100% - 4px);
-      width: calc(100% - 4px);
-      position: absolute;
-      top: 2px;
-      left: 2px;
+      height: 100%;
+      width: 100%;
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -94,7 +92,7 @@
     @include body;
 
     color: var(--fsa-primary_black);
-    padding: 1rem 2rem 1rem 1rem;
+    padding: 1rem 2.5rem 1rem 1rem;
     text-align: left;
 
     &-content {
@@ -114,11 +112,11 @@
     border: 2px solid transparent;
     cursor: pointer;
     display: block;
-    height: 1.2rem;
+    height: 2rem;
     position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-    width: 1.2rem;
+    right: 0.25rem;
+    top: 0.25rem;
+    width: 2rem;
     margin: 0;
 
     &::before {
@@ -126,18 +124,16 @@
       background-color: var(--fsa_online-grey);
       background-image: url("./assets/close.svg");
       display: block;
-      height: calc(100% - 4px);
-      width: calc(100% - 4px);
-      top: 2px;
-      left: 2px;
       position: absolute;
       background-repeat: no-repeat;
       background-position: center;
+      height: 100%;
+      width: 100%;
     }
 
     &:focus {
-      background-color: var(--fsa-primary_black);
-      border: 2px solid var(--fsa-tertiary_light-yellow);
+      box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+      border: 2px solid var(--fsa-primary_black);
       outline: none;
     }
   }
@@ -145,16 +141,16 @@
 
 .label-with-tooltip {
   position: relative;
-  padding-right: 2rem;
+  padding-right: 3rem;
   width: 100%;
 
   .tooltip {
     position: absolute;
-    top: -0.9rem;
+    top: -0.8rem;
     right: 0;
 
     @media screen and (min-width: $fsa-lg) {
-      top: -0.6rem;
+      top: -0.7rem;
     }
   }
 }
