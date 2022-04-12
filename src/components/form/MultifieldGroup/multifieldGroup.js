@@ -5,7 +5,7 @@ import {
   activateMultivalueField,
   addField,
   setLabelMappingForInput,
-  setLabelMappingForSelect,
+  setLabelMappingForSelect, setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
 import { activateTooltip } from '../Tooltip/tooltip';
 
@@ -104,7 +104,7 @@ export default function () {
         const singleWrapper = element.closest('.textarea');
         if (singleWrapper) {
           const label = singleWrapper.querySelector('label');
-          setLabelMappingForSelect(label);
+          setLabelMappingForTextarea(label);
         }
       }
     }
