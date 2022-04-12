@@ -10,7 +10,7 @@ import {
 import { activateTooltip } from '../Tooltip/tooltip';
 
 export default function () {
-  function addGroup(group, count, values = { values: {}, errors: [] }) {
+  function addGroup(group, count, values = { values: {}, errors: [], placeholders: {} }) {
     const parent = group.closest('.multifield-group');
     const template = parent
       .querySelector('.multifield-group__template .multifield-group__item')
@@ -29,6 +29,14 @@ export default function () {
         deletedItem.remove();
         dispatchMultigroupEvent(group);
       });
+
+    // Fill placeholders
+    if (values.placeholders) {
+      for (const [from, to] of Object.entries(values.placeholders)) {
+        const regex = new RegExp(`\\[${from}\\]`, 'g');
+        template.innerHTML = template.innerHTML.replace(regex, to);
+      }
+    }
 
     // Handle multivalue fields.
     const multivalueFields = template.querySelectorAll('.multivalue-field');

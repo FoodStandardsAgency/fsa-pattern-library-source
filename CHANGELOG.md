@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Add "frozen steps" state for multifieldGroup component.
 - Add support for a select tag in multifield group component.
+- Add placeholder prop for multifieldGroup.
 
 ### Deprecated
 -
