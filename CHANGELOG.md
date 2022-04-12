@@ -26,6 +26,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.0.90] - 2022-04-12 (various fixes on PL and HACCP components)
+
+### Changed
+- moving (required) closer to the field label
+- Add "frozen steps" state for multifieldGroup component.
+- Add support for a select tag in multifield group component.
+- Replacing See more by more in in navigation
+- Add placeholder prop for multifieldGroup.
+
+### Fixed
+- Fix double listening for multivalue field component.
+
+
 ## [0.0.89] - 2022-04-08 (various fixes on PL and HACCP components)
 
 ### Fixed

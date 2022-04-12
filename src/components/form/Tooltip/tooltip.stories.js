@@ -12,9 +12,9 @@ Tooltip.args = {
   open: 'Open tooltip',
   close: 'Close',
   message:
-    'These are \'pre-requirements\' to the application and implementation of a HACCP system, to demonstrate you have control they should be well established, fully operational and verified. <a href="#">See more information</a>.',
+    'These are \'pre-requirements\' to the application and implementation of a HACCP system, to demonstrate you have control they should be well established, fully operational and verified. <a href="#">More in information</a>.',
   guidance_popup: {
-    open_popup: 'See more information',
+    open_popup: 'More in information',
     label: 'Help',
     more_link: '#',
     more_text: 'More help topics',

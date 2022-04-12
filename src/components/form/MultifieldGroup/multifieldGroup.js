@@ -4,12 +4,13 @@ import { domContentLoadedWrapper, generateHash } from '../../../helpers';
 import {
   activateMultivalueField,
   addField,
-  setMappingForLabel,
+  setLabelMappingForInput,
+  setLabelMappingForSelect,
 } from '../MultivalueField/multivalueField';
 import { activateTooltip } from '../Tooltip/tooltip';
 
 export default function () {
-  function addGroup(group, count, values = { values: {}, errors: [] }) {
+  function addGroup(group, count, values = { values: {}, errors: [], placeholders: {} }) {
     const parent = group.closest('.multifield-group');
     const template = parent
       .querySelector('.multifield-group__template .multifield-group__item')
@@ -32,6 +33,7 @@ export default function () {
     // Handle multivalue fields.
     const multivalueFields = template.querySelectorAll('.multivalue-field');
     for (const field of multivalueFields) {
+      field.removeAttribute('pl-listener-assigned');
       activateMultivalueField(field);
     }
 
@@ -54,25 +56,55 @@ export default function () {
             addField(multivalueField, value);
           }
         } else {
-          element.setAttribute('value', values.values[key]);
+          if (element.tagName === 'INPUT') {
+            element.setAttribute('value', values.values[key]);
+          } else if (element.tagName === 'TEXTAREA') {
+            element.value = values.values[key];
+          } else if (element.tagName === 'SELECT') {
+            const selectedIndex = [...element.options].findIndex(
+              (option) => option.value === values.values[key]
+            );
+            if (selectedIndex !== -1) {
+              element.selectedIndex = selectedIndex;
+            }
+          }
         }
+      } else {
+        // Fill placeholders
+        const regex = new RegExp(`\\[${key}\\]`, 'g');
+        template.innerHTML = template.innerHTML.replace(regex, values.values[key]);
       }
     }
 
     // Set proper attrs for all fields, even no predefined.
-    const allInputs = template.querySelectorAll(`input`);
+    const allInputs = template.querySelectorAll('input, select, textarea');
+
     for (const element of allInputs) {
       const name = element.getAttribute('name').replace('[]', '');
       element.setAttribute('data-field-name', name);
       element.setAttribute('data-sub-group-id', groupId);
 
       // Set mapping between labels and fields for single fields.
-      const multiWrapper = element.closest('.multivalue-field');
-      if (!multiWrapper) {
-        const singleWrapper = element.closest('.input-field');
+      if (element.tagName === 'INPUT') {
+        const multiWrapper = element.closest('.multivalue-field');
+        if (!multiWrapper) {
+          const singleWrapper = element.closest('.input-field');
+          if (singleWrapper) {
+            const label = singleWrapper.querySelector('label');
+            setLabelMappingForInput(label);
+          }
+        }
+      } else if (element.tagName === 'SELECT') {
+        const singleWrapper = element.closest('.dropdown');
         if (singleWrapper) {
           const label = singleWrapper.querySelector('label');
-          setMappingForLabel(label);
+          setLabelMappingForSelect(label);
+        }
+      } else if (element.tagName === 'TEXTAREA') {
+        const singleWrapper = element.closest('.textarea');
+        if (singleWrapper) {
+          const label = singleWrapper.querySelector('label');
+          setLabelMappingForSelect(label);
         }
       }
     }
@@ -82,10 +114,24 @@ export default function () {
       const element = template.querySelector(`[name^="${field}"]`);
 
       if (element) {
-        const wrapper = element.closest('.input-field');
+        if (element.tagName === 'INPUT') {
+          const wrapper = element.closest('.input-field');
 
-        if (wrapper) {
-          wrapper.classList.add('input-field--error');
+          if (wrapper) {
+            wrapper.classList.add('input-field--error');
+          }
+        } else if (element.tagName === 'SELECT') {
+          const wrapper = element.closest('.dropdown');
+
+          if (wrapper) {
+            wrapper.classList.add('dropdown--error');
+          }
+        } else if (element.tagName === 'TEXTAREA') {
+          const wrapper = element.closest('.textarea');
+
+          if (wrapper) {
+            wrapper.classList.add('textarea--error');
+          }
         }
       }
     }
@@ -120,9 +166,13 @@ export default function () {
           return;
         }
 
-        const errorFields = e.target.querySelectorAll('.input-field--error');
+        const errorFields = e.target.querySelectorAll(
+          '.input-field--error, .dropdown--error, .textarea--error'
+        );
         for (const errorField of errorFields) {
           errorField.classList.remove('input-field--error');
+          errorField.classList.remove('dropdown--error');
+          errorField.classList.remove('textarea--error');
         }
 
         for (const i in dataItems) {
@@ -133,9 +183,16 @@ export default function () {
 
             if (item) {
               for (const fieldName of line.errors) {
-                const elements = item.querySelectorAll(`input[data-field-name="${fieldName}"]`);
+                const elements = item.querySelectorAll(`[data-field-name="${fieldName}"]`);
                 for (const element of elements) {
-                  element.closest('.input-field').classList.add('input-field--error');
+                  if (element.tagName === 'INPUT') {
+                    element.closest('.input-field').classList.add('input-field--error');
+                  } else if (element.tagName === 'SELECT') {
+                    element.closest('.dropdown').classList.add('dropdown--error');
+                  }
+                  if (element.tagName === 'TEXTAREA') {
+                    element.closest('.textarea').classList.add('textarea--error');
+                  }
                 }
               }
             }
@@ -148,12 +205,13 @@ export default function () {
   return domContentLoadedWrapper(callback);
 }
 
-export function dispatchMultigroupEvent(element, event = 'input') {
+export function dispatchMultigroupEvent(element) {
   const group = element.classList.contains('multifield-group')
     ? element
     : element.closest('.multifield-group');
 
   if (group) {
-    group.dispatchEvent(new Event(event));
+    group.dispatchEvent(new Event('input'));
+    group.dispatchEvent(new Event('select'));
   }
 }
