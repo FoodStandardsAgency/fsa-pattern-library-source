@@ -26,10 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
-
-### Added
--
+## [0.0.90] - 2022-04-12 (various fixes on PL and HACCP components)
 
 ### Changed
 - moving (required) closer to the field label
@@ -38,17 +35,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replacing See more by more in in navigation
 - Add placeholder prop for multifieldGroup.
 
-### Deprecated
--
-
-### Removed
--
-
 ### Fixed
 - Fix double listening for multivalue field component.
-
-### Security
--
 
 
 ## [0.0.89] - 2022-04-08 (various fixes on PL and HACCP components)
