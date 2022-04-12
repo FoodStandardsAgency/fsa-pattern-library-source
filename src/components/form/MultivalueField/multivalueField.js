@@ -102,6 +102,17 @@ export function setLabelMappingForSelect(label) {
   }
 }
 
+export function setLabelMappingForTextarea(label) {
+  const select = label.closest('.textarea');
+
+  if (select) {
+    const id = generateHash();
+    select.querySelector('textarea').setAttribute('id', id);
+    label.setAttribute('for', id);
+    label.setAttribute('id', `${id}-label`);
+  }
+}
+
 function buildDeleteButton(scope) {
   const deleteButton = document.createElement('a');
   deleteButton.href = '#';

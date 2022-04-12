@@ -62,7 +62,7 @@ export default function () {
             element.value = values.values[key];
           } else if (element.tagName === 'SELECT') {
             const selectedIndex = [...element.options].findIndex(
-              (option) => option.value === values.values[key]
+              (option) => option.getAttribute('data-value') === values.values[key]
             );
             if (selectedIndex !== -1) {
               element.selectedIndex = selectedIndex;
