@@ -1,6 +1,6 @@
 import './multifieldGroup.html.twig';
 import './multifieldGroup.scss';
-import { domContentLoadedWrapper, generateHash } from '../../../helpers';
+import { domContentLoadedWrapper } from '../../../helpers';
 import {
   activateMultivalueField,
   addField,
@@ -9,6 +9,7 @@ import {
   setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
 import { activateTooltip } from '../Tooltip/tooltip';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function () {
   function addGroup(group, count, values = { values: {}, errors: [], placeholders: {} }) {
@@ -17,7 +18,7 @@ export default function () {
       .querySelector('.multifield-group__template .multifield-group__item')
       .cloneNode(true);
 
-    const groupId = generateHash();
+    const groupId = uuidv4();
     template.setAttribute('id', groupId);
 
     template
@@ -42,6 +43,12 @@ export default function () {
     const tooltips = template.querySelectorAll('.tooltip');
     for (const tooltip of tooltips) {
       activateTooltip(tooltip);
+    }
+
+    // Set uuid for ID field.
+    const uuidField = template.querySelector(`[name="uuid[]"]`);
+    if (uuidField) {
+      uuidField.setAttribute('value', uuidv4());
     }
 
     // Set existed values.

@@ -25,6 +25,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+
+## [Upcoming release] - 1971-11-03
+
+### Added
+- Add UUID package.
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
 ## [0.0.93] - 2022-04-12 (0.0.92 failed - re-releasing)
 
 ### Changed

@@ -1,7 +1,8 @@
 import './multivalueField.html.twig';
 import './multivalueField.scss';
-import { domContentLoadedWrapper, generateHash } from '../../../helpers';
+import { domContentLoadedWrapper } from '../../../helpers';
 import { dispatchMultigroupEvent } from '@components/components/form/MultifieldGroup/multifieldGroup';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function () {
   function callback() {
@@ -84,7 +85,7 @@ export function setLabelMappingForInput(label) {
   const input = label.closest('.input-field');
 
   if (input) {
-    const id = generateHash();
+    const id = uuidv4();
     input.querySelector('input').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);
@@ -95,7 +96,7 @@ export function setLabelMappingForSelect(label) {
   const select = label.closest('.dropdown');
 
   if (select) {
-    const id = generateHash();
+    const id = uuidv4();
     select.querySelector('select').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);
@@ -106,7 +107,7 @@ export function setLabelMappingForTextarea(label) {
   const select = label.closest('.textarea');
 
   if (select) {
-    const id = generateHash();
+    const id = uuidv4();
     select.querySelector('textarea').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);

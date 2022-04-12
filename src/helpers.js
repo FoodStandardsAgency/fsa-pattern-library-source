@@ -10,13 +10,3 @@ export function domContentLoadedWrapper(callback) {
     callback();
   });
 }
-
-export function generateHash() {
-  const hash = () =>
-    Math.random()
-      .toString(36)
-      .replace(/[^a-z]+/g, '')
-      .substr(0, 6);
-
-  return `uniq-${hash()}${hash()}`;
-}
