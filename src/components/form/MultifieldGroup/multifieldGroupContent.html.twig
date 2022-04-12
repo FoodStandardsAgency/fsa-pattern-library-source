@@ -9,7 +9,7 @@
       close: 'Close',
     },
     guidance_popup: {
-    open_popup: 'See more information',
+    open_popup: 'More in information',
     label: 'Help',
     more_link: '#',
     more_text: 'More help topics',
@@ -70,5 +70,35 @@
     label: 'Allergen',
     entity_name: 'Allergen hazard',
     add_another: 'Add another',
+  } %}
+
+  {% include '@components/components/form/Dropdown/dropdown.html.twig' with {
+    title: 'Delivery option',
+    description:
+    'Choose a delivery method from the dropdown list.',
+    options: [
+      {
+        'text': 'Email',
+        'value': 'email'
+      },
+      {
+        'text': 'SMS',
+        'value': 'sms'
+      }
+    ],
+    default: 'email',
+    name: 'delivery_method',
+    required: "",
+    error: false,
+  } %}
+
+  {% include '@components/components/form/Textarea/textarea.html.twig' with {
+    error: false,
+    name: 'notes',
+    id: 'notes',
+    label: 'Notes',
+    required: '',
+    description: 'Please leave your notes here',
+    rows: 10,
   } %}
 </div>

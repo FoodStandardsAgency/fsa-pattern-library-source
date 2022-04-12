@@ -22,5 +22,5 @@
   {% if error %}
     <div class="textarea__error-message">{{ error_message }}</div>
   {% endif %}
-  <textarea class="textarea__field textarea__field--{{ desc_is_defined ? "with-desc" : "" }}" name="{{ name }}" id="{{ id }}" rows="{{ rows is defined ? rows : "5" }} {{ required ? "required" : "" }}" {{ desc_is_defined ? "aria-describedby='" ~ desc_id : "'" }}>{{ value }}</textarea>
+  <textarea class="textarea__field textarea__field--{{ desc_is_defined ? "with-desc" : "" }}" name="{{ name }}" id="{{ id }}" rows="{{ rows is defined ? rows : "5" }} {{ required ? "required" : "" }}" {{ desc_is_defined ? "aria-describedby='" ~ desc_id ~ "'" : '' }}>{{ value }}</textarea>
 </div>
