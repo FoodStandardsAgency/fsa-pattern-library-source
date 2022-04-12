@@ -26,7 +26,7 @@
       <select name="{{ name }}" id="{{ id }}" class="dropdown__select">
     {% endif %}
       {% for option in options %}
-        <option value="{{ option.value }}" class="dropdown__option" {{ option.value == default ? "selected" : "" }}>{{ option.text }}</option>
+        <option value="{{ option.value }}" data-value="{{ option.value }}" class="dropdown__option" {{ option.value == default ? "selected" : "" }}>{{ option.text }}</option>
       {% endfor %}
     </select>
   </div>
