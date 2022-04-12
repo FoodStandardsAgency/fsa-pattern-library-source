@@ -109,7 +109,7 @@ WithTooltip.args = {
     message: 'Type your email address here.',
   },
   guidance_popup: {
-    open_popup: 'See more information',
+    open_popup: 'More in information',
     label: 'Help',
     more_link: '#',
     more_text: 'More help topics',
