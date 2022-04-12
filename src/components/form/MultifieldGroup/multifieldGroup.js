@@ -30,14 +30,6 @@ export default function () {
         dispatchMultigroupEvent(group);
       });
 
-    // Fill placeholders
-    if (values.placeholders) {
-      for (const [from, to] of Object.entries(values.placeholders)) {
-        const regex = new RegExp(`\\[${from}\\]`, 'g');
-        template.innerHTML = template.innerHTML.replace(regex, to);
-      }
-    }
-
     // Handle multivalue fields.
     const multivalueFields = template.querySelectorAll('.multivalue-field');
     for (const field of multivalueFields) {
@@ -77,6 +69,10 @@ export default function () {
             }
           }
         }
+      } else {
+        // Fill placeholders
+        const regex = new RegExp(`\\[${key}\\]`, 'g');
+        template.innerHTML = template.innerHTML.replace(regex, values.values[key]);
       }
     }
 

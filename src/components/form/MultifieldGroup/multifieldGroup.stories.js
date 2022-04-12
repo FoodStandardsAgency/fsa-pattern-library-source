@@ -55,7 +55,6 @@ FrozenSteps.args = {
   frozen_steps: true,
   items: [
     {
-      placeholders: { name: 'John' },
       values: {
         step_number: '3',
         step_name: 'Cooking chicken',
