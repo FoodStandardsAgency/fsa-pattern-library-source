@@ -60,13 +60,14 @@ export default function () {
           if (element.tagName === 'INPUT') {
             element.setAttribute('value', values.values[key]);
           } else if (element.tagName === 'TEXTAREA') {
-            element.value = values.values[key];
+            element.innerHTML = values.values[key];
           } else if (element.tagName === 'SELECT') {
-            const selectedIndex = [...element.options].findIndex(
-              (option) => option.getAttribute('data-value') === values.values[key]
-            );
-            if (selectedIndex !== -1) {
-              element.selectedIndex = selectedIndex;
+            for (const option of element.options) {
+              option.setAttribute('value', option.getAttribute('data-value'));
+
+              if (option.getAttribute('data-value') === values.values[key]) {
+                option.setAttribute('selected', 'selected');
+              }
             }
           }
         }
