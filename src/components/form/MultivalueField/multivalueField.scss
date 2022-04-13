@@ -23,9 +23,9 @@
     &::before {
       content: "";
       background-image: url("./assets/delete.svg");
-      display: inline-block;
-      width: 1.75rem;
-      height: 1rem;
+      display: block;
+      width: 100%;
+      height: 100%;
       background-repeat: no-repeat;
       background-position: center;
       margin-right: 1rem;
@@ -33,9 +33,9 @@
     }
 
     &:focus {
-      box-shadow: inset 0 0 0 2px var(--fsa-primary_black);
-      outline: solid 3px var(--fsa-tertiary_light-yellow);
-      background-color: var(--fsa-primary_white);
+      border: 0.2rem solid var(--fsa-primary_black);
+      box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+      outline: none;
     }
   }
 
@@ -50,6 +50,12 @@
       position: absolute;
       right: 0.5rem;
       top: 0.5rem;
+    }
+  }
+
+  .input-field--error {
+    .multivalue-field__delete-entity {
+      top: 0.7rem;
     }
   }
 }
