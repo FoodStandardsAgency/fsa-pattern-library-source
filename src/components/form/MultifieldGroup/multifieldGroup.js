@@ -1,6 +1,6 @@
 import './multifieldGroup.html.twig';
 import './multifieldGroup.scss';
-import { domContentLoadedWrapper, generateHash } from '../../../helpers';
+import { domContentLoadedWrapper } from '../../../helpers';
 import {
   activateMultivalueField,
   addField,
@@ -8,7 +8,7 @@ import {
   setLabelMappingForSelect,
   setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
-import { activateTooltip } from '../Tooltip/tooltip';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function () {
   function addGroup(group, count, values = { values: {}, errors: [], placeholders: {} }) {
@@ -17,7 +17,7 @@ export default function () {
       .querySelector('.multifield-group__template .multifield-group__item')
       .cloneNode(true);
 
-    const groupId = generateHash();
+    const groupId = uuidv4();
     template.setAttribute('id', groupId);
 
     template
@@ -38,10 +38,10 @@ export default function () {
       activateMultivalueField(field);
     }
 
-    // Activate tooltips.
-    const tooltips = template.querySelectorAll('.tooltip');
-    for (const tooltip of tooltips) {
-      activateTooltip(tooltip);
+    // Set uuid for ID field.
+    const uuidField = template.querySelector(`[name="uuid[]"]`);
+    if (uuidField) {
+      uuidField.setAttribute('value', uuidv4());
     }
 
     // Set existed values.
@@ -60,13 +60,14 @@ export default function () {
           if (element.tagName === 'INPUT') {
             element.setAttribute('value', values.values[key]);
           } else if (element.tagName === 'TEXTAREA') {
-            element.value = values.values[key];
+            element.innerHTML = values.values[key];
           } else if (element.tagName === 'SELECT') {
-            const selectedIndex = [...element.options].findIndex(
-              (option) => option.getAttribute('data-value') === values.values[key]
-            );
-            if (selectedIndex !== -1) {
-              element.selectedIndex = selectedIndex;
+            for (const option of element.options) {
+              option.setAttribute('value', option.getAttribute('data-value'));
+
+              if (option.getAttribute('data-value') === values.values[key]) {
+                option.setAttribute('selected', 'selected');
+              }
             }
           }
         }
@@ -138,6 +139,8 @@ export default function () {
     }
 
     parent.insertBefore(template, group.parentNode);
+
+    return groupId;
   }
 
   function callback() {
@@ -146,8 +149,14 @@ export default function () {
     for (const group of groups) {
       const button = group.querySelector('.multifield-group__add-item button');
       button.addEventListener('click', function (e) {
-        addGroup(e.target, count);
+        const groupId = addGroup(e.target, count);
+
         dispatchMultigroupEvent(e.target);
+
+        document
+          .getElementById(groupId)
+          .querySelector('[data-field-name]:not([type="hidden"])')
+          .focus();
       });
 
       const parsedValues = JSON.parse(group.getAttribute('data-items'));
