@@ -8,7 +8,6 @@ import {
   setLabelMappingForSelect,
   setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
-import { activateTooltip } from '../Tooltip/tooltip';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function () {
@@ -37,12 +36,6 @@ export default function () {
     for (const field of multivalueFields) {
       field.removeAttribute('pl-listener-assigned');
       activateMultivalueField(field);
-    }
-
-    // Activate tooltips.
-    const tooltips = template.querySelectorAll('.tooltip');
-    for (const tooltip of tooltips) {
-      activateTooltip(tooltip);
     }
 
     // Set uuid for ID field.
@@ -146,6 +139,8 @@ export default function () {
     }
 
     parent.insertBefore(template, group.parentNode);
+
+    return groupId;
   }
 
   function callback() {
@@ -154,8 +149,14 @@ export default function () {
     for (const group of groups) {
       const button = group.querySelector('.multifield-group__add-item button');
       button.addEventListener('click', function (e) {
-        addGroup(e.target, count);
+        const groupId = addGroup(e.target, count);
+
         dispatchMultigroupEvent(e.target);
+
+        document
+          .getElementById(groupId)
+          .querySelector('[data-field-name]:not([type="hidden"])')
+          .focus();
       });
 
       const parsedValues = JSON.parse(group.getAttribute('data-items'));
