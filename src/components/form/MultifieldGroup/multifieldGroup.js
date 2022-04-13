@@ -151,9 +151,9 @@ export default function () {
       button.addEventListener('click', function (e) {
         const groupId = addGroup(e.target, count);
 
-        document.getElementById(groupId).querySelector('[data-field-name]').focus();
-
         dispatchMultigroupEvent(e.target);
+
+        document.getElementById(groupId).querySelector('[data-field-name]:not([type="hidden"])').focus();
       });
 
       const parsedValues = JSON.parse(group.getAttribute('data-items'));
