@@ -21,6 +21,7 @@
   &__grid {
     &-row {
       @include grid-row;
+      margin: 0;
     }
 
     &-col {
