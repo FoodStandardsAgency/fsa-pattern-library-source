@@ -32,7 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
--
+- Redesigned elements for multivalueField component.
+- Changed logic of attaching for webToolProgressBar.
 
 ### Deprecated
 -
