@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add UUID package.
 
 ### Changed
--
+- Handling tooltips components in "dynamic" mode.
 
 ### Deprecated
 -

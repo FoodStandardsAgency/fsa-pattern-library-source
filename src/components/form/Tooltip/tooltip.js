@@ -5,11 +5,7 @@ import { activatePopup } from '../../general/GuidancePopup/guidancePopup';
 
 export default function () {
   function callback() {
-    const tooltips = document.querySelectorAll('.tooltip');
-
-    for (const tooltip of tooltips) {
-      activateTooltip(tooltip);
-    }
+    document.addEventListener('click', activateTooltip);
 
     document.addEventListener('click', closeTooltipAfterActivityOutside);
     document.addEventListener('focusin', closeTooltipAfterActivityOutside);
@@ -18,7 +14,21 @@ export default function () {
   return domContentLoadedWrapper(callback);
 }
 
-export function activateTooltip(tooltip) {
+function activateTooltip(e) {
+  const tooltip = e.target.closest('.tooltip');
+
+  if (!tooltip) {
+    return;
+  }
+
+  if (tooltip.hasAttribute('pl-listener-assigned')) {
+    return;
+  }
+
+  e.preventDefault();
+
+  tooltip.setAttribute('pl-listener-assigned', '1');
+
   const questionMark = tooltip.querySelector('.tooltip__question-mark');
   const closeMark = tooltip.querySelector('.tooltip__close');
   const guidancePopup = tooltip.querySelector('.guidance-popup');
@@ -30,6 +40,8 @@ export function activateTooltip(tooltip) {
     const openLink = tooltip.querySelector('.tooltip__popup-open');
     activatePopup(openLink, guidancePopup);
   }
+
+  questionMark.dispatchEvent(new Event('click'));
 }
 
 function closeAllTooltips(except = null) {
@@ -72,9 +84,15 @@ function handleTooltip(e) {
 }
 
 function closeTooltipAfterActivityOutside(e) {
-  const tooltip = e.target.closest('.tooltip');
+  const activeTooltip = document.querySelector('.tooltip__body-opened');
 
-  if (!tooltip) {
+  if (!activeTooltip) {
+    return;
+  }
+
+  const element = e.target.closest('.tooltip');
+
+  if (!element || element !== activeTooltip.closest('.tooltip')) {
     closeAllTooltips();
   }
 }

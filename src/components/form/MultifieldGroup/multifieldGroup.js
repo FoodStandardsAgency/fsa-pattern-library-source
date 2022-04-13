@@ -8,7 +8,6 @@ import {
   setLabelMappingForSelect,
   setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
-import { activateTooltip } from '../Tooltip/tooltip';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function () {
@@ -37,12 +36,6 @@ export default function () {
     for (const field of multivalueFields) {
       field.removeAttribute('pl-listener-assigned');
       activateMultivalueField(field);
-    }
-
-    // Activate tooltips.
-    const tooltips = template.querySelectorAll('.tooltip');
-    for (const tooltip of tooltips) {
-      activateTooltip(tooltip);
     }
 
     // Set uuid for ID field.
