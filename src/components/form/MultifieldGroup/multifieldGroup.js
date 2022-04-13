@@ -153,7 +153,10 @@ export default function () {
 
         dispatchMultigroupEvent(e.target);
 
-        document.getElementById(groupId).querySelector('[data-field-name]:not([type="hidden"])').focus();
+        document
+          .getElementById(groupId)
+          .querySelector('[data-field-name]:not([type="hidden"])')
+          .focus();
       });
 
       const parsedValues = JSON.parse(group.getAttribute('data-items'));
