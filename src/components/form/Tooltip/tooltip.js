@@ -11,13 +11,8 @@ export default function () {
       activateTooltip(tooltip);
     }
 
-    document.addEventListener('click', function (e) {
-      const tooltip = e.target.closest('.tooltip');
-
-      if (!tooltip) {
-        closeAllTooltips();
-      }
-    });
+    document.addEventListener('click', closeTooltipAfterActivityOutside);
+    document.addEventListener('focusin', closeTooltipAfterActivityOutside);
   }
 
   return domContentLoadedWrapper(callback);
@@ -74,4 +69,12 @@ function handleTooltip(e) {
   }
 
   body.classList.toggle('tooltip__body-opened');
+}
+
+function closeTooltipAfterActivityOutside(e) {
+  const tooltip = e.target.closest('.tooltip');
+
+  if (!tooltip) {
+    closeAllTooltips();
+  }
 }
