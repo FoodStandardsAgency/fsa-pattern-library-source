@@ -29,11 +29,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- FHRS' businessHero component in English and Welsh versions.
 
 ### Changed
 - Redesigned elements for multivalueField component.
 - Changed logic of attaching for webToolProgressBar.
+- Added FHRS' BusinessHero component to the FHRS page.
 
 ### Deprecated
 -
