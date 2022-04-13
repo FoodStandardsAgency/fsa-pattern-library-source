@@ -33,8 +33,9 @@
     }
 
     &:focus {
-      // Required to override a bottom border passed from ".input-field a".
-      border-bottom-color: var(--fsa-tertiary_light-yellow) !important;
+      box-shadow: inset 0 0 0 2px var(--fsa-primary_black);
+      outline: solid 3px var(--fsa-tertiary_light-yellow);
+      background-color: var(--fsa-primary_white);
     }
   }
 
@@ -42,13 +43,13 @@
     position: relative;
 
     input {
-      padding-right: 2rem;
+      padding-right: 2.5rem;
     }
 
     .multivalue-field__delete-entity {
       position: absolute;
-      right: 0.2rem;
-      top: 0.5rem;
+      right: 0.5rem;
+      top: 0.7rem;
     }
   }
 }

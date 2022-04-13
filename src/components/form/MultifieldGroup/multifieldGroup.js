@@ -139,6 +139,8 @@ export default function () {
     }
 
     parent.insertBefore(template, group.parentNode);
+
+    return groupId;
   }
 
   function callback() {
@@ -147,7 +149,10 @@ export default function () {
     for (const group of groups) {
       const button = group.querySelector('.multifield-group__add-item button');
       button.addEventListener('click', function (e) {
-        addGroup(e.target, count);
+        const groupId = addGroup(e.target, count);
+
+        document.getElementById(groupId).querySelector('[data-field-name]').focus();
+
         dispatchMultigroupEvent(e.target);
       });
 

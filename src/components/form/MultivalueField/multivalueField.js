@@ -63,14 +63,21 @@ export function activateMultivalueField(scope) {
     return;
   }
 
+  const wrapper = scope.querySelector('.input-field__wrapper');
+  const deleteEntity = wrapper.querySelector('.multivalue-field__delete-entity');
+
+  if (deleteEntity) {
+    deleteEntity.remove();
+  }
+
+  const deleteButton = buildDeleteButton(scope);
+  scope.querySelector('.input-field__wrapper').append(deleteButton);
+
   scope.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
     e.preventDefault();
     addField(scope, '');
     dispatchMultigroupEvent(e.target);
   });
-
-  const deleteButton = buildDeleteButton(scope);
-  scope.querySelector('.input-field__wrapper').append(deleteButton);
 
   // Set mapping between labels and inputs.
   const labels = scope.querySelectorAll('label');
@@ -126,6 +133,14 @@ function buildDeleteButton(scope) {
     const parent = e.target.parentNode;
     const group = e.target.closest('.multifield-group');
     const label = parent.closest('.multivalue-field').querySelector('label');
+
+    const next = parent.nextSibling;
+
+    if (next && next.nodeName === 'DIV' && next.querySelector('input')) {
+      next.querySelector('input').focus();
+    } else {
+      parent.closest('.multivalue-field').querySelector('.multivalue-field__add-entity a').focus();
+    }
 
     parent.remove();
 

@@ -19,7 +19,13 @@
   }
 
   &__delete-item {
-    @include link;
+    a {
+      @include link;
+
+      &:focus {
+        text-decoration: none;
+      }
+    }
 
     @media screen and (min-width: $fsa-lg) {
       position: absolute;
