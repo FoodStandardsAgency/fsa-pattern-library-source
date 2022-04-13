@@ -7,26 +7,30 @@ export default function () {
     const labels = document.querySelectorAll('.webtool-progress-bar__label');
 
     for (const label of labels) {
-      label.addEventListener('click', function (e) {
-        e.preventDefault();
+      if (!label.hasAttribute('pl-listener-assigned')) {
+        label.setAttribute('pl-listener-assigned', '1');
 
-        const parentLine = e.target.closest('.webtool-progress-bar__line');
-        const isOpened = parentLine.classList.contains('webtool-progress-bar__line-opened');
+        label.addEventListener('click', function (e) {
+          e.preventDefault();
 
-        const lines = e.target
-          .closest('.webtool-progress-bar')
-          .querySelectorAll('.webtool-progress-bar__line');
+          const parentLine = e.target.closest('.webtool-progress-bar__line');
+          const isOpened = parentLine.classList.contains('webtool-progress-bar__line-opened');
 
-        for (const line of lines) {
-          line.classList.remove('webtool-progress-bar__line-opened');
-        }
+          const lines = e.target
+            .closest('.webtool-progress-bar')
+            .querySelectorAll('.webtool-progress-bar__line');
 
-        if (isOpened) {
-          return;
-        }
+          for (const line of lines) {
+            line.classList.remove('webtool-progress-bar__line-opened');
+          }
 
-        parentLine.classList.add('webtool-progress-bar__line-opened');
-      });
+          if (isOpened) {
+            return;
+          }
+
+          parentLine.classList.add('webtool-progress-bar__line-opened');
+        });
+      }
     }
   }
 

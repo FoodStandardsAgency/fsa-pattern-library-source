@@ -23,9 +23,9 @@
     &::before {
       content: "";
       background-image: url("./assets/delete.svg");
-      display: inline-block;
-      width: 1.75rem;
-      height: 1rem;
+      display: block;
+      width: 100%;
+      height: 100%;
       background-repeat: no-repeat;
       background-position: center;
       margin-right: 1rem;
@@ -33,8 +33,9 @@
     }
 
     &:focus {
-      // Required to override a bottom border passed from ".input-field a".
-      border-bottom-color: var(--fsa-tertiary_light-yellow) !important;
+      border: 0.2rem solid var(--fsa-primary_black);
+      box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+      outline: none;
     }
   }
 
@@ -42,13 +43,19 @@
     position: relative;
 
     input {
-      padding-right: 2rem;
+      padding-right: 2.5rem;
     }
 
     .multivalue-field__delete-entity {
       position: absolute;
-      right: 0.2rem;
+      right: 0.5rem;
       top: 0.5rem;
+    }
+  }
+
+  .input-field--error {
+    .multivalue-field__delete-entity {
+      top: 0.7rem;
     }
   }
 }

@@ -25,6 +25,7 @@
       box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
       border-width: 0.2rem;
       padding: 0.5rem 2.5rem 0.5rem 1rem;
+      outline: none;
     }
 
     &-arrow {
@@ -35,12 +36,8 @@
       width: 1rem;
       position: absolute;
       right: 1rem;
-      height: 100%;
+      height: calc(100% + 2px);
       background-position: center;
-    }
-
-    @media screen and (min-width: $fsa-md) {
-      font-weight: bold;
     }
   }
 
@@ -48,8 +45,9 @@
     border-top: solid 1px var(--fsa_border);
 
     a {
-      display: block;
+      display: inline-block;
       padding: 0.5rem 2.5rem 0.5rem 1rem;
+      width: 100%;
 
       &:hover {
         background: var(--fsa_tint);
@@ -57,7 +55,8 @@
 
       &:focus {
         box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
-        border: 1px solid var(--fsa-primary_black);
+        border: 0.2rem solid var(--fsa-primary_black);
+        outline: none;
       }
     }
   }

@@ -1,7 +1,8 @@
 import './multivalueField.html.twig';
 import './multivalueField.scss';
-import { domContentLoadedWrapper, generateHash } from '../../../helpers';
+import { domContentLoadedWrapper } from '../../../helpers';
 import { dispatchMultigroupEvent } from '@components/components/form/MultifieldGroup/multifieldGroup';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function () {
   function callback() {
@@ -62,14 +63,22 @@ export function activateMultivalueField(scope) {
     return;
   }
 
-  scope.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
-    e.preventDefault();
-    addField(scope, '');
-    dispatchMultigroupEvent(e.target);
-  });
+  const wrapper = scope.querySelector('.input-field__wrapper');
+  const deleteEntity = wrapper.querySelector('.multivalue-field__delete-entity');
+
+  if (deleteEntity) {
+    deleteEntity.remove();
+  }
 
   const deleteButton = buildDeleteButton(scope);
   scope.querySelector('.input-field__wrapper').append(deleteButton);
+
+  scope.querySelector('.multivalue-field__add-entity a').addEventListener('click', function (e) {
+    e.preventDefault();
+    addField(scope, '');
+    [...scope.querySelectorAll('input')].pop().focus();
+    dispatchMultigroupEvent(e.target);
+  });
 
   // Set mapping between labels and inputs.
   const labels = scope.querySelectorAll('label');
@@ -84,7 +93,7 @@ export function setLabelMappingForInput(label) {
   const input = label.closest('.input-field');
 
   if (input) {
-    const id = generateHash();
+    const id = uuidv4();
     input.querySelector('input').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);
@@ -95,8 +104,19 @@ export function setLabelMappingForSelect(label) {
   const select = label.closest('.dropdown');
 
   if (select) {
-    const id = generateHash();
+    const id = uuidv4();
     select.querySelector('select').setAttribute('id', id);
+    label.setAttribute('for', id);
+    label.setAttribute('id', `${id}-label`);
+  }
+}
+
+export function setLabelMappingForTextarea(label) {
+  const select = label.closest('.textarea');
+
+  if (select) {
+    const id = uuidv4();
+    select.querySelector('textarea').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);
   }
@@ -114,6 +134,14 @@ function buildDeleteButton(scope) {
     const parent = e.target.parentNode;
     const group = e.target.closest('.multifield-group');
     const label = parent.closest('.multivalue-field').querySelector('label');
+
+    const next = parent.nextSibling;
+
+    if (next && next.nodeName === 'DIV' && next.querySelector('input')) {
+      next.querySelector('input').focus();
+    } else {
+      parent.closest('.multivalue-field').querySelector('.multivalue-field__add-entity a').focus();
+    }
 
     parent.remove();
 
