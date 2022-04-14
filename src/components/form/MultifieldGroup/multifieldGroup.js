@@ -84,7 +84,7 @@ function initGroup(group) {
           for (const fieldName of line.errors) {
             const elements = item.querySelectorAll(`[data-field-name="${fieldName}"]`);
             for (const element of elements) {
-              if (element.tagName === 'INPUT') {
+              if (element.tagName === 'INPUT' && element.closest('.input-field')) {
                 element.closest('.input-field').classList.add('input-field--error');
               } else if (element.tagName === 'SELECT') {
                 element.closest('.dropdown').classList.add('dropdown--error');
