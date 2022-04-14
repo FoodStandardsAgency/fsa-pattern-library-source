@@ -47,6 +47,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.0.95] - 2022-04-14 (Multifield fixes)
+
+### Changed
+- Redesigned elements for multivalueField component.
+- Changed logic of attaching for webToolProgressBar.
+
+### Fixed
+- The initial process for every multifieldGroup will be run only once.
+
+
 ## [0.0.94] - 2022-04-13 (UUID package and tooltip handling)
 
 ### Added

@@ -73,9 +73,10 @@ export function activateMultivalueField(scope) {
   const deleteButton = buildDeleteButton(scope);
   scope.querySelector('.input-field__wrapper').append(deleteButton);
 
-  scope.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
+  scope.querySelector('.multivalue-field__add-entity a').addEventListener('click', function (e) {
     e.preventDefault();
     addField(scope, '');
+    [...scope.querySelectorAll('input')].pop().focus();
     dispatchMultigroupEvent(e.target);
   });
 
