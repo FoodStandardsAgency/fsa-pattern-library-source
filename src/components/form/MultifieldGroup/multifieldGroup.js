@@ -4,7 +4,7 @@ import { domContentLoadedWrapper } from '../../../helpers';
 import {
   activateMultivalueField,
   addField,
-  setLabelMappingForInput,
+  setLabelMappingForInput, setLabelMappingForRadio,
   setLabelMappingForSelect,
   setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
@@ -144,6 +144,14 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
     uuidField.setAttribute('value', uuidv4());
   }
 
+  // Handle radio buttons.
+  const radioInputs = template.querySelectorAll(`.radio input`);
+  for (const radio of radioInputs) {
+    const name = radio.getAttribute('name');
+    radio.setAttribute('name', `${name}[${groupId}]`);
+    radio.setAttribute('id', `${name}--${groupId}`);
+  }
+
   // Set existed values.
   for (const key in values.values) {
     const element = template.querySelector(`[name^="${key}"]`);
@@ -187,7 +195,7 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
   const allInputs = template.querySelectorAll('input, select, textarea');
 
   for (const element of allInputs) {
-    const name = element.getAttribute('name').replace('[]', '');
+    const name = element.getAttribute('name').replace(/\[.*?\]/g, '');
     element.setAttribute('data-field-name', name);
     element.setAttribute('data-sub-group-id', groupId);
 
@@ -204,8 +212,10 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
       } else if (!multiWrapper && element.type === 'radio') {
         const singleWrapper = element.closest('.radio');
         if (singleWrapper) {
-          const label = singleWrapper.querySelector('label');
-          setLabelMappingForInput(label);
+          const labels = singleWrapper.querySelectorAll('label');
+          for (const label of labels) {
+            setLabelMappingForRadio(label);
+          }
         }
       }
     } else if (element.tagName === 'SELECT') {

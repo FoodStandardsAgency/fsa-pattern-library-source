@@ -123,7 +123,7 @@ export function setLabelMappingForTextarea(label) {
 }
 
 export function setLabelMappingForRadio(label) {
-  const radio = label.closest('.radio');
+  const radio = label.closest('.radio__field');
 
   if (radio) {
     const id = uuidv4();
