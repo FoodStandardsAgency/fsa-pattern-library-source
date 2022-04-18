@@ -104,9 +104,20 @@ function initGroup(group) {
 
 function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) {
   const parent = group.closest('.multifield-group');
+
   const template = parent
     .querySelector('.multifield-group__template .multifield-group__item')
     .cloneNode(true);
+
+  const numberOfItems = [...parent.children].filter((item) =>
+    item.classList.contains('multifield-group__item')
+  ).length;
+
+  if (!numberOfItems) {
+    template.querySelector('.multifield-group__form--other-items').remove();
+  } else {
+    template.querySelector('.multifield-group__form--first-item').remove();
+  }
 
   const groupId = uuidv4();
   template.setAttribute('id', groupId);

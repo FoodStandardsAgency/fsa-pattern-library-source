@@ -1,5 +1,6 @@
 {% set is_required = required is defined and required %}
 {% set is_frozen_steps = frozen_steps is defined and frozen_steps %}
+{% set first_item_template = first_item_template is defined and first_item_template ? first_item_template : template %}
 
 <div class="multifield-group{{ is_required ? " multifield-group--required" : "" }}{{ is_frozen_steps ? " multifield-group--frozen-steps" : "" }}" id="{{ id }}" data-items='{{ items|json_encode() }}'>
   <div class="multifield-group__template">
@@ -8,7 +9,10 @@
       <div class="multifield-group__delete-item">
         <a href="#">{{ remove_this }} {{ entity_name|lower }}</a>
       </div>
-      <div class="multifield-group__form">
+      <div class="multifield-group__form multifield-group__form--first-item">
+        {{ first_item_template }}
+      </div>
+      <div class="multifield-group__form multifield-group__form--other-items">
         {{ template }}
       </div>
     </div>
