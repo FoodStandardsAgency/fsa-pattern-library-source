@@ -112,11 +112,22 @@ export function setLabelMappingForSelect(label) {
 }
 
 export function setLabelMappingForTextarea(label) {
-  const select = label.closest('.textarea');
+  const textarea = label.closest('.textarea');
 
-  if (select) {
+  if (textarea) {
     const id = uuidv4();
-    select.querySelector('textarea').setAttribute('id', id);
+    textarea.querySelector('textarea').setAttribute('id', id);
+    label.setAttribute('for', id);
+    label.setAttribute('id', `${id}-label`);
+  }
+}
+
+export function setLabelMappingForRadio(label) {
+  const radio = label.closest('.radio');
+
+  if (radio) {
+    const id = uuidv4();
+    radio.querySelector('input').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);
   }

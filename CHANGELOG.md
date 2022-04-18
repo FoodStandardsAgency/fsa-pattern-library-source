@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - FHRS' businessHero component in English and Welsh versions.
 
 ### Changed
--
+- Handle radio elements in multifieldGroup component.
 
 ### Deprecated
 -
