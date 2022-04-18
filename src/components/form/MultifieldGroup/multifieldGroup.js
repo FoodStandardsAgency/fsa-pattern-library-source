@@ -170,8 +170,9 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
           const defaultRadioElem = template.querySelector(
             `[name^="${key}"][value="${values.values[key]}"]`
           );
+
           if (defaultRadioElem) {
-            defaultRadioElem.checked = true;
+            defaultRadioElem.setAttribute('checked', 'checked');
           }
         } else if (element.tagName === 'INPUT') {
           element.setAttribute('value', values.values[key]);
