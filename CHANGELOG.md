@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - FHRS' businessHero component in English and Welsh versions.
+- Support for using a special template for 1st item in multiFieldGroup component.
 
 ### Changed
 -
