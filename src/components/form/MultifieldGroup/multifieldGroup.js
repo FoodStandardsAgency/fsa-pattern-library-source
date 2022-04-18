@@ -4,7 +4,8 @@ import { domContentLoadedWrapper } from '../../../helpers';
 import {
   activateMultivalueField,
   addField,
-  setLabelMappingForInput, setLabelMappingForRadio,
+  setLabelMappingForInput,
+  setLabelMappingForRadio,
   setLabelMappingForSelect,
   setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
@@ -166,7 +167,9 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
         }
       } else {
         if (element.tagName === 'INPUT' && element.type === 'radio') {
-          const defaultRadioElem = template.querySelector(`[name^="${key}"][value="${values.values[key]}"]`);
+          const defaultRadioElem = template.querySelector(
+            `[name^="${key}"][value="${values.values[key]}"]`
+          );
           if (defaultRadioElem) {
             defaultRadioElem.checked = true;
           }
@@ -239,20 +242,24 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
 
     if (element) {
       if (element.tagName === 'INPUT') {
-        const wrapper = element.closest('.input-field');
-
-        if (wrapper) {
-          wrapper.classList.add('input-field--error');
+        if (element.type === 'radio') {
+          const wrapper = element.closest('.radio');
+          if (wrapper) {
+            wrapper.classList.add('radio--error');
+          }
+        } else {
+          const wrapper = element.closest('.input-field');
+          if (wrapper) {
+            wrapper.classList.add('input-field--error');
+          }
         }
       } else if (element.tagName === 'SELECT') {
         const wrapper = element.closest('.dropdown');
-
         if (wrapper) {
           wrapper.classList.add('dropdown--error');
         }
       } else if (element.tagName === 'TEXTAREA') {
         const wrapper = element.closest('.textarea');
-
         if (wrapper) {
           wrapper.classList.add('textarea--error');
         }
