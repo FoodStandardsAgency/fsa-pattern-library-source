@@ -5,6 +5,7 @@ import {
   activateMultivalueField,
   addField,
   setLabelMappingForInput,
+  setLabelMappingForRadio,
   setLabelMappingForSelect,
   setLabelMappingForTextarea,
 } from '../MultivalueField/multivalueField';
@@ -72,6 +73,7 @@ function initGroup(group) {
       errorField.classList.remove('input-field--error');
       errorField.classList.remove('dropdown--error');
       errorField.classList.remove('textarea--error');
+      errorField.classList.remove('radio--error');
     }
 
     for (const i in dataItems) {
@@ -84,12 +86,13 @@ function initGroup(group) {
           for (const fieldName of line.errors) {
             const elements = item.querySelectorAll(`[data-field-name="${fieldName}"]`);
             for (const element of elements) {
-              if (element.tagName === 'INPUT' && element.closest('.input-field')) {
+              if (element.tagName === 'INPUT' && element.type === 'radio') {
+                element.closest('.radio').classList.add('radio--error');
+              } else if (element.tagName === 'INPUT' && element.closest('.input-field')) {
                 element.closest('.input-field').classList.add('input-field--error');
               } else if (element.tagName === 'SELECT') {
                 element.closest('.dropdown').classList.add('dropdown--error');
-              }
-              if (element.tagName === 'TEXTAREA') {
+              } else if (element.tagName === 'TEXTAREA') {
                 element.closest('.textarea').classList.add('textarea--error');
               }
             }
@@ -142,6 +145,14 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
     uuidField.setAttribute('value', uuidv4());
   }
 
+  // Handle radio buttons.
+  const radioInputs = template.querySelectorAll(`.radio input`);
+  for (const radio of radioInputs) {
+    const name = radio.getAttribute('name');
+    radio.setAttribute('name', `${name}[${groupId}]`);
+    radio.setAttribute('id', `${name}--${groupId}`);
+  }
+
   // Set existed values.
   for (const key in values.values) {
     const element = template.querySelector(`[name^="${key}"]`);
@@ -155,7 +166,14 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
           addField(multivalueField, value);
         }
       } else {
-        if (element.tagName === 'INPUT') {
+        if (element.tagName === 'INPUT' && element.type === 'radio') {
+          const defaultRadioElem = template.querySelector(
+            `[name^="${key}"][value="${values.values[key]}"]`
+          );
+          if (defaultRadioElem) {
+            defaultRadioElem.checked = true;
+          }
+        } else if (element.tagName === 'INPUT') {
           element.setAttribute('value', values.values[key]);
         } else if (element.tagName === 'TEXTAREA') {
           element.innerHTML = values.values[key];
@@ -180,18 +198,27 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
   const allInputs = template.querySelectorAll('input, select, textarea');
 
   for (const element of allInputs) {
-    const name = element.getAttribute('name').replace('[]', '');
+    const name = element.getAttribute('name').replace(/\[.*?\]/g, '');
     element.setAttribute('data-field-name', name);
     element.setAttribute('data-sub-group-id', groupId);
 
     // Set mapping between labels and fields for single fields.
     if (element.tagName === 'INPUT') {
       const multiWrapper = element.closest('.multivalue-field');
-      if (!multiWrapper) {
+
+      if (!multiWrapper && element.type !== 'radio') {
         const singleWrapper = element.closest('.input-field');
         if (singleWrapper) {
           const label = singleWrapper.querySelector('label');
           setLabelMappingForInput(label);
+        }
+      } else if (!multiWrapper && element.type === 'radio') {
+        const singleWrapper = element.closest('.radio');
+        if (singleWrapper) {
+          const labels = singleWrapper.querySelectorAll('label');
+          for (const label of labels) {
+            setLabelMappingForRadio(label);
+          }
         }
       }
     } else if (element.tagName === 'SELECT') {
@@ -215,20 +242,24 @@ function addGroup(group, values = { values: {}, errors: [], placeholders: {} }) 
 
     if (element) {
       if (element.tagName === 'INPUT') {
-        const wrapper = element.closest('.input-field');
-
-        if (wrapper) {
-          wrapper.classList.add('input-field--error');
+        if (element.type === 'radio') {
+          const wrapper = element.closest('.radio');
+          if (wrapper) {
+            wrapper.classList.add('radio--error');
+          }
+        } else {
+          const wrapper = element.closest('.input-field');
+          if (wrapper) {
+            wrapper.classList.add('input-field--error');
+          }
         }
       } else if (element.tagName === 'SELECT') {
         const wrapper = element.closest('.dropdown');
-
         if (wrapper) {
           wrapper.classList.add('dropdown--error');
         }
       } else if (element.tagName === 'TEXTAREA') {
         const wrapper = element.closest('.textarea');
-
         if (wrapper) {
           wrapper.classList.add('textarea--error');
         }

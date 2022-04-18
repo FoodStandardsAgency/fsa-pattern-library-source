@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for using a special template for 1st item in multiFieldGroup component.
 
 ### Changed
--
+- Handle radio elements in multifieldGroup component.
 
 ### Deprecated
 -
