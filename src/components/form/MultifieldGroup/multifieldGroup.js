@@ -67,7 +67,7 @@ function initGroup(group) {
     }
 
     const errorFields = e.target.querySelectorAll(
-      '.input-field--error, .dropdown--error, .textarea--error'
+      '.input-field--error, .dropdown--error, .textarea--error, .radio--error'
     );
     for (const errorField of errorFields) {
       errorField.classList.remove('input-field--error');
