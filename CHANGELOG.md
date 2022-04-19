@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
@@ -45,6 +46,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 -
+
+
+## [0.0.96] - 2022-04-19 (Language options for business hero and multifield group changes)
+
+### Added
+- FHRS' businessHero component in English and Welsh versions.
+- Support for using a special template for 1st item in multiFieldGroup component.
+
+### Changed
+- Handle radio elements in multifieldGroup component.
 
 
 ## [0.0.95] - 2022-04-14 (Multifield fixes)
