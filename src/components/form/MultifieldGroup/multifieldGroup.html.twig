@@ -5,7 +5,7 @@
 <div class="multifield-group{{ is_required ? " multifield-group--required" : "" }}{{ is_frozen_steps ? " multifield-group--frozen-steps" : "" }}" id="{{ id }}" data-items='{{ items|json_encode() }}'>
   <div class="multifield-group__template">
     <div class="multifield-group__item">
-      <h3 class="h2">{{ label }}</h3>
+      <h2>{{ label }}</h2>
       <div class="multifield-group__delete-item">
         <a href="#">{{ remove_this }} {{ entity_name|lower }}</a>
       </div>
