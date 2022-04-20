@@ -78,7 +78,6 @@ $ratings: 0, 1, 2, 3, 4, 5, exempt, inspection, publication, awaited;
   &__link {
     @include link;
 
-    text-decoration: none;
     display: block;
     margin-top: 1rem;
     border: none;
@@ -93,10 +92,6 @@ $ratings: 0, 1, 2, 3, 4, 5, exempt, inspection, publication, awaited;
 
     &--forward {
       background-image: url("./assets/arrow-forward.svg");
-    }
-
-    &:hover {
-      text-decoration: underline;
     }
   }
 
