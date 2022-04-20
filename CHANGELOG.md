@@ -42,11 +42,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
-- Proper error handling for radio inputs for multifieldGroup component.
-- Delete an empty H2-label for multifieldGroup component to avoid problems during accessibility testing.
+-
 
 ### Security
 -
+
+
+## [0.0.97] - 2022-04-20 (Fix error handling for multifield group component)
+
+### Fixed
+- Proper error handling for radio inputs for multifieldGroup component.
+- Delete an empty H2-label for multifieldGroup component to avoid problems during accessibility testing.
 
 
 ## [0.0.96] - 2022-04-19 (Language options for business hero and multifield group changes)
