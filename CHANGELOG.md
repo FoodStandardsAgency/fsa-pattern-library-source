@@ -43,6 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Proper error handling for radio inputs for multifieldGroup component.
+- Delete an empty H2-label for multifieldGroup component to avoid problems during accessibility testing.
 
 ### Security
 -

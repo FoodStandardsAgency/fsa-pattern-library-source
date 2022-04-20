@@ -7,6 +7,10 @@
     .multifield-group__template + .multifield-group__item {
       .multifield-group__delete-item {
         display: none;
+
+        & + .multifield-group__form {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -31,6 +35,10 @@
       position: absolute;
       top: 0.5rem;
       right: 0;
+
+      &--no-label + .multifield-group__form {
+        margin-top: 6rem;
+      }
     }
   }
 
