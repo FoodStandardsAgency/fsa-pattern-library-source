@@ -43,6 +43,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed styles for frozen state of multifieldGroup component.
+- localGovernment component logo's horizontal overflowing.
+- Use two different logos for the two localGovernment components on the FHRS page.
+- Make businessHero component's hyperlinks underlined
 
 ### Security
 -
