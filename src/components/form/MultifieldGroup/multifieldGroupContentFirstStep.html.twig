@@ -2,7 +2,7 @@
   {% include "@components/components/form/InputField/inputField.html.twig" with {
     name: 'step_number[]',
     id: 'step_number',
-    label: 'Step number',
+    label: 'Step number (special template for 1st item)',
     tooltip: {
       message: 'Type your step number.',
       open: 'Open tooltip',
@@ -24,18 +24,6 @@
               <h3>Operational Prerequisites</h3>
               <p>Most prerequisites are general in nature and their purpose is to ensure the Sed a</p>',
     },
-  } %}
-
-  {% include '@components/components/form/Radio/radio.html.twig' with {
-    title: 'Email frequency',
-    description: 'How often the emails are sent',
-    fields: [
-      { value: 'immediately', label: 'Send updates immediately', id: 'immediately' },
-      { value: 'daily', label: 'Send updates daily', id: 'daily' },
-      { value: 'weekly', label: 'Send updates weekly', id: 'weekly' },
-    ],
-    name: 'frequency',
-    required: "required",
   } %}
 
   {% include "@components/components/form/InputField/inputField.html.twig" with {
