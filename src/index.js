@@ -53,6 +53,7 @@ import './components/form/TitleAndText/titleAndText';
 import './components/form/EmailField/emailField';
 import './components/form/Textarea/textarea';
 import './components/form/Step/step';
+import './components/form/FileUpload/fileUpload';
 import mapField from './components/form/MapField/mapField';
 import tooltip from './components/form/Tooltip/tooltip';
 import multivalueField from './components/form/MultivalueField/multivalueField';
