@@ -2,29 +2,31 @@
   <div class="header__grid-container">
     <div class="header__grid-row">
       <div class="header__wrapper">
-        <div class="header__top">
-          {% if user_menu_navigation.links is not empty %}
-          <nav class="header__user_menu header__user_menu--desktop header__nav" aria-label="User menu" aria-hidden="false">
-            <ul class="header__user_menu-list">
-              {% for user_menu_link in user_menu_navigation.links %}
-              <li class="header__user_menu_item">
-                <a href="{{ user_menu_link.link.href }}" class="header__user_menu-link">{{ user_menu_link.link.label }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-          </nav>
-          {% endif %}
-          <nav class="header__languages header__languages--desktop header__nav" aria-label="Language switcher" aria-hidden="false">
-            <ul class="header__languages-list">
-              <li class="header__language">
-                <a href="{{ english_link }}" class="header__language-link header__language-link--{{ english ? "selected" : "" }}">{{ english_label }}</a>
-              </li>
-              <li class="header__language">
-                <a href="{{ welsh_link }}" class="header__language-link header__language-link--{{ not english ? "selected" : "" }}">{{ welsh_label }}</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        {% if search_bar_visible or report_link is not empty or ratings_link is not empty %}
+          <div class="header__top">
+            {% if user_menu_navigation.links is not empty %}
+              <nav class="header__user_menu header__user_menu--desktop header__nav" aria-label="User menu" aria-hidden="false">
+                <ul class="header__user_menu-list">
+                  {% for user_menu_link in user_menu_navigation.links %}
+                    <li class="header__user_menu_item">
+                      <a href="{{ user_menu_link.link.href }}" class="header__user_menu-link">{{ user_menu_link.link.label }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </nav>
+            {% endif %}
+            <nav class="header__languages header__languages--desktop header__nav" aria-label="Language switcher" aria-hidden="false">
+              <ul class="header__languages-list">
+                <li class="header__language">
+                  <a href="{{ english_link }}" class="header__language-link header__language-link--{{ english ? "selected" : "" }}">{{ english_label }}</a>
+                </li>
+                <li class="header__language">
+                  <a href="{{ welsh_link }}" class="header__language-link header__language-link--{{ not english ? "selected" : "" }}">{{ welsh_label }}</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        {% endif %}
         <div class="header__bottom">
           <div class="header__logo-container">
             <div class="header__logo-wrapper header__primary-logo-wrapper">
@@ -39,29 +41,29 @@
             </div>
           </div>
           {% if user_menu_navigation.links is empty %}
-          <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
-            <div class="header__links-wrapper">
-              {% if contact_link is not empty and contact_label is not empty %}
-                <div class="header__links-item">
-                  <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
-                </div>
-              {% endif %}
-              {% if report_link is not empty and report_label is not empty %}
-                <div class="header__links-item">
-                  <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
-                </div>
-              {% endif %}
-            </div>
-            {% if ratings_link is not empty and ratings_label is not empty %}
-              <div class="header__links-item header__links-item--right">
-                <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
+            <nav class="header__links header__links--desktop header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
+              <div class="header__links-wrapper">
+                {% if contact_link is not empty and contact_label is not empty %}
+                  <div class="header__links-item">
+                    <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
+                  </div>
+                {% endif %}
+                {% if report_link is not empty and report_label is not empty %}
+                  <div class="header__links-item">
+                    <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
+                  </div>
+                {% endif %}
               </div>
-            {% endif %}
-          </nav>
+              {% if ratings_link is not empty and ratings_label is not empty %}
+                <div class="header__links-item header__links-item--right">
+                  <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
+                </div>
+              {% endif %}
+            </nav>
           {% endif %}
           {% if secondary_logo_link is not empty %}
             <div class="header__search-and-menu-container">
-          {% endif %}
+            {% endif %}
             {% if search_bar_visible %}
               <div class="header__search-bar-wrapper">
                 <div class="header__search-bar header__search-bar--full">
@@ -78,11 +80,23 @@
                 </a>
               </div>
             {% endif %}
+            {% if not search_bar_visible and ratings_link is empty %}
+              <nav class="header__languages header__languages--desktop header__nav" aria-label="Language switcher" aria-hidden="false">
+                <ul class="header__languages-list">
+                  <li class="header__language">
+                    <a href="{{ english_link }}" class="header__language-link header__language-link--{{ english ? "selected" : "" }}">{{ english_label }}</a>
+                  </li>
+                  <li class="header__language">
+                    <a href="{{ welsh_link }}" class="header__language-link header__language-link--{{ not english ? "selected" : "" }}">{{ welsh_label }}</a>
+                  </li>
+                </ul>
+              </nav>
+            {% endif %}
             <button class="header__menu {{ secondary_logo_link ? 'header__menu-has-secondary-logo' : '' }}" aria-expanded="false" aria-controls="navigation">
               <span class="visually-hidden">{{ menu_label }}</span>
               <div class="header__menu-symbol" aria-hidden="true"></div>
             </button>
-          {% if secondary_logo_link is not empty %}
+            {% if secondary_logo_link is not empty %}
             </div>
           {% endif %}
         </div>
@@ -99,36 +113,42 @@
   {% endif %}
   <div class="header__navigation">
     {% if user_menu_navigation.links is not empty %}
-    <nav class="navigation header__user-menu-navigation header__links--mobile header__links--mobile-user-menu" aria-label="User menu" aria-hidden="false">
-      <div class="navigation__container">
+      <nav class="navigation header__user-menu-navigation header__links--mobile header__links--mobile-user-menu" aria-label="User menu" aria-hidden="false">
+        <div class="navigation__container">
           <div class="navigation__row">
-            <div class="navigation__wrapper">      
+            <div class="navigation__wrapper">
               <ul class="navigation__menu navigation__menu--level-1">
                 {% for user_menu_link in user_menu_navigation.links %}
-                <li class="navigation__link">
-                  <a href="{{ user_menu_link.link.href }}">{{ user_menu_link.link.label }}</a>
-                </li>
+                  <li class="navigation__link">
+                    <a href="{{ user_menu_link.link.href }}">{{ user_menu_link.link.label }}</a>
+                  </li>
                 {% endfor %}
               </ul>
             </div>
           </div>
-      </div>
-    </nav>
+        </div>
+      </nav>
     {% endif %}
     {% if user_menu_navigation.links is empty %}
-    <nav class="header__links header__links--mobile header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
-      <div class="header__links-wrapper">
-        <div class="header__links-item">
-          <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
+      <nav class="header__links header__links--mobile header__links--{{ english ? "english" : "welsh" }}" aria-label="Secondary Menu">
+        <div class="header__links-wrapper">
+          {% if contact_link is not empty %}
+            <div class="header__links-item">
+              <a href="{{ contact_link }}" class="header__links-anchor header__links-anchor--contact">{{ contact_label }}</a>
+            </div>
+          {% endif %}
+          {% if report_link is not empty %}
+            <div class="header__links-item">
+              <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
+            </div>
+          {% endif %}
         </div>
-        <div class="header__links-item">
-          <a href="{{ report_link }}" class="header__links-anchor header__links-anchor--report">{{ report_label }}</a>
-        </div>
-      </div>
-      <div class="header__links-item header__links-item--right">
-        <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
-      </div>
-    </nav>
+        {% if ratings_link %}
+          <div class="header__links-item header__links-item--right">
+            <a href="{{ ratings_link }}" class="header__links-anchor header__links-anchor--ratings" target="_blank">{{ ratings_label }}</a>
+          </div>
+        {% endif %}
+      </nav>
     {% endif %}
     <div class="header__navigation">
       {% include '@components/components/general/Navigation/navigation.html.twig' with {
