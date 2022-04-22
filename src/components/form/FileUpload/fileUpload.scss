@@ -1,0 +1,73 @@
+@import "src/lib.scss";
+
+.file-upload-widget {
+  margin-top: 2rem;
+
+  &__label {
+    label {
+      @include h5;
+
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+    }
+  }
+
+  &__required {
+    @include h5;
+
+    margin-left: 0.5rem;
+    color: var(--fsa-primary_black);
+    font-weight: inherit;
+  }
+
+  &__area {
+    background: var(--fsa_online-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+
+    button {
+      margin: 1rem 0 0;
+    }
+
+    .file-upload-widget__file-select {
+      cursor: pointer;
+      background: url("./assets/file-upload.svg") no-repeat center top;
+      padding-top: calc(41px + 1rem);
+      display: block;
+      max-width: 100%;
+
+      &:focus {
+        border: 0.2rem solid var(--fsa-primary_black);
+        box-shadow: 0 0 0 0.2rem var(--fsa-tertiary_light-yellow);
+        outline: none;
+      }
+    }
+
+    .file-upload-widget__file-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .file-upload-widget__file-loading-icon {
+        background: url("./assets/spinner.svg");
+        width: 54px;
+        height: 54px;
+        display: block;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .file-upload-widget__file-label {
+      display: block;
+      font-weight: bold;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      overflow: hidden;
+    }
+  }
+}

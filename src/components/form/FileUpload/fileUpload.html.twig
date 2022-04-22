@@ -1,0 +1,82 @@
+{% set acceptString = '*/*' %}
+{% if accept is defined %}
+  {% set acceptString = accept|join(', ') %}
+{% endif %}
+<div class="file-upload-widget">
+  {% if title is defined %}
+    <div
+      class="file-upload-widget__label{{ tooltip is defined ? " label-with-tooltip" : "" }}">
+      <label for="{{ id }}">
+        {{ title }}<span
+          class="file-upload-widget__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
+      </label>
+      {% if tooltip is defined %}
+        {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
+          open: tooltip.open,
+          close: tooltip.close,
+          message: tooltip.message,
+          guidance_popup: guidance_popup,
+        } %}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="file-upload-widget__area {{ state }}">
+    {% if state == 'file-selected' or state == 'file-not-selected' %}
+      <a href="#" id="{{ id ~ '-select' }}" class="file-upload-widget__file-select">
+        <span class="file-upload-widget__file-label">
+          {% if state == 'file-selected' %}
+            {{ file_name }}
+          {% else %}
+            {{ file_select_label }}
+          {% endif %}
+        </span>
+      </a>
+    {% endif %}
+
+    {% if state == 'file-loading' %}
+      <span class="file-upload-widget__file-loading">
+        <span class="file-upload-widget__file-loading-icon"></span>
+        <span class="file-upload-widget__file-label">
+          {{ file_loading_label }}
+        </span>
+      </span>
+    {% endif %}
+
+    {% if state == 'file-loaded' %}
+      <span class="file-upload-widget__file-label">
+        {{ file_name }}
+      </span>
+    {% endif %}
+
+    {% if state == 'file-selected' %}
+      <div class="file-upload-widget__upload-button">
+        {% include "@components/components/general/Button/button.html.twig" with {
+          element: 'button',
+          type: 'primary',
+          label: file_upload_label,
+          id: id ~ '-upload'
+        } %}
+      </div>
+    {% endif %}
+
+    {% if state == 'file-loaded' %}
+      <div class="file-upload-widget__remove-button">
+        {% include "@components/components/general/Button/button.html.twig" with {
+          element: 'button',
+          type: 'primary',
+          label: file_remove_label,
+          id: id ~ '-remove'
+        } %}
+      </div>
+    {% endif %}
+  </div>
+
+  <input
+    id="{{ id }}"
+    name="{{ name }}"
+    type="file"
+    accept="{{ acceptString }}"
+    class="visually-hidden"
+  />
+</div>
