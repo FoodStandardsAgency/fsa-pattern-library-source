@@ -27,20 +27,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
+## [0.0.98] - 2022-04-22 (New file upload component, few fixes and IE11 performances)
 
 ### Added
 - File upload widget.
 - Add a global variable to preview.js so that we know if JS is running in Storybook
-
-### Changed
--
-
-### Deprecated
--
-
-### Removed
--
 
 ### Fixed
 - Fix slow loading speed on IE11
@@ -48,9 +39,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - localGovernment component logo's horizontal overflowing.
 - Use two different logos for the two localGovernment components on the FHRS page.
 - Make businessHero component's hyperlinks underlined
-
-### Security
--
 
 
 ## [0.0.97] - 2022-04-20 (Fix error handling for multifield group component)
