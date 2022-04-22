@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
@@ -29,7 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
-- Add UUID package.
 - Add a global variable to preview.js so that we know if JS is running in Storybook
 
 ### Changed
@@ -43,15 +43,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fix slow loading speed on IE11
+- Fixed styles for frozen state of multifieldGroup component.
+- localGovernment component logo's horizontal overflowing.
+- Use two different logos for the two localGovernment components on the FHRS page.
+- Make businessHero component's hyperlinks underlined
 
 ### Security
 -
+
+
+## [0.0.97] - 2022-04-20 (Fix error handling for multifield group component)
+
+### Fixed
+- Proper error handling for radio inputs for multifieldGroup component.
+- Delete an empty H2-label for multifieldGroup component to avoid problems during accessibility testing.
+
+
+## [0.0.96] - 2022-04-19 (Language options for business hero and multifield group changes)
+
+### Added
+- FHRS' businessHero component in English and Welsh versions.
+- Support for using a special template for 1st item in multiFieldGroup component.
+
+### Changed
+- Handle radio elements in multifieldGroup component.
+
+
+## [0.0.95] - 2022-04-14 (Multifield fixes)
+
+### Changed
+- Redesigned elements for multivalueField component.
+- Changed logic of attaching for webToolProgressBar.
+
+### Fixed
+- The initial process for every multifieldGroup will be run only once.
+
+
+## [0.0.94] - 2022-04-13 (UUID package and tooltip handling)
+
+### Added
+- Add UUID package.
+
+### Changed
+- Handling tooltips components in "dynamic" mode.
 
 
 ## [0.0.93] - 2022-04-12 (0.0.92 failed - re-releasing)
 
 
 ## [0.0.92] - 2022-04-12 (0.0.91 failed - re-releasing)
+
 
 
 ## [0.0.91] - 2022-04-12 (Dropdown: Duplicate value in data-value for react app)

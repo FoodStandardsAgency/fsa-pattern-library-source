@@ -1,0 +1,114 @@
+@import "src/lib.scss";
+
+$ratings: 0, 1, 2, 3, 4, 5, exempt, inspection, publication, awaited;
+
+@each $rating in $ratings {
+  .business-hero__badge--#{$rating} {
+    background-image: url("./assets/english-badges/english-badge-#{$rating}.svg");
+  }
+
+  .business-hero__badge--#{$rating}.business-hero__badge--welsh {
+    background-image: url("./assets/bilingual-badges/bilingual-badge-#{$rating}.svg");
+  }
+}
+
+.business-hero {
+  margin-top: 3rem;
+
+  &__title {
+    @include h1;
+
+    color: var(--fsa-primary_dark-green);
+    margin: 0;
+
+    &::after {
+      content: "";
+      background-image: url("./assets/dot.svg");
+      background-repeat: space;
+      background-size: 1.6rem 0.6rem;
+      width: 100%;
+      display: block;
+      height: 0.6rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__content {
+    margin-top: 2rem;
+    width: 100%;
+
+    @media screen and (min-width: $fsa-md) {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &__left {
+    @media screen and (min-width: $fsa-md) {
+      width: 50%;
+      display: inline-block;
+    }
+
+    @media screen and (min-width: $fsa-lg) and (max-width: $fsa-xl-minus) {
+      width: 55%;
+    }
+  }
+
+  &__right {
+    margin-top: 1rem;
+
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 0;
+      display: inline-block;
+    }
+  }
+
+  &__badge {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    height: 8rem;
+    width: 15rem;
+
+    &--welsh {
+      height: 10rem;
+    }
+  }
+
+  &__link {
+    @include link;
+
+    display: block;
+    margin-top: 1rem;
+    border: none;
+    padding-left: 2.25rem;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 1.56rem auto;
+
+    &--back {
+      background-image: url("./assets/arrow-back.svg");
+    }
+
+    &--forward {
+      background-image: url("./assets/arrow-forward.svg");
+    }
+  }
+
+  &__block:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  &__subtitle {
+    @include h4;
+
+    color: var(--fsa-primary_black);
+    margin: 0;
+  }
+
+  &__text {
+    margin-top: 0.5rem;
+
+    @include body;
+  }
+}

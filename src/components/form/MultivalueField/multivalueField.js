@@ -63,14 +63,22 @@ export function activateMultivalueField(scope) {
     return;
   }
 
-  scope.querySelector('.multivalue-field__add-entity').addEventListener('click', function (e) {
-    e.preventDefault();
-    addField(scope, '');
-    dispatchMultigroupEvent(e.target);
-  });
+  const wrapper = scope.querySelector('.input-field__wrapper');
+  const deleteEntity = wrapper.querySelector('.multivalue-field__delete-entity');
+
+  if (deleteEntity) {
+    deleteEntity.remove();
+  }
 
   const deleteButton = buildDeleteButton(scope);
   scope.querySelector('.input-field__wrapper').append(deleteButton);
+
+  scope.querySelector('.multivalue-field__add-entity a').addEventListener('click', function (e) {
+    e.preventDefault();
+    addField(scope, '');
+    [...scope.querySelectorAll('input')].pop().focus();
+    dispatchMultigroupEvent(e.target);
+  });
 
   // Set mapping between labels and inputs.
   const labels = scope.querySelectorAll('label');
@@ -104,11 +112,22 @@ export function setLabelMappingForSelect(label) {
 }
 
 export function setLabelMappingForTextarea(label) {
-  const select = label.closest('.textarea');
+  const textarea = label.closest('.textarea');
 
-  if (select) {
+  if (textarea) {
     const id = uuidv4();
-    select.querySelector('textarea').setAttribute('id', id);
+    textarea.querySelector('textarea').setAttribute('id', id);
+    label.setAttribute('for', id);
+    label.setAttribute('id', `${id}-label`);
+  }
+}
+
+export function setLabelMappingForRadio(label) {
+  const radio = label.closest('.radio__field');
+
+  if (radio) {
+    const id = uuidv4();
+    radio.querySelector('input').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);
   }
@@ -126,6 +145,14 @@ function buildDeleteButton(scope) {
     const parent = e.target.parentNode;
     const group = e.target.closest('.multifield-group');
     const label = parent.closest('.multivalue-field').querySelector('label');
+
+    const next = parent.nextSibling;
+
+    if (next && next.nodeName === 'DIV' && next.querySelector('input')) {
+      next.querySelector('input').focus();
+    } else {
+      parent.closest('.multivalue-field').querySelector('.multivalue-field__add-entity a').focus();
+    }
 
     parent.remove();
 

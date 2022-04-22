@@ -56,4 +56,16 @@ export const parameters = {
       locales: '',
     },
   },
+  a11y: {
+    config: {
+      rules: [
+        {
+          // Disable the color contrast checker because we are developing our design using prepared colors and make sure
+          // we want to usw it.
+          id: 'color-contrast',
+          enabled: false,
+        },
+      ],
+    },
+  },
 }

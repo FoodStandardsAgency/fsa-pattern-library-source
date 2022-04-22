@@ -7,6 +7,10 @@
     .multifield-group__template + .multifield-group__item {
       .multifield-group__delete-item {
         display: none;
+
+        & + .multifield-group__form {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -16,15 +20,29 @@
     .multifield-group__add-item {
       display: none;
     }
+
+    .multifield-group__delete-item + .multifield-group__form {
+      margin-top: 0;
+    }
   }
 
   &__delete-item {
-    @include link;
+    a {
+      @include link;
+
+      &:focus {
+        text-decoration: none;
+      }
+    }
 
     @media screen and (min-width: $fsa-lg) {
       position: absolute;
       top: 0.5rem;
       right: 0;
+
+      &--no-label + .multifield-group__form {
+        margin-top: 6rem;
+      }
     }
   }
 
