@@ -6,10 +6,9 @@
   {% if title is defined %}
     <div
       class="file-upload-widget__label{{ tooltip is defined ? " label-with-tooltip" : "" }}">
-      <label for="{{ id }}">
-        {{ title }}<span
-          class="file-upload-widget__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
-      </label>
+      <div class="label">
+        {{ title }}<span class="file-upload-widget__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
+      </div>
       {% if tooltip is defined %}
         {% include "@components/components/form/Tooltip/tooltip.html.twig" with {
           open: tooltip.open,
@@ -78,5 +77,6 @@
     type="file"
     accept="{{ acceptString }}"
     class="visually-hidden"
+    tabindex="-1"
   />
 </div>

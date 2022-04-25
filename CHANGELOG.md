@@ -26,6 +26,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Made file upload widget title not clickable
+- Removed tab index from the hidden file input
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
 
 ## [0.0.98] - 2022-04-22 (New file upload component, few fixes and IE11 performances)
 
