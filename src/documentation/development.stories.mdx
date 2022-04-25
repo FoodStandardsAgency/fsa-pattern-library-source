@@ -148,6 +148,11 @@ NewComponent
 The folder name should be in (upper) CamelCase and all the files in (lower) camelCase.
 All the assets should be SVGs and grouped in the `assets` folder.
 
+### Moving component to another location
+
+We kindly ask to not change the location of any existing component as other components and external codebases might be using it. 
+Please contact us if changing the path of a component is an absolute necessity.
+
 ## General coding standards & naming conventions
 
 - All the code should be indented using 2 white spaces.
@@ -200,6 +205,12 @@ There are number of other really useful ES6 features that can be also used, like
 ### Javascript naming conventions
 
 Use camelCase for the name of your functions and variables.
+
+## JS linting
+
+We are using a linter that will check the code syntax and look for any unwanted code (such as console.logs) upon pull request.
+To ensure your code will pass the tests seamlessly, we recommend running `yarn lint` before submitting your pull request.
+This command will highlight any issues. You can run `yarn lint-fix` to fix these issues automatically.
 
 ## CSS development
 
@@ -337,3 +348,9 @@ This theme uses BEM as much as possible.
 All the assets in this project should be SVG files. 
 
 To make sure each component is independent and modular, the SVG files a component uses should be placed in an `assets` folder at the component's level.
+
+## CSS linting
+
+We are using a linter that will check the code syntax upon pull request.
+To ensure your code will pass the tests seamlessly, we recommend running `yarn lint` before submitting your pull request.
+This command will highlight any issues. You can run `yarn lint-fix` to fix these issues automatically.
