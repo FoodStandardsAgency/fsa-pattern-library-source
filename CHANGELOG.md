@@ -26,6 +26,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+## [Upcoming release template] - 1971-11-03
+
+### Added
+- Added a fhrs variation to the header component
+- Added the fhrs header to the fhrs page
+
+### Changed
+- 
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+- Fixed toggle problem on mobile header
+
+### Security
+-
+
 ## [0.0.99] - 2022-04-25 (Minor changes on file upload component)
 
 ### Changed
