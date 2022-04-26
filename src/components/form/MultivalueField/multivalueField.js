@@ -39,6 +39,7 @@ export function addField(scope, initialValue = '') {
 
   clonedInput.value = initialValue;
   clonedInput.setAttribute('data-field-name', clonedInput.getAttribute('name').replace('[]', ''));
+  clonedInput.setAttribute('id', uuidv4());
 
   const multifieldSubGroup = scope.closest('.multifield-group__item');
   if (multifieldSubGroup && multifieldSubGroup.hasAttribute('id')) {
