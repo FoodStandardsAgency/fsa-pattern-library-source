@@ -26,6 +26,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Added "label_prefix" property for items of webToolProgressBar component.
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
 ## [0.0.100] - 2022-04-26 (Various updates on PL, HACCP & FHRS components)
 
 ### Added
