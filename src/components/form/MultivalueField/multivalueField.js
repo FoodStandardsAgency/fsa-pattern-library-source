@@ -39,12 +39,13 @@ export function addField(scope, initialValue = '') {
 
   clonedInput.value = initialValue;
   clonedInput.setAttribute('data-field-name', clonedInput.getAttribute('name').replace('[]', ''));
+  clonedInput.setAttribute('id', uuidv4());
 
   const multifieldSubGroup = scope.closest('.multifield-group__item');
   if (multifieldSubGroup && multifieldSubGroup.hasAttribute('id')) {
-    clonedEl
-      .querySelector('input')
-      .setAttribute('data-sub-group-id', multifieldSubGroup.getAttribute('id'));
+    clonedInput.setAttribute('data-sub-group-id', multifieldSubGroup.getAttribute('id'));
+
+    clonedInput.setAttribute('aria-labelledby', multifieldSubGroup.getAttribute('id'));
   }
 
   const deleteButton = buildDeleteButton(scope);
@@ -119,6 +120,12 @@ export function setLabelMappingForTextarea(label) {
     textarea.querySelector('textarea').setAttribute('id', id);
     label.setAttribute('for', id);
     label.setAttribute('id', `${id}-label`);
+
+    const description = textarea.querySelector('.textarea__description');
+    if (description) {
+      description.setAttribute('id', `label-${id}`);
+      textarea.querySelector('textarea').setAttribute('aria-describedby', `label-${id}`);
+    }
   }
 }
 
@@ -129,7 +136,13 @@ export function setLabelMappingForRadio(label) {
     const id = uuidv4();
     radio.querySelector('input').setAttribute('id', id);
     label.setAttribute('for', id);
-    label.setAttribute('id', `${id}-label`);
+    label.setAttribute('id', `label-${id}`);
+
+    const description = radio.closest('.radio').querySelector('.radio__description');
+    if (description) {
+      description.setAttribute('id', `descr-${id}`);
+      radio.closest('.radio').setAttribute('aria-describedby', `descr-${id}`);
+    }
   }
 }
 
