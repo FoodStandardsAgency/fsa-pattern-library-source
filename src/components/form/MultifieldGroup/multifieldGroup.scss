@@ -20,6 +20,10 @@
     .multifield-group__add-item {
       display: none;
     }
+
+    .multifield-group__delete-item + .multifield-group__form {
+      margin-top: 0;
+    }
   }
 
   &__delete-item {

@@ -53,6 +53,7 @@ import './components/form/TitleAndText/titleAndText';
 import './components/form/EmailField/emailField';
 import './components/form/Textarea/textarea';
 import './components/form/Step/step';
+import './components/form/FileUpload/fileUpload';
 import mapField from './components/form/MapField/mapField';
 import tooltip from './components/form/Tooltip/tooltip';
 import multivalueField from './components/form/MultivalueField/multivalueField';
@@ -123,15 +124,23 @@ import searchBar from './components/search/SearchBar/searchBar';
 import sortBy from './components/search/SortBy/sortBy';
 
 // Fixes css vars on legacy browsers (i.e. IE11) - this is required for Storybook
-cssVars({
-  silent: true,
-  preserveVars: false,
-  onlyLegacy: false,
-});
+function runCssVars() {
+  // Check whether the browser has native support for css variables
+  const hasNativeSupport = ((window || {}).CSS || {}).supports && window.CSS.supports('(--a: 0)');
+  // Check whether this is running in Storybook
+  if (!hasNativeSupport && window.isStorybook) {
+    cssVars({
+      silent: true,
+      preserveVars: false,
+      onlyLegacy: false,
+    });
+  }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   // Fixes object-fit on legacy browsers
   objectFitImages();
+  runCssVars();
 });
 
 backToTop();

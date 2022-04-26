@@ -10,7 +10,7 @@
             <div class="webtool-progress-bar__steps">
               {% for step in line.steps %}
                 <div class="webtool-progress-bar__step webtool-progress-bar__step-{{ step.state }}">
-                  <a href="{{ step.url is defined ? step.url : '#' }}" aria-label="{{ step.label }}: {{ step.description }}" class="webtool-progress-bar__step--{{ line.label|lower }}-{{ step.label|lower }}">
+                  <a href="{{ step.url is defined ? step.url : '#' }}" class="webtool-progress-bar__step--{{ line.label|lower }}-{{ step.label|lower }}">
                     {{ step.label }}{{ step.description ? '<span class="sr-desktop">: ' ~ step.description ~ '</span>' : "" }}
                   </a>
                 </div>

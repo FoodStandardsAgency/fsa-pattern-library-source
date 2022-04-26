@@ -1,4 +1,740 @@
 {% extends '@components/layout/fhrsLayout/fhrsLayout.html.twig' %}
+
+{% set header_data = {
+  english: true,
+  english_link: '#',
+  english_label: 'English',
+  welsh_link: '#',
+  welsh_label: 'Cymraeg',
+  logo_link: '#',
+  logo_label: 'Food Standards Agency - Frontpage',
+  contact_link: '#',
+  contact_label: 'Contact',
+  search_label: 'Search Food Standards Agency',
+  search_link: '#',
+  search_bar_visible: false,
+  menu_label: 'menu',
+  navigation: {
+    id: 'navigation',
+    label: 'Main navigation',
+    home_link: '#',
+    home_label: 'Home',
+    links: [
+      {
+        link: {
+          href: '#',
+          label: 'News and alerts',
+          active: 'false',
+        },
+        submenu: [
+          {
+            title: 'Latest updates',
+            read_more_link: '#',
+            read_more_label: 'More in Latest Updates',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'News',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Food alerts',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Subscribe to food and alerts',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'FSA blog',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'RSS feeds',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Open policy making',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Consultations',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+        ],
+      },
+      {
+        link: {
+          href: '#',
+          label: 'Food safety and Hygiene',
+          active: 'true',
+        },
+        submenu: [
+          {
+            title: 'At home',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Cooking your food',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Chilling',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Cleaning',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Cross-contamination',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Home food fact checker',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Buying and eating food',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Allergy and intolerance',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Report a food allergic reaction',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Best before and use-by dates',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Food hygience rating',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Food safety for comminity cooking and food banks',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Food crime',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Advice for young adults with a food allergy',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Food poisoning',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Campylobacter',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Salmonella',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Hepatits E virus',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'E. Coli',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Food safety advice',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Cannabidiol (CBD)',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Norovirus',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Raw drinking milk',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Acrylamide',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Radioactivity in food',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Additives',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Arsenic in rice',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Burgers',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Fake alcohol',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Nutrition (Northern Ireland)',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Check the label',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'The Eatwell Guide',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Folic acid',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+        ],
+      },
+      {
+        link: {
+          href: '#',
+          label: 'Business Guidance',
+          active: 'true',
+        },
+        submenu: [
+          {
+            title: 'Starting a food business',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Registering a food business',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Setting up a food business',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Starting a food business from home',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Managing food safely',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Food safety for food delivery',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Applying for authorisation or approval',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Apply for a regulated product authorisation',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Regulated products application guidance',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Applying for approval of a meat establishment',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Applying for approval of a food establishment',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Running a business',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Allergen labelling changes for prepacked for direct sale (PPDS) food',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Reopening and adapting your food business during COVID-19',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Safer food, better business',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Allergen guidance',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Industry-specific advice',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Placing a regulated product on the market',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'The UK has left the EU',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Cannabidiol (CBD) guidance',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Imports and exports',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Allergen labelling',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Precautionary allergen labelling',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Farming and animal feed',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Meat and slaughter',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Fish and shellfish',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+        ],
+      },
+      {
+        link: {
+          href: '#',
+          label: 'About us',
+          active: 'true',
+        },
+        submenu: [
+          {
+            title: 'Our FSA Board meetings',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'FSA Board Meetings',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Members of the FSA Board',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label:
+                    'Code of conduct, standing orders, and terms of reference for the FSA Board',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Science and research',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Our approach to science',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Research reports',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Areas of research interest',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Science committees',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Apply for research funding',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Framework for assessing third-party evidence',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Our people',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Leadership team',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'National Food Crime Unit',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'Our committees',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Committees of FSA Board',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Northern Ireland Food Advisory Committee',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Welsh Food Advisory Committee',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Meat charging steering group',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+          {
+            title: 'How we work',
+            links: [
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Who we are',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Our strategy',
+                  active: 'false',
+                },
+              },
+              {
+                link: {
+                  type: 'link',
+                  href: '#',
+                  label: 'Engagement and consultations',
+                  active: 'false',
+                },
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+}
+%}
 {% set coventry_gov_logo = '<?xml version="1.0" encoding="UTF-8"?>
 <svg width="156px" height="95px" viewBox="0 0 156 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Coventry Logo</title>
@@ -10,6 +746,86 @@
         </g>
     </g>
 </svg>' %}
+{% set canterbury_gov_logo = '<?xml version="1.0" standalone="no"?>
+  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+  <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+  width="290.000000pt" height="93.000000pt" viewBox="0 0 290.000000 93.000000"
+  preserveAspectRatio="xMidYMid meet">
+
+  <g transform="translate(0.000000,93.000000) scale(0.100000,-0.100000)"
+  fill="#000000" stroke="none">
+  <path d="M0 465 l0 -465 1450 0 1450 0 0 465 0 465 -1450 0 -1450 0 0 -465z
+  m1970 261 l0 -54 30 15 c92 45 161 -96 85 -173 -26 -25 -88 -34 -101 -13 -4 8
+  -9 8 -17 0 -6 -6 -21 -11 -34 -11 -23 0 -23 1 -23 139 0 124 2 140 18 144 40
+  11 42 8 42 -47z m-470 -6 c0 -25 4 -30 25 -30 18 0 25 -5 25 -20 0 -15 -7 -20
+  -25 -20 -22 0 -25 -4 -25 -39 0 -53 8 -71 32 -71 14 0 19 -6 16 -22 -2 -18
+  -11 -24 -36 -26 -54 -5 -72 19 -72 95 0 49 -3 63 -15 63 -8 0 -15 9 -15 20 0
+  11 7 20 15 20 9 0 15 9 15 24 0 23 12 32 48 35 7 1 12 -11 12 -29z m-794 2
+  c25 -16 34 -56 34 -148 0 -54 -5 -123 -12 -155 -10 -49 -15 -56 -35 -56 -22 0
+  -23 2 -24 96 0 53 -6 114 -13 136 l-12 40 -8 -57 -7 -58 -49 0 -48 0 -7 40
+  c-16 96 -35 38 -35 -106 l0 -94 -30 0 c-28 0 -30 2 -30 40 0 22 -4 40 -9 40
+  -11 0 -21 -50 -21 -109 0 -25 -3 -76 -7 -113 l-6 -68 -93 0 c-71 0 -96 4 -108
+  16 -24 23 -24 525 0 548 13 14 51 16 262 16 136 0 252 -4 258 -8z m273 -31
+  c19 -12 6 -41 -18 -41 -33 0 -52 -12 -62 -38 -15 -38 12 -72 57 -72 31 0 35
+  -3 32 -22 -3 -21 -8 -23 -57 -23 -46 1 -57 5 -77 29 -29 32 -32 90 -8 125 28
+  39 101 62 133 42z m183 -21 c14 -17 18 -41 18 -101 0 -77 -1 -79 -24 -79 -14
+  0 -28 5 -31 10 -5 8 -11 8 -20 0 -25 -20 -78 -8 -95 22 -23 42 1 78 65 99 39
+  13 46 18 32 24 -10 4 -33 5 -52 2 -30 -5 -35 -3 -35 14 0 43 109 50 142 9z
+  m213 5 c22 -22 25 -32 25 -105 l0 -80 -30 0 c-30 0 -30 1 -30 53 0 64 -8 94
+  -26 101 -27 11 -44 -23 -44 -90 l0 -64 -30 0 -30 0 0 101 0 102 33 -5 c17 -3
+  41 -2 52 3 35 14 55 10 80 -16z m340 5 c18 -15 38 -77 31 -95 -4 -11 -22 -15
+  -67 -15 -77 0 -78 -23 -1 -28 43 -3 52 -6 52 -21 0 -49 -127 -40 -159 11 -30
+  49 -6 138 42 158 26 11 83 5 102 -10z m175 -10 c0 -23 -4 -30 -20 -30 -27 0
+  -40 -30 -40 -94 0 -56 0 -56 -30 -56 l-30 0 0 100 0 100 25 0 c16 0 25 -6 25
+  -15 0 -12 4 -11 20 5 30 30 50 26 50 -10z m590 0 c0 -22 -5 -30 -18 -30 -32 0
+  -42 -22 -42 -88 l0 -63 -32 3 -33 3 -3 98 -3 97 31 0 c17 0 30 -5 30 -12 0 -8
+  6 -6 17 5 28 28 53 22 53 -13z m-280 -42 c0 -71 9 -92 36 -86 16 3 19 14 22
+  76 l3 72 34 0 35 0 0 -100 0 -100 -30 0 c-16 0 -30 5 -30 10 0 7 -6 7 -19 0
+  -31 -16 -69 -12 -91 10 -17 17 -20 33 -20 100 l0 80 30 0 30 0 0 -62z m380 5
+  c8 -29 17 -53 21 -53 3 0 11 25 18 55 12 54 13 55 47 55 40 0 41 6 -7 -120
+  -38 -99 -62 -136 -99 -155 -36 -19 -35 -19 -44 18 -5 20 -3 27 8 27 8 0 21 9
+  29 21 14 19 11 29 -24 115 l-38 95 37 -3 c35 -3 38 -5 52 -55z m-162 -314 c-4
+  -174 -22 -175 -26 -2 -3 132 1 164 19 146 6 -6 8 -64 7 -144z m-1383 122 c7
+  -12 -12 -24 -25 -16 -11 7 -4 25 10 25 5 0 11 -4 15 -9z m1325 -7 c0 -17 -22
+  -14 -28 4 -2 7 3 12 12 12 9 0 16 -7 16 -16z m-1260 -34 c0 -16 7 -20 31 -20
+  17 0 28 -4 24 -10 -3 -5 -17 -10 -31 -10 -25 0 -25 -1 -22 -77 3 -72 5 -78 26
+  -81 30 -5 28 -22 -3 -22 -34 0 -45 27 -45 109 0 56 -3 71 -15 71 -8 0 -15 5
+  -15 10 0 6 7 10 15 10 8 0 15 9 15 20 0 11 5 20 10 20 6 0 10 -9 10 -20z
+  m1005 -43 c17 -25 22 -182 5 -172 -5 3 -10 40 -10 80 0 67 -2 76 -24 90 -17
+  11 -30 13 -48 6 -33 -12 -38 -28 -38 -112 0 -39 -4 -69 -10 -69 -6 0 -10 40
+  -10 100 0 60 4 100 10 100 6 0 10 -5 10 -11 0 -8 4 -8 13 -1 31 25 80 20 102
+  -11z m-1125 14 c0 -6 -18 -9 -40 -8 -55 2 -85 -28 -85 -84 0 -54 32 -82 87
+  -77 39 4 51 -5 22 -16 -33 -13 -74 -5 -101 18 -24 21 -28 32 -28 76 0 67 33
+  100 101 100 24 0 44 -4 44 -9z m50 -91 c0 -60 -4 -100 -10 -100 -6 0 -10 40
+  -10 100 0 60 4 100 10 100 6 0 10 -40 10 -100z m195 20 c17 -43 33 -76 36 -72
+  3 4 16 36 29 72 24 66 36 88 45 79 5 -6 -54 -159 -86 -221 -19 -37 -55 -65
+  -67 -53 -4 4 1 11 11 17 10 5 27 23 37 40 18 30 18 30 -20 124 -25 60 -34 94
+  -26 94 6 0 25 -36 41 -80z m329 71 c4 -5 -15 -9 -41 -8 -57 0 -83 -26 -83 -84
+  0 -52 29 -81 78 -79 52 3 59 1 42 -10 -28 -18 -77 -11 -109 16 -27 22 -31 32
+  -31 74 0 65 34 100 96 100 23 0 45 -4 48 -9z m174 -14 c82 -88 -28 -230 -121
+  -157 -48 38 -44 130 7 165 32 23 89 19 114 -8z m72 -48 c0 -86 11 -109 50
+  -109 43 0 60 31 60 112 0 39 4 68 10 68 6 0 10 -41 10 -102 -1 -85 -3 -100
+  -13 -87 -11 15 -15 15 -32 3 -27 -20 -62 -17 -85 6 -17 17 -20 33 -20 100 0
+  47 4 80 10 80 6 0 10 -30 10 -71z m496 60 c5 -8 -2 -10 -22 -6 -84 16 -136
+  -70 -82 -138 19 -24 26 -27 65 -22 42 4 58 -5 27 -17 -37 -14 -76 -6 -105 23
+  -64 64 -20 171 70 171 22 0 43 -5 47 -11z m64 -83 c0 -53 -4 -98 -10 -101 -6
+  -4 -10 30 -10 94 0 61 4 101 10 101 6 0 10 -38 10 -94z m-1737 -8 c11 -15 22
+  -49 25 -77 l5 -51 -73 0 -73 0 6 56 c10 95 66 132 110 72z"/>
+  <path d="M1993 642 c-18 -11 -26 -58 -13 -81 22 -42 70 -19 70 34 0 45 -26 67
+  -57 47z"/>
+  <path d="M1083 580 c-26 -10 -29 -20 -11 -38 16 -16 48 3 48 28 0 22 -4 23
+  -37 10z"/>
+  <path d="M1627 643 c-15 -15 -5 -23 28 -23 26 0 33 3 29 15 -6 15 -45 21 -57
+  8z"/>
+  <path d="M1632 358 c-13 -7 -27 -27 -33 -49 -10 -32 -9 -42 8 -71 15 -26 26
+  -34 55 -36 30 -3 40 1 53 22 27 40 22 96 -10 123 -29 25 -39 27 -73 11z"/>
+  </g>
+  </svg>
+' %}
+{% block top %}
+  {% include '@components/components/general/Header/header.html.twig' with header_data %}
+{% endblock %}
 {% block content %}
   {% include '@components/components/fhrs/BusinessHero/businessHero.html.twig' with {
       welsh: false,
@@ -39,11 +855,11 @@
   {% include '@components/components/fhrs/LocalAuthority/localAuthority.html.twig' with {
       local_authority: 'Local Authority',
       name_title: 'Name',
-      name_content: 'Coventry City Council',
+      name_content: 'Canterbury City Council',
       website_title: 'Website',
-      website_url: 'www.coventry.gov.uk',
+      website_url: 'https://www.canterbury.gov.uk/',
       email_title: 'Email',
-      email_address: 'ehcommercial@coventry.gov.uk',
-      logo_svg: coventry_gov_logo,
+      email_address: 'customer.services@canterbury.gov.uk',
+      logo_svg: canterbury_gov_logo,
     } %}
 {% endblock %}

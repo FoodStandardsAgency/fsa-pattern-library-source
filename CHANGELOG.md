@@ -26,14 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-
-## [Upcoming release] - 1971-11-03
+## [Upcoming release template] - 1971-11-03
 
 ### Added
--
+- Added a fhrs variation to the header component
+- Added the fhrs header to the fhrs page
 
 ### Changed
--
+- 
 
 ### Deprecated
 -
@@ -42,10 +42,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fixed toggle problem on mobile header
+- Made 'home' link visible on mobile header
+- Set different IDs for inputs in multivalueField component.
+- Avoid using the same IDs in multifieldGroup component.
 
 ### Security
 -
+
+## [0.0.99] - 2022-04-25 (Minor changes on file upload component)
+
+### Changed
+- Made file upload widget title not clickable
+- Removed tab index from the hidden file input
+
+
+## [0.0.98] - 2022-04-22 (New file upload component, few fixes and IE11 performances)
+
+### Added
+- File upload widget.
+- Add a global variable to preview.js so that we know if JS is running in Storybook
+
+### Fixed
+- Fix slow loading speed on IE11
+- Fixed styles for frozen state of multifieldGroup component.
+- localGovernment component logo's horizontal overflowing.
+- Use two different logos for the two localGovernment components on the FHRS page.
+- Make businessHero component's hyperlinks underlined
 
 
 ## [0.0.97] - 2022-04-20 (Fix error handling for multifield group component)
@@ -86,8 +109,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.93] - 2022-04-12 (0.0.92 failed - re-releasing)
 
-### Changed
-- Dropdown: Duplicate value in data-value for react app
+
+## [0.0.92] - 2022-04-12 (0.0.91 failed - re-releasing)
+
 
 
 ## [0.0.91] - 2022-04-12 (Dropdown: Duplicate value in data-value for react app)

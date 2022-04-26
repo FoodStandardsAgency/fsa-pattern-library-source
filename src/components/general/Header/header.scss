@@ -70,6 +70,10 @@
     justify-content: flex-end;
   }
 
+  &__languages {
+    min-width: 10rem;
+  }
+
   &__languages,
   &__user_menu {
     text-align: right;
@@ -317,7 +321,7 @@
         display: flex;
         margin-left: 1.25rem;
         margin-top: 0;
-        width: 55%;
+        width: 65%;
         flex-grow: 1;
         padding: 0;
       }
