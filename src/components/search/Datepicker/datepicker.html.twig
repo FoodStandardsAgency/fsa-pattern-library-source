@@ -18,11 +18,6 @@
   'December',
 ] %}
 
-{% set years = [] %}
-{% for y in range(start_year ? start_year : 2000,'now'| date('Y')) %}
-  {% set years = years|merge([y]) %}
-{% endfor %}
-
 <div class="datepicker" data-type="{{ type }}">
   <div class="datepicker__label">
     {{ label }}
