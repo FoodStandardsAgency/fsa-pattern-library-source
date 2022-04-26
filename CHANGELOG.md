@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed toggle problem on mobile header
 - Made 'home' link visible on mobile header
 - Set different IDs for inputs in multivalueField component.
+- Avoid using the same IDs in multifieldGroup component.
 
 ### Security
 -

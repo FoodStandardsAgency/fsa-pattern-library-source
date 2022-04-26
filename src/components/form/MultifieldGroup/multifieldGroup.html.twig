@@ -11,7 +11,7 @@
         <a href="#">{{ remove_this }} {{ entity_name|lower }}</a>
       </div>
       <div class="multifield-group__form multifield-group__form--first-item">
-        {{ first_item_template }}
+        {{ first_item_template|replace({'id="': 'id="_', 'aria-describedby="': 'aria-describedby="_'}) }}
       </div>
       <div class="multifield-group__form multifield-group__form--other-items">
         {{ template }}
