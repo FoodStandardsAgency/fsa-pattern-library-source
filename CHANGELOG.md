@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added the fhrs header to the fhrs page
 
 ### Changed
-- 
+- Add dynamic years array rather than generating the list from the start_year
 
 ### Deprecated
 -
