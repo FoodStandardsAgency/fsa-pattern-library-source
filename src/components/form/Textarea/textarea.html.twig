@@ -1,5 +1,5 @@
 {% set spaceless_name = name|replace({" ": ""}) %}
-{% set desc_id = spaceless_name %}
+{% set desc_id = "label-" ~ spaceless_name %}
 {% set desc_is_defined = description is defined %}
 <div class="textarea{{ error ?  " textarea--error" : "" }}">
   <div class="{{ tooltip is defined ? "label-with-tooltip" : "" }}">

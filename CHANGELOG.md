@@ -26,27 +26,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-## [Upcoming release template] - 1971-11-03
+
+## [0.0.101] -2022-04-27 (Update on HACCP component)
+
+### Changed
+- Added "label_prefix" property for items of webToolProgressBar component.
+
+
+## [0.0.100] - 2022-04-26 (Various updates on PL, HACCP & FHRS components)
 
 ### Added
 - Added a fhrs variation to the header component
 - Added the fhrs header to the fhrs page
 
 ### Changed
-- 
-
-### Deprecated
--
-
-### Removed
--
+- Add dynamic years array rather than generating the list from the start_year
 
 ### Fixed
 - Fixed toggle problem on mobile header
 - Made 'home' link visible on mobile header
+- Set different IDs for inputs in multivalueField component.
+- Avoid using the same IDs in multifieldGroup component.
 
-### Security
--
 
 ## [0.0.99] - 2022-04-25 (Minor changes on file upload component)
 
