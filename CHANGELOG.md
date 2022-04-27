@@ -24,6 +24,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+
+
+## [Upcoming release template] - 1971-11-03
+
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+- Missing user links on HACCP header
+
+### Security
 -
 
 
