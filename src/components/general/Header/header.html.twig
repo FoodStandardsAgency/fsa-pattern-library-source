@@ -2,7 +2,7 @@
   <div class="header__grid-container">
     <div class="header__grid-row">
       <div class="header__wrapper">
-        {% if search_bar_visible or report_link is not empty or ratings_link is not empty %}
+        {% if search_bar_visible or report_link is not empty or ratings_link is not empty or user_menu_navigation.links is not empty %}
           <div class="header__top">
             {% if user_menu_navigation.links is not empty %}
               <nav class="header__user_menu header__user_menu--desktop header__nav" aria-label="User menu" aria-hidden="false">
@@ -80,7 +80,7 @@
                 </a>
               </div>
             {% endif %}
-            {% if not search_bar_visible and ratings_link is empty %}
+            {% if not search_bar_visible and ratings_link is empty and user_menu_navigation.links is empty %}
               <nav class="header__languages header__languages--desktop header__nav" aria-label="Language switcher" aria-hidden="false">
                 <ul class="header__languages-list">
                   <li class="header__language">
