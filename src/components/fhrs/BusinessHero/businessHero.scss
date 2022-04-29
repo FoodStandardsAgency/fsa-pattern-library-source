@@ -1,16 +1,5 @@
 @import "src/lib.scss";
-
-$ratings: 0, 1, 2, 3, 4, 5, exempt, inspection, publication, awaited;
-
-@each $rating in $ratings {
-  .business-hero__badge--#{$rating} {
-    background-image: url("./assets/english-badges/english-badge-#{$rating}.svg");
-  }
-
-  .business-hero__badge--#{$rating}.business-hero__badge--welsh {
-    background-image: url("./assets/bilingual-badges/bilingual-badge-#{$rating}.svg");
-  }
-}
+@include fhrs-badges("business-hero");
 
 .business-hero {
   margin-top: 3rem;

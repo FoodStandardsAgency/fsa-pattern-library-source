@@ -5,7 +5,19 @@ export default {
   title: 'Components/FHRS/Business Hero',
   argTypes: {
     rating: {
-      options: [0, 1, 2, 3, 4, 5, 'exempt', 'inspection', 'publication', 'awaited'],
+      options: [
+        '0',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        'Exempt',
+        'AwaitingInspection',
+        'AwaitingPublication',
+        'Pass',
+        '',
+      ],
       control: { type: 'select' },
     },
   },
@@ -29,7 +41,7 @@ English.args = {
   business_type_content: 'Restaurant/Cafe/Canteen',
   date_title: 'Date of inspection',
   date_content: '12 November 2021',
-  rating: 5,
+  rating: '5',
 };
 
 export const Welsh = Template.bind({});
@@ -48,5 +60,5 @@ Welsh.args = {
   business_type_content: 'Restaurant/Cafe/Canteen',
   date_title: 'Arolygiad diwethaf',
   date_content: '12 November 2021',
-  rating: 5,
+  rating: '5',
 };
