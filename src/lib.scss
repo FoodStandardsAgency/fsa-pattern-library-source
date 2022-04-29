@@ -793,3 +793,23 @@ $mobileGutter: 1rem;
     @include link;
   }
 }
+
+/* stylelint-disable value-keyword-case */
+@mixin fhrs-badges($base-class) {
+  $ratings: 0, 1, 2, 3, 4, 5, Exempt, AwaitingInspection, AwaitingPublication, Empty;
+
+  @each $rating in $ratings {
+    .#{$base-class}__badge--#{$rating} {
+      background-image: url("../badges/english-badges/english-badge-#{$rating}.svg");
+    }
+
+    .#{$base-class}__badge--#{$rating}.#{$base-class}__badge--welsh {
+      background-image: url("../badges/bilingual-badges/bilingual-badge-#{$rating}.svg");
+    }
+  }
+
+  .#{$base-class}__badge--Pass {
+    background-image: url("../badges/scottish-badges/scottish-badge-Pass.jpeg");
+  }
+}
+/* stylelint-enable value-keyword-case */
