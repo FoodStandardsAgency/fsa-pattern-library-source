@@ -25,6 +25,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [Upcoming release template] - 1971-11-03
+
+### Added
+- FHRS searchCard component
+- A Scss Mixin for FHRS badges
+
+### Changed
+- Split the FHRS page into FHRS Company page and FHRS Search page
+- Changed FHRS businessHero rating identifiers to comply with the API
+- Changed FHRS businessHero styling to use the new mixin
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+
 
 ## [0.1.0] -2022-04-29 (Fix for webToolProgressBar component)
 
