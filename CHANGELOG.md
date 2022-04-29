@@ -26,6 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 
+## [0.1.0] -2022-04-29 (Fix for webToolProgressBar component)
+
+### Fixed
+- Improved styles for ".sr-desktop" class in webToolProgressBar component.
+
+
 ## [0.0.102] - 2022-04-27 (Fixing HACCP header)
 
 ### Fixed
