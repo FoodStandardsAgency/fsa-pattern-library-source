@@ -1,0 +1,96 @@
+{% if welsh %}
+  {% set food_hygine_rating_is = "Sgôr hylendid bwyd yn " %}
+
+  {% if rating == "0" %}
+    {% set rating_text = "0: Angen gwella ar frys" %}
+  {% elseif rating == "1" %}
+    {% set rating_text = "1: Angen gwella yn sylweddol" %}
+  {% elseif rating == "2" %}
+    {% set rating_text = "2: Angen gewlla" %}
+  {% elseif rating == "3" %}
+    {% set rating_text = "3: Boddhaol ar y cyfan" %}
+  {% elseif rating == "4" %}
+    {% set rating_text = "4: Da" %}
+  {% elseif rating == "5" %}
+    {% set rating_text = "5: Da iawn" %}
+  {% elseif rating == "AwaitingInspection" %}
+    {% set rating_text = "aros am arolygiad" %}
+  {% elseif rating == "AwaitingPublication" %}
+    {% set rating_text = "i'w gyhoeddi'n fuan" %}
+  {% elseif rating == "Exempt" %}
+    {% set rating_text = "wedi'i eithrio" %}
+  {% elseif rating == "Pass" %}
+    {% set rating_text = "Cynllun Gwybodaeth Hylendid Bwyd: Canlyniad yr Arolygiad yw 'Pasio" %}
+  {% elseif rating is empty %}
+    {% set rating_text = "aros am sgôr" %}
+  {% endif %}
+
+{% else %}
+  {% set food_hygine_rating_is = "Food hygine rating is " %}
+
+  {% if rating == "0" %}
+    {% set rating_text = "0: Urgent improvement necessary" %}
+  {% elseif rating == "1" %}
+    {% set rating_text = "1: Major improvement necessary" %}
+  {% elseif rating == "2" %}
+    {% set rating_text = "2: Improvement necessary" %}
+  {% elseif rating == "3" %}
+    {% set rating_text = "3: Generally satisfactory" %}
+  {% elseif rating == "4" %}
+    {% set rating_text = "4: Good" %}
+  {% elseif rating == "5" %}
+    {% set rating_text = "5: Very good" %}
+  {% elseif rating == "AwaitingInspection" %}
+    {% set rating_text = "awaiting inspection" %}
+  {% elseif rating == "AwaitingPublication" %}
+    {% set rating_text = "awaiting publication" %}
+  {% elseif rating == "Exempt" %}
+    {% set rating_text = "exempt" %}
+  {% elseif rating == "Pass" %}
+    {% set rating_text = "Food Hygiene Information Scheme: Inspection result is 'Pass'" %}
+  {% elseif rating is empty %}
+    {% set rating_text = "rating awaited" %}
+  {% endif %}
+{% endif %}
+
+{% if rating == "Pass" %}
+  {% set alt_text = rating_text %}
+{% else %}
+  {% set alt_text = food_hygine_rating_is ~ rating_text %}
+{% endif %}
+
+<div class="fhrs-search-card">
+  <div class="fhrs-search-card__left">
+    <h2 class="fhrs-search-card__name">
+      <a href="{{ business_link }}">{{ business_name }}</a>
+    </h2>
+    <p class="fhrs-search-card__address">
+      {% if private %}
+        {{ private_address }}:<br>
+        {{ registered_with }}
+        {{ local_authority_name }}
+        {{ local_authority }}<br>
+        {{ post_code|split(" ")|first }}
+      {% else %}
+        {{ address|raw }}<br>
+        {{ post_code }}
+      {% endif %}
+    </p>
+    <p class="fhrs-search-card__last-inspected">{{ last_inspected }}:
+      {{ rating_date ? rating_date : "N/A" }}</p>
+    {% if business_appeal %}
+      <p class="fhrs-search-card__business-say">{{ business_say }}</p>
+    {% endif %}
+  </div>
+  <div class="fhrs-search-card__right">
+    <div class="fhrs-search-card__badge fhrs-search-card__badge--{{ rating is empty ? "Empty" : rating }}{{ welsh ? " fhrs-search-card__badge--welsh" : " "}}">
+      <span class="visually-hidden">{{ alt_text }}</span>
+    </div>
+    {% if business_appeal %}
+      <p class="fhrs-search-card__status">
+        <span class="fhrs-search-card__summary">{{ status_summary }}: </span>
+        {{ status_description }}
+      </p>
+    {% endif %}
+  </div>
+</div>
