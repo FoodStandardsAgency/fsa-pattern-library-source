@@ -16,36 +16,38 @@ Default.args = {
   template: ContentTemplate.bind({}),
   id: 'multi-steps',
   required: true,
-  items: [
-    {
-      values: {
-        step_number: '3',
-        step_name: 'Cooking chicken',
-        biological: ['salmonella'],
-        chemical: ['Bleach', 'Another chemical'],
-        physical: ['Hair'],
-        allergen: [],
-        delivery_method: 'sms',
-        notes: 'nothing',
-        frequency: 'daily',
+  items: encodeURIComponent(
+    JSON.stringify([
+      {
+        values: {
+          step_number: '3',
+          step_name: 'Cooking chicken',
+          biological: ['salmonella'],
+          chemical: ['Bleach', 'Another chemical'],
+          physical: ['Hair'],
+          allergen: [],
+          delivery_method: 'sms',
+          notes: 'nothing',
+          frequency: 'daily',
+        },
+        errors: ['chemical', 'allergen'],
       },
-      errors: ['chemical', 'allergen'],
-    },
-    {
-      values: {
-        step_number: '5',
-        step_name: 'Cooking fish',
-        biological: ['salmonella'],
-        chemical: ['Bleach', 'Another chemical'],
-        physical: ['Hair'],
-        allergen: [],
-        notes: '',
-        frequency: 'weekly',
+      {
+        values: {
+          step_number: '5',
+          step_name: 'Cooking fish',
+          biological: ['salmonella'],
+          chemical: ['Bleach', 'Another chemical'],
+          physical: ['Hair'],
+          allergen: [],
+          notes: '',
+          frequency: 'weekly',
+        },
+        errors: ['step_name', 'frequency'],
+        delivery_method: 'email',
       },
-      errors: ['step_name', 'frequency'],
-      delivery_method: 'email',
-    },
-  ],
+    ])
+  ),
   label: 'Enter the process step details',
   entity_name: 'Step',
   remove_this: 'Remove this',
@@ -57,30 +59,32 @@ FrozenSteps.args = {
   template: ContentTemplate.bind({}),
   id: 'multi-steps',
   frozen_steps: true,
-  items: [
-    {
-      values: {
-        step_number: '3',
-        step_name: 'Cooking chicken',
-        biological: ['salmonella'],
-        chemical: ['Bleach', 'Another chemical'],
-        physical: ['Hair'],
-        allergen: [],
+  items: encodeURIComponent(
+    JSON.stringify([
+      {
+        values: {
+          step_number: '3',
+          step_name: 'Cooking chicken',
+          biological: ['salmonella'],
+          chemical: ['Bleach', 'Another chemical'],
+          physical: ['Hair'],
+          allergen: [],
+        },
+        errors: ['chemical', 'allergen'],
       },
-      errors: ['chemical', 'allergen'],
-    },
-    {
-      values: {
-        step_number: '5',
-        step_name: 'Cooking fish',
-        biological: ['salmonella'],
-        chemical: ['Bleach', 'Another chemical'],
-        physical: ['Hair'],
-        allergen: [],
+      {
+        values: {
+          step_number: '5',
+          step_name: 'Cooking fish',
+          biological: ['salmonella'],
+          chemical: ['Bleach', 'Another chemical'],
+          physical: ['Hair'],
+          allergen: [],
+        },
+        errors: ['step_name'],
       },
-      errors: ['step_name'],
-    },
-  ],
+    ])
+  ),
   label: 'Enter the process step details',
   entity_name: 'Step',
   remove_this: 'Remove this',
@@ -93,34 +97,36 @@ AnotherTemplateForFirstItem.args = {
   first_item_template: FirstItemContentTemplate.bind({}),
   id: 'multi-steps',
   required: true,
-  items: [
-    {
-      values: {
-        step_number: '3',
-        step_name: 'Cooking chicken',
-        biological: ['salmonella'],
-        chemical: ['Bleach', 'Another chemical'],
-        physical: ['Hair'],
-        allergen: [],
-        delivery_method: 'sms',
-        notes: 'nothing',
+  items: encodeURIComponent(
+    JSON.stringify([
+      {
+        values: {
+          step_number: '3',
+          step_name: 'Cooking chicken',
+          biological: ['salmonella'],
+          chemical: ['Bleach', 'Another chemical'],
+          physical: ['Hair'],
+          allergen: [],
+          delivery_method: 'sms',
+          notes: 'nothing',
+        },
+        errors: ['chemical', 'allergen'],
       },
-      errors: ['chemical', 'allergen'],
-    },
-    {
-      values: {
-        step_number: '5',
-        step_name: 'Cooking fish',
-        biological: ['salmonella'],
-        chemical: ['Bleach', 'Another chemical'],
-        physical: ['Hair'],
-        allergen: [],
-        notes: '',
+      {
+        values: {
+          step_number: '5',
+          step_name: 'Cooking fish',
+          biological: ['salmonella'],
+          chemical: ['Bleach', 'Another chemical'],
+          physical: ['Hair'],
+          allergen: [],
+          notes: '',
+        },
+        errors: ['step_name'],
+        delivery_method: 'email',
       },
-      errors: ['step_name'],
-      delivery_method: 'email',
-    },
-  ],
+    ])
+  ),
   label: 'Enter the process step details',
   entity_name: 'Step',
   remove_this: 'Remove this',

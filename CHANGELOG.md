@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
--
+- Change a way to store data-items in multifieldGroup component.
 
 ### Deprecated
 -
