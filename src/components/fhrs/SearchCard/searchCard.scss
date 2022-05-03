@@ -3,14 +3,14 @@
 
 .fhrs-search-card {
   margin-top: 1.5rem;
-  padding: 0 0 2rem 1rem;
+  padding: 0 0 1.75rem 1rem;
   border-bottom: 0.25rem var(--fsa_border) solid;
 
   @media screen and (min-width: $fsa-md) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-left: 3rem;
+    padding: 0 0 1.5rem 3rem;
   }
 
   &__name {
