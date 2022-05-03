@@ -67,9 +67,6 @@ function handleTooltip(e) {
   const oneDesktopRem = 18;
   const borders = 4;
 
-  // Min width of a tooltip.
-  let minBodyWidth = 350;
-
   const tooltipWrapper = tooltip.closest('.label-with-tooltip');
 
   const parentWidth = tooltipWrapper ? tooltipWrapper.offsetWidth : tooltip.parentNode.offsetWidth;
@@ -77,6 +74,8 @@ function handleTooltip(e) {
   if (window.innerWidth < 1024) {
     body.style.width = `${parentWidth - oneMobileRem - borders}px`;
   } else {
+    const minBodyWidth = window.innerWidth < 1440 ? 200 : 350;
+
     body.style.maxWidth = `${Math.max(minBodyWidth, parentWidth - oneDesktopRem - borders)}px`;
   }
 
