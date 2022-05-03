@@ -74,7 +74,7 @@ function handleTooltip(e) {
   if (window.innerWidth < 1024) {
     body.style.width = `${parentWidth - oneMobileRem - borders}px`;
   } else {
-    const minBodyWidth = window.innerWidth < 1440 ? 200 : 350;
+    const minBodyWidth = window.innerWidth < 1440 ? 250 : 350;
 
     body.style.maxWidth = `${Math.max(minBodyWidth, parentWidth - oneDesktopRem - borders)}px`;
   }
