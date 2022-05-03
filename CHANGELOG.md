@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Split the FHRS page into FHRS Company page and FHRS Search page
 - Changed FHRS businessHero rating identifiers to comply with the API
 - Changed FHRS businessHero styling to use the new mixin
+- Changed FHRS businessHero divider from dots to a thin border
 
 ### Deprecated
 -
