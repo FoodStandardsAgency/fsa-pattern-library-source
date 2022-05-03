@@ -143,6 +143,11 @@ export function setLabelMappingForRadio(label) {
       description.setAttribute('id', `descr-${id}`);
       radio.closest('.radio').setAttribute('aria-describedby', `descr-${id}`);
     }
+
+    const legend = radio.closest('.radio').querySelector('.radio__legend');
+    if (legend) {
+      legend.setAttribute('id', `legend-${id}`);
+    }
   }
 }
 

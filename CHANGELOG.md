@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [Upcoming release template] - 1971-11-03
+## [Upcoming release] - 1971-11-03
 
 ### Added
 - FHRS searchCard component
@@ -44,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fix problems of radio inputs in multivalueField.
 
 ### Security
 
