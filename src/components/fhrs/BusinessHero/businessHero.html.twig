@@ -1,65 +1,14 @@
-{% if welsh %}
-  {% set food_hygine_rating_is = "Sgôr hylendid bwyd yn " %}
-
-  {% if rating == 0 %}
-    {% set rating_text = "0: Angen gwella ar frys" %}
-  {% elseif rating == 1 %}
-    {% set rating_text = "1: Angen gwella yn sylweddol" %}
-  {% elseif rating == 2 %}
-    {% set rating_text = "2: Angen gewlla" %}
-  {% elseif rating == 3 %}
-    {% set rating_text = "3: Boddhaol ar y cyfan" %}
-  {% elseif rating == 4 %}
-    {% set rating_text = "4: Da" %}
-  {% elseif rating == 5 %}
-    {% set rating_text = "5: Da iawn" %}
-  {% elseif rating == "inspection" %}
-    {% set rating_text = "aros am arolygiad" %}
-  {% elseif rating == "publication" %}
-    {% set rating_text = "i'w gyhoeddi'n fuan" %}
-  {% elseif rating == "exempt" %}
-    {% set rating_text = "wedi'i eithrio" %}
-  {% elseif rating == "awaited" %}
-    {% set rating_text = "aros am sgôr" %}
-  {% endif %}
-
-{% else %}
-  {% set food_hygine_rating_is = "Food hygine rating is " %}
-
-  {% if rating == 0 %}
-    {% set rating_text = "0: Urgent improvement necessary" %}
-  {% elseif rating == 1 %}
-    {% set rating_text = "1: Major improvement necessary" %}
-  {% elseif rating == 2 %}
-    {% set rating_text = "2: Improvement necessary" %}
-  {% elseif rating == 3 %}
-    {% set rating_text = "3: Generally satisfactory" %}
-  {% elseif rating == 4 %}
-    {% set rating_text = "4: Good" %}
-  {% elseif rating == 5 %}
-    {% set rating_text = "5: Very good" %}
-  {% elseif rating == "inspection" %}
-    {% set rating_text = "awaiting inspection" %}
-  {% elseif rating == "publication" %}
-    {% set rating_text = "awaiting publication" %}
-  {% elseif rating == "exempt" %}
-    {% set rating_text = "exempt" %}
-  {% elseif rating == "awaited" %}
-    {% set rating_text = "rating awaited" %}
-  {% endif %}
-{% endif %}
-
-{% set alt_text = food_hygine_rating_is ~ rating_text %}
-
 <div class="business-hero">
   <div class="business-hero__header">
     <h2 class="business-hero__title">{{ name }}</h2>
   </div>
   <div class="business-hero__content">
     <div class="business-hero__left">
-      <div class="business-hero__badge business-hero__badge--{{ rating }}{{ welsh ? " business-hero__badge--welsh" : ""}}">
-        <span class="visually-hidden">{{ alt_text }}</span>
-      </div>
+      {% include "@components/components/fhrs/Badge/badge.html.twig" with {
+        class_name: "business-hero",
+        rating: rating,
+        welsh: welsh,
+      } %}
       <a href="{{ back_link }}" class="business-hero__link business-hero__link--back">{{ back_to_search_results }}</a>
       <a href="{{ search_local_link }}" class="business-hero__link business-hero__link--forward">{{ search_this_local_authority_area }}</a>
       <a href="{{ search_all_link }}" class="business-hero__link business-hero__link--forward">{{ search_all_data }}</a>
