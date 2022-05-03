@@ -1,0 +1,64 @@
+{% if welsh %}
+  {% set food_hygine_rating_is = "Sgôr hylendid bwyd yn " %}
+
+  {% if rating == "0" %}
+    {% set rating_text = "0: Angen gwella ar frys" %}
+  {% elseif rating == "1" %}
+    {% set rating_text = "1: Angen gwella yn sylweddol" %}
+  {% elseif rating == "2" %}
+    {% set rating_text = "2: Angen gewlla" %}
+  {% elseif rating == "3" %}
+    {% set rating_text = "3: Boddhaol ar y cyfan" %}
+  {% elseif rating == "4" %}
+    {% set rating_text = "4: Da" %}
+  {% elseif rating == "5" %}
+    {% set rating_text = "5: Da iawn" %}
+  {% elseif rating == "AwaitingInspection" %}
+    {% set rating_text = "aros am arolygiad" %}
+  {% elseif rating == "AwaitingPublication" %}
+    {% set rating_text = "i'w gyhoeddi'n fuan" %}
+  {% elseif rating == "Exempt" %}
+    {% set rating_text = "wedi'i eithrio" %}
+  {% elseif rating == "Pass" %}
+    {% set rating_text = "Cynllun Gwybodaeth Hylendid Bwyd: Canlyniad yr Arolygiad yw 'Pasio" %}
+  {% elseif rating is empty %}
+    {% set rating_text = "aros am sgôr" %}
+  {% endif %}
+
+{% else %}
+  {% set food_hygine_rating_is = "Food hygine rating is " %}
+
+  {% if rating == "0" %}
+    {% set rating_text = "0: Urgent improvement necessary" %}
+  {% elseif rating == "1" %}
+    {% set rating_text = "1: Major improvement necessary" %}
+  {% elseif rating == "2" %}
+    {% set rating_text = "2: Improvement necessary" %}
+  {% elseif rating == "3" %}
+    {% set rating_text = "3: Generally satisfactory" %}
+  {% elseif rating == "4" %}
+    {% set rating_text = "4: Good" %}
+  {% elseif rating == "5" %}
+    {% set rating_text = "5: Very good" %}
+  {% elseif rating == "AwaitingInspection" %}
+    {% set rating_text = "awaiting inspection" %}
+  {% elseif rating == "AwaitingPublication" %}
+    {% set rating_text = "awaiting publication" %}
+  {% elseif rating == "Exempt" %}
+    {% set rating_text = "exempt" %}
+  {% elseif rating == "Pass" %}
+    {% set rating_text = "Food Hygiene Information Scheme: Inspection result is 'Pass'" %}
+  {% elseif rating is empty %}
+    {% set rating_text = "rating awaited" %}
+  {% endif %}
+{% endif %}
+
+{% if rating == "Pass" %}
+  {% set alt_text = rating_text %}
+{% else %}
+  {% set alt_text = food_hygine_rating_is ~ rating_text %}
+{% endif %}
+
+<div class="{{ class_name }}__badge {{ class_name }}__badge--{{ rating is empty ? "Empty" : rating }}{{ welsh ? " " ~ class_name ~ "__badge--welsh" : ""}}">
+  <span class="visually-hidden">{{ alt_text }}</span>
+</div>

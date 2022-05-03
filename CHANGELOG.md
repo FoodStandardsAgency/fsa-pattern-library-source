@@ -47,7 +47,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [0.0.101] -2022-04-27 (Update on HACCP component)
+## [0.1.1] - 2022-05-03 (New FHRS components and various fixes)
+
+### Added
+- FHRS searchCard component
+- FHRS badge twig template
+- A Scss Mixin for FHRS badges
+
+### Changed
+- Split the FHRS page into FHRS Company page and FHRS Search page
+- Changed FHRS businessHero rating identifiers to comply with the API
+- Changed FHRS businessHero styling to use the new mixin
+
+### Fixed
+- Fix problems of radio inputs in multivalueField.
+
+
+## [0.1.0] - 2022-04-29 (Fix for webToolProgressBar component)
+
+### Fixed
+- Improved styles for ".sr-desktop" class in webToolProgressBar component.
+
+
+## [0.0.102] - 2022-04-27 (Fixing HACCP header)
+
+### Fixed
+- Missing user links on HACCP header
+
+
+## [0.0.101] - 2022-04-27 (Update on HACCP component)
 
 ### Changed
 - Added "label_prefix" property for items of webToolProgressBar component.
