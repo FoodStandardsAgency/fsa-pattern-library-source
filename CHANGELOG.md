@@ -24,8 +24,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
 
-## [Upcoming release] - 1971-11-03
+
+## [0.1.1] - 2022-05-03 (New FHRS components and various fixes)
 
 ### Added
 - FHRS searchCard component
@@ -37,19 +39,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed FHRS businessHero rating identifiers to comply with the API
 - Changed FHRS businessHero styling to use the new mixin
 
-### Deprecated
--
-
-### Removed
--
-
 ### Fixed
 - Fix problems of radio inputs in multivalueField.
 
-### Security
 
-
-## [0.1.0] -2022-04-29 (Fix for webToolProgressBar component)
+## [0.1.0] - 2022-04-29 (Fix for webToolProgressBar component)
 
 ### Fixed
 - Improved styles for ".sr-desktop" class in webToolProgressBar component.
