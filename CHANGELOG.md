@@ -24,15 +24,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
--
 
-
-## [Upcoming release] - 1971-11-03
+## [Upcoming release template] - 1971-11-03
 
 ### Added
+- FHRS searchCard component
+- FHRS badge twig template
+- A Scss Mixin for FHRS badges
 
 ### Changed
--
+- Split the FHRS page into FHRS Company page and FHRS Search page
+- Changed FHRS businessHero rating identifiers to comply with the API
+- Changed FHRS businessHero styling to use the new mixin
 
 ### Deprecated
 -
@@ -41,13 +44,64 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
+-
+
+### Security
+
+
+## [0.1.0] -2022-04-29 (Fix for webToolProgressBar component)
+
+### Fixed
+- Improved styles for ".sr-desktop" class in webToolProgressBar component.
+
+
+## [0.0.102] - 2022-04-27 (Fixing HACCP header)
+
+### Fixed
+- Missing user links on HACCP header
+
+
+## [0.0.101] - 2022-04-27 (Update on HACCP component)
+
+### Changed
+- Added "label_prefix" property for items of webToolProgressBar component.
+
+
+## [0.0.100] - 2022-04-26 (Various updates on PL, HACCP & FHRS components)
+
+### Added
+- Added a fhrs variation to the header component
+- Added the fhrs header to the fhrs page
+
+### Changed
+- Add dynamic years array rather than generating the list from the start_year
+
+### Fixed
+- Fixed toggle problem on mobile header
+- Made 'home' link visible on mobile header
+- Set different IDs for inputs in multivalueField component.
+- Avoid using the same IDs in multifieldGroup component.
+
+
+## [0.0.99] - 2022-04-25 (Minor changes on file upload component)
+
+### Changed
+- Made file upload widget title not clickable
+- Removed tab index from the hidden file input
+
+
+## [0.0.98] - 2022-04-22 (New file upload component, few fixes and IE11 performances)
+
+### Added
+- File upload widget.
+- Add a global variable to preview.js so that we know if JS is running in Storybook
+
+### Fixed
+- Fix slow loading speed on IE11
 - Fixed styles for frozen state of multifieldGroup component.
 - localGovernment component logo's horizontal overflowing.
 - Use two different logos for the two localGovernment components on the FHRS page.
 - Make businessHero component's hyperlinks underlined
-
-### Security
--
 
 
 ## [0.0.97] - 2022-04-20 (Fix error handling for multifield group component)
@@ -88,8 +142,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.93] - 2022-04-12 (0.0.92 failed - re-releasing)
 
-### Changed
-- Dropdown: Duplicate value in data-value for react app
+
+## [0.0.92] - 2022-04-12 (0.0.91 failed - re-releasing)
+
 
 
 ## [0.0.91] - 2022-04-12 (Dropdown: Duplicate value in data-value for react app)

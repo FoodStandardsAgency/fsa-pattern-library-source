@@ -1,0 +1,37 @@
+<div class="fhrs-search-card">
+  <div class="fhrs-search-card__left">
+    <h2 class="fhrs-search-card__name">
+      <a href="{{ business_link }}">{{ business_name }}</a>
+    </h2>
+    <p class="fhrs-search-card__address">
+      {% if private %}
+        {{ private_address }}:<br>
+        {{ registered_with }}
+        {{ local_authority_name }}
+        {{ local_authority }}<br>
+        {{ post_code|split(" ")|first }}
+      {% else %}
+        {{ address|raw }}<br>
+        {{ post_code }}
+      {% endif %}
+    </p>
+    <p class="fhrs-search-card__last-inspected">{{ last_inspected }}:
+      {{ rating_date ? rating_date : "N/A" }}</p>
+    {% if business_appeal %}
+      <p class="fhrs-search-card__business-say">{{ business_say }}</p>
+    {% endif %}
+  </div>
+  <div class="fhrs-search-card__right">
+    {% include "@components/components/fhrs/Badge/badge.html.twig" with {
+        class_name: "fhrs-search-card",
+        rating: rating,
+        welsh: welsh,
+    } %}
+    {% if business_appeal %}
+      <p class="fhrs-search-card__status">
+        <span class="fhrs-search-card__summary">{{ status_summary }}: </span>
+        {{ status_description }}
+      </p>
+    {% endif %}
+  </div>
+</div>
