@@ -3,7 +3,7 @@
 {% set is_frozen_steps = frozen_steps is defined and frozen_steps %}
 {% set first_item_template = first_item_template is defined and first_item_template ? first_item_template : template %}
 
-<div class="multifield-group{{ is_required ? " multifield-group--required" : "" }}{{ is_frozen_steps ? " multifield-group--frozen-steps" : "" }}" id="{{ id }}" data-items='{{ items|json_encode() }}'>
+<div class="multifield-group{{ is_required ? " multifield-group--required" : "" }}{{ is_frozen_steps ? " multifield-group--frozen-steps" : "" }}" id="{{ id }}" data-items="{{ items }}">
   <div class="multifield-group__template">
     <div class="multifield-group__item">
       {{ is_label_defined ? "<h2>" ~ label ~ "</h2>" : "" }}

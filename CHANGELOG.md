@@ -27,6 +27,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [0.1.2] - 2022-05-04 (Fixing badge component and updating MultifieldGroup component)
+
+### Changed
+- Change a way to store data-items in multifieldGroup component.
+
+### Fixed
+- Include badge component into the build process.
+
+
 ## [0.1.1] - 2022-05-03 (New FHRS components and various fixes)
 
 ### Added
