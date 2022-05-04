@@ -139,3 +139,29 @@ multipleLinks.args = {
     },
   ],
 };
+
+export const FHRS = Template.bind({});
+FHRS.args = {
+  title: 'About food hygiene ratings',
+  description:
+    'The information on businesses is held on behalf of local authorities in England, Northern Ireland, Wales and Scotland. Any queries about individual businesses should be directed to the appropriate <a href="#">local authority</a>.',
+  description_link_url: '#',
+  description_link_label: 'Find out more about ratings',
+  cards: [
+    {
+      title: 'Download data',
+      description: 'Re-usable hygiene rating data',
+      promo_link: '#',
+    },
+    {
+      title: 'Food problems?',
+      description: 'Consumers, businesses and enforcers can report issues',
+      promo_link: '#',
+    },
+    {
+      title: 'Be updated',
+      description: 'Get email and text updates. Follow us',
+      promo_link: '#',
+    },
+  ],
+};
