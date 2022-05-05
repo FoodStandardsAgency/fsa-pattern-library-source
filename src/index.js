@@ -103,6 +103,7 @@ import webtoolProgressBar from './components/haccp/WebToolProgressBar/webToolPro
 import './components/fhrs/LocalAuthority/localAuthority';
 import './components/fhrs/BusinessHero/businessHero';
 import './components/fhrs/SearchCard/searchCard';
+import './components/fhrs/Badge/badge';
 
 /* HACCP components */
 import './components/haccp/SaveProgress/saveProgress';

@@ -38,6 +38,14 @@ export function dispatchMultigroupEvent(element) {
 function initGroup(group) {
   group.setAttribute('pl-listener-assigned', '1');
 
+  // Delete all IDs to avoid problems with accessibility.
+  const allInputs = group
+    .querySelector('.multifield-group__template')
+    .querySelectorAll('input, select, textarea');
+  for (const input of allInputs) {
+    input.removeAttribute('id');
+  }
+
   const button = group.querySelector('.multifield-group__add-item button');
   button.addEventListener('click', function (e) {
     const groupId = addGroup(e.target);
@@ -50,7 +58,7 @@ function initGroup(group) {
       .focus();
   });
 
-  const parsedValues = JSON.parse(group.getAttribute('data-items'));
+  const parsedValues = JSON.parse(decodeURIComponent(group.getAttribute('data-items')));
   const values = Array.isArray(parsedValues) ? parsedValues : [];
 
   for (const value of values) {
@@ -60,7 +68,7 @@ function initGroup(group) {
   dispatchMultigroupEvent(group);
 
   group.addEventListener('updateErrors', function (e) {
-    const dataItems = JSON.parse(e.target.getAttribute('data-items'));
+    const dataItems = JSON.parse(decodeURIComponent(e.target.getAttribute('data-items')));
 
     if (!dataItems) {
       return;
