@@ -26,6 +26,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+- Delete all id attributes for all inputs in multifieldGroup component to avoid problems with accessibility.
+
+### Security
+-
+
 
 ## [0.1.2] - 2022-05-04 (Fixing badge component and updating MultifieldGroup component)
 
