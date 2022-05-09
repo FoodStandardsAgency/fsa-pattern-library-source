@@ -773,6 +773,10 @@ $mobileGutter: 1rem;
     @include table;
   }
 
+  > * {
+    max-width: 100%;
+  }
+
   > p,
   > h1,
   > h2,
