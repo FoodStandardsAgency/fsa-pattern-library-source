@@ -26,31 +26,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
-## [Upcoming release] - 1971-11-03
 
-### Added
--
-
-### Changed
--
-
-### Deprecated
--
-
-### Removed
--
+## [0.1.6] - 2022-05-09 (Ignore p tag in list)
 
 ### Fixed
 - If there's a `<p>` tag in a list, ignore it and display its contents
 
-### Security
--
 
-
-## [0.1.5] -2022-05-09 (Fix max-width images in content layout)
+## [0.1.5] - 2022-05-09 (Fix max-width images in content layout)
 
 ### Fixed
 - Fixing max width of elements in content-layout-right (mainly for images)
+
 
 ## [0.1.4] -2022-05-09 (Fix max-width images in content layout)
 
