@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - If there's a `<p>` tag in a list, ignore it and display its contents
+- ignore any direct child tag (except a) in a list and display its contents
 
 ### Security
 -
