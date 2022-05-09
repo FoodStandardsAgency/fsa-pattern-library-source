@@ -133,6 +133,11 @@
   }
 
   &__title-link {
+    color: var(--fsa-primary_black);
+    text-decoration: none;
+    &:hover {
+      color: var(--fsa-primary_black);
+    }
     &:focus {
       outline: none;
       background-color: var(--fsa-tertiary_light-yellow);

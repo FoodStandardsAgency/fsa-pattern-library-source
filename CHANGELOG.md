@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - If there's a `<p>` tag in a list, ignore it and display its contents
+- Inconsistent (internal and external) link style in PromoGroup and serviceLinks components
 
 ### Security
 -
