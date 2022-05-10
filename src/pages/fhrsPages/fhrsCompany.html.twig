@@ -862,4 +862,10 @@
       email_address: 'customer.services@canterbury.gov.uk',
       logo_svg: canterbury_gov_logo,
     } %}
+  {% include '@components/components/article/ExplanationBlock/explanationBlock.html.twig' with {
+    type: 'general',
+    wysiwyg_content: '<h3>Display this rating on your website</h3><p>You can display this rating on your website.</p>',
+    link_text: 'Get digital FHRS images for your  business',
+    link_url: '#',
+  } %}
 {% endblock %}

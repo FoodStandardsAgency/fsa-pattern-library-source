@@ -24,6 +24,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+
+
+## [Upcoming release template] - 1971-11-03
+
+### Added
+- Add display rating variations to the explanationBlock component
+- Add a displayRating to the FHRS company page
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
 -
 
 
