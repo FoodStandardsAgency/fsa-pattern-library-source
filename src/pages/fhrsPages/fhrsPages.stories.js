@@ -1,5 +1,6 @@
 import fhrsCompany from './fhrsCompany.html.twig';
 import fhrsSearch from './fhrsSearch.html.twig';
+import fhrsHome from './fhrsHome.html.twig';
 
 export default {
   title: 'Pages/FHRS',
@@ -9,6 +10,10 @@ export default {
     },
     layout: 'fullscreen',
   },
+};
+
+export const FHRSHome = () => {
+  return fhrsHome();
 };
 
 export const FHRSCompany = () => {

@@ -26,6 +26,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+## [Upcoming release template] - 1971-11-03
+
+### Added
+- A FHRS home page.
+- A FHRS version of the promoGroup component. Added this to the FHRS home page.
+- A titleAndDescription component shared between latestTeaser and promoGroup.
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
 
 ## [0.1.6] - 2022-05-09 (Ignore p tag in list)
 
