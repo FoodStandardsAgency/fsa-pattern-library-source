@@ -118,6 +118,7 @@
     cursor: pointer;
     background-color: var(--fsa-primary_white);
     position: relative;
+    text-decoration: none;
 
     &::before {
       content: "";
