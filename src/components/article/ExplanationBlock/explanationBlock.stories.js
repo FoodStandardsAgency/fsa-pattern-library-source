@@ -115,7 +115,8 @@ LegalAdvice.args = {
 export const EnglishDisplayRating = (args) => explanationBlock(args);
 EnglishDisplayRating.args = {
   type: 'general',
-  wysiwyg_content: '<h3>Display this rating on your website</h3><p>You can display this rating on your website.</p>',
+  wysiwyg_content:
+    '<h3>Display this rating on your website</h3><p>You can display this rating on your website.</p>',
   link_text: 'Get digital FHRS images for your  business',
   link_url: '#',
 };
@@ -123,7 +124,8 @@ EnglishDisplayRating.args = {
 export const ScottishDisplayRating = (args) => explanationBlock(args);
 ScottishDisplayRating.args = {
   type: 'general',
-  wysiwyg_content: '<h3>Display this rating on your website</h3><p>You can display this rating on your website.</p>',
+  wysiwyg_content:
+    '<h3>Display this rating on your website</h3><p>You can display this rating on your website.</p>',
   link_text: 'Get digital FHIS images for your business',
   link_url: '#',
 };
