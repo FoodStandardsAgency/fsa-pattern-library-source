@@ -566,6 +566,10 @@ $mobileGutter: 1rem;
       display: inline-block;
       margin-left: -1.5rem;
     }
+
+    p {
+      display: contents;
+    }
   }
 
   @if $list-type == ul {
@@ -767,6 +771,10 @@ $mobileGutter: 1rem;
 
   table {
     @include table;
+  }
+
+  > * {
+    max-width: 100%;
   }
 
   > p,

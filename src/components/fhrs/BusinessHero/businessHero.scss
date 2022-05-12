@@ -9,17 +9,8 @@
 
     color: var(--fsa-primary_dark-green);
     margin: 0;
-
-    &::after {
-      content: "";
-      background-image: url("./assets/dot.svg");
-      background-repeat: space;
-      background-size: 1.6rem 0.6rem;
-      width: 100%;
-      display: block;
-      height: 0.6rem;
-      margin-top: 0.5rem;
-    }
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--fsa__grey-hover);
   }
 
   &__content {

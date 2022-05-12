@@ -47,6 +47,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+## [Upcoming release template] - 1971-11-03
+
+### Added
+- A FHRS home page.
+- A FHRS version of the promoGroup component. Added this to the FHRS home page.
+- A titleAndDescription component shared between latestTeaser and promoGroup.
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+## [0.1.6] - 2022-05-09 (Ignore p tag in list)
+
+### Fixed
+- If there's a `<p>` tag in a list, ignore it and display its contents
+- Inconsistent (internal and external) link style in PromoGroup and serviceLinks components
+
+
+## [0.1.5] - 2022-05-09 (Fix max-width images in content layout)
+
+### Fixed
+- Fixing max width of elements in content-layout-right (mainly for images)
+
+
+## [0.1.4] -2022-05-09 (Fix max-width images in content layout)
+
+### Fixed
+- Fixing max width of elements in content-layout-right (mainly for images)
+
 
 ## [0.1.3] - 2022-05-05 (Fix HACCP element)
 
@@ -74,6 +114,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Split the FHRS page into FHRS Company page and FHRS Search page
 - Changed FHRS businessHero rating identifiers to comply with the API
 - Changed FHRS businessHero styling to use the new mixin
+- Changed FHRS businessHero divider from dots to a thin border
 
 ### Fixed
 - Fix problems of radio inputs in multivalueField.
