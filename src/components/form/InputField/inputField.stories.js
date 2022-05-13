@@ -150,7 +150,7 @@ Disabled.args = {
   error_message: 'Unrecognized username or password',
   value: 'test@example.com',
   type: 'email',
-  disabled : true,
+  disabled: true,
 };
 
 export const ReadOnly = Template.bind({});
@@ -164,5 +164,5 @@ ReadOnly.args = {
   error_message: 'Unrecognized username or password',
   value: 'test@example.com',
   type: 'email',
-  read_only : true,
+  read_only: true,
 };
