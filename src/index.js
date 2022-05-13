@@ -68,6 +68,7 @@ import './components/landing/ServiceLinks/serviceLinks';
 import './components/landing/CampaignBlock/campaignBlock';
 import './components/landing/LandingText/landingText';
 import './components/landing/LandingTitle/landingTitle';
+import './components/landing/TitleAndDescription/titleAndDescription';
 
 /* Contact Components */
 import './components/contact/HelpSecondaryMenu/helpSecondaryMenu';

@@ -1,0 +1,17 @@
+<div class="title-and-description__text-row">
+  <div class="title-and-description__text-wrapper">
+    {% if title %}
+      <h2 class="title-and-description__title">{{ title }}</h2>
+    {% endif %}
+    {% if description %}
+      <div class="title-and-description__description">
+        <p>{{ description|raw }}</p>
+      </div>
+    {% endif %}
+    {% if link_label and link_url %}
+      <div class="title-and-description__link-wrapper">
+        <a href="{{ link_url }}" class="title-and-description__link">{{ link_label }}</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
