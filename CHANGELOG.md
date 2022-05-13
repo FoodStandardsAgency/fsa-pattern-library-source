@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add display rating variations to the explanationBlock component
 - Add a displayRating to the FHRS company page
+- Add WelshBusinessRatingAwaited story to searchCard component
 
 ### Changed
 -
