@@ -3,6 +3,11 @@
 .textarea {
   margin-top: 2rem;
 
+  &--disabled {
+    filter: greyscale();
+    opacity: 50%;
+  }
+
   &__label {
     @include h5;
 

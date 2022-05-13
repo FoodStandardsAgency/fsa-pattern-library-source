@@ -59,3 +59,15 @@ WithCharacterLimit.args = {
   max_length_suffix: 'characters remaining.',
   max_length: 200,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  ...Normal.args,
+  disabled: true,
+};
+
+export const ReadOnly = Template.bind({});
+ReadOnly.args = {
+  ...Normal.args,
+  read_only: true,
+};

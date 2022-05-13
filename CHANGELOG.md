@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update textarea and input form field types to add character limits
+- Update textarea and input form field types to allow disabled and readonly settings
 
 ### Deprecated
 -
