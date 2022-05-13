@@ -1,6 +1,7 @@
 import fhrsCompany from './fhrsCompany.html.twig';
 import fhrsSearch from './fhrsSearch.html.twig';
 import fhrsHome from './fhrsHome.html.twig';
+import fhrsCompanyDigitalBadge from './fhrsCompanyDigitalBadge.html.twig';
 
 export default {
   title: 'Pages/FHRS',
@@ -22,4 +23,8 @@ export const FHRSCompany = () => {
 
 export const FHRSSearch = () => {
   return fhrsSearch();
+};
+
+export const FHRSCompanyDigitalBadge = () => {
+  return fhrsCompanyDigitalBadge();
 };
