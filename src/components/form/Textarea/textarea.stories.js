@@ -51,3 +51,11 @@ WithTooltip.args = {
     message: Normal.args.description,
   },
 };
+
+export const WithCharacterLimit = Template.bind({});
+WithCharacterLimit.args = {
+  ...Normal.args,
+  max_length_prefix: 'You have',
+  max_length_suffix: 'characters remaining.',
+  max_length: 200,
+};

@@ -125,3 +125,17 @@ WithTooltip.args = {
     <p>Most prerequisites are general in nature and their purpose is to ensure the Sed a</p>`,
   },
 };
+
+export const WithCharacterLimit = Template.bind({});
+WithCharacterLimit.args = {
+  id: 'product-name',
+  name: 'product-name',
+  label: 'Name of the product',
+  required: '',
+  error: false,
+  value: '',
+  type: 'text',
+  max_length_prefix: 'You have',
+  max_length_suffix: 'characters remaining.',
+  max_length: 40,
+};

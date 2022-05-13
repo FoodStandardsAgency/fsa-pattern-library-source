@@ -82,4 +82,11 @@
   &__error-message {
     margin-top: 0.5rem;
   }
+
+  &__character-limit {
+    @include small;
+
+    color: var(--fsa-primary_dark-grey);
+    margin-top: 0.5rem;
+  }
 }
