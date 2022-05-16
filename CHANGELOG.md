@@ -24,6 +24,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
+
+
+## [0.1.8] -  2022-05-16 (Updating input and text fields to have char limit and disabled/readonly features)
+
+
+### Changed
+- Update textarea and input form field types to add character limits
+- Update textarea and input form field types to allow disabled and readonly settings
 
 
 ## [0.1.7] -  2022-05-16 (FHRS components, fixes and new features)
@@ -43,8 +52,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add text styling to description text in "TitleAndText component"
 
 ### Fixed
-- ignore any direct child tag (except a) in a list and display its contents
-- Inconsistent (internal and external) link style in PromoGroup and serviceLinks components
+- Fix issue with invalid json in conditionals
+- Fix issue where dropdown id was being set with extra "" and causing JS error
 
 
 ## [0.1.6] - 2022-05-09 (Ignore p tag in list)
