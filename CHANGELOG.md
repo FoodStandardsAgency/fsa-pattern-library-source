@@ -73,11 +73,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+- ignore any direct child tag (except a) in a list and display its contents
+- Inconsistent (internal and external) link style in PromoGroup and serviceLinks components
+
+### Security
+-
+
+
 ## [0.1.6] - 2022-05-09 (Ignore p tag in list)
 
 ### Fixed
 - If there's a `<p>` tag in a list, ignore it and display its contents
-- Inconsistent (internal and external) link style in PromoGroup and serviceLinks components
 
 
 ## [0.1.5] - 2022-05-09 (Fix max-width images in content layout)
