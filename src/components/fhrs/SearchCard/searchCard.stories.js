@@ -39,10 +39,15 @@ English.args = {
   rating: '5',
 };
 
-export const Welsh = Template.bind({});
-Welsh.args = {
+export const WelshBusiness = Template.bind({});
+WelshBusiness.args = {
   ...English.args,
   welsh: true,
+};
+
+export const WelshPage = Template.bind({});
+WelshPage.args = {
+  ...WelshBusiness.args,
   last_inspected: 'Arolygiad diwethaf',
   rating_date: '16 Mawrth 2021',
 };
@@ -68,15 +73,27 @@ export const BusinessAppeal = Template.bind({});
 BusinessAppeal.args = {
   ...English.args,
   business_appeal: true,
-  business_say: 'What the business say',
+  business_say: 'What the business says',
   status_summary: 'Recently inspected',
   status_description: 'New rating to be published soon',
   rating: '1',
 };
 
-export const AwaitingInspection = Template.bind({});
-AwaitingInspection.args = {
+export const EnglishBusinessAwaitingInspection = Template.bind({});
+EnglishBusinessAwaitingInspection.args = {
   ...English.args,
   rating: 'AwaitingInspection',
   rating_date: '',
+};
+
+export const WelshBusinessAwaitingInspection = Template.bind({});
+WelshBusinessAwaitingInspection.args = {
+  ...EnglishBusinessAwaitingInspection.args,
+  welsh: true,
+};
+
+export const WelshBusinessRatingAwaited = Template.bind({});
+WelshBusinessRatingAwaited.args = {
+  ...WelshBusinessAwaitingInspection.args,
+  rating: '',
 };

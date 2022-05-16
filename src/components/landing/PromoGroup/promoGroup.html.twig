@@ -1,10 +1,17 @@
 <div class="promo-group">
-  <h2 class="promo-group__main-heading">{{ title }}</h2>
   <div class="promo-group__grid-container">
+    {% if title or description or description_link_label %}
+      {% include "@components/components/landing/TitleAndDescription/titleAndDescription.html.twig" with {
+        title: title,
+        description: description,
+        link_url: description_link_url,
+        link_label: description_link_label,
+      } %}
+    {% endif %}
     <div class="promo-group__grid-row">
       {% for card in cards %}
-        <div class="promo-group__card-wrapper">
-          <div class="promo-group__card {{ card.promo_link is defined ? "promo-group__card--one-link" : "promo-group__card--multiple-links" }}">
+        <div class="promo-group__card-wrapper{{title or description or description_link_label ? "" : " promo-group__card-wrapper--card-only"}}">
+          <div class="promo-group__card{{ card.promo_link is defined ? " promo-group__card--one-link" : " promo-group__card--multiple-links" }}">
             {% if card.image %}
               <div class="promo-group__background" style="background-image: url('{{ card.image }}')"></div>
             {% endif %}

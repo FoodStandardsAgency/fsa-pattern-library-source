@@ -1,5 +1,3 @@
-{% extends '@components/layout/fhrsLayout/fhrsLayout.html.twig' %}
-
 {% set header_data = {
   english: true,
   english_link: '#',
@@ -736,36 +734,28 @@
 }
 %}
 
-{% block top %}
-  {% include '@components/components/general/Header/header.html.twig' with header_data %}
-{% endblock %}
-
-{% block content %}
-  {% include '@components/components/fhrs/SearchCard/searchCard.html.twig' with {
-    welsh: false,
-    business_name: "Canterbury's Delicatessen & Sandwich Bar",
-    business_link: '#',
-    private: false,
-    address: 'Canterburys Delicatessen<br>4A Main Street<br>Keyworth<br>Nottinghamshire',
-    post_code: 'NG12 5AD',
-    last_inspected: 'Last inspected',
-    rating_date: '3 December 2018',
-    business_appeal: true,
-    rating: '4',
-    business_say: 'What the business says',
-    status_summary: 'Recently inspected',
-    status_description: 'New rating to be published soon',
-  } %}
-  {% include '@components/components/fhrs/SearchCard/searchCard.html.twig' with {
-    welsh: false,
-    business_name: "Nandos",
-    business_link: '#',
-    private: false,
-    address: '225-227 Clink Street London',
-    post_code: 'SE1 9GD',
-    last_inspected: 'Last inspected',
-    rating_date: '3 December 2018',
-    business_appeal: false,
-    rating: '5',
-  } %}
-{% endblock %}
+{% include '@components/components/general/Header/header.html.twig' with header_data %}
+{% include '@components/components/landing/PromoGroup/promoGroup.html.twig' with {
+  title: 'About food food hygiene ratings',
+  description:
+    'The information on businesses is held on behalf of local authorities in England, Northern Ireland, Wales and Scotland. Any queries about individual businesses should be directed to the appropriate <a href="#">local authority</a>.',
+  description_link_url: '#',
+  description_link_label: 'Find out more about ratings',
+  cards: [
+    {
+      title: 'Download data',
+      description: 'Re-usable hygiene rating data',
+      promo_link: '#',
+    },
+    {
+      title: 'Food problems?',
+      description: 'Consumers, businesses and enforcers can report issues',
+      promo_link: '#',
+    },
+    {
+      title: 'Be updated',
+      description: 'Get email and text updates. Follow us',
+      promo_link: '#',
+    },
+  ],
+} %}

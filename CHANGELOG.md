@@ -24,7 +24,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
--
+
+
+## [0.1.7] -  2022-05-16 (FHRS components, fixes and new features)
+
+### Added
+- Add display rating variations to the explanationBlock component
+- Add a displayRating to the FHRS company page
+- Add a legacy badge story to textAndTitle component
+- Add a fhrsCompanyDigitalBadge page that include businessHero and the legacyBadge component
+- Add WelshBusinessRatingAwaited story to searchCard component
+- A FHRS home page.
+- A FHRS version of the promoGroup component. Added this to the FHRS home page.
+- A titleAndDescription component shared between latestTeaser and promoGroup.
+
+### Changed
+- Remove underline and color from external links in promo-group component
+- Add text styling to description text in "TitleAndText component"
+
+### Fixed
+- ignore any direct child tag (except a) in a list and display its contents
+- Inconsistent (internal and external) link style in PromoGroup and serviceLinks components
 
 
 ## [0.1.6] - 2022-05-09 (Ignore p tag in list)
@@ -71,6 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Split the FHRS page into FHRS Company page and FHRS Search page
 - Changed FHRS businessHero rating identifiers to comply with the API
 - Changed FHRS businessHero styling to use the new mixin
+- Changed FHRS businessHero divider from dots to a thin border
 
 ### Fixed
 - Fix problems of radio inputs in multivalueField.
