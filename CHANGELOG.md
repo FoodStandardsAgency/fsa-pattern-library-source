@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 
-## [Upcoming release template] - 1971-11-03
+## [0.1.7] -  2022-05-16 (FHRS components, fixes and new features)
 
 ### Added
 - Add display rating variations to the explanationBlock component
@@ -34,65 +34,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a legacy badge story to textAndTitle component
 - Add a fhrsCompanyDigitalBadge page that include businessHero and the legacyBadge component
 - Add WelshBusinessRatingAwaited story to searchCard component
-
-### Changed
-- Remove underline and color from external links in promo-group component
-- Add text styling to description text in "TitleAndText component"
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
-
-## [Upcoming release template] - 1971-11-03
-
-### Added
 - A FHRS home page.
 - A FHRS version of the promoGroup component. Added this to the FHRS home page.
 - A titleAndDescription component shared between latestTeaser and promoGroup.
 
 ### Changed
--
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
-
-## [Upcoming release] - 1971-11-03
-
-### Added
--
-
-### Changed
--
-
-### Deprecated
--
-
-### Removed
--
+- Remove underline and color from external links in promo-group component
+- Add text styling to description text in "TitleAndText component"
 
 ### Fixed
 - ignore any direct child tag (except a) in a list and display its contents
 - Inconsistent (internal and external) link style in PromoGroup and serviceLinks components
-
-### Security
--
 
 
 ## [0.1.6] - 2022-05-09 (Ignore p tag in list)
