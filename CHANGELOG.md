@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a displayRating to the FHRS company page
 
 ### Changed
--
+- Remove underline and color from external links in promo-group component
 
 ### Deprecated
 -
