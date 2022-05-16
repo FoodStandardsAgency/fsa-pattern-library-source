@@ -24,9 +24,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
 
 
 ## [Upcoming release template] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- Update textarea and input form field types to add character limits
+- Update textarea and input form field types to allow disabled and readonly settings
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
+## [0.1.7] -  2022-05-16 (FHRS components, fixes and new features)
 
 ### Added
 - Add display rating variations to the explanationBlock component
@@ -41,21 +64,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Remove underline and color from external links in promo-group component
 - Add text styling to description text in "TitleAndText component"
-- Update textarea and input form field types to add character limits
-- Update textarea and input form field types to allow disabled and readonly settings
-
-### Deprecated
--
-
-### Removed
--
 
 ### Fixed
 - Fix issue with invalid json in conditionals
 - Fix issue where dropdown id was being set with extra "" and causing JS error
-
-### Security
--
 
 
 ## [0.1.6] - 2022-05-09 (Ignore p tag in list)
