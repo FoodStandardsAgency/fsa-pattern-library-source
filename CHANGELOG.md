@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Remove underline and color from external links in promo-group component
+- Add text styling to description text in "TitleAndText component"
 
 ### Deprecated
 -
