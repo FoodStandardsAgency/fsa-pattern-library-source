@@ -43,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fix issue with invalid json in conditionals
+- Fix issue where dropdown id was being set with extra "" and causing JS error
 
 ### Security
 -
