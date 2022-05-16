@@ -9,6 +9,12 @@ h3.form-title {
   @include h5;
 }
 
+h3.legacy-badge-title {
+  @include h3;
+
+  margin: 3rem 0 0;
+}
+
 .form-description {
   @include body;
 

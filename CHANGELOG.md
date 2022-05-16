@@ -31,8 +31,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add display rating variations to the explanationBlock component
 - Add a displayRating to the FHRS company page
+- Add a legacy badge story to textAndTitle component
+- Add a fhrsCompanyDigitalBadge page that include businessHero and the legacyBadge component
+- Add WelshBusinessRatingAwaited story to searchCard component
 
 ### Changed
+- Remove underline and color from external links in promo-group component
 - Update textarea and input form field types to add character limits
 - Update textarea and input form field types to allow disabled and readonly settings
 
