@@ -36,7 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add WelshBusinessRatingAwaited story to searchCard component
 
 ### Changed
--
+- Remove underline and color from external links in promo-group component
 
 ### Deprecated
 -
