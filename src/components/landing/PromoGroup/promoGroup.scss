@@ -3,22 +3,11 @@
 .promo-group {
   @include landing-margin-top;
 
-  &__main-heading {
-    @include h2;
+  .title-and-description__link {
+    text-decoration: none;
 
-    color: var(--fsa-primary_black);
-    text-align: center;
-    margin: 0;
-
-    &::after {
-      content: "";
-      background-image: url("./assets/dot.svg");
-      background-repeat: repeat-x;
-      background-size: 1.5rem 0.5rem;
-      width: 13rem;
-      height: 0.5rem;
-      display: block;
-      margin: 0.5rem auto 0;
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -53,6 +42,24 @@
       @include grid-cols(4);
 
       padding: 0 1rem;
+    }
+
+    &--card-only {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @media screen and (min-width: $fsa-lg) {
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+      }
+
+      @media screen and (min-width: $fsa-xl) {
+        &:nth-child(3) {
+          margin-top: 0;
+        }
+      }
     }
   }
 
@@ -132,7 +139,15 @@
     }
   }
 
-  &__title-link {
+  &__title-link,
+  &__title-link.external-link {
+    color: var(--fsa-primary_black);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--fsa-primary_black);
+    }
+
     &:focus {
       outline: none;
       background-color: var(--fsa-tertiary_light-yellow);
@@ -186,7 +201,8 @@
     }
   }
 
-  &__list-link {
+  &__list-link,
+  &__list-link.external-link {
     @include body;
 
     margin-left: 2.25rem;

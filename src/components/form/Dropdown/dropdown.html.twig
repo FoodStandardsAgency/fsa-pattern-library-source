@@ -1,6 +1,6 @@
 {% set spaceless_name = name|replace({" ": ""})|lower %}
 {% set id = spaceless_name %}
-<div {{ fieldset_id is defined ? 'id="' ~ fieldset_id ~ '"' : ""}} class="dropdown{{ error ? " dropdown--error" : "" }}{{ classes ? ' ' ~ classes : ''}}" aria-describedby="{{ description is defined ? id : "" }}">
+<div {{ fieldset_id is defined ? 'id=' ~ fieldset_id : ""}} class="dropdown{{ error ? " dropdown--error" : "" }}{{ classes ? ' ' ~ classes : ''}}" aria-describedby="{{ description is defined ? id : "" }}">
   {% if title is defined %}
     <div class="{{ tooltip is defined ? "label-with-tooltip" : "" }}">
       <label for="{{ id }}" class="dropdown__label">

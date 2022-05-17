@@ -1,23 +1,12 @@
 <div class="latest-teaser">
   <div class="latest-teaser__container">
-    {% if title or description or teaser_link %}
-    <div class="latest-teaser__text-row">
-      <div class="latest-teaser__text-wrapper">
-        {% if title %}
-          <h2 class="latest-teaser__title">{{ title }}</h2>
-        {% endif %}
-        {% if description %}
-          <div class="latest-teaser__description">
-            <p>{{ description|raw }}</p>
-          </div>
-        {% endif %}
-        {% if teaser_link_url and teaser_link_title %}
-          <div class="latest-teaser__link-wrapper">
-            <a href="{{ teaser_link_url }}" class="latest-teaser__link">{{ teaser_link_title }}</a>
-          </div>
-        {% endif %}
-      </div>
-    </div>
+    {% if title or description or teaser_link_label %}
+      {% include "@components/components/landing/TitleAndDescription/titleAndDescription.html.twig" with {
+        title: title,
+        description: description,
+        link_url: teaser_link_url,
+        link_label: teaser_link_title,
+      } %}
     {% endif %}
 
     <div class="latest-teaser__cards-row">
@@ -37,7 +26,7 @@
     {% if prev_button_label %}
       <div class="latest-teaser__button-wrapper">
         <a href="{{ button_url }}" class="button button--primary">
-        {{ prev_button_label }}
+          {{ prev_button_label }}
         </a>
       </div>
     {% endif %}

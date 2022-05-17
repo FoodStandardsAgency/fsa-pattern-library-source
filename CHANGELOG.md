@@ -24,8 +24,92 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
 
-## [Upcoming release template] - 1971-11-03
+
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+- Fixing Sidebar overflow when reaching bottom of page and when reaching top of page when page already scrolled
+
+### Security
+-
+
+
+## [0.1.8] -  2022-05-16 (Updating input and text fields to have char limit and disabled/readonly features)
+
+### Changed
+- Update textarea and input form field types to add character limits
+- Update textarea and input form field types to allow disabled and readonly settings
+
+
+## [0.1.7] -  2022-05-16 (FHRS components, fixes and new features)
+
+### Added
+- Add display rating variations to the explanationBlock component
+- Add a displayRating to the FHRS company page
+- Add a legacy badge story to textAndTitle component
+- Add a fhrsCompanyDigitalBadge page that include businessHero and the legacyBadge component
+- Add WelshBusinessRatingAwaited story to searchCard component
+- A FHRS home page.
+- A FHRS version of the promoGroup component. Added this to the FHRS home page.
+- A titleAndDescription component shared between latestTeaser and promoGroup.
+
+### Changed
+- Remove underline and color from external links in promo-group component
+- Add text styling to description text in "TitleAndText component"
+
+### Fixed
+- Fix issue with invalid json in conditionals
+- Fix issue where dropdown id was being set with extra "" and causing JS error
+
+
+## [0.1.6] - 2022-05-09 (Ignore p tag in list)
+
+### Fixed
+- If there's a `<p>` tag in a list, ignore it and display its contents
+
+
+## [0.1.5] - 2022-05-09 (Fix max-width images in content layout)
+
+### Fixed
+- Fixing max width of elements in content-layout-right (mainly for images)
+
+
+## [0.1.4] -2022-05-09 (Fix max-width images in content layout)
+
+### Fixed
+- Fixing max width of elements in content-layout-right (mainly for images)
+
+
+## [0.1.3] - 2022-05-05 (Fix HACCP element)
+
+### Fixed
+- Delete all id attributes for all inputs in multifieldGroup component to avoid problems with accessibility.
+
+
+## [0.1.2] - 2022-05-04 (Fixing badge component and updating MultifieldGroup component)
+
+### Changed
+- Change a way to store data-items in multifieldGroup component.
+
+### Fixed
+- Include badge component into the build process.
+
+
+## [0.1.1] - 2022-05-03 (New FHRS components and various fixes)
 
 ### Added
 - FHRS searchCard component
@@ -38,19 +122,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed FHRS businessHero styling to use the new mixin
 - Changed FHRS businessHero divider from dots to a thin border
 
-### Deprecated
--
-
-### Removed
--
-
 ### Fixed
--
-
-### Security
+- Fix problems of radio inputs in multivalueField.
 
 
-## [0.1.0] -2022-04-29 (Fix for webToolProgressBar component)
+## [0.1.0] - 2022-04-29 (Fix for webToolProgressBar component)
 
 ### Fixed
 - Improved styles for ".sr-desktop" class in webToolProgressBar component.

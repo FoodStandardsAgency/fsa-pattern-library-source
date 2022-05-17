@@ -1,4 +1,4 @@
-<div class="input-field{{ error ? " input-field--error" : "" }}{{ states ? ' js-form-item js-form-item-' ~ name : ''}}">
+<div class="input-field{{ error ? " input-field--error" : "" }}{{ states ? ' js-form-item js-form-item-' ~ name : ''}}{{ disabled ? " input-field--disabled" : "" }}{{ read_only ? " input-field--readonly" : "" }}">
   <div class="{{ tooltip is defined ? "label-with-tooltip" : "" }}">
     <label class="input-field__label{{ nested ? " input-field__nested" : "" }}" for="{{ id }}">{{ label }}<span class="input-field__required">{{ required ? "(" ~ required ~ ")" : "" }}</span>
     </label>
@@ -19,11 +19,14 @@
       <span class="input-field__prefix">{{ prefix }}</span>
     {% endif %}
     {% if value %}
-      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" value="{{ value }}" aria-required="{{ required ? "true" : "false" }}" placeholder="{{ placeholder }}" {{ states ? "data-drupal-states=" ~ states : ""}} />
+      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" value="{{ value }}" aria-required="{{ required ? "true" : "false" }}" placeholder="{{ placeholder }}" data-drupal-states='{{ states ? states|raw : {}|json_encode }}' {{ max_length ? "maxLength=" ~ max_length : ""}} {{ disabled ? "disabled" : "" }} {{ read_only ? "readonly" : "" }}/>
     {% else %}
-      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" aria-required="{{ required ? "true" : "false" }}" placeholder="{{ placeholder }}" {{ states ? "data-drupal-states=" ~ states : ""}} />
+      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" aria-required="{{ required ? "true" : "false" }}" placeholder="{{ placeholder }}" data-drupal-states='{{ states ? states|raw : {}|json_encode }}' {{ max_length ? "maxLength=" ~ max_length : ""}} {{ disabled ? "disabled" : "" }} {{ read_only ? "readonly" : "" }}/>
     {% endif %}
   </div>
+  {% if max_length %}
+    <div class="input-field__character-limit">{{ max_length_prefix }} <span class="input-field__character-limit__count">{{ max_length }}</span> {{ max_length_suffix }}</div>
+  {% endif %}
   {% if caption %}
     <div class="input-field__caption">{{ caption }}</div>
   {% endif %}
