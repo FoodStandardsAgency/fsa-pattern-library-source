@@ -27,8 +27,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [0.1.8] -  2022-05-16 (Updating input and text fields to have char limit and disabled/readonly features)
+## [Upcoming release] - 1971-11-03
 
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+- Fixing Sidebar overflow when reaching bottom of page and when reaching top of page when page already scrolled
+
+### Security
+-
+
+
+## [0.1.8] -  2022-05-16 (Updating input and text fields to have char limit and disabled/readonly features)
 
 ### Changed
 - Update textarea and input form field types to add character limits

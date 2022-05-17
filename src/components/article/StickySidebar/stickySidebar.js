@@ -11,7 +11,11 @@ export default function () {
     // The top position for the sidebar once fixed.
     const sidebarTopPosition = 18;
     // The margin-top value for the footer once fixed.
-    const footerMarginTop = 54;
+    const contentFooterMarginTop = 54;
+    // The margin-top value for the footer once fixed.
+    const generalFooterMarginTop = 2;
+    // The margin-top value for the footer once fixed.
+    const relatedContentMarginTop = 30;
 
     // Work out whether the screensize is mobile/desktop
     function getMode() {
@@ -31,28 +35,60 @@ export default function () {
       }
     }
 
-    // Get the position of the footer element if present
-    function getFooterPosition(footer) {
-      if (footer && footer.childElementCount !== 0) {
-        return footer.offsetTop;
+    // Get the position of the element if present
+    function getElementPosition(element) {
+      if (element && element.childElementCount !== 0) {
+        return element.offsetTop;
       } else {
         return null;
       }
     }
 
     const viewportOffset = el.getBoundingClientRect();
-    const top = viewportOffset.top;
+    const clientTop = document.documentElement.clientTop || document.body.clientTop || 0;
+    const initScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    const top = viewportOffset.top + initScrollTop - clientTop;
     const parent = el.parentNode;
-    const footer = document.querySelector('.content-layout__footer');
+    const contentFooter = document.querySelector('.content-layout__footer');
+    const generalFooter = document.querySelector('.feedback');
+    const relatedContent = document.querySelector('.related-content');
+    const sidebarHeight = document.querySelector('.sticky-sidebar').offsetHeight;
 
     let mode = getMode();
-    let footerTop = getFooterPosition(footer);
+    let contentFooterTop = getElementPosition(contentFooter);
+    let relatedContentTop = getElementPosition(relatedContent);
+    let generalFooterTop = getElementPosition(generalFooter);
 
     window.addEventListener('resize', () => {
       mode = getMode();
-      footerTop = getFooterPosition(footer);
+      contentFooterTop = getElementPosition(contentFooter);
       changeSidebarWidth(parent, el, mode);
     });
+
+    function scrollAction(elementTop, elementMarginTop, scrollTop) {
+      // If the scroll position is between the top of the page and the top of the element, fix the sidebar
+      if (
+        scrollTop + sidebarTopPosition >= top &&
+        scrollTop + elementMarginTop + sidebarHeight <= elementTop
+      ) {
+        el.classList.add('sticky-sidebar--fixed');
+        el.classList.remove('sticky-sidebar--bottom');
+        changeSidebarWidth(parent, el, mode);
+      }
+      // If the scroll position is past the element, move the sidebar to the bottom.
+      else if (scrollTop + elementMarginTop + sidebarHeight > elementTop) {
+        el.classList.add('sticky-sidebar--bottom');
+        el.classList.remove('sticky-sidebar--fixed');
+        changeSidebarWidth(parent, el, mode);
+      }
+      // Otherwise, return the sidebar to the top of the page
+      else {
+        el.classList.remove('sticky-sidebar--fixed');
+        el.classList.remove('sticky-sidebar--bottom');
+        changeSidebarWidth(parent, el, mode);
+      }
+    }
 
     window.addEventListener('scroll', () => {
       mode = getMode();
@@ -61,39 +97,18 @@ export default function () {
           window.pageYOffset !== undefined
             ? window.pageYOffset
             : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        // If there is a footer
-        if (footerTop) {
-          // If the scroll position is between the top of the page and the top of the footer, fix the sidebar
-          if (scrollTop + sidebarTopPosition >= top && scrollTop + footerMarginTop <= footerTop) {
-            el.classList.add('sticky-sidebar--fixed');
-            el.classList.remove('sticky-sidebar--bottom');
-            changeSidebarWidth(parent, el, mode);
-          }
-          // If the scroll position is past the footer, move the sidebar to the bottom.
-          else if (scrollTop + footerMarginTop > footerTop) {
-            el.classList.add('sticky-sidebar--bottom');
-            el.classList.remove('sticky-sidebar--fixed');
-            changeSidebarWidth(parent, el, mode);
-          }
-          // Otherwise, return the sidebar to the top of the page
-          else {
-            el.classList.remove('sticky-sidebar--fixed');
-            el.classList.remove('sticky-sidebar--bottom');
-            changeSidebarWidth(parent, el, mode);
-          }
+        // If related content, sidebar needs to stop earlier than up to the footer
+        if (relatedContentTop) {
+          scrollAction(relatedContentTop, relatedContentMarginTop, scrollTop);
         }
-        // If there isn't a footer
+        // If there is a content footer
+        else if (contentFooterTop) {
+          scrollAction(contentFooterTop, contentFooterMarginTop, scrollTop);
+        }
+        // If there isn't a footer, use the "global" footer
+        // If there is a content footer
         else {
-          // If the scroll position is below the top of the page, fix the sidebar
-          if (scrollTop + sidebarTopPosition >= top) {
-            el.classList.add('sticky-sidebar--fixed');
-            changeSidebarWidth(parent, el, mode);
-          }
-          // Otherwise, return the sidebar to the top of the page
-          else {
-            el.classList.remove('sticky-sidebar--fixed');
-            changeSidebarWidth(parent, el, mode);
-          }
+          scrollAction(generalFooterTop, generalFooterMarginTop, scrollTop);
         }
       }
     });
