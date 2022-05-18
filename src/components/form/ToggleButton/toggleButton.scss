@@ -1,0 +1,69 @@
+@import "src/lib.scss";
+
+.toggle-button {
+  margin-top: 0.5rem;
+
+  button {
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+    border: 0 solid transparent;
+    text-shadow: 0 0 0 transparent;
+    padding: 0;
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 0.2rem var(--fsa-primary_black),
+      0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
+    border-radius: 2rem;
+  }
+
+  label {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  [role="switch"] {
+    position: relative;
+    padding: 0;
+    width: 3.438rem;
+    height: 1.625rem;
+    border: 0;
+    border-radius: 1rem;
+    background-color: var(--fsa-primary_dark-grey);
+    margin-right: 2rem;
+    margin-right: 3rem;
+  }
+
+  [role="switch"][aria-checked="true"] {
+    background-color: var(--fsa-secondary_mid-purple);
+  }
+
+  [role="switch"] span {
+    position: absolute;
+    border-radius: 2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  [role="switch"] span::before {
+    position: absolute;
+    content: "";
+    top: 0.313rem;
+    left: 0.313rem;
+    bottom: 0.313rem;
+    width: 1rem;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  [role="switch"][aria-checked="true"] span::before {
+    transform: translateX(1.714rem);
+  }
+}

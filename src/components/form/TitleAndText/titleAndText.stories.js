@@ -18,6 +18,24 @@ h1.args = {
   tag: 'h1',
 };
 
+export const h1Underlined = Template.bind({});
+h1Underlined.storyName = 'h1 underlined';
+h1Underlined.args = {
+  title: 'Form title',
+  description:
+    '<p> Create an account to get food and allergy alerts by email or text message. This is a free service. Before you can subscribe we need to verify your email address. Please enter a valid email address in the box below and click "Create account".</p>',
+  tag: 'h1',
+  underlined: true,
+};
+
+export const h2Underlined = Template.bind({});
+h2Underlined.storyName = 'h2 underlined';
+h2Underlined.args = {
+  ...h1.args,
+  tag: 'h2',
+  underlined: true,
+};
+
 export const h2 = Template.bind({});
 h2.storyName = 'h2';
 h2.args = {
