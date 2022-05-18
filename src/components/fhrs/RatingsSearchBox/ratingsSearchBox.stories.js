@@ -18,6 +18,7 @@ RatingsSearchBox.args = {
   business_name_label: 'Business name',
   address_search_label: 'Street, town or postcode',
   location_label: 'Use my location',
+  blocked_location_label: 'Cannot use your location',
   search_map_results_label: 'Search results with map',
   hide_map_results_label: 'Hide results with map',
   more_options_label: 'More search options',

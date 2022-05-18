@@ -16,7 +16,11 @@ export default function () {
     const locationToggle = ratingsSearchBox.querySelector('#location-toggle');
     const locationInput = ratingsSearchBox.querySelector('.ratings-search-box__location-search');
     const locationField = ratingsSearchBox.querySelector('.ratings-search-box__location');
+    const locationContainer = ratingsSearchBox.querySelector('.ratings-search-box__location-toggle');
+    const blockedLabel = locationContainer.getAttribute('data-blocked-location');
+    const locationLabel = locationContainer.getAttribute('data-use-location');
     locationToggle.addEventListener('click', () => {
+      const label = locationContainer.querySelector('label > span');
       if (locationToggle.getAttribute('aria-checked') === 'true') {
         locationInput.classList.add('ratings-search-box__location-search--closed');
         navigator.geolocation.getCurrentPosition(
@@ -24,7 +28,11 @@ export default function () {
             locationField.value = position.coords.latitude + ',' + position.coords.longitude;
           },
           () => {
-            alert('Location settings are blocked on this browser.');
+            label.innerText = blockedLabel;
+            locationToggle.disabled = true;
+            locationToggle.classList.add('toggle-button__button--disabled');
+            locationToggle.ariaChecked = 'false';
+            locationInput.classList.remove('ratings-search-box__location-search--closed');
           }
         );
       } else {

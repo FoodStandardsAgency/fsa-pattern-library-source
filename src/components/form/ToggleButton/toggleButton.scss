@@ -24,6 +24,12 @@
     justify-content: space-between;
   }
 
+  &__button {
+    &--disabled {
+      opacity: 50%;
+    }
+  }
+
   [role="switch"] {
     position: relative;
     padding: 0;

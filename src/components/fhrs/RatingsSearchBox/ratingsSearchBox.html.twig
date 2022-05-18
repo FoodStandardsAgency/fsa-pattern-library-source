@@ -64,10 +64,12 @@
   </div>
   <div class="ratings-search-box__toggle-area">
     <div class="ratings-search-box__toggle-area__left">
-      {% include '@components/components/form/ToggleButton/toggleButton.html.twig' with {
-        id: 'location-toggle',
-        label: location_label,
-      } %}
+      <div class="ratings-search-box__location-toggle" data-blocked-location="{{ blocked_location_label }}" data-use-location="{{ location_label }}">
+        {% include '@components/components/form/ToggleButton/toggleButton.html.twig' with {
+          id: 'location-toggle',
+          label: location_label,
+        } %}
+      </div>
 {#      Map related - uncomment when FSA confirm whether it should be added to search #}
 {#      <div class="ratings-search-box__map-toggle" data-hide-button="{{ hide_map_results_label }}" data-show-button="{{ search_map_results_label }}">#}
 {#        {% include '@components/components/form/ToggleButton/toggleButton.html.twig' with {#}
