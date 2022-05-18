@@ -16,9 +16,10 @@ export default function () {
     const locationToggle = ratingsSearchBox.querySelector('#location-toggle');
     const locationInput = ratingsSearchBox.querySelector('.ratings-search-box__location-search');
     const locationField = ratingsSearchBox.querySelector('.ratings-search-box__location');
-    const locationContainer = ratingsSearchBox.querySelector('.ratings-search-box__location-toggle');
+    const locationContainer = ratingsSearchBox.querySelector(
+      '.ratings-search-box__location-toggle'
+    );
     const blockedLabel = locationContainer.getAttribute('data-blocked-location');
-    const locationLabel = locationContainer.getAttribute('data-use-location');
     locationToggle.addEventListener('click', () => {
       const label = locationContainer.querySelector('label > span');
       if (locationToggle.getAttribute('aria-checked') === 'true') {
@@ -82,6 +83,11 @@ export default function () {
       additionalOptionsLinkArrow.classList.toggle(
         'ratings-search-box__more-search-options__arrow--open'
       );
+      if (additionalOptions.getAttribute('aria-expanded') === 'true') {
+        additionalOptions.ariaExpanded = 'false';
+      } else {
+        additionalOptions.ariaExpanded = 'true';
+      }
     });
   }
 
