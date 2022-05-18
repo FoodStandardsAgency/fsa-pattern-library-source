@@ -30,7 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- Add ratingsSearchBox for FHRS
+- Add form field type (toggle button)
+- Update titleAndText to include underlined option
 
 ### Changed
 -
@@ -66,13 +68,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A FHRS home page.
 - A FHRS version of the promoGroup component. Added this to the FHRS home page.
 - A titleAndDescription component shared between latestTeaser and promoGroup.
-- Add ratingsSearchBox for FHRS
-- Add form field type (toggle button)
 
 ### Changed
 - Remove underline and color from external links in promo-group component
 - Add text styling to description text in "TitleAndText component"
-- Update titleAndText to include underlined option
 
 ### Fixed
 - Fix issue with invalid json in conditionals
