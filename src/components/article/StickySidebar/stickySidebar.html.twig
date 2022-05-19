@@ -1,7 +1,9 @@
-<div class="sticky-sidebar">
-  {% for item in sidebar_items %}
-    <div class="sticky-sidebar__content-item">
-      {{ item }}
-    </div>
-  {% endfor %}
+<div class="sticky-sidebar__wrapper">
+  <div class="sticky-sidebar">
+    {% for item in sidebar_items %}
+      <div class="sticky-sidebar__content-item">
+        {{ item }}
+      </div>
+    {% endfor %}
+  </div>
 </div>

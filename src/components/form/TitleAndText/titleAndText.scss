@@ -17,6 +17,7 @@ h2.legacy-badge-title {
 
 .form-description {
   @include body;
+  @include wysiwyg-content;
 
   margin-top: 1rem;
   color: var(--fsa-primary_black);

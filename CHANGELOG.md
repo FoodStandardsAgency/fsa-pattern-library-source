@@ -24,9 +24,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Security
+-
 
 
-## [Upcoming release template] - 1971-11-03
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+- Fixing Sidebar overflow when reaching bottom of page and when reaching top of page when page already scrolled
+
+### Security
+-
+
+
+## [0.1.8] -  2022-05-16 (Updating input and text fields to have char limit and disabled/readonly features)
+
+### Changed
+- Update textarea and input form field types to add character limits
+- Update textarea and input form field types to allow disabled and readonly settings
+
+
+## [0.1.7] -  2022-05-16 (FHRS components, fixes and new features)
 
 ### Added
 - Add display rating variations to the explanationBlock component
@@ -34,49 +63,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a legacy badge story to textAndTitle component
 - Add a fhrsCompanyDigitalBadge page that include businessHero and the legacyBadge component
 - Add WelshBusinessRatingAwaited story to searchCard component
-
-### Changed
--
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
-
-## [Upcoming release template] - 1971-11-03
-
-### Added
 - A FHRS home page.
 - A FHRS version of the promoGroup component. Added this to the FHRS home page.
 - A titleAndDescription component shared between latestTeaser and promoGroup.
 
 ### Changed
--
-
-### Deprecated
--
-
-### Removed
--
+- Remove underline and color from external links in promo-group component
+- Add text styling to description text in "TitleAndText component"
 
 ### Fixed
--
+- Fix issue with invalid json in conditionals
+- Fix issue where dropdown id was being set with extra "" and causing JS error
 
-### Security
--
 
 ## [0.1.6] - 2022-05-09 (Ignore p tag in list)
 
 ### Fixed
 - If there's a `<p>` tag in a list, ignore it and display its contents
-- Inconsistent (internal and external) link style in PromoGroup and serviceLinks components
 
 
 ## [0.1.5] - 2022-05-09 (Fix max-width images in content layout)
