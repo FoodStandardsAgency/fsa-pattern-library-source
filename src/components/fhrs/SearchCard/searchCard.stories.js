@@ -91,3 +91,9 @@ WelshBusinessAwaitingInspection.args = {
   ...EnglishBusinessAwaitingInspection.args,
   welsh: true,
 };
+
+export const WelshBusinessRatingAwaited = Template.bind({});
+WelshBusinessRatingAwaited.args = {
+  ...WelshBusinessAwaitingInspection.args,
+  rating: '',
+};

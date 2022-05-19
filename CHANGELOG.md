@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a displayRating to the FHRS company page
 - Add a legacy badge story to textAndTitle component
 - Add a fhrsCompanyDigitalBadge page that include businessHero and the legacyBadge component
+- Add WelshBusinessRatingAwaited story to searchCard component
 
 ### Changed
 -
