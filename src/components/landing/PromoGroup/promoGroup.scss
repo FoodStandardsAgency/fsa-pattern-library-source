@@ -139,7 +139,8 @@
     }
   }
 
-  &__title-link {
+  &__title-link,
+  &__title-link.external-link {
     color: var(--fsa-primary_black);
     text-decoration: none;
 
@@ -200,7 +201,8 @@
     }
   }
 
-  &__list-link {
+  &__list-link,
+  &__list-link.external-link {
     @include body;
 
     margin-left: 2.25rem;
