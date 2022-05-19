@@ -125,3 +125,44 @@ WithTooltip.args = {
     <p>Most prerequisites are general in nature and their purpose is to ensure the Sed a</p>`,
   },
 };
+
+export const WithCharacterLimit = Template.bind({});
+WithCharacterLimit.args = {
+  id: 'product-name',
+  name: 'product-name',
+  label: 'Name of the product',
+  required: '',
+  error: false,
+  value: '',
+  type: 'text',
+  max_length_prefix: 'You have',
+  max_length_suffix: 'characters remaining.',
+  max_length: 40,
+};
+export const Disabled = Template.bind({});
+Disabled.args = {
+  id: 'email',
+  name: 'email',
+  label: 'Email or username',
+  caption: 'Enter your email address or username.',
+  required: '',
+  error: false,
+  error_message: 'Unrecognized username or password',
+  value: 'test@example.com',
+  type: 'email',
+  disabled: true,
+};
+
+export const ReadOnly = Template.bind({});
+ReadOnly.args = {
+  id: 'email',
+  name: 'email',
+  label: 'Email or username',
+  caption: 'Enter your email address or username.',
+  required: '',
+  error: false,
+  error_message: 'Unrecognized username or password',
+  value: 'test@example.com',
+  type: 'email',
+  read_only: true,
+};

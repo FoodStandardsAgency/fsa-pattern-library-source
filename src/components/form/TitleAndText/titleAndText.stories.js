@@ -31,3 +31,12 @@ form.args = {
   description: '<p>SMS updates are sent immediately</p>',
   tag: 'h3',
 };
+
+export const legacyBadge = Template.bind({});
+legacyBadge.args = {
+  title: 'Legacy online rating code',
+  description:
+    '<p>The previous version of the online ratings has now been retired.</p><p>Use the code for the high resolution online ratings provided above if you are adding the online rating to a businesses website.</p><p>Use the online rating images provided above if you are sharing across your online or social portfolio.</p><p>The legacy code will remain active until [add date 12 month from launch], after this period it will be retired.</p>',
+  tag: 'h3',
+  class: 'legacy-badge-title',
+};
