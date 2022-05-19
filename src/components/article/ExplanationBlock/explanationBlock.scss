@@ -43,6 +43,10 @@
     color: var(--fsa-primary_black);
     background-color: var(--fsa_tint);
 
+    &--h3 {
+      @include h3;
+    }
+
     @media screen and (min-width: $fsa-md) {
       padding: 2rem;
     }
