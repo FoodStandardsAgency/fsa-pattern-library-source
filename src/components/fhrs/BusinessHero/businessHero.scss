@@ -47,19 +47,31 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
-    height: 8rem;
-    width: 15rem;
+    height: 9rem;
+    width: 17rem;
 
     &--welsh {
       height: 10rem;
     }
+
+    @media screen and (min-width: $fsa-lg) {
+      height: 8rem;
+      width: 15rem;
+
+      &--welsh {
+        height: 11.25rem;
+      }
+    }
+  }
+
+  &__link-wrapper {
+    display: block;
+    margin-top: 1rem;
   }
 
   &__link {
     @include link;
 
-    display: block;
-    margin-top: 1rem;
     border: none;
     padding-left: 2.25rem;
     background-repeat: no-repeat;
@@ -68,10 +80,18 @@
 
     &--back {
       background-image: url("./assets/arrow-back.svg");
+
+      &:hover {
+        background-image: url("./assets/arrow-back-hover.svg");
+      }
     }
 
     &--forward {
       background-image: url("./assets/arrow-forward.svg");
+
+      &:hover {
+        background-image: url("./assets/arrow-forward-hover.svg");
+      }
     }
   }
 

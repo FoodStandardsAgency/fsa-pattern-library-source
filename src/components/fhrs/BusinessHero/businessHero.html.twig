@@ -1,6 +1,6 @@
 <div class="business-hero">
   <div class="business-hero__header">
-    <h2 class="business-hero__title">{{ name }}</h2>
+    <h1 class="business-hero__title">{{ name }}</h1>
   </div>
   <div class="business-hero__content">
     <div class="business-hero__left">
@@ -9,9 +9,15 @@
         rating: rating,
         welsh: welsh,
       } %}
-      <a href="{{ back_link }}" class="business-hero__link business-hero__link--back">{{ back_to_search_results }}</a>
-      <a href="{{ search_local_link }}" class="business-hero__link business-hero__link--forward">{{ search_this_local_authority_area }}</a>
-      <a href="{{ search_all_link }}" class="business-hero__link business-hero__link--forward">{{ search_all_data }}</a>
+      <div class="business-hero__link-wrapper">
+        <a href="{{ back_link }}" class="business-hero__link business-hero__link--back">{{ back_to_search_results }}</a>
+      </div>
+      <div class="business-hero__link-wrapper">
+        <a href="{{ search_local_link }}" class="business-hero__link business-hero__link--forward">{{ search_this_local_authority_area }}</a>
+      </div>
+      <div class="business-hero__link-wrapper">
+        <a href="{{ search_all_link }}" class="business-hero__link business-hero__link--forward">{{ search_all_data }}</a>
+      </div>
     </div>
     <div class="business-hero__right">
       <div class="business-hero__block">
