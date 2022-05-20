@@ -30,7 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- Add ratingsSearchBox for FHRS
+- Add form field type (toggle button)
+- Update titleAndText to include underlined option
 
 ### Changed
 -

@@ -1,0 +1,111 @@
+{% block field_layout %}
+  {% if field.type == 'dropdown' %}
+    <div class="ratings-search-box__dropdown{{ field.hide_label ? " ratings-search-box__dropdown--hide-label" : "" }}">
+      {% include '@components/components/form/Dropdown/dropdown.html.twig' with {
+        title: field.title,
+        options: field.options,
+        default: field.default,
+        title: field.title,
+        name: field.name,
+        id: field.id,
+      } %}
+    </div>
+  {% elseif field.type == 'fieldset' %}
+    <fieldset>
+      <legend>{{ field.legend }}</legend>
+    {% for fieldset_field in field.fields %}
+      {% if fieldset_field.type == 'dropdown' %}
+        <div class="ratings-search-box__dropdown{{ fieldset_field.hide_label ? " ratings-search-box__dropdown--hide-label" : "" }}">
+        {% include '@components/components/form/Dropdown/dropdown.html.twig' with {
+          title: fieldset_field.title,
+          options: fieldset_field.options,
+          default: fieldset_field.default,
+          title: fieldset_field.title,
+          name: fieldset_field.name,
+          id: fieldset_field.id,
+        } %}
+        </div>
+      {% elseif fieldset_field.type == 'single-radio' %}
+        <div class="ratings-search-box__single-radio">
+          <div class="radio__field">
+            <input class="radio__input" type="radio" name="{{ fieldset_field.name }}" value="{{ fieldset_field.value }}" id="{{ fieldset_field.id }}">
+            <label class="radio__label" for="{{ fieldset_field.id }}">{{ fieldset_field.label }}</label>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    </fieldset>
+  {% endif %}
+{% endblock %}
+
+<form class="ratings-search-box">
+  <div class="ratings-search-box__title">
+    {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+      title: title,
+      tag: 'h1',
+      underlined: true,
+    } %}
+  </div>
+  <div class="ratings-search-box__business-name">
+    {% include '@components/components/form/InputField/inputField.html.twig' with {
+      id: 'business-name-search',
+      name: 'business-name-search',
+      label: business_name_label,
+      type: 'text',
+    } %}
+  </div>
+  <div class="ratings-search-box__location-search">
+    {% include '@components/components/form/InputField/inputField.html.twig' with {
+      id: 'address-search',
+      name: 'address-search',
+      label: address_search_label,
+      type: 'text',
+    } %}
+  </div>
+  <div class="ratings-search-box__toggle-area">
+    <div class="ratings-search-box__toggle-area__left">
+      <div class="ratings-search-box__location-toggle" data-blocked-location="{{ blocked_location_label }}" data-use-location="{{ location_label }}">
+        {% include '@components/components/form/ToggleButton/toggleButton.html.twig' with {
+          id: 'location-toggle',
+          label: location_label,
+        } %}
+      </div>
+{#      Map related - uncomment when FSA confirm whether it should be added to search #}
+{#      <div class="ratings-search-box__map-toggle" data-hide-button="{{ hide_map_results_label }}" data-show-button="{{ search_map_results_label }}">#}
+{#        {% include '@components/components/form/ToggleButton/toggleButton.html.twig' with {#}
+{#          id: 'map-toggle',#}
+{#          label: search_map_results_label,#}
+{#        } %}#}
+{#      </div>#}
+    </div>
+    <div class="ratings-search-box__toggle-area__right">
+      <a class="ratings-search-box__la-link" href="{{ local_authority_link.url }}">{{ local_authority_link.title }}</a>
+      <a class="ratings-search-box__more-search-options" href="#">
+        {{ more_options_label }}
+        <span class="ratings-search-box__more-search-options__arrow"></span>
+      </a>
+    </div>
+  </div>
+  <div class="ratings-search-box__additional-options" aria-expanded="false">
+    <div class="ratings-search-box__additional-options__left">
+      {% for field in left %}
+        {{ block('field_layout') }}
+      {% endfor %}
+    </div>
+    <div class="ratings-search-box__additional-options__right">
+      {% for field in right %}
+        {{ block('field_layout') }}
+      {% endfor %}
+    </div>
+  </div>
+  <input class="ratings-search-box__location" type="hidden" value="">
+  <div class="ratings-search-box__submit">
+    {% include '@components/components/general/Button/button.html.twig' with {
+      type: 'primary',
+      label: submit_button_label,
+      element: 'input',
+    } %}
+  </div>
+{#  Map related - uncomment when FSA confirm whether it should be added to search #}
+{#  <div class="ratings-search-box__map"></div>#}
+</form>
