@@ -107,6 +107,24 @@
       }
     }
 
+    &--external {
+      &::after {
+        content: "";
+        background-image: url("./assets/external.svg");
+        background-size: contain;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
+      &:hover {
+        &::after {
+          content: "";
+          background-image: url("./assets/external-hover.svg");
+          background-size: contain;
+        }
+      }
+    }
+
     &--multiple-links {
       padding-bottom: 2rem;
 
@@ -152,6 +170,12 @@
       outline: none;
       background-color: var(--fsa-tertiary_light-yellow);
       border-bottom: 0.25rem solid var(--fsa-primary_black);
+    }
+  }
+
+  &__title-link.external-link {
+    &::after {
+      display: none;
     }
   }
 

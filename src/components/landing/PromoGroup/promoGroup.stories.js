@@ -1,6 +1,7 @@
 import promoGroup from './promoGroup.html.twig';
 import './promoGroup.scss';
 import promoGroupJS from './promoGroup';
+import withExternalLink from './promoGroupExternalExample.html.twig';
 
 promoGroupJS();
 
@@ -164,4 +165,8 @@ FHRS.args = {
       promo_link: '#',
     },
   ],
+};
+
+export const WithExternalLink = () => {
+  return withExternalLink();
 };
