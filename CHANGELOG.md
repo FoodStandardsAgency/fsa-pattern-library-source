@@ -35,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update titleAndText to include underlined option
 
 ### Changed
--
+- Replace arrows when there's an external link in the promo group and service link components
 
 ### Deprecated
 -
