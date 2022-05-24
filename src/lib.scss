@@ -272,9 +272,9 @@ $mobileGutter: 1rem;
   padding: 0.6rem 2.5rem;
   cursor: pointer;
   transition:
-    background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
-    border-radius 0.1s ease-out,
-    border-bottom 0.1s ease-out;
+          background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+          border-radius 0.1s ease-out,
+          border-bottom 0.1s ease-out;
 
   @if $button-type == primary {
     @include button-primary;
@@ -286,8 +286,8 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow:
-      0 0 0 0.2rem var(--fsa-primary_black),
-      0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
+            0 0 0 0.2rem var(--fsa-primary_black),
+            0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 }
@@ -443,8 +443,8 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow:
-      0 0 0 0.167rem var(--fsa-primary_black),
-      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+            0 0 0 0.167rem var(--fsa-primary_black),
+            0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
     background-color: var(--fsa-primary_white);
@@ -478,8 +478,8 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow:
-      0 0 0 0.167rem var(--fsa-primary_black),
-      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+            0 0 0 0.167rem var(--fsa-primary_black),
+            0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
     background-color: var(--fsa-primary_white);
@@ -804,20 +804,26 @@ $mobileGutter: 1rem;
 
 /* stylelint-disable value-keyword-case */
 @mixin fhrs-badges($base-class) {
-  $ratings: 0, 1, 2, 3, 4, 5, Exempt, AwaitingInspection, AwaitingPublication, Empty;
+  $ratings: 0, 1, 2, 3, 4, 5, exempt, awaiting-inspection, awaiting-publication, rating-awaited, rating-awaited, pass;
+  $versions: 1, 2, 3, 4, 5;
 
   @each $rating in $ratings {
-    .#{$base-class}__badge--#{$rating} {
-      background-image: url("../badges/english-badges/english-badge-#{$rating}.svg");
-    }
+    @each $version in $versions {
+      @if($rating == 'pass' and $version < 4) {
+        .#{$base-class}__badge--#{$rating}--#{$version}:before {
+          content: url("../badges/fhis/#{$version}/fhis-badge-#{$rating}.png");
+        }
+      }
+      @else if($rating != 'pass') {
+        .#{$base-class}__badge--#{$rating}--#{$version}:before {
+          content: url("../badges/fhrs/#{$version}/fhrs-badge-#{$rating}.svg");
+        }
 
-    .#{$base-class}__badge--#{$rating}.#{$base-class}__badge--welsh {
-      background-image: url("../badges/bilingual-badges/bilingual-badge-#{$rating}.svg");
+        .#{$base-class}__badge--#{$rating}--#{$version}.#{$base-class}__badge--welsh:before {
+          content: url("../badges/fhrs-bilingual/#{$version}/fhrs-bilingual-badge-#{$rating}.svg");
+        }
+      }
     }
-  }
-
-  .#{$base-class}__badge--Pass {
-    background-image: url("../badges/scottish-badges/scottish-badge-Pass.jpeg");
   }
 }
 /* stylelint-enable value-keyword-case */

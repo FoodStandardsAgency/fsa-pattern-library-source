@@ -13,13 +13,13 @@
     {% set rating_text = "4: Da" %}
   {% elseif rating == "5" %}
     {% set rating_text = "5: Da iawn" %}
-  {% elseif rating == "AwaitingInspection" %}
+  {% elseif rating == "awaiting-inspection" %}
     {% set rating_text = "aros am arolygiad" %}
-  {% elseif rating == "AwaitingPublication" %}
+  {% elseif rating == "awaiting-publication" %}
     {% set rating_text = "i'w gyhoeddi'n fuan" %}
-  {% elseif rating == "Exempt" %}
+  {% elseif rating == "exempt" %}
     {% set rating_text = "wedi'i eithrio" %}
-  {% elseif rating == "Pass" %}
+  {% elseif rating == "pass" %}
     {% set rating_text = "Cynllun Gwybodaeth Hylendid Bwyd: Canlyniad yr Arolygiad yw 'Pasio" %}
   {% elseif rating is empty %}
     {% set rating_text = "aros am sgôr" %}
@@ -40,25 +40,24 @@
     {% set rating_text = "4: Good" %}
   {% elseif rating == "5" %}
     {% set rating_text = "5: Very good" %}
-  {% elseif rating == "AwaitingInspection" %}
+  {% elseif rating == "awaiting-inspection" %}
     {% set rating_text = "awaiting inspection" %}
-  {% elseif rating == "AwaitingPublication" %}
+  {% elseif rating == "awaiting-publication" %}
     {% set rating_text = "awaiting publication" %}
-  {% elseif rating == "Exempt" %}
+  {% elseif rating == "exempt" %}
     {% set rating_text = "exempt" %}
-  {% elseif rating == "Pass" %}
+  {% elseif rating == "pass" %}
     {% set rating_text = "Food Hygiene Information Scheme: Inspection result is 'Pass'" %}
   {% elseif rating is empty %}
     {% set rating_text = "rating awaited" %}
   {% endif %}
 {% endif %}
 
-{% if rating == "Pass" %}
+{% if rating == "pass" %}
   {% set alt_text = rating_text %}
 {% else %}
   {% set alt_text = food_hygine_rating_is ~ rating_text %}
 {% endif %}
-
-<div class="{{ class_name }}__badge {{ class_name }}__badge--{{ rating is empty ? "Empty" : rating }}{{ welsh ? " " ~ class_name ~ "__badge--welsh" : ""}}">
+<div class="{{ class_name }}__badge {{ class_name }}__badge--{{ rating is empty ? "rating-awaited" : rating }}--{{ version is empty ? "1" : version }}{{ welsh ? " " ~ class_name ~ "__badge--welsh" : ""}}">
   <span class="visually-hidden">{{ alt_text }}</span>
 </div>

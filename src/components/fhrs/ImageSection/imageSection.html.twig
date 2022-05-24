@@ -1,0 +1,29 @@
+<div class="image-section">
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: title,
+    tag: "h2",
+    description: description,
+  } %}
+  <div class="image-section__badges">
+    <div class="image-section__fhrs">
+      {% for badge in fhrs_badges %}
+        {% include "@components/components/fhrs/Badge/badge.html.twig" with {
+          class_name: badge.class_name,
+          rating: badge.rating,
+          welsh: welsh,
+          version: badge.version,
+        } %}
+      {% endfor %}
+    </div>
+    <div class="image-section__fhis">
+      {% for badge in fhis_badges %}
+        {% include "@components/components/fhrs/Badge/badge.html.twig" with {
+          class_name: badge.class_name,
+          rating: badge.rating,
+          welsh: welsh,
+          version: badge.version,
+        } %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

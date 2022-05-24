@@ -12,10 +12,10 @@ export default {
         '3',
         '4',
         '5',
-        'Exempt',
-        'AwaitingInspection',
-        'AwaitingPublication',
-        'Pass',
+        'exempt',
+        'awaiting-inspection',
+        'awaiting-publication',
+        'pass',
         '',
       ],
       control: { type: 'select' },
@@ -55,7 +55,7 @@ WelshPage.args = {
 export const Scottish = Template.bind({});
 Scottish.args = {
   ...English.args,
-  rating: 'Pass',
+  rating: 'pass',
 };
 
 export const PrivateAddress = Template.bind({});
@@ -82,7 +82,7 @@ BusinessAppeal.args = {
 export const EnglishBusinessAwaitingInspection = Template.bind({});
 EnglishBusinessAwaitingInspection.args = {
   ...English.args,
-  rating: 'AwaitingInspection',
+  rating: 'awaiting-inspection',
   rating_date: '',
 };
 

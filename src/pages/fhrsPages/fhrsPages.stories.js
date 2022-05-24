@@ -2,6 +2,10 @@ import fhrsCompany from './fhrsCompany.html.twig';
 import fhrsSearch from './fhrsSearch.html.twig';
 import fhrsHome from './fhrsHome.html.twig';
 import fhrsCompanyDigitalBadge from './fhrsCompanyDigitalBadge.html.twig';
+import fhrsApiPage from "./fhrsApiPage.html.twig";
+import {navigation} from "@components/components/default-content";
+import {social_svgs, svgs} from "@components/components/svg-icons";
+import {h2} from "@components/components/form/TitleAndText/titleAndText.stories";
 
 export default {
   title: 'Pages/FHRS',
@@ -27,4 +31,30 @@ export const FHRSSearch = () => {
 
 export const FHRSCompanyDigitalBadge = () => {
   return fhrsCompanyDigitalBadge();
+};
+
+const Template = (args) => {
+  return fhrsApiPage(args);
+};
+
+export const FhrsApiPage = Template.bind({});
+FhrsApiPage.storyName = 'FHRS API';
+FhrsApiPage.args = {
+  navigation_content: navigation,
+  svg: {
+    import: svgs.import,
+    farming: svgs.farming,
+    regulated: svgs.regulated,
+    fish: svgs.fish,
+    meat: svgs.meat,
+    wine: svgs.wine,
+  },
+  social_svg: {
+    facebook: social_svgs.facebook,
+    twitter: social_svgs.twitter,
+    linkedin: social_svgs.linkedin,
+    youtube: social_svgs.youtube,
+    instagram: social_svgs.instagram,
+    blog: social_svgs.blog,
+  },
 };

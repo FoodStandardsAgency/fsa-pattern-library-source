@@ -1,0 +1,16 @@
+@import "src/lib.scss";
+@include fhrs-badges("image-section");
+
+.image-section {
+    &__badges {
+      margin-top: 2rem;
+    }
+    &__badge {
+    }
+    &__fhrs {
+
+    }
+    &__fhis {
+      margin-top: 3.5rem;
+    }
+}

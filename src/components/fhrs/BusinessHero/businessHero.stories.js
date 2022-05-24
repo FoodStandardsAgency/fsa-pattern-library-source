@@ -12,10 +12,10 @@ export default {
         '3',
         '4',
         '5',
-        'Exempt',
-        'AwaitingInspection',
-        'AwaitingPublication',
-        'Pass',
+        'exempt',
+        'awaiting-inspection',
+        'awaiting-publication',
+        'pass',
         '',
       ],
       control: { type: 'select' },
@@ -61,4 +61,9 @@ Welsh.args = {
   date_title: 'Arolygiad diwethaf',
   date_content: '12 November 2021',
   rating: '5',
+};
+
+export const TitleOnly = Template.bind({});
+TitleOnly.args = {
+  name: "Byrdie's African & Caribbean Cuisine",
 };
