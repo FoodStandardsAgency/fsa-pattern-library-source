@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixing Sidebar overflow when reaching bottom of page and when reaching top of page when page already scrolled
+- Fix disabled field opacity for accessibility
 
 ### Security
 -
