@@ -6,8 +6,10 @@
   flex-direction: column;
 
   &--disabled {
-    filter: greyscale();
-    opacity: 0.5;
+    input,
+    label {
+      opacity: 0.5;
+    }
   }
 
   &__label {

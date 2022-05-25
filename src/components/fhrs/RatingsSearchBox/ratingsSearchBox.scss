@@ -1,0 +1,130 @@
+@import "src/lib.scss";
+
+@mixin positioning {
+  &__left,
+  &__right {
+    width: 100%;
+  }
+
+  &__left {
+    margin-right: 1rem;
+  }
+
+  &__right {
+    margin-left: 1rem;
+  }
+}
+
+.ratings-search-box {
+  &__location-search {
+    display: block;
+
+    &--closed {
+      display: none;
+    }
+  }
+
+  &__toggle-area {
+    margin-top: 2rem;
+
+    @media screen and (min-width: $fsa-md) {
+      @include positioning;
+    }
+
+    @media screen and (min-width: $fsa-md) {
+      display: flex;
+      flex: 1;
+    }
+
+    a {
+      @include link;
+
+      display: flex;
+      margin-top: 0.5rem;
+    }
+  }
+
+  fieldset {
+    margin-top: 2rem;
+    border: none;
+    padding: 0;
+
+    legend {
+      @include h5;
+    }
+  }
+
+  &__single-radio {
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__dropdown {
+    &--hide-label {
+      .dropdown {
+        margin-top: 1rem;
+      }
+
+      label {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__additional-options {
+    display: none;
+    margin-top: 2rem;
+
+    @media screen and (min-width: $fsa-md) {
+      @include positioning;
+    }
+
+    &--open {
+      display: block;
+
+      @media screen and (min-width: $fsa-md) {
+        display: flex;
+        flex: 1;
+      }
+    }
+  }
+
+  &__more-search-options {
+    align-items: center;
+
+    &__arrow {
+      background-image: url("./assets/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      width: 0.875rem;
+      height: 0.625rem;
+      margin-left: 1rem;
+
+      &--open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__submit {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+  }
+
+  &__map {
+    display: none;
+
+    &--open {
+      display: block;
+      background-image: url("./assets/google-maps-placeholder.png");
+      height: 520px;
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}

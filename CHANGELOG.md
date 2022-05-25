@@ -27,8 +27,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [0.1.8] -  2022-05-16 (Updating input and text fields to have char limit and disabled/readonly features)
+## [0.1.9] - 2022-05-25 (new FHRS components and bugfixes on existing PL components)
 
+### Added
+- Add ratingsSearchBox for FHRS
+- Add form field type (toggle button)
+- Update titleAndText to include underlined option
+
+### Changed
+- Replace arrows when there's an external link in the promo group and service link components
+
+### Fixed
+- Fixing Sidebar overflow when reaching bottom of page and when reaching top of page when page already scrolled
+- Fix disabled field opacity for accessibility
+
+
+## [0.1.8] -  2022-05-16 (Updating input and text fields to have char limit and disabled/readonly features)
 
 ### Changed
 - Update textarea and input form field types to add character limits

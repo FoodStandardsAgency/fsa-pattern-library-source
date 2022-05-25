@@ -116,7 +116,7 @@ export const DisplayRating = (args) => explanationBlock(args);
 DisplayRating.args = {
   type: 'general',
   wysiwyg_content:
-    '<h3>Display this rating on your website</h3><p>We provide a selection of online food hygiene rating formats for use across websites, apps, social media and emails.</p>',
+    '<h2 class="explanation-block__content--h3">Display this rating on your website</h2><p>We provide a selection of online food hygiene rating formats for use across websites, apps, social media and emails.</p>',
   link_text: 'Get your online rating',
   link_url: '#',
 };

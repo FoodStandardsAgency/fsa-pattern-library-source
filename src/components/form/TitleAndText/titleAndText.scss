@@ -5,11 +5,36 @@
   overflow-wrap: break-word;
 }
 
+h1.form-title,
+h2.form-title {
+  &--underlined {
+    &::after {
+      content: "";
+      background-image: url("./assets/dot-dark.svg");
+      background-repeat: repeat-x;
+      background-size: 1.5rem 1.5rem;
+      width: 100%;
+      display: block;
+      padding-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+h2.form-title {
+  &--underlined {
+    &::after {
+      background-image: url("./assets/dot-light.svg");
+      margin-top: 0.5rem;
+    }
+  }
+}
+
 h3.form-title {
   @include h5;
 }
 
-h3.legacy-badge-title {
+h2.legacy-badge-title {
   @include h3;
 
   margin: 3rem 0 0;
