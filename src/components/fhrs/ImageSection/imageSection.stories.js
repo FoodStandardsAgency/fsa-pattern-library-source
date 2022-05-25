@@ -28,10 +28,14 @@ const Template = (args) => imageSection(args);
 export const ImageSection = Template.bind({});
 ImageSection.args = {
   title: 'Images',
-  description: '<p>A set of hygiene rating images is available to be used with the API data. The images must only ' +
+  description:
+    '<p>A set of hygiene rating images is available to be used with the API data. The images must only ' +
     'be used in accordance with the <a href="#">FHRS/FHIS Brand Standard and the terms and conditions</a>.</p>\n' +
     '<p>Examples of hygiene rating images, and the sizes available, that can be used with the API data:</p>',
   welsh: false,
+  download_link: '#',
+  download_text: 'Download new high resolution FHRS badges',
+  filesize: '559.42 KB',
   fhrs_badges: [
     {
       class_name: 'image-section',

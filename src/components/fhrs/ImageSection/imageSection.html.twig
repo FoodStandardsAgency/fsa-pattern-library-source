@@ -5,7 +5,7 @@
     description: description,
   } %}
   <div class="image-section__badges">
-    <div class="image-section__fhrs">
+    <div class="image-section__group image-section__group--fhrs">
       {% for badge in fhrs_badges %}
         {% include "@components/components/fhrs/Badge/badge.html.twig" with {
           class_name: badge.class_name,
@@ -15,7 +15,7 @@
         } %}
       {% endfor %}
     </div>
-    <div class="image-section__fhis">
+    <div class="image-section__group image-section__group--fhis">
       {% for badge in fhis_badges %}
         {% include "@components/components/fhrs/Badge/badge.html.twig" with {
           class_name: badge.class_name,
@@ -26,4 +26,16 @@
       {% endfor %}
     </div>
   </div>
+  {% if download_link and download_text %}
+    <div class="image-section__link">
+      {% include "@components/components/general/Link/link.html.twig" with {
+        link_text: download_text,
+        link_url: download_link,
+      } %}
+      <span>
+        ({{ filesize }})
+      </span>
+    </div>
+
+  {% endif %}
 </div>

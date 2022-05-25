@@ -2,10 +2,9 @@ import fhrsCompany from './fhrsCompany.html.twig';
 import fhrsSearch from './fhrsSearch.html.twig';
 import fhrsHome from './fhrsHome.html.twig';
 import fhrsCompanyDigitalBadge from './fhrsCompanyDigitalBadge.html.twig';
-import fhrsApiPage from "./fhrsApiPage.html.twig";
-import {navigation} from "@components/components/default-content";
-import {social_svgs, svgs} from "@components/components/svg-icons";
-import {h2} from "@components/components/form/TitleAndText/titleAndText.stories";
+import fhrsApiPage from './fhrsApiPage.html.twig';
+import { navigation } from '@components/components/default-content';
+import { social_svgs, svgs } from '@components/components/svg-icons';
 
 export default {
   title: 'Pages/FHRS',

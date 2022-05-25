@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:map";
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 
@@ -272,9 +273,9 @@ $mobileGutter: 1rem;
   padding: 0.6rem 2.5rem;
   cursor: pointer;
   transition:
-          background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
-          border-radius 0.1s ease-out,
-          border-bottom 0.1s ease-out;
+    background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+    border-radius 0.1s ease-out,
+    border-bottom 0.1s ease-out;
 
   @if $button-type == primary {
     @include button-primary;
@@ -286,8 +287,8 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow:
-            0 0 0 0.2rem var(--fsa-primary_black),
-            0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
+      0 0 0 0.2rem var(--fsa-primary_black),
+      0 0 0 0.4rem var(--fsa-tertiary_light-yellow);
     outline: none;
   }
 }
@@ -443,8 +444,8 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow:
-            0 0 0 0.167rem var(--fsa-primary_black),
-            0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+      0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
     background-color: var(--fsa-primary_white);
@@ -478,8 +479,8 @@ $mobileGutter: 1rem;
 
   &:focus {
     box-shadow:
-            0 0 0 0.167rem var(--fsa-primary_black),
-            0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
+      0 0 0 0.167rem var(--fsa-primary_black),
+      0 0 0 0.333rem var(--fsa-tertiary_light-yellow);
     outline: none;
     border: none;
     background-color: var(--fsa-primary_white);
@@ -806,21 +807,33 @@ $mobileGutter: 1rem;
 @mixin fhrs-badges($base-class) {
   $ratings: 0, 1, 2, 3, 4, 5, exempt, awaiting-inspection, awaiting-publication, rating-awaited, rating-awaited, pass;
   $versions: 1, 2, 3, 4, 5;
+  $widths: (
+    1: 26.75rem,
+    2: 30rem,
+    3: 16.188rem,
+    4: 7.813rem,
+    5: 11.813rem,
+  );
 
   @each $rating in $ratings {
     @each $version in $versions {
-      @if($rating == 'pass' and $version < 4) {
+      @if $rating == "pass" and $version < 4 {
         .#{$base-class}__badge--#{$rating}--#{$version}:before {
           content: url("../badges/fhis/#{$version}/fhis-badge-#{$rating}.png");
         }
-      }
-      @else if($rating != 'pass') {
+      } @else if $rating != "pass" {
         .#{$base-class}__badge--#{$rating}--#{$version}:before {
           content: url("../badges/fhrs/#{$version}/fhrs-badge-#{$rating}.svg");
+          display: block;
+          width: map.get($widths, $version);
+          height: auto;
         }
 
         .#{$base-class}__badge--#{$rating}--#{$version}.#{$base-class}__badge--welsh:before {
           content: url("../badges/fhrs-bilingual/#{$version}/fhrs-bilingual-badge-#{$rating}.svg");
+          display: block;
+          width: map.get($widths, $version);
+          height: auto;
         }
       }
     }
