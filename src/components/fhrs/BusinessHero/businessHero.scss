@@ -43,18 +43,6 @@
     }
   }
 
-  &__badge {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left center;
-    height: 8rem;
-    width: 15rem;
-
-    &--welsh {
-      height: 10rem;
-    }
-  }
-
   &__link {
     @include link;
 
