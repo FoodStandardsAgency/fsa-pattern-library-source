@@ -37,6 +37,10 @@ English.args = {
   rating_date: '3 December 2018',
   business_appeal: false,
   rating: '5',
+  private_address: 'Private address',
+  registered_with: 'Registered with',
+  local_authority_name: 'Newport',
+  local_authority: 'local authority',
 };
 
 export const WelshBusiness = Template.bind({});
@@ -50,6 +54,10 @@ WelshPage.args = {
   ...WelshBusiness.args,
   last_inspected: 'Arolygiad diwethaf',
   rating_date: '16 Mawrth 2021',
+  private_address: 'Cyfeiriad Preifat',
+  registered_with: 'wedi cofrestru gydag',
+  local_authority_name: 'Newport',
+  local_authority: 'awdurdod lleol ',
 };
 
 export const Scottish = Template.bind({});
@@ -63,10 +71,14 @@ PrivateAddress.args = {
   ...English.args,
   private: true,
   rating: '3',
-  private_address: 'Private address',
-  registered_with: 'Registered with',
-  local_authority_name: 'Newport',
-  local_authority: 'local authority',
+};
+
+export const RecentlyInspected = Template.bind({});
+RecentlyInspected.args = {
+  ...English.args,
+  status_summary: 'Recently inspected',
+  status_description: 'New rating to be published soon',
+  rating: '0',
 };
 
 export const BusinessAppeal = Template.bind({});
@@ -74,8 +86,6 @@ BusinessAppeal.args = {
   ...English.args,
   business_appeal: true,
   business_say: 'What the business says',
-  status_summary: 'Recently inspected',
-  status_description: 'New rating to be published soon',
   rating: '1',
 };
 

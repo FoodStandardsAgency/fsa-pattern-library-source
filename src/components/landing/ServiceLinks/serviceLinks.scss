@@ -151,4 +151,22 @@
       background-color: var(--fsa-tertiary_light-yellow);
     }
   }
+
+  &__anchor.external-link {
+    &::before {
+      background-image: url("./assets/external.svg");
+      background-size: contain;
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("./assets/external-hover.svg");
+        background-size: contain;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
 }

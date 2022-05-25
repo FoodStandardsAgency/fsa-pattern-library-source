@@ -1,5 +1,6 @@
 import serviceLinks from './serviceLinks.html.twig';
 import './serviceLinks.scss';
+import withExternalLink from './serviceLinksExternalExample.html.twig';
 
 export default {
   title: 'Components/Landing/Service Links',
@@ -59,4 +60,8 @@ EightLinks.args = {
     { label: 'Allergen guidance for businesses', url: '#' },
   ],
   columns: 4,
+};
+
+export const WithExternalLink = () => {
+  return withExternalLink();
 };
