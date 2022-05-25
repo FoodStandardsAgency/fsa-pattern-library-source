@@ -17,6 +17,12 @@ export default function () {
 
     cards.forEach((card) => {
       makeClickable(card);
+      if (
+        card.classList.contains('promo-group__card--one-link') &&
+        card.querySelector('.external-link')
+      ) {
+        card.classList.add('promo-group__card--external');
+      }
     });
   });
 }

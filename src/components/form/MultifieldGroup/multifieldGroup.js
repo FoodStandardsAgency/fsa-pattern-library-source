@@ -38,6 +38,14 @@ export function dispatchMultigroupEvent(element) {
 function initGroup(group) {
   group.setAttribute('pl-listener-assigned', '1');
 
+  // Delete all IDs to avoid problems with accessibility.
+  const allInputs = group
+    .querySelector('.multifield-group__template')
+    .querySelectorAll('input, select, textarea');
+  for (const input of allInputs) {
+    input.removeAttribute('id');
+  }
+
   const button = group.querySelector('.multifield-group__add-item button');
   button.addEventListener('click', function (e) {
     const groupId = addGroup(e.target);

@@ -43,10 +43,38 @@
     color: var(--fsa-primary_black);
     background-color: var(--fsa_tint);
 
+    &--h3 {
+      @include h3;
+    }
+
     @media screen and (min-width: $fsa-md) {
       padding: 2rem;
     }
 
     @include wysiwyg-content;
+  }
+
+  &__link a {
+    margin-top: 1rem;
+    display: block;
+
+    &::after {
+      content: "";
+      background-image: url("./assets/arrow.svg");
+      display: inline-block;
+      width: 1.5rem;
+      height: 1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      top: 0.25rem;
+      margin-left: 0.75rem;
+    }
+
+    &:hover {
+      &::after {
+        background-image: url("./assets/arrow-hover.svg");
+      }
+    }
   }
 }

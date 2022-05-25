@@ -44,20 +44,21 @@ import accordion from './components/search/Accordion/accordion';
 import './components/form/Checkbox/checkbox';
 import './components/form/Dropdown/dropdown';
 import './components/form/ErrorBox/errorBoxs';
-import './components/form/InputField/inputField';
 import './components/form/MessageBox/messageBox';
 import './components/form/MultistepFunction/multistepFunction';
 import './components/form/Radio/radio';
 import './components/form/Tabs/tabs';
 import './components/form/TitleAndText/titleAndText';
 import './components/form/EmailField/emailField';
-import './components/form/Textarea/textarea';
 import './components/form/Step/step';
 import './components/form/FileUpload/fileUpload';
 import mapField from './components/form/MapField/mapField';
 import tooltip from './components/form/Tooltip/tooltip';
 import multivalueField from './components/form/MultivalueField/multivalueField';
 import multifieldGroup from './components/form/MultifieldGroup/multifieldGroup';
+import toggleButton from './components/form/ToggleButton/toggleButton';
+import inputField from './components/form/InputField/inputField';
+import textArea from './components/form/Textarea/textarea';
 
 /* Landing Components */
 import './components/landing/LandingLinks/landingLinks';
@@ -105,6 +106,7 @@ import './components/fhrs/LocalAuthority/localAuthority';
 import './components/fhrs/BusinessHero/businessHero';
 import './components/fhrs/SearchCard/searchCard';
 import './components/fhrs/Badge/badge';
+import ratingsSearchBox from './components/fhrs/RatingsSearchBox/ratingsSearchBox';
 
 /* HACCP components */
 import './components/haccp/SaveProgress/saveProgress';
@@ -169,3 +171,7 @@ tooltip();
 multivalueField();
 multifieldGroup();
 guidancePopup();
+toggleButton();
+ratingsSearchBox();
+inputField();
+textArea();

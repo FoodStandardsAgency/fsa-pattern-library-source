@@ -4,7 +4,13 @@
       <a href="{{ business_link }}">{{ business_name }}</a>
     </h2>
     <p class="fhrs-search-card__address">
-      {% if private %}
+      {% if private and welsh %}
+        {{ private_address }}:<br>
+        {{ registered_with }}
+        {{ local_authority }}
+        {{ local_authority_name }}<br>
+        {{ post_code|split(" ")|first }}
+      {% elseif private %}
         {{ private_address }}:<br>
         {{ registered_with }}
         {{ local_authority_name }}
@@ -27,7 +33,7 @@
         rating: rating,
         welsh: welsh,
     } %}
-    {% if business_appeal %}
+    {% if status_summary and status_description %}
       <p class="fhrs-search-card__status">
         <span class="fhrs-search-card__summary">{{ status_summary }}: </span>
         {{ status_description }}
