@@ -4,8 +4,10 @@
   margin-top: 2rem;
 
   &--disabled {
-    filter: greyscale();
-    opacity: 0.5;
+    textarea,
+    label {
+      opacity: 0.5;
+    }
   }
 
   &__label {

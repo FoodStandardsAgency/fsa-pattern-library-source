@@ -56,6 +56,7 @@ import mapField from './components/form/MapField/mapField';
 import tooltip from './components/form/Tooltip/tooltip';
 import multivalueField from './components/form/MultivalueField/multivalueField';
 import multifieldGroup from './components/form/MultifieldGroup/multifieldGroup';
+import toggleButton from './components/form/ToggleButton/toggleButton';
 import inputField from './components/form/InputField/inputField';
 import textArea from './components/form/Textarea/textarea';
 
@@ -105,6 +106,7 @@ import './components/fhrs/LocalAuthority/localAuthority';
 import './components/fhrs/BusinessHero/businessHero';
 import './components/fhrs/SearchCard/searchCard';
 import './components/fhrs/Badge/badge';
+import ratingsSearchBox from './components/fhrs/RatingsSearchBox/ratingsSearchBox';
 
 /* HACCP components */
 import './components/haccp/SaveProgress/saveProgress';
@@ -169,5 +171,7 @@ tooltip();
 multivalueField();
 multifieldGroup();
 guidancePopup();
+toggleButton();
+ratingsSearchBox();
 inputField();
 textArea();
