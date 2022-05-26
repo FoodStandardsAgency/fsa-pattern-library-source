@@ -1,0 +1,87 @@
+@import "src/lib.scss";
+@include fhrs-badges("badge-download");
+
+.badge-download {
+  // Reset button style
+  button {
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+    border: 0 solid transparent;
+    text-shadow: 0 0 0 transparent;
+    padding: 0;
+  }
+
+  button:hover {
+    box-shadow: 0 0 0 transparent;
+    text-shadow: 0 0 0 transparent;
+  }
+
+  &__badge-wrapper {
+    margin-top: 2rem;
+  }
+
+  &__badge {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+
+    &::before {
+      max-width: 100%;
+    }
+  }
+
+  button:active {
+    outline: none;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+  &__code {
+    margin-bottom: 0.5rem;
+  }
+
+  &__code-button {
+    @include link;
+    @include body;
+
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0.875rem;
+      height: 0.5rem;
+      background: url("./assets/arrow.svg") no-repeat;
+      background-size: cover;
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      &::after {
+        transform: rotate(0);
+        background: url("./assets/arrow-hover.svg") no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__preview {
+    text-align: right;
+  }
+
+  &__code-wrapper {
+    display: none;
+    &--open {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
