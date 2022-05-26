@@ -58,7 +58,6 @@
 {% else %}
   {% set alt_text = food_hygine_rating_is ~ rating_text %}
 {% endif %}
-
-<div class="{{ class_name }}__badge {{ class_name }}__badge--{{ rating is empty ? "Empty" : rating }}{{ welsh ? " " ~ class_name ~ "__badge--welsh" : ""}}">
+<div class="{{ class_name }}__badge {{ class_name }}__badge--{{ rating is empty ? "Empty" : rating }}--{{ version is empty ? "1" : version }}{{ welsh ? " " ~ class_name ~ "__badge--welsh" : ""}}">
   <span class="visually-hidden">{{ alt_text }}</span>
 </div>

@@ -62,30 +62,15 @@
 
   &__badge {
     margin-top: 1rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left center;
-    height: 8rem;
-    width: 15rem;
 
     @media screen and (min-width: $fsa-md) {
       margin-top: 0;
-      background-position: right top;
     }
 
-    &--welsh {
-      height: 10rem;
-    }
-
-    &--AwaitingInspection,
-    &--AwaitingPublication,
-    &--Exempt,
-    &--Empty {
-      height: 6rem;
-
-      &.fhrs-search-card__badge--welsh {
-        height: 8rem;
-      }
+    &::before,
+    &--welsh::before {
+      width: 15rem !important;
+      height: auto;
     }
   }
 

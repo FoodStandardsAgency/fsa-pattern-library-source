@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:map";
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 
@@ -804,20 +805,38 @@ $mobileGutter: 1rem;
 
 /* stylelint-disable value-keyword-case */
 @mixin fhrs-badges($base-class) {
-  $ratings: 0, 1, 2, 3, 4, 5, Exempt, AwaitingInspection, AwaitingPublication, Empty;
+  $ratings: 0, 1, 2, 3, 4, 5, Exempt, AwaitingInspection, AwaitingPublication, Empty, Pass;
+  $versions: 1, 2, 3, 4, 5;
+  $widths: (
+    1: 26.75rem,
+    2: 30rem,
+    3: 16.188rem,
+    4: 7.813rem,
+    5: 11.813rem,
+  );
 
   @each $rating in $ratings {
-    .#{$base-class}__badge--#{$rating} {
-      background-image: url("../badges/english-badges/english-badge-#{$rating}.svg");
-    }
+    @each $version in $versions {
+      @if $rating == "Pass" and $version < 4 {
+        .#{$base-class}__badge--#{$rating}--#{$version}:before {
+          content: url("../badges/fhis/#{$version}/fhis-badge-#{$rating}.png");
+        }
+      } @else if $rating != "Pass" {
+        .#{$base-class}__badge--#{$rating}--#{$version}:before {
+          content: url("../badges/fhrs/#{$version}/fhrs-badge-#{$rating}.svg");
+          display: block;
+          width: map.get($widths, $version);
+          height: auto;
+        }
 
-    .#{$base-class}__badge--#{$rating}.#{$base-class}__badge--welsh {
-      background-image: url("../badges/bilingual-badges/bilingual-badge-#{$rating}.svg");
+        .#{$base-class}__badge--#{$rating}--#{$version}.#{$base-class}__badge--welsh:before {
+          content: url("../badges/fhrs-bilingual/#{$version}/fhrs-bilingual-badge-#{$rating}.svg");
+          display: block;
+          width: map.get($widths, $version);
+          height: auto;
+        }
+      }
     }
-  }
-
-  .#{$base-class}__badge--Pass {
-    background-image: url("../badges/scottish-badges/scottish-badge-Pass.jpeg");
   }
 }
 /* stylelint-enable value-keyword-case */

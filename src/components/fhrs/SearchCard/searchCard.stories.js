@@ -64,6 +64,7 @@ export const Scottish = Template.bind({});
 Scottish.args = {
   ...English.args,
   rating: 'Pass',
+  fhis: true,
 };
 
 export const PrivateAddress = Template.bind({});

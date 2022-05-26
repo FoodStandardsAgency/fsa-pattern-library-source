@@ -62,3 +62,8 @@ Welsh.args = {
   date_content: '12 November 2021',
   rating: '5',
 };
+
+export const TitleOnly = Template.bind({});
+TitleOnly.args = {
+  name: "Byrdie's African & Caribbean Cuisine",
+};
