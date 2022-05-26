@@ -66,17 +66,17 @@ ImageSection.args = {
   fhis_badges: [
     {
       class_name: 'image-section',
-      rating: 'pass',
+      rating: 'Pass',
       version: 1,
     },
     {
       class_name: 'image-section',
-      rating: 'pass',
+      rating: 'Pass',
       version: 2,
     },
     {
       class_name: 'image-section',
-      rating: 'pass',
+      rating: 'Pass',
       version: 3,
     },
   ],
