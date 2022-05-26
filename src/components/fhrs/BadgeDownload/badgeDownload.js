@@ -1,6 +1,6 @@
 import './badgeDownload.html.twig';
 import './badgeDownload.scss';
-import {domContentLoadedWrapper} from "@components/helpers";
+import { domContentLoadedWrapper } from '@components/helpers';
 
 export default function () {
   function callback() {
@@ -12,21 +12,20 @@ export default function () {
       return;
     }
 
-    const badges =  badgeDownload.querySelectorAll('.badge-download__badge-wrapper');
+    const badges = badgeDownload.querySelectorAll('.badge-download__badge-wrapper');
 
-   badges.forEach(badge => {
-    const codeWrapper = badge.querySelector('.badge-download__code-wrapper');
-    const codeButton = badge.querySelector('.badge-download__code-button');
-    codeButton.addEventListener('click', () => {
-      codeWrapper.classList.toggle('badge-download__code-wrapper--open');
-      if (codeButton.getAttribute('aria-expanded') === 'true') {
-        codeButton.setAttribute('aria-expanded', false)
-      }
-      else {
-        codeButton.setAttribute('aria-expanded', true);
-      }
+    badges.forEach((badge) => {
+      const codeWrapper = badge.querySelector('.badge-download__code-wrapper');
+      const codeButton = badge.querySelector('.badge-download__code-button');
+      codeButton.addEventListener('click', () => {
+        codeWrapper.classList.toggle('badge-download__code-wrapper--open');
+        if (codeButton.getAttribute('aria-expanded') === 'true') {
+          codeButton.setAttribute('aria-expanded', false);
+        } else {
+          codeButton.setAttribute('aria-expanded', true);
+        }
+      });
     });
-   });
   }
 
   return domContentLoadedWrapper(callback);

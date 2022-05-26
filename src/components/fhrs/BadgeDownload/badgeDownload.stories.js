@@ -42,7 +42,7 @@ English.args = {
       version: 2,
       size: '480 x 100',
       filesize: '559.42KB',
-      download_link: '#'
+      download_link: '#',
     },
     {
       class_name: 'badge-download',
@@ -50,7 +50,7 @@ English.args = {
       version: 4,
       size: '125 x 287',
       filesize: '559.42KB',
-      download_link: '#'
+      download_link: '#',
     },
     {
       class_name: 'badge-download',
@@ -58,7 +58,7 @@ English.args = {
       version: 5,
       size: '190 x 175',
       filesize: '559.42KB',
-      download_link: '#'
+      download_link: '#',
     },
   ],
 };
@@ -69,7 +69,7 @@ Welsh.args = {
   get_code: 'Cael cod',
   pixels: 'picsel',
   js: {
-    label: 'Copïwch a gludwch y cod isod i\'ch tudalen\n',
+    label: "Copïwch a gludwch y cod isod i'ch tudalen\n",
     value:
       '<script type="text/javascript" src="https://widget.ratings.food.gov.uk/fhrswidget.jss?FHRSID=390429&Culture=en-GB&version=2"></script>',
     rows: 2,
@@ -99,7 +99,7 @@ Welsh.args = {
       version: 2,
       size: '480 x 100',
       filesize: '559.42KB',
-      download_link: '#'
+      download_link: '#',
     },
     {
       class_name: 'badge-download',
@@ -107,7 +107,7 @@ Welsh.args = {
       version: 4,
       size: '125 x 287',
       filesize: '559.42KB',
-      download_link: '#'
+      download_link: '#',
     },
     {
       class_name: 'badge-download',
@@ -115,7 +115,7 @@ Welsh.args = {
       version: 5,
       size: '190 x 175',
       filesize: '559.42KB',
-      download_link: '#'
+      download_link: '#',
     },
   ],
 };
@@ -155,7 +155,7 @@ Scottish.args = {
       version: 3,
       size: '480 x 100',
       filesize: '559.42KB',
-      download_link: '#'
+      download_link: '#',
     },
   ],
 };
