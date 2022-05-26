@@ -66,6 +66,11 @@
     @media screen and (min-width: $fsa-md) {
       margin-top: 0;
     }
+
+    &::before {
+      width: 15rem;
+      height: auto;
+    }
   }
 
   &__status {
