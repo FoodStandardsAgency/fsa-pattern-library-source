@@ -805,7 +805,7 @@ $mobileGutter: 1rem;
 
 /* stylelint-disable value-keyword-case */
 @mixin fhrs-badges($base-class) {
-  $ratings: 0, 1, 2, 3, 4, 5, exempt, awaiting-inspection, awaiting-publication, rating-awaited, rating-awaited, pass;
+  $ratings: 0, 1, 2, 3, 4, 5, Exempt, AwaitingInspection, AwaitingPublication, Empty, Pass;
   $versions: 1, 2, 3, 4, 5;
   $widths: (
     1: 26.75rem,
@@ -817,11 +817,11 @@ $mobileGutter: 1rem;
 
   @each $rating in $ratings {
     @each $version in $versions {
-      @if $rating == "pass" and $version < 4 {
+      @if $rating == "Pass" and $version < 4 {
         .#{$base-class}__badge--#{$rating}--#{$version}:before {
           content: url("../badges/fhis/#{$version}/fhis-badge-#{$rating}.png");
         }
-      } @else if $rating != "pass" {
+      } @else if $rating != "Pass" {
         .#{$base-class}__badge--#{$rating}--#{$version}:before {
           content: url("../badges/fhrs/#{$version}/fhrs-badge-#{$rating}.svg");
           display: block;

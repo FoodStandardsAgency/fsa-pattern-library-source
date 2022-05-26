@@ -67,8 +67,9 @@
       margin-top: 0;
     }
 
-    &::before {
-      width: 15rem;
+    &::before,
+    &--welsh::before {
+      width: 15rem !important;
       height: auto;
     }
   }
