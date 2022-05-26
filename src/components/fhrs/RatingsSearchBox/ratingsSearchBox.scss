@@ -16,6 +16,15 @@
 }
 
 .ratings-search-box {
+  &__search-inputs {
+    @media screen and (min-width: $fsa-md) {
+      display: flex;
+      flex: 1;
+
+      @include positioning;
+    }
+  }
+
   &__location-search {
     display: block;
 
@@ -29,9 +38,7 @@
 
     @media screen and (min-width: $fsa-md) {
       @include positioning;
-    }
 
-    @media screen and (min-width: $fsa-md) {
       display: flex;
       flex: 1;
     }
