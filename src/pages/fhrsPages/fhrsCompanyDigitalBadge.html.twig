@@ -757,6 +757,67 @@
       rating: 5,
     } %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: 'High resolution FHRS online sticker',
+    description:
+    '<p>You can display your rating on your website. Choose from the options below. If you use the code your rating will update automatically if your rating changes. If you download an image you will need to update this manually by updating the image if your rating changes.</p>',
+    tag: 'h2',
+    class: 'legacy-badge-title',
+  } %}
+  {% include '@components/components/fhrs/BadgeDownload/badgeDownload.html.twig' with {
+    get_code: 'Get code',
+    pixels: 'pixels',
+    js: {
+      label: 'Copy and paste the code below into your page',
+      value:
+      '<script type="text/javascript" src="https://widget.ratings.food.gov.uk/fhrswidget.jss?FHRSID=390429&Culture=en-GB&version=2"></script>',
+      rows: 2,
+    },
+    preview: 'Preview',
+    download_image: 'Download image',
+    badges: [
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 3,
+        size: '259 x 145',
+        filesize: '124KB',
+        download_link: '#',
+      },
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 1,
+        size: '429 x 102',
+        filesize: '559.42KB',
+        download_link: '#',
+      },
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 2,
+        size: '480 x 100',
+        filesize: '559.42KB',
+        download_link: '#'
+      },
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 4,
+        size: '125 x 287',
+        filesize: '559.42KB',
+        download_link: '#'
+      },
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 5,
+        size: '190 x 175',
+        filesize: '559.42KB',
+        download_link: '#'
+      },
+    ],
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
       title: 'Legacy online rating code',
       description:
         '<p>The previous version of the online ratings has now been retired.</p><p>Use the code for the high resolution online ratings provided above if you are adding the online rating to a businesses website.</p><p>Use the online rating images provided above if you are sharing across your online or social portfolio.</p><p>The legacy code will remain active until [add date 12 month from launch], after this period it will be retired.</p>',

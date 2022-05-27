@@ -1,5 +1,7 @@
-    
 {% if link_text is defined %}
-  <a class="link" href="{{ link_url }}">{{ link_text }}</a>
+  <a class="link" href="{{ link_url }}" {{ open_in_new_tab ? " target='_blank'" : ''}}>{{ link_text }}</a>
+  {% if open_in_new_tab %}
+    <span class="visually-hidden">{{ opens_in_new_tab_label }}</span>
+  {% endif %}
 {% endif %}
   
