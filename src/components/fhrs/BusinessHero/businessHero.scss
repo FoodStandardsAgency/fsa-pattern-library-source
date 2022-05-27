@@ -11,6 +11,14 @@
     margin: 0;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--fsa__grey-hover);
+
+    span {
+      @include body;
+
+      color: var(--fsa-tertiary_light-black);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__content {
