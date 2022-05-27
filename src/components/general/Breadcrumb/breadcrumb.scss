@@ -166,7 +166,7 @@ $mobileOverlayWidth: 0.75rem;
       width: 0.75rem;
       margin-top: 0.45rem;
       height: 0.5rem;
-      background-image: url("./assets/arrow.svg");
+      background-image: svg-load("./assets/arrow.svg");
       background-repeat: no-repeat;
       transition: transform var(--transition-time) ease-out;
     }

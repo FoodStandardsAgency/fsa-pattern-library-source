@@ -2,33 +2,33 @@
 
 @mixin prefix-svg($name) {
   &::before {
-    content: url("./assets/#{$name}/#{$name}-green.svg");
+    content: svg-load("./assets/#{$name}/#{$name}-green.svg");
   }
 
   &:hover::before {
-    content: url("./assets/#{$name}/#{$name}-dark-green.svg");
+    content: svg-load("./assets/#{$name}/#{$name}-dark-green.svg");
   }
 
   &:focus::before {
-    content: url("./assets/#{$name}/#{$name}-black.svg");
+    content: svg-load("./assets/#{$name}/#{$name}-black.svg");
   }
 }
 
 @mixin prefix-svg-mobile($name) {
   &::before {
-    content: url("./assets/#{$name}/#{$name}-white.svg");
+    content: svg-load("./assets/#{$name}/#{$name}-white.svg");
     height: 1rem;
     width: 1rem;
   }
 
   &:hover::before {
-    content: url("./assets/#{$name}/#{$name}-white.svg");
+    content: svg-load("./assets/#{$name}/#{$name}-white.svg");
     height: 1rem;
     width: 1rem;
   }
 
   &:focus::before {
-    content: url("./assets/#{$name}/#{$name}-black.svg");
+    content: svg-load("./assets/#{$name}/#{$name}-black.svg");
     height: 1rem;
     width: 1rem;
   }
@@ -274,15 +274,15 @@
     background-size: contain;
 
     &--english {
-      background-image: url("./assets/logo/logo-en.svg");
+      background-image: svg-load("./assets/logo/logo-en.svg");
     }
 
     &--welsh {
-      background-image: url("./assets/logo/logo-cy.svg");
+      background-image: svg-load("./assets/logo/logo-cy.svg");
     }
 
     &--secondary-logo {
-      background-image: url("./assets/logo/my-haccp-logo.svg");
+      background-image: svg-load("./assets/logo/my-haccp-logo.svg");
 
       @media screen and (min-width: $fsa-md) {
         margin-left: 2rem;
@@ -534,7 +534,7 @@
   }
 
   &__search-svg {
-    background-image: url("./assets/search/search-green.svg");
+    background-image: svg-load("./assets/search/search-green.svg");
     background-repeat: no-repeat;
     background-size: contain;
     height: 1.75rem;
@@ -610,7 +610,7 @@
       overflow-x: hidden;
 
       .header__logo-svg--secondary-logo {
-        background-image: url("./assets/logo/my-haccp-logo-white.svg");
+        background-image: svg-load("./assets/logo/my-haccp-logo-white.svg");
       }
 
       .header__search-bar--icon {
@@ -624,7 +624,7 @@
           background-color: var(--fsa-primary_dark-green);
 
           .header__search-svg {
-            background-image: url("./assets/search/search-white.svg");
+            background-image: svg-load("./assets/search/search-white.svg");
           }
         }
       }
@@ -663,11 +663,11 @@
 
       .header__logo-svg {
         &--english {
-          background-image: url("./assets/logo/logo-en-white.svg");
+          background-image: svg-load("./assets/logo/logo-en-white.svg");
         }
 
         &--welsh {
-          background-image: url("./assets/logo/logo-cy-white.svg");
+          background-image: svg-load("./assets/logo/logo-cy-white.svg");
         }
       }
 

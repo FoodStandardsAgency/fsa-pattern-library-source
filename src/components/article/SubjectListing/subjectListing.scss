@@ -78,7 +78,7 @@
 
         &::before {
           content: "";
-          background-image: url("./assets/arrow.svg");
+          background-image: svg-load("./assets/arrow.svg");
           display: inline-block;
           width: 1.75rem;
           height: 1rem;
@@ -95,7 +95,7 @@
           color: var(--fsa__link-green);
 
           &::before {
-            background-image: url("./assets/arrow-hover.svg");
+            background-image: svg-load("./assets/arrow-hover.svg");
           }
         }
       }

@@ -29,7 +29,7 @@
     }
 
     &-arrow {
-      background-image: url("./assets/arrow-down.svg");
+      background-image: svg-load("./assets/arrow-down.svg");
       background-repeat: no-repeat;
       content: "";
       top: 0;

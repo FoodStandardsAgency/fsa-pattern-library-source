@@ -11,7 +11,7 @@
 
   & #{$child}#{$position} {
     content: "";
-    background-image: url("./assets/#{$orientation}/arrow.svg");
+    background-image: svg-load("./assets/#{$orientation}/arrow.svg");
     display: inline-block;
     width: 1.75rem;
     height: 1rem;
@@ -21,10 +21,10 @@
     vertical-align: middle;
   }
   &:hover #{$child}#{$position} {
-    background-image: url("./assets/#{$orientation}/arrow-hover.svg");
+    background-image: svg-load("./assets/#{$orientation}/arrow-hover.svg");
   }
   &:focus #{$child}#{$position} {
-    background-image: url("./assets/#{$orientation}/arrow-focus.svg");
+    background-image: svg-load("./assets/#{$orientation}/arrow-focus.svg");
   }
 }
 

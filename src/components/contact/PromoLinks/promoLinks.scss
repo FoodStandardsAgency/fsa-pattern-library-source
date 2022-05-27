@@ -102,7 +102,7 @@
   }
 
   &__arrow {
-    background-image: url("./assets/lg-arrow.svg");
+    background-image: svg-load("./assets/lg-arrow.svg");
     min-width: 2.5rem;
     height: 2rem;
     background-repeat: no-repeat;

@@ -104,7 +104,7 @@
     align-items: center;
 
     &__arrow {
-      background-image: url("./assets/arrow.svg");
+      background-image: svg-load("./assets/arrow.svg");
       background-repeat: no-repeat;
       background-position: bottom;
       width: 0.875rem;
@@ -128,7 +128,7 @@
 
     &--open {
       display: block;
-      background-image: url("./assets/google-maps-placeholder.png");
+      background-image: svg-load("./assets/google-maps-placeholder.png");
       height: 520px;
       margin-top: 1rem;
       width: 100%;

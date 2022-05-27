@@ -13,7 +13,7 @@
       border-left: 0.25rem solid var(--fsa-primary_mid-green);
 
       p {
-        background-image: url("./assets/success.svg");
+        background-image: svg-load("./assets/success.svg");
       }
     }
 
@@ -21,7 +21,7 @@
       border-left: 0.25rem solid var(--fsa-secondary_mid-red);
 
       p {
-        background-image: url("./assets/error.svg");
+        background-image: svg-load("./assets/error.svg");
       }
     }
 
@@ -29,7 +29,7 @@
       border-left: 0.25rem solid var(--fsa-secondary_mid-yellow);
 
       p {
-        background-image: url("./assets/warning.svg");
+        background-image: svg-load("./assets/warning.svg");
       }
     }
   }
