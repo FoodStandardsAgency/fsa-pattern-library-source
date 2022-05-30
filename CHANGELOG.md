@@ -33,6 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Adjust the ratings search box layout so that the inputs are inline
+- Add a second version of the ratings search box for local authority searches
+- Add subtitle option to titleAndText component
 
 ### Deprecated
 -
@@ -41,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Improved accessibility on ratings search box (use button instead of link)
 
 ### Security
 -

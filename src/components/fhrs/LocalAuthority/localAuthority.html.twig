@@ -1,7 +1,9 @@
 {% set mail_to_email = "mailto:" ~ email_address %}
 
 <div class="local-authority">
+  {% if local_authority %}
   <h2 class="local-authority__title">{{ local_authority }}</h2>
+  {% endif %}
   <div class="local-authority__wrapper">
     <div class="local-authority__content">
       <div class="local-authority__text">

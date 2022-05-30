@@ -1,5 +1,10 @@
 {% if title and tag %}
-  <{{ tag }} class="form-title {{ class }}{{ underlined ? " form-title--underlined" : "" }}">{{ title }}</{{ tag }}>
+  <{{ tag }} class="form-title {{ class }}{{ underlined ? " form-title--underlined" : "" }}">
+  {{ title }}
+  {% if subtitle %}
+    <span class="form-title__subtitle">{{ subtitle }}</span>
+  {% endif %}
+  </{{ tag }}>
 {% endif %}
 {% if description %}
   <div class="form-description">{{ description|raw }}</div>
