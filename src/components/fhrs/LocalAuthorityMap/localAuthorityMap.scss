@@ -1,0 +1,29 @@
+@import "src/lib.scss";
+
+.local-authority-map {
+  &__placeholder {
+    width: 650px;
+    height: 891px;
+  }
+
+  &--hidden {
+    position: relative;
+    img {
+      opacity: 0;
+      z-index: 2;
+    }
+  }
+
+  $regions: wales, east-counties, east-midlands, london, north-east, north-west, northern-ireland, scotland, south-east,
+    south-west, west-midlands, yorkshire-and-humberside;
+
+  @each $region in $regions {
+    &--#{$region}:before {
+      content: url("./assets/fhrs-#{$region}.svg");
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+}
