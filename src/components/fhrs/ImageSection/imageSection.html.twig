@@ -1,0 +1,41 @@
+<div class="image-section">
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: title,
+    tag: "h2",
+    description: description,
+  } %}
+  <div class="image-section__badges">
+    <div class="image-section__group image-section__group--fhrs">
+      {% for badge in fhrs_badges %}
+        {% include "@components/components/fhrs/Badge/badge.html.twig" with {
+          class_name: badge.class_name,
+          rating: badge.rating,
+          welsh: welsh,
+          version: badge.version,
+        } %}
+      {% endfor %}
+    </div>
+    <div class="image-section__group image-section__group--fhis">
+      {% for badge in fhis_badges %}
+        {% include "@components/components/fhrs/Badge/badge.html.twig" with {
+          class_name: badge.class_name,
+          rating: badge.rating,
+          welsh: welsh,
+          version: badge.version,
+        } %}
+      {% endfor %}
+    </div>
+  </div>
+  {% if download_link and download_text %}
+    <div class="image-section__link">
+      {% include "@components/components/general/Link/link.html.twig" with {
+        link_text: download_text,
+        link_url: download_link,
+      } %}
+      <span>
+        ({{ filesize }})
+      </span>
+    </div>
+
+  {% endif %}
+</div>

@@ -1,4 +1,4 @@
-<div class="fhrs-search-card">
+<article class="fhrs-search-card">
   <div class="fhrs-search-card__left">
     <h2 class="fhrs-search-card__name">
       <a href="{{ business_link }}">{{ business_name }}</a>
@@ -32,6 +32,7 @@
         class_name: "fhrs-search-card",
         rating: rating,
         welsh: welsh,
+        version: fhis ? 1 : 3,
     } %}
     {% if status_summary and status_description %}
       <p class="fhrs-search-card__status">
@@ -40,4 +41,4 @@
       </p>
     {% endif %}
   </div>
-</div>
+</article>

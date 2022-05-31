@@ -16,7 +16,7 @@
   }
 
   &__map {
-    background-image: url("./assets/google-maps-placeholder.png");
+    background-image: svg-load("./assets/google-maps-placeholder.png");
     height: 520px;
     margin-top: 1rem;
     width: 100%;

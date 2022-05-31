@@ -27,6 +27,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
+## [0.1.10] - 2022-05-31 (new FHRS badge download component and fixes to the search box layouts)
+
+### Added
+- Add new badge download component
+
+### Changed
+- Adjust the ratings search box layout so that the inputs are inline
+- Use unique ID for subgroups in navigation
+
+
 ## [0.1.9] - 2022-05-25 (new FHRS components and bugfixes on existing PL components)
 
 ### Added

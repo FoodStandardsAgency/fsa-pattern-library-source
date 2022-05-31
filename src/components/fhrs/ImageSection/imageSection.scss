@@ -1,0 +1,50 @@
+@import "src/lib.scss";
+@include fhrs-badges("image-section");
+
+.image-section {
+  &__badge {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+
+    &::before {
+      max-width: 100%;
+    }
+  }
+
+  &__group--fhis &__badge {
+    margin-left: 0.5rem;
+
+    &:first-child,
+    &:nth-child(2) {
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: $fsa-md) {
+      &:nth-child(2) {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  &__group--fhrs &__badge {
+    &:last-child {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    @media screen and (min-width: $fsa-md) {
+      &--fhrs {
+        max-width: 30rem;
+      }
+
+      &--fhis {
+        max-width: 40rem;
+      }
+    }
+  }
+}

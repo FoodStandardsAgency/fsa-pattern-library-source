@@ -74,7 +74,7 @@
 
       a {
         &::before {
-          background-image: url("./assets/arrow.svg");
+          background-image: svg-load("./assets/arrow.svg");
         }
       }
     }
@@ -98,13 +98,13 @@
         }
 
         &::before {
-          background-image: url("./assets/printer.svg");
+          background-image: svg-load("./assets/printer.svg");
         }
       }
 
       a {
         &::before {
-          background-image: url("./assets/printer.svg");
+          background-image: svg-load("./assets/printer.svg");
         }
       }
     }

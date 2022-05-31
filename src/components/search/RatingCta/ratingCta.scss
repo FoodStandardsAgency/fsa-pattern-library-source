@@ -31,7 +31,7 @@
           top: 0.2rem;
           left: 1rem;
           position: relative;
-          background-image: url("./assets/cta-arrow.svg");
+          background-image: svg-load("./assets/cta-arrow.svg");
           background-repeat: no-repeat;
         }
       }

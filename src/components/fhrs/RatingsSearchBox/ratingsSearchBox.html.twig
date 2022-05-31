@@ -46,21 +46,23 @@
       underlined: true,
     } %}
   </div>
-  <div class="ratings-search-box__business-name">
-    {% include '@components/components/form/InputField/inputField.html.twig' with {
-      id: 'business-name-search',
-      name: 'business-name-search',
-      label: business_name_label,
-      type: 'text',
-    } %}
-  </div>
-  <div class="ratings-search-box__location-search">
-    {% include '@components/components/form/InputField/inputField.html.twig' with {
-      id: 'address-search',
-      name: 'address-search',
-      label: address_search_label,
-      type: 'text',
-    } %}
+  <div class="ratings-search-box__search-inputs">
+    <div class="ratings-search-box__business-name ratings-search-box__search-inputs__left">
+      {% include '@components/components/form/InputField/inputField.html.twig' with {
+        id: 'business-name-search',
+        name: 'business-name-search',
+        label: business_name_label,
+        type: 'text',
+      } %}
+    </div>
+    <div class="ratings-search-box__location-search ratings-search-box__search-inputs__right">
+      {% include '@components/components/form/InputField/inputField.html.twig' with {
+        id: 'address-search',
+        name: 'address-search',
+        label: address_search_label,
+        type: 'text',
+      } %}
+    </div>
   </div>
   <div class="ratings-search-box__toggle-area">
     <div class="ratings-search-box__toggle-area__left">

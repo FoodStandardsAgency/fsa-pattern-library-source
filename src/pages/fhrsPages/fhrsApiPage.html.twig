@@ -1,0 +1,174 @@
+{% extends '@components/layout/fhrsLayout/fhrsLayout.html.twig' %}
+
+{% block top %}
+  {% include '@components/components/general/SkipToMainContent/skipToMainContent.html.twig' with {
+    link_text: 'Skip to main content',
+    href: '#main-content',
+  } %}
+
+  {% include '@components/components/general/Header/header.html.twig' with {
+    english: true,
+    english_link: '#',
+    english_label: 'English',
+    welsh_link: '#',
+    welsh_label: 'Cymraeg',
+    logo_link: '#',
+    logo_label: 'Food Standards Agency - Frontpage',
+    contact_link: '#',
+    contact_label: 'Contact',
+    report_link: '#',
+    report_label: 'Report',
+    ratings_link: '#',
+    ratings_label: 'Food hygiene ratings',
+    search_label: 'Search Food Standards Agency',
+    search_link: '#',
+    search_bar_visible: true,
+    menu_label: 'menu',
+    navigation: navigation_content,
+    temporary_message: {
+      message: '<p><a href="#" class="external-link">Coronavirus (COVID 19):</a> Guidance and support</p>',
+    }
+  } %}
+{% endblock %}
+{% block content %}
+  {% include '@components/components/fhrs/BusinessHero/businessHero.html.twig' with {
+    name: "UK food hygiene rating data API",
+  } %}
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: "<p>The food hygiene rating data published at <a href='#'>www.food.gov.uk/ratings</a>
+    are available via an application programming interface (API) in XML and JSON formats. This is a free service and
+    there is no need to register to use it. Terms and conditions apply (see link below), and guidance for developers
+    is available.</p>",
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: "Terms and conditions",
+    tag: "h2",
+    description: "<p><a href='#'>Read the terms and conditions of using the data and images. </a></p>",
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: "About the data",
+    tag: "h2",
+    description: "<p>The data provide the food hygiene rating or inspection result given to a business and reflect the
+     standards of food hygiene found on the date of inspection or visit by the local authority. Businesses include
+     restaurants, pubs, cafés, takeaways, hotels and other places consumers eat, as well as supermarkets and other food
+     shops.</p>
+     <p>The data are held on behalf of local authorities participating in either the Food Standards Agency's:</p>
+        <ul>
+            <li>national Food Hygiene Rating Scheme (FHRS) in England, Northern Ireland and Wales, or </li>
+            <li>the Food Hygiene Information Scheme (FHIS) in Scotland</li>
+        </ul>
+     <p>Data are only available for local authority areas running either of these schemes. <a href='#'>See a list of
+     local authorities running the FHRS or FHIS</a></p>",
+  } %}
+  {% include '@components/components/fhrs/ImageSection/imageSection.html.twig' with {
+    title: 'Images',
+    description: '<p>A set of hygiene rating images is available to be used with the API data. The images must only ' +
+    'be used in accordance with the <a href="#">FHRS/FHIS Brand Standard and the terms and conditions</a>.</p>\n' +
+    '<p>Examples of hygiene rating images, and the sizes available, that can be used with the API data:</p>',
+    welsh: false,
+    download_link: '#',
+    download_text: 'Download new high resolution FHRS badges',
+    filesize: '559.42 KB',
+    fhrs_badges: [
+      {
+        class_name: 'image-section',
+        rating: 5,
+        version: 3,
+      },
+      {
+        class_name: 'image-section',
+        rating: 5,
+        version: 1,
+      },
+      {
+        class_name: 'image-section',
+        rating: 5,
+        version: 2,
+      },
+      {
+        class_name: 'image-section',
+        rating: 5,
+        version: 4,
+      },
+      {
+        class_name: 'image-section',
+        rating: 5,
+        version: 5,
+      },
+    ],
+    fhis_badges: [
+      {
+        class_name: 'image-section',
+        rating: 'Pass',
+        version: 1,
+      },
+      {
+        class_name: 'image-section',
+        rating: 'Pass',
+        version: 2,
+      },
+      {
+        class_name: 'image-section',
+        rating: 'Pass',
+        version: 3,
+      },
+    ],
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: "Legacy low resolution online sticker",
+    tag: "h2",
+    description: "<p>Here is a link to legacy low resolution images. We would however recommend you use one of the
+    latest high resolution badges above.<p/><p><a href='#'>Download legacy low resolution images</a> (559.42 KB)</p>",
+  } %}
+{% endblock %}
+{% block footer %}
+  {% include '@components/components/general/Footer/footer.html.twig' with {
+    footer_links: 'Footer links',
+    new_window: 'Open in a new window',
+    menu_links: [
+      {
+        link: { label: 'Copyright', href: '#', external: false },
+      },
+      {
+        link: { label: 'Accessibility', href: '#', external: false },
+      },
+      {
+        link: { label: 'Freedom of information', href: '#', external: false },
+      },
+      {
+        link: { label: 'Terms and conditions', href: '#', external: false },
+      },
+      {
+        link: { label: 'Privacy', href: '#', external: false },
+      },
+      {
+        link: {
+        label: 'Personal information charter',
+        href: '#',
+        external: false,
+      },
+      },
+      {
+        link: { label: 'Feedback and complaints', href: '#', external: false },
+      },
+      {
+        link: { label: 'Cookies', href: '#', external: false },
+      },
+      {
+        link: { label: 'Data', href: '#', external: false },
+      },
+      {
+        link: { label: 'GOV.UK', href: '#', external: true },
+      },
+    ],
+    social_media: 'Food Standards Agency on social media',
+    social_links: [
+      { label: 'Facebook', external: true, href: '#', svg: social_svgs.facebook },
+      { label: 'Twitter', external: true, href: '#', svg: social_svgs.twitter },
+      { label: 'LinkedIn', external: true, href: '#', svg: social_svgs.linkedin },
+      { label: 'Youtube', external: true, href: '#', svg: social_svgs.youtube },
+      { label: 'Instagram', external: true, href: '#', svg: social_svgs.instagram },
+      { label: 'FSA blog', external: false, href: '#', svg: social_svgs.blog },
+    ],
+  } %}
+{% endblock %}

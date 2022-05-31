@@ -31,7 +31,7 @@
       background-color: var(--fsa-primary_black);
 
       &::after {
-        background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
+        background-image: svg-load("/src/components/general/ExternalLink/assets/external-white.svg");
       }
     }
 
@@ -59,7 +59,7 @@
 
     .temporary-message__content {
       &::before {
-        background-image: url("./assets/warning-white.svg");
+        background-image: svg-load("./assets/warning-white.svg");
       }
 
       a {
@@ -90,7 +90,7 @@
 
     &::before {
       content: "";
-      background-image: url("./assets/warning-black.svg");
+      background-image: svg-load("./assets/warning-black.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;

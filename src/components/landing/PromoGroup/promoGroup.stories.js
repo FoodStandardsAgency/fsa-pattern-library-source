@@ -141,8 +141,8 @@ multipleLinks.args = {
   ],
 };
 
-export const FHRS = Template.bind({});
-FHRS.args = {
+export const DescriptionWithNoImage = Template.bind({});
+DescriptionWithNoImage.args = {
   title: 'About food hygiene ratings',
   description:
     'The information on businesses is held on behalf of local authorities in England, Northern Ireland, Wales and Scotland. Any queries about individual businesses should be directed to the appropriate <a href="#">local authority</a>.',
