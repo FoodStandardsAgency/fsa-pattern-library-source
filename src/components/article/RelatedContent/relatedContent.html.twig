@@ -1,7 +1,9 @@
 <div class="related-content">
   <div class="related-content__grid-container">
     <div class="related-content__grid-row">
-      <h2 class="related-content__main-heading">{{ title }}</h2>
+      {% if title %}
+        <h2 class="related-content__main-heading">{{ title }}</h2>
+      {% endif %}
       {% if text is not empty %}
         <p class="related-content__main-text">{{ text }}</p>
       {% endif %}

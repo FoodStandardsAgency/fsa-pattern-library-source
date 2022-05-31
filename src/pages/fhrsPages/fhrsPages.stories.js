@@ -28,15 +28,11 @@ export const FHRSSearch = () => {
   return fhrsSearch();
 };
 
-export const FHRSCompanyDigitalBadge = () => {
-  return fhrsCompanyDigitalBadge();
-};
-
-const Template = (args) => {
+const ApiPage = (args) => {
   return fhrsApiPage(args);
 };
 
-export const FhrsApiPage = Template.bind({});
+export const FhrsApiPage = ApiPage.bind({});
 FhrsApiPage.storyName = 'FHRS API';
 FhrsApiPage.args = {
   navigation_content: navigation,
@@ -56,4 +52,13 @@ FhrsApiPage.args = {
     instagram: social_svgs.instagram,
     blog: social_svgs.blog,
   },
+};
+
+const BadgePage = (args) => {
+  return fhrsCompanyDigitalBadge(args);
+};
+
+export const FHRSCompanyDigitalBadgePage = BadgePage.bind({});
+FHRSCompanyDigitalBadgePage.args = {
+  ...FhrsApiPage.args,
 };
