@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Adjust the ratings search box layout so that the inputs are inline
+- Use unique ID for subgroups in navigation 
 
 ### Deprecated
 -
