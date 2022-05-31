@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- A new param for the search bar to exclude form html from the output for embedding into other forms.
 
 ### Changed
 -
@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fixed incorrect handling of default value for the search bar.
 
 ### Security
 -
