@@ -1,11 +1,15 @@
+{% if not skip_form %}
 <form class="search-bar" action="{{ search_link }}" autocomplete="off">
+{% endif %}
   <label class="search-bar__label" for="search">{{ search_text }}</label>
   {% if default_value is defined %}
-    <input class="search-bar__box{{ defaultValue != "" ? " search-bar__box--has-content" : "" }}" defaultValue="{{ defaultValue }}" name="keywords" type="search" id="search" data-fsa-at="search-input">
+    <input class="search-bar__box{{ default_value != "" ? " search-bar__box--has-content" : "" }}" value="{{ default_value }}" name="keywords" type="search" id="search" data-fsa-at="search-input">
   {% else %}
     <input class="search-bar__box" value="{{ search_value }}" name="keywords" type="search" id="search" data-fsa-at="search-input">
   {% endif %}
   <button class="search-bar__submit" aria-label="search" data-fsa-at="search-submit">
     <span class="search-bar__span visually-hidden">{{ search_text }}</span>
   </button>
+{% if not skip_form %}
 </form>
+{% endif %}

@@ -1,5 +1,6 @@
 import ratingsSearchBox from './ratingsSearchBox.html.twig';
 import './ratingsSearchBox.scss';
+import logo from '@components/components/fhrs/LocalAuthority/coventryGovLogo';
 
 export default {
   title: 'Components/FHRS/Ratings Search Box',
@@ -22,6 +23,7 @@ RatingsSearchBox.args = {
   search_map_results_label: 'Search results with map',
   hide_map_results_label: 'Hide results with map',
   more_options_label: 'More search options',
+  fewer_options_label: 'Fewer search options',
   local_authority_link: {
     url: '#',
     title: 'Search a local authority area',
@@ -186,4 +188,95 @@ RatingsSearchBox.args = {
     },
   ],
   submit_button_label: 'Submit',
+};
+
+export const LocalAuthorityRatingsSearchBox = Template.bind({});
+LocalAuthorityRatingsSearchBox.args = {
+  title_prefix: 'Search the',
+  title_suffix: 'area',
+  subtitle_prefix: 'The data is provided by',
+  council_name: 'Coventry City Council',
+  area: 'Coventry',
+  business_name_label: 'Business name',
+  address_search_label: 'Street, town or postcode',
+  location_label: 'Use my location',
+  blocked_location_label: 'Cannot use your location',
+  search_map_results_label: 'Search results with map',
+  hide_map_results_label: 'Hide results with map',
+  more_options_label: 'More search options',
+  local_authority_link: {
+    url: '#',
+    title: 'Search a different area',
+  },
+  search_all_data_link: {
+    url: '#',
+    title: 'Search all data',
+  },
+  fewer_options_label: 'Fewer search options',
+  left: [
+    {
+      type: 'dropdown',
+      title: 'Business type',
+      name: 'business_type',
+      id: 'business-type',
+      options: [
+        {
+          text: 'All',
+          value: 'all',
+        },
+        {
+          text: 'Distributors/Transporters',
+          value: '1',
+        },
+        {
+          text: 'Farmers/Growers',
+          value: '2',
+        },
+      ],
+      default: 'all',
+    },
+  ],
+  right: [
+    {
+      type: 'dropdown',
+      title: 'Hygiene rating',
+      name: 'hygiene_rating',
+      id: 'hygiene-rating',
+      options: [
+        {
+          text: 'All',
+          value: 'all',
+        },
+        {
+          text: '5',
+          value: '5',
+        },
+        {
+          text: '4',
+          value: '4',
+        },
+        {
+          text: '3',
+          value: '3',
+        },
+        {
+          text: '2',
+          value: '2',
+        },
+        {
+          text: '1',
+          value: '1',
+        },
+      ],
+      default: 'all',
+    },
+  ],
+  submit_button_label: 'Submit',
+  local_authority_section: {
+    website_title: 'Website',
+    website_url: 'www.coventry.gov.uk',
+    email_title: 'Email',
+    email_address: 'ehcommercial@coventry.gov.uk',
+    logo_svg: logo,
+  },
 };

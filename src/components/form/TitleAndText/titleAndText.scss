@@ -3,6 +3,14 @@
 .form-title {
   margin: 2rem 0 0;
   overflow-wrap: break-word;
+
+  &__subtitle {
+    @include body;
+
+    display: block;
+    margin-top: 1rem;
+    color: var(--fsa-primary_black);
+  }
 }
 
 h1.form-title,

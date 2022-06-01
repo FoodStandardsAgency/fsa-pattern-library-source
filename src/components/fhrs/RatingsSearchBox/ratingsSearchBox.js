@@ -77,16 +77,23 @@ export default function () {
     const additionalOptions = ratingsSearchBox.querySelector(
       '.ratings-search-box__additional-options'
     );
+    const moreOptionsLabel = additionalOptionsLink.querySelector(
+      '.ratings-search-box__more-search-options__label'
+    );
+    const moreOptionsLabelText = moreOptionsLabel.innerHTML;
     additionalOptionsLink.addEventListener('click', (e) => {
       e.preventDefault();
+      const fewerOptionsLabelText = additionalOptionsLink.getAttribute('data-fewer-options-label');
       additionalOptions.classList.toggle('ratings-search-box__additional-options--open');
       additionalOptionsLinkArrow.classList.toggle(
         'ratings-search-box__more-search-options__arrow--open'
       );
       if (additionalOptions.getAttribute('aria-expanded') === 'true') {
         additionalOptions.ariaExpanded = 'false';
+        moreOptionsLabel.innerHTML = moreOptionsLabelText;
       } else {
         additionalOptions.ariaExpanded = 'true';
+        moreOptionsLabel.innerHTML = fewerOptionsLabelText;
       }
     });
   }
