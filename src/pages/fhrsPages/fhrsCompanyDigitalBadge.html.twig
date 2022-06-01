@@ -757,9 +757,19 @@
       rating: 5,
     } %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
-    title: 'High resolution FHRS online sticker',
+    title: 'How to display a rating online',
     description:
-    '<p>You can display your rating on your website. Choose from the options below. If you use the code your rating will update automatically if your rating changes. If you download an image you will need to update this manually by updating the image if your rating changes.</p>',
+    '<p>We provide a selection of online food hygiene rating formats for use across websites, apps, social media and
+    emails.</p><p>If you are displaying your rating online, we recommend you embed the javascript code where possible.
+    This is because the code is developed to update automatically if your score changes. It is a one-off implementation.
+    </p><p>If you choose to download the image file and upload directly, you will need to make sure to update the online
+     rating should it change in the future.</p><p><a href="#"> Guidance on the requirements for online display of your
+     food hygiene rating is available</a></p>',
+    tag: 'h2',
+    class: 'legacy-badge-title',
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: 'High resolution online rating',
     tag: 'h2',
     class: 'legacy-badge-title',
   } %}
@@ -824,4 +834,74 @@
       tag: 'h2',
       class: 'legacy-badge-title',
     } %}
+{% endblock %}
+{% block footer %}
+  {% include '@components/components/article/RelatedContent/relatedContent.html.twig' with {
+    cards: [
+      {
+        title: 'Download data',
+        description: 'Re-usable hygiene rating data',
+        link: '#',
+      },
+      {
+        title: 'Food problem?',
+        description: 'Consumers, businesses and enforcers can report issues',
+        link: '#',
+      },
+      {
+        title: 'Be updated',
+        description: 'Get email and text updates. Follow us',
+        link: '#',
+      },
+    ],
+  } %}
+  {% include '@components/components/general/Footer/footer.html.twig' with {
+    footer_links: 'Footer links',
+    new_window: 'Open in a new window',
+    menu_links: [
+      {
+        link: { label: 'Copyright', href: '#', external: false },
+      },
+      {
+        link: { label: 'Accessibility', href: '#', external: false },
+      },
+      {
+        link: { label: 'Freedom of information', href: '#', external: false },
+      },
+      {
+        link: { label: 'Terms and conditions', href: '#', external: false },
+      },
+      {
+        link: { label: 'Privacy', href: '#', external: false },
+      },
+      {
+        link: {
+        label: 'Personal information charter',
+        href: '#',
+        external: false,
+      },
+      },
+      {
+        link: { label: 'Feedback and complaints', href: '#', external: false },
+      },
+      {
+        link: { label: 'Cookies', href: '#', external: false },
+      },
+      {
+        link: { label: 'Data', href: '#', external: false },
+      },
+      {
+        link: { label: 'GOV.UK', href: '#', external: true },
+      },
+    ],
+    social_media: 'Food Standards Agency on social media',
+    social_links: [
+      { label: 'Facebook', external: true, href: '#', svg: social_svg.facebook },
+      { label: 'Twitter', external: true, href: '#', svg: social_svg.twitter },
+      { label: 'LinkedIn', external: true, href: '#', svg: social_svg.linkedin },
+      { label: 'Youtube', external: true, href: '#', svg: social_svg.youtube },
+      { label: 'Instagram', external: true, href: '#', svg: social_svg.instagram },
+      { label: 'FSA blog', external: false, href: '#', svg: social_svg.blog },
+    ],
+  } %}
 {% endblock %}
