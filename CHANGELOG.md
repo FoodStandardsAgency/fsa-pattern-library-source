@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- A new param for the search bar to exclude form html from the output for embedding into other forms.
 
 ### Changed
 - Adjust the ratings search box layout so that the inputs are inline
@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
+- Fixed incorrect handling of default value for the search bar.
 - Fix broken text on fhrs api page
 - Update margins on image section component
 - Improved accessibility on ratings search box (use button instead of link)
