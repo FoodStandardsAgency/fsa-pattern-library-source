@@ -1,6 +1,11 @@
 <div class="business-hero">
   <div class="business-hero__header">
-    <h1 class="business-hero__title">{{ name }}</h1>
+    <h1 class="business-hero__title">
+      {% if name_prefix %}
+        <span>{{ name_prefix }}</span>
+      {% endif %}
+      {{ name }}
+    </h1>
   </div>
   {% if rating %}
   <div class="business-hero__content">

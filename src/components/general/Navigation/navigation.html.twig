@@ -34,10 +34,10 @@
                     </span>
                   </button>
                   <div class="navigation__submenu" role="region" aria-labelledby="{{ linkObj.link.label|trim|replace({' ': '-'})|lower }}">
-                    {% for group in linkObj.submenu %}
+                    {% for i, group in linkObj.submenu %}
                       <div class="navigation__group">
                         <p class="navigation__group-title navigation__group-title--desktop">{{ group.title }}</p>
-                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="{{ group.title|trim|replace({' ': '-'})|lower }}" title="{{ group.title }}">
+                        <button class="navigation__group-title navigation__group-title--mobile" aria-expanded="false" id="{{ 'submenu-' ~ i ~ '-' ~ group.title|trim|replace({' ': '-'})|lower }}" title="{{ group.title }}">
                           <span class="navigation__link__label">
                             {{ group.title }}
                           </span>
@@ -47,7 +47,7 @@
                             </svg>
                           </span>
                         </button>
-                        <div class="navigation__menu-wrapper" aria-labelledby="{{ group.title|trim|replace({' ': '-'})|lower }}">
+                        <div class="navigation__menu-wrapper" aria-labelledby="{{ 'submenu-' ~ i ~ '-' ~ group.title|trim|replace({' ': '-'})|lower }}">
                           <ul class="navigation__menu navigation__menu--level-2">
                             {% for submenuLinkObj in group.links %}
                               <li class="navigation__link{{ active ? ' navigation__link--active' : '' }}">
