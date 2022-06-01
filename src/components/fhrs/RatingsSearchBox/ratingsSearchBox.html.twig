@@ -41,11 +41,22 @@
 <form class="ratings-search-box">
   <div class="ratings-search-box__title">
     {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
-      title: title,
+      title: title_prefix ? title_prefix ~ " " ~ area ~ " " ~ title_suffix : title,
       tag: 'h1',
       underlined: true,
+      subtitle: subtitle_prefix ? subtitle_prefix ~ " " ~ council_name : '',
     } %}
   </div>
+  {% if local_authority_section is not empty %}
+  <div class="ratings-search-box__local-authority-section">
+    {% include '@components/components/fhrs/LocalAuthority/localAuthority.html.twig' with {
+      website_title: local_authority_section.website_title,
+      website_url: local_authority_section.website_url,
+      email_title: local_authority_section.email_title,
+      email_address: local_authority_section.email_address,
+      logo_svg: local_authority_section.logo_svg,
+    } %}
+  {% endif %}
   <div class="ratings-search-box__search-inputs">
     <div class="ratings-search-box__business-name ratings-search-box__search-inputs__left">
       {% include '@components/components/form/InputField/inputField.html.twig' with {
@@ -82,13 +93,16 @@
     </div>
     <div class="ratings-search-box__toggle-area__right">
       <a class="ratings-search-box__la-link" href="{{ local_authority_link.url }}">{{ local_authority_link.title }}</a>
-      <a class="ratings-search-box__more-search-options" href="#">
-        {{ more_options_label }}
+      {% if search_all_data_link.url and search_all_data_link.title %}
+        <a class="ratings-search-box__all-data-link" href="{{ search_all_data_link.url }}">{{ search_all_data_link.title }}</a>
+      {% endif %}
+      <button id="ratings-search-box__more-search-options-button" class="ratings-search-box__more-search-options" data-fewer-options-label="{{ fewer_options_label }}" aria-expanded="false">
+        <span class="ratings-search-box__more-search-options__label">{{ more_options_label }}</span>
         <span class="ratings-search-box__more-search-options__arrow"></span>
-      </a>
+      </button>
     </div>
   </div>
-  <div class="ratings-search-box__additional-options" aria-expanded="false">
+  <div class="ratings-search-box__additional-options" role="region" aria-labelledby="ratings-search-box__more-search-options-button">
     <div class="ratings-search-box__additional-options__left">
       {% for field in left %}
         {{ block('field_layout') }}
