@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [0.1.11] - 01-06-2022 (MyHACCP and FHRS component fixes)
+## [1.0.0] - 01-06-2022 (MyHACCP and FHRS component fixes)
 
 ### Added
 - A new param for the search bar to exclude form html from the output for embedding into other forms.
