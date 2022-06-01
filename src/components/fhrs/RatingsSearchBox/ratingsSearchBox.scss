@@ -16,6 +16,20 @@
 }
 
 .ratings-search-box {
+  // Reset button style
+  button {
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+    border: 0 solid transparent;
+    text-shadow: 0 0 0 transparent;
+    padding: 0;
+  }
+
+  button:hover {
+    box-shadow: 0 0 0 transparent;
+    text-shadow: 0 0 0 transparent;
+  }
+
   &__search-inputs {
     @media screen and (min-width: $fsa-md) {
       display: flex;
@@ -101,7 +115,12 @@
   }
 
   &__more-search-options {
+    @include body;
+    @include link;
+
     align-items: center;
+    margin-top: 0.5rem;
+    display: flex;
 
     &__arrow {
       background-image: svg-load("./assets/arrow.svg");
@@ -132,6 +151,12 @@
       height: 520px;
       margin-top: 1rem;
       width: 100%;
+    }
+  }
+
+  &__local-authority-section {
+    .local-authority {
+      margin-top: 1rem;
     }
   }
 }

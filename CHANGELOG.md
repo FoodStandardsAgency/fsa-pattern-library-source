@@ -35,6 +35,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Adjust the ratings search box layout so that the inputs are inline
 - Add title prefix option to business hero
+- Add a second version of the ratings search box for local authority searches
+- Add subtitle option to titleAndText component
 
 ### Deprecated
 -
@@ -45,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fix broken text on fhrs api page
 - Update margins on image section component
+- Improved accessibility on ratings search box (use button instead of link)
 
 ### Security
 -

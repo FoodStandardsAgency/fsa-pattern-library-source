@@ -1,6 +1,8 @@
 {% set spaceless_name = name|replace({" ": ""})|lower %}
 {% set id = spaceless_name %}
-<div {{ fieldset_id is defined ? 'id=' ~ fieldset_id : ""}} class="dropdown{{ error ? " dropdown--error" : "" }}{{ classes ? ' ' ~ classes : ''}}" aria-describedby="{{ description is defined ? id : "" }}">
+<div {{ fieldset_id is defined ? 'id=' ~ fieldset_id : "" }}
+        class="dropdown{{ error ? " dropdown--error" : "" }}{{ classes ? ' ' ~ classes : '' }}"
+        {{ description is defined ? "aria-describedby=" ~ id : '' }}>
   {% if title is defined %}
     <div class="{{ tooltip is defined ? "label-with-tooltip" : "" }}">
       <label for="{{ id }}" class="dropdown__label">
@@ -21,13 +23,14 @@
   {% endif %}
   <div class="dropdown__field">
     {% if states %}
-      <select name="{{ name }}" id="{{ id }}" class="dropdown__select" data-drupal-states="{{ states }}">
-    {% else %}
+    <select name="{{ name }}" id="{{ id }}" class="dropdown__select" data-drupal-states="{{ states }}">
+      {% else %}
       <select name="{{ name }}" id="{{ id }}" class="dropdown__select">
-    {% endif %}
-      {% for option in options %}
-        <option value="{{ option.value }}" data-value="{{ option.value }}" class="dropdown__option" {{ option.value == default ? "selected" : "" }}>{{ option.text }}</option>
-      {% endfor %}
-    </select>
+        {% endif %}
+        {% for option in options %}
+          <option value="{{ option.value }}" data-value="{{ option.value }}"
+                  class="dropdown__option" {{ option.value == default ? "selected" : "" }}>{{ option.text }}</option>
+        {% endfor %}
+      </select>
   </div>
 </div>
