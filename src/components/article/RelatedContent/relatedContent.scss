@@ -12,7 +12,7 @@
 
     &::after {
       content: "";
-      background-image: url("./assets/dot.svg");
+      background-image: svg-load("./assets/dot.svg");
       background-repeat: repeat-x;
       background-size: 1.5rem 0.5rem;
       width: 13rem;
@@ -84,7 +84,7 @@
 
     &::after {
       content: "";
-      background-image: url("./assets/arrow.svg");
+      background-image: svg-load("./assets/arrow.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;
@@ -107,7 +107,7 @@
       border-color: var(--fsa-primary_dark-green);
 
       &::after {
-        background-image: url("./assets/arrow-hover.svg");
+        background-image: svg-load("./assets/arrow-hover.svg");
       }
     }
   }

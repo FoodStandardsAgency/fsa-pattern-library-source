@@ -49,7 +49,7 @@
 
     &::before {
       content: "";
-      background-image: url("./assets/quote.svg");
+      background-image: svg-load("./assets/quote.svg");
       background-repeat: no-repeat;
       background-position: left;
       background-size: contain;

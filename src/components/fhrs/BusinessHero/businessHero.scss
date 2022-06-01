@@ -73,18 +73,18 @@
     background-size: 1.56rem auto;
 
     &--back {
-      background-image: url("./assets/arrow-back.svg");
+      background-image: svg-load("./assets/arrow-back.svg");
 
       &:hover {
-        background-image: url("./assets/arrow-back-hover.svg");
+        background-image: svg-load("./assets/arrow-back-hover.svg");
       }
     }
 
     &--forward {
-      background-image: url("./assets/arrow-forward.svg");
+      background-image: svg-load("./assets/arrow-forward.svg");
 
       &:hover {
-        background-image: url("./assets/arrow-forward-hover.svg");
+        background-image: svg-load("./assets/arrow-forward-hover.svg");
       }
     }
   }

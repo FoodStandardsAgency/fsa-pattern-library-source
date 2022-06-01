@@ -1,0 +1,47 @@
+<div class="badge-download">
+  {% for badge in badges %}
+    <div class="badge-download__badge-wrapper">
+      <div class="badge-download__badge">
+        {% include "@components/components/fhrs/Badge/badge.html.twig" with {
+          class_name: badge.class_name,
+          rating: badge.rating,
+          welsh: welsh,
+          version: badge.version,
+        } %}
+      </div>
+      <div class="badge-download__get-code">
+        <button id="badge-download-code-region--{{ loop.index }}" class="badge-download__code-button" aria-expanded="false">
+          {{ get_code }} - {{ badge.size }} {{ pixels }}
+        </button>
+        <div class="badge-download__code-wrapper" role="region" aria-labelledby="badge-download-code-region--{{ loop.index }}">
+          <div class="badge-download__code">
+            {% include "@components/components/form/Textarea/textarea.html.twig" with {
+              id: 'badge-download-code-textarea--' ~ loop.index,
+              name: 'badge-download',
+              label: js.label,
+              rows: js.rows,
+              value: js.value,
+              read_only: true,
+            } %}
+          </div>
+          <div class="badge-download__preview">
+            {% include "@components/components/general/Link/link.html.twig" with {
+              link_text: preview,
+              link_url: '#',
+              open_in_new_tab: true,
+            } %}
+          </div>
+        </div>
+      </div>
+      <div class="badge-download__get-image">
+        {% include "@components/components/general/Link/link.html.twig" with {
+          link_text: download_image ~ " - " ~ badge.size ~ " " ~ pixels,
+          link_url: badge.download_link,
+        } %}
+        <span>
+        ({{ badge.filesize }})
+      </span>
+      </div>
+    </div>
+  {% endfor %}
+</div>

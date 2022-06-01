@@ -34,7 +34,7 @@
       border-color: var(--fsa-primary_white);
 
       &::after {
-        background-image: url("/src/components/general/ExternalLink/assets/external-white.svg");
+        background-image: svg-load("/src/components/general/ExternalLink/assets/external-white.svg");
       }
     }
 
@@ -44,7 +44,7 @@
       background-color: var(--fsa-primary_white);
 
       &::after {
-        background-image: url("/src/components/general/ExternalLink/assets/external.svg");
+        background-image: svg-load("/src/components/general/ExternalLink/assets/external.svg");
       }
     }
 

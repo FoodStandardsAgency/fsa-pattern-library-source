@@ -121,7 +121,7 @@
 
     &::before {
       content: "";
-      background-image: url("./assets/arrow-right.svg");
+      background-image: svg-load("./assets/arrow-right.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;

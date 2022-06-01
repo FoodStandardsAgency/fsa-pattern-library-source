@@ -54,7 +54,7 @@
       display: none;
     }
 
-    background-image: url("./assets/arrow-down.svg");
+    background-image: svg-load("./assets/arrow-down.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem) center;
 

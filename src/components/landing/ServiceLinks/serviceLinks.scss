@@ -31,7 +31,7 @@
 
     &::after {
       content: "";
-      background-image: url("./assets/dot.svg");
+      background-image: svg-load("./assets/dot.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 12rem;
@@ -122,7 +122,7 @@
 
     &::before {
       content: "";
-      background-image: url("./assets/arrow-right.svg");
+      background-image: svg-load("./assets/arrow-right.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;
@@ -137,7 +137,7 @@
       color: var(--fsa__link-green);
 
       &::before {
-        background-image: url("./assets/arrow-hover.svg");
+        background-image: svg-load("./assets/arrow-hover.svg");
       }
     }
 
@@ -154,13 +154,13 @@
 
   &__anchor.external-link {
     &::before {
-      background-image: url("./assets/external.svg");
+      background-image: svg-load("./assets/external.svg");
       background-size: contain;
     }
 
     &:hover {
       &::before {
-        background-image: url("./assets/external-hover.svg");
+        background-image: svg-load("./assets/external-hover.svg");
         background-size: contain;
       }
     }

@@ -758,10 +758,151 @@
       name_prefix: 'Get online ratings for',
     } %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: 'How to display a rating online',
+    description:
+    '<p>We provide a selection of online food hygiene rating formats for use across websites, apps, social media and
+    emails.</p><p>If you are displaying your rating online, we recommend you embed the javascript code where possible.
+    This is because the code is developed to update automatically if your score changes. It is a one-off implementation.
+    </p><p>If you choose to download the image file and upload directly, you will need to make sure to update the online
+     rating should it change in the future.</p><p><a href="#"> Guidance on the requirements for online display of your
+     food hygiene rating is available</a></p>',
+    tag: 'h2',
+    class: 'legacy-badge-title',
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: 'High resolution online rating',
+    tag: 'h2',
+    class: 'legacy-badge-title',
+  } %}
+  {% include '@components/components/fhrs/BadgeDownload/badgeDownload.html.twig' with {
+    get_code: 'Get code',
+    pixels: 'pixels',
+    js: {
+      label: 'Copy and paste the code below into your page',
+      value:
+      '<script type="text/javascript" src="https://widget.ratings.food.gov.uk/fhrswidget.jss?FHRSID=390429&Culture=en-GB&version=2"></script>',
+      rows: 2,
+    },
+    preview: 'Preview',
+    download_image: 'Download image',
+    badges: [
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 3,
+        size: '259 x 145',
+        filesize: '124KB',
+        download_link: '#',
+      },
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 1,
+        size: '429 x 102',
+        filesize: '559.42KB',
+        download_link: '#',
+      },
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 2,
+        size: '480 x 100',
+        filesize: '559.42KB',
+        download_link: '#'
+      },
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 4,
+        size: '125 x 287',
+        filesize: '559.42KB',
+        download_link: '#'
+      },
+      {
+        class_name: 'badge-download',
+        rating: 5,
+        version: 5,
+        size: '190 x 175',
+        filesize: '559.42KB',
+        download_link: '#'
+      },
+    ],
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
       title: 'Legacy online rating code',
       description:
         '<p>The previous version of the online ratings has now been retired.</p><p>Use the code for the high resolution online ratings provided above if you are adding the online rating to a businesses website.</p><p>Use the online rating images provided above if you are sharing across your online or social portfolio.</p><p>The legacy code will remain active until [add date 12 month from launch], after this period it will be retired.</p>',
       tag: 'h2',
       class: 'legacy-badge-title',
     } %}
+{% endblock %}
+{% block footer %}
+  {% include '@components/components/article/RelatedContent/relatedContent.html.twig' with {
+    cards: [
+      {
+        title: 'Download data',
+        description: 'Re-usable hygiene rating data',
+        link: '#',
+      },
+      {
+        title: 'Food problem?',
+        description: 'Consumers, businesses and enforcers can report issues',
+        link: '#',
+      },
+      {
+        title: 'Be updated',
+        description: 'Get email and text updates. Follow us',
+        link: '#',
+      },
+    ],
+  } %}
+  {% include '@components/components/general/Footer/footer.html.twig' with {
+    footer_links: 'Footer links',
+    new_window: 'Open in a new window',
+    menu_links: [
+      {
+        link: { label: 'Copyright', href: '#', external: false },
+      },
+      {
+        link: { label: 'Accessibility', href: '#', external: false },
+      },
+      {
+        link: { label: 'Freedom of information', href: '#', external: false },
+      },
+      {
+        link: { label: 'Terms and conditions', href: '#', external: false },
+      },
+      {
+        link: { label: 'Privacy', href: '#', external: false },
+      },
+      {
+        link: {
+        label: 'Personal information charter',
+        href: '#',
+        external: false,
+      },
+      },
+      {
+        link: { label: 'Feedback and complaints', href: '#', external: false },
+      },
+      {
+        link: { label: 'Cookies', href: '#', external: false },
+      },
+      {
+        link: { label: 'Data', href: '#', external: false },
+      },
+      {
+        link: { label: 'GOV.UK', href: '#', external: true },
+      },
+    ],
+    social_media: 'Food Standards Agency on social media',
+    social_links: [
+      { label: 'Facebook', external: true, href: '#', svg: social_svg.facebook },
+      { label: 'Twitter', external: true, href: '#', svg: social_svg.twitter },
+      { label: 'LinkedIn', external: true, href: '#', svg: social_svg.linkedin },
+      { label: 'Youtube', external: true, href: '#', svg: social_svg.youtube },
+      { label: 'Instagram', external: true, href: '#', svg: social_svg.instagram },
+      { label: 'FSA blog', external: false, href: '#', svg: social_svg.blog },
+    ],
+  } %}
 {% endblock %}
