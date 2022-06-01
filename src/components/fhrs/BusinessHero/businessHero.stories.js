@@ -67,3 +67,9 @@ export const TitleOnly = Template.bind({});
 TitleOnly.args = {
   name: "Byrdie's African & Caribbean Cuisine",
 };
+
+export const WithPrefix = Template.bind({});
+WithPrefix.args = {
+  ...English.args,
+  name_prefix: 'Get online ratings for',
+};
