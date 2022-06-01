@@ -42,7 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fix broken text on fhrs api page
+- Update margins on image section component
 
 ### Security
 -
