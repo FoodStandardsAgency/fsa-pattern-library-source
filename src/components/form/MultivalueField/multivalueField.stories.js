@@ -9,8 +9,7 @@ const Template = (args) => multivalueField(args);
 
 export const MultivalueField = Template.bind({});
 MultivalueField.args = {
-  entity_name: 'Biological hazard',
-  add_another: 'Add another',
+  add_another: 'Add another biological hazard',
   id: 'email',
   name: 'email[]',
   label: 'Email or username',

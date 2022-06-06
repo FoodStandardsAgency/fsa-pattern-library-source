@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update text on FHRS Digital Badge page
+- Added more comprehensive translation options to the multigroup and multifield components.
 
 ### Deprecated
 -
