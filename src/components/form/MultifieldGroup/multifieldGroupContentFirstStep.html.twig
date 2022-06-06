@@ -43,8 +43,7 @@
     name: 'biological[]',
     id: 'biological',
     label: 'Biological',
-    entity_name: 'Biological hazard',
-    add_another: 'Add another',
+    add_another: 'Add another biological hazard',
   } %}
 
   {% include "@components/components/form/MultivalueField/multivalueField.html.twig" with {
@@ -52,24 +51,21 @@
     id: 'chemical',
     label: 'Chemical',
     values: chemical,
-    entity_name: 'Biological hazard',
-    add_another: 'Add another',
+    add_another: 'Add another biological hazard',
   } %}
 
   {% include "@components/components/form/MultivalueField/multivalueField.html.twig" with {
     name: 'physical[]',
     id: 'physical',
     label: 'Physical',
-    entity_name: 'Physical hazard',
-    add_another: 'Add another',
+    add_another: 'Add another physical hazard',
   } %}
 
   {% include "@components/components/form/MultivalueField/multivalueField.html.twig" with {
     name: 'allergen[]',
     id: 'allergen',
     label: 'Allergen',
-    entity_name: 'Allergen hazard',
-    add_another: 'Add another',
+    add_another: 'Add another allergen hazard',
   } %}
 
   {% include '@components/components/form/Dropdown/dropdown.html.twig' with {
