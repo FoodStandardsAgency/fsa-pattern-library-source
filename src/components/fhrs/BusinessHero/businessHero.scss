@@ -13,7 +13,7 @@
     border-bottom: 1px solid var(--fsa__grey-hover);
 
     span {
-      @include body;
+      @include intro;
 
       color: var(--fsa-tertiary_light-black);
       display: block;
