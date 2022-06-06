@@ -5,15 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
 -
 
 ### Changed
-- Update text on FHRS Digital Badge page
-- Added more comprehensive translation options to the multigroup and multifield components.
+-
 
 ### Deprecated
 -
@@ -26,6 +24,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 -
+
+
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+- 
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
+## [1.0.1] - 2022-06-06 (MyHACCP translation bugfix and text change for FHRS)
+
+### Changed
+- Update text on FHRS Digital Badge page
+- Added more comprehensive translation options to the multigroup and multifield components.
 
 
 ## [1.0.0] - 01-06-2022 (MyHACCP and FHRS component fixes)
