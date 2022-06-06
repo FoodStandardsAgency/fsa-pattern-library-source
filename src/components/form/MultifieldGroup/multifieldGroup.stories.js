@@ -49,9 +49,8 @@ Default.args = {
     ])
   ),
   label: 'Enter the process step details',
-  entity_name: 'Step',
-  remove_this: 'Remove this',
-  add_another: 'Add another',
+  remove_this: 'Remove this step',
+  add_another: 'Add another step',
 };
 
 export const FrozenSteps = Template.bind({});
@@ -86,9 +85,8 @@ FrozenSteps.args = {
     ])
   ),
   label: 'Enter the process step details',
-  entity_name: 'Step',
-  remove_this: 'Remove this',
-  add_another: 'Add another',
+  remove_this: 'Remove this step',
+  add_another: 'Add another step',
 };
 
 export const AnotherTemplateForFirstItem = Template.bind({});
@@ -128,7 +126,6 @@ AnotherTemplateForFirstItem.args = {
     ])
   ),
   label: 'Enter the process step details',
-  entity_name: 'Step',
-  remove_this: 'Remove this',
-  add_another: 'Add another',
+  remove_this: 'Remove this step',
+  add_another: 'Add another step',
 };
