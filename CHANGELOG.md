@@ -29,10 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- FHIS badges
 
 ### Changed
-- 
+- Implement more than one type of fhis badge
 
 ### Deprecated
 -

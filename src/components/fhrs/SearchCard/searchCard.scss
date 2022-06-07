@@ -1,5 +1,5 @@
 @import "src/lib.scss";
-@include fhrs-badges("fhrs-search-card");
+@include rating-badges("fhrs-search-card");
 
 .fhrs-search-card {
   margin-top: 1.5rem;

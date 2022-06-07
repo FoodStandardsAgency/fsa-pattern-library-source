@@ -1,5 +1,5 @@
 @import "src/lib.scss";
-@include fhrs-badges("image-section");
+@include rating-badges("image-section");
 
 .image-section {
   &__badge {
