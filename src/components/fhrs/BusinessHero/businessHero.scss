@@ -1,5 +1,5 @@
 @import "src/lib.scss";
-@include fhrs-badges("business-hero");
+@include rating-badges("business-hero");
 
 .business-hero {
   margin-top: 3rem;

@@ -132,6 +132,7 @@ Scottish.args = {
   },
   preview: 'Preview',
   download_image: 'Download image',
+  fhis: true,
   badges: [
     {
       class_name: 'badge-download',

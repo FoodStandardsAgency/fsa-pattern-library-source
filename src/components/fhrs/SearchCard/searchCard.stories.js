@@ -16,6 +16,7 @@ export default {
         'AwaitingInspection',
         'AwaitingPublication',
         'Pass',
+        'PassEatSafe',
         '',
       ],
       control: { type: 'select' },
@@ -27,7 +28,7 @@ const Template = (args) => searchCard(args);
 
 export const English = Template.bind({});
 English.args = {
-  welsh: false,
+  welsh_business: false,
   business_name: "Canterbury's Delicatessen & Sandwich Bar",
   business_link: '#',
   private: false,
@@ -46,7 +47,7 @@ English.args = {
 export const WelshBusiness = Template.bind({});
 WelshBusiness.args = {
   ...English.args,
-  welsh: true,
+  welsh_business: true,
 };
 
 export const WelshPage = Template.bind({});
@@ -58,6 +59,10 @@ WelshPage.args = {
   registered_with: 'wedi cofrestru gydag',
   local_authority_name: 'Newport',
   local_authority: 'awdurdod lleol ',
+  business_appeal: true,
+  business_say: 'Beth sydd gan y busnes i’w ddweud',
+  status_summary: 'Wedi’i arolygu’n ddiweddar',
+  status_description: 'sgôr newydd i’w chyhoeddi’n fuan',
 };
 
 export const Scottish = Template.bind({});
@@ -100,7 +105,7 @@ EnglishBusinessAwaitingInspection.args = {
 export const WelshBusinessAwaitingInspection = Template.bind({});
 WelshBusinessAwaitingInspection.args = {
   ...EnglishBusinessAwaitingInspection.args,
-  welsh: true,
+  welsh_business: true,
 };
 
 export const WelshBusinessRatingAwaited = Template.bind({});
