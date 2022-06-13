@@ -60,13 +60,31 @@
      <p>Data are only available for local authority areas running either of these schemes. <a href='#'>See a list of
      local authorities running the FHRS or FHIS</a></p>",
   } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: "System status",
+    tag: "h2",
+    description: "<p>Status updates, usage advice and various other pieces of current information can be found at the <a href='#'>System Status Page.</a></p>",
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: "API guidance for developers",
+    tag: "h2",
+    description: "<p>The API allows developers access to the underlying food hygiene rating data published at <a href='#'>www.food.gov.uk/ratings</a>.
+    Developers can query XML files to return the geocoded data (longitude and latitude data are provided for food businesses).
+    The XML data are updated daily and can be found below, grouped by local authority. Wales’s local authority data can be output in English or Welsh.</p>
+    <p>The API can also be used to query the live system (the data are automatically updated as local authorities upload and publish data)
+    and return data in XML and JSON formats.</p>
+    <p>Examples of how to use the API and information about the API can be found in the guidance document for developers:</p>
+    <ul><li><a href='#'>Read the API V1 guidance for developers (pdf 538KB, updated March 2013)</a></li>
+    <li><a href='#'>Read the API V2 guidance for developers</a></li></ul>",
+  } %}
   {% include '@components/components/fhrs/ImageSection/imageSection.html.twig' with {
     title: 'Images',
     description: '<p>A set of hygiene rating images is available to be used with the API data. The images must only be used in accordance with the <a href="#">FHRS/FHIS Brand Standard and the terms and conditions</a>.</p><p>Examples of hygiene rating images, and the sizes available, that can be used with the API data:</p>',
     welsh: false,
     download_link: '#',
     download_text: 'Download new high resolution FHRS badges',
-    filesize: '559.42 KB',
+    filesize: '2 MB',
+    file_format: 'ZIP',
     fhrs_badges: [
       {
         class_name: 'image-section',
@@ -113,10 +131,47 @@
     ],
   } %}
   {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
-    title: "Legacy low resolution online sticker",
+    title: "Legacy online rating images",
     tag: "h2",
-    description: "<p>Here is a link to legacy low resolution images. We would however recommend you use one of the
-    latest high resolution badges above.<p/><p><a href='#'>Download legacy low resolution images</a> (559.42 KB)</p>",
+    description: "<p>The previous version of the online ratings has now been retired. Please use the images provided above.</p>",
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: "Score descriptors",
+    tag: "h2",
+    description: "<ul><li><a href='#'>English language</a></li>
+    <li><a href='#'>Welsh language</a></li></ul>",
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: "Downloadable XML data files (updated daily)",
+    tag: "h2",
+    description: "<p>Food hygiene rating data, grouped by local authority, can be downloaded in XML format via the
+    links below. The data, which can also be queried by the API, is updated daily.</p>",
+  } %}
+  {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+    title: "East Counties",
+    tag: "h2",
+    description: "<table>
+  <tr>
+    <th>Local authority</th>
+    <th>Last update</th>
+    <th>Number of businesses</th>
+  </tr>
+  <tr>
+    <td><a href='#'>Babergh (English language)</a></td>
+    <td>11/06/2022 at 12:00</td>
+    <td>950</td>
+  </tr>
+  <tr>
+    <td><a href='#'>Basildon (English language)</a></td>
+    <td>08/06/2022 at 01:45	</td>
+    <td>1,369</td>
+  </tr>
+  <tr>
+    <td><a href='#'>Bedford (English language)</a></td>
+    <td>12/06/2022 at 12:00</td>
+    <td>1,571</td>
+  </tr>
+</table>",
   } %}
 {% endblock %}
 {% block footer %}
