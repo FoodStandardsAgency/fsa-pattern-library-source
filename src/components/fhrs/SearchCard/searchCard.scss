@@ -1,5 +1,5 @@
 @import "src/lib.scss";
-@include fhrs-badges("fhrs-search-card");
+@include rating-badges("fhrs-search-card");
 
 .fhrs-search-card {
   margin-top: 1.5rem;
@@ -49,7 +49,7 @@
 
     &::before {
       content: "";
-      background-image: url("./assets/quote.svg");
+      background-image: svg-load("./assets/quote.svg");
       background-repeat: no-repeat;
       background-position: left;
       background-size: contain;

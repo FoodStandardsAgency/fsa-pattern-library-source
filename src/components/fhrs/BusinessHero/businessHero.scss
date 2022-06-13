@@ -1,5 +1,5 @@
 @import "src/lib.scss";
-@include fhrs-badges("business-hero");
+@include rating-badges("business-hero");
 
 .business-hero {
   margin-top: 3rem;
@@ -11,6 +11,14 @@
     margin: 0;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--fsa__grey-hover);
+
+    span {
+      @include intro;
+
+      color: var(--fsa-tertiary_light-black);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__content {
@@ -65,18 +73,18 @@
     background-size: 1.56rem auto;
 
     &--back {
-      background-image: url("./assets/arrow-back.svg");
+      background-image: svg-load("./assets/arrow-back.svg");
 
       &:hover {
-        background-image: url("./assets/arrow-back-hover.svg");
+        background-image: svg-load("./assets/arrow-back-hover.svg");
       }
     }
 
     &--forward {
-      background-image: url("./assets/arrow-forward.svg");
+      background-image: svg-load("./assets/arrow-forward.svg");
 
       &:hover {
-        background-image: url("./assets/arrow-forward-hover.svg");
+        background-image: svg-load("./assets/arrow-forward-hover.svg");
       }
     }
   }

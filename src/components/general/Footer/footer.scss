@@ -75,12 +75,12 @@
       margin-bottom: -0.25rem;
 
       &::after {
-        background-image: url("./assets/external-black.svg");
+        background-image: svg-load("./assets/external-black.svg");
       }
     }
 
     &::after {
-      background-image: url("./assets/external-white.svg");
+      background-image: svg-load("./assets/external-white.svg");
     }
 
     @media screen and (min-width: $fsa-lg) {

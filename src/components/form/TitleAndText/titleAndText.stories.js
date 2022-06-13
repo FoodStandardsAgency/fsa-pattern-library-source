@@ -58,3 +58,11 @@ legacyBadge.args = {
   tag: 'h2',
   class: 'legacy-badge-title',
 };
+
+export const WithSubtitle = Template.bind({});
+WithSubtitle.args = {
+  title: 'Search the Coventry area',
+  tag: 'h1',
+  subtitle: 'The data is provided by Coventry City Council',
+  underlined: true,
+};

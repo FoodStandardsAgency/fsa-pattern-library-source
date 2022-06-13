@@ -5,7 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
@@ -26,13 +25,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+
 ## [Upcoming release] - 1971-11-03
 
 ### Added
--
+- FHIS badges
 
 ### Changed
-- Adjust the ratings search box layout so that the inputs are inline
+- Implement more than one type of fhis badge
 
 ### Deprecated
 -
@@ -45,6 +45,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 -
+
+
+## [1.0.1] - 2022-06-06 (MyHACCP translation bugfix and text change for FHRS)
+
+### Changed
+- Update text on FHRS Digital Badge page
+- Added more comprehensive translation options to the multigroup and multifield components.
+
+
+## [1.0.0] - 01-06-2022 (MyHACCP and FHRS component fixes)
+
+### Added
+- A new param for the search bar to exclude form html from the output for embedding into other forms.
+
+### Changed
+- Adjust the ratings search box layout so that the inputs are inline
+- Add title prefix option to business hero
+- Add a second version of the ratings search box for local authority searches
+- Add subtitle option to titleAndText component
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+- Fixed incorrect handling of default value for the search bar.
+- Fix broken text on fhrs api page
+- Update margins on image section component
+- Improved accessibility on ratings search box (use button instead of link)
+
+### Security
+-
+
+
+## [0.1.10] - 2022-05-31 (new FHRS badge download component and fixes to the search box layouts)
+
+### Added
+- Add new badge download component
+
+### Changed
+- Adjust the ratings search box layout so that the inputs are inline
+- Use unique ID for subgroups in navigation
 
 
 ## [0.1.9] - 2022-05-25 (new FHRS components and bugfixes on existing PL components)

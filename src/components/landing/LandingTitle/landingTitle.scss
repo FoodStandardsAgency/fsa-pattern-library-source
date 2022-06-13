@@ -36,7 +36,7 @@
 
     &::after {
       content: "";
-      background-image: url("./assets/dot.svg");
+      background-image: svg-load("./assets/dot.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 12rem;

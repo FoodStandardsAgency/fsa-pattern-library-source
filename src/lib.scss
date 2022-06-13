@@ -413,6 +413,7 @@ $mobileGutter: 1rem;
           margin-left: calc(-0.5rem - 4px);
         }
       }
+
       .#{$input-type}__description + .#{$input-type}__fields {
         margin-top: 0.5rem;
       }
@@ -453,7 +454,7 @@ $mobileGutter: 1rem;
 
   &:checked {
     background-color: var(--fsa-primary_dark-green);
-    background-image: url("./assets/tick.svg");
+    background-image: svg-load("./assets/tick.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -805,7 +806,7 @@ $mobileGutter: 1rem;
 
 /* stylelint-disable value-keyword-case */
 @mixin fhrs-badges($base-class) {
-  $ratings: 0, 1, 2, 3, 4, 5, Exempt, AwaitingInspection, AwaitingPublication, Empty, Pass;
+  $ratings: 0, 1, 2, 3, 4, 5, Exempt, AwaitingInspection, AwaitingPublication, Empty;
   $versions: 1, 2, 3, 4, 5;
   $widths: (
     1: 26.75rem,
@@ -817,26 +818,37 @@ $mobileGutter: 1rem;
 
   @each $rating in $ratings {
     @each $version in $versions {
-      @if $rating == "Pass" and $version < 4 {
-        .#{$base-class}__badge--#{$rating}--#{$version}:before {
-          content: url("../badges/fhis/#{$version}/fhis-badge-#{$rating}.png");
-        }
-      } @else if $rating != "Pass" {
-        .#{$base-class}__badge--#{$rating}--#{$version}:before {
-          content: url("../badges/fhrs/#{$version}/fhrs-badge-#{$rating}.svg");
-          display: block;
-          width: map.get($widths, $version);
-          height: auto;
-        }
-
-        .#{$base-class}__badge--#{$rating}--#{$version}.#{$base-class}__badge--welsh:before {
-          content: url("../badges/fhrs-bilingual/#{$version}/fhrs-bilingual-badge-#{$rating}.svg");
-          display: block;
-          width: map.get($widths, $version);
-          height: auto;
-        }
+      .#{$base-class}__badge--fhrs.#{$base-class}__badge--#{$rating}--#{$version}:before {
+        content: url("../badges/fhrs/#{$version}/fhrs-badge-#{$rating}.svg");
+        display: block;
+        width: map.get($widths, $version);
+        height: auto;
+      }
+      .#{$base-class}__badge--fhrs.#{$base-class}__badge--#{$rating}--#{$version}.#{$base-class}__badge--welsh:before {
+        content: url("../badges/fhrs-bilingual/#{$version}/fhrs-bilingual-badge-#{$rating}.svg");
+        display: block;
+        width: map.get($widths, $version);
+        height: auto;
       }
     }
   }
+}
+
+@mixin fhis-badges($base-class) {
+  $ratings: Exempt, AwaitingInspection, AwaitingPublication, ImprovementRequired, Pass, PassEatSafe;
+  $versions: 1, 2, 3;
+
+  @each $rating in $ratings {
+    @each $version in $versions {
+      .#{$base-class}__badge--fhis.#{$base-class}__badge--#{$rating}--#{$version}:before {
+        content: url("../badges/fhis/#{$version}/fhis-badge-#{$rating}.jpg");
+      }
+    }
+  }
+}
+
+@mixin rating-badges($base-class) {
+  @include fhrs-badges($base-class);
+  @include fhis-badges($base-class);
 }
 /* stylelint-enable value-keyword-case */

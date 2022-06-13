@@ -51,7 +51,7 @@
     height: 3rem;
     width: 3rem;
     background-color: var(--fsa-primary_dark-green);
-    background-image: url("./assets/search.svg");
+    background-image: svg-load("./assets/search.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1.25rem;

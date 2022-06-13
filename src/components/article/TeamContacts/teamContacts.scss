@@ -27,13 +27,13 @@
 
       &:hover {
         &::after {
-          background-image: url("./assets/email-hover.svg");
+          background-image: svg-load("./assets/email-hover.svg");
         }
       }
 
       &::after {
         content: "";
-        background-image: url("./assets/email.svg");
+        background-image: svg-load("./assets/email.svg");
         background-repeat: no-repeat;
         width: 15px;
         height: 12px;

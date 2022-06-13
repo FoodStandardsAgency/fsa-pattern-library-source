@@ -3,6 +3,14 @@
 .form-title {
   margin: 2rem 0 0;
   overflow-wrap: break-word;
+
+  &__subtitle {
+    @include intro;
+
+    display: block;
+    margin-top: 1rem;
+    color: var(--fsa-primary_black);
+  }
 }
 
 h1.form-title,
@@ -10,7 +18,7 @@ h2.form-title {
   &--underlined {
     &::after {
       content: "";
-      background-image: url("./assets/dot-dark.svg");
+      background-image: svg-load("./assets/dot-dark.svg");
       background-repeat: repeat-x;
       background-size: 1.5rem 1.5rem;
       width: 100%;
@@ -24,7 +32,7 @@ h2.form-title {
 h2.form-title {
   &--underlined {
     &::after {
-      background-image: url("./assets/dot-light.svg");
+      background-image: svg-load("./assets/dot-light.svg");
       margin-top: 0.5rem;
     }
   }

@@ -41,7 +41,7 @@
     z-index: 2;
 
     @media screen and (min-width: $fsa-md) {
-      background-image: url("./assets/pattern.svg");
+      background-image: svg-load("./assets/pattern.svg");
       background-size: 150%;
       background-position: right top;
       padding-bottom: 2.2rem;
@@ -133,7 +133,7 @@
 
     &::after {
       content: "";
-      background-image: url("./assets/dot-white.svg");
+      background-image: svg-load("./assets/dot-white.svg");
       background-repeat: repeat-x;
       background-size: 25px 25px;
       width: 101%;
@@ -313,7 +313,7 @@
         color: var(--fsa-primary_dark-green);
 
         &::after {
-          background-image: url("./assets/dot-grey.svg");
+          background-image: svg-load("./assets/dot-grey.svg");
         }
       }
 

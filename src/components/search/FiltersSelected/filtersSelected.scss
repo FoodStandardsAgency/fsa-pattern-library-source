@@ -33,7 +33,7 @@
       background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
       color 0.2s cubic-bezier(0.19, 1, 0.22, 1),
       border-radius 0.2s cubic-bezier(0.19, 1, 0.22, 1);
-    background-image: url("./assets/cross-white.svg");
+    background-image: svg-load("./assets/cross-white.svg");
     background-repeat: no-repeat;
     background-position: right 1.08rem center;
 

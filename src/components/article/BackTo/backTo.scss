@@ -8,7 +8,7 @@
 
     &::before {
       content: "";
-      background-image: url("./assets/arrow-left.svg");
+      background-image: svg-load("./assets/arrow-left.svg");
       display: inline-block;
       width: 1.75rem;
       height: 1rem;
@@ -20,13 +20,13 @@
 
     &:hover {
       &::before {
-        background-image: url("./assets/arrow-hover.svg");
+        background-image: svg-load("./assets/arrow-hover.svg");
       }
     }
 
     &:focus {
       &::before {
-        background-image: url("./assets/arrow-focus.svg");
+        background-image: svg-load("./assets/arrow-focus.svg");
       }
     }
   }
