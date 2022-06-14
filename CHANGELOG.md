@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Implement more than one type of fhis badge
+- Add additional examples to FHRS page
 
 ### Deprecated
 -
