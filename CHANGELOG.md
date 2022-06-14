@@ -30,9 +30,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - FHIS badges
+- New layout for the Local Authority Search page
+- Added image-resizer library for the local authority map component
 
 ### Changed
 - Implement more than one type of fhis badge
+- Add description option to business hero
 
 ### Deprecated
 -
@@ -41,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Local authority map coordinates change on resize
 
 ### Security
 -

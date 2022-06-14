@@ -1,29 +1,78 @@
 @import "src/lib.scss";
 
 .local-authority-map {
+  width: 100%;
+
   &__placeholder {
-    width: 650px;
-    height: 891px;
-  }
+    width: 100%;
 
-  &--hidden {
-    position: relative;
-    img {
-      opacity: 0;
-      z-index: 2;
+    @media screen and (min-width: $fsa-lg) {
+      width: 25rem;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      width: 40.5rem;
     }
   }
 
-  $regions: wales, east-counties, east-midlands, london, north-east, north-west, northern-ireland, scotland, south-east,
-    south-west, west-midlands, yorkshire-and-humberside;
-
-  @each $region in $regions {
-    &--#{$region}:before {
-      content: url("./assets/fhrs-#{$region}.svg");
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      z-index: 0;
+  &__wrapper {
+    @media screen and (min-width: $fsa-lg) {
+      display: flex;
     }
+  }
+
+  &__table-wrapper {
+    width: 100%;
+
+    @media screen and (min-width: $fsa-lg) {
+      margin-left: 2rem;
+    }
+
+    @media screen and (min-width: $fsa-xl) {
+      margin-left: 4rem;
+    }
+  }
+
+  &__table {
+    h2 {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__map {
+    margin-top: 1.5rem;
+
+    $regions: wales, east-counties, east-midlands, london, north-east, north-west, northern-ireland, scotland,
+      south-east, south-west, west-midlands, yorkshire-and-humberside;
+
+    @each $region in $regions {
+      &--#{$region}:before {
+        content: "";
+        background-image: svg-load("./assets/fhrs-#{$region}.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+      }
+    }
+
+    &--hidden {
+      position: relative;
+
+      img {
+        opacity: 0;
+        z-index: 2;
+      }
+    }
+  }
+
+  .pagination {
+    margin-top: 2rem;
+  }
+
+  .pagination__numbered {
+    display: none;
   }
 }

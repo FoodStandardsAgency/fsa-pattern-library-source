@@ -73,3 +73,10 @@ WithPrefix.args = {
   ...English.args,
   name_prefix: 'Get online ratings for',
 };
+
+export const WithDescription = Template.bind({});
+WithDescription.args = {
+  name: 'Search a local authority area',
+  description:
+    'Click on an area below to find out about hygiene of restaurants, takeaways or food shops in that area.',
+};

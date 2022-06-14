@@ -1,0 +1,156 @@
+{% extends '@components/layout/fhrsLaSearchLayout/fhrsLaSearchLayout.html.twig' %}
+
+{% block top %}
+  {% include '@components/components/general/SkipToMainContent/skipToMainContent.html.twig' with {
+    link_text: 'Skip to main content',
+    href: '#main-content',
+  } %}
+
+  {% include '@components/components/general/Header/header.html.twig' with {
+    english: true,
+    english_link: '#',
+    english_label: 'English',
+    welsh_link: '#',
+    welsh_label: 'Cymraeg',
+    logo_link: '#',
+    logo_label: 'Food Standards Agency - Frontpage',
+    contact_link: '#',
+    contact_label: 'Contact',
+    report_link: '#',
+    report_label: 'Report',
+    ratings_link: '#',
+    ratings_label: 'Food hygiene ratings',
+    search_label: 'Search Food Standards Agency',
+    search_link: '#',
+    search_bar_visible: true,
+    menu_label: 'menu',
+    navigation: navigation_content,
+    temporary_message: {
+      message: '<p><a href="#" class="external-link">Coronavirus (COVID 19):</a> Guidance and support</p>',
+    }
+  } %}
+{% endblock %}
+{% block contentTop %}
+  {% include '@components/components/fhrs/BusinessHero/businessHero.html.twig' with {
+    name: 'Search a local authority area',
+    description: 'Click on an area below to find out about hygiene of restaurants, takeaways or food shops in that area.',
+  } %}
+  {% include '@components/components/article/TextBlock/textBlock.html.twig' with {
+    content: '<p><a href="#">Search all data</a></p>',
+  } %}
+{% endblock %}
+{% block map %}
+  {% include '@components/components/fhrs/LocalAuthorityMap/localAuthorityMap.html.twig' with {
+    base_url: '#',
+    all_results_link: '#',
+    all_results_label: 'Search all data',
+    default_map_title: 'Countries and England Regions',
+    selected_region_title_prefix: 'In the',
+    selected_region_title_suffix: 'area',
+    local_authority_label: 'Local authority',
+    number_of_businesses_label: 'Number of businesses',
+    regions: {
+      south_west: {
+        name: 'South West',
+        link: '#',
+      },
+      south_east: {
+        name: 'South East',
+        link: '#',
+      },
+      east_counties: {
+        name: 'East Counties',
+        link: '#',
+      },
+      london: {
+        name: 'London',
+        link: '#',
+      },
+      east_midlands: {
+        name: 'East Midlands',
+        link: '#',
+      },
+      west_midlands: {
+        name: 'West Midlands',
+        link: '#',
+      },
+      wales: {
+        name: 'Wales',
+        link: '#',
+      },
+      north_west: {
+        name: 'North West',
+        link: '#',
+      },
+      north_east: {
+        name: 'North East',
+        link: '#',
+      },
+      scotland: {
+        name: 'Scotland',
+        link: '#',
+      },
+      northern_ireland: {
+        name: 'Northern Ireland',
+        link: '#',
+      },
+      yorkshire_and_humberside: {
+        name: 'Yorkshire and Humberside',
+        link: '#',
+      },
+    },
+  } %}
+{% endblock %}
+{% block contentBottom %}
+{% endblock %}
+{% block footer %}
+  {% include '@components/components/general/Footer/footer.html.twig' with {
+    footer_links: 'Footer links',
+    new_window: 'Open in a new window',
+    menu_links: [
+      {
+        link: { label: 'Copyright', href: '#', external: false },
+      },
+      {
+        link: { label: 'Accessibility', href: '#', external: false },
+      },
+      {
+        link: { label: 'Freedom of information', href: '#', external: false },
+      },
+      {
+        link: { label: 'Terms and conditions', href: '#', external: false },
+      },
+      {
+        link: { label: 'Privacy', href: '#', external: false },
+      },
+      {
+        link: {
+        label: 'Personal information charter',
+        href: '#',
+        external: false,
+      },
+      },
+      {
+        link: { label: 'Feedback and complaints', href: '#', external: false },
+      },
+      {
+        link: { label: 'Cookies', href: '#', external: false },
+      },
+      {
+        link: { label: 'Data', href: '#', external: false },
+      },
+      {
+        link: { label: 'GOV.UK', href: '#', external: true },
+      },
+    ],
+    social_media: 'Food Standards Agency on social media',
+    social_links: [
+      { label: 'Facebook', external: true, href: '#', svg: social_svg.facebook },
+      { label: 'Twitter', external: true, href: '#', svg: social_svg.twitter },
+      { label: 'LinkedIn', external: true, href: '#', svg: social_svg.linkedin },
+      { label: 'Youtube', external: true, href: '#', svg: social_svg.youtube },
+      { label: 'Instagram', external: true, href: '#', svg: social_svg.instagram },
+      { label: 'FSA blog', external: false, href: '#', svg: social_svg.blog },
+    ],
+  } %}
+{% endblock %}
