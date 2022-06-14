@@ -3,6 +3,7 @@ import fhrsSearch from './fhrsSearch.html.twig';
 import fhrsHome from './fhrsHome.html.twig';
 import fhrsCompanyDigitalBadge from './fhrsCompanyDigitalBadge.html.twig';
 import fhrsApiPage from './fhrsApiPage.html.twig';
+import fhrsLocalAuthoritySearchPage from './fhrsLocalAuthoritySearchPage.html.twig';
 import { navigation } from '@components/components/default-content';
 import { social_svgs, svgs } from '@components/components/svg-icons';
 
@@ -58,7 +59,16 @@ const BadgePage = (args) => {
   return fhrsCompanyDigitalBadge(args);
 };
 
+const LocalAuthoritySearch = (args) => {
+  return fhrsLocalAuthoritySearchPage(args);
+};
+
 export const FHRSCompanyDigitalBadgePage = BadgePage.bind({});
 FHRSCompanyDigitalBadgePage.args = {
+  ...FhrsApiPage.args,
+};
+
+export const FHRSLocalAuthoritySearchPage = LocalAuthoritySearch.bind({});
+FHRSLocalAuthoritySearchPage.args = {
   ...FhrsApiPage.args,
 };

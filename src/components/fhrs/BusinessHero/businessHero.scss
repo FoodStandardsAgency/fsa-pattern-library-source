@@ -11,14 +11,22 @@
     margin: 0;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--fsa__grey-hover);
+  }
 
-    span {
-      @include intro;
+  &__prefix,
+  &__description {
+    @include intro;
 
-      color: var(--fsa-tertiary_light-black);
-      display: block;
-      margin-bottom: 0.5rem;
-    }
+    color: var(--fsa-tertiary_light-black);
+    display: block;
+  }
+
+  &__description {
+    margin-top: 1rem;
+  }
+
+  &__prefix {
+    margin-bottom: 0.5rem;
   }
 
   &__content {

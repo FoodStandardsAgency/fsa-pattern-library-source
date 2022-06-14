@@ -108,6 +108,7 @@ import './components/fhrs/SearchCard/searchCard';
 import './components/fhrs/Badge/badge';
 import ratingsSearchBox from './components/fhrs/RatingsSearchBox/ratingsSearchBox';
 import badgeDownload from './components/fhrs/BadgeDownload/badgeDownload';
+import localAuthorityMap from './components/fhrs/LocalAuthorityMap/localAuthorityMap';
 
 /* HACCP components */
 import './components/haccp/SaveProgress/saveProgress';
@@ -176,4 +177,5 @@ toggleButton();
 ratingsSearchBox();
 inputField();
 textArea();
+localAuthorityMap();
 badgeDownload();

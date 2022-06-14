@@ -1,0 +1,62 @@
+<div class="local-authority-map" >
+  <div class="local-authority-map__wrapper">
+    <div class="local-authority-map__map {{ selected_region ? " local-authority-map__map--" ~ selected_region ~ " local-authority-map__map--hidden" : ""}}">
+      <img class="local-authority-map__placeholder" src="#" usemap="#image-map" alt="Map of the UK">
+      <map name="image-map">
+        <area href="{{ regions.south_west.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.south_west.name|replace({" ": "-"})|lower }}" alt="south-west" title="south-west" coords="236,874,236,865,247,858,256,856,267,847,275,840,280,831,288,831,294,825,303,818,306,813,306,806,310,796,321,792,324,782,337,781,350,780,366,786,379,788,388,785,389,777,401,768,410,760,418,753,416,744,419,735,426,728,426,721,433,724,443,724,452,721,460,715,466,720,470,727,469,733,467,740,462,749,462,754,465,763,467,772,468,779,468,785,466,790,461,796,462,803,459,808,452,808,448,814,453,823,455,830,451,833,442,835,439,841,428,840,418,839,415,848,411,842,400,833,390,831,382,830,375,833,367,836,362,839,359,844,357,850,354,855,352,863,348,868,341,865,340,856,330,859,326,856,322,850,318,854,310,853,298,854,290,862,283,864,276,866,272,873,262,881,258,874,250,868" shape="poly">
+        <area href="{{ regions.south_east.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.south_east.name|replace({" ": "-"})|lower }}" alt="south-east" title="south-east" coords="449,812,455,822,456,833,465,840,476,846,484,844,481,836,483,830,490,829,498,830,503,833,513,835,523,833,538,833,549,835,556,837,567,835,578,833,590,827,598,825,603,820,621,803,623,794,623,787,613,787,593,791,601,787,588,786,582,785,569,779,559,782,553,786,548,790,541,789,534,784,526,784,520,780,520,769,520,763,513,745,519,740,514,732,518,724,517,717,509,711,507,717,505,727,502,721,493,726,486,723,485,714,474,720,472,725,469,730,465,739,466,749,467,759,467,774,468,780,463,795,463,806" shape="poly">
+        <area href="{{ regions.east_counties.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.east_counties.name|replace({" ": "-"})|lower }}" alt="east-counties" title="east-counties" coords="525,763,533,764,539,759,545,756,552,759,563,763,565,769,559,777,577,773,590,772,599,768,598,755,606,750,611,753,619,744,619,733,631,730,639,720,642,704,646,691,643,680,638,669,625,658,614,654,597,649,589,650,581,650,573,659,564,663,557,669,552,672,545,672,537,673,533,685,530,697,522,706,517,710,518,720,519,731,516,741,522,752" shape="poly">
+        <area href="{{ regions.london.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.london.name|replace({" ": "-"})|lower }}" alt="london" title="london" coords="531,759,542,757,553,756,559,764,561,777,559,782,548,788,540,790,529,786,521,782,522,774,522,764" shape="poly">
+        <area href="{{ regions.east_midlands.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.east_midlands.name|replace({" ": "-"})|lower }}" alt="east-midlands" title="east-midlands" coords="459,594,458,612,461,621,465,632,464,641,469,651,475,665,478,674,487,681,489,688,487,699,487,712,488,724,498,717,504,723,507,714,518,707,524,699,532,692,533,682,531,675,538,672,545,671,558,666,566,663,558,653,559,646,571,638,574,629,568,611,556,600,549,604,542,593,534,598,529,605,518,600,510,600,505,605,499,609,494,614,485,612,473,604,466,592" shape="poly">
+        <area href="{{ regions.west_midlands.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.west_midlands.name|replace({" ": "-"})|lower }}" alt="west-midlands" title="west-midlands" coords="418,739,399,725,394,715,399,704,405,695,396,685,400,676,402,666,405,653,399,649,406,642,416,642,422,637,430,636,439,635,451,622,459,619,465,635,467,650,473,664,483,677,491,687,494,694,488,703,486,710,477,718,473,722,464,713,454,719,432,722,424,731" shape="poly">
+        <area href="{{ regions.wales.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.wales.name|replace({" ": "-"})|lower }}" alt="wales" title="wales" coords="417,751,405,759,390,765,380,769,369,769,355,759,349,750,340,752,329,752,334,745,322,732,311,738,302,743,291,738,280,732,279,720,283,714,290,710,304,707,316,700,327,695,337,688,346,679,346,666,344,649,345,639,338,634,327,642,316,644,314,638,330,628,337,621,326,605,330,596,338,592,350,603,364,603,375,604,384,605,393,605,404,617,413,630,416,640,403,644,399,650,400,665,397,681,406,693,397,709,403,726,417,739" shape="poly">
+        <area href="{{ regions.north_west.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.north_west.name|replace({" ": "-"})|lower }}" alt="north-west" title="north-west" coords="416,638,431,635,444,626,455,617,453,599,461,593,453,583,449,577,459,567,449,554,436,545,431,540,444,534,447,516,456,512,449,495,445,480,436,481,436,465,446,457,430,452,416,464,407,470,390,484,383,498,391,522,399,533,409,532,416,532,417,545,416,553,411,558,404,558,403,566,416,575,407,582,400,591,407,603,414,605,399,600,392,607,405,625" shape="poly">
+        <area href="{{ regions.north_east.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.north_east.name|replace({" ": "-"})|lower }}" alt="north-east" title="north-east" coords="465,513,479,512,494,511,511,510,506,502,500,484,492,454,489,437,491,422,476,409,470,403,457,413,459,424,454,433,445,438,438,445,444,457,439,471,443,481,450,493,458,509" shape="poly">
+        <area href="{{ regions.scotland.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.scotland.name|replace({" ": "-"})|lower }}" alt="scotland" title="scotland" coords="469,397,454,388,442,381,428,381,412,381,400,375,419,368,429,363,442,361,440,349,430,342,420,345,447,333,462,320,473,300,482,276,492,266,490,247,477,239,461,242,444,237,433,238,423,231,404,239,393,233,398,225,398,211,412,198,429,186,440,169,438,156,453,143,472,117,490,59,504,6,478,18,469,35,461,71,458,102,438,112,430,128,414,156,388,159,357,148,345,173,336,179,324,174,309,157,295,153,265,173,258,202,227,223,228,247,223,281,241,257,258,237,267,244,277,260,277,275,255,309,239,318,263,337,270,359,273,373,261,379,267,399,284,409,294,421,306,401,315,416,328,424,327,440,314,458,323,482,346,482,370,476,394,468,413,466,434,451,446,437,459,421,465,406" shape="poly">
+        <area href="{{ regions.northern_ireland.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.northern_ireland.name|replace({" ": "-"})|lower }}" alt="northern-ireland" title="northern-ireland" coords="195,461,206,447,225,447,228,436,248,434,267,444,274,462,280,472,286,487,292,506,282,519,272,520,265,537,238,533,224,515,218,504,206,507,203,517,194,524,184,524,170,510,162,498,168,489,177,474,190,473" shape="poly">
+        <area href="{{ regions.yorkshire_and_humberside.link }}" data-fsa-at="{{ "local-authority-map-" ~ regions.yorkshire_and_humberside.name|replace({" ": "-"})|lower }}" alt="yorkshire-and-humberside" title="yorkshire-and-humberside" coords="451,521,442,535,436,540,449,548,457,563,452,578,462,589,469,600,487,611,503,607,513,598,528,601,541,594,550,599,547,584,560,591,556,574,550,559,554,550,542,534,529,516,512,507,496,508,468,510,456,510" shape="poly">
+      </map>
+    </div>
+    <div class="local-authority-map__table-wrapper">
+      <div class="local-authority-map__table text-block">
+        {% if selected_region %}
+          <h2>{{ selected_region_title_prefix }} {{ selected_region|replace({'-': ' '})|title}} {{ selected_region_title_suffix }}</h2>
+          <table>
+            <tr>
+              <th>{{ local_authority_label }}</th>
+              <th>{{ number_of_businesses_label }}</th>
+            </tr>
+            {% for data in selected_results_data %}
+              <tr>
+                <td><a href="{{ data.local_authority_link }}" data-fsa-at="{{ "local-authority-map-" ~ data.local_authority|replace({" ": "-"})|lower }}">{{ data.local_authority }}</a></td>
+                <td>{{ data.number_of_businesses }}</td>
+              </tr>
+            {% endfor %}
+          </table>
+        {% else %}
+          <h2>{{ default_map_title }}</h2>
+          <table>
+            {% for region in regions %}
+              <tr>
+                <td><a href="{{ region.link }}" data-fsa-at="{{ "local-authority-map-" ~ region.name|replace({" ": "-"})|lower }}">{{ region.name }}</a></td>
+              </tr>
+            {% endfor %}
+          </table>
+        {% endif %}
+      </div>
+      {% if selected_region %}
+      <div class="local-authority-map__pagination">
+        {% include '@components/components/search/Pagination/pagination.html.twig' with {
+          total_pages: page_size,
+          current_page: page,
+          max_visible_pages: 4,
+          first_label: "First",
+          previous_label: "Previous",
+          next_label: "Next",
+          last_label: "Last",
+        } %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
