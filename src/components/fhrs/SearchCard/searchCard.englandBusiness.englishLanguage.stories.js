@@ -83,4 +83,3 @@ Exempt.args = {
   rating: 'Exempt',
   rating_date: '',
 };
-

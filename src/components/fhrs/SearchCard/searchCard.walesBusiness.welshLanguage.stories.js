@@ -26,7 +26,7 @@ const Template = (args) => searchCard(args);
 
 export const Default = Template.bind({});
 Default.args = {
-  business_name: "Abbeyfield Wales",
+  business_name: 'Abbeyfield Wales',
   business_link: '#',
   private: false,
   address: 'Abbeyfield House<br>Parc Hen Blas Estate<br>Llanfairfechan',

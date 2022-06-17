@@ -22,7 +22,7 @@ const Template = (args) => searchCard(args);
 
 export const Default = Template.bind({});
 Default.args = {
-  business_name: "Hi Tea",
+  business_name: 'Hi Tea',
   business_link: '#',
   private: false,
   address: 'Unit 8b Clydebank Shopping Centre<br>Kilbowie Road<br>Clydebank',
