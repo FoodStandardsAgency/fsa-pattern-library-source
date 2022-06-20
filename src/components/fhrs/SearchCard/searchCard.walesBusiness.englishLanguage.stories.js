@@ -1,22 +1,12 @@
 import searchCard from './searchCard.html.twig';
 import './searchCard.scss';
+import { fhrsRatingsOptions } from '../../default-content.js';
 
 export default {
   title: 'Components/FHRS/Search Card/Wales Business/English Language',
   argTypes: {
     rating: {
-      options: [
-        '0',
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        'Exempt',
-        'AwaitingInspection',
-        'AwaitingPublication',
-        '',
-      ],
+      options: fhrsRatingsOptions,
       control: { type: 'select' },
     },
   },

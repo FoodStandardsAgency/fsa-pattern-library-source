@@ -1,18 +1,12 @@
 import searchCard from './searchCard.html.twig';
 import './searchCard.scss';
+import { fhisRatingsOptions } from '../../default-content.js';
 
 export default {
   title: 'Components/FHRS/Search Card/Scotland Business/English Language',
   argTypes: {
     rating: {
-      options: [
-        'Pass',
-        'PassEatSafe',
-        'ImprovementRequired',
-        'AwaitingInspection',
-        'AwaitingPublication',
-        'Exempt',
-      ],
+      options: fhisRatingsOptions,
       control: { type: 'select' },
     },
   },

@@ -716,3 +716,25 @@ export const navigation = {
     },
   ],
 };
+
+export const fhrsRatingsOptions = [
+  '0',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  'Exempt',
+  'AwaitingInspection',
+  'AwaitingPublication',
+  '',
+];
+
+export const fhisRatingsOptions = [
+  'Pass',
+  'PassEatSafe',
+  'ImprovementRequired',
+  'AwaitingInspection',
+  'AwaitingPublication',
+  'Exempt',
+];
