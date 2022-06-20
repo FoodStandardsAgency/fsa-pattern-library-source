@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - FHIS badges
 - New layout for the Local Authority Search page
 - Added image-resizer library for the local authority map component
+- Add mini variation of the hero for FHRS landing page
 
 ### Changed
 - Implement more than one type of fhis badge
