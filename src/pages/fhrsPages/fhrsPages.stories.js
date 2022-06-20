@@ -68,9 +68,13 @@ FHRSCompanyDigitalBadgePage.args = {
   ...FhrsApiPage.args,
 };
 
+export const FHRSLocalAuthoritySearchPage = LocalAuthoritySearch.bind({});
+FHRSLocalAuthoritySearchPage.args = {
+  ...FhrsApiPage.args,
+};
+
 export const FHRSHomePage = Home.bind({});
 FHRSHomePage.args = {
   ...FhrsApiPage.args,
   search_content: fhrs_search_box,
 };
-
