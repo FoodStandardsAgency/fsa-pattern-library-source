@@ -892,3 +892,25 @@ export const fhrs_search_box = {
   ],
   submit_button_label: 'Submit',
 };
+
+export const fhrsRatingsOptions = [
+  '0',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  'Exempt',
+  'AwaitingInspection',
+  'AwaitingPublication',
+  '',
+];
+
+export const fhisRatingsOptions = [
+  'Pass',
+  'PassEatSafe',
+  'ImprovementRequired',
+  'AwaitingInspection',
+  'AwaitingPublication',
+  'Exempt',
+];
