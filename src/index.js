@@ -145,37 +145,38 @@ function runCssVars() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Components
+  backToTop();
+  footNotes();
+  revisionLogBottom();
+  breadcrumbJs();
+  pagination();
+  searchBar();
+  sortBy();
+  navigation();
+  datepicker();
+  accordion();
+  header();
+  pdfAndPrintButtons();
+  stickySidebar();
+  tableOfContents();
+  textBlock();
+  chartBlock();
+  mapField();
+  dropdownMenu();
+  webtoolProgressBar();
+  tooltip();
+  multivalueField();
+  multifieldGroup();
+  guidancePopup();
+  toggleButton();
+  ratingsSearchBox();
+  inputField();
+  textArea();
+  localAuthorityMap();
+  badgeDownload();
+
   // Fixes object-fit on legacy browsers
   objectFitImages();
   runCssVars();
 });
-
-backToTop();
-footNotes();
-revisionLogBottom();
-breadcrumbJs();
-pagination();
-searchBar();
-sortBy();
-navigation();
-datepicker();
-accordion();
-header();
-pdfAndPrintButtons();
-stickySidebar();
-tableOfContents();
-textBlock();
-chartBlock();
-mapField();
-dropdownMenu();
-webtoolProgressBar();
-tooltip();
-multivalueField();
-multifieldGroup();
-guidancePopup();
-toggleButton();
-ratingsSearchBox();
-inputField();
-textArea();
-localAuthorityMap();
-badgeDownload();
