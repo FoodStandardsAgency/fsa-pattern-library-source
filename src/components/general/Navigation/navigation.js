@@ -20,7 +20,7 @@ export default function () {
 
   function setRole(menuWrappers, mode) {
     menuWrappers.forEach((menuWrapper) => {
-      if (mode == 'desktop') {
+      if (mode === 'desktop') {
         menuWrapper.setAttribute('role', '');
       } else {
         menuWrapper.setAttribute('role', 'region');

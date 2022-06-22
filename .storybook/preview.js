@@ -1,6 +1,4 @@
-import '../src/index.js';
-
-window.isStorybook = true;
+import '../src/storybookIndex.js';
 
 const customViewports = {
   mobile: {
