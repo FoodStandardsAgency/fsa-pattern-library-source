@@ -113,3 +113,16 @@ HiddenHeroWithCampaignBlock.args = {
     has_hero: false,
   },
 };
+
+export const MiniHero = Template.bind({});
+MiniHero.args = {
+  type: 'hero--with-image',
+  background_colour: 'green',
+  title: 'Food hygiene ratings',
+  content: 'Use our online service to find a food business’s hygiene rating.',
+  image: {
+    alt: 'Alt text',
+    url: 'https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/fhrs-5_0.jpg',
+  },
+  mini: true,
+};
