@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add description option to business hero
 - Add additional examples to FHRS page
 - Reorganise FHRS Search card folders for clarity
+- Define .regional-variation CSS class.
 
 ### Deprecated
 -
