@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
+## [1.0.2] - 2022-06-23 (FHRS components)
 
 ### Added
 - FHIS badges
@@ -41,17 +41,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reorganise FHRS Search card folders for clarity
 - Define .regional-variation CSS class.
 
-### Deprecated
--
-
-### Removed
--
-
 ### Fixed
 - Local authority map coordinates change on resize
-
-### Security
--
 
 
 ## [1.0.1] - 2022-06-06 (MyHACCP translation bugfix and text change for FHRS)
