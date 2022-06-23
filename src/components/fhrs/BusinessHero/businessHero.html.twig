@@ -2,9 +2,12 @@
   <div class="business-hero__header">
     <h1 class="business-hero__title">
       {% if name_prefix %}
-        <span>{{ name_prefix }}</span>
+        <span class="business-hero__prefix">{{ name_prefix }}</span>
       {% endif %}
       {{ name }}
+      {% if description %}
+        <span class="business-hero__description">{{ description }}</span>
+      {% endif %}
     </h1>
   </div>
   {% if rating %}
@@ -13,7 +16,7 @@
       {% include "@components/components/fhrs/Badge/badge.html.twig" with {
         class_name: "business-hero",
         rating: rating,
-        welsh: welsh,
+        welsh: wales_business or welsh,
         version: 3,
       } %}
       <div class="business-hero__link-wrapper">

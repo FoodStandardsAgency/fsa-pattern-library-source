@@ -1,5 +1,5 @@
 @import "src/lib.scss";
-@include fhrs-badges("badge-download");
+@include rating-badges("badge-download");
 
 .badge-download {
   // Reset button style

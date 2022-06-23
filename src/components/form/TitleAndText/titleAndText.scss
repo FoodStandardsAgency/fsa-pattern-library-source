@@ -5,7 +5,7 @@
   overflow-wrap: break-word;
 
   &__subtitle {
-    @include body;
+    @include intro;
 
     display: block;
     margin-top: 1rem;

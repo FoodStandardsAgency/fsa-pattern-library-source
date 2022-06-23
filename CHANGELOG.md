@@ -26,25 +26,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
-## [Upcoming release] - 1971-11-03
+## [1.0.2] - 2022-06-23 (FHRS components)
 
 ### Added
--
+- FHIS badges
+- New layout for the Local Authority Search page
+- Added image-resizer library for the local authority map component
+- Add mini variation of the hero for FHRS landing page
 
 ### Changed
-- 
-
-### Deprecated
--
-
-### Removed
--
+- Implement more than one type of fhis badge
+- Add description option to business hero
+- Add additional examples to FHRS page
+- Reorganise FHRS Search card folders for clarity
+- Define .regional-variation CSS class.
 
 ### Fixed
--
-
-### Security
--
+- Local authority map coordinates change on resize
 
 
 ## [1.0.1] - 2022-06-06 (MyHACCP translation bugfix and text change for FHRS)

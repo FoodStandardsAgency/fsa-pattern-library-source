@@ -3,7 +3,8 @@ import fhrsSearch from './fhrsSearch.html.twig';
 import fhrsHome from './fhrsHome.html.twig';
 import fhrsCompanyDigitalBadge from './fhrsCompanyDigitalBadge.html.twig';
 import fhrsApiPage from './fhrsApiPage.html.twig';
-import { navigation } from '@components/components/default-content';
+import fhrsLocalAuthoritySearchPage from './fhrsLocalAuthoritySearchPage.html.twig';
+import { navigation, fhrs_search_box } from '@components/components/default-content';
 import { social_svgs, svgs } from '@components/components/svg-icons';
 
 export default {
@@ -14,10 +15,6 @@ export default {
     },
     layout: 'fullscreen',
   },
-};
-
-export const FHRSHome = () => {
-  return fhrsHome();
 };
 
 export const FHRSCompany = () => {
@@ -58,7 +55,26 @@ const BadgePage = (args) => {
   return fhrsCompanyDigitalBadge(args);
 };
 
+const LocalAuthoritySearch = (args) => {
+  return fhrsLocalAuthoritySearchPage(args);
+};
+
+const Home = (args) => {
+  return fhrsHome(args);
+};
+
 export const FHRSCompanyDigitalBadgePage = BadgePage.bind({});
 FHRSCompanyDigitalBadgePage.args = {
   ...FhrsApiPage.args,
+};
+
+export const FHRSLocalAuthoritySearchPage = LocalAuthoritySearch.bind({});
+FHRSLocalAuthoritySearchPage.args = {
+  ...FhrsApiPage.args,
+};
+
+export const FHRSHomePage = Home.bind({});
+FHRSHomePage.args = {
+  ...FhrsApiPage.args,
+  search_content: fhrs_search_box,
 };

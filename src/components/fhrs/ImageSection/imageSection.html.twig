@@ -22,6 +22,7 @@
           rating: badge.rating,
           welsh: welsh,
           version: badge.version,
+          fhis: true,
         } %}
       {% endfor %}
     </div>
@@ -33,7 +34,7 @@
         link_url: download_link,
       } %}
       <span>
-        ({{ filesize }})
+        ({{ file_format }} - {{ filesize }})
       </span>
     </div>
 

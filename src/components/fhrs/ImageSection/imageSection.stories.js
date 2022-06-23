@@ -34,8 +34,9 @@ ImageSection.args = {
     '<p>Examples of hygiene rating images, and the sizes available, that can be used with the API data:</p>',
   welsh: false,
   download_link: '#',
-  download_text: 'Download new high resolution FHRS badges',
-  filesize: '559.42 KB',
+  download_text: 'Download high resolution hygiene rating images',
+  filesize: '2 MB',
+  file_format: 'ZIP',
   fhrs_badges: [
     {
       class_name: 'image-section',
