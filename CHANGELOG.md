@@ -11,33 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
--
-
-### Deprecated
--
-
-### Removed
--
-
-### Fixed
--
-
-### Security
--
-
-
-## [Upcoming release] - 1971-11-03
-
-### Added
-- FHIS badges
-- New layout for the Local Authority Search page
-- Added image-resizer library for the local authority map component
-
-### Changed
-- Implement more than one type of fhis badge
-- Add description option to business hero
-- Add additional examples to FHRS page
-- Reorganise FHRS Search card folders for clarity
 - Remove DomContentLoaded from individual components and move all into a single call
 
 ### Deprecated
@@ -47,10 +20,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
-- Local authority map coordinates change on resize
+-
 
 ### Security
 -
+
+
+## [1.0.2] - 2022-06-23 (FHRS components)
+
+### Added
+- FHIS badges
+- New layout for the Local Authority Search page
+- Added image-resizer library for the local authority map component
+- Add mini variation of the hero for FHRS landing page
+
+### Changed
+- Implement more than one type of fhis badge
+- Add description option to business hero
+- Add additional examples to FHRS page
+- Reorganise FHRS Search card folders for clarity
+- Define .regional-variation CSS class.
+
+### Fixed
+- Local authority map coordinates change on resize
 
 
 ## [1.0.1] - 2022-06-06 (MyHACCP translation bugfix and text change for FHRS)

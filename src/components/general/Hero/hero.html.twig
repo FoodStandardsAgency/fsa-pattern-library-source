@@ -35,7 +35,7 @@
   {% set show_hero = 1 %}
 {% endif %}
 
-<section class="hero {{ type }}{{ service_type ? ' hero--services-' ~ service_type : '' }}">
+<section class="hero {{ type }}{{ service_type ? ' hero--services-' ~ service_type : '' }}{{ mini ? ' hero--mini' : '' }}">
   <div class="hero__mask-wrapper{{ theme }}{{ campaign_block ? " hero__mask-wrapper--campaign-block" : "" }}{{ show_hero  ? "" : " hero__mask-wrapper--hide-hero" }}">
     <div class="hero__container">
       <div class="hero__row">
