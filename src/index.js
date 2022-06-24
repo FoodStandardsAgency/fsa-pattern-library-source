@@ -7,7 +7,7 @@ function runCssVars() {
   // Check whether the browser has native support for css variables
   const hasNativeSupport = ((window || {}).CSS || {}).supports && window.CSS.supports('(--a: 0)');
   // Check whether this is running in Storybook
-  if (!hasNativeSupport) {
+  if (!hasNativeSupport && window.isStorybook) {
     cssVars({
       silent: true,
       preserveVars: false,
