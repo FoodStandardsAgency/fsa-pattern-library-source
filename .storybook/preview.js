@@ -1,4 +1,4 @@
-import '../src/storybookIndex.js';
+import '../src/index.js';
 
 const customViewports = {
   mobile: {

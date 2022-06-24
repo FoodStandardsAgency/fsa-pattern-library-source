@@ -1,6 +1,16 @@
+import { domContentLoadedWrapper } from '@components/helpers';
+
 let navigation;
 
-navigation = document.querySelector('#navigation');
+function callback() {
+  navigation = document.querySelector('#navigation');
+}
+
+if (document.readyState === 'loading') {
+  domContentLoadedWrapper(callback);
+} else {
+  navigation = document.querySelector('#navigation');
+}
 
 const focusableElements =
   'a[href], button:not(.navigation__group-title--mobile), input:not(.js-form-submit), select, textarea, [tabindex]:not([tabindex="-1"])';
