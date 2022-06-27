@@ -50,6 +50,13 @@
   &__toggle-area {
     margin-top: 2rem;
 
+    &__right {
+      margin-top: 2rem;
+      @media screen and (min-width: $fsa-md) {
+        margin-top: 0;
+      }
+    }
+
     @media screen and (min-width: $fsa-md) {
       @include positioning;
 
