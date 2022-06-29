@@ -13,7 +13,7 @@
         <div class="promo-group__card-wrapper{{title or description or description_link_label ? "" : " promo-group__card-wrapper--card-only"}}">
           <div class="promo-group__card{{ card.promo_link is defined ? " promo-group__card--one-link" : " promo-group__card--multiple-links" }}">
             {% if card.image %}
-              <div class="promo-group__background" style="background-image: svg-load('{{ card.image }}')"></div>
+              <div class="promo-group__background" style="background-image: url('{{ card.image }}')"></div>
             {% endif %}
             <h3 class="promo-group__sub-heading">
               {% if card.promo_link is defined %}
