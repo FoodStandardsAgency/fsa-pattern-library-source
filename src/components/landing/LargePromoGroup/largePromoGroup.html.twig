@@ -3,7 +3,7 @@
   <div class="largePromoGroup__container">
   {% for key, row in promoGroup %}
     <div class="largePromoGroup__row largePromoGroup__row--{{ key is even ? "even" : "odd" }}">
-      <div style="background-image: svg-load({{ row.image }})" class="largePromoGroup__background-image"></div>
+      <div style="background-image: {{ row.image }}" class="largePromoGroup__background-image"></div>
         <div class="largePromoGroup__content">
         {% if row.title %}
           <h2 class="largePromoGroup__title">{{ row.title }}</h2>
