@@ -1,8 +1,16 @@
+import { domContentLoadedWrapper } from '@components/helpers';
+
 let navigation;
 
-window.addEventListener('DOMContentLoaded', function () {
+function callback() {
   navigation = document.querySelector('#navigation');
-});
+}
+
+if (document.readyState === 'loading') {
+  domContentLoadedWrapper(callback);
+} else {
+  navigation = document.querySelector('#navigation');
+}
 
 const focusableElements =
   'a[href], button:not(.navigation__group-title--mobile), input:not(.js-form-submit), select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -12,7 +20,7 @@ function getMode() {
 }
 
 function menuFocus(direction, event, link, classes, submenu = null, button = null) {
-  if (direction == 'out') {
+  if (direction === 'out') {
     if (link.contains(event.relatedTarget)) {
       return;
     }
@@ -23,7 +31,7 @@ function menuFocus(direction, event, link, classes, submenu = null, button = nul
       blurBackground(navigation);
     }
   }
-  if (direction == 'in') {
+  if (direction === 'in') {
     link.addEventListener('keydown', (e) => {
       if (e.keyCode === 27) {
         link.classList.remove(classes.linkOpen);
@@ -45,7 +53,7 @@ function resetArrows() {
 }
 
 function subMenuFocus(direction, event, link, classes, parent = null, submenu = null) {
-  if (direction == 'out') {
+  if (direction === 'out') {
     if (parent.contains(event.relatedTarget)) {
       return;
     }
@@ -57,7 +65,7 @@ function subMenuFocus(direction, event, link, classes, parent = null, submenu = 
       blurBackground(navigation);
     }
   }
-  if (direction == 'in') {
+  if (direction === 'in') {
     link.addEventListener('keydown', (e) => {
       if (e.keyCode === 27) {
         link.classList.remove(classes.linkOpen);
@@ -99,7 +107,7 @@ function menuArrows(links) {
     let prev = [];
     let next = [];
     link.addEventListener('keydown', (e) => {
-      if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
+      if ([37, 38, 39, 40].indexOf(e.keyCode) === -1) {
         return;
       }
       // Make sure to stop event bubbling
@@ -110,7 +118,7 @@ function menuArrows(links) {
           // This is the first item in the top level mega menu list
           // Focus on the previous item in the top level
           prev = prevAll(link)[0];
-          if (prev && getMode() == 'desktop') {
+          if (prev && getMode() === 'desktop') {
             if (prev.querySelector('button')) {
               prev.querySelector('button').focus();
             } else {
@@ -128,7 +136,7 @@ function menuArrows(links) {
         case 39: // right arrow
           // Focus on the next item in the top level
           next = nextAll(link)[0];
-          if (next && getMode() == 'desktop') {
+          if (next && getMode() === 'desktop') {
             next.querySelector('button').focus();
             const submenu = next.querySelector('.navigation__submenu');
             if (submenu) {
@@ -141,7 +149,7 @@ function menuArrows(links) {
         case 40: // down arrow
           // If there is a UL available, place focus on the first focusable element within
           next = nextAll(link)[0];
-          if (primarySubMenu && getMode() == 'desktop') {
+          if (primarySubMenu && getMode() === 'desktop') {
             link.classList.add('navigation__link--open');
             primarySubMenu.classList.add('navigation__submenu--expanded');
             primarySubMenu.querySelectorAll(focusableElements)[0].focus();
@@ -163,7 +171,7 @@ function subMenuArrows(group) {
   const parentLink = group.parentNode.parentNode;
   links.forEach((link) => {
     link.addEventListener('keydown', (e) => {
-      if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
+      if ([37, 38, 39, 40].indexOf(e.keyCode) === -1) {
         return;
       }
       // Make sure to stop event bubbling
@@ -181,7 +189,7 @@ function subMenuArrows(group) {
           }
           break;
         case 38: /// up arrow
-          if (link.querySelector('a') == firstElement) {
+          if (link.querySelector('a') === firstElement) {
             parentButton.focus();
             parentLink.classList.remove('navigation__link--open');
             submenu.classList.remove('navigation__submenu--expanded');
@@ -212,7 +220,7 @@ function subMenuArrows(group) {
 
 function blurBackground(navigation) {
   const mode = getMode();
-  if (mode == 'desktop') {
+  if (mode === 'desktop') {
     const backgroundBlur = navigation.querySelector('.navigation__background-blur');
     const body = document.body;
     const html = document.documentElement;

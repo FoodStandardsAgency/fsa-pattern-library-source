@@ -1,8 +1,7 @@
 import './mapField.html.twig';
 import './mapField.scss';
 
-export default function () {}
-window.addEventListener('DOMContentLoaded', function () {
+export default function () {
   const mapField = document.querySelector('.map-field');
   if (!mapField) {
     return;
@@ -16,4 +15,4 @@ window.addEventListener('DOMContentLoaded', function () {
     mapButton.classList.add('map-field__button--hidden');
     map.classList.add('map-field__map--hidden');
   }
-});
+}
