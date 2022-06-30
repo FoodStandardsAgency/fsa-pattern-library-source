@@ -25,4 +25,5 @@ if (document.readyState === 'loading') {
   domContentLoadedWrapper(callback);
 } else {
   componentImports();
+  window.componentImports = componentImports;
 }
