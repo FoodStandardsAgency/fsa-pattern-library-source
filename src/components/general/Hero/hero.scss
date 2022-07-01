@@ -436,6 +436,8 @@
   // If mini and has an image, adjust the image sizes and positioning
   &--mini#{&}--with-image {
     .hero__title {
+      margin-top: 0;
+
       @media screen and (max-width: $fsa-md - 1) {
         &::after {
           display: none;
@@ -461,11 +463,13 @@
 
     .hero__content-wrapper {
       margin: 1rem 0;
+
       @media screen and (min-width: $fsa-md) {
         margin: 2rem 0 0;
         max-width: 55%;
         flex-basis: 55%;
       }
+
       @media screen and (min-width: $fsa-lg) {
         max-width: 56%;
         flex-basis: 56%;
@@ -474,10 +478,6 @@
       @media screen and (min-width: $fsa-xl) {
         margin: 0;
       }
-    }
-
-    .hero__title {
-      margin-top: 0;
     }
 
     .hero__image {
