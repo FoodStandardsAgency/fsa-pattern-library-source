@@ -64,6 +64,7 @@
         name: 'business-name-search',
         label: business_name_label,
         type: 'text',
+        value: business_name_value,
       } %}
     </div>
     <div class="ratings-search-box__location-search ratings-search-box__search-inputs__right">
@@ -72,6 +73,7 @@
         name: 'address-search',
         label: address_search_label,
         type: 'text',
+        value: address_search_value,
       } %}
     </div>
   </div>
@@ -119,7 +121,8 @@
     {% include '@components/components/general/Button/button.html.twig' with {
       type: 'primary',
       label: submit_button_label,
-      element: 'input',
+      element: submit_button_type ? submit_button_type : 'input',
+      url: submit_button_url ? submit_button_url: '',
     } %}
   </div>
 {#  Map related - uncomment when FSA confirm whether it should be added to search #}
