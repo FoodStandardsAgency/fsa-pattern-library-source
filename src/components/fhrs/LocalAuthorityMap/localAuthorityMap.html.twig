@@ -20,22 +20,26 @@
     <div class="local-authority-map__table-wrapper">
       <div class="local-authority-map__table text-block">
         {% if selected_region %}
-          <h2>{{ selected_region_title_prefix }} {{ selected_region|replace({'-': ' '})|title}} {{ selected_region_title_suffix }}</h2>
           <table>
-            <tr>
-              <th>{{ local_authority_label }}</th>
-              <th>{{ number_of_businesses_label }}</th>
-            </tr>
-            {% for data in selected_results_data %}
+            <caption>{{ selected_region_title_prefix }} {{ selected_region|replace({'-': ' '})|title}} {{ selected_region_title_suffix }}</caption>
+            <thead>
               <tr>
-                <td><a href="{{ data.local_authority_link }}" data-fsa-at="{{ "local-authority-map-" ~ data.local_authority|replace({" ": "-"})|lower }}">{{ data.local_authority }}</a></td>
-                <td>{{ data.number_of_businesses }}</td>
+                <th scope="col">{{ local_authority_label }}</th>
+                <th scope="col">{{ number_of_businesses_label }}</th>
               </tr>
-            {% endfor %}
+            </thead>
+            <tbody>
+              {% for data in selected_results_data %}
+                <tr>
+                  <td><a href="{{ data.local_authority_link }}" data-fsa-at="{{ "local-authority-map-" ~ data.local_authority|replace({" ": "-"})|lower }}">{{ data.local_authority }}</a></td>
+                  <td>{{ data.number_of_businesses }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
           </table>
         {% else %}
-          <h2>{{ default_map_title }}</h2>
           <table>
+            <caption>{{ default_map_title }}</caption>
             {% for region in regions %}
               <tr>
                 <td><a href="{{ region.link }}" data-fsa-at="{{ "local-authority-map-" ~ region.name|replace({" ": "-"})|lower }}">{{ region.name }}</a></td>
