@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New layout for the Local Authority Search page
 - Added image-resizer library for the local authority map component
 - Add mini variation of the hero for FHRS landing page
+- Welsh example of the mini hero
 
 ### Changed
 - Implement more than one type of fhis badge
@@ -43,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Local authority map coordinates change on resize
+- Mini hero image no longer cuts off inbetween screen sizes
 
 
 ## [1.0.1] - 2022-06-06 (MyHACCP translation bugfix and text change for FHRS)

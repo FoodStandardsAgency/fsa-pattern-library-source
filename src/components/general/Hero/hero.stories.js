@@ -1,5 +1,7 @@
 import hero from './hero.html.twig';
 import './hero.scss';
+import heroImage from './assets/homepage-hero-image.jpeg';
+import welshHeroImage from './assets/homepage-hero-image-welsh.jpeg';
 
 export default {
   title: 'Components/General/Hero',
@@ -122,7 +124,20 @@ MiniHero.args = {
   content: 'Use our online service to find a food business’s hygiene rating.',
   image: {
     alt: 'Alt text',
-    url: 'https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/fhrs-5_0.jpg',
+    url: heroImage,
+  },
+  mini: true,
+};
+
+export const WelshMiniHero = Template.bind({});
+WelshMiniHero.args = {
+  type: 'hero--with-image',
+  background_colour: 'green',
+  title: 'Sgoriau hylendid bwyd',
+  content: 'Defnyddiwch ein gwasanaeth ar-lein i ddod o hyd i sgôr hylendid busnes bwyd.',
+  image: {
+    alt: 'Testun alt',
+    url: welshHeroImage,
   },
   mini: true,
 };
