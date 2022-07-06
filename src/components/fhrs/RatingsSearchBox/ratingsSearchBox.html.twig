@@ -28,7 +28,7 @@
       {% elseif fieldset_field.type == 'single-radio' %}
         <div class="ratings-search-box__single-radio">
           <div class="radio__field">
-            <input class="radio__input" type="radio" name="{{ fieldset_field.name }}" value="{{ fieldset_field.value }}" id="{{ fieldset_field.id }}">
+            <input class="radio__input" type="radio" name="{{ fieldset_field.name }}" value="{{ fieldset_field.value }}" id="{{ fieldset_field.id }}" {{ fieldset_field.default == fieldset_field.value ? "checked" : "" }}>
             <label class="radio__label" for="{{ fieldset_field.id }}">{{ fieldset_field.label }}</label>
           </div>
         </div>
