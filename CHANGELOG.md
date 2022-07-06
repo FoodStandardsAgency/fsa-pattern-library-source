@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Remove DomContentLoaded from individual components and move all into a single call
+- Add map button and placeholder to business hero component
 
 ### Deprecated
 -
