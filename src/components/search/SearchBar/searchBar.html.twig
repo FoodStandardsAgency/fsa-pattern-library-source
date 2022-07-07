@@ -3,7 +3,7 @@
 {% endif %}
   <label class="search-bar__label" for="search">{{ search_text }}</label>
   {% if default_value is defined %}
-    <input class="search-bar__box{{ default_value != "" ? " search-bar__box--has-content" : "" }}" value="{{ default_value }}" name="keywords" type="search" id="search" data-fsa-at="search-input">
+    <input class="search-bar__box" name="keywords" type="search" id="search" data-fsa-at="search-input" data-default-value="{{ default_value }}">
   {% else %}
     <input class="search-bar__box" value="{{ search_value }}" name="keywords" type="search" id="search" data-fsa-at="search-input">
   {% endif %}
