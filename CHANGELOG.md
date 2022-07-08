@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Upcoming release template] - 1971-11-03
 
 ### Added
@@ -27,6 +28,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 -
+
+
+## [1.0.7] - 2022-07-08 (Add map functionality and default values for React site)
+
+### Changed
+- Add data-default-value to dropdowns for React
+- Add map button and placeholder to business hero component
+
+### Fixed
+- Fix issue where enter in search boxes wasn't submitting
+- Add label and submit types
+- Allow business search input to take up full width when location is selected
 
 
 ## [1.0.6] - 2022-07-08 (Search bar fixes and refactor of DomContentLoaded functions)
