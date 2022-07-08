@@ -188,6 +188,7 @@ RatingsSearchBox.args = {
     },
   ],
   submit_button_label: 'Search',
+  submit_button_type: 'input',
 };
 
 export const LocalAuthorityRatingsSearchBox = Template.bind({});
@@ -272,6 +273,7 @@ LocalAuthorityRatingsSearchBox.args = {
     },
   ],
   submit_button_label: 'Search',
+  submit_button_type: 'input',
   local_authority_section: {
     website_title: 'Website',
     website_url: 'www.coventry.gov.uk',
