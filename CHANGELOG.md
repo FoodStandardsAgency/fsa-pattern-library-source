@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
-- Remove DomContentLoaded from individual components and move all into a single call
+- Add data-default-value to dropdowns for React
 - Add map button and placeholder to business hero component
 
 ### Deprecated
@@ -21,10 +21,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fix issue where enter in search boxes wasn't submitting
+- Add label and submit types
+- Allow business search input to take up full width when location is selected
 
 ### Security
 -
+
+
+## [1.0.6] - 2022-07-08 (Search bar fixes and refactor of DomContentLoaded functions)
+
+### Changed
+- Remove DomContentLoaded from individual components and move all into a single call
+
+### Fixed
+- Add data-value to search bar for React
 
 
 ## [1.0.2] - 2022-06-23 (FHRS components)
