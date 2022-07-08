@@ -14,12 +14,14 @@ export default function () {
   const locationToggle = ratingsSearchBox.querySelector('#location-toggle');
   const locationInput = ratingsSearchBox.querySelector('.ratings-search-box__location-search');
   const locationField = ratingsSearchBox.querySelector('.ratings-search-box__location');
+  const businessField = ratingsSearchBox.querySelector('.ratings-search-box__business-name');
   const locationContainer = ratingsSearchBox.querySelector('.ratings-search-box__location-toggle');
   const blockedLabel = locationContainer.getAttribute('data-blocked-location');
   locationToggle.addEventListener('click', () => {
     const label = locationContainer.querySelector('label > span');
     if (locationToggle.getAttribute('aria-checked') === 'true') {
       locationInput.classList.add('ratings-search-box__location-search--closed');
+      businessField.classList.add('ratings-search-box__business-name--full-width');
       navigator.geolocation.getCurrentPosition(
         (position) => {
           locationField.value = position.coords.latitude + ',' + position.coords.longitude;
@@ -30,10 +32,12 @@ export default function () {
           locationToggle.classList.add('toggle-button__button--disabled');
           locationToggle.ariaChecked = 'false';
           locationInput.classList.remove('ratings-search-box__location-search--closed');
+          businessField.classList.remove('ratings-search-box__business-name--full-width');
         }
       );
     } else {
       locationInput.classList.remove('ratings-search-box__location-search--closed');
+      businessField.classList.remove('ratings-search-box__business-name--full-width');
       locationField.value = '';
     }
   });

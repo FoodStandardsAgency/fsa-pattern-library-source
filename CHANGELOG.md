@@ -20,7 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Fixed
--
+- Fix issue where enter in search boxes wasn't submitting
+- Add label and submit types
+- Allow business search input to take up full width when location is selected
 
 ### Security
 -

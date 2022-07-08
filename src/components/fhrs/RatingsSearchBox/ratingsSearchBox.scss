@@ -41,6 +41,14 @@
     }
   }
 
+  &__business-name {
+    &--full-width {
+      @media screen and (min-width: $fsa-md) {
+        margin-right: -1rem;
+      }
+    }
+  }
+
   &__location-search {
     display: block;
 
