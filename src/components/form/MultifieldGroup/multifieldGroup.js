@@ -1,6 +1,5 @@
 import './multifieldGroup.html.twig';
 import './multifieldGroup.scss';
-import { domContentLoadedWrapper } from '../../../helpers';
 import {
   activateMultivalueField,
   addField,
@@ -12,16 +11,12 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 
 export default function () {
-  function callback() {
-    const groups = document.querySelectorAll('.multifield-group');
-    for (const group of groups) {
-      if (!group.hasAttribute('pl-listener-assigned')) {
-        initGroup(group);
-      }
+  const groups = document.querySelectorAll('.multifield-group');
+  for (const group of groups) {
+    if (!group.hasAttribute('pl-listener-assigned')) {
+      initGroup(group);
     }
   }
-
-  return domContentLoadedWrapper(callback);
 }
 
 export function dispatchMultigroupEvent(element) {

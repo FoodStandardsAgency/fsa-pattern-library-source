@@ -1,27 +1,21 @@
 import './multivalueField.html.twig';
 import './multivalueField.scss';
-import { domContentLoadedWrapper } from '../../../helpers';
 import { dispatchMultigroupEvent } from '@components/components/form/MultifieldGroup/multifieldGroup';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function () {
-  function callback() {
-    const multivalueFields = document.querySelectorAll('.multivalue-field');
+  const multivalueFields = document.querySelectorAll('.multivalue-field');
 
-    for (const field of multivalueFields) {
-      const parsedValues = JSON.parse(field.getAttribute('data-values'));
-      const values =
-        Array.isArray(parsedValues) && parsedValues.length ? parsedValues.slice(1) : [];
+  for (const field of multivalueFields) {
+    const parsedValues = JSON.parse(field.getAttribute('data-values'));
+    const values = Array.isArray(parsedValues) && parsedValues.length ? parsedValues.slice(1) : [];
 
-      for (const value of values) {
-        addField(field, value);
-      }
-
-      activateMultivalueField(field);
+    for (const value of values) {
+      addField(field, value);
     }
-  }
 
-  return domContentLoadedWrapper(callback);
+    activateMultivalueField(field);
+  }
 }
 
 export function addField(scope, initialValue = '') {

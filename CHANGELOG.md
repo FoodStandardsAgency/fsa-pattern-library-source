@@ -25,6 +25,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -
 
+## [Upcoming release] - 1971-11-03
+
+### Added
+-
+
+### Changed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Fixed
+-
+
+### Security
+-
+
+
+## [1.0.6] - 2022-07-08 (Search bar fixes and refactor of DomContentLoaded functions)
+
+### Changed
+- Remove DomContentLoaded from individual components and move all into a single call
+
+### Fixed
+- Add data-value to search bar for React
+
 
 ## [1.0.2] - 2022-06-23 (FHRS components)
 
@@ -33,6 +62,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New layout for the Local Authority Search page
 - Added image-resizer library for the local authority map component
 - Add mini variation of the hero for FHRS landing page
+- Welsh example of the mini hero
 
 ### Changed
 - Implement more than one type of fhis badge
@@ -43,6 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Local authority map coordinates change on resize
+- Mini hero image no longer cuts off inbetween screen sizes
 
 
 ## [1.0.1] - 2022-06-06 (MyHACCP translation bugfix and text change for FHRS)

@@ -1,39 +1,34 @@
 import './dropdownMenu.scss';
 import './dropdownMenu.html.twig';
-import { domContentLoadedWrapper } from '../../../helpers';
 
 export default function () {
-  function callback() {
-    const dropdowns = document.querySelectorAll('.dropdown-menu__label');
+  const dropdowns = document.querySelectorAll('.dropdown-menu__label');
 
-    if (!dropdowns.length) {
-      return;
-    }
+  if (!dropdowns.length) {
+    return;
+  }
 
-    for (const dropdown of dropdowns) {
-      dropdown.addEventListener('click', (e) => {
-        e.preventDefault();
+  for (const dropdown of dropdowns) {
+    dropdown.addEventListener('click', (e) => {
+      e.preventDefault();
 
-        const openedList = document.querySelector('.dropdown-menu__options-open');
-        const options = e.target.closest('.dropdown-menu').querySelector('.dropdown-menu__options');
+      const openedList = document.querySelector('.dropdown-menu__options-open');
+      const options = e.target.closest('.dropdown-menu').querySelector('.dropdown-menu__options');
 
-        if (options && openedList && !options.classList.contains('dropdown-menu__options-open')) {
-          openedList.classList.remove('dropdown-menu__options-open');
-        }
-
-        options.classList.toggle('dropdown-menu__options-open');
-      });
-    }
-
-    document.addEventListener('click', hideUnfocusedDropdowns);
-    document.addEventListener('keyup', (e) => {
-      if (e.key === 'Tab') {
-        hideUnfocusedDropdowns(e);
+      if (options && openedList && !options.classList.contains('dropdown-menu__options-open')) {
+        openedList.classList.remove('dropdown-menu__options-open');
       }
+
+      options.classList.toggle('dropdown-menu__options-open');
     });
   }
 
-  return domContentLoadedWrapper(callback);
+  document.addEventListener('click', hideUnfocusedDropdowns);
+  document.addEventListener('keyup', (e) => {
+    if (e.key === 'Tab') {
+      hideUnfocusedDropdowns(e);
+    }
+  });
 }
 
 function hideUnfocusedDropdowns(e) {

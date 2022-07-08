@@ -1,8 +1,7 @@
 import './textarea.scss';
 import './textarea.html.twig';
 
-export default function () {}
-window.addEventListener('DOMContentLoaded', function () {
+export default function () {
   const textAreas = document.querySelectorAll('.textarea');
   if (!textAreas) {
     return;
@@ -17,4 +16,4 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
-});
+}

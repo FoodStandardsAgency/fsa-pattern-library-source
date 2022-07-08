@@ -1,8 +1,7 @@
 import './inputField.html.twig';
 import './inputField.scss';
 
-export default function () {}
-window.addEventListener('DOMContentLoaded', function () {
+export default function () {
   const textFields = document.querySelectorAll('.input-field');
   if (!textFields) {
     return;
@@ -17,4 +16,4 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
-});
+}

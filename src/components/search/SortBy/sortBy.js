@@ -4,16 +4,14 @@ import './sortBy.html.twig';
 import './sortBy.scss';
 
 export default function () {
-  window.addEventListener('DOMContentLoaded', function () {
-    const el = document.querySelector('.sort');
-    if (!el) {
-      return;
-    }
+  const el = document.querySelector('.sort');
+  if (!el) {
+    return;
+  }
 
-    const sortBy = el.querySelector('select');
-    sortBy.addEventListener('change', (e) => {
-      e.preventDefault();
-      updateParams('sort', sortBy.value);
-    });
+  const sortBy = el.querySelector('select');
+  sortBy.addEventListener('change', (e) => {
+    e.preventDefault();
+    updateParams('sort', sortBy.value);
   });
 }

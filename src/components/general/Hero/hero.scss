@@ -37,7 +37,7 @@
 
     /* stylelint-enable property-no-vendor-prefix */
     color: white;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     z-index: 2;
 
     @media screen and (min-width: $fsa-md) {
@@ -436,6 +436,8 @@
   // If mini and has an image, adjust the image sizes and positioning
   &--mini#{&}--with-image {
     .hero__title {
+      margin-top: 0;
+
       @media screen and (max-width: $fsa-md - 1) {
         &::after {
           display: none;
@@ -451,29 +453,30 @@
 
     .hero__mask-wrapper {
       @media screen and (min-width: $fsa-md) {
-        padding-bottom: 3rem;
+        min-height: 13rem;
       }
 
       @media screen and (min-width: $fsa-lg) {
-        padding-bottom: 6rem;
-      }
-
-      @media screen and (min-width: $fsa-xl) {
-        padding-bottom: 8rem;
-        min-height: 0;
+        min-height: 18.5rem;
       }
     }
 
     .hero__content-wrapper {
+      margin: 1rem 0 0;
+
       @media screen and (min-width: $fsa-md) {
-        padding: 0 1rem;
-        max-width: 60%;
-        flex-basis: 60%;
+        margin: 2rem 0 0;
+        max-width: 55%;
+        flex-basis: 55%;
       }
 
       @media screen and (min-width: $fsa-lg) {
-        max-width: 57%;
-        flex-basis: 57%;
+        max-width: 56%;
+        flex-basis: 56%;
+      }
+
+      @media screen and (min-width: $fsa-xl) {
+        margin: 0;
       }
     }
 
@@ -481,6 +484,7 @@
       height: 9.125rem;
       display: flex;
       align-items: center;
+      width: 100%;
 
       svg {
         @media screen and (min-width: $fsa-md) {
