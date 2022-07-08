@@ -28,7 +28,7 @@
       {% elseif fieldset_field.type == 'single-radio' %}
         <div class="ratings-search-box__single-radio">
           <div class="radio__field">
-            <input class="radio__input" type="radio" name="{{ fieldset_field.name }}" value="{{ fieldset_field.value }}" id="{{ fieldset_field.id }}">
+            <input class="radio__input" type="radio" name="{{ fieldset_field.name }}" value="{{ fieldset_field.value }}" id="{{ fieldset_field.id }}" {{ fieldset_field.default == fieldset_field.value ? "checked" : "" }} data-fsa-at="radio-{{ fieldset_field.id }}">
             <label class="radio__label" for="{{ fieldset_field.id }}">{{ fieldset_field.label }}</label>
           </div>
         </div>
@@ -94,11 +94,11 @@
 {#      </div>#}
     </div>
     <div class="ratings-search-box__toggle-area__right">
-      <a class="ratings-search-box__la-link" href="{{ local_authority_link.url }}">{{ local_authority_link.title }}</a>
+      <a class="ratings-search-box__la-link" href="{{ local_authority_link.url }}" data-fsa-at="{{ "search-a-local-authority-area" }}">{{ local_authority_link.title }}</a>
       {% if search_all_data_link.url and search_all_data_link.title %}
         <a class="ratings-search-box__all-data-link" href="{{ search_all_data_link.url }}">{{ search_all_data_link.title }}</a>
       {% endif %}
-      <button id="ratings-search-box__more-search-options-button" class="ratings-search-box__more-search-options" data-fewer-options-label="{{ fewer_options_label }}" aria-expanded="false">
+      <button type='button' id="ratings-search-box__more-search-options-button" class="ratings-search-box__more-search-options" data-fewer-options-label="{{ fewer_options_label }}" aria-expanded="false" data-fsa-at="{{ "more-search-options" }}">
         <span class="ratings-search-box__more-search-options__label">{{ more_options_label }}</span>
         <span class="ratings-search-box__more-search-options__arrow"></span>
       </button>

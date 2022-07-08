@@ -23,9 +23,9 @@
   {% endif %}
   <div class="dropdown__field">
     {% if states %}
-    <select name="{{ name }}" id="{{ id }}" class="dropdown__select" data-drupal-states="{{ states }}">
+    <select name="{{ name }}" id="{{ id }}" class="dropdown__select" data-drupal-states="{{ states }}" data-fsa-at="dropdown-{{ id }}">
       {% else %}
-      <select name="{{ name }}" id="{{ id }}" class="dropdown__select">
+      <select name="{{ name }}" id="{{ id }}" class="dropdown__select" data-default-value="{{ default ? default : "" }}" data-fsa-at="dropdown-{{ id }}">
         {% endif %}
         {% for option in options %}
           <option value="{{ option.value }}" data-value="{{ option.value }}"

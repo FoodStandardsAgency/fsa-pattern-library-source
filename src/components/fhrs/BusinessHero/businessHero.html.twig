@@ -11,38 +11,52 @@
     </h1>
   </div>
   {% if rating %}
-  <div class="business-hero__content">
-    <div class="business-hero__left">
-      {% include "@components/components/fhrs/Badge/badge.html.twig" with {
-        class_name: "business-hero",
-        rating: rating,
-        welsh: wales_business or welsh,
-        version: 3,
-      } %}
-      <div class="business-hero__link-wrapper">
-        <a href="{{ back_link }}" class="business-hero__link business-hero__link--back">{{ back_to_search_results }}</a>
+    <div class="business-hero__content">
+      <div class="business-hero__left">
+        {% include "@components/components/fhrs/Badge/badge.html.twig" with {
+          class_name: "business-hero",
+          rating: rating,
+          welsh: wales_business or welsh,
+          version: 3,
+        } %}
+        <div class="business-hero__link-wrapper">
+          <a href="{{ back_link }}"
+             class="business-hero__link business-hero__link--back" data-fsa-at="back-to-search-results">{{ back_to_search_results }}</a>
+        </div>
+        <div class="business-hero__link-wrapper">
+          <a href="{{ search_local_link }}"
+             class="business-hero__link business-hero__link--forward" data-fsa-at="search-this-local-authority-area">{{ search_this_local_authority_area }}</a>
+        </div>
+        <div class="business-hero__link-wrapper">
+          <a href="{{ search_all_link }}"
+             class="business-hero__link business-hero__link--forward" data-fsa-at="search-all">{{ search_all_data }}</a>
+        </div>
       </div>
-      <div class="business-hero__link-wrapper">
-        <a href="{{ search_local_link }}" class="business-hero__link business-hero__link--forward">{{ search_this_local_authority_area }}</a>
-      </div>
-      <div class="business-hero__link-wrapper">
-        <a href="{{ search_all_link }}" class="business-hero__link business-hero__link--forward">{{ search_all_data }}</a>
+      <div class="business-hero__right">
+        <div class="business-hero__block">
+          <h2 class="business-hero__subtitle">{{ address_title }}</h2>
+          <div class="business-hero__text">{{ address_content|raw }}</div>
+        </div>
+        <div class="business-hero__block">
+          <h2 class="business-hero__subtitle">{{ business_type_title }}</h2>
+          <div class="business-hero__text">{{ business_type_content }}</div>
+        </div>
+        <div class="business-hero__block">
+          <h2 class="business-hero__subtitle">{{ date_title }}</h2>
+          <div class="business-hero__text">{{ date_content }}</div>
+        </div>
       </div>
     </div>
-    <div class="business-hero__right">
-      <div class="business-hero__block">
-        <h2 class="business-hero__subtitle">{{ address_title }}</h2>
-        <div class="business-hero__text">{{ address_content|raw }}</div>
+    {% if map %}
+      <div class="business-hero__map">
+        <button id="business-hero__map__button" class="business-hero__map__button" aria-expanded="false" data-fsa-at="map-toggle">
+          <span class="business-hero__map__pin"></span>
+          <span class="business-hero__map__button-label" data-show-map="{{ show_map }}"
+                data-hide-map="{{ hide_map }}">{{ show_map }}</span>
+          <span class="business-hero__map__arrow"></span>
+        </button>
+        <div class="business-hero__map__wrapper" role="region" aria-labelledby="business-hero__map__button"></div>
       </div>
-      <div class="business-hero__block">
-        <h2 class="business-hero__subtitle">{{ business_type_title }}</h2>
-        <div class="business-hero__text">{{ business_type_content }}</div>
-      </div>
-      <div class="business-hero__block">
-        <h2 class="business-hero__subtitle">{{ date_title }}</h2>
-        <div class="business-hero__text">{{ date_content }}</div>
-      </div>
-    </div>
-  </div>
+    {% endif %}
   {% endif %}
 </div>
