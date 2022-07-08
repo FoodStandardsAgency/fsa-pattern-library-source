@@ -22,7 +22,12 @@
       {% endif %}
     </p>
     <p class="fhrs-search-card__last-inspected">{{ last_inspected }}:
-      {{ rating_date ? rating_date : "N/A" }}</p>
+      {% if rating == 'Exempt' or rating == 'AwaitingInspection' or rating_date is not defined %}
+        N/A
+      {% else %}
+        {{ rating_date }}
+      {% endif %}
+    </p>
     {% if business_appeal %}
       <p class="fhrs-search-card__business-say">{{ business_say }}</p>
     {% endif %}
