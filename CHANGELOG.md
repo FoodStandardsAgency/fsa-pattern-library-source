@@ -27,6 +27,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 
+## [1.0.6] - 2022-07-08 (Search bar fixes and refactor of DomContentLoaded functions)
+
+### Changed
+- Remove DomContentLoaded from individual components and move all into a single call
+
+### Fixed
+- Add data-value to search bar for React
+
+
 ## [1.0.2] - 2022-06-23 (FHRS components)
 
 ### Added
