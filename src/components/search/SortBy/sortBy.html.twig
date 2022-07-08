@@ -3,7 +3,7 @@
   {% if default_value is defined %}
     <select name="sort" id="sort" class="sort__select" defaultValue="{{ default|lower }}" data-fsa-at="search-sort">
   {% else %}
-    <select name="sort" id="sort" class="sort__select" data-fsa-at="search-sort">
+    <select name="sort" id="sort" class="sort__select" data-fsa-at="search-sort" data-default-value="{{ default ? default : "" }}">
   {% endif %}
     {% for option in options %}
       <option value="{{ option.value|lower }}" class="sort__option" {{ default_value is not defined and option.value|lower == default|lower ? "selected" : "" }}>{{ option.text }}</option>
