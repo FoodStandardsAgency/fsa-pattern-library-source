@@ -19,9 +19,9 @@
       <span class="input-field__prefix">{{ prefix }}</span>
     {% endif %}
     {% if value %}
-      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" value="{{ value }}" aria-required="{{ required ? "true" : "false" }}" placeholder="{{ placeholder }}" data-drupal-states='{{ states ? states|raw : {}|json_encode }}' {{ max_length ? "maxLength=" ~ max_length : ""}} {{ disabled ? "disabled" : "" }} {{ read_only ? "readonly" : "" }}/>
+      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" value="{{ value }}" aria-required="{{ required ? "true" : "false" }}" placeholder="{{ placeholder }}" data-drupal-states='{{ states ? states|raw : {}|json_encode }}' {{ max_length ? "maxLength=" ~ max_length : ""}} {{ disabled ? "disabled" : "" }} {{ read_only ? "readonly" : "" }} data-fsa-at="input-{{ id }}"/>
     {% else %}
-      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" aria-required="{{ required ? "true" : "false" }}" placeholder="{{ placeholder }}" data-drupal-states='{{ states ? states|raw : {}|json_encode }}' {{ max_length ? "maxLength=" ~ max_length : ""}} {{ disabled ? "disabled" : "" }} {{ read_only ? "readonly" : "" }}/>
+      <input {{ required ? required : "" }} class="input-field__input" type="{{ type }}" id="{{ id }}" name="{{ name }}" aria-required="{{ required ? "true" : "false" }}" placeholder="{{ placeholder }}" data-drupal-states='{{ states ? states|raw : {}|json_encode }}' {{ max_length ? "maxLength=" ~ max_length : ""}} {{ disabled ? "disabled" : "" }} {{ read_only ? "readonly" : "" }} data-fsa-at="input-{{ id }}"/>
     {% endif %}
   </div>
   {% if max_length %}

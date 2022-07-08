@@ -11,7 +11,7 @@
         } %}
       </div>
       <div class="badge-download__get-code">
-        <button id="badge-download-code-region--{{ loop.index }}" class="badge-download__code-button" aria-expanded="false">
+        <button id="badge-download-code-region--{{ loop.index }}" class="badge-download__code-button" aria-expanded="false" data-fsa-at="badge-code-{{ badge.rating|lower }}-{{ badge.version }}">
           {{ get_code }} - {{ badge.size }} {{ pixels }}
         </button>
         <div class="badge-download__code-wrapper" role="region" aria-labelledby="badge-download-code-region--{{ loop.index }}">
