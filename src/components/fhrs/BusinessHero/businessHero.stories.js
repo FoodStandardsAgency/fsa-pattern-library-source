@@ -43,6 +43,9 @@ English.args = {
   date_title: 'Date of inspection',
   date_content: '12 November 2021',
   rating: '5',
+  map: true,
+  show_map: 'Show map',
+  hide_map: 'Hide map',
 };
 
 export const WalesBusiness = Template.bind({});
@@ -63,6 +66,9 @@ WalesBusiness.args = {
   date_title: 'Date of inspection',
   date_content: '12 November 2021',
   rating: '5',
+  map: true,
+  show_map: 'Show map',
+  hide_map: 'Hide map',
 };
 
 export const Welsh = Template.bind({});
@@ -83,6 +89,9 @@ Welsh.args = {
   date_title: 'Arolygiad diwethaf',
   date_content: '12 November 2021',
   rating: '5',
+  map: true,
+  show_map: 'Dangos map',
+  hide_map: 'Cuddio map',
 };
 
 export const TitleOnly = Template.bind({});

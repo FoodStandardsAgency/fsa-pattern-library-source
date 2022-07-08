@@ -852,3 +852,18 @@ $mobileGutter: 1rem;
   @include fhis-badges($base-class);
 }
 /* stylelint-enable value-keyword-case */
+
+@mixin reset-button() {
+  button {
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+    border: 0 solid transparent;
+    text-shadow: 0 0 0 transparent;
+    padding: 0;
+  }
+
+  button:hover {
+    box-shadow: 0 0 0 transparent;
+    text-shadow: 0 0 0 transparent;
+  }
+}

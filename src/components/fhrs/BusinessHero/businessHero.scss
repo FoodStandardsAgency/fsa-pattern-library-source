@@ -113,4 +113,59 @@
 
     @include body;
   }
+
+  &__map {
+    width: 100%;
+    margin-top: 0.5rem;
+
+    @include reset-button;
+
+    &__wrapper {
+      display: none;
+      width: 100%;
+      height: 25rem;
+      margin-top: 1rem;
+
+      &--open {
+        display: block;
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: var(--fsa-primary_dark-green);
+    }
+
+    &__button-label {
+      @include h5;
+
+      margin-left: 1rem;
+    }
+
+    &__pin {
+      display: inline-block;
+      background-image: svg-load("./assets/map-icon.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
+      width: 1.563rem;
+      height: 1.875rem;
+    }
+
+    &__arrow {
+      display: inline-block;
+      background-image: svg-load("./assets/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      width: 0.875rem;
+      height: 0.625rem;
+      margin-left: 2rem;
+
+      &--open {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

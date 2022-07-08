@@ -102,12 +102,12 @@ import webtoolProgressBar from './components/haccp/WebToolProgressBar/webToolPro
 
 /* FHRS components */
 import './components/fhrs/LocalAuthority/localAuthority';
-import './components/fhrs/BusinessHero/businessHero';
 import './components/fhrs/SearchCard/searchCard';
 import './components/fhrs/Badge/badge';
 import ratingsSearchBox from './components/fhrs/RatingsSearchBox/ratingsSearchBox';
 import badgeDownload from './components/fhrs/BadgeDownload/badgeDownload';
 import localAuthorityMap from './components/fhrs/LocalAuthorityMap/localAuthorityMap';
+import businessHero from './components/fhrs/BusinessHero/businessHero';
 
 /* HACCP components */
 import './components/haccp/SaveProgress/saveProgress';
@@ -160,7 +160,7 @@ export default function () {
   textArea();
   localAuthorityMap();
   badgeDownload();
-
+  businessHero();
   // Fixes object-fit on legacy browsers
   objectFitImages();
 }

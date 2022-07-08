@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Add data-default-value to dropdowns for React
+- Add map button and placeholder to business hero component
 
 ### Deprecated
 -
