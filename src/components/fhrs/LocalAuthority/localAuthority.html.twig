@@ -18,7 +18,7 @@
             <span class="local-authority__field-name">{{ website_title }}:</span>
             <span class="local-authority__field-content">
               {% include "@components/components/general/ExternalLink/externalLink.html.twig" with {
-                external_link: website_url,
+                external_link: website_label ? website_label : website_url,
                 external_link_url: website_url
               } %}
             </span>

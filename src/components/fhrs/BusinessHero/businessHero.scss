@@ -120,6 +120,10 @@
 
     @include reset-button;
 
+    @media screen and (min-width: $fsa-md) {
+      margin-top: 1.5rem;
+    }
+
     &__wrapper {
       display: none;
       width: 100%;

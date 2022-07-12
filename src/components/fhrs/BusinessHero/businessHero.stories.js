@@ -37,7 +37,8 @@ English.args = {
   search_all_link: '#',
   search_all_data: 'Search all data',
   address_title: 'Address',
-  address_content: 'The Gas Yard<br>Canterbury Street<br>Coventry<br>CV1 5NR',
+  address_content: 'The Gas Yard<br>Canterbury Street<br>Coventry',
+  post_code: 'CV1 5NR',
   business_type_title: 'Business type',
   business_type_content: 'Restaurant/Cafe/Canteen',
   date_title: 'Date of inspection',
@@ -60,7 +61,8 @@ WalesBusiness.args = {
   search_all_link: '#',
   search_all_data: 'Search all data',
   address_title: 'Address',
-  address_content: 'The Gas Yard<br>Canterbury Street<br>Coventry<br>CV1 5NR',
+  address_content: 'The Gas Yard<br>Canterbury Street<br>Coventry',
+  post_code: 'CV1 5NR',
   business_type_title: 'Business type',
   business_type_content: 'Restaurant/Cafe/Canteen',
   date_title: 'Date of inspection',
@@ -83,7 +85,8 @@ Welsh.args = {
   search_all_link: '#',
   search_all_data: 'Chwilio holl ddata’r DU',
   address_title: 'Cyfeiriad',
-  address_content: 'The Gas Yard<br>Canterbury Street<br>Coventry<br>CV1 5NR',
+  address_content: 'The Gas Yard<br>Canterbury Street<br>Coventry',
+  post_code: 'CV1 5NR',
   business_type_title: 'Math o fusnes',
   business_type_content: 'Restaurant/Cafe/Canteen',
   date_title: 'Arolygiad diwethaf',
@@ -92,6 +95,26 @@ Welsh.args = {
   map: true,
   show_map: 'Dangos map',
   hide_map: 'Cuddio map',
+};
+
+export const PrivateAddress = Template.bind({});
+PrivateAddress.args = {
+  ...English.args,
+  private: true,
+  private_address: 'Private address',
+  registered_with: 'Registered with',
+  local_authority_name: 'Canterbury council',
+  local_authority: 'local authority',
+};
+
+export const PrivateAddressWelsh = Template.bind({});
+PrivateAddressWelsh.args = {
+  ...Welsh.args,
+  private: true,
+  private_address: 'Cyfeiriad Preifat',
+  registered_with: 'Wedi cofrestru gydag',
+  local_authority_name: 'Canterbury council',
+  local_authority: 'awdurdod lleol',
 };
 
 export const TitleOnly = Template.bind({});

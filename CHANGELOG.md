@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Add data-default-value to dropdowns for React
 - Add map button and placeholder to business hero component
+- Add breadcrumb example to business search page
 
 ### Deprecated
 -
@@ -25,6 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix issue where enter in search boxes wasn't submitting
 - Add label and submit types
 - Allow business search input to take up full width when location is selected
+- Add private business text to business hero
+- When hygiene rating/status dropdowns are used in the ratings search box, update the associated radio button
 
 ### Security
 -
