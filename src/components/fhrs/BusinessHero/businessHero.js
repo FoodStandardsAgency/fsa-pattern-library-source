@@ -23,10 +23,10 @@ export default function () {
       mapButtonArrow.classList.toggle('business-hero__map__arrow--open');
       mapWrapper.classList.toggle('business-hero__map__wrapper--open');
       if (mapButton.getAttribute('aria-expanded') === 'true') {
-        mapButton.ariaExpanded = 'false';
+        mapButton.setAttribute('aria-expanded', 'false');
         mapButtonText.innerHTML = showMapLabel;
       } else {
-        mapButton.ariaExpanded = 'true';
+        mapButton.setAttribute('aria-expanded', 'true');
         mapButtonText.innerHTML = hideMapLabel;
       }
     });
