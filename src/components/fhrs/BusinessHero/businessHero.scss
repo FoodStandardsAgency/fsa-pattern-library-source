@@ -140,6 +140,7 @@
       align-items: center;
       cursor: pointer;
       color: var(--fsa-primary_dark-green);
+      width: 14rem;
     }
 
     &__button-label {
@@ -165,7 +166,7 @@
       background-position: bottom;
       width: 0.875rem;
       height: 0.625rem;
-      margin-left: 2rem;
+      margin-left: auto;
 
       &--open {
         transform: rotate(180deg);
