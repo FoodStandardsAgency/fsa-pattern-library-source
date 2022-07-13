@@ -96,4 +96,19 @@ export default function () {
       moreOptionsLabel.innerHTML = fewerOptionsLabelText;
     }
   });
+
+  // If hygiene rating or status dropdowns are used, automatically check the radio button
+  const hygieneRatingSelect = ratingsSearchBox.querySelector('#hygiene_rating');
+  const hygieneRatingRadio = ratingsSearchBox.querySelector('#rating');
+
+  const hygieneStatusSelect = ratingsSearchBox.querySelector('#hygiene_status');
+  const hygieneStatusRadio = ratingsSearchBox.querySelector('#status');
+
+  hygieneRatingSelect.addEventListener('change', () => {
+    hygieneRatingRadio.checked = true;
+  });
+
+  hygieneStatusSelect.addEventListener('change', () => {
+    hygieneStatusRadio.checked = true;
+  });
 }

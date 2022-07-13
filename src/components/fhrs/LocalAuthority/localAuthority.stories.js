@@ -15,6 +15,7 @@ Default.args = {
   name_content: 'Coventry City Council',
   website_title: 'Website',
   website_url: 'www.coventry.gov.uk',
+  website_label: 'www.coventry.gov.uk',
   email_title: 'Email',
   email_address: 'ehcommercialverylongemailaddress@coventry.gov.uk',
   logo_svg: logo,

@@ -912,11 +912,27 @@
   ],
   submit_button_label: 'Submit',
 } %}
+
+{% set breadcrumb_items = [
+  {
+    'text': 'Home',
+    'url': '/'
+  },
+  {
+    'text': 'Business search',
+    'url': null,
+  },
+] %}
+
 {% block top %}
   {% include '@components/components/general/Header/header.html.twig' with header_data %}
 {% endblock %}
 
 {% block content %}
+  {% include '@components/components/general/Breadcrumb/breadcrumbs.html.twig' with {
+    items: breadcrumb_items,
+    expanded: false,
+  } %}
   {% include '@components/components/fhrs/RatingsSearchBox/ratingsSearchBox.html.twig' with ratings_search_box_data %}
   {% include '@components/components/fhrs/SearchCard/searchCard.html.twig' with {
     welsh: false,

@@ -35,7 +35,26 @@
       <div class="business-hero__right">
         <div class="business-hero__block">
           <h2 class="business-hero__subtitle">{{ address_title }}</h2>
-          <div class="business-hero__text">{{ address_content|raw }}</div>
+          <div class="business-hero__text">
+            <p class="business-hero__address">
+              {% if private and wales_business %}
+                {{ private_address }}:<br>
+                {{ registered_with }}
+                {{ local_authority }}
+                {{ local_authority_name }}<br>
+                {{ post_code|split(" ")|first }}
+              {% elseif private %}
+                {{ private_address }}:<br>
+                {{ registered_with }}
+                {{ local_authority_name }}
+                {{ local_authority }}<br>
+                {{ post_code|split(" ")|first }}
+              {% else %}
+                {{ address_content|raw }}<br>
+                {{ post_code }}
+              {% endif %}
+            </p>
+          </div>
         </div>
         <div class="business-hero__block">
           <h2 class="business-hero__subtitle">{{ business_type_title }}</h2>
