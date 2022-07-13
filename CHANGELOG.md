@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Add data-default-value to dropdowns for React
 - Add map button and placeholder to business hero component
+- Put local authority map regions in a more logical order
+- Change local authority map highlight color to yellow
 
 ### Deprecated
 -

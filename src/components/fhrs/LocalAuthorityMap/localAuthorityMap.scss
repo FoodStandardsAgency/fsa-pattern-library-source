@@ -58,6 +58,12 @@
       }
     }
 
+    area {
+      &:focus-visible {
+        outline: var(--fsa-tertiary_light-yellow) auto 1px;
+      }
+    }
+
     &--hidden {
       position: relative;
 
