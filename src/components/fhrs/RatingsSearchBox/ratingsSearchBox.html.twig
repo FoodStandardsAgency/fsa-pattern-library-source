@@ -38,14 +38,22 @@
   {% endif %}
 {% endblock %}
 
+{% if welsh and title_prefix %}
+  {% set title = title_prefix ~ " " ~ title_suffix ~ " " ~ area %}
+  {% set subtitle = council_name ~ " " ~ subtitle_prefix %}
+{% elseif title_prefix %}
+  {% set title = title_prefix ~ " " ~ area ~ " " ~ title_suffix %}
+  {% set subtitle = subtitle_prefix ~ " " ~ council_name %}
+{% endif %}
+
 <form class="ratings-search-box">
   <div class="ratings-search-box__title">
-    {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
-      title: title_prefix ? title_prefix ~ " " ~ area ~ " " ~ title_suffix : title,
-      tag: 'h1',
-      underlined: true,
-      subtitle: subtitle_prefix ? subtitle_prefix ~ " " ~ council_name : '',
-    } %}
+      {% include '@components/components/form/TitleAndText/titleAndText.html.twig' with {
+        title: title,
+        tag: 'h1',
+        underlined: true,
+        subtitle: subtitle,
+      } %}
   </div>
   {% if local_authority_section is not empty %}
   <div class="ratings-search-box__local-authority-section">
