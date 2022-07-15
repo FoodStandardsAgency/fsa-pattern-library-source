@@ -62,7 +62,13 @@
         </div>
         <div class="business-hero__block">
           <h2 class="business-hero__subtitle">{{ date_title }}</h2>
-          <div class="business-hero__text">{{ date_content }}</div>
+          <div class="business-hero__text">
+            {% if rating == 'Exempt' or rating == 'AwaitingInspection' or date_content is not defined %}
+              N/A
+            {% else %}
+              {{ date_content }}
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
