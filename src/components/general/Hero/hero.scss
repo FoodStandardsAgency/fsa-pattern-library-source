@@ -435,6 +435,9 @@
 
   // If mini and has an image, adjust the image sizes and positioning
   &--mini#{&}--with-image {
+    @media screen and (min-width: $fsa-lg) {
+      min-height: 16.5rem;
+    }
     .hero__title {
       margin-top: 0;
 
@@ -451,13 +454,22 @@
       }
     }
 
+    .hero__text-content {
+      min-height: 3.438rem;
+    }
+
     .hero__mask-wrapper {
       @media screen and (min-width: $fsa-md) {
         min-height: 13rem;
+        padding-bottom: 3rem;
       }
 
       @media screen and (min-width: $fsa-lg) {
-        min-height: 18.5rem;
+        min-height: 14rem;
+      }
+
+      @media screen and (min-width: $fsa-xl) {
+        min-height: 15rem;
       }
     }
 

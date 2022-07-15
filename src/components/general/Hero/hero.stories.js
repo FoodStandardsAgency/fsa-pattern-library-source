@@ -1,7 +1,7 @@
 import hero from './hero.html.twig';
 import './hero.scss';
-import heroImage from './assets/homepage-hero-image.jpeg';
-import welshHeroImage from './assets/homepage-hero-image-welsh.jpeg';
+import heroImage from './assets/homepage-hero-image.jpg';
+import welshHeroImage from './assets/homepage-hero-image-welsh.jpg';
 
 export default {
   title: 'Components/General/Hero',
