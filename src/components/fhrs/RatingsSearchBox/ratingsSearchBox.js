@@ -104,11 +104,14 @@ export default function () {
   const hygieneStatusSelect = ratingsSearchBox.querySelector('#hygiene_status');
   const hygieneStatusRadio = ratingsSearchBox.querySelector('#status');
 
-  hygieneRatingSelect.addEventListener('change', () => {
-    hygieneRatingRadio.checked = true;
-  });
-
-  hygieneStatusSelect.addEventListener('change', () => {
-    hygieneStatusRadio.checked = true;
-  });
+  if (hygieneRatingRadio) {
+    hygieneRatingSelect.addEventListener('change', () => {
+      hygieneRatingRadio.checked = true;
+    });
+  }
+  if (hygieneStatusRadio) {
+    hygieneStatusSelect.addEventListener('change', () => {
+      hygieneStatusRadio.checked = true;
+    });
+  }
 }
