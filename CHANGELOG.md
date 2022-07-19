@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Allow business search input to take up full width when location is selected
 - Add private business text to business hero
 - When hygiene rating/status dropdowns are used in the ratings search box, update the associated radio button
+- Add focus and hover states to the business hero map button
 
 ### Security
 -

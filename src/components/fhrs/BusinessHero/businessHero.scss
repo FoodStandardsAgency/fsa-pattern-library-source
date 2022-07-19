@@ -141,6 +141,35 @@
       cursor: pointer;
       color: var(--fsa-primary_dark-green);
       width: 14rem;
+
+      &:hover {
+        color: var(--fsa__link-green);
+
+        .business-hero__map__pin {
+          background-image: svg-load("./assets/map-icon-hover.svg");
+        }
+
+        .business-hero__map__arrow {
+          background-image: svg-load("./assets/arrow-hover.svg");
+        }
+      }
+
+      &:focus-visible {
+        color: var(--fsa-primary_black);
+        outline: none;
+        text-decoration: none;
+        background-color: var(--fsa-tertiary_light-yellow);
+        border-bottom: 0.25rem solid var(--fsa-primary_black);
+        margin-bottom: -0.25rem;
+
+        .business-hero__map__pin {
+          background-image: svg-load("./assets/map-icon-focus.svg");
+        }
+
+        .business-hero__map__arrow {
+          background-image: svg-load("./assets/arrow-focus.svg");
+        }
+      }
     }
 
     &__button-label {
