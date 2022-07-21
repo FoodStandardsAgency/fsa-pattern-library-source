@@ -35,7 +35,7 @@
   <div class="fhrs-search-card__right">
     {% include "@components/components/fhrs/Badge/badge.html.twig" with {
         class_name: "fhrs-search-card",
-        rating: rating,
+        rating: wales_business and rating == 'AwaitingInspection' ? 'Empty' : rating,
         welsh: wales_business or welsh,
         version: fhis ? 1 : 3,
     } %}
